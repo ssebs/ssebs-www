@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
+import ProjectDetail from "./components/ProjectDetail";
 
 // image/style imports
 import './index.scss';
@@ -18,7 +19,13 @@ const Header = () => {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">
+                        <img src={logo} alt="logo" width="64px" />Home
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to="/portfolio">Portfolio</Link>
                 </li>
 
                 <li>
@@ -29,9 +36,6 @@ const Header = () => {
                     <Link to="/contact">Contact</Link>
                 </li>
 
-                <li>
-                    <Link to="/portfolio">Portfolio</Link>
-                </li>
             </ul>
         </nav>
     )
@@ -55,9 +59,11 @@ const App = () => {
 
             <Route path="/" exact component={Home} />
             <Route path="/home" component={Home} />
+            <Route path="/portfolio" component={Portfolio} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/project/:id" component={ProjectDetail} />
+
             <Footer />
         </BrowserRouter>
     )

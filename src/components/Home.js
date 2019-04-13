@@ -35,6 +35,7 @@ function Home() {
             <Banner />
             <hr />
             <TopProjects />
+            <hr />
         </div>
     )
 }
