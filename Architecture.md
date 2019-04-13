@@ -1,5 +1,8 @@
 # Architecture
 
+## Wireframes
+You can find the general idea for the layout in the `_wireframes/` dir.
+
 ## Architecture of the ssebs reactjs site is as follows:
 - Routes:
   - / && /home
@@ -25,6 +28,7 @@
     - `components/` dir for other components
       - `Home.js` <= home page
       - `Contact.js` <= contact page
+      - `About.js` <= about page
       - `ProjectDetail.js` <= specific project detail page
       - `Portfolio/`
         - `index.js` <= page that gets rendered at /portfolio
