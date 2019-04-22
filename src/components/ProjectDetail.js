@@ -1,9 +1,23 @@
 import React from 'react'
+import { Card } from 'antd';
 
-const ProjectDetail = ({match}) => {
+const ProjectDetail = (props) => {
+
+    let project = {};
+    props.projects.forEach(proj => {
+        if (proj.id === +props.match.params.id) {
+            console.log(proj)
+            project = proj;
+        }
+    });
+
     return (
         <div>
-            <h1>ID is: {match.params.id}</h1>
+            <Card title={project.title} hoverable={false}>
+                <h4>{project.summary}</h4>
+                <p>{project.content}</p>
+                <img src={require(`./Portfolio/assets/${project.pics[0]}`)} alt="image" width="256px" />
+            </Card>
         </div>
     );
 };

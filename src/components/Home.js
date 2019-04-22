@@ -27,18 +27,23 @@ const TopProjects = (props) => {
         }
 
         return (
-            <Col xs={24} sm={12} md={12} lg={8} xl={8} style={{ marginBottom: "16px" }} key={project.id} style={{textAlign: "center"}}>
-                <Card title={project.title} hoverable={true} >
+            <Col xs={24} sm={12} md={12} lg={8} xl={8} style={{ marginBottom: "16px" }} key={project.id} style={{ textAlign: "center" }}>
+                <Card title={project.title} hoverable={true} onClick={() => {
+                    // 
+                    // TODO: Make this route properly
+                    // 
+                    window.location = `/project/${project.id}`;
+                }} >
                     <h4>{project.summary}</h4>
                     <p>{project.content}</p>
-                    <img src={require(`./Portfolio/assets/${project.pics[0]}`)} alt="image" width="200px"/>
+                    <img src={require(`./Portfolio/assets/${project.pics[0]}`)} alt="image" width="200px" />
                 </Card>
             </Col>
         )
     });
 
     return (
-        <Row gutter={16} align="top" justify="space-around" type="flex" style={{paddingTop: "24px"}}>
+        <Row gutter={16} align="top" justify="space-around" type="flex" style={{ paddingTop: "24px" }}>
             {projs}
         </Row>
     )

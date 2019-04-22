@@ -118,7 +118,7 @@ const App = () => {
                     <Route path="/portfolio" component={Portfolio} />
                     <Route path="/about" component={About} />
                     <Route path="/contact" component={Contact} />
-                    <Route path="/project/:id" component={ProjectDetail} />
+                    <Route path="/project/:id" component={(props) => <ProjectDetail {...props} projects={projects} />} />
                 </Content>
 
                 <Footer />
