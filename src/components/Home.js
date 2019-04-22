@@ -1,5 +1,8 @@
 import React from 'react'
-import bannerImg from '../assets/ssebsFeatureLogo---1024x500.png'
+
+import { Row, Col, Card } from "antd";
+
+import bannerImg from '../assets/banner.jpg'
 
 const Banner = () => {
     return (
@@ -17,12 +20,24 @@ const Banner = () => {
 
 const TopProjects = () => {
     return (
-        <div style={{
-            height: "100px",
-            backgroundColor:"gray"
-        }}>
-            TopProjects
-        </div>
+        <Row gutter={16} justify="space-around" type="flex">
+            <Col xs={24} sm={12} md={8} lg={6} xl={6} style={{ marginBottom: "16px" }}>
+                <Card title="Test" hoverable={true} >
+                    Content
+              </Card>
+            </Col>
+            <Col xs={24} sm={12} md={8} lg={6} xl={6} style={{ marginBottom: "16px" }}>
+                <Card title="Test" hoverable={true} >
+                    Content
+              </Card>
+            </Col>
+            <Col xs={24} sm={12} md={8} lg={6} xl={6} style={{ marginBottom: "16px" }}>
+                <Card title="Test" hoverable={true} >
+                    Content
+              </Card>
+            </Col>
+            
+        </Row>
     )
 }
 

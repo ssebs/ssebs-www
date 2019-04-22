@@ -35,7 +35,7 @@ const Header = () => {
                             src={logo}
                             alt="logo"
                             width="48px"
-                            style={{ backgroundColor: "#ffffff", borderRadius: "50px", margin: "5px" }}
+                            style={{ borderRadius: "50px", margin: "5px" }}
                         />
                         <span style={{ fontWeight: "bold", fontSize: "1.25em" }}>
                             ssebs
@@ -62,9 +62,9 @@ const Header = () => {
 
 const Footer = () => {
     return (
-        <div>
-            FOOTER
-    </div>
+        <AntFtr>
+            <p>Footer</p>
+        </AntFtr>
     )
 }
 
