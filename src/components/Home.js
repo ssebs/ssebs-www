@@ -1,5 +1,8 @@
 import React from 'react'
-import bannerImg from '../assets/ssebsFeatureLogo---1024x500.png'
+import { Row, Col, Card } from "antd";
+import About from "./About"
+import Contact from "./Contact"
+import bannerImg from '../assets/banner.jpg'
 
 const Banner = () => {
     return (
@@ -15,27 +18,46 @@ const Banner = () => {
     )
 }
 
-const TopProjects = () => {
+const TopProjects = (props) => {
+    // console.log(props.projects)
+    const projs = props.projects.map((project, i) => {
+        if (i >= 3) {
+            return;
+            // only want first 3 for top projects
+        }
+
+        return (
+            <Col xs={24} sm={12} md={12} lg={8} xl={8} style={{ marginBottom: "16px" }} key={project.id} style={{ textAlign: "center" }}>
+                <Card title={project.title} hoverable={true} onClick={() => {
+                    // 
+                    // TODO: Make this route properly
+                    // 
+                    window.location = `/project/${project.id}`;
+                }} >
+                    <h4>{project.summary}</h4>
+                    <p>{project.content}</p>
+                    <img src={require(`./Portfolio/assets/${project.pics[0]}`)} alt="image" width="200px" />
+                </Card>
+            </Col>
+        )
+    });
+
     return (
-        <div style={{
-            height: "100px",
-            backgroundColor:"gray"
-        }}>
-            TopProjects
-        </div>
+        <Row gutter={16} align="top" justify="space-around" type="flex" style={{ paddingTop: "24px" }}>
+            {projs}
+        </Row>
     )
 }
 
 
-function Home() {
+const Home = (props) => {
     return (
         <div>
             <h1>Home</h1>
-            <hr />
             <Banner />
-            <hr />
-            <TopProjects />
-            <hr />
+            <TopProjects projects={props.projects} />
+            <About />
+            <Contact />
         </div>
     )
 }
