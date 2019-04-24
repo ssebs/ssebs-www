@@ -1,21 +1,19 @@
 import React from "react";
+import { withRouter } from "react-router";
 import { Row, Col, Card } from "antd";
 import { Parallax } from "react-parallax";
 import About from "./About";
 import Contact from "./Contact";
-import bannerImg from "../assets/banner.jpg";
 
 const Banner = () => {
     return (
-        <div
-            style={{height: "400px"}}
-        >
+        <div style={{ height: "400px" }}>
             <h1 style={{ color: "#fff" }}>Big banner</h1>
         </div>
     );
 };
 
-const TopProjects = props => {
+let TopProjects = props => {
     // console.log(props.projects)
     const projs = props.projects.map((project, i) => {
         if (i >= 3) {
@@ -30,9 +28,12 @@ const TopProjects = props => {
                 md={12}
                 lg={8}
                 xl={8}
-                style={{ marginBottom: "16px" }}
+                style={{
+                    marginBottom: "16px",
+                    textAlign: "center",
+                    height: "100%"
+                }}
                 key={project.id}
-                style={{ textAlign: "center" }}
             >
                 <Card
                     title={project.title}
@@ -41,11 +42,12 @@ const TopProjects = props => {
                         //
                         // TODO: Make this route properly
                         //
-                        window.location = `/project/${project.id}`;
+                        props.history.push(`/project/${project.id}`);
+                        // window.location = `/project/${project.id}`;
                     }}
                 >
                     <h4>{project.summary}</h4>
-                    <p>{project.content}</p>
+                    {/* <p>{project.content}</p> */}
                     <img
                         src={require(`./Portfolio/assets/${project.pics[0]}`)}
                         alt='image'
@@ -68,6 +70,7 @@ const TopProjects = props => {
         </Row>
     );
 };
+TopProjects = withRouter(TopProjects);
 
 const Home = props => {
     return (

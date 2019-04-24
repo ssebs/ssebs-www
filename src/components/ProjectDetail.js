@@ -6,7 +6,7 @@ const ProjectDetail = (props) => {
     let project = {};
     props.projects.forEach(proj => {
         if (proj.id === +props.match.params.id) {
-            console.log(proj)
+            // console.log(proj)
             project = proj;
         }
     });
