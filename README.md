@@ -22,8 +22,8 @@ $ npm build
 ## Architecture
 See [Architecture.md](./Architecture.md)
 
-## Screenshots
-tbd
+## Demo
+See https://ssebs.github.io/ssebs-www for demo
 
 ## License
 MIT Copyright (c) 2019 Sebastian Safari
