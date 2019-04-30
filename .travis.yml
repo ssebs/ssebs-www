@@ -1,0 +1,23 @@
+---
+language: node_js
+node_js:
+  - "7"
+cache:
+  directories:
+  - node_modules/
+install:
+  - cd frontend/
+  - npm install
+script:
+  - pwd
+  - CI=false npm run build
+  - ls
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: build/
+  on:
+    branch: master
+

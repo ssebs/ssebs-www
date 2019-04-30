@@ -109,7 +109,9 @@ const projects = [
 // Main app
 const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter
+          basename={process.env.PUBLIC_URL}
+        >
             <Layout>
 
                 <Header />
