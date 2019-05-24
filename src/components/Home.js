@@ -1,7 +1,9 @@
 import React from "react";
 import { withRouter } from "react-router";
-import { Row, Col, Card } from "antd";
+
+import { Row, Col, Card } from "react-bootstrap";
 import { Parallax } from "react-parallax";
+
 import About from "./About";
 import Contact from "./Contact";
 
@@ -17,58 +19,47 @@ let TopProjects = props => {
     // console.log(props.projects)
     const projs = props.projects.map((project, i) => {
         if (i >= 3) {
-            return;
+            return <div/>;
             // only want first 3 for top projects
         }
 
         return (
             <Col
-                xs={24}
-                sm={12}
-                md={12}
-                lg={8}
-                xl={8}
-                style={{
-                    marginBottom: "16px",
-                    textAlign: "center",
-                    height: "100%"
-                }}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                xl={4}
+                className="mb-2 text-center"
                 key={project.id}
             >
                 <Card
-                    title={project.title}
                     hoverable={true}
                     onClick={() => {
-                        //
-                        // TODO: Make this route properly
-                        //
                         props.history.push(`/project/${project.id}`);
-                        // window.location = `/project/${project.id}`;
                     }}
+                    className="p-3"
                 >
-                    <h4>{project.summary}</h4>
-                    {/* <p>{project.content}</p> */}
-                    <img
-                        src={require(`./Portfolio/assets/${project.pics[0]}`)}
-                        alt='image'
-                        width='200px'
-                    />
+                    <Card.Header>{project.title}</Card.Header>
+                    <Card.Subtitle className="mt-1 text-muted">
+                        {project.summary}
+                    </Card.Subtitle>
+                    <Card.Body>
+                        <p>{project.content}</p>
+                        <img
+                            src={require(`./Portfolio/assets/${
+                                project.pics[0]
+                            }`)}
+                            alt="project screenshot"
+                            width="200px"
+                        />
+                    </Card.Body>
                 </Card>
             </Col>
         );
     });
 
-    return (
-        <Row
-            gutter={16}
-            align='top'
-            justify='space-around'
-            type='flex'
-            style={{ paddingTop: "24px" }}
-        >
-            {projs}
-        </Row>
-    );
+    return <Row className="p-5">{projs}</Row>;
 };
 TopProjects = withRouter(TopProjects);
 
