@@ -1,38 +1,37 @@
 import React from "react";
 import { withRouter } from "react-router";
-import { Row, Col, Card } from "antd";
+
+import { Row, Col, Card } from "react-bootstrap";
 
 const Portfolio = props => {
     const projs = props.projects.map((project, i) => {
         return (
             <Col
-                xs={24}
-                sm={12}
-                md={12}
-                lg={8}
-                xl={8}
-                style={{ marginBottom: "16px" }}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={4}
+                xl={4}
+                className="mb-2 text-center"
                 key={project.id}
-                style={{ textAlign: "center" }}
             >
                 <Card
-                    title={project.title}
-                    hoverable={true}
                     onClick={() => {
-                        //
-                        // TODO: Make this route properly
-                        //
                         props.history.push(`/project/${project.id}`);
-                        // window.location = `/project/${project.id}`;
                     }}
                 >
-                    <h4>{project.summary}</h4>
-                    <p>{project.content}</p>
-                    <img
-                        src={require(`./assets/${project.pics[0]}`)}
-                        alt='image'
-                        width='200px'
-                    />
+                    <Card.Header>{project.title}</Card.Header>
+                    <Card.Subtitle className="mt-1 text-muted">
+                        <p>{project.summary}</p>
+                    </Card.Subtitle>
+                    <Card.Body>
+                        <p>{project.content}</p>
+                        <img
+                            src={require(`./assets/${project.pics[0]}`)}
+                            alt="project screenshot"
+                            width="200px"
+                        />
+                    </Card.Body>
                 </Card>
             </Col>
         );
@@ -40,16 +39,8 @@ const Portfolio = props => {
 
     return (
         <div>
-            <h1>Portfolio</h1>
-            <Row
-                gutter={16}
-                align='top'
-                justify='space-around'
-                type='flex'
-                style={{ paddingTop: "24px" }}
-            >
-                {projs}
-            </Row>
+            <h1 className="text-center">Portfolio</h1>
+            <Row className="pt-2">{projs}</Row>
         </div>
     );
 };
