@@ -4,6 +4,8 @@ import { withRouter } from "react-router";
 import { Row, Col, Card } from "react-bootstrap";
 import { Parallax } from "react-parallax";
 
+import { truncateString } from "../util";
+
 import About from "./About";
 import Contact from "./Contact";
 
@@ -45,14 +47,8 @@ let TopProjects = props => {
                         {project.summary}
                     </Card.Subtitle>
                     <Card.Body>
-                        <p>{project.content}</p>
-                        <img
-                            src={require(`./Portfolio/assets/${
-                                project.pics[0]
-                            }`)}
-                            alt="project screenshot"
-                            width="200px"
-                        />
+                        {/* make this md */}
+                        <p>{truncateString(project.content, 150)}</p>
                     </Card.Body>
                 </Card>
             </Col>

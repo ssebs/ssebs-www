@@ -19,12 +19,8 @@ const ProjectDetail = props => {
                     <p>{project.summary}</p>
                 </Card.Title>
                 <Card.Body>
+                    {/* make this md */}
                     <p>{project.content}</p>
-                    <img
-                        src={require(`./Portfolio/assets/${project.pics[0]}`)}
-                        alt="project screenshot"
-                        width="256px"
-                    />
                 </Card.Body>
             </Card>
         </div>

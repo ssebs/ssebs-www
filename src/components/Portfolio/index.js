@@ -3,6 +3,8 @@ import { withRouter } from "react-router";
 
 import { Row, Col, Card } from "react-bootstrap";
 
+import { truncateString } from "../../util";
+
 const Portfolio = props => {
     const projs = props.projects.map((project, i) => {
         return (
@@ -25,12 +27,8 @@ const Portfolio = props => {
                         <p>{project.summary}</p>
                     </Card.Subtitle>
                     <Card.Body>
-                        <p>{project.content}</p>
-                        <img
-                            src={require(`./assets/${project.pics[0]}`)}
-                            alt="project screenshot"
-                            width="200px"
-                        />
+                        {/* make this md */}
+                        <p>{truncateString(project.content, 150)}</p>
                     </Card.Body>
                 </Card>
             </Col>
