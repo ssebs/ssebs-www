@@ -23,3 +23,15 @@ body {
     height: 500px;
     color: $white;
 }
+.homepage-cards {
+    height: 100%;
+    top: 0;
+    box-shadow: none;
+    transition: ease 0.2s;
+    &:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        position: relative;
+        top: -5px;
+        cursor: pointer;
+    }
+}

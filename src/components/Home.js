@@ -54,7 +54,7 @@ let TopProjects = props => {
                     onClick={() => {
                         props.history.push(`/project/${project.id}`);
                     }}
-                    className="p-3"
+                    className="p-3 homepage-cards"
                 >
                     <Card.Header>{project.title}</Card.Header>
                     <Card.Subtitle className="mt-1 text-muted">
@@ -69,7 +69,7 @@ let TopProjects = props => {
         );
     });
 
-    return <Row className="p-5">{projs}</Row>;
+    return <Row className="py-5">{projs}</Row>;
 };
 TopProjects = withRouter(TopProjects);
 
@@ -85,7 +85,9 @@ const Home = props => {
             </Parallax>
             <Container>
                 <TopProjects projects={props.projects} />
+                <hr />
                 <About />
+                <hr />
                 <Contact />
             </Container>
         </>
