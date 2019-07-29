@@ -24,7 +24,8 @@ const Banner = () => {
                     color: "rgba(255,255,255,0.65)",
                     border: "1px solid",
                     height: "0px",
-                    width: "80%"
+                    width: "60%",
+                    margin: "0.25rem 0px"
                 }}
             />
             <h2>Systems and Software Engineer</h2>
@@ -54,11 +55,11 @@ let TopProjects = props => {
                     onClick={() => {
                         props.history.push(`/project/${project.id}`);
                     }}
-                    className="p-3 homepage-cards"
+                    className="cards"
                 >
                     <Card.Header>{project.title}</Card.Header>
                     <Card.Subtitle className="mt-1 text-muted">
-                        {project.summary}
+                        {truncateString(project.summary, 40)}
                     </Card.Subtitle>
                     <Card.Body>
                         {/* make this md */}
@@ -69,7 +70,12 @@ let TopProjects = props => {
         );
     });
 
-    return <Row className="py-5">{projs}</Row>;
+    return (
+        <div className="py-2" >
+            <h3 className="text-center header">Top Projects</h3>
+            <Row>{projs}</Row>
+        </div>
+    );
 };
 TopProjects = withRouter(TopProjects);
 

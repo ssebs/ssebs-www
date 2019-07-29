@@ -21,6 +21,7 @@ const Portfolio = props => {
                     onClick={() => {
                         props.history.push(`/project/${project.id}`);
                     }}
+                    className="cards"
                 >
                     <Card.Header>{project.title}</Card.Header>
                     <Card.Subtitle className="mt-1 text-muted">
@@ -38,7 +39,7 @@ const Portfolio = props => {
     return (
         <Container>
             <h1 className="text-center">Portfolio</h1>
-            <Row className="pt-2">{projs}</Row>
+            <Row className="py-2">{projs}</Row>
         </Container>
     );
 };
