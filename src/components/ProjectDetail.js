@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 
 const ProjectDetail = props => {
     let project = {};
@@ -12,7 +12,7 @@ const ProjectDetail = props => {
     });
 
     return (
-        <div>
+        <Container>
             <Card className="text-center">
                 <Card.Header>{project.title}</Card.Header>
                 <Card.Title className="mt-1 text-muted">
@@ -23,7 +23,7 @@ const ProjectDetail = props => {
                     <p>{project.content}</p>
                 </Card.Body>
             </Card>
-        </div>
+        </Container>
     );
 };
 export default ProjectDetail;

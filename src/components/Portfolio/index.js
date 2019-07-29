@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
 
-import { Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 import { truncateString } from "../../util";
 
@@ -36,10 +36,10 @@ const Portfolio = props => {
     });
 
     return (
-        <div>
+        <Container>
             <h1 className="text-center">Portfolio</h1>
             <Row className="pt-2">{projs}</Row>
-        </div>
+        </Container>
     );
 };
 

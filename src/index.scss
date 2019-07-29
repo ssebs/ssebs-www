@@ -1,4 +1,25 @@
 $primary: #41afff;
+$secondary: #41afff;
+$lighter: #dedede;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    background-color: $light;
+}
+.navbar {
+    .navbar-brand {
+        font-size: 1.85rem;
+    }
+    .nav-link {
+        font-size: 1.25rem;
+        &:link,
+        &:visited {
+            color: $lighter;
+        }
+    }
+}
+.banner {
+    height: 500px;
+    color: $white;
+}

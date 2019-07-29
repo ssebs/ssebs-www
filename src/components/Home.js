@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
 
-import { Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { Parallax } from "react-parallax";
 
 import { truncateString } from "../util";
@@ -11,8 +11,23 @@ import Contact from "./Contact";
 
 const Banner = () => {
     return (
-        <div style={{ height: "400px" }}>
-            <h1 style={{ color: "#fff" }}>Big banner</h1>
+        <div className="d-flex justify-content-center align-items-center flex-column banner">
+            <div>
+                <img
+                    src={require("../assets/256ssebsCircleLogo.png")}
+                    alt="Logo"
+                />
+            </div>
+            <h1>SSEBS SOFTWARE</h1>
+            <div
+                style={{
+                    color: "rgba(255,255,255,0.65)",
+                    border: "1px solid",
+                    height: "0px",
+                    width: "80%"
+                }}
+            />
+            <h2>Systems and Software Engineer</h2>
         </div>
     );
 };
@@ -21,7 +36,7 @@ let TopProjects = props => {
     // console.log(props.projects)
     const projs = props.projects.map((project, i) => {
         if (i >= 3) {
-            return <div/>;
+            return <div key={i + 1} />;
             // only want first 3 for top projects
         }
 
@@ -36,7 +51,6 @@ let TopProjects = props => {
                 key={project.id}
             >
                 <Card
-                    hoverable={true}
                     onClick={() => {
                         props.history.push(`/project/${project.id}`);
                     }}
@@ -61,8 +75,7 @@ TopProjects = withRouter(TopProjects);
 
 const Home = props => {
     return (
-        <div>
-            <h1>Home</h1>
+        <>
             <Parallax
                 blur={5}
                 bgImage={require("../assets/banner.jpg")}
@@ -70,10 +83,12 @@ const Home = props => {
             >
                 <Banner />
             </Parallax>
-            <TopProjects projects={props.projects} />
-            <About />
-            <Contact />
-        </div>
+            <Container>
+                <TopProjects projects={props.projects} />
+                <About />
+                <Contact />
+            </Container>
+        </>
     );
 };
 
