@@ -53,8 +53,16 @@ const Footer = () => {
                 <div className="footer-item">
                     <h4>AROUND THE WEB</h4>
                     <ul>
-                        <li>LinkedIn</li>
-                        <li>GitHub</li>
+                        <li>
+                            <a href="https://linkedin.com/in/ssebs">
+                                <i className="fab fa-linkedin fa-2x" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ssebs">
+                                <i className="fab fa-github-square fa-2x" />
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div className="footer-item">
