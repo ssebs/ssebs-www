@@ -1,4 +1,7 @@
 // utils.js
+import { Converter } from "showdown";
+
+const mdrender = new Converter();
 
 export const truncateString = (str, length) => {
     const ending = "...";
@@ -7,4 +10,8 @@ export const truncateString = (str, length) => {
     } else {
         return str;
     }
+};
+
+export const renderMD = input => {
+    return mdrender.makeHtml(input);
 };

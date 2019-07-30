@@ -2,13 +2,13 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col,  Button } from "react-bootstrap";
 import { Parallax } from "react-parallax";
 
-import { truncateString } from "../util";
 
 import About from "./About";
 import Contact from "./Contact";
+import ProjectCard from "./ProjectCard";
 
 const Banner = () => {
     return (
@@ -52,21 +52,7 @@ let TopProjects = props => {
                 className="mb-2 text-center"
                 key={project.id}
             >
-                <Card
-                    onClick={() => {
-                        props.history.push(`/project/${project.id}`);
-                    }}
-                    className="cards"
-                >
-                    <Card.Header>{project.title}</Card.Header>
-                    <Card.Subtitle className="mt-1 text-muted">
-                        {truncateString(project.summary, 40)}
-                    </Card.Subtitle>
-                    <Card.Body>
-                        {/* make this md */}
-                        <p>{truncateString(project.content, 150)}</p>
-                    </Card.Body>
-                </Card>
+                <ProjectCard project={project} />
             </Col>
         );
     });

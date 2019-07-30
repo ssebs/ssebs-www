@@ -77,7 +77,7 @@ const projects = [
         githublink: "https://github.com/ssebs/Peopledb-py-react",
         demolink: "http://ppldb-py-react.ssebs.com",
         content:
-            "This is a react frontend web application to control / modify users in a database.\\n\\n Check out http://ppldb-py-react.ssebs.com/ and http://ppldb-py-react.ssebs.com.\n"
+            "This is a react frontend web application to control / modify users in a database.\n\n Check out http://ppldb-py-react.ssebs.com/ and http://ppldb-py-react.ssebs.com.\n"
     },
     {
         id: 2,
@@ -98,7 +98,7 @@ const projects = [
         githublink: "https://github.com/ssebs/jwt-example",
         demolink: null,
         content:
-            '"# jwt-example\\n\\nReact / Flask JWT example project\\n\\nThis repo contains sample code to get basic JWT working with React and Flask.\\n\\nThe frontend code is in the root dir, and the backend code is in the _backend dir."\n'
+            "### jwt-example\n\nReact / Flask JWT example project\n\nThis repo contains sample code to get basic JWT working with React and Flask.\n\nThe frontend code is in the root dir, and the backend code is in the _backend dir."
     },
     {
         id: 4,
@@ -107,7 +107,7 @@ const projects = [
         techs: ["python"],
         githublink: "https://github.com/ssebs/csveditor",
         demolink: null,
-        content: '"csveditor\\n\\nA lightweight GUI csv editor."\n'
+        content: "### csveditor\n\nA lightweight GUI csv editor."
     },
     {
         id: 5,
@@ -117,7 +117,7 @@ const projects = [
         githublink: "https://github.com/galericms/galeri",
         demolink: "https://galericms.github.io/galeri/",
         content:
-            "\"# Galeri\\n\\n## Goal\\n\\nRaising awareness of existing projects within an organization.\\nWe accomplish this by creating a content management system (CMS) that allows creating a web page for each project.\\nThe system has to be usable such that non-technical people will have no diffulties.\\n\\n## Roadmap\\n\\n- [x] Create functional and non-functional requirements for minimal viable product (MVP).\\n- [ ] Document architecture.\\n- [ ] Implement back-end.\\n- [ ] Implement front-end.\\n\\n## Functional Requirements\\n\\n- [ ] As a user, I want to create a web page for my project so that other people can learn about the project.\\n- [ ] As a user, I want to discover other projects so that I can find projects that I might be interested in working on.\\n- [ ] As a user, I want to view the change history of a project page so that I can rollback or find malicious users.\\n- [ ] As a user, I want to specify people that can modify the project page so that I can trust the information that is being added.\\n- [ ] As a user, I want to modify a page as easy as I can write an email so that I don't have to waste time on technical difficulties.\\n- [ ] As a user, I want to view all projects without logging in so that I don't have to log in.\\n- [ ] As a user, I want to search by tags or topics so that I can filter.\\n- [ ] As an administrator, I want to customize the look and feel of the site so that we can have company branding.\\n\\n## Non-Functional Requirements\\n\\n- [ ] As a user, I want to use any modern browser, including mobile.\\n- [ ] As a compliance officer, I want to export all projects so that we can meet compliance.\\n\"\n"
+            "### Galeri\n\n#### Goal\n\nRaising awareness of existing projects within an organization.\nWe accomplish this by creating a content management system (CMS) that allows creating a web page for each project.\nThe system has to be usable such that non-technical people will have no diffulties.\n\n## Roadmap\n\n- [x] Create functional and non-functional requirements for minimal viable product (MVP).\n- [ ] Document architecture.\n- [ ] Implement back-end.\n- [ ] Implement front-end.\n\n## Functional Requirements\n\n- [ ] As a user, I want to create a web page for my project so that other people can learn about the project.\n- [ ] As a user, I want to discover other projects so that I can find projects that I might be interested in working on.\n- [ ] As a user, I want to view the change history of a project page so that I can rollback or find malicious users.\n- [ ] As a user, I want to specify people that can modify the project page so that I can trust the information that is being added.\n- [ ] As a user, I want to modify a page as easy as I can write an email so that I don't have to waste time on technical difficulties.\n- [ ] As a user, I want to view all projects without logging in so that I don't have to log in.\n- [ ] As a user, I want to search by tags or topics so that I can filter.\n- [ ] As an administrator, I want to customize the look and feel of the site so that we can have company branding.\n\n## Non-Functional Requirements\n\n- [ ] As a user, I want to use any modern browser, including mobile.\n- [ ] As a compliance officer, I want to export all projects so that we can meet compliance.\n\"\n"
     },
     {
         id: 6,
@@ -127,7 +127,7 @@ const projects = [
         githublink: "https://github.com/ssebs/newhire-form",
         demolink: null,
         content:
-            '"newhire-request\\nForm to start the IT processes for creating an account, configuring a machine, setting up a phone, etc.\\n\\nCurrent project is in Docker, with files in src/, templates/, & bin/ directory.\\n\\nWhen submitting the form, a YAML file gets output in the usr-yml/ directory.\\n\\nEmails are sent out to helpdesk, one for each item needed"\n'
+            "### newhire-request\n\nForm to start the IT processes for creating an account, configuring a machine, setting up a phone, etc.\n\nCurrent project is in Docker, with files in src/, templates/, & bin/ directory.\n\nWhen submitting the form, a YAML file gets output in the usr-yml/ directory.\n\nEmails are sent out to helpdesk, one for each item needed"
     },
     {
         id: 7,
@@ -136,7 +136,7 @@ const projects = [
         techs: ["php"],
         githublink: "https://github.com/ssebs/timecard",
         demolink: null,
-        content: '"Simple timecard app with basic authentication"\n'
+        content: "Simple timecard app with basic authentication"
     },
     {
         id: 8,
@@ -147,7 +147,7 @@ const projects = [
         githublink: "https://github.com/ssebs/clean-mac-address",
         demolink: null,
         content:
-            '"GUI program to clean a mac address (F01898b4EA08 -> f0:18:98:b4:ea:08)\\n\\nProgram to "clean" MAC address for registrar input."\n'
+            "GUI program to clean a mac address (F01898b4EA08 -> f0:18:98:b4:ea:08)\n\nProgram to \"clean\" MAC address for registrar input."
     },
     {
         id: 9,
@@ -157,7 +157,7 @@ const projects = [
         githublink: "https://github.com/ssebs/PeopleDB",
         demolink: null,
         content:
-            '"# PeopleDB\\nAD/NIS/Web user management. Web UI running on LAMP server will create/modify/disable Active Directory and NIS accounts. \\n>AD & NIS Account creation/modification/disable works.\\n\\nPlans for future:\\n1) Clean UI/Fix UX\\n"\n'
+            "### PeopleDB\nAD/NIS/Web user management. Web UI running on LAMP server will create/modify/disable Active Directory and NIS accounts. \n>AD & NIS Account creation/modification/disable works.\n\nPlans for future:\n1) Clean UI/Fix UX\n"
     },
     {
         id: 10,
@@ -167,7 +167,7 @@ const projects = [
         githublink: "https://github.com/ssebs/ssebsEngine",
         demolink: null,
         content:
-            "\"ssebsEngine\\nJava/LWJGL2 2D Game Engine\\n\\nssebsEngine is a simple java 2D game engine that I've been working on since I've been working on games. After I made my games for my CS class, I made the engine so that I could stop copy/pasting the code.\\n\\nIt is free to use and modify.\"\n"
+            "###ssebsEngine\nJava/LWJGL2 2D Game Engine\n\nssebsEngine is a simple java 2D game engine that I've been working on since I've been working on games. After I made my games for my CS class, I made the engine so that I could stop copy/pasting the code.\n\nIt is free to use and modify."
     },
     {
         id: 11,
@@ -177,17 +177,17 @@ const projects = [
         githublink: "https://github.com/ssebs/PerishablePunchers",
         demolink: null,
         content:
-            '"PerishablePunchers\\nMortal Kombat like Game written in Java\\n\\nPerishable Punchers Game Information\\n\\n*Game developed by ssebs and Charlse\\n*Produced by ssebs\\n*Website: http://ssebs.github.io\\n*Time to develop: 1 Month\\n*Release date: 4/23/15\\n*Written in Java 1.6 Using LWJGL 2\\n*Custom artwork\\n*Custom sounds"\n'
+            "### PerishablePunchers\nMortal Kombat like Game written in Java\n\nPerishable Punchers Game Information\n\n*Game developed by ssebs and Charlse\n*Produced by ssebs\n*Website: http://ssebs.github.io\n*Time to develop: 1 Month\n*Release date: 4/23/15\n*Written in Java 1.6 Using LWJGL 2\n*Custom artwork\n*Custom sounds"
     },
     {
         id: 12,
         title: "GDXPerishablePunchers",
-        summary: null,
+        summary: "Mobile version of PerishablePunchers",
         techs: ["java", "libgdx"],
         githublink: "https://github.com/ssebs/GDXPerishablePunchers",
         demolink: null,
         content:
-            '"GDXPerishablePunchers\\n\\nPerishable Punchers remade with LibGDX Library. A Version of Perishable Punchers made in LibGDX, mostly so that it works on android."\n'
+            "### GDXPerishablePunchers\n\nPerishable Punchers remade with LibGDX Library. A Version of Perishable Punchers made in LibGDX, mostly so that it works on android."
     },
     {
         id: 13,
