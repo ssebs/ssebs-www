@@ -2,6 +2,8 @@ import React from "react";
 
 import { Container, Card } from "react-bootstrap";
 
+import { renderMD } from "../util";
+
 const ProjectDetail = props => {
     let project = {};
     props.projects.forEach(proj => {
@@ -18,10 +20,11 @@ const ProjectDetail = props => {
                 <Card.Title className="mt-1 text-muted">
                     <p>{project.summary}</p>
                 </Card.Title>
-                <Card.Body>
-                    {/* make this md */}
-                    <p>{project.content}</p>
-                </Card.Body>
+                <Card.Body
+                    dangerouslySetInnerHTML={{
+                        __html: renderMD(project.content)
+                    }}
+                />
             </Card>
         </Container>
     );
