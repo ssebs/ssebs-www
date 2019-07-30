@@ -4,7 +4,7 @@ const Contact = () => {
     return (
         <div>
             <h1 className="text-center header">CONTACT</h1>
-            <div className="contact-card">
+            <div className="contact-card mb-2 pb-3">
                 <img
                     src={require("../assets/me200.jpg")}
                     alt="Me"
