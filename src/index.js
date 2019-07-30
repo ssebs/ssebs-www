@@ -1,5 +1,5 @@
 // react/deps imports
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { HashRouter, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
@@ -25,10 +25,10 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <LinkContainer to="/about">
+                        <LinkContainer to="/home#about">
                             <Nav.Link>About</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/contact">
+                        <LinkContainer to="/home#contact">
                             <Nav.Link>Contact</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/portfolio">
@@ -44,26 +44,26 @@ const Header = () => {
 const Footer = () => {
     return (
         <>
-        <footer className="text-center">
-            <div className="footer-item">
-                <h4>LOCATION</h4>
-                <p>Silicon Valley, CA</p>
+            <footer className="text-center">
+                <div className="footer-item">
+                    <h4>LOCATION</h4>
+                    <p>Silicon Valley, CA</p>
+                </div>
+                <div className="footer-item">
+                    <h4>AROUND THE WEB</h4>
+                    <ul>
+                        <li>LinkedIn</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <div className="footer-item">
+                    <h4>ABOUT ME</h4>
+                    <p>I like cars and coding</p>
+                </div>
+            </footer>
+            <div className="text-center sub-footer">
+                Copyright &copy; 2019 Sebastian Safari
             </div>
-            <div className="footer-item">
-                <h4>AROUND THE WEB</h4>
-                <ul>
-                    <li>LinkedIn</li>
-                    <li>GitHub</li>
-                </ul>
-            </div>
-            <div className="footer-item">
-                <h4>ABOUT ME</h4>
-                <p>I like cars and coding</p>
-            </div>
-        </footer>
-        <div className="text-center sub-footer">
-            Copyright &copy; 2019 Sebastian Safari
-        </div>
         </>
     );
 };
@@ -202,12 +202,29 @@ const projects = [
 
 // Main app
 const App = () => {
+    useEffect(() => {
+        window.location.hash = window.decodeURIComponent(window.location.hash);
+        const scrollToAnchor = () => {
+            const hashParts = window.location.hash.split("#");
+            if (hashParts.length > 2) {
+                const hash = hashParts.slice(-1)[0];
+                document.querySelector(`#${hash}`).scrollIntoView();
+            }
+        };
+        scrollToAnchor();
+        window.onhashchange = scrollToAnchor;
+    }, []);
+
     return (
         <HashRouter basename={process.env.PUBLIC_URL}>
             <Header />
             <Route
                 exact
                 path="/"
+                component={() => <Home projects={projects} />}
+            />
+            <Route
+                path="/home"
                 component={() => <Home projects={projects} />}
             />
             <Route

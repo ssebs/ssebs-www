@@ -73,7 +73,7 @@ let TopProjects = props => {
 
     return (
         <div className="py-2">
-            <h3 className="text-center header">TOP PROJECTS</h3>
+            <h3 className="text-center header text-secondary">TOP PROJECTS</h3>
             <Row>{projs}</Row>
             <div className="text-center mt-3">
                 <LinkContainer to="/portfolio">
@@ -105,11 +105,11 @@ const Home = props => {
                 bgImage={require("../assets/ssebsFeatureLogo.png")}
                 strength={400}
             >
-                <Container className="py-3">
+                <Container id="about" className="py-3">
                     <About />
                 </Container>
             </Parallax>
-            <Container className="py-3">
+            <Container id="contact" className="py-3">
                 <Contact />
             </Container>
         </>

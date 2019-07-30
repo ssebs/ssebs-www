@@ -1,9 +1,14 @@
 import React from "react";
 
 const About = () => {
+    // Make text white on homepage only
+    let classes = "text-center header";
+    if (window.location.hash === "#/") {
+        classes = "text-center header text-white";
+    }
     return (
         <div>
-            <h1 className="text-center header">ABOUT</h1>
+            <h1 className={classes}>ABOUT</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

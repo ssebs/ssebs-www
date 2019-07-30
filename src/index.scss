@@ -4,6 +4,9 @@ $lighter: #fbfbfb;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: $white;
 }
@@ -31,10 +34,11 @@ body {
     font-weight: bold;
 }
 .header {
-    // color: $secondary;
+    color: $secondary;
     font-size: 2.25rem;
     text-decoration: underline;
     padding: 0.5rem;
+    font-weight: bolder;
 }
 .card {
     background-color: $lighter;
