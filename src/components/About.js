@@ -1,14 +1,9 @@
 import React from "react";
 
 const About = () => {
-    // Make text white on homepage only
-    let classes = "text-center header";
-    if (window.location.hash === "#/") {
-        classes = "text-center header text-white";
-    }
     return (
         <div>
-            <h1 className={classes}>ABOUT</h1>
+            <h1 className="text-center header text-tertiary">ABOUT</h1>
             <p>
                <span className="text-tertiary" style={{fontSize:"1.75rem"}}>ssebs</span> is my username for most things on the web. My real name is <em className="text-tertiary">Sebastian Safari</em>, and I am a Systems and Software Engineer. What does that mean? I do both System Engineering/Administration, and Software Development. 
             </p>
