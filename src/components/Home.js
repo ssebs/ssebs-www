@@ -29,7 +29,7 @@ const Banner = () => {
                     margin: "0.25rem 0px"
                 }}
             />
-            <h2>Systems and Software Engineer</h2>
+            <h2 className="text-center">Systems and Software Engineer</h2>
         </div>
     );
 };

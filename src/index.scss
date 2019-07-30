@@ -77,7 +77,6 @@ footer {
     align-items: center;
     .footer-item {
         padding: 1rem 2rem;
-
         h4 {
             font-weight: bolder;
             color: $tertiary;
@@ -89,6 +88,10 @@ footer {
                 padding: 0px 1rem;
             }
         }
+    }
+    @media screen and (max-width: 550px) {
+        display: block;
+        height: 100%;
     }
 }
 .sub-footer {
