@@ -1,7 +1,7 @@
 // react/deps imports
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
 // component imports
@@ -43,10 +43,28 @@ const Header = () => {
 
 const Footer = () => {
     return (
+        <>
         <footer className="text-center">
-            Footer
-            <br />
+            <div className="footer-item">
+                <h4>LOCATION</h4>
+                <p>Silicon Valley, CA</p>
+            </div>
+            <div className="footer-item">
+                <h4>AROUND THE WEB</h4>
+                <ul>
+                    <li>LinkedIn</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+            <div className="footer-item">
+                <h4>ABOUT ME</h4>
+                <p>I like cars and coding</p>
+            </div>
         </footer>
+        <div className="text-center sub-footer">
+            Copyright &copy; 2019 Sebastian Safari
+        </div>
+        </>
     );
 };
 
@@ -185,7 +203,7 @@ const projects = [
 // Main app
 const App = () => {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <Header />
             <Route
                 exact
@@ -205,7 +223,7 @@ const App = () => {
                 )}
             />
             <Footer />
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 

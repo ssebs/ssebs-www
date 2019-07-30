@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
     return (
         <div>
-            <h1 className="text-center">Contact</h1>
+            <h1 className="text-center header">CONTACT</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -12,6 +12,18 @@ const Contact = () => {
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p className="text-center">
+                <img
+                    src={require("../assets/256ssebsCircleLogo.png")}
+                    alt="Me"
+                    width="128"
+                />
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
         </div>
     );

@@ -26,8 +26,12 @@ body {
         margin-top: 1.5rem;
     }
 }
+.react-parallax-content {
+    color: $white;
+    font-weight: bold;
+}
 .header {
-    color: $secondary;
+    // color: $secondary;
     font-size: 2.25rem;
     text-decoration: underline;
     padding: 0.5rem;
@@ -52,4 +56,31 @@ body {
         top: -5px;
         cursor: pointer;
     }
+}
+footer {
+    height: 150px;
+    background-color: $secondary;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer-item {
+        padding: 1rem 2rem;
+
+        h4 {
+            font-weight: bolder;
+        }
+        ul {
+            padding: 0px;
+            li {
+                display: inline-block;
+                padding: 0px 1rem;
+            }
+        }
+    }
+}
+.sub-footer {
+    background-color: $primary;
+    padding: 1rem;
+    color: $white;
 }

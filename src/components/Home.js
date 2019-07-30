@@ -1,7 +1,8 @@
 import React from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
 
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Parallax } from "react-parallax";
 
 import { truncateString } from "../util";
@@ -71,9 +72,16 @@ let TopProjects = props => {
     });
 
     return (
-        <div className="py-2" >
-            <h3 className="text-center header">Top Projects</h3>
+        <div className="py-2">
+            <h3 className="text-center header">TOP PROJECTS</h3>
             <Row>{projs}</Row>
+            <div className="text-center mt-3">
+                <LinkContainer to="/portfolio">
+                    <Button size="lg" variant="secondary">
+                        All Projects
+                    </Button>
+                </LinkContainer>
+            </div>
         </div>
     );
 };
@@ -89,11 +97,19 @@ const Home = props => {
             >
                 <Banner />
             </Parallax>
-            <Container>
+            <Container className="py-3">
                 <TopProjects projects={props.projects} />
-                <hr />
-                <About />
-                <hr />
+            </Container>
+            <Parallax
+                blur={10}
+                bgImage={require("../assets/ssebsFeatureLogo.png")}
+                strength={400}
+            >
+                <Container className="py-3">
+                    <About />
+                </Container>
+            </Parallax>
+            <Container className="py-3">
                 <Contact />
             </Container>
         </>
