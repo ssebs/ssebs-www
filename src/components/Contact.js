@@ -29,7 +29,9 @@ const Contact = () => {
                 </p>
                 <p>
                     Please note that most of my work is internal, so you won't
-                    be able to see all the good stuff.
+                    be able to see all the good stuff. Typically the internal
+                    work I do is much more secure, using modern security to keep
+                    the data where it's supposed to be.
                 </p>
             </div>
         </div>

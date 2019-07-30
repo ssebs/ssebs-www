@@ -10,7 +10,7 @@ const About = () => {
         <div>
             <h1 className={classes}>ABOUT</h1>
             <p>
-               <span style={{fontSize:"1.75rem"}}>ssebs</span> is my username for most things on the web. My real name is <em>Sebastian Safari</em>, and I am a Systems and Software Engineer. What does that mean? I do both System Engineering/Administration, and Software Development. 
+               <span className="text-tertiary" style={{fontSize:"1.75rem"}}>ssebs</span> is my username for most things on the web. My real name is <em className="text-tertiary">Sebastian Safari</em>, and I am a Systems and Software Engineer. What does that mean? I do both System Engineering/Administration, and Software Development. 
             </p>
             <p>
                Day to day I build, develop, automate, and maintain misc IT infrastructure systems and web applications. Some examples of this would be things like:
