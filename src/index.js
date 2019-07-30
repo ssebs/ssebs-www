@@ -17,18 +17,24 @@ import "./index.scss";
 
 const Header = () => {
     return (
-        <Navbar bg="primary" variant="dark" collapseOnSelect expand="sm" sticky="top">
+        <Navbar
+            bg="primary"
+            variant="dark"
+            collapseOnSelect
+            expand="sm"
+            sticky="top"
+        >
             <Container>
-                <LinkContainer to="/home#top">
+                <LinkContainer to="/">
                     <Navbar.Brand>ssebs</Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <LinkContainer to="/home#about">
+                        <LinkContainer to="/about">
                             <Nav.Link>About</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/home#contact">
+                        <LinkContainer to="/contact">
                             <Nav.Link>Contact</Nav.Link>
                         </LinkContainer>
                         <LinkContainer to="/portfolio">
@@ -241,8 +247,22 @@ const App = () => {
                 path="/portfolio"
                 component={() => <Portfolio projects={projects} />}
             />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
+            <Route
+                path="/about"
+                component={() => (
+                    <Container>
+                        <About />
+                    </Container>
+                )}
+            />
+            <Route
+                path="/contact"
+                component={() => (
+                    <Container>
+                        <Contact />
+                    </Container>
+                )}
+            />
             <Route
                 path="/project/:id"
                 component={props => (

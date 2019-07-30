@@ -75,7 +75,6 @@ TopProjects = withRouter(TopProjects);
 const Home = props => {
     return (
         <>
-            <div id="top" />
             <Parallax
                 blur={5}
                 bgImage={require("../assets/banner.jpg")}
@@ -91,11 +90,11 @@ const Home = props => {
                 bgImage={require("../assets/ssebsFeatureLogo.png")}
                 strength={400}
             >
-                <Container id="about" className="py-3">
+                <Container className="py-3">
                     <About />
                 </Container>
             </Parallax>
-            <Container id="contact" className="py-3">
+            <Container className="py-3">
                 <Contact />
             </Container>
         </>
