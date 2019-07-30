@@ -26,7 +26,7 @@ const Banner = () => {
                     border: "1px solid",
                     height: "0px",
                     width: "60%",
-                    margin: "0.25rem 0px"
+                    margin: "0.25rem auto"
                 }}
             />
             <h2 className="text-center">Systems and Software Engineer</h2>
