@@ -42,6 +42,7 @@ const Header = () => {
 };
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
     return (
         <>
             <footer className="text-center">
@@ -62,7 +63,8 @@ const Footer = () => {
                 </div>
             </footer>
             <div className="text-center sub-footer">
-                Copyright &copy; 2019 Sebastian Safari
+                Copyright &copy; 2017-{currentYear} |{" "}
+                <span className="text-tertiary">Sebastian Safari</span>
             </div>
         </>
     );
@@ -147,7 +149,7 @@ const projects = [
         githublink: "https://github.com/ssebs/clean-mac-address",
         demolink: null,
         content:
-            "GUI program to clean a mac address (F01898b4EA08 -> f0:18:98:b4:ea:08)\n\nProgram to \"clean\" MAC address for registrar input."
+            'GUI program to clean a mac address (F01898b4EA08 -> f0:18:98:b4:ea:08)\n\nProgram to "clean" MAC address for registrar input.'
     },
     {
         id: 9,

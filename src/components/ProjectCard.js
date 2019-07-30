@@ -6,7 +6,6 @@ import { truncateString, renderMD } from "../util";
 
 const ProjectCard = ({ project, history }) => {
     const bodyContents = renderMD(truncateString(project.content, 150));
-    console.log(bodyContents);
     return (
         <Card
             onClick={() => {

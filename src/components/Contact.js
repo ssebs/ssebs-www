@@ -4,27 +4,34 @@ const Contact = () => {
     return (
         <div>
             <h1 className="text-center header">CONTACT</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p className="text-center">
+            <div className="contact-card">
                 <img
-                    src={require("../assets/256ssebsCircleLogo.png")}
+                    src={require("../assets/me200.jpg")}
                     alt="Me"
-                    width="128"
+                    width="180px"
+                    style={{ borderRadius: "50%" }}
                 />
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+
+                <p>
+                    You can email me at{" "}
+                    <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if
+                    you want to get in touch with me. I am open to new projects,
+                    so you can feel free to reach out if you're looking for
+                    someone like me.
+                </p>
+                <p>
+                    Above you'll find a photo of me. If you want to see this
+                    face in real life you'll first have to email me, or connect
+                    with me on{" "}
+                    <a href="https://linkedin.com/in/ssebs">LinkedIn</a>. I am
+                    also around on <a href="https://github.com/ssebs">GitHub</a>{" "}
+                    if you want to see some of my work.
+                </p>
+                <p>
+                    Please note that most of my work is internal, so you won't
+                    be able to see all the good stuff.
+                </p>
+            </div>
         </div>
     );
 };
