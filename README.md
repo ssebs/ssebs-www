@@ -1,6 +1,8 @@
 # ssebs-www
 
-ssebs.com website, created using reactjs
+ssebs.com website, created using React.
+
+[![Build Status](https://travis-ci.com/ssebs/ssebs-www.svg?branch=master)](https://travis-ci.com/ssebs/ssebs-www)
 
 ## Usage
 - Install npm, nodejs
