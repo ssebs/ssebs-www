@@ -17,9 +17,9 @@ import "./index.scss";
 
 const Header = () => {
     return (
-        <Navbar bg="primary" variant="dark" collapseOnSelect expand="sm">
+        <Navbar bg="primary" variant="dark" collapseOnSelect expand="sm" sticky="top">
             <Container>
-                <LinkContainer to="/">
+                <LinkContainer to="/home#top">
                     <Navbar.Brand>ssebs</Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

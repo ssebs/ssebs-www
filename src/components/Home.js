@@ -2,9 +2,8 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 
-import { Container, Row, Col,  Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { Parallax } from "react-parallax";
-
 
 import About from "./About";
 import Contact from "./Contact";
@@ -76,6 +75,7 @@ TopProjects = withRouter(TopProjects);
 const Home = props => {
     return (
         <>
+            <div id="top" />
             <Parallax
                 blur={5}
                 bgImage={require("../assets/banner.jpg")}
