@@ -4,14 +4,14 @@ const Contact = () => {
     return (
         <div>
             <h1 className="text-center header">CONTACT</h1>
-            <div className="contact-card mb-2 pb-3">
+            <div className="contact-card mb-5 pb-3">
                 <img
                     src={require("../assets/me200.jpg")}
                     alt="Me"
                     width="180px"
                     style={{ borderRadius: "50%" }}
                 />
-                <p>
+                <p className="text-center">
                     My username is{" "}
                     <span
                         className="text-tertiary"
@@ -19,7 +19,11 @@ const Contact = () => {
                     >
                         ssebs
                     </span>
-                    , you can find me online with that. You can email me at{" "}
+                    , you can find me online with that.{" "}
+                </p>
+                <hr/>
+                <p>
+                    You can email me at{" "}
                     <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if
                     you want to get in touch with me. I am open to new projects,
                     so you can feel free to reach out if you're looking for

@@ -40,8 +40,8 @@ const About = () => {
 
             <p>
                 Please note that most of my work is internal, so you won't be
-                able to see all the good stuff. Typically the internal work I do
-                is much more secure, using modern security to keep the data
+                able to see all the good stuff. Typically, the internal work I do
+                is more secure, using modern security principles to keep the data
                 where it's supposed to be. Some types of the work that I do are
                 listed below:
             </p>

@@ -69,17 +69,17 @@ li a i {
     }
 }
 footer {
-    height: 150px;
+    height: 120px;
     background-color: $secondary;
     color: $white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     .footer-item {
-        padding: 1rem 2rem;
+        padding: 1.5rem 2rem;
         h4 {
             font-weight: bolder;
-            color: $tertiary;
+            color: $white;
         }
         ul {
             padding: 0px;
@@ -102,11 +102,11 @@ footer {
 
 .contact-card {
     border: 1px solid $tertiary;
+    border-radius: 5px;
     background-color: $light;
     color: $dark;
-    min-height: 300px;
     margin-top: 120px;
-    padding: 90px 1rem 1rem 1rem;
+    padding: 70px 1rem 1rem 1rem;
     position: relative;
     img {
         position: absolute;
@@ -115,6 +115,7 @@ footer {
         top: -110px;
         left: 50%;
         margin-left: -90px;
+        border: 5px solid $tertiary;
     }
     a {
         color: $tertiary;
