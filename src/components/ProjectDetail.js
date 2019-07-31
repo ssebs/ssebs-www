@@ -21,6 +21,7 @@ const ProjectDetail = props => {
                     <p>{project.summary}</p>
                 </Card.Title>
                 <Card.Body
+                className="text-left"
                     dangerouslySetInnerHTML={{
                         __html: renderMD(project.content)
                     }}
