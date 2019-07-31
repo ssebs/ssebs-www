@@ -87,7 +87,7 @@ const Home = props => {
             </Container>
             <Parallax
                 blur={10}
-                bgImage={require("../assets/ssebsFeatureLogo.png")}
+                bgImage={require("../assets/banner2.jpg")}
                 strength={400}
             >
                 <Container className="py-3">
