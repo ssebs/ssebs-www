@@ -2,7 +2,7 @@
   "name": "ssebs-www",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ssebs.github.io/ssebs-www",
+  "homepage": ".",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-scss": "^4.3.1",
