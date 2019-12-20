@@ -15,15 +15,16 @@
     },
     {
       "id": 2,
-      "title": "React ToDo Cookies",
-      "summary": "This is a todo app that saves your todos in localStorage (\"cookie\"), so you can \"save\" it.",
+      "title": "Simpleshare",
+      "summary": "A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.",
       "techs": [
-        "js",
-        "react"
+        "python",
+        "tkinter",
+        "sockets"
       ],
-      "githublink": "https://github.com/ssebs/react-todo-cookies",
-      "demolink": "https://ssebs.github.io/react-todo-cookies/",
-      "content": "This is a todo app that saves your todos in localStorage (\"cookie\"), so you can \"save\" it. \n"
+      "githublink": "https://github.com/ssebs/simpleshare",
+      "demolink": "https://github.com/ssebs/simpleshare/releases",
+      "content": "A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves."
     },
     {
       "id": 3,
@@ -153,5 +154,17 @@
       "githublink": "https://github.com/ssebs/Platformer",
       "demolink": null,
       "content": "A simple platformer game written in Java."
+    },
+    {
+      "id": 14,
+      "title": "React ToDo Cookies",
+      "summary": "This is a todo app that saves your todos in localStorage (\"cookie\"), so you can \"save\" it.",
+      "techs": [
+        "js",
+        "react"
+      ],
+      "githublink": "https://github.com/ssebs/react-todo-cookies",
+      "demolink": "https://ssebs.github.io/react-todo-cookies/",
+      "content": "This is a todo app that saves your todos in localStorage (\"cookie\"), so you can \"save\" it. \n"
     }
   ]
