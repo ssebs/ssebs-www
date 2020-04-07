@@ -12,14 +12,21 @@ const Contact = () => {
                     style={{ borderRadius: "50%" }}
                 />
                 <p className="text-center">
-                    My username is{" "}
+                    My name is{" "}
+                    <span
+                        className="text-tertiary"
+                        style={{ fontSize: "1.5rem" }}
+                    >
+                        Sebastian Safari
+                    </span>
+                    ,but you can find me online with the username{" "}
                     <span
                         className="text-tertiary"
                         style={{ fontSize: "1.5rem" }}
                     >
                         ssebs
                     </span>
-                    , you can find me online with that.{" "}
+                    .
                 </p>
                 <hr/>
                 <p>
