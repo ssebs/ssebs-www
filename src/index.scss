@@ -1,9 +1,6 @@
 // index.scss - ssebs.com styles
 
-/*
-Variables
-*/
-
+//Variables
 $col1: #41afff;
 $col2: #333fff;
 $col3: #2e6ae8;
@@ -26,53 +23,14 @@ $white2: #eee;
 
 $font: "Baloo Bhai 2", "Roboto", "Ubuntu", "Droid Sans", sans-serif;
 
-/*
-Helper classes below
-*/
+// Bootstrap overrides
+$theme-colors: (
+  "primary": #41afff,
+  "secondary": #33ffe7
+);
 
-// Display
-.d-block {
-  display: block;
-}
-.d-flex {
-  display: flex;
-}
-// Buttons
-.btn {
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
-  border-radius: 5px;
-  border: 1px solid $gray1;
-  font-family: $font;
-  font-weight: bold;
-  // transition: 0.25s ease-in-out ;
-  cursor: pointer;
-}
-.btn-primary {
-  background-color: $col5;
-  color: $txt1;
-}
-.btn-secondary {
-  background-color: $col5;
-  color: $txt1;
-}
-
-//Text Utils
-.bold {
-  font-weight: bold;
-}
-
-/*
-Responsive
-*/
-
-
-/* 
-Fixers + Font
-*/
-
+// Other styles
 body {
-  margin: 0;
   font-family: $font;
   color: $txt1;
   font-weight: 500;
@@ -80,3 +38,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $white2;
 }
+
+@import "bootstrap/scss/bootstrap";
