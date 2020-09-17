@@ -26,8 +26,15 @@ $font: "Baloo Bhai 2", "Roboto", "Ubuntu", "Droid Sans", sans-serif;
 // Bootstrap overrides
 $theme-colors: (
   "primary": #41afff,
-  "secondary": #33ffe7
+  "secondary": #33ffe7,
 );
+.card {
+  width: 250px;
+  .card-text {
+    padding: 1.25rem;
+    font-size: 14px;
+  }
+}
 
 // Other styles
 body {
