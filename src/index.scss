@@ -42,12 +42,26 @@ $theme-colors: (
 .text-tertiary {
   color: $col2;
 }
+.title {
+  color: $col1;
+  font-weight: bold;
+  font-size: 3rem;
+}
 .subtitle {
   padding-left: 1rem;
   color: $col2;
 }
 .w-100 {
   width: 100%;
+}
+.mw-350 {
+  max-width: 350px;
+}
+.big-text {
+  font-size: 6rem;
+  line-height: 0.8;
+  text-align: right;
+  color: #2e3338;
 }
 
 // Other styles
