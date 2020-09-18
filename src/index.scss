@@ -35,6 +35,12 @@ $theme-colors: (
     font-size: 14px;
   }
 }
+.icon {
+  font-size: 5rem;
+}
+.text-tertiary {
+  color: $col2;
+}
 
 // Other styles
 body {
@@ -43,7 +49,7 @@ body {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $white2;
+  background-color: $white2 !important;
 }
 
 @import "bootstrap/scss/bootstrap";
