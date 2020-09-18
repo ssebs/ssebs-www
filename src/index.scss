@@ -60,11 +60,14 @@ $theme-colors: (
 .mw-230 {
   max-width: 230px;
 }
+.h-250 {
+  height: 150px;
+}
 .big-text {
   font-size: 6rem;
   line-height: 0.8;
   text-align: right;
-  color: #2e3338;
+  color: $txt1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -73,8 +76,19 @@ $theme-colors: (
 .pointer {
   cursor: pointer;
 }
-.link-secondary a{
-  color: $col5  !important;
+.link-secondary a {
+  color: $col5 !important;
+}
+.card {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 // Other styles
 * {
