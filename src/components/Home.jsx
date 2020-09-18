@@ -133,8 +133,43 @@ const Home = () => {
           </div>
         </div>
         <div className="d-flex justify-content-around m-5">
-          {<JsonToList data={tools} title="What tools we use?" />}
+          {<JsonToList data={tools} title="What tools do we use?" />}
           {<JsonToList data={technologies} title="What else do we know?" />}
+        </div>
+      </Section>
+      <Section bgColor="dark">
+        <div className="d-flex justify-content-between">
+          <div>
+            <Title
+              title="Around the web"
+              subtitle="Other than here"
+              variant="dark"
+            />
+            <div className="py-3 text-secondary">
+              <a href="https://github.com/ssebs">github.com/ssebs</a>
+              <br />
+              <a href="https://linkedin.com/in/ssebs">
+                https://linkedin.com/in/ssebs
+              </a>
+              <br />
+              <a href="mailto:contact@ssebs.com">contact@ssebs/com</a>
+              <br />
+            </div>
+          </div>
+          <div>
+            <Title
+              title="More about me"
+              subtitle="Location &amp; Hobbies"
+              variant="dark"
+            />
+            <div className="py-3 mw-230 text-light">
+              I’m located in the heart of the <span className="text-secondary">Silicon Valley</span>. Some of my hobbies include
+              playing guitar, some gaming, and being a car nerd.
+            </div>
+          </div>
+        </div>
+        <div className="text-center text-light">
+          Copyright &copy; 2020 <span className="text-primary">Sebastian Safari</span> | <span className="text-secondary">ssebs</span>
         </div>
       </Section>
     </>
