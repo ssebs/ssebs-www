@@ -15,9 +15,7 @@ const Footer = () => {
           <div className="py-3 link-secondary">
             <a href="https://github.com/ssebs">github.com/ssebs</a>
             <br />
-            <a href="https://linkedin.com/in/ssebs">
-              linkedin.com/in/ssebs
-            </a>
+            <a href="https://linkedin.com/in/ssebs">linkedin.com/in/ssebs</a>
             <br />
             <a href="mailto:contact@ssebs.com">contact@ssebs/com</a>
             <br />
@@ -38,8 +36,13 @@ const Footer = () => {
       </div>
       <div className="text-center text-light">
         Copyright &copy; 2020{" "}
-        <span className="text-primary">Sebastian Safari</span> |{" "}
-        <span className="text-secondary">ssebs</span>
+        <span className="text-primary">
+          <a href="https://linkedin.com/in/ssebs">Sebastian Safari</a>
+        </span>{" "}
+        |{" "}
+        <span className="link-secondary">
+          <a href="https://github.com/ssebs">ssebs</a>
+        </span>
       </div>
     </div>
   );
