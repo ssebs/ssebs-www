@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./WebComponents/Card";
 
 import { ReactComponent as CodeSquare } from "bootstrap-icons/icons/code-square.svg";
+import { ReactComponent as RocketLogo } from "../img/RocketOnly.svg";
 import Header from "./WebComponents/Header";
 import Title from "./WebComponents/Title";
 import Section from "./WebComponents/Section";
@@ -11,17 +12,25 @@ const Home = () => {
     <>
       <Header />
       <Section bgColor="light">
-        <div className="mw-350">
-          <h1 className="title">ssebs Software</h1>
-          <p style={{ fontSize: "18px" }}>
-            Looking for someone to just make it work? We’re general ists, and
-            love to figure out all things tech
-          </p>
+        {/* <div className="container"> */}
+        <div className="d-flex justify-content-between ml-5">
+          <div className="mw-450">
+            <h1 className="title">ssebs Software</h1>
+            <p style={{ fontSize: "24px" }}>
+              Looking for someone to just make it work? We’re general ists, and
+              love to figure out all things tech.
+            </p>
+            <div style={{ margin: "4.5rem auto" }}></div>
+            <button className="btn btn-secondary">
+              <strong>See what we do</strong>
+            </button>
+          </div>
+          <RocketLogo
+            width="600"
+            style={{ position: "relative", top: "-50px", right: "200px" }}
+          />
+        {/* </div> */}
         </div>
-        <div style={{ margin: "4.5rem auto" }}></div>
-        <button className="btn btn-secondary">
-          <strong>See what we do</strong>
-        </button>
       </Section>
       <Section bgColor="dark">
         <Title title="About" subtitle="What we do" variant="dark" />
