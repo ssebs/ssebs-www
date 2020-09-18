@@ -3,7 +3,7 @@ import React from "react";
 const Card = (props) => {
   const { title, icon } = props;
   return (
-    <div className="card bg-light">
+    <div className="card bg-light shadow">
       <div className="card-body">
         <div className="card-title text-center">
           <strong>{title}</strong>
