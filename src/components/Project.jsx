@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./WebComponents/Card";
-import { ReactComponent as CodeSquare } from "bootstrap-icons/icons/code-square.svg";
+
+import { ReactComponent as IcnCode } from "bootstrap-icons/icons/code-square.svg";
 import { ReactComponent as IcnUpload } from "bootstrap-icons/icons/upload.svg";
 import { ReactComponent as IcnDB } from "bootstrap-icons/icons/server.svg";
 import { ReactComponent as IcnPeople } from "bootstrap-icons/icons/people.svg";
@@ -46,13 +47,13 @@ const projects = [
   },
   {
     title: "PerishablePunchers",
-    icon: <CodeSquare />,
+    icon: <IcnGame />,
     link: "https://github.com/ssebs/PerishablePunchers",
     content: "PerishablePunchers is a Mortal Kombat like Game written in Java.",
   },
   {
     title: "ssebsEngine",
-    icon: <CodeSquare />,
+    icon: <IcnCode />,
     link: "https://github.com/ssebs/ssebsEngine",
     content: "Java/LWJGL2 2D Game Engine.",
   },
