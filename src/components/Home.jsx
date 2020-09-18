@@ -7,12 +7,13 @@ import Header from "./WebComponents/Header";
 import Title from "./WebComponents/Title";
 import Section from "./WebComponents/Section";
 
+import Me from "../img/Sebastian.png";
+
 const Home = () => {
   return (
     <>
       <Header />
       <Section bgColor="light">
-        {/* <div className="container"> */}
         <div className="d-flex justify-content-between ml-5">
           <div className="mw-450">
             <h1 className="title">ssebs Software</h1>
@@ -29,7 +30,6 @@ const Home = () => {
             width="600"
             style={{ position: "relative", top: "-50px", right: "200px" }}
           />
-        {/* </div> */}
         </div>
       </Section>
       <Section bgColor="dark">
@@ -82,6 +82,43 @@ const Home = () => {
           subtitle="Let's work together"
           variant="light"
         ></Title>
+        <div className="d-flex justify-content-between my-4">
+          <div>
+            {" "}
+            <h3>
+              My name is <span className="text-primary">Sebastian Safari</span>
+            </h3>
+            <p
+              className="text-dark pl-1"
+              style={{ maxWidth: "378px", lineHeight: "1.75" }}
+            >
+              I’m a Systems and Software Engineer, I can take an idea and turn
+              it into a tangible product. At the moment, I’m the only one at
+              ssebs, but I’ll put complete focus in you when it comes time.
+            </p>
+            <button className="btn btn-outline-primary">
+              <strong>Email me</strong>
+            </button>
+          </div>
+          <div className="">
+            <img
+              width={256}
+              src={Me}
+              alt="Profile"
+              className="rounded-circle"
+            />
+          </div>
+        </div>
+        <p className="d-flex justify-content-center my-5">
+          <ul className="mx-5">
+            <h4>What tools we use?</h4>
+            <li>Python</li>
+          </ul>
+          <ul className="mx-5">
+            <h4>What else do we know?</h4>
+            <li>DDI</li>
+          </ul>
+        </p>
       </Section>
     </>
   );
