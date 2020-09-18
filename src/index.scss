@@ -41,10 +41,15 @@ $theme-colors: (
 .text-tertiary {
   color: $col2;
 }
-
+.subtitle {
+  padding-left: 1rem;
+  color: $col2;
+}
 // Other styles
-body {
+* {
   font-family: $font;
+}
+body {
   color: $txt1;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
