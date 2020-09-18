@@ -1,2 +1,0 @@
-(this["webpackJsonpssebs-www"]=this["webpackJsonpssebs-www"]||[]).push([[0],{3:function(e,n,t){e.exports=t(9)},8:function(e,n,t){},9:function(e,n,t){"use strict";t.r(n);var s=t(0),c=t.n(s),r=t(2),o=t.n(r),a=(t(8),function(){return c.a.createElement("div",null,"ssebs.com")});o.a.render(c.a.createElement(c.a.StrictMode,null,c.a.createElement(a,null)),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.0a4b1c3e.chunk.js.map

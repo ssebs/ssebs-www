@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./WebComponents/Card";
+import Title from "./WebComponents/Title";
 
 import { ReactComponent as IcnCode } from "bootstrap-icons/icons/code-square.svg";
 import { ReactComponent as IcnUpload } from "bootstrap-icons/icons/upload.svg";
@@ -9,7 +10,6 @@ import { ReactComponent as IcnSheet } from "bootstrap-icons/icons/table.svg";
 import { ReactComponent as IcnTerm } from "bootstrap-icons/icons/terminal.svg";
 import { ReactComponent as IcnGame } from "bootstrap-icons/icons/controller.svg";
 
-import Title from "./WebComponents/Title";
 
 const projects = [
   {
