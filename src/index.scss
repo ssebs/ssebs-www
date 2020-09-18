@@ -73,6 +73,9 @@ $theme-colors: (
 .pointer {
   cursor: pointer;
 }
+.link-secondary a{
+  color: $col5  !important;
+}
 // Other styles
 * {
   font-family: $font;
