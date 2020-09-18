@@ -75,5 +75,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $white2 !important;
 }
+ul {
+  list-style-type: none;
+}
 
 @import "bootstrap/scss/bootstrap";

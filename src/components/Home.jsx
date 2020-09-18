@@ -1,13 +1,36 @@
 import React from "react";
-import Card from "./WebComponents/Card";
 
 import { ReactComponent as CodeSquare } from "bootstrap-icons/icons/code-square.svg";
 import { ReactComponent as RocketLogo } from "../img/RocketOnly.svg";
+import Card from "./WebComponents/Card";
 import Header from "./WebComponents/Header";
 import Title from "./WebComponents/Title";
 import Section from "./WebComponents/Section";
 
+import { tools, technologies } from "../Util";
 import Me from "../img/Sebastian.png";
+
+const JsonToList = (props) => {
+  const { data, title } = props;
+
+  return (
+    <ul>
+      <h4>{title}</h4>
+      {data.map((item) => {
+        return (
+          <li key={item.name}>
+            {item.name}
+            <ul>
+              {item.etc.map((i) => {
+                return <li key={i}>{i}</li>;
+              })}
+            </ul>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 const Home = () => {
   return (
@@ -109,16 +132,10 @@ const Home = () => {
             />
           </div>
         </div>
-        <p className="d-flex justify-content-center my-5">
-          <ul className="mx-5">
-            <h4>What tools we use?</h4>
-            <li>Python</li>
-          </ul>
-          <ul className="mx-5">
-            <h4>What else do we know?</h4>
-            <li>DDI</li>
-          </ul>
-        </p>
+        <div className="d-flex justify-content-around m-5">
+          {<JsonToList data={tools} title="What tools we use?" />}
+          {<JsonToList data={technologies} title="What else do we know?" />}
+        </div>
       </Section>
     </>
   );
