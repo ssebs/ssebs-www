@@ -27,7 +27,7 @@ $font: "Baloo Bhai 2", "Roboto", "Ubuntu", "Droid Sans", sans-serif;
 $theme-colors: (
   "primary": #41afff,
   "secondary": #33ffe7,
-  "light": #eee
+  "light": #eee,
 );
 .card {
   width: 250px;
@@ -65,8 +65,14 @@ $theme-colors: (
   line-height: 0.8;
   text-align: right;
   color: #2e3338;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
+.pointer {
+  cursor: pointer;
+}
 // Other styles
 * {
   font-family: $font;

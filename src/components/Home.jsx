@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 
-import { ReactComponent as CodeSquare } from "bootstrap-icons/icons/code-square.svg";
 import { ReactComponent as RocketLogo } from "../img/RocketOnly.svg";
-import Card from "./WebComponents/Card";
-import Header from "./WebComponents/Header";
 import Title from "./WebComponents/Title";
 import Section from "./WebComponents/Section";
 
 import { tools, technologies } from "../Util";
 import Me from "../img/Sebastian.png";
+import Project from "./Project";
+import { LinkContainer } from "react-router-bootstrap";
 
 const JsonToList = (props) => {
   const { data, title } = props;
@@ -33,9 +32,12 @@ const JsonToList = (props) => {
 };
 
 const Home = () => {
+  const aboutRef = useRef();
+  const projectsRef = useRef();
+  const contactRef = useRef();
+
   return (
     <>
-      <Header />
       <Section bgColor="light">
         <div className="d-flex justify-content-between ml-5">
           <div className="mw-450">
@@ -45,18 +47,28 @@ const Home = () => {
               love to figure out all things tech.
             </p>
             <div style={{ margin: "4.5rem auto" }}></div>
-            <button className="btn btn-secondary">
+            <button
+              className="btn btn-secondary"
+              onClick={() => {
+                aboutRef.current.scrollIntoView();
+              }}
+            >
               <strong>See what we do</strong>
             </button>
           </div>
           <RocketLogo
             width="600"
-            style={{ position: "relative", top: "-50px", right: "200px" }}
+            style={{ position: "relative", top: "-50px", right: "100px" }}
           />
         </div>
       </Section>
       <Section bgColor="dark">
-        <Title title="About" subtitle="What we do" variant="dark" />
+        <Title
+          ref={aboutRef}
+          title="About"
+          subtitle="What we do"
+          variant="dark"
+        />
         <div className="d-flex justify-content-between my-3">
           <p
             className="text-light"
@@ -75,39 +87,29 @@ const Home = () => {
       </Section>
       <Section bgColor="dark">
         <Title
+          ref={projectsRef}
           title="Projects"
           subtitle="Some of our best work"
           variant="dark"
         />
-        <div className="my-4 d-flex justify-content-around">
-          <Card title="Project 1" icon={<CodeSquare />}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
-            maxime placeat ducimus similique.
-          </Card>
-          <Card title="Project 2" icon={<CodeSquare />}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
-            maxime placeat ducimus similique.
-          </Card>
-          <Card title="Project 3" icon={<CodeSquare />}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
-            maxime placeat ducimus similique.
-          </Card>
-        </div>
+        <Project limit={3} />
         <div className="d-flex justify-content-center">
-          <button className="btn btn-secondary">
-            <strong>See more</strong>
-          </button>
+          <LinkContainer to="/projects">
+            <button className="btn btn-secondary">
+              <strong>See more</strong>
+            </button>
+          </LinkContainer>
         </div>
       </Section>
       <Section bgColor="light">
         <Title
+          ref={contactRef}
           title="Contact"
           subtitle="Let's work together"
           variant="light"
         ></Title>
         <div className="d-flex justify-content-between my-4">
           <div>
-            {" "}
             <h3>
               My name is <span className="text-primary">Sebastian Safari</span>
             </h3>
@@ -119,9 +121,12 @@ const Home = () => {
               it into a tangible product. At the moment, I’m the only one at
               ssebs, but I’ll put complete focus in you when it comes time.
             </p>
-            <button className="btn btn-outline-primary">
+            <a
+              href="mailto:contact@ssebs.com"
+              className="btn btn-outline-primary"
+            >
               <strong>Email me</strong>
-            </button>
+            </a>
           </div>
           <div className="">
             <img
@@ -141,6 +146,7 @@ const Home = () => {
         <div className="d-flex justify-content-between">
           <div>
             <Title
+              id="footer"
               title="Around the web"
               subtitle="Other than here"
               variant="dark"
@@ -163,13 +169,16 @@ const Home = () => {
               variant="dark"
             />
             <div className="py-3 mw-230 text-light">
-              I’m located in the heart of the <span className="text-secondary">Silicon Valley</span>. Some of my hobbies include
-              playing guitar, some gaming, and being a car nerd.
+              I’m located in the heart of the{" "}
+              <span className="text-secondary">Silicon Valley</span>. Some of my
+              hobbies include playing guitar, some gaming, and being a car nerd.
             </div>
           </div>
         </div>
         <div className="text-center text-light">
-          Copyright &copy; 2020 <span className="text-primary">Sebastian Safari</span> | <span className="text-secondary">ssebs</span>
+          Copyright &copy; 2020{" "}
+          <span className="text-primary">Sebastian Safari</span> |{" "}
+          <span className="text-secondary">ssebs</span>
         </div>
       </Section>
     </>

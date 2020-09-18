@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkContainer } from "react-router-bootstrap";
 
 import brand from "../../img/Variant1-256.png";
 
@@ -19,24 +20,30 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarToggle">
-            <a className="navbar-brand" href="/#">
-              <img width="128px" src={brand} alt="Logo" />
-            </a>
+            <LinkContainer to="/">
+              <div className="navbar-brand pointer">
+                <img width="128px" src={brand} alt="Logo" />
+              </div>
+            </LinkContainer>
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
               <li className="nav-item active">
-                <a className="nav-link" href="/#">
-                  Home <span className="sr-only">(current)</span>
-                </a>
+                <LinkContainer to="/">
+                  <div className="nav-link pointer">
+                    Home <span className="sr-only">(current)</span>
+                  </div>
+                </LinkContainer>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/#">
-                  Link
-                </a>
+              <li className="nav-item pointer">
+                <LinkContainer to="/projects">
+                  <div className="nav-link">Projects</div>
+                </LinkContainer>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/#">
-                  Disabled
-                </a>
+              <li className="nav-item pointer">
+                <LinkContainer to="/contact">
+                  <div className="nav-link" href="/#">
+                    Contact
+                  </div>
+                </LinkContainer>
               </li>
             </ul>
           </div>
