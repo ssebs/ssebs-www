@@ -1,140 +1,108 @@
-$primary: #41afff;
-$secondary: #2697f9;
-$tertiary: #0060a5;
-$lighter: #fbfbfb;
+// index.scss - ssebs.com styles
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+//Variables
+$col1: #41afff;
+$col2: #333fff;
+$col3: #2e6ae8;
+$col4: #2ecce8;
+$col5: #33ffe7;
 
-html {
-    scroll-behavior: smooth;
+$txt1: #292d33; //$gray5
+$txt2: #000;
+$txt3: #a9b9d1; //$gray1
+$txt4: #fff; //$white1
+
+$gray1: #a9b9d1;
+$gray2: #768091;
+$gray3: #424852;
+$gray4: #393e46;
+$gray5: #292d33;
+
+$white1: #fff;
+$white2: #eee;
+
+$font: "Baloo Bhai 2", "Roboto", "Ubuntu", "Droid Sans", sans-serif;
+
+// Bootstrap overrides
+$theme-colors: (
+  "primary": #41afff,
+  "secondary": #33ffe7,
+  "light": #eee,
+);
+.card {
+  width: 250px;
+  .card-text {
+    padding: 1.25rem;
+    font-size: 14px;
+  }
 }
-body {
-    background-color: $white;
+.icon {
+  font-size: 5rem;
 }
 .text-tertiary {
-    color: $tertiary !important;
+  color: $col2;
 }
-li a i {
-    color: $light;
+.title {
+  color: $col1;
+  font-weight: bold;
+  font-size: 4rem;
 }
-.navbar {
-    .navbar-brand {
-        font-size: 1.85rem;
-    }
-    .nav-link {
-        font-size: 1.25rem;
-        &:link,
-        &:visited {
-            color: $lighter;
-        }
-    }
+.subtitle {
+  padding-left: 1rem;
+  color: $col2;
 }
-.banner {
-    height: 500px;
-    color: $white;
-    h1 {
-        margin-top: 1.5rem;
-    }
+.w-100 {
+  width: 100%;
 }
-.react-parallax-content {
-    color: $white;
-    font-weight: bold;
+.mw-450 {
+  max-width: 450px;
 }
-.header {
-    color: $secondary;
-    font-size: 2.25rem;
-    text-decoration: underline;
-    padding: 0.5rem;
-    font-weight: bolder;
+.mw-230 {
+  max-width: 230px;
+}
+.h-250 {
+  height: 150px;
+}
+.big-text {
+  font-size: 6rem;
+  line-height: 0.8;
+  text-align: right;
+  color: $txt1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pointer {
+  cursor: pointer;
+}
+.link-secondary a {
+  color: $col5 !important;
 }
 .card {
-    background-color: $lighter;
-    .card-header {
-        color: $lighter;
-        font-weight: bold;
-        font-size: 1.15rem;
-        background-color: $secondary;
-    }
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
 }
-.cards {
-    height: 100%;
-    top: 0;
-    box-shadow: none;
-    transition: ease 0.2s;
-    &:hover {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        position: relative;
-        top: -5px;
-        cursor: pointer;
-    }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
-footer {
-    height: 120px;
-    background-color: $secondary;
-    color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    .footer-item {
-        padding: 1.5rem 2rem;
-        h4 {
-            font-weight: bolder;
-            color: $white;
-        }
-        ul {
-            padding: 0px;
-            li {
-                display: inline-block;
-                padding: 0px 1rem;
-            }
-        }
-    }
-    @media screen and (max-width: 550px) {
-        display: block;
-        height: 100%;
-    }
+// Other styles
+* {
+  font-family: $font;
 }
-.sub-footer {
-    background-color: $primary;
-    padding: 1rem;
-    color: $white;
+body {
+  color: $txt1;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white2 !important;
+}
+ul {
+  list-style-type: none;
 }
 
-.contact-card {
-    border: 1px solid $tertiary;
-    border-radius: 5px;
-    background-color: $light;
-    color: $dark;
-    margin-top: 120px;
-    padding: 70px 1rem 1rem 1rem;
-    position: relative;
-    img {
-        position: absolute;
-        margin: auto;
-        display: block;
-        top: -110px;
-        left: 50%;
-        margin-left: -90px;
-        border: 5px solid $tertiary;
-    }
-    a {
-        color: $tertiary;
-    }
-}
-blockquote {
-    background: $light;
-    border-left: 10px solid #ccc;
-    margin: 0px 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
-  }
-  blockquote:before {
-    color: $lighter;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-  blockquote p {
-    display: inline;
-  }
+@import "bootstrap/scss/bootstrap";
