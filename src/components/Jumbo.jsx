@@ -22,7 +22,8 @@ const Jumbo = React.forwardRef((props, ref) => {
       </div>
       <RocketLogo
         width="600"
-        style={{ position: "relative", top: "-50px", right: "100px" }}
+        id="logo"
+        // style={{ position: "relative", top: "-50px", right: "100px" }}
       />
     </div>
   );

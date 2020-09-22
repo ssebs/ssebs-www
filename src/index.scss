@@ -105,4 +105,15 @@ ul {
   list-style-type: none;
 }
 
+
+// Responsive
+@media only screen and (max-width: 600px) {
+  #logo {
+   display: none;
+  }
+  .justify-content-between {
+    flex-wrap: wrap;
+  }
+}
+
 @import "bootstrap/scss/bootstrap";
