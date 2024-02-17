@@ -1,7 +1,8 @@
 import React from "react";
-import { LinkContainer } from "react-router-bootstrap";
+
 
 import brand from "../../img/Variant1-256.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -20,30 +21,30 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarToggle">
-            <LinkContainer to="/">
+            <Link to="/">
               <div className="navbar-brand pointer">
                 <img width="128px" src={brand} alt="Logo" />
               </div>
-            </LinkContainer>
+            </Link>
             <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
               <li className="nav-item active">
-                <LinkContainer to="/">
+                <Link to="/">
                   <div className="nav-link pointer">
                     Home <span className="sr-only">(current)</span>
                   </div>
-                </LinkContainer>
+                </Link>
               </li>
               <li className="nav-item pointer">
-                <LinkContainer to="/projects">
+                <Link to="/projects">
                   <div className="nav-link">Projects</div>
-                </LinkContainer>
+                </Link>
               </li>
               <li className="nav-item pointer">
-                <LinkContainer to="/contact">
+                <Link to="/contact">
                   <div className="nav-link" href="/#">
                     Contact
                   </div>
-                </LinkContainer>
+                </Link>
               </li>
             </ul>
           </div>

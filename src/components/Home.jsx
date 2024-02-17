@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { LinkContainer } from "react-router-bootstrap";
+// import { LinkContainer } from "react-router-bootstrap";
 
 import Section from "./WebComponents/Section";
 import Footer from "./WebComponents/Footer";
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <>
       <Section bgColor="light">
-        <Jumbo  ref={aboutRef}/>
+        <Jumbo ref={aboutRef} />
       </Section>
       <Section bgColor="dark">
         <About ref={aboutRef} />
@@ -22,18 +22,15 @@ const Home = () => {
       <Section bgColor="dark">
         <Project limit={3} variant="dark" />
         <div className="d-flex justify-content-center">
-          <LinkContainer to="/projects">
+          {/* <LinkContainer to="/projects">
             <button className="btn btn-secondary">
               <strong>See more</strong>
             </button>
-          </LinkContainer>
+          </LinkContainer> */}
         </div>
       </Section>
       <Section bgColor="light">
         <Contact />
-      </Section>
-      <Section bgColor="dark">
-        <Footer />
       </Section>
     </>
   );
