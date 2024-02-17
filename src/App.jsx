@@ -1,6 +1,6 @@
 import React from "react";
 
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./components/Home";
 import Header from './components/WebComponents/Header'
@@ -9,15 +9,16 @@ import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <>
-      <HashRouter>
+    <HashRouter>
+      <Routes>
         <Header />
         <Route path="/projects" component={Project} />
         <Route path="/contact" component={Contact} />
         <Route exact path="/" component={Home} />
-      </HashRouter>
-    </>
+      </Routes>
+    </HashRouter>
   );
 };
 
 export default App;
+
