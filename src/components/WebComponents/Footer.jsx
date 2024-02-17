@@ -4,7 +4,7 @@ import Title from "./Title";
 const Footer = () => {
   return (
     <div>
-      <div className="d-flex justify-content-between">
+      <div className="flex justify-between">
         <div>
           <Title
             id="footer"
@@ -28,7 +28,7 @@ const Footer = () => {
             variant="dark"
           />
           <div className="py-3 mw-230 text-light">
-            I’m located in the heart of the{" "}
+            I'm located in the heart of the{" "}
             <span className="text-secondary">Silicon Valley</span>. Some of my
             hobbies include playing guitar, some gaming, and being a car nerd.
           </div>

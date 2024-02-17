@@ -1,11 +1,10 @@
 import React from "react";
 
-const Section = (props) => {
-  const bgColor = props.bgColor;
+const Section = ({ classNames, children }) => {
 
   return (
-    <section className={`py-4 w-100 bg-${bgColor}`}>
-      <div className="container">{props.children}</div>
+    <section className={`py-4 w-full ${classNames}`}>
+      <div className="container">{children}</div>
     </section>
   );
 };

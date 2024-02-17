@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import App from "./Base";
+import Base from "./components/Base";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Project from "./components/pages/Project";
@@ -11,8 +11,8 @@ import Error from "./components/pages/Error";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <App />,
-        errorElement: <Error message={"test"} />,
+        element: <Base />,
+        errorElement: <Error />,
         children: [
             {
                 path: "/",

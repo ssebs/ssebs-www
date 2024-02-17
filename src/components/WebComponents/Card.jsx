@@ -7,7 +7,7 @@ const Card = (props) => {
       <div className="card-body">
         <div className="card-title text-center">
           <strong>{title}</strong>
-          <div className="d-flex justify-content-center mt-3 icon text-tertiary">
+          <div className="flex justify-content-center mt-3 icon text-tertiary">
             {icon}
           </div>
         </div>

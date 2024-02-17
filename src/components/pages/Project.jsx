@@ -69,7 +69,7 @@ const Project = (props) => {
         subtitle="Some of our best work"
         variant={variant}
       />
-      <div className="my-4 d-flex justify-content-around flex-wrap">
+      <div className="my-4 flex justify-content-around flex-wrap">
         {projects.slice(0, limit).map((proj, idx) => {
           return (
             <Card
