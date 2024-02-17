@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "./WebComponents/Title";
+import Title from "../WebComponents/Title";
 
 const About = React.forwardRef((props, ref) => {
   return (

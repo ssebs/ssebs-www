@@ -2,13 +2,13 @@ import React from "react";
 import "./index.scss";
 import App from "./Base";
 import { createRoot } from "react-dom/client";
-import { RouterProvider, createHashRouter } from "react-router-dom";
-import Project from "./components/Project";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
-import Error from "./components/Error";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Project from "./components/pages/Project";
+import Contact from "./components/pages/Contact";
+import Home from "./components/pages/Home";
+import Error from "./components/pages/Error";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,

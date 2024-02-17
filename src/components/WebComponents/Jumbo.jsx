@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as RocketLogo } from "../img/RocketOnly.svg";
+import { ReactComponent as RocketLogo } from "../../img/RocketOnly.svg";
 
 const Jumbo = React.forwardRef((props, ref) => {
   return (
@@ -23,7 +23,7 @@ const Jumbo = React.forwardRef((props, ref) => {
       <RocketLogo
         width="600"
         id="logo"
-        // style={{ position: "relative", top: "-50px", right: "100px" }}
+      // style={{ position: "relative", top: "-50px", right: "100px" }}
       />
     </div>
   );

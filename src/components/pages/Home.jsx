@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
-// import { LinkContainer } from "react-router-bootstrap";
 
-import Section from "./WebComponents/Section";
-import Footer from "./WebComponents/Footer";
+import Section from "../WebComponents/Section";
 import Contact from "./Contact";
 import Project from "./Project";
 import About from "./About";
-import Jumbo from "./Jumbo";
+import Jumbo from "../WebComponents/Jumbo";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const aboutRef = useRef();
@@ -22,11 +21,11 @@ const Home = () => {
       <Section bgColor="dark">
         <Project limit={3} variant="dark" />
         <div className="d-flex justify-content-center">
-          {/* <LinkContainer to="/projects">
+          <Link to="/projects">
             <button className="btn btn-secondary">
               <strong>See more</strong>
             </button>
-          </LinkContainer> */}
+          </Link>
         </div>
       </Section>
       <Section bgColor="light">

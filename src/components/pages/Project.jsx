@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "./WebComponents/Card";
-import Title from "./WebComponents/Title";
+import Card from "../WebComponents/Card";
+import Title from "../WebComponents/Title";
 
 import { ReactComponent as IcnCode } from "bootstrap-icons/icons/code-square.svg";
 import { ReactComponent as IcnUpload } from "bootstrap-icons/icons/upload.svg";

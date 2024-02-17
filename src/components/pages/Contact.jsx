@@ -1,7 +1,7 @@
 import React from "react";
-import Title from "./WebComponents/Title";
-import { tools, technologies } from "../Util";
-import Me from "../img/Sebastian.png";
+import Title from "../WebComponents/Title";
+import { tools, technologies } from "../../Util";
+import Me from "../../img/Sebastian.png";
 
 const JsonToList = (props) => {
   const { data, title } = props;
