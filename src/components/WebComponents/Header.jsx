@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-md navbar-light bg-light">
-        <div className="container">
+      {/* TODO: https://tailwindui.com/components/application-ui/navigation/navbars */}
+      <nav className="">
+        <div className="">
           <button
-            className="navbar-toggler"
+            className=""
             type="button"
             data-toggle="collapse"
             data-target="#navbarToggle"
@@ -18,30 +19,30 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className=""></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarToggle">
+          <div className="" id="navbarToggle">
             <Link to="/">
-              <div className="navbar-brand pointer">
+              <div className=" pointer">
                 <img width="128px" src={brand} alt="Logo" />
               </div>
             </Link>
-            <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li className="nav-item active">
+            <ul className=" ml-auto mt-2 mt-lg-0">
+              <li className="">
                 <Link to="/">
-                  <div className="nav-link pointer">
+                  <div className=" pointer">
                     Home <span className="sr-only">(current)</span>
                   </div>
                 </Link>
               </li>
-              <li className="nav-item pointer">
+              <li className=" pointer">
                 <Link to="/projects">
-                  <div className="nav-link">Projects</div>
+                  <div className="">Projects</div>
                 </Link>
               </li>
-              <li className="nav-item pointer">
+              <li className=" pointer">
                 <Link to="/contact">
-                  <div className="nav-link" href="/#">
+                  <div className="" href="/#">
                     Contact
                   </div>
                 </Link>
