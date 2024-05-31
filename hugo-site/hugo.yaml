@@ -15,6 +15,9 @@ params:
   # PaperMod specific
   disableThemeToggle: false
   author: Sebastian Safari
+  label:
+    text: ssebs
+    icon: /img/Icon.png
 
   assets:
     favicon: /img/favicon.ico
