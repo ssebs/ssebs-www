@@ -2,7 +2,6 @@
 
 ssebs.com website code. 
 
-
 ## Usage
 - Clone this repo
 - Install [hugo](https://gohugo.io/)
