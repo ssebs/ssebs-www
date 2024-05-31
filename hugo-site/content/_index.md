@@ -4,9 +4,11 @@ date = 2024-05-18T14:12:18-07:00
 description = "My name is Sebastian Safari, and I am a Systems and Software Engineer."
 +++
 
-{{< figure align="center" src="img/me_wedding.jpg" width="512" >}}
 
-## Hey, I'm Sebastian 
+## Hey, I'm Sebastian
+I go by **ssebs**
+
+{{< figure align="center" src="img/me_wedding.jpg" width="512" >}}
 
 ### Background
 I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
