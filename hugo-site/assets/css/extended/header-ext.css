@@ -1,3 +1,36 @@
 #menu .logo-switches {
     margin-left: 32px;
 }
+
+.header {
+    border-bottom: 2px solid #41afff;
+}
+
+.footer {
+    background-color: #41afff;
+    max-width: 100%;
+    color: var(--theme);
+}
+
+.blue-section {
+    background-color: #41afff;
+    color: var(--theme);
+
+    /* Make it full width */
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+}
+
+.blue-section>.main {
+    min-height: auto;
+}
+
+.blue-section h1,
+.blue-section h2,
+.blue-section h3,
+.blue-section h4,
+.blue-section h5,
+.blue-section h6 {
+    color: var(--theme);
+}

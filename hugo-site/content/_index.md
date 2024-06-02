@@ -10,10 +10,15 @@ I go by **ssebs**
 
 {{< figure align="center" src="img/me_wedding.jpg" width="512" >}}
 
+{{< blueSection >}}
+
 ### Background
 I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
 
 I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
+
+{{</ blueSection >}}
+
 
 ### What I've done
 I've led multiple 3rd party app onboardings in my SRE role at Meta, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success.
