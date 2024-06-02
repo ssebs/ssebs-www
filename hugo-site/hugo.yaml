@@ -7,7 +7,8 @@ enableRobotsTXT: true
 buildDrafts: false
 
 params:
-  site_logo: /img/Icon.png
+  assets:
+    favicon: /img/favicon.ico
   favicon: /img/favicon.ico
   background_color_class: bg-near-black
   copyright_start_year: "2024"
@@ -18,9 +19,9 @@ params:
   label:
     text: ssebs
     icon: /img/Icon.png
-
-  assets:
-    favicon: /img/favicon.ico
+  ShowPostNavLinks: true
+  mainSections:
+    - projects
 
 menu:
   main:
@@ -44,6 +45,3 @@ menu:
       name: Linkedin
       url: https://linkedin.com/in/ssebs
       weight: 50
-mainSections:
-  - projects
-  - about

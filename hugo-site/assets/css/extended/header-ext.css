@@ -10,27 +10,20 @@
     background-color: #41afff;
     max-width: 100%;
     color: var(--theme);
+    font-size: 14px;
 }
 
 .blue-section {
-    background-color: #41afff;
-    color: var(--theme);
-
-    /* Make it full width */
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
+    border: 2px solid #41afff;
 }
 
 .blue-section>.main {
     min-height: auto;
+    margin-top: 0;
+    padding-top: 0;
 }
 
-.blue-section h1,
-.blue-section h2,
-.blue-section h3,
-.blue-section h4,
-.blue-section h5,
-.blue-section h6 {
-    color: var(--theme);
+.first-entry {
+    justify-content: start;
+    /* border: 2px solid #41afff; */
 }
