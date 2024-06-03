@@ -10,6 +10,11 @@ I go by **ssebs**
 
 {{< figure align="center" src="img/me_wedding.jpg" width="400" >}}
 
+## How I think 
+- I'm efficiency oriented, always thinking of better and more efficient ways to solve problems.
+- I'm very detail oriented, but also have a need to fit my tasks to the bigger picture
+
+
 {{< blueSection >}}
 ### Background
 I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
