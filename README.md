@@ -38,6 +38,10 @@ ssebs.com website code.
 ## Usage
 - Clone this repo
 - Install [hugo](https://gohugo.io/)
+  - Either manually, or use the `setup_env.sh` script
+- `hugo serve --noHTTPCache --bind 0.0.0.0`
+
+### Build
 - `HUGO_ENV=production hugo`
 
 ## License
