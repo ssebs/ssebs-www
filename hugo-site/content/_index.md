@@ -8,7 +8,7 @@ description = "My name is Sebastian Safari, and I am a Systems and Software Engi
 ## Hey, I'm Sebastian
 I go by **ssebs**
 
-{{< figure align="center" src="img/me_wedding.jpg" width="400" >}}
+{{< figure align="center" src="img/me_wedding.jpg" width="360" >}}
 
 ## How I think 
 - I'm efficiency oriented, always thinking of better and more efficient ways to solve problems.
