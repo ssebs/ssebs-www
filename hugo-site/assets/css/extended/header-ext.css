@@ -31,3 +31,21 @@
 .main>.post-content img {
     border-radius: 100%;
 }
+
+.main>.post-content {
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+.main>.post-content > {
+
+}
+
+.sidebar {
+    width: 256px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+.clear-fix {
+    clear: both;
+}

@@ -21,6 +21,11 @@
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
+
+    {{- if  .IsHome -}}
+        {{- partial "sidebar.html" . -}}
+    {{ end }}
+
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 </body>
 
