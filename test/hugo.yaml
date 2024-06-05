@@ -1,0 +1,47 @@
+baseURL: https://ssebs.com/
+languageCode: en-us
+title: ssebs | Sebastian Safari
+
+theme: ["ssebs"]
+enableRobotsTXT: true
+buildDrafts: false
+
+params:
+  assets:
+    favicon: /img/favicon.ico
+  favicon: /img/favicon.ico
+  background_color_class: bg-near-black
+  copyright_start_year: "2024"
+
+  # PaperMod specific
+  disableThemeToggle: false
+  author: Sebastian Safari
+  label:
+    text: ssebs
+    icon: /img/Icon.png
+  ShowPostNavLinks: true
+  mainSections:
+    - projects
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about
+      weight: 20
+    - identifier: contact
+      name: Contact
+      url: /contact
+      weight: 30
+    - identifier: github
+      name: Github
+      url: https://github.com/ssebs
+      weight: 40
+    - identifier: linkedin
+      name: Linkedin
+      url: https://linkedin.com/in/ssebs
+      weight: 50

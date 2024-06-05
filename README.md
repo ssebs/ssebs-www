@@ -1,7 +1,7 @@
 # ssebs-www
 
 ssebs.com website code. 
-
+ 
 ## TODO:
 - [WIP] Design Layout
   - [ ] Basic layout
@@ -13,6 +13,8 @@ ssebs.com website code.
   - Responsive!
   - IDK how to make a good navbar or sidebar, no need to make it more difficult for myself
   - something like bootstrap? there's gotta be something more modern tho
+  - Components lib: https://readymadeui.com/tailwind-components/cards
+    - (Cards page)
   - Required components:
     - Navbar
     - Collapse
