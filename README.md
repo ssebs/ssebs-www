@@ -23,6 +23,7 @@ ssebs.com website code.
     - Buttons 
     - Typography
 - [ ] Animations
+- [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
 - [ ] hugo stuff:
   - [ ] index.md should have home content
   - [ ] pic of me / skills / quick links is a sidebar
