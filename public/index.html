@@ -3,13 +3,41 @@
 	<meta name="generator" content="Hugo 0.92.2" />
     <title> ssebs | Sebastian Safari </title>
     <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
-</head><body>
-        <p>in baseof</p><div id="content">
-<div class="post-content">
-  <h2 id="hey-im-sebastian-safari">Hey, I&rsquo;m Sebastian Safari</h2>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                    "primary": {
+                        DEFAULT: "#41afff",
+                        '50': '#eff7ff',
+                        '100': '#dfeeff',
+                        '200': '#b8dfff',
+                        '300': '#78c6ff',
+                        '400': '#41afff',
+                        '500': '#068df1',
+                        '600': '#006fce',
+                        '700': '#0058a7',
+                        '800': '#024b8a',
+                        '900': '#083f72',
+                        '950': '#06274b',
+                    },
+                    "secondary": "#333fff",
+                    "tertiary": "#2e6ae8",
+                    "quaternary": "#2ecce8",
+                    "quinary": "#33ffe7",
+                    "white": "#fff",
+                    "white-dim": "#eee"
+                    },
+            }
+          }
+        }
+      </script>
+</head><body><div id="content">
+		<div class="post-content"><h2 id="hey-im-sebastian-safari">Hey, I&rsquo;m Sebastian Safari</h2>
 <p>I go by <strong>ssebs</strong></p>
 
-<div>  <img classname="rounded-full border-primary" src="img/me_wedding.jpg" width="360" /> </div>
+<div>  <img class="rounded-full" src="img/me_wedding.jpg" width="360px" /> </div>
 
 <h2 id="summary">Summary</h2>
 <p>Versatile Systems/DevOps Engineer specializing in project management, third-party app onboarding, and disaster recovery. Proficient in Python, PowerShell, Golang, git, and DevOps practices, with a track record of proactive leadership and meticulous attention to detail in dynamic environments.</p>
@@ -72,7 +100,16 @@
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <h2 id="projects">Projects:</h2>
-
 </div>
+	
+		<div>
+			<p>button test</p>
+
+			<div class="bg-primary">test</div>
+
+			<button type="button" onclick="window.alert('test')" class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-primary-600 hover:bg-primary-700 active:bg-primary-600">
+				Blue
+			</button>
+		</div>
         </div></body>
 </html>

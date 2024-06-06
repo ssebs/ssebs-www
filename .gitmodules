@@ -1,6 +1,0 @@
-[submodule "ssebs-www/themes/ananke"]
-	path = ssebs-www/themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "hugo-site/themes/PaperMod"]
-	path = hugo-site/themes/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git

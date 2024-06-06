@@ -4,10 +4,10 @@ ssebs.com website code.
  
 ## TODO:
 - [WIP] Design Layout
-  - [ ] Basic layout
+  - [x] Basic layout
   - [ ] Call to Action
   - [ ] Home contents
-- [ ] Make ssebs hugo theme instead of using prebuilt
+- [WIP] Make ssebs hugo theme instead of using prebuilt
   - So I learn how to use hugo instead of fighting it
 - [ ] tailwind-css + prebuilt components!
   - Responsive!
@@ -31,6 +31,8 @@ ssebs.com website code.
   - [ ] footer
   - [ ] projectItem
   - [ ] projects page
+- [ ] CI/CD Github Actions to build
+  - Also do ssebs.github.io?
 
 ## Design
 ![home](.excalidraw.png)
