@@ -1,17 +1,11 @@
 {{- define "main" }}
+
+	{{- if .IsHome }}
+		{{ partial "home.html" . }}
+	{{- end }}
+
 	{{- if .Content }}
 		<div class="post-content">{{ .Content }}</div>
 	{{- end }}
-	{{ if .IsHome }}
-		<div>
-			<p>button test</p>
 
-			<div class="bg-primary">test</div>
-
-			<button type="button" onclick="window.alert('test')" class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-primary-600 hover:bg-primary-700 active:bg-primary-600">
-				Blue
-			</button>
-		</div>
-	{{- end }}
 {{- end }}
-{{- /* end main */ -}}

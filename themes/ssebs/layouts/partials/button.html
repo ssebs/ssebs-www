@@ -1,0 +1,9 @@
+{{/* 
+     <button type="button" onclick="window.alert('test')" class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-primary-600 hover:bg-primary-700 active:bg-primary-600">
+    Blue
+</button>  
+*/}}
+
+<button onclick="{{ .context.Get "onclick" }}" class="{{ .context.Get "class" }}">
+    {{ .context.Get "label" }}
+</button>
