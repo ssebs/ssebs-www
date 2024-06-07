@@ -1,9 +1,16 @@
-{{/* 
-     <button type="button" onclick="window.alert('test')" class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-primary-600 hover:bg-primary-700 active:bg-primary-600">
-    Blue
-</button>  
-*/}}
+{{ $c := .Scratch.Get "color" }}
+{{ $f := .Scratch.Get "onclick" }}
+{{ $l := .Scratch.Get "label" }}
+{{ $dark := .Scratch.Get "isDark" }}
 
-<button onclick="{{ .context.Get "onclick" }}" class="{{ .context.Get "class" }}">
-    {{ .context.Get "label" }}
+{{/*  TODO: Set text-white if dark, text-black if light for contrast  */}}
+
+<button
+    {{ printf "onclick=%q" $f | safeHTMLAttr }}
+
+    class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-{{ $c }}-600 hover:bg-{{ $c }}-700 active:bg-{{ $c }}-600"
+    
+    type="button"
+    >
+    {{ $l }}
 </button>

@@ -1,5 +1,9 @@
 <div style="border: 1px solid red;">
     <h2>Home</h2>
 
-    {{ partial "button.html" (dict "onclick" "test()" "class" "bg-primary" "label" "Click Me") . }}
+    
+    {{ .Scratch.Set "onclick" "window.alert('test')" }}
+    {{ .Scratch.Set "color" "primary" }}
+    {{ .Scratch.Set "label" "Test button" }}
+    {{ partial "button.html" . }}
 </div>
