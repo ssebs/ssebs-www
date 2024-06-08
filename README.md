@@ -1,38 +1,50 @@
 # ssebs-www
 
 ssebs.com website code. 
- 
+
 ## TODO:
-- [WIP] Design Layout
-  - [x] Basic layout
-  - [ ] Call to Action
-  - [ ] Home contents
-- [WIP] Make ssebs hugo theme instead of using prebuilt
-  - So I learn how to use hugo instead of fighting it
-- [ ] tailwind-css + prebuilt components!
-  - Responsive!
-  - IDK how to make a good navbar or sidebar, no need to make it more difficult for myself
-  - something like bootstrap? there's gotta be something more modern tho
-  - Components lib: https://readymadeui.com/tailwind-components/cards
-    - (Cards page)
-  - Required components:
-    - Navbar
-    - Collapse
-    - Card w/ hover animation
-    - Bubbles (tags?)
-    - Buttons 
-    - Typography
-- [ ] Animations
-- [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
-- [ ] hugo stuff:
-  - [ ] index.md should have home content
-  - [ ] pic of me / skills / quick links is a sidebar
-  - [ ] header
-  - [ ] footer
-  - [ ] projectItem
-  - [ ] projects page
-- [ ] CI/CD Github Actions to build
-  - Also do ssebs.github.io?
+- [ ] MVP website:
+  - All html should be responsive / have mobile first CSS
+  - [ ] Base page
+    - [ ] Header/navbar
+    - [x] .Content
+    - [ ] Sidebar w/ pic of me / skills (tags) / quick links
+    - [ ] Footer
+  - [ ] Pages
+    - [ ] Home Page
+    - [ ] List page 
+      - [ ] Projects
+      - [ ] Tags / posts with tag
+    - [ ] Single item page 
+      - [ ] About
+      - [ ] Project
+      - [ ] Contact
+- [ ] After MVP:
+  - [ ] Call to Action / home contents
+  - [ ] Add tags to each project and allow search by tags
+  - [ ] Add search bar to header
+- [ ] Finishing touches / Milestone 3:
+  - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
+  - [ ] CI/CD Github Actions to build
+    - Also do ssebs.github.io?
+  - [ ] Animations
+
+### To-Done:
+- [x] use tailwind-css + prebuilt components
+- [x] Design Layout
+- [x] Basic layout
+- [x] Make ssebs hugo theme instead of using prebuilt
+
+
+## Components
+- Components lib: https://readymadeui.com/tailwind-components/cards
+- Required components:
+  - Navbar
+  - Collapse
+  - Card w/ hover animation
+  - Bubbles (tags?)
+  - Buttons 
+  - Typography
 
 ## Design
 ![home](.excalidraw.png)

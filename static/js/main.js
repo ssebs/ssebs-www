@@ -1,4 +1,4 @@
 
-const test = () => {
-    window.alert("test")
+const myAlert = (msg) => {
+    window.alert(msg)
 }
