@@ -27,6 +27,7 @@ ssebs.com website code.
     - [ ] And add Search Results page
 - [ ] Finishing touches / Milestone 3:
   - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
+  - [ ] Dark/light mode https://tailwindcss.com/docs/dark-mode
   - [ ] CI/CD Github Actions to build
     - Also do ssebs.github.io?
   - [ ] Animations

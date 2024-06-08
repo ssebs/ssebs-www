@@ -12,6 +12,7 @@
     rel="stylesheet">
 
     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
   <script>
     tailwind.config = {
@@ -107,123 +108,138 @@
       justify-content: center;
     }
   </style>
-</head><body><header class='flex border-b py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
-    <div class='flex flex-wrap items-center gap-5 w-full'>
-        <a href="/"><img class="w-36 h-max" src="/img/Logo.png" alt="logo" /></a>
+</head><body class="bg-neutral-800 text-white"><div class="flex justify-center border-b border-b-primary">
+    <header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl tracking-wide relative z-50'>
 
-        <nav id="collapseMenu"
-            class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
+        <div class='flex justify-between items-center gap-5'>
+            
+            <div class="flex align-middle">
+                <a href="/"><img class="w-14 m-auto pr-2" src="/img/RocketOnly.png" alt="logo" /></a>
+                <h4 class="m-auto text-gray-300 text-xl">ssebs</h4>
+            </div>
 
-            <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
-                    <path
-                        d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                        data-original="#000000"></path>
-                    <path
-                        d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                        data-original="#000000"></path>
-                </svg>
-            </button>
-            <ul
-                class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
-                <li class='mb-6 hidden max-lg:block'>
-                    <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo"
-                            class='w-36' />
-                    </a>
-                </li>
+            <div class="flex justify-end m-0">
+                
+                <div class="flex">
+                    <div
+                        class='flex w-48 border-b border-b-neutral-700 px-3 py-2 outline outline-transparent focus-within:outline-[#007bff] focus-within:bg-transparent'>
+
+                        <input type='text' placeholder='Search...'
+                            class='w-full text-sm bg-transparent rounded outline-none pr-2' />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
+                            class="cursor-pointer fill-neutral-700">
+                            <path
+                                d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
 
                 
-                <li class='max-lg:border-b max-lg:py-3 px-3'>
-                    
+                <nav id="collapseMenu"
+                    class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
 
-                    <a href="http://localhost:1313/projects/" title="Projects"
-                        class="lg:hover:text-primary text-gray-500 block font-semibold text-[15px]">
-                        <span>Projects
-                        </span>
-                    </a>
-                </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'>
-                    
-                    
+                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-white" viewBox="0 0 320.591 320.591">
+                            <path
+                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                data-original="#000000"></path>
+                            <path
+                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                data-original="#000000"></path>
+                        </svg>
+                    </button>
+                    <ul
+                        class='lg:flex lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                        <li class='mb-6 hidden max-lg:block'>
+                            <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo"
+                                    class='w-36' />
+                            </a>
+                        </li>
 
-                    <a href="http://localhost:1313/about" title="About"
-                        class="lg:hover:text-primary text-primary-500 block font-semibold text-[15px]">
-                        <span class="active">About
-                        </span>
-                    </a>
-                </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'>
-                    
-
-                    <a href="http://localhost:1313/contact" title="Contact"
-                        class="lg:hover:text-primary text-gray-500 block font-semibold text-[15px]">
-                        <span>Contact
-                        </span>
-                    </a>
-                </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'>
-                    
-
-                    <a href="https://github.com/ssebs" title="Github"
-                        class="lg:hover:text-primary text-gray-500 block font-semibold text-[15px]">
-                        <span>Github
+                        
+                        
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
                             
-                            <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"
-                                height="12" width="12" style="display: inline; vertical-align: top;">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                <path d="M15 3h6v6"></path>
-                                <path d="M10 14L21 3"></path>
-                            </svg>
-                        </span>
-                    </a>
-                </li>
-                <li class='max-lg:border-b max-lg:py-3 px-3'>
-                    
 
-                    <a href="https://linkedin.com/in/ssebs" title="Linkedin"
-                        class="lg:hover:text-primary text-gray-500 block font-semibold text-[15px]">
-                        <span>Linkedin
+                            <a href="http://localhost:1313/projects/" title="Projects"
+                                class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]">
+                                <span>Projects
+                                </span>
+                            </a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
                             
-                            <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"
-                                height="12" width="12" style="display: inline; vertical-align: top;">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                <path d="M15 3h6v6"></path>
-                                <path d="M10 14L21 3"></path>
-                            </svg>
-                        </span>
-                    </a>
-                </li>
+                            
 
-            </ul>
-        </nav>
+                            <a href="http://localhost:1313/about" title="About"
+                                class="lg:hover:text-primary text-primary-500 block font-semibold text-[15px]">
+                                <span class="active">About
+                                </span>
+                            </a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            
 
-        <button id="toggleOpen" class='lg:hidden ml-auto'>
-            <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"></path>
-            </svg>
-        </button>
+                            <a href="http://localhost:1313/contact" title="Contact"
+                                class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]">
+                                <span>Contact
+                                </span>
+                            </a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            
+                            
 
-        <div class='flex lg:ml-auto max-lg:w-full'>
-            <div
-                class='flex xl:w-80 max-xl:w-full bg-gray-100 px-6 py-3 rounded outline outline-transparent focus-within:outline-[#007bff] focus-within:bg-transparent'>
-                <input type='text' placeholder='Search something...'
-                    class='w-full text-sm bg-transparent rounded outline-none pr-2' />
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
-                    class="cursor-pointer fill-gray-400">
-                    <path
-                        d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
-                    </path>
-                </svg>
+                            <a href="https://github.com/ssebs" title="Github"
+                                class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]"target="_blank">
+                                <span>Github
+                                    
+                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        viewBox="0 0 24 24" height="12" width="12"
+                                        style="display: inline; vertical-align: top;">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                        <path d="M15 3h6v6"></path>
+                                        <path d="M10 14L21 3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li class='max-lg:border-b max-lg:py-3 px-3'>
+                            
+                            
+
+                            <a href="https://linkedin.com/in/ssebs" title="Linkedin"
+                                class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]"target="_blank">
+                                <span>Linkedin
+                                    
+                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        viewBox="0 0 24 24" height="12" width="12"
+                                        style="display: inline; vertical-align: top;">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                        <path d="M15 3h6v6"></path>
+                                        <path d="M10 14L21 3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <button id="toggleOpen" class='lg:hidden ml-auto'>
+                    <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
             </div>
         </div>
-
-    </div>
-</header>
-
+    </header>
+</div>
 
 <script type="text/javascript">
     var toggleOpen = document.getElementById('toggleOpen');
@@ -240,9 +256,8 @@
 
     toggleOpen.addEventListener('click', handleClick);
     toggleClose.addEventListener('click', handleClick);
-</script><div id="content">
+</script>
 		<div class="post-content"><p>I&rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.</p>
 <p>I&rsquo;ve progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.</p>
-</div>
-        </div></body>
+</div></body>
 </html>
