@@ -1,9 +1,23 @@
 <head>
   <title> {{ .Site.Title }} </title>
+
+  {{/*  TODO: Add description, etc.  */}}
+
+  {{/*  Ubuntu font  */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+    {{/*  TailwindCSS  */}}
   <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
   <script>
     tailwind.config = {
       theme: {
+        fontFamily: {
+          'sans': ["Ubuntu", "Sans-serif"]
+        },
         extend: {
           colors: {
             "primary": {
@@ -82,4 +96,14 @@
   </script>
   {{/* TODO: fix this */}}
   <script src="{{ " /js/main.js" | relURL }}"></script>
+
+  {{/*  TODO: Move CSS  */}}
+  <style>
+    .img-container img {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      justify-content: center;
+    }
+  </style>
 </head>

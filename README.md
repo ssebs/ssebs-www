@@ -19,10 +19,12 @@ ssebs.com website code.
       - [ ] About
       - [ ] Project
       - [ ] Contact
+      - [ ] 404
 - [ ] After MVP:
   - [ ] Call to Action / home contents
   - [ ] Add tags to each project and allow search by tags
   - [ ] Add search bar to header
+    - [ ] And add Search Results page
 - [ ] Finishing touches / Milestone 3:
   - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
   - [ ] CI/CD Github Actions to build
