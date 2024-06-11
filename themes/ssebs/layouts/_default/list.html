@@ -5,7 +5,7 @@
 {{- else }}
 	{{- if .Content }}
 		<div>
-			<h2>Home</h2>
+			<h2>{{- .Title -}}</h2>
 			<p>todo fix height</p>
 			<div class="flex-grow bg-neutral-800 p-4 rounded-lg drop-shadow-lg">
 				<div class="post-content">{{ .Content }}</div>
