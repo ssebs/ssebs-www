@@ -3,12 +3,10 @@
     {{- partial "head.html" . -}}
     <body class="bg-neutral-800 text-white">
         {{- partial "header.html" . -}}
-        <div class="flex justify-center">
-            <div class="flex lg:max-w-6xl">
-                <div class="flex-grow">
+        {{/*  under header  */}}
+        <div class="flex justify-center bg-neutral-900">
+            <div class="flex lg:max-w-6xl gap-4 my-6">
                     {{- block "main" . }}{{- end }}
-                </div>
-                <div class="w-24">
                     {{- partial "sidebar.html" . -}}
                 </div>
             </div>

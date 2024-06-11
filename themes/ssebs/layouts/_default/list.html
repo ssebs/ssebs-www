@@ -1,11 +1,16 @@
 {{- define "main" }}
 
-	{{- if .IsHome }}
-		{{ partial "home.html" . }}
-	{{- end }}
-
+{{- if .IsHome }}
+	{{ partial "home.html" . }}
+{{- else }}
 	{{- if .Content }}
-		<div class="post-content">{{ .Content }}</div>
+		<div>
+			<h2>Home</h2>
+			<p>todo fix height</p>
+			<div class="flex-grow bg-neutral-800 p-4 rounded-lg drop-shadow-lg">
+				<div class="post-content">{{ .Content }}</div>
+			</div>
+		</div>
+		{{- end }}
 	{{- end }}
-
 {{- end }}

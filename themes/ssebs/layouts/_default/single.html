@@ -1,7 +1,9 @@
 {{- define "main" }}
 
 	{{- if .Content }}
+	<div class="flex-grow bg-neutral-800 p-4 rounded-lg drop-shadow-lg">
 		<div class="post-content">{{ .Content }}</div>
+	</div>
 	{{- end }}
 
 {{- end }}
