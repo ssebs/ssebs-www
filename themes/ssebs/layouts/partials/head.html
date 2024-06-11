@@ -1,7 +1,11 @@
 <head>
   <title> {{ .Site.Title }} </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#41afff">
 
-  {{/*  TODO: Add description, etc.  */}}
+  <meta name="description" content="{{- .Site.Params.description }}">
 
   {{/*  Ubuntu font  */}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +15,6 @@
     rel="stylesheet">
 
     {{/*  TailwindCSS  */}}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
   <script>
     tailwind.config = {

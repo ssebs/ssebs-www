@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {{- partial "head.html" . -}}
     <body class="bg-neutral-800 text-white">
         {{- partial "header.html" . -}}
         {{/*  under header  */}}
         <div class="flex justify-center bg-neutral-900">
-            <div class="flex lg:max-w-6xl gap-4 my-6">
+            <div class="flex flex-wrap lg:max-w-6xl gap-4 my-6">
                     {{- block "main" . }}{{- end }}
                     {{- partial "sidebar.html" . -}}
                 </div>
