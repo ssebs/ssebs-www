@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title> ssebs | Sebastian Safari </title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#41afff">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="description" content="Hi, I&#39;m Sebastian Safari. Check out my projects, and my story.s">
   
 
   
@@ -12,7 +17,6 @@
     rel="stylesheet">
 
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
   <script>
     tailwind.config = {
@@ -108,26 +112,24 @@
       justify-content: center;
     }
   </style>
-</head><body class="bg-neutral-800 text-white"><div class="flex justify-center border-b-2 border-b-primary mb-3">
+</head><body class="bg-neutral-800 text-white"><div class="flex justify-center border-b-2 border-b-primary">
     <header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl tracking-wide relative z-50'>
 
         <div class='flex justify-between items-center gap-5'>
             
-            <div class="flex">
-
+            <a href="/"class="flex align-center">
+                <img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
+                <h4 class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</h4>
+            </a>
+            
+            
+            <div class="flex justify-end m-0 gap-4">
                 
-                <a href="/"><img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
-                <h4 class="text-gray-300 text-xl">ssebs</h4>
-                </a>
-            </div>
-
-            <div class="flex justify-end m-0">
                 
                 <div class="flex">
                     <div
-                        class='flex w-48 px-3 py-2 outline outline-transparent border-b border-b-neutral-700 focus-within:border-b-primary text-gray-400'
+                        class='flex w-48 px-3 py-2 outline outline-transparent border border-neutral-700 focus-within:border-l-primary text-gray-400'
                         >
-
                         <input type='text' placeholder='Search...'
                             class='w-full text-sm bg-transparent rounded outline-none' />
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
@@ -138,38 +140,38 @@
                         </svg>
                     </div>
                 </div>
+                
+               
+                
 
                 
-                <nav id="collapseMenu"
-                    class='max-lg:hidden lg:!block max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'
+                
+                <nav 
+                    id="collapseMenu"
+                    class="flex items-center max-lg:hidden max-lg:w-full max-lg:fixed max-lg:z-50 " 
                     >
-
-                    <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-white" viewBox="0 0 320.591 320.591">
-                            <path
-                                d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                                data-original="#000000"></path>
-                            <path
-                                d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                                data-original="#000000"></path>
-                        </svg>
-                    </button>
-                    <ul
+                    <ul class="flex gap-3 max-lg:flex-col max-lg:bg-neutral-800 max-lg:text-white max-lg:fixed max-lg:top-0 max-lg:right-0  max-lg:border max-lg:border-primary-400 max-lg:rounded-lg max-lg:drop-shadow-lg max-lg:gap-0">
                         
-
-                            class="flex"
-
-                        >
-                        <li class='mb-6 hidden max-lg:block'>
-                            <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo"
-                                    class='w-36' />
+                        <div class="flex gap-4 p-3 border border-primary-400 lg:hidden">
+                            <a href="/"class="flex align-center">
+                                <img class="w-10 h-10 mr-1" src="/img/RocketOnly.png" alt="logo" />
+                                <h4 class="text-gray-300 text-l m-auto hover:text-primary">ssebs</h4>
                             </a>
-                        </li>
-
+                            <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3'>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary" viewBox="0 0 320.591 320.591">
+                                    <path
+                                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                    data-original="#000000"></path>
+                                    <path
+                                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                    data-original="#000000"></path>
+                                </svg>
+                            </button>
+                        </div>                            
                         
                         
-                        <li class='max-lg:border-b max-lg:py-3 px-3'>
-                            
+                        <li class='max-lg:border-b max-lg:py-3 p-3'>
+                                
 
                             <a href="http://localhost:1313/projects/" title="Projects"
                                 class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]">
@@ -177,8 +179,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class='max-lg:border-b max-lg:py-3 px-3'>
-                            
+                        <li class='max-lg:border-b max-lg:py-3 p-3'>
+                                
 
                             <a href="http://localhost:1313/about" title="About"
                                 class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]">
@@ -186,8 +188,8 @@
                                 </span>
                             </a>
                         </li>
-                        <li class='max-lg:border-b max-lg:py-3 px-3'>
-                            
+                        <li class='max-lg:border-b max-lg:py-3 p-3'>
+                               
                             
 
                             <a href="http://localhost:1313/contact" title="Contact"
@@ -196,9 +198,9 @@
                                 </span>
                             </a>
                         </li>
-                        <li class='max-lg:border-b max-lg:py-3 px-3'>
-                            
-                            
+                        <li class='max-lg:border-b max-lg:py-3 p-3'>
+                                
+                              
 
                             <a href="https://github.com/ssebs" title="Github"
                                 class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]"target="_blank">
@@ -215,9 +217,9 @@
                                 </span>
                             </a>
                         </li>
-                        <li class='max-lg:border-b max-lg:py-3 px-3'>
-                            
-                            
+                        <li class='max-lg:border-b max-lg:py-3 p-3'>
+                                
+                              
 
                             <a href="https://linkedin.com/in/ssebs" title="Linkedin"
                                 class="lg:hover:text-primary text-gray-300 block font-semibold text-[15px]"target="_blank">
@@ -256,17 +258,29 @@
     var collapseMenu = document.getElementById('collapseMenu');
 
     function handleClick() {
-        if (collapseMenu.style.display === 'block') {
+        if (collapseMenu.style.display === 'flex') {
             collapseMenu.style.display = 'none';
         } else {
-            collapseMenu.style.display = 'block';
+            collapseMenu.style.display = 'flex';
         }
     }
 
     toggleOpen.addEventListener('click', handleClick);
     toggleClose.addEventListener('click', handleClick);
 </script>
+        <div class="flex justify-center bg-neutral-900">
+            <div class="flex flex-wrap lg:max-w-6xl gap-4 my-6">
+	<div class="flex-grow bg-neutral-800 p-4 rounded-lg drop-shadow-lg">
 		<div class="post-content"><h1 id="contact-me">Contact me</h1>
 <p><a href="mailto:contact@ssebs.com">Email me</a></p>
-</div></body>
+</div>
+	</div><div class="w-[240px] h-24 border border-secondary bg-neutral-800">
+
+    <div class="sidebar border border-tertiary-500">
+        sidebar
+        
+    </div>
+</div></div>
+            </div>
+        </div></body>
 </html>
