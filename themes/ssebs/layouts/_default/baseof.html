@@ -3,14 +3,20 @@
     {{- partial "head.html" . -}}
     <body class="bg-neutral-800 text-white">
         {{- partial "header.html" . -}}
-        {{/*  under header  */}}
         <div class="flex justify-center bg-neutral-900">
-            <div class="flex flex-wrap lg:max-w-6xl gap-4 my-6">
+
+            <div class="flex justify-between max-md:flex-wrap max-md:flex-col-reverse max-md:items-center gap-4 m-6">
+                <div class="xl:max-w-4xl md:max-w-2xl w-full">
                     {{- block "main" . }}{{- end }}
+                </div>
+                <div class="md:w-[240px] w-[300px]">
                     {{- partial "sidebar.html" . -}}
                 </div>
+                </div>
             </div>
+
         </div>
+
         {{- partial "footer.html" . -}}
     </body>
 </html>

@@ -12,7 +12,7 @@
             <div class="flex justify-end m-0 gap-4">
                 
                 {{/* SEARCH */}}
-                <div class="flex">
+                {{/*  <div class="flex">
                     <div
                         class='flex w-48 px-3 py-2 outline outline-transparent border border-neutral-700 focus-within:border-l-primary text-gray-400'
                         >
@@ -25,7 +25,7 @@
                             </path>
                         </svg>
                     </div>
-                </div>
+                </div>  */}}
                 
                
                 {{/*  TODO: Fix li not showing back up when going from wide => mobile => wide  and clicking */}}
@@ -37,12 +37,12 @@
                     class="flex items-center max-lg:hidden max-lg:w-full max-lg:fixed max-lg:z-50 " 
                     >
                    {{- $currentPage := . }}
-                    <ul class="flex gap-3 max-lg:flex-col max-lg:bg-neutral-800 max-lg:text-white max-lg:fixed max-lg:top-0 max-lg:right-0  max-lg:border max-lg:border-primary-400 max-lg:rounded-lg max-lg:drop-shadow-lg max-lg:gap-0">
+                    <ul class="flex gap-3 max-lg:flex-col max-lg:bg-neutral-800 max-lg:text-white max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:w-full max-lg:rounded-lg max-lg:drop-shadow-lg max-lg:gap-2">
                         
-                        <div class="flex gap-4 p-3 border border-primary-400 lg:hidden">
+                        <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary lg:hidden">
                             <a href="/"class="flex align-center">
-                                <img class="w-10 h-10 mr-1" src="/img/RocketOnly.png" alt="logo" />
-                                <h4 class="text-gray-300 text-l m-auto hover:text-primary">ssebs</h4>
+                                <img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
+                                <h4 class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</h4>
                             </a>
                             <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3'>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary" viewBox="0 0 320.591 320.591">
@@ -62,7 +62,7 @@
                         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL
                         }}
                         {{- $page_url:= $currentPage.Permalink | absLangURL }}
-                        <li class='max-lg:border-b max-lg:py-3 p-3'>
+                        <li class='max-lg:border-b max-lg:border-b-primary max-lg:py-3 p-3'>
                             {{- if eq $menu_item_url $page_url }}
                                {{ $textColorActive = "text-primary-500" }}
                             {{ else }}
