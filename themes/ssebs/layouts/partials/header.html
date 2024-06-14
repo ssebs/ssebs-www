@@ -1,5 +1,5 @@
 <div class="flex justify-center border-b-2 border-b-primary">
-    <header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl tracking-wide relative z-50'>
+    <header class='py-4 px-4 min-h-[80px] w-full xl:max-w-6xl lg:max-w-4xl tracking-wide relative z-50'>
 
         <div class='flex justify-between items-center gap-5'>
             {{/* LOGO */}}
@@ -34,12 +34,12 @@
                 {{/* MENU + ITEMS */}}
                 <nav 
                     id="collapseMenu"
-                    class="flex items-center max-lg:hidden max-lg:w-full max-lg:fixed max-lg:z-50 " 
+                    class="flex items-center max-sm:hidden max-sm:w-full max-sm:fixed max-sm:z-50 " 
                     >
                    {{- $currentPage := . }}
-                    <ul class="flex gap-3 max-lg:flex-col max-lg:bg-neutral-800 max-lg:text-white max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:w-full max-lg:rounded-lg max-lg:drop-shadow-lg max-lg:gap-2">
+                    <ul class="flex gap-3 max-sm:flex-col max-sm:bg-neutral-800 max-sm:text-white max-sm:fixed max-sm:top-0 max-sm:right-0 max-sm:w-full max-sm:rounded-md max-sm:drop-shadow-md max-sm:gap-2">
                         
-                        <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary lg:hidden">
+                        <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary sm:hidden">
                             <a href="/"class="flex align-center">
                                 <img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
                                 <h4 class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</h4>
@@ -62,7 +62,7 @@
                         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL
                         }}
                         {{- $page_url:= $currentPage.Permalink | absLangURL }}
-                        <li class='max-lg:border-b max-lg:border-b-primary max-lg:py-3 p-3'>
+                        <li class='max-sm:border-b max-sm:border-b-primary max-sm:py-3 p-3'>
                             {{- if eq $menu_item_url $page_url }}
                                {{ $textColorActive = "text-primary-500" }}
                             {{ else }}
@@ -74,7 +74,7 @@
                             {{- end }}
 
                             <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}"
-                                class="lg:hover:text-primary {{ $textColorActive }} block font-semibold text-[15px]" {{-
+                                class="md:hover:text-primary {{ $textColorActive }} block font-semibold text-[15px]" {{-
                                 if $extURL}}target="_blank" {{- end }}>
                                 <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                                     {{- .Name | safeHTML -}}
@@ -98,7 +98,7 @@
                     </ul>
                 </nav>
 
-                <button id="toggleOpen" class='lg:hidden ml-auto'>
+                <button id="toggleOpen" class='sm:hidden ml-auto'>
                     <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
