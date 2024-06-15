@@ -1,0 +1,55 @@
+h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.5rem !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.5em !important;
+    font-weight: bold !important;
+}
+
+h3 {
+    font-size: 1.125rem !important;
+    line-height: 1.5rem !important;
+    font-weight: bold !important;
+}
+
+h4,
+h5 {
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    font-weight: bold !important;
+}
+
+a {
+    color: #33ffe7;
+    text-decoration: underline;
+}
+
+
+
+
+.img-container img {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.post-content>p,
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    margin: 1rem auto;
+}
+
+blockquote {
+    color: #a3a3a3;
+    padding-left: 0.75rem;
+    font-style: italic;
+}

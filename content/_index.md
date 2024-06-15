@@ -4,8 +4,6 @@ date = 2024-05-18T14:12:18-07:00
 description = "My name is Sebastian Safari, and I am a Systems and Software Engineer."
 +++
 
-
-
 ## Hey, I'm Sebastian Safari
 > I go by **ssebs**
 
@@ -58,21 +56,20 @@ In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd
 
 
 ## Skills
-
-**Languages:** Python, Golang, JavaScript, Bash, PowerShell  
-**Containers/Orchestration:** Docker, Chef, Ansible, Terraform, Disaster Recovery (DR)  
-**Web Technologies:** HTML/CSS, ReactJS, Flask, REST  
-**DevOps / Infrastructure:** Load Balancing, NGINX, Apache, CI/CD, Docker, SQL, Syncthing  
-**Diagramming/Documentation:** LucidChart, Draw.io, Markdown, MS Office (Word, Excel, etc.)  
-**Networking:** DNS, DHCP, IPAM, HTTP, TLS, Firewalld  
-**Cloud Platforms/IAM:** M365, SharePoint, Azure, Oracle Cloud, AWS, Active Directory, SAML, SSO  
-**Communication:** Effectively communicate complex technical concepts to non-technical stakeholders, both in writing and verbally.  
-**Problem Solving:** Analytical thinker with a proven ability to troubleshoot and provide efficient solutions.  
-**Adaptability:** Flexible and comfortable in dynamic, fast-paced environments, adapting to changing requirements. Quick learner and a team player.  
-**Leadership:** Skilled in motivating teams, leading initiatives, and contributing to a positive work culture.  
-**Time Management:** Efficiently manage time and priorities to meet deadlines, demonstrating strong organizational skills.  
-**Attention to Detail:** Meticulous attention to detail in both technical work and documentation, ensuring accuracy and precision in all tasks.  
-**Initiative:** Proactive and self-motivated, taking the initiative to address issues and propose improvements.
+- **Languages:** Python, Golang, JavaScript, Bash, PowerShell  
+- **Containers/Orchestration:** Docker, Chef, Ansible, Terraform, Disaster Recovery (DR)  
+- **Web Technologies:** HTML/CSS, ReactJS, Flask, REST  
+- **DevOps / Infrastructure:** Load Balancing, NGINX, Apache, CI/CD, Docker, SQL, Syncthing  
+- **Diagramming/Documentation:** LucidChart, Draw.io, Markdown, MS Office (Word, Excel, etc.)  
+- **Networking:** DNS, DHCP, IPAM, HTTP, TLS, Firewalld  
+- **Cloud Platforms/IAM:** M365, SharePoint, Azure, Oracle Cloud, AWS, Active Directory, SAML, SSO  
+- **Communication:** Effectively communicate complex technical concepts to non-technical stakeholders, both in writing and verbally.  
+- **Problem Solving:** Analytical thinker with a proven ability to troubleshoot and provide efficient solutions.  
+- **Adaptability:** Flexible and comfortable in dynamic, fast-paced environments, adapting to changing requirements. Quick learner and a team player.  
+- **Leadership:** Skilled in motivating teams, leading initiatives, and contributing to a positive work culture.  
+- **Time Management:** Efficiently manage time and priorities to meet deadlines, demonstrating strong organizational skills.  
+- **Attention to Detail:** Meticulous attention to detail in both technical work and documentation, ensuring accuracy and precision in all tasks.  
+- **Initiative:** Proactive and self-motivated, taking the initiative to address issues and propose improvements.
 
 Let's connect and explore how my skills and experiences align with your team's objectives, and how together, we can navigate the dynamic landscape of systems and software engineering.
 
