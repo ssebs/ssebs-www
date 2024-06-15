@@ -7,12 +7,12 @@ description = "My name is Sebastian Safari, and I am a Systems and Software Engi
 
 
 ## Hey, I'm Sebastian Safari
-I go by **ssebs**
+> I go by **ssebs**
 
-{{< rawhtml >}}
-<div>  <img class="rounded-full" src="img/me_wedding.jpg" width="360px" /> </div>
-{{</ rawhtml >}}
-
+Hey! My title is "Site Reliability Engineer L3", but I think of myself more in terms of what I can do.  
+       
+To get the buzzwords out of the way, I'm a quick learner, efficiency oriented, a planner, a team player, and really I just want to get the job done the right way the first time.
+        
 
 ## Summary
 

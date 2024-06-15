@@ -1,14 +1,29 @@
 <div class="flex flex-col min-h-24 drop-shadow-lg relative">
     <div class="self-center"> <img class="rounded-full" src="/img/me_wedding.jpg" width="128px" height="128px" /> </div>
-    {{/* TODO: fun positioning */}}
-    <div class="sidebar border-b-2 border-primary">
-        <h4>Sidebar</h4>
+    {{/* TODO: fun positioning? */}}
+    <div class="sidebar border-b-2 border-primary flex justify-between">
+        <h4>Sebastian Safari</h4>
+        <h4>ssebs</h4>
         {{/* {{ .Inner | markdownify}} */}}
     </div>
-    <div>
-
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, error magnam blanditiis quam nam, eos,
-            commodi necessitatibus ipsa repellendus ullam quibusdam provident. Quae officiis esse at, officia cumque
-            soluta adipisci!</p>
+    <div class="grid gap-1 mb-2 text-white-dim">
+        <p>
+            Professional fixer, hobbyist figure-outer.
+        </p>
+    </div>
+    <h5>Skills:</h5>
+    <div class="bg-neutral-800 text-white p-4 min-h-8 flex flex-wrap justify-center gap-4">
+        <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
+        <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
+        <span class="bg-primary-600 px-2 py-1 rounded-3xl">html/css/js</span>
+        <span class="bg-primary-700 px-2 py-1 rounded-3xl">git</span>
+        <span class="bg-primary-700 px-2 py-1 rounded-3xl">REST API</span>
+        <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
+        <span class="bg-quinary-700 px-2 py-1 rounded-3xl">Site Reliability Engineer</span>
+        <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
+            <a href="/projects">
+                More...
+            </a>
+        </span>
     </div>
 </div>
