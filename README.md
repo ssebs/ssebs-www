@@ -31,6 +31,8 @@ ssebs.com website code.
   - [ ] CI/CD Github Actions to build
     - Also do ssebs.github.io?
   - [ ] Animations
+  - [ ] scroll animation on mobile
+    - text/content covers up sidebar, sidebar covers up img. (parallax)
 
 ### To-Done:
 - [x] use tailwind-css + prebuilt components
