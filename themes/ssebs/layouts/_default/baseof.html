@@ -7,11 +7,11 @@
     {{/*  Container  */}}
     <div class="flex justify-center bg-neutral-900">
 
-        <div class="grid lg:grid-cols-4 gap-4 mt-4">
-            <div class="justify-self-center lg:col-start-3">
+        <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
+            <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center border-b-2 border-primary">
                 {{- partial "sidebar.html" . -}}
             </div>
-            <div class="lg:col-start-1 lg:col-span-3 lg:max-w-3xl max-w-md w-full">
+            <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full border-b-2 border-primary">
                 {{- block "main" . }}{{- end }}
             </div>
         </div>
