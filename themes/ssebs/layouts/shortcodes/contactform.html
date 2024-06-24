@@ -24,6 +24,7 @@
                         d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
                 </svg></div>
         </button>
-        <input type="hidden" name="_next" value="{{- .Page.URL }}">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="{{ .Page.Permalink }}">
     </form>
 </div>
