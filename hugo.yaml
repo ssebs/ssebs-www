@@ -5,6 +5,7 @@ title: ssebs | Sebastian Safari
 theme: ["ssebs"]
 enableRobotsTXT: true
 buildDrafts: false
+summaryLength: 10
 
 params:
   description: Hi, I'm Sebastian Safari. Check out my projects, and my story.s

@@ -6,28 +6,42 @@
     <description>Recent content on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 May 2024 15:43:51 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jun 2024 17:43:06 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Mmp</title>
+      <link>http://localhost:1313/projects/go-mmp/</link>
+      <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
+      <guid>http://localhost:1313/projects/go-mmp/</guid>
+      <description>Mini Macro Pad go-mmp&#xA;Macro Pad driver software, written in Golang.</description>
+    </item>
+    <item>
+      <title>Perishable Punchers</title>
+      <link>http://localhost:1313/projects/perishable-punchers/</link>
+      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
+      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
+      <description>PerishablePunchers Mortal Kombat like Game written in Java, back in highschool.</description>
+    </item>
+    <item>
+      <title>CSV Editor</title>
+      <link>http://localhost:1313/projects/csveditor/</link>
+      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
+      <guid>http://localhost:1313/projects/csveditor/</guid>
+      <description>CSV Editor A lightweight GUI csv editor written in python.</description>
+    </item>
     <item>
       <title>Contact</title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Fri, 31 May 2024 15:43:51 -0700</pubDate>
       <guid>http://localhost:1313/contact/</guid>
-      <description>Contact me If you are interested in one of my projects, or want to get in contact with me for a new project, please submit this form:&#xA;Send&#xD;</description>
+      <description>Contact me If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</description>
     </item>
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>I&amp;rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.&#xA;I&amp;rsquo;ve progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer.</description>
-    </item>
-    <item>
-      <title>Go Mmp</title>
-      <link>http://localhost:1313/projects/go-mmp/</link>
-      <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
-      <guid>http://localhost:1313/projects/go-mmp/</guid>
-      <description>Mini Macro Pad go-mmp&#xA;Macro Pad driver software, written in Golang. If you have an arduino powered device, you could use this to run various keyboard shortcuts and other macros. No device? No problem! You can still click on the buttons to run the macros.&#xA;Here&amp;rsquo;s what the GUI looks like, you can click the buttons to run the macro, or use the arduino to press them.&#xA;What kind of macros can you make?</description>
+      <description>About me I&amp;rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies.</description>
     </item>
   </channel>
 </rss>

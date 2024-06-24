@@ -52,7 +52,7 @@
                             {{ $extURL = true }}
                             {{- end }}
 
-                            <a href="{{ .URL  }}" title="{{ .Title | default .Name }}"
+                            <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
                                 class="md:hover:text-primary {{ $textColorActive }} block font-semibold text-[15px]" {{-
                                 if $extURL}}target="_blank" {{- end }}>
                                 <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
