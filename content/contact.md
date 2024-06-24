@@ -4,5 +4,6 @@ date = 2024-05-31T15:43:51-07:00
 +++
 
 # Contact me
+If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!
 
-[Email me](mailto:contact@ssebs.com)
+{{< contactform action="https://formsubmit.co/el/lumeye" >}}
