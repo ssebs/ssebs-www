@@ -43,7 +43,7 @@
                         {{- $page_url:= $currentPage.RelPermalink | absLangURL }}
                         <li class='max-md:border-b max-md:border-b-primary max-md:py-3 p-3'>
                             {{- if eq $menu_item_url $page_url }}
-                            {{ $textColorActive = "text-primary-500" }}
+                            {{ $textColorActive = "text-primary" }}
                             {{ else }}
                             {{ $textColorActive = "text-gray-300" }}
                             {{- end }}
@@ -52,7 +52,7 @@
                             {{ $extURL = true }}
                             {{- end }}
 
-                            <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}"
+                            <a href="{{ .URL  }}" title="{{ .Title | default .Name }}"
                                 class="md:hover:text-primary {{ $textColorActive }} block font-semibold text-[15px]" {{-
                                 if $extURL}}target="_blank" {{- end }}>
                                 <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
