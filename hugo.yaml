@@ -13,6 +13,7 @@ params:
   copyright_start_year: 2024
   socials:
     linkedin: https://linkedin.com/in/ssebs/
+    # TODO: add icon
     github: https://github.com/ssebs
 
 # menu:

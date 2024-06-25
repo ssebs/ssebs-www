@@ -15,7 +15,7 @@ date: "2024-05-31T15:43:45-07:00"
 <div class="grid grid-cols-3">
 {{< /rawhtml >}}
 {{< rawhtml >}}
-<div class="col-span-2">
+<div class="md:col-span-2 col-span-3">
 {{< /rawhtml >}}
 I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
 
@@ -26,7 +26,9 @@ I've progressed through various roles, starting as a Registrar at PARC, and adva
 {{< /rawhtml >}}
 
 {{< rawhtml >}}
-  <div class="w-[256px] mx-auto"> <img class="rounded-full" src="/img/me_wedding.jpg" width="256px" height="256px" /> </div>
+  <div class="w-[256px] mx-auto"> 
+    <img class="rounded-full w-[256px] h-[256px]" src="/img/me_wedding.jpg" />
+  </div>
 {{< /rawhtml >}}
 
 {{< rawhtml >}}

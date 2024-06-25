@@ -13,10 +13,10 @@
                 {{/* TODO: Fix li not showing back up when going from wide => mobile => wide and clicking */}}
                 {{/* MENU + ITEMS */}}
                 <nav id="collapseMenu" class="flex items-center max-md:hidden max-md:w-full max-md:fixed max-md:z-50 ">
-                    {{- $currentPage := . }}
                     <ul
-                        class="flex gap-3 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary">
+                        class="flex gap-6 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary">
 
+                        {{/*  Logo... again  */}}
                         <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary md:hidden">
                             <a href="/" class="flex align-center">
                                 <img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
@@ -34,31 +34,39 @@
                                 </svg>
                             </button>
                         </div>
-                        {{ $textColorActive := "text-gray-500" }}
-                        {{ $extURL := false }}
 
+                        {{- $currentPage := . }}
+                        {{ $textColorActive := "text-gray-300" }}
+
+                        {{/* Pages from main menu */}}
                         {{- range site.Menus.main }}
-                        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL
-                        }}
-                        {{- $page_url:= $currentPage.RelPermalink | absLangURL }}
-                        <li class=' p-3'>
+                        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) |
+                        absLangURL}}
+                        {{- $page_url := $currentPage.RelPermalink | absLangURL }}
+                        <li>
                             {{- if eq $menu_item_url $page_url }}
                             {{ $textColorActive = "text-primary" }}
                             {{ else }}
                             {{ $textColorActive = "text-gray-300" }}
                             {{- end }}
-
-                            {{- if (findRE "://" .URL) }}
-                            {{ $extURL = true }}
-                            {{- end }}
-
                             <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                                class="md:hover:text-primary {{ $textColorActive }} block font-semibold text-[15px]" {{-
-                                if $extURL}}target="_blank" {{- end }}>
+                                class="md:hover:text-primary {{ $textColorActive }} block font-semibold">
                                 <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                                     {{- .Name | safeHTML -}}
+                                </span>
+                            </a>
+                        </li>
+                        {{- end }}
 
-                                    {{ if $extURL}}
+                        <span class="">&verbar;</span>
+
+                        {{/* External links */}}
+                        {{- range $name, $link := site.Params.socials }}
+                        <li>
+                            <a href="{{ $link }}" title="{{ $name }}" class="md:hover:text-primary block font-semibold"
+                                target="_blank">
+                                <span>
+                                    {{- $name | title | safeHTML -}}
                                     {{/* Add arrow icon showing external page */}}
                                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
                                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -68,7 +76,6 @@
                                         <path d="M15 3h6v6"></path>
                                         <path d="M10 14L21 3"></path>
                                     </svg>
-                                    {{- end }}
                                 </span>
                             </a>
                         </li>
