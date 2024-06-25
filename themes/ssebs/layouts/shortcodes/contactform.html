@@ -1,5 +1,9 @@
-<div class="flex justify-center">
-    <form action="{{- .Get "action" -}}" method="POST" class="flex flex-col gap-2 md:w-[512px]">
+<div class="grid gap-6 justify-center">
+    {{/* Show message if we got one */}}
+
+    <div id="msg-container" class="text-xl italic text-quinary"></div>
+
+    <form action="{{- .Get " action" -}}" method="POST" class="flex flex-col gap-2 md:w-[512px]">
         <div class="grid sm:grid-cols-2 gap-2">
             <input type="text" name="name"
                 class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Your Name"
@@ -33,5 +37,15 @@
     // Overwrite _next location to current URL, Hugo's Permalink uses the hostname of the server, 
     //   when that's localhost the redirect is broken.
     const nextURL = document.getElementById("nextURL");
-    nextURL.value = window.location.href;
+    // nextURL.value = ;
+    nextURL.value = `${window.location.href}?msg=Message%2520Sent%21%2C%2520thank%2520you%21`;
+
+
+    // Get the msg from the params if there is one
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('msg')) {
+        const msgContainer = document.getElementById('msg-container');
+        msgContainer.textContent = decodeURI(urlParams.get("msg"));
+        
+    }
 </script>
