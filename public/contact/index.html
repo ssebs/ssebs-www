@@ -272,12 +272,16 @@
 	<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
 		<div class="post-content"><h1 id="contact-me">Contact me</h1>
 <p>If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</p>
+<blockquote>
+<p>Note: The form takes a few seconds to submit, so please be patient.</p>
+</blockquote>
 <div class="grid gap-6 justify-center">
     
 
     <div id="msg-container" class="text-xl italic text-quinary"></div>
 
-    <form action="" method="POST" class="flex flex-col gap-2 md:w-[512px]">
+    
+    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:w-[512px]">
         <div class="grid sm:grid-cols-2 gap-2">
             <input type="text" name="name"
                 class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Your Name"
@@ -312,7 +316,7 @@
     
     const nextURL = document.getElementById("nextURL");
     
-    nextURL.value = `${window.location.href}?msg=Message%2520Sent%21%2C%2520thank%2520you%21`;
+    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
 
 
     
@@ -320,9 +324,10 @@
     if (urlParams.get('msg')) {
         const msgContainer = document.getElementById('msg-container');
         msgContainer.textContent = decodeURI(urlParams.get("msg"));
-        
+
     }
 </script>
+<p>Or, you can email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a></p>
 </div>
 	</div>
             </div>

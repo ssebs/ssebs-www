@@ -23,7 +23,7 @@
     font-weight: bold !important;
 }
 
-a {
+.post-content a {
     color: #33ffe7;
     text-decoration: underline;
 }
