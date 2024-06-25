@@ -39,7 +39,7 @@
     //   when that's localhost the redirect is broken.
     const nextURL = document.getElementById("nextURL");
     // nextURL.value = ;
-    nextURL.value = `${window.location.href}?msg=Message%2520Sent%21%2C%2520thank%2520you%21`;
+    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
 
 
     // Get the msg from the params if there is one
