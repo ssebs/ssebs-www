@@ -3,7 +3,8 @@
 
     <div id="msg-container" class="text-xl italic text-quinary"></div>
 
-    <form action="{{- .Get " action" -}}" method="POST" class="flex flex-col gap-2 md:w-[512px]">
+    {{/*  ACTION cannot have a space! Check when auto-formatting */}}
+    <form action="{{- .Get "action" -}}" method="POST" class="flex flex-col gap-2 md:w-[512px]">
         <div class="grid sm:grid-cols-2 gap-2">
             <input type="text" name="name"
                 class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Your Name"
@@ -46,6 +47,6 @@
     if (urlParams.get('msg')) {
         const msgContainer = document.getElementById('msg-container');
         msgContainer.textContent = decodeURI(urlParams.get("msg"));
-        
+
     }
 </script>
