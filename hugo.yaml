@@ -8,22 +8,9 @@ buildDrafts: false
 summaryLength: 10
 
 params:
-  description: Hi, I'm Sebastian Safari. Check out my projects, and my story.s
-  assets:
-    favicon: /img/favicon.ico
-  favicon: /img/favicon.ico
-  background_color_class: bg-near-black
-  copyright_start_year: "2024"
-
-  # PaperMod specific
-  disableThemeToggle: false
+  description: Hi, I'm Sebastian Safari. Check out my projects, and more!
   author: Sebastian Safari
-  label:
-    text: ssebs
-    icon: /img/Icon.png
-  ShowPostNavLinks: true
-  mainSections:
-    - projects
+  copyright_start_year: "2024"
 
 menu:
   main:

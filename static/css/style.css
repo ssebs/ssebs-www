@@ -43,8 +43,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-li {
+h5 {
     margin: 1rem auto;
 }
 
@@ -52,4 +51,8 @@ blockquote {
     color: #a3a3a3;
     padding-left: 0.75rem;
     font-style: italic;
+}
+
+img:not([src]) {
+    visibility: hidden;
 }

@@ -1,31 +1,45 @@
-<footer class="flex justify-center bg-primary min-h-64 p-6 font-bold ">
-    <div class="w-md flex gap-6 justify-around ">
-        <div class="justify-center">
-            <a href="/" class="flex align-center">
+<footer class="flex justify-center bg-primary min-h-64 p-12 font-bold ">
+    <div class="flex md:flex-row flex-col items-center max-w-4xl gap-12">
+        <div class="flex flex-col gap-6">
+            <a href="/" class="flex justify-start items-center">
                 <img class="w-14 h-12 pr-2" src="/img/RocketOnly.png" alt="logo" />
-                <span class="text-xl m-auto hover:text-quinary">ssebs</span>
+                <div class="text-xl hover:text-quinary">ssebs</div>
             </a>
-            <hr>
-            <div>
-                Check out
-            </div>
-        </div>
-        <div class="grid">
-            <div>Pages:</div>
             <ul>
                 {{- $currentPage := . }}
                 {{ $extURL := false }}
 
                 {{- range site.Menus.main }}
-                {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+                {{- if not (findRE "://" .URL) }}
+                <li class=''>
+                    <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
+                        class="hover:text-quinary text-white-dim block font-semibold text-md" {{- if
+                        $extURL}}target="_blank" {{- end }}>
+                        <span>
+                            {{- .Name | safeHTML -}}
+                        </span>
+                    </a>
+                </li>
+                {{- end }}
+                {{- end }}
+            </ul>
+        </div>
+
+        <div class="max-w-md  ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ducimus reiciendis totam tempore delectus
+            iure eos necessitatibus, veniam minus nostrum commodi tempora modi accusamus! Aut officia impedit ipsam
+            itaque expedita?
+        </div>
+
+        <div class="max-w-md flex flex-col">
+            <div class="text-xl">My socials:</div>
+            <ul class="text-lg">
+                {{- $currentPage := . }}
+                {{- range site.Menus.main }}
                 <li class=''>
                     {{- if (findRE "://" .URL) }}
-                    {{ $extURL = true }}
-                    {{- end }}
-
                     <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                        class="md:hover:text-quinary text-gray-300 block font-semibold text-md" {{- if
-                        $extURL}}target="_blank" {{- end }}>
+                        class="text-quinary block font-semibold text-md" {{- if $extURL}}target="_blank" {{- end }}>
                         <span>
                             {{- .Name | safeHTML -}}
 
@@ -41,8 +55,10 @@
                             {{- end }}
                         </span>
                     </a>
+
+                    {{- end }}
+                    {{- end }}
                 </li>
-                {{- end }}
             </ul>
         </div>
 
