@@ -1,0 +1,50 @@
+<footer class="flex justify-center bg-primary min-h-64 p-6 font-bold ">
+    <div class="w-md flex gap-6 justify-around ">
+        <div class="justify-center">
+            <a href="/" class="flex align-center">
+                <img class="w-14 h-12 pr-2" src="/img/RocketOnly.png" alt="logo" />
+                <span class="text-xl m-auto hover:text-quinary">ssebs</span>
+            </a>
+            <hr>
+            <div>
+                Check out
+            </div>
+        </div>
+        <div class="grid">
+            <div>Pages:</div>
+            <ul>
+                {{- $currentPage := . }}
+                {{ $extURL := false }}
+
+                {{- range site.Menus.main }}
+                {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+                <li class=''>
+                    {{- if (findRE "://" .URL) }}
+                    {{ $extURL = true }}
+                    {{- end }}
+
+                    <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
+                        class="md:hover:text-quinary text-gray-300 block font-semibold text-md" {{- if
+                        $extURL}}target="_blank" {{- end }}>
+                        <span>
+                            {{- .Name | safeHTML -}}
+
+                            {{ if $extURL}}
+                            {{/* Add arrow icon showing external page */}}
+                            <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"
+                                height="12" width="12" style="display: inline; vertical-align: top;">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                <path d="M15 3h6v6"></path>
+                                <path d="M10 14L21 3"></path>
+                            </svg>
+                            {{- end }}
+                        </span>
+                    </a>
+                </li>
+                {{- end }}
+            </ul>
+        </div>
+
+    </div>
+</footer>
