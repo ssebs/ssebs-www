@@ -25,6 +25,13 @@
                 </svg></div>
         </button>
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="{{ .Page.Permalink }}">
+        <input id="nextURL" type="hidden" name="_next" value="{{ .Page.Permalink }}">
     </form>
 </div>
+
+<script>
+    // Overwrite _next location to current URL, Hugo's Permalink uses the hostname of the server, 
+    //   when that's localhost the redirect is broken.
+    const nextURL = document.getElementById("nextURL");
+    nextURL.value = window.location.href;
+</script>

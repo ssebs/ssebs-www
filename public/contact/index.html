@@ -299,9 +299,16 @@
                 </svg></div>
         </button>
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="http://localhost:1313/contact/">
+        <input id="nextURL" type="hidden" name="_next" value="http://localhost:1313/contact/">
     </form>
 </div>
+
+<script>
+    
+    
+    const nextURL = document.getElementById("nextURL");
+    nextURL.value = window.location.href;
+</script>
 </div>
 	</div>
             </div>
