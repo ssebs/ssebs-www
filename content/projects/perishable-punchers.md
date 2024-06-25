@@ -1,7 +1,7 @@
-+++
-title = 'Perishable Punchers'
-date = 2024-06-23T17:43:06-07:00
-+++
+---
+date: "2024-06-23T17:43:06-07:00"
+title: Perishable Punchers
+---
 
 # PerishablePunchers
 Mortal Kombat like Game written in Java, back in highschool.

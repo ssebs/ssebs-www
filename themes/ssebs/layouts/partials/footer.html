@@ -1,49 +1,46 @@
-<footer class="flex justify-center bg-primary min-h-64 p-12 font-bold ">
-    <div class="flex md:flex-row flex-col items-center max-w-4xl gap-12">
-        <div class="flex flex-col gap-6">
-            <a href="/" class="flex justify-start items-center">
-                <img class="w-14 h-12 pr-2" src="/img/RocketOnly.png" alt="logo" />
+<footer class="grid justify-center bg-primary min-h-64 p-6">
+    <h5 class="text-3xl text-white font-thin text-center p-6">Thanks for checking out my website!</h5>
+
+    <div class="flex md:flex-row md:items-start md:max-w-4xl flex-col justify-between items-center w-full mt-6 gap-12 font-medium text-lg">
+
+        <div class="min-w-64 flex flex-col items-start gap-2">
+            <a href="/" class="flex justify-start items-end">
+                <img class="w-14" src="/img/RocketOnly.png" alt="logo" />
                 <div class="text-xl hover:text-quinary">ssebs</div>
             </a>
             <ul>
-                {{- $currentPage := . }}
-                {{ $extURL := false }}
-
                 {{- range site.Menus.main }}
-                {{- if not (findRE "://" .URL) }}
                 <li class=''>
                     <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                        class="hover:text-quinary text-white-dim block font-semibold text-md" {{- if
-                        $extURL}}target="_blank" {{- end }}>
+                        class="text-quinary hover:text-tertiary">
                         <span>
-                            {{- .Name | safeHTML -}}
+                            {{- with .Page }}
+                            {{- .Params.ShortDesc | safeHTML -}}
+                            {{- else }}
+                            {{- .Name }}
+                            {{- end }}
                         </span>
                     </a>
                 </li>
                 {{- end }}
-                {{- end }}
             </ul>
         </div>
 
-        <div class="max-w-md  ">
+        <div class="max-w-md text-base font-normal">
+            <h5 class="text-xl font-medium">Blah, foo bar</h5>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ducimus reiciendis totam tempore delectus
             iure eos necessitatibus, veniam minus nostrum commodi tempora modi accusamus! Aut officia impedit ipsam
             itaque expedita?
         </div>
 
-        <div class="max-w-md flex flex-col">
+        <div class="min-w-32 flex flex-col">
             <div class="text-xl">My socials:</div>
-            <ul class="text-lg">
-                {{- $currentPage := . }}
-                {{- range site.Menus.main }}
-                <li class=''>
-                    {{- if (findRE "://" .URL) }}
-                    <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                        class="text-quinary block font-semibold text-md" {{- if $extURL}}target="_blank" {{- end }}>
+            <ul>
+                {{- range $name, $link := site.Params.socials }}
+                <li>
+                    <a href="{{ $link }}" title="{{ $name }}" class="text-quinary hover:text-tertiary" target="_blank">
                         <span>
-                            {{- .Name | safeHTML -}}
-
-                            {{ if $extURL}}
+                            {{- $name | title | safeHTML -}}
                             {{/* Add arrow icon showing external page */}}
                             <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
                                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"
@@ -52,13 +49,10 @@
                                 <path d="M15 3h6v6"></path>
                                 <path d="M10 14L21 3"></path>
                             </svg>
-                            {{- end }}
                         </span>
                     </a>
-
-                    {{- end }}
-                    {{- end }}
                 </li>
+                {{- end }}
             </ul>
         </div>
 

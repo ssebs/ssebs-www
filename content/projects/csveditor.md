@@ -1,7 +1,7 @@
-+++
-title = 'CSV Editor'
-date = 2024-06-23T17:42:08-07:00
-+++
+---
+date: "2024-06-23T17:42:08-07:00"
+title: CSV Editor
+---
 
 # CSV Editor
 

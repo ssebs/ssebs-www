@@ -9,7 +9,21 @@
     <lastBuildDate>Sun, 23 Jun 2024 17:43:06 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Go Mmp</title>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>About me I&amp;rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Fri, 31 May 2024 15:43:51 -0700</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>Contact me If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</description>
+    </item>
+    <item>
+      <title>Mini Macro Pad</title>
       <link>http://localhost:1313/projects/go-mmp/</link>
       <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
       <guid>http://localhost:1313/projects/go-mmp/</guid>
@@ -28,20 +42,6 @@
       <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
       <guid>http://localhost:1313/projects/csveditor/</guid>
       <description>CSV Editor A lightweight GUI csv editor written in python.</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Fri, 31 May 2024 15:43:51 -0700</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>Contact me If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>About me I&amp;rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies.</description>
     </item>
   </channel>
 </rss>

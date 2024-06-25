@@ -1,8 +1,8 @@
-+++
-title = 'ssebs | Sebastian Safari'
-date = 2024-05-18T14:12:18-07:00
-description = "My name is Sebastian Safari, and I am a Systems and Software Engineer."
-+++
+---
+date: "2024-05-18T14:12:18-07:00"
+description: My name is Sebastian Safari, and I am a Systems and Software Engineer.
+title: ssebs | Sebastian Safari
+---
 
 ## Hey, I'm Sebastian Safari
 > I go by **ssebs**

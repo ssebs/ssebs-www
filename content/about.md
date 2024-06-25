@@ -1,8 +1,10 @@
-+++
-title = 'About'
-shortdesc = "All about who I am and what I do."
-date = 2024-05-31T15:43:45-07:00
-+++
+---
+title: About
+shortdesc: Who am I?
+menus: main
+weight: 20
+date: "2024-05-31T15:43:45-07:00"
+---
 
 
 

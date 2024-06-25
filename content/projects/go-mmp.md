@@ -1,10 +1,10 @@
-+++
-title = 'Mini Macro Pad'
-date = 2024-05-18T14:08:45-07:00
-shortdesc = "Macro Pad shortcut tool."
-weight = 20
-tags = [go, programming, 3d-printing, arduino]
-+++
+---
+title: Mini Macro Pad
+shortdesc: Macro Pad shortcut tool.
+weight: 101
+date: "2024-05-18T14:08:45-07:00"
+tags: [go, programming, 3d-printing, arduino]
+---
 
 # Mini Macro Pad
 > go-mmp

@@ -1,23 +1,23 @@
-h1 {
+.post-content h1 {
     font-size: 1.5rem !important;
     line-height: 1.5rem !important;
     font-weight: bold !important;
 }
 
-h2 {
+.post-content h2 {
     font-size: 1.25rem !important;
     line-height: 1.5em !important;
     font-weight: bold !important;
 }
 
-h3 {
+.post-content h3 {
     font-size: 1.125rem !important;
     line-height: 1.5rem !important;
     font-weight: bold !important;
 }
 
-h4,
-h5 {
+.post-content h4,
+.post-content h5 {
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: bold !important;
@@ -28,9 +28,6 @@ a {
     text-decoration: underline;
 }
 
-
-
-
 .img-container img {
     display: flex;
     align-items: center;
@@ -38,7 +35,7 @@ a {
     justify-content: center;
 }
 
-.post-content>p,
+.post-content p,
 h1,
 h2,
 h3,
