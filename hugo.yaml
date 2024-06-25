@@ -10,7 +10,7 @@ summaryLength: 10
 params:
   description: Hi, I'm Sebastian Safari. Check out my projects, and more!
   author: Sebastian Safari
-  copyright_start_year: "2024"
+  copyright_start_year: 2024
   socials:
     linkedin: https://linkedin.com/in/ssebs/
     github: https://github.com/ssebs
