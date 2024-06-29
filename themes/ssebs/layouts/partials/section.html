@@ -1,0 +1,8 @@
+<section class="section flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 border border-green-500">
+    <div class="grid">
+        {{- with .Page }}
+        <h3>Section: {{ .Name }} {{ .Params.ShortDesc | safeHTML -}} </h3>
+        <p>{{- .Summary | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
+        {{- end }}
+    </div>
+</section>

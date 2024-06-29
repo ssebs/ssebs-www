@@ -15,8 +15,7 @@ ssebs.com website code.
       - [ ] Make sections on home page like mini summary of page + C2A link for each page in menu
       - [ ] Short about
       - [ ] Short projects with btn for "more"
-  - [ ] List pages
-      - [ ] Breadcrumbs 
+  - [ ] Breadcrumbs 
   - [ ] Contact form in footer, and contact page should have my socials
   - [ ] Add blog
     - [ ] e.g. things I learned or tech stuff I can share that's not a project (e.g. Hugo quick start + explain theme)

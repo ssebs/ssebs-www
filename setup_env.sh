@@ -9,5 +9,5 @@ echo "Install php twig and configure the template files in VSCode to use twig la
 echo "https://stackoverflow.com/a/60644216"
 echo 
 echo "To run server:"
-echo "    hugo serve --noHTTPCache --bind 0.0.0.0"
+echo "    hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0"
 echo

@@ -1,3 +1,11 @@
+{{/*  To use this:
+  {{/* <div class="border border-red-500">
+    {{ .Scratch.Set "onclick" "window.alert('test')" }} {{ .Scratch.Set
+    "color" "primary" }} {{ .Scratch.Set "label" "Test button" }} {{ partial
+    "components/button.html" . }}
+  </div> */}}
+*/}}
+
 {{ $c := .Scratch.Get "color" }}
 {{ $f := .Scratch.Get "onclick" }}
 {{ $l := .Scratch.Get "label" }}

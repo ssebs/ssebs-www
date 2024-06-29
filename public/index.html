@@ -235,72 +235,51 @@
     toggleClose.addEventListener('click', handleClick);
 </script>
     <div class="flex justify-center bg-neutral-900">
-
-        <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
-            <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center ">
-<div class="flex lg:flex-col bg-neutral-800 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-    <div class="">
-
-        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
-            
-        </div>
-        <div class="grid gap-1 mb-2">
-            <p>
-                I'm a professional fixer, hobbyist figure-outer.
+<div class="grid w-full">
+  <div class="hero grid items-center justify-center w-full border border-red-500 ">
+    <div class="hero-content grid md:grid-cols-2 gap-6 items-center justify-center md:max-w-4xl w-full">
+        <div class="max-mw-[40rem] bg-neutral-800 p-6 drop-shadow-lg rounded-t-md border-b-2 border-primary">
+            <h1 class="text-2xl mb-4">Hey, I'm Sebastian Safari</h1>
+            <p class="">
+                I'm an SRE who likes to make side projects.
+                <br>
+                Some are even useful!
             </p>
-        </div>
-    </div>
-    <div class="">
-        <div class="border-b border-neutral-600 font-semibold">
-            <h4>Skills:</h4>
-        </div>
-        <div class="text-white p-4 flex flex-wrap justify-center gap-4 drop-shadow-lg">
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
-            <span class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</span>
-            <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
-            <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
-                <a href="/projects">
-                    More...
-                </a>
-            </span>
-        </div>
-    </div>
-</div></div>
-            <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full ">
-
-<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-		<div class="">
-  
-  
-  <div class="self-center"> <img class="rounded-full" src="/img/me_wedding.jpg" width="256px" height="256px" /> </div>
-
-  <div class="post-content"><h2 id="hey-im-sebastian-safari">Hey, I&rsquo;m Sebastian Safari</h2>
-<blockquote>
-<p>I go by <strong>ssebs</strong></p>
-</blockquote>
-<p>Hey! My title is &ldquo;Site Reliability Engineer L3&rdquo;, but I think of myself more in terms of what I can do.</p>
-<p>To get the buzzwords out of the way, I&rsquo;m a quick learner, efficiency oriented, a planner, a team player, and really I just want to get the job done the right way the first time.</p>
-<h2 id="summary">Summary</h2>
-<p>Versatile Systems/DevOps Engineer specializing in project management, third-party app onboarding, and disaster recovery. Proficient in Python, PowerShell, Golang, git, and DevOps practices, with a track record of proactive leadership and meticulous attention to detail in dynamic environments.</p>
-<h2 id="about-me">About Me</h2>
-<p>I&rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.</p>
-<p>I&rsquo;ve progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.</p>
-
-<div class="border-2 border-primary hover:bg-primary p-3 rounded-xl w-[128px] font-semibold">
-    <a href="/about">Read more</a>
-</div>
-
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-</div>
-</div>
-		</div>
-</div>
+            <div class="flex mx-0 mt-6 gap-6">
+                <div class="p-2 rounded-xl border border-quinary">Check out the <span class="font-medium">useful</span>
+                    ones</div>
+                <div class="p-2 rounded-xl border border-primary">Who am I?</div>
             </div>
         </div>
+        <img class="mx-auto rounded-full outline outline-neutral-700" src="/img/me_wedding.jpg" width="256px" height="256px" />
+    </div>
+</div>
+  <section class="section flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 border border-green-500">
+    <div class="grid">
+        <h3>Section: Projects Check out my projects!</h3>
+        <p>Projects Here’s a list of some of my coding projects. Most of my work projects I cannot share unfortunately....</p>
+    </div>
+</section>
+  <section class="section flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 border border-green-500">
+    <div class="grid">
+        <h3>Section: About Who am I?</h3>
+        <p>About me I’ve been fascinated by computers from a young age, always eager to unravel their intricacies....</p>
+    </div>
+</section>
+  <section class="section flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 border border-green-500">
+    <div class="grid">
+        <h3>Section: Contact Ping me!</h3>
+        <p>Contact me If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!...</p>
+    </div>
+</section>
 
+  <div class="post-content"><p>This file should not be used, instead edit the <code>themes/ssebs/layouts/partials/home.html</code> page</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</div>
+</div>
+	</div>
+</div>
     </div><footer class="bg-primary min-h-64">
     <div class="grid justify-center p-6">
         <h5 class="text-3xl text-white font-thin text-center p-6">Thanks for checking out my website!</h5>

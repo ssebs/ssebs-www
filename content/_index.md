@@ -4,6 +4,10 @@ description: My name is Sebastian Safari, and I am a Systems and Software Engine
 title: ssebs | Sebastian Safari
 ---
 
+This file should not be used, instead edit the `themes/ssebs/layouts/partials/home.html` page
+
+<!-- 
+
 ## Hey, I'm Sebastian Safari
 > I go by **ssebs**
 
@@ -30,7 +34,6 @@ I've progressed through various roles, starting as a Registrar at PARC, and adva
 {{</ rawhtml >}}
 
 
-<!-- 
 {{< blueSection >}}
 ### Background
 I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.

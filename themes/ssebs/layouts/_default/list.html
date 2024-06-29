@@ -1,25 +1,25 @@
 {{- define "main" }}
 
+{{- if .IsHome }}
+{{ partial "home.html" . }}
+{{- else }}
 <div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-	{{- if .IsHome }}
-		{{ partial "home.html" . }}
-	{{- else }}
-		{{- if .Content }}
-			<div class="post-content">{{ .Content }}</div>
-		{{- end }}
+	{{- if .Content }}
+	<div class="post-content">{{ .Content }}</div>
+	{{- end }}
 
-		<div class="grid md:grid-cols-2 gap-6">
-			{{ range .Pages }}
-			<div class="flex flex-col gap-2 bg-neutral-900 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-				<h2>{{- .Title -}}</h2>
-				<p>{{- .Summary | plainify | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
-				<div class="bg-neutral-800 border border-primary hover:bg-primary rounded-lg p-2 w-fit">
-					<a href="{{ .RelPermalink }}" title="{{ .Title | default .Name }}">
-						Check it out!</a>
-				</div>
+	<div class="grid md:grid-cols-2 gap-6">
+		{{ range .Pages }}
+		<div class="flex flex-col gap-2 bg-neutral-900 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+			<h2>{{- .Title -}}</h2>
+			<p>{{- .Summary | plainify | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
+			<div class="bg-neutral-800 border border-primary hover:bg-primary rounded-lg p-2 w-fit">
+				<a href="{{ .RelPermalink }}" title="{{ .Title | default .Name }}">
+					Check it out!</a>
 			</div>
-			{{- end }}
-			{{- end }}
 		</div>
+		{{- end }}
+		{{- end }}
+	</div>
 </div>
 {{- end }}

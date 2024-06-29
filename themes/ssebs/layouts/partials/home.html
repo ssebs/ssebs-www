@@ -1,11 +1,9 @@
-<div class="">
-  {{/* <div class="border border-red-500">
-    {{ .Scratch.Set "onclick" "window.alert('test')" }} {{ .Scratch.Set
-    "color" "primary" }} {{ .Scratch.Set "label" "Test button" }} {{ partial
-    "components/button.html" . }}
-  </div> */}}
-  
-  <div class="self-center"> <img class="rounded-full" src="/img/me_wedding.jpg" width="256px" height="256px" /> </div>
+<div class="grid w-full">
+  {{ partial "hero.html" . }}
+
+  {{- range site.Menus.main }}
+  {{ partial "section.html" . }}
+  {{- end }}
 
   <div class="post-content">{{ .Content }}</div>
 </div>
