@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title> ssebs | Sebastian Safari </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#41afff">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="description" content="Hi, I&#39;m Sebastian Safari. Check out my projects, and more!">
+  
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+    
+  <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ["Ubuntu", "Sans-serif"]
+        },
+        extend: {
+          colors: {
+            "primary": {
+              DEFAULT: "#41afff",
+              '50': '#eff7ff',
+              '100': '#dfeeff',
+              '200': '#b8dfff',
+              '300': '#78c6ff',
+              '400': '#41afff',
+              '500': '#068df1',
+              '600': '#006fce',
+              '700': '#0058a7',
+              '800': '#024b8a',
+              '900': '#083f72',
+              '950': '#06274b',
+            },
+            "secondary": {
+              DEFAULT: "#333fff",
+              '50': '#ebf3ff',
+              '100': '#dbe8ff',
+              '200': '#bed5ff',
+              '300': '#97b7ff',
+              '400': '#6e8dff',
+              '500': '#4c65ff',
+              '600': '#333fff',
+              '700': '#2027e2',
+              '800': '#1d26b6',
+              '900': '#20298f',
+              '950': '#131653',
+            },
+            "tertiary": {
+              DEFAULT: "#2e6ae8", '50': '#eff6ff',
+              '100': '#dceafd',
+              '200': '#c0dcfd',
+              '300': '#95c6fb',
+              '400': '#63a6f7',
+              '500': '#3e85f3',
+              '600': '#2e6ae8',
+              '700': '#2052d5',
+              '800': '#2142ac',
+              '900': '#203c88',
+              '950': '#182753',
+            },
+            "quaternary": {
+              DEFAULT: "#2ecce8", '50': '#edfdfe',
+              '100': '#d1f8fc',
+              '200': '#a8f0f9',
+              '300': '#6ce2f4',
+              '400': '#2ecce8',
+              '500': '#0daecd',
+              '600': '#0d8bad',
+              '700': '#12708c',
+              '800': '#185a72',
+              '900': '#184c61',
+              '950': '#0a3142',
+            },
+            "quinary": {
+              DEFAULT: "#33ffe7", '50': '#eefffc',
+              '100': '#c5fff7',
+              '200': '#8bfff2',
+              '300': '#33ffe7',
+              '400': '#14eddb',
+              '500': '#00d1c1',
+              '600': '#00a8a0',
+              '700': '#008580',
+              '800': '#056a67',
+              '900': '#0a5755',
+              '950': '#003435',
+            },
+            "white": "#fff",
+            "white-dim": "#eee"
+          },
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.0/github-markdown.min.css" integrity="sha512-piMMx1q6Eqc47qlQaLBQi71vAQmVhKX4QK4EBQvzm1QvqS/CC1y8ZxaOoqi7sf4XPEVAH+j0JD6pAZroK1StXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="/js/main.js"></script>
+</head><body class="bg-neutral-800 text-white"><div class="flex justify-center border-b-2 border-b-primary">
+    <header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl md:max-w-4xl tracking-wide relative z-50'>
+
+        <div class='flex justify-between items-center gap-5'>
+            
+            <a href="/" class="flex align-center">
+                <img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
+                <span class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</span>
+            </a>
+
+            
+            <div class="flex justify-end m-0 gap-4">
+                
+                
+                <nav id="collapseMenu" class="flex items-center max-md:hidden max-md:w-full max-md:fixed max-md:z-50 ">
+                    <ul
+                        class="flex gap-6 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary">
+
+                        
+                        <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary md:hidden">
+                            <a href="/" class="flex align-center">
+                                <img class="w-14 pr-2" src="/img/RocketOnly.png" alt="logo" />
+                                <span class="text-neutral-200 text-xl m-auto hover:text-primary">ssebs</span>
+                            </a>
+                            <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3'>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary"
+                                    viewBox="0 0 320.591 320.591">
+                                    <path
+                                        d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                        data-original="#000000"></path>
+                                    <path
+                                        d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                        data-original="#000000"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        
+
+                        
+                        <li>
+                            
+                            <a href="/projects/" title="Projects"
+                                class="md:hover:text-primary text-gray-300 block font-semibold">
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            
+                            <a href="/about/" title="About"
+                                class="md:hover:text-primary text-gray-300 block font-semibold">
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li>
+                            
+                            <a href="/contact/" title="Contact"
+                                class="md:hover:text-primary text-gray-300 block font-semibold">
+                                <span>Contact</span>
+                            </a>
+                        </li>
+
+                        <span class="">&verbar;</span>
+
+                        
+                        <li>
+                            <a href="https://github.com/ssebs" title="github" class="md:hover:text-primary block font-semibold"
+                                target="_blank">
+                                <span>Github
+                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        viewBox="0 0 24 24" height="12" width="12"
+                                        style="display: inline; vertical-align: top;">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                        <path d="M15 3h6v6"></path>
+                                        <path d="M10 14L21 3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/ssebs/" title="linkedin" class="md:hover:text-primary block font-semibold"
+                                target="_blank">
+                                <span>Linkedin
+                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        viewBox="0 0 24 24" height="12" width="12"
+                                        style="display: inline; vertical-align: top;">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                        <path d="M15 3h6v6"></path>
+                                        <path d="M10 14L21 3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <button id="toggleOpen" class='md:hidden ml-auto'>
+                    <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+</div>
+
+<script type="text/javascript">
+    var toggleOpen = document.getElementById('toggleOpen');
+    var toggleClose = document.getElementById('toggleClose');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function handleClick() {
+        if (collapseMenu.style.display === 'flex') {
+            collapseMenu.style.display = 'none';
+        } else {
+            collapseMenu.style.display = 'flex';
+        }
+    }
+
+    toggleOpen.addEventListener('click', handleClick);
+    toggleClose.addEventListener('click', handleClick);
+</script>
+    <div class="flex justify-center bg-neutral-900">
+
+        <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
+            <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center ">
+<div class="flex lg:flex-col bg-neutral-800 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="">
+
+        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
+            <h4>In a sentence...</h4>
+            
+        </div>
+        <div class="grid gap-1 mb-2">
+            <p>
+                I'm a professional fixer, hobbyist figure-outer.
+            </p>
+        </div>
+    </div>
+    <div class="">
+        <div class="border-b border-neutral-600 font-semibold">
+            <h4>Skills:</h4>
+        </div>
+        <div class="text-white p-4 flex flex-wrap justify-center gap-4 drop-shadow-lg">
+            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
+            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
+            <span class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</span>
+            <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
+            <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
+                <a href="/projects">
+                    More...
+                </a>
+            </span>
+        </div>
+    </div>
+</div></div>
+            <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full ">
+<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="post-content">
+        <h1>Page not found</h1>
+        <p>Could not find the <strong id="url" class="mx-1"></strong> page.</p>
+
+        <a href="/">
+            Return to the home page
+        </a>
+    </div>
+</div>
+<script>
+    const urlSpan = document.getElementById("url");
+    const pageURL = window.location.pathname.slice(1);
+
+    urlSpan.innerText = pageURL;
+</script>
+            </div>
+        </div>
+
+    </div><footer class="bg-primary min-h-64">
+    <div class="grid justify-center p-6">
+        <h5 class="text-3xl text-white font-thin text-center p-6">Thanks for checking out my website!</h5>
+        <div
+            class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-center w-full m-6 gap-12 text-lg">
+            <div class="flex justify-between items-end gap-6 min-w-80">
+                <img class="w-28 h-fit " src="/img/RocketOnly.png" alt="logo" />
+                <div class="flex flex-col items-start gap-2 min-w-48">
+                    <a href="/" class="text-xl font-medium hover:text-quinary">ssebs</a>
+                    <ul>
+                        <li class=''>
+                            <a href="/projects/" title="Projects"
+                                class="text-white-dim hover:text-tertiary">Check out my projects!
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/about/" title="About"
+                                class="text-white-dim hover:text-tertiary">Who am I?
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/contact/" title="Contact"
+                                class="text-white-dim hover:text-tertiary">Ping me!
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid gap-2 max-w-md text-base font-normal">
+                <h5 class="text-xl font-medium">Why <span class="text-quinary">ssebs</span>?</h5>
+                <p>
+                    When I was a kid and I had to come up with my first username, I ended up trying to find something
+                    using my initials.
+                </p>
+                <p>
+                    Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.
+                </p>
+                <p>
+                    ssebs - S Seb S
+                </p>
+                <p>...very interesting, I know!</p>
+            </div>
+
+            <div class="min-w-32 flex flex-col">
+                <div class="text-xl">My socials:</div>
+                <ul>
+                    <li>
+                        <a href="https://github.com/ssebs" title="github" class="text-quinary hover:text-tertiary"
+                            target="_blank">
+                            <span>Github
+                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    viewBox="0 0 24 24" height="12" width="12"
+                                    style="display: inline; vertical-align: top;">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14L21 3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/ssebs/" title="linkedin" class="text-quinary hover:text-tertiary"
+                            target="_blank">
+                            <span>Linkedin
+                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    viewBox="0 0 24 24" height="12" width="12"
+                                    style="display: inline; vertical-align: top;">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14L21 3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center bg-neutral-700 p-6">
+        <span id="copyright-year">&copy;2024 - this should be replaced by js</span>
+    </div>
+</footer>
+
+<script>
+    
+    const copyElement = document.getElementById("copyright-year");
+    const current = new Date().getFullYear();
+    const fromYear =  2024 ;
+
+    if (current === fromYear) {
+        copyElement.innerHTML = `&copy;${current} - Sebastian Safari`;
+    } else {
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} - Sebastian Safari`;
+    }
+
+</script></body>
+
+</html>
