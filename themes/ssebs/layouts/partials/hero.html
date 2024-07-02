@@ -36,7 +36,7 @@
 
     function badName(event) {
         const mouseX = event.clientX;
-        const mouseY = event.clientY;
+        const mouseY = event.clientY + window.pageYOffset;
         overlay.style.clipPath = `circle(${radius}px at ${mouseX}px ${mouseY}px)`;
     }
 
