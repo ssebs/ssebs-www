@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://ssebs.com/projects/</loc>
     <lastmod>2024-06-23T17:44:59-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://ssebs.com/about/</loc>
     <lastmod>2024-05-31T15:43:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://ssebs.com/contact/</loc>
     <lastmod>2024-05-31T15:43:51-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/go-mmp/</loc>
+    <loc>https://ssebs.com/projects/go-mmp/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/perishable-punchers/</loc>
+    <loc>https://ssebs.com/projects/perishable-punchers/</loc>
     <lastmod>2024-06-23T17:43:06-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/csveditor/</loc>
+    <loc>https://ssebs.com/projects/csveditor/</loc>
     <lastmod>2024-06-23T17:42:08-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://ssebs.com/</loc>
     <lastmod>2024-05-18T14:12:18-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/3d-printing/</loc>
+    <loc>https://ssebs.com/tags/3d-printing/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/arduino/</loc>
+    <loc>https://ssebs.com/tags/arduino/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/go/</loc>
+    <loc>https://ssebs.com/tags/go/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
+    <loc>https://ssebs.com/tags/programming/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://ssebs.com/tags/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://ssebs.com/categories/</loc>
   </url>
 </urlset>

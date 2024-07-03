@@ -3,6 +3,7 @@ title: Mini Macro Pad
 shortdesc: Macro Pad shortcut tool written in go.
 weight: 101
 date: "2024-05-18T14:08:45-07:00"
+feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
 tags: [go, programming, 3d-printing, arduino]
 ---
 
@@ -13,7 +14,7 @@ Macro Pad driver software, written in Golang. If you have an arduino powered dev
 
 Here's what the GUI looks like, you can click the buttons to run the macro, or use the arduino to press them.
 
-![screenshot of gui](https://github.com/ssebs/go-mmp/blob/main/res/GUIScreenshot.png)
+![screenshot of gui](https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png)
 
 ## What kind of macros can you make?
 - Shortcuts:

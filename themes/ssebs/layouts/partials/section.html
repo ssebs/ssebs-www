@@ -4,21 +4,34 @@
 {{- $bg := "bg-neutral-800" }}
 {{- if .Params.SectionBG }} {{- $bg = .Params.SectionBG }} {{- end }}
 
-<section class="section {{ $bg }} flex justify-center w-full min-h-80">
+<section class="section {{ $bg }} flex justify-center w-full min-h-[30rem]">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl">
-        <h3 class="text-2xl font-bold">{{- .Params.ShortDesc | safeHTML -}} </h3>
+        <h3 class="text-3xl font-bold">{{- .Params.ShortDesc | safeHTML -}} </h3>
         <p class="my-2">{{- .Summary | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
-
+        
         {{/* Get a list of the top projects, and grab their description + img to share */}}
         {{/* If the section page has subpages, render those */}}
         {{ if .Pages }}
         <div class="grid md:grid-cols-3 gap-6 my-6">
             {{ range .Pages }}
             <a href="{{- .RelPermalink -}}">
-                <div class="p-6 border border-green-500">
-                    {{ .Title }}
-                    {{/*  {{ range .tags }}
-                    {{- end }}  */}}
+                <div class="grid gap-4 p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+                    
+                    {{- if .Params.feature }}
+                    <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" width="auto">
+                    {{- end}}
+                    <div class="text-xl font-medium">
+                        {{ .Title }}
+                    </div>
+
+                    <p class="text-lg">{{- .Params.ShortDesc | safeHTML -}} </p>
+                    <div class="tag-box flex flex-wrap gap-2 text-base">
+                        {{ range .Params.tags }}
+                        <div class="px-2  rounded-md border border-quinary">
+                            {{ . }}
+                        </div>
+                        {{- end }}
+                    </div>
                 </div>
             </a>
             {{ end }}

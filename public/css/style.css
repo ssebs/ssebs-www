@@ -65,8 +65,7 @@ body {
 }
 
 .hero {
-    height: 75vh;
-    position: relative;
+    min-height: calc(75vh - 80px); /* 80px is the header height */
 }
 .hero-content {
     z-index: 2;

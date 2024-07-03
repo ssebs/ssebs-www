@@ -1,6 +1,7 @@
 ---
-date: "2024-06-23T17:43:06-07:00"
 title: Perishable Punchers
+shortdesc: Mortal Kombat like Game written in Java, back in highschool.
+date: "2024-06-23T17:43:06-07:00"
 ---
 
 # PerishablePunchers

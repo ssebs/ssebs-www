@@ -1,13 +1,16 @@
 ---
-date: "2024-06-23T17:42:08-07:00"
 title: CSV Editor
+shortdesc: A GUI CSV editor written in Python.
+feature: https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true
+date: "2024-06-23T17:42:08-07:00"
+tags: [python, programming]
 ---
 
 # CSV Editor
 
 A lightweight GUI csv editor written in python. 
 
-![screenshot of gui](https://github.com/ssebs/csveditor/blob/master/CSV_Editor.PNG?raw=true)
+![screenshot of gui](https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true)
 
 ## Link to code: https://github.com/ssebs/csveditor
 

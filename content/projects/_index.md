@@ -1,6 +1,6 @@
 ---
 title: Projects
-shortdesc: Check out my projects!
+shortdesc: Check out my projects
 sectionbg: bg-primary-800
 menus: main
 weight: 10
