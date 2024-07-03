@@ -7,6 +7,5 @@ weight: 10
 date: "2024-06-23T17:44:59-07:00"
 ---
 
-# Projects
+Here's some of my coding projects (mostly the interesting ones). Most of my work projects I cannot share unfortunately.
 
-Here's a list of some of my coding projects. Most of my work projects I cannot share unfortunately.

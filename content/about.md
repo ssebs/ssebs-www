@@ -1,15 +1,10 @@
 ---
-title: About
+title: About me
 shortdesc: Who am I?
 menus: main
 weight: 20
 date: "2024-05-31T15:43:45-07:00"
 ---
-
-
-
-
-# About me
 
 {{< rawhtml >}}
 <div class="grid grid-cols-3">

@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: Contact me
 shortdesc: Ping me!
 sectionbg: bg-transparent
 menus: main
@@ -7,8 +7,7 @@ weight: 30
 date: "2024-05-31T15:43:51-07:00"
 ---
 
-# Contact me
-If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!
+If you're interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!
 
 > Note: The form takes a few seconds to submit, so please be patient. 
 

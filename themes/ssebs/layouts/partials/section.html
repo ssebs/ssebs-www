@@ -1,13 +1,29 @@
-{{/*  We're in a range site.Menus.main */}}
+{{/* We're in a range site.Menus.main */}}
 {{- with .Page }}
 
 {{- $bg := "bg-neutral-800" }}
 {{- if .Params.SectionBG }} {{- $bg = .Params.SectionBG }} {{- end }}
 
 <section class="section {{ $bg }} flex justify-center w-full min-h-80">
-    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl  border border-orange-600">
-        <h3 class="text-2xl font-bold">{{ .Name }} - {{ .Params.ShortDesc | safeHTML -}} </h3>
-        <p>{{- .Summary | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl">
+        <h3 class="text-2xl font-bold">{{- .Params.ShortDesc | safeHTML -}} </h3>
+        <p class="my-2">{{- .Summary | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
+
+        {{/* Get a list of the top projects, and grab their description + img to share */}}
+        {{/* If the section page has subpages, render those */}}
+        {{ if .Pages }}
+        <div class="grid md:grid-cols-3 gap-6 my-6">
+            {{ range .Pages }}
+            <a href="{{- .RelPermalink -}}">
+                <div class="p-6 border border-green-500">
+                    {{ .Title }}
+                    {{/*  {{ range .tags }}
+                    {{- end }}  */}}
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
     </div>
 </section>
 {{- end }}

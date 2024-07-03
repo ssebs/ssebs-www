@@ -1,6 +1,6 @@
 ---
 title: Mini Macro Pad
-shortdesc: Macro Pad shortcut tool.
+shortdesc: Macro Pad shortcut tool written in go.
 weight: 101
 date: "2024-05-18T14:08:45-07:00"
 tags: [go, programming, 3d-printing, arduino]
