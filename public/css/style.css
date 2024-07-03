@@ -72,6 +72,8 @@ body {
     z-index: 2;
 }
 
+/* TODO: add blur to edge of clip-path! */
+/* 
 .overlay {
     position: absolute;
     top: 0;
@@ -85,5 +87,5 @@ body {
     z-index: 1;
     transition: clip-path 64ms ease;
     clip-path: circle(0px at center);
-    /* TODO: add blur to edge of clip-path! */
 }
+ */

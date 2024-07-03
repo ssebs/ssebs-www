@@ -17,8 +17,10 @@
             width="256px" height="256px" />
     </div>
 </div>
-<div id="overlay" class="overlay"></div>
 
+{{/*
+Hover overlay
+<div id="overlay" class="overlay"></div>
 <script>
     const hero = document.getElementById("hero");
     const overlay = document.getElementById('overlay');
@@ -39,16 +41,5 @@
         const mouseY = event.clientY + window.pageYOffset;
         overlay.style.clipPath = `circle(${radius}px at ${mouseX}px ${mouseY}px)`;
     }
-
 </script>
-
-{{/* <div class="mover"></div>
-
-<script>
-    let root = document.documentElement;
-
-    root.addEventListener("mousemove", e => {
-        root.style.setProperty('--mouse-x', e.clientX + "px");
-        root.style.setProperty('--mouse-y', e.clientY + "px");
-    });
-</script> */}}
+*/}}
