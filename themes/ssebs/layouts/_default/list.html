@@ -3,21 +3,38 @@
 {{- if .IsHome }}
 {{ partial "home.html" . }}
 {{- else }}
-<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-	{{- if .Content }}
-	<div class="post-content">{{ .Content }}</div>
-	{{- end }}
+<div class="grid p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+		<h1 class="text-2xl">
+			{{- .Title -}}
+		</h1>
+
+		{{- if .Content }}
+		<div class="post-content">{{ .Content }}</div>
+		{{- end }}
 
 	<div class="grid md:grid-cols-2 gap-6">
 		{{ range .Pages }}
-		<div class="flex flex-col gap-2 bg-neutral-900 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-			<h2>{{- .Title -}}</h2>
-			<p>{{- .Summary | plainify | htmlUnescape -}}{{- if .Truncated -}} ...{{- end -}}</p>
-			<div class="bg-neutral-800 border border-primary hover:bg-primary rounded-lg p-2 w-fit">
-				<a href="{{ .RelPermalink }}" title="{{ .Title | default .Name }}">
-					Check it out!</a>
+		{{/*  TODO: MOVE THIS TO A CARD COMPONENT */}}
+		<a href="{{- .RelPermalink -}}">
+			<div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+				<div class="text-xl font-medium">
+					{{ .Title }}
+				</div>
+				
+				{{- if .Params.feature }}
+				<img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" width="auto">
+				{{- end}}
+
+				<p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}} </p>
+				<div class="tag-box flex flex-wrap gap-2 text-base">
+					{{ range .Params.tags }}
+					<div class="px-2 text-quaternary rounded-md border border-quaternary">
+						{{ . }}
+					</div>
+					{{- end }}
+				</div>
 			</div>
-		</div>
+		</a>
 		{{- end }}
 		{{- end }}
 	</div>

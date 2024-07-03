@@ -1,5 +1,7 @@
 {{- define "main" }}
 
+<h1>{{- .Title -}}</h1>
+
 	{{- if .Content }}
 	<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
 		<div class="post-content">{{ .Content }}</div>
