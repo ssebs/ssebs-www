@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{- partial "head.html" . -}}
+{{- partial "head.html" . -}}
 
-  <body class="text-white">
-    {{- partial "header.html" . -}} {{/* Container */}}
-    <div class="flex justify-center">
-      {{- if .IsHome }} {{- block "main" . }}{{- end }} {{- else }}
-      <div class="bg-neutral-900">
-        {{/* 2 col contents */}}
-        <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
-          <div
-            class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center"
-          >
-            {{- partial "sidebar.html" . -}}
-          </div>
-          <div
-            class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full"
-          >
-            {{- block "main" . }}{{- end }}
-          </div>
+<body class="text-white">
+  {{- partial "header.html" . -}}
+  <div class="flex justify-center">
+    {{- if .IsHome }}
+    {{- block "main" . }}
+    {{- end }}
+    {{- else }}
+    <div class="bg-neutral-900">
+      {{/* 2 col contents */}}
+      <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
+        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center">
+          {{- partial "sidebar.html" . -}}
+        </div>
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+          {{- block "main" . }}{{- end }}
         </div>
       </div>
-      {{- end }}
     </div>
-    {{- partial "footer.html" . -}}
-  </body>
+    {{- end }}
+  </div>
+  {{- partial "footer.html" . -}}
+</body>
+
 </html>

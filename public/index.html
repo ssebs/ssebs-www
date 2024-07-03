@@ -233,13 +233,15 @@
 
     toggleOpen.addEventListener('click', handleClick);
     toggleClose.addEventListener('click', handleClick);
-</script>
-    <div class="flex justify-center">
+</script><div class="flex justify-center">
 <div class="grid w-full">
   <div id="hero" class="hero grid items-center justify-center w-full border-b-2 border-primary">
     <div class="hero-content grid items-center justify-center md:max-w-4xl w-full">
         <div
-            class="max-mw-[40rem] p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-primary grid grid-cols-2 ">
+            class="max-mw-[40rem] p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-primary grid md:grid-cols-2 ">
+            <img class="mx-auto rounded-md transition hover:drop-shadow-2xl hover:scale-125" title="A photo of my at my wedding."
+                src="/img/me_wedding.jpg" width="256px" height="256px" />
+
             <div class="flex flex-col justify-between my-6">
                 <h1 class="text-2xl mb-4">Hey, I'm Sebastian Safari</h1>
                 <p class="">
@@ -259,34 +261,39 @@
                     </a>
                     <a href="/about">
                         <div
-                            class="p-2 rounded-xl border border-primary hover:drop hover:bg-primary hover:text-neutral-900">
+                            class="p-2 rounded-xl border border-primary hover:drop hover:bg-primary-800 hover:border-primary-800">
                             Who
                             am I?</div>
                     </a>
                 </div>
             </div>
-            <img class="md:row-auto row-start-1 mx-auto rounded-md transition hover:scale-150"
-                title="A photo of my at my wedding." src="/img/me_wedding.jpg" width="256px" height="256px" />
+
         </div>
     </div>
 </div>
 
 
-  <section class="section bg-neutral-800 flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl font-bold border border-green-500">
-    <div class="grid">
-        <h3 class="text-2xl">Projects - Check out my projects!</h3>
+  
+
+<section class="section bg-primary-800 flex justify-center w-full min-h-80">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl  border border-orange-600">
+        <h3 class="text-2xl font-bold">Projects - Check out my projects!</h3>
         <p>Projects Here’s a list of some of my coding projects. Most of my work projects I cannot share unfortunately....</p>
     </div>
 </section>
-  <section class="section bg-neutral-800 flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl font-bold border border-green-500">
-    <div class="grid">
-        <h3 class="text-2xl">About - Who am I?</h3>
+  
+
+<section class="section bg-neutral-800 flex justify-center w-full min-h-80">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl  border border-orange-600">
+        <h3 class="text-2xl font-bold">About - Who am I?</h3>
         <p>About me I’ve been fascinated by computers from a young age, always eager to unravel their intricacies....</p>
     </div>
 </section>
-  <section class="section bg-neutral-800 flex justify-self-center lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl font-bold border border-green-500">
-    <div class="grid">
-        <h3 class="text-2xl">Contact - Ping me!</h3>
+  
+
+<section class="section bg-transparent flex justify-center w-full min-h-80">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 text-xl  border border-orange-600">
+        <h3 class="text-2xl font-bold">Contact - Ping me!</h3>
         <p>Contact me If you are interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!...</p>
     </div>
 </section>
@@ -298,7 +305,7 @@
 </div> 
 	</div>
 </div>
-    </div><footer class="bg-primary min-h-64">
+  </div><footer class="bg-primary min-h-64">
     <div class="grid justify-center p-6">
         <h5 class="text-3xl text-white font-thin text-center p-6">Thanks for checking out my website!</h5>
         <div
@@ -398,4 +405,5 @@
     }
 
 </script></body>
+
 </html>

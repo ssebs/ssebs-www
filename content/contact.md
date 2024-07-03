@@ -1,6 +1,7 @@
 ---
 title: Contact
 shortdesc: Ping me!
+sectionbg: bg-transparent
 menus: main
 weight: 30
 date: "2024-05-31T15:43:51-07:00"
