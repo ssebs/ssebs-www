@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title> ssebs | Sebastian Safari </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -233,7 +233,7 @@
     toggleOpen.addEventListener('click', handleClick);
     toggleClose.addEventListener('click', handleClick);
 </script><div class="flex justify-center">
-    <div class="bg-neutral-900">
+    <div class="">
       
       <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center">
@@ -255,11 +255,11 @@
             <h4>Skills:</h4>
         </div>
         <div class="text-white p-4 flex flex-wrap justify-center gap-4 drop-shadow-lg">
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
-            <span class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</span>
-            <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
-            <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
+            <a href="/tags/python" class="bg-primary-500 px-2 py-1 rounded-3xl">python</a >
+            <a href="/tags/golang" class="bg-primary-500 px-2 py-1 rounded-3xl">golang</a >
+            <a href="/tags/webdev" class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</a >
+            <a href="/tags/" class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</a >
+            <a href="/tags/" class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
                 <a href="/projects">
                     More...
                 </a>
@@ -268,19 +268,139 @@
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+<ul id="breadcrumbs" class="flex text-neutral-400"><li class=""><a href="/"  >Home</a></li>
+        <div class="mx-1" >&gt;</div>
+        <li class=""><a href="/tags/"  >Tags</a></li>
+        <div class="mx-1" >&gt;</div>
+    <li class=""><a href="/tags/programming/">Programming</a></li>
+</ul>
+
+<div class="grid p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+	<h1 class="text-2xl">Programming</h1>
+	<div class="m-4"></div>
 
 	<div class="grid md:grid-cols-2 gap-6">
 		
-		<div class="flex flex-col gap-2 bg-neutral-900 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-			<h2>Mini Macro Pad</h2>
-			<p>Mini Macro Pad  go-mmp
- Macro Pad driver software, written in Golang....</p>
-			<div class="bg-neutral-800 border border-primary hover:bg-primary rounded-lg p-2 w-fit">
-				<a href="/projects/go-mmp/" title="Mini Macro Pad">
-					Check it out!</a>
-			</div>
-		</div>
+			
+
+<div class="card">
+  <div
+    class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+  >
+    <a href="/projects/go-mmp/">
+      <div class="text-xl font-medium">Mini Macro Pad</div>
+      <img
+        src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png"
+        alt="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png"
+        class="hover:scale-125 transition"
+        width="auto"
+      />
+
+      <p class="text-lg text-white-dim">Macro Pad shortcut tool written in go.</p>
+    </a>
+    <div class="tag-box flex flex-wrap gap-2 text-base">
+      
+      <a href="/tags/golang" class="px-2 text-quaternary rounded-md border border-quaternary">
+        golang
+      </a>
+      <a href="/tags/programming" class="px-2 text-quaternary rounded-md border border-quaternary">
+        programming
+      </a>
+      <a href="/tags/3d-printing" class="px-2 text-quaternary rounded-md border border-quaternary">
+        3d-printing
+      </a>
+      <a href="/tags/arduino" class="px-2 text-quaternary rounded-md border border-quaternary">
+        arduino
+      </a>
+    </div>
+  </div>
+</div>
+
+			
+
+<div class="card">
+  <div
+    class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+  >
+    <a href="/projects/ssebs-www/">
+      <div class="text-xl font-medium">My Website</div>
+      <img
+        src="ssebs.com/img/me_wedding.jpg"
+        alt="ssebs.com/img/me_wedding.jpg"
+        class="hover:scale-125 transition"
+        width="auto"
+      />
+
+      <p class="text-lg text-white-dim">ssebs.com code</p>
+    </a>
+    <div class="tag-box flex flex-wrap gap-2 text-base">
+      
+      <a href="/tags/webdev" class="px-2 text-quaternary rounded-md border border-quaternary">
+        webdev
+      </a>
+      <a href="/tags/programming" class="px-2 text-quaternary rounded-md border border-quaternary">
+        programming
+      </a>
+    </div>
+  </div>
+</div>
+
+			
+
+<div class="card">
+  <div
+    class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+  >
+    <a href="/projects/perishable-punchers/">
+      <div class="text-xl font-medium">Perishable Punchers</div>
+      <div class="w-auto h-[128px] border-neutral-700"></div>
+
+      <p class="text-lg text-white-dim">Mortal Kombat like Game written in Java, back in highschool.</p>
+    </a>
+    <div class="tag-box flex flex-wrap gap-2 text-base">
+      
+      <a href="/tags/programming" class="px-2 text-quaternary rounded-md border border-quaternary">
+        programming
+      </a>
+      <a href="/tags/java" class="px-2 text-quaternary rounded-md border border-quaternary">
+        java
+      </a>
+      <a href="/tags/gamedev" class="px-2 text-quaternary rounded-md border border-quaternary">
+        gamedev
+      </a>
+    </div>
+  </div>
+</div>
+
+			
+
+<div class="card">
+  <div
+    class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+  >
+    <a href="/projects/csveditor/">
+      <div class="text-xl font-medium">CSV Editor</div>
+      <img
+        src="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true"
+        alt="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true"
+        class="hover:scale-125 transition"
+        width="auto"
+      />
+
+      <p class="text-lg text-white-dim">A GUI CSV editor written in Python.</p>
+    </a>
+    <div class="tag-box flex flex-wrap gap-2 text-base">
+      
+      <a href="/tags/python" class="px-2 text-quaternary rounded-md border border-quaternary">
+        python
+      </a>
+      <a href="/tags/programming" class="px-2 text-quaternary rounded-md border border-quaternary">
+        programming
+      </a>
+    </div>
+  </div>
+</div>
+
 	</div>
 </div>
         </div>

@@ -1,6 +1,8 @@
 {{/* TODO: fun positioning? */}}
 <div class="flex lg:flex-col bg-neutral-800 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
     <div class="">
+        <img class="w-[75%] mx-auto my-4 rounded-md" title="A photo of my at my wedding."
+        src="/img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
             <h4>In a sentence...</h4>
@@ -17,15 +19,13 @@
             <h4>Skills:</h4>
         </div>
         <div class="text-white p-4 flex flex-wrap justify-center gap-4 drop-shadow-lg">
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
-            <span class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</span>
-            <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
-            <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
-                <a href="/projects">
-                    More...
+            <a href="/tags/python" class="bg-primary-500 px-2 py-1 rounded-3xl">python</a >
+            <a href="/tags/golang" class="bg-primary-500 px-2 py-1 rounded-3xl">golang</a >
+            <a href="/tags/webdev" class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</a >
+            <a href="/about" class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</a>
+            <a href="/projects" class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
+                    More projects
                 </a>
-            </span>
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title> ssebs | Sebastian Safari </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -234,12 +234,14 @@
     toggleOpen.addEventListener('click', handleClick);
     toggleClose.addEventListener('click', handleClick);
 </script><div class="flex justify-center">
-    <div class="bg-neutral-900">
+    <div class="">
       
       <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center">
 <div class="flex lg:flex-col bg-neutral-800 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
     <div class="">
+        <img class="w-[75%] mx-auto my-4 rounded-md" title="A photo of my at my wedding."
+        src="/img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
             <h4>In a sentence...</h4>
@@ -256,21 +258,22 @@
             <h4>Skills:</h4>
         </div>
         <div class="text-white p-4 flex flex-wrap justify-center gap-4 drop-shadow-lg">
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
-            <span class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</span>
-            <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
-            <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
-                <a href="/projects">
-                    More...
+            <a href="/tags/python" class="bg-primary-500 px-2 py-1 rounded-3xl">python</a >
+            <a href="/tags/golang" class="bg-primary-500 px-2 py-1 rounded-3xl">golang</a >
+            <a href="/tags/webdev" class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</a >
+            <a href="/about" class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</a>
+            <a href="/projects" class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
+                    More projects
                 </a>
-            </span>
         </div>
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-	<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-		<div class="post-content"><p>
+<div
+  class="grid p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+>
+  <h1 class="text-2xl">About me</h1>  
+    <div class="post-content"><p>
 <div class="grid grid-cols-3">
 
 
@@ -365,7 +368,7 @@ I&rsquo;ve been fascinated by computers from a young age, always eager to unrave
 </li>
 </ul>
 </div>
-	</div>
+</div>
         </div>
       </div>
     </div>

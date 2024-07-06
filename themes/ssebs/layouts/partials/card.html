@@ -1,0 +1,31 @@
+{{/* Expects to be in a .Pages loop, so "." is a Page */}}
+
+<div class="card">
+  <div
+    class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+  >
+    <a href="{{- .RelPermalink -}}">
+      <div class="text-xl font-medium">{{ .Title }}</div>
+
+      {{- if .Params.feature }}
+      <img
+        src="{{- .Params.feature | safeHTML -}}"
+        alt="{{- .Params.feature | plainify -}}"
+        class="hover:scale-125 transition"
+        width="auto"
+      />
+      {{- else }}
+      <div class="w-auto h-[128px] border-neutral-700"></div>
+      {{- end}}
+
+      <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
+    </a>
+    <div class="tag-box flex flex-wrap gap-2 text-base">
+      {{ range .Params.tags }}
+      <a href="/tags/{{- . -}}" class="px-2 text-quaternary rounded-md border border-quaternary">
+        {{ . }}
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</div>

@@ -6,8 +6,6 @@ date: "2024-06-23T17:42:08-07:00"
 tags: [python, programming]
 ---
 
-# CSV Editor
-
 A lightweight GUI csv editor written in python. 
 
 ![screenshot of gui](https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true)

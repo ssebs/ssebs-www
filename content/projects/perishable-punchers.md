@@ -5,7 +5,6 @@ date: "2024-06-23T17:43:06-07:00"
 tags: [programming, java, gamedev]
 ---
 
-# PerishablePunchers
 Mortal Kombat like Game written in Java, back in highschool.
 
 ## Requirements

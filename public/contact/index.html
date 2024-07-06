@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title> ssebs | Sebastian Safari </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -234,7 +234,7 @@
     toggleOpen.addEventListener('click', handleClick);
     toggleClose.addEventListener('click', handleClick);
 </script><div class="flex justify-center">
-    <div class="bg-neutral-900">
+    <div class="">
       
       <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center">
@@ -256,11 +256,11 @@
             <h4>Skills:</h4>
         </div>
         <div class="text-white p-4 flex flex-wrap justify-center gap-4 drop-shadow-lg">
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Python</span>
-            <span class="bg-primary-500 px-2 py-1 rounded-3xl">Golang</span>
-            <span class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</span>
-            <span class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</span>
-            <span class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
+            <a href="/tags/python" class="bg-primary-500 px-2 py-1 rounded-3xl">python</a >
+            <a href="/tags/golang" class="bg-primary-500 px-2 py-1 rounded-3xl">golang</a >
+            <a href="/tags/webdev" class="bg-primary-600 px-2 py-1 rounded-3xl">HTML/CSS/JS</a >
+            <a href="/tags/" class="bg-quinary-700 px-2 py-1 rounded-3xl">DevOps</a >
+            <a href="/tags/" class="border border-primary hover:bg-primary-500 px-2 py-1 rounded-3xl">
                 <a href="/projects">
                     More...
                 </a>
@@ -269,8 +269,11 @@
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-	<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-		<div class="post-content"><p>If you&rsquo;re interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</p>
+<div
+  class="grid p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary"
+>
+  <h1 class="text-2xl">Contact me</h1>  
+    <div class="post-content"><p>If you&rsquo;re interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</p>
 <blockquote>
 <p>Note: The form takes a few seconds to submit, so please be patient.</p>
 </blockquote>
@@ -306,7 +309,7 @@
                 </svg></div>
         </button>
         <input type="hidden" name="_captcha" value="false">
-        <input id="nextURL" type="hidden" name="_next" value="https://ssebs.com/contact/">
+        <input id="nextURL" type="hidden" name="_next" value="http://localhost:1313/contact/">
     </form>
 </div>
 
@@ -328,7 +331,7 @@
 </script>
 <p>Or, you can email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a></p>
 </div>
-	</div>
+</div>
         </div>
       </div>
     </div>

@@ -17,26 +17,7 @@
         {{ if .Pages }}
         <div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6">
             {{ range .Pages }}
-            <a href="{{- .RelPermalink -}}">
-                <div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-                    <div class="text-xl font-medium">
-                        {{ .Title }}
-                    </div>
-                    
-                    {{- if .Params.feature }}
-                    <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" width="auto">
-                    {{- end}}
-
-                    <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}} </p>
-                    <div class="tag-box flex flex-wrap gap-2 text-base">
-                        {{ range .Params.tags }}
-                        <div class="px-2 text-quaternary rounded-md border border-quaternary">
-                            {{ . }}
-                        </div>
-                        {{- end }}
-                    </div>
-                </div>
-            </a>
+            {{ partial "card.html" . }}
             {{ end }}
         </div>
         {{ end }}
