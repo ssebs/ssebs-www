@@ -1,5 +1,6 @@
 ---
 title: About me
+slug: about
 shortdesc: Who am I?
 menus: main
 weight: 20

@@ -1,5 +1,6 @@
 ---
 title: Contact me
+slug: contact
 shortdesc: Ping me!
 sectionbg: bg-transparent
 menus: main
