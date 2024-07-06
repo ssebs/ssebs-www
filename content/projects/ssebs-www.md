@@ -3,6 +3,7 @@ title: 'My Website'
 shortdesc: ssebs.com code
 feature: ssebs.com/img/me_wedding.jpg
 date: 2024-07-05T23:29:29-07:00
+weight: 29
 tags: [webdev, programming]
 ---
 

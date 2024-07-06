@@ -3,7 +3,7 @@ title: About me
 slug: about
 shortdesc: Who am I?
 menus: main
-weight: 20
+weight: 6
 date: "2024-05-31T15:43:45-07:00"
 ---
 

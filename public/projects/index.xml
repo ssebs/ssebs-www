@@ -16,11 +16,11 @@
       <description>go-mmp&#xA;Macro Pad driver software, written in Golang. If you have an arduino powered device, you could use this to run various keyboard shortcuts and other macros.</description>
     </item>
     <item>
-      <title>My Website</title>
-      <link>http://localhost:1313/projects/ssebs-www/</link>
-      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
-      <guid>http://localhost:1313/projects/ssebs-www/</guid>
-      <description>ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!</description>
+      <title>CSV Editor</title>
+      <link>http://localhost:1313/projects/csveditor/</link>
+      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
+      <guid>http://localhost:1313/projects/csveditor/</guid>
+      <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
     </item>
     <item>
       <title>Perishable Punchers</title>
@@ -30,11 +30,11 @@
       <description>Mortal Kombat like Game written in Java, back in highschool.</description>
     </item>
     <item>
-      <title>CSV Editor</title>
-      <link>http://localhost:1313/projects/csveditor/</link>
-      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
-      <guid>http://localhost:1313/projects/csveditor/</guid>
-      <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
+      <title>My Website</title>
+      <link>http://localhost:1313/projects/ssebs-www/</link>
+      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
+      <guid>http://localhost:1313/projects/ssebs-www/</guid>
+      <description>ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!</description>
     </item>
   </channel>
 </rss>

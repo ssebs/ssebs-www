@@ -3,7 +3,7 @@ title: Projects
 shortdesc: Check out my projects
 sectionbg: bg-primary-800
 menus: main
-weight: 10
+weight: 5
 date: "2024-06-23T17:44:59-07:00"
 ---
 
