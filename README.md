@@ -40,6 +40,7 @@ ssebs.com website code.
   - [ ] scroll animation on mobile
     - text/content covers up sidebar, sidebar covers up img. (parallax)
   - [ ] floating header styled like apple? Light with drop shadow, rounded
+- [ ] mini game Easter egg like Chrome dino
 
 
 ## Components
