@@ -5,7 +5,7 @@
     {{- else }}
         <li class=""><a href="{{ .RelPermalink }}">
             {{- with .Slug }}
-            {{- .Slug -}}
+            {{- . | title -}}
             {{- else }}
             {{ replace .Path "/" "" | title }}
             {{- end }}
