@@ -5,12 +5,19 @@
 {{- if .Params.SectionBG }} {{- $bg = .Params.SectionBG }} {{- end }}
 
 <section class="{{ $bg }} flex justify-center w-full">
-    <div class="grid lg:max-w-6xl md:max-w-4xl w-full gap-4 p-6 justify-start text-xl ">
-        {{/*  Title  */}}
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
+        {{/* Title */}}
         <h3 class="text-3xl font-bold">{{- .Params.ShortDesc | safeHTML -}}</h3>
-        <div>
-            {{/* Get first paragraph */}}
-            {{- index (split .Content "</p>" ) 0 | safeHTML -}}
+        <div class="grid md:grid-cols-2">
+            <div class="post-content">
+                {{- .Summary -}}
+                {{/* {{- .Params.Description | markdownify -}} */}}
+            </div>
+            <div>
+                {{- with .Params.Feature }}
+                {{- . | markdownify -}}
+                {{- end}}
+            </div>
         </div>
 
         {{/* If the section page has subpages, render top 3 */}}
@@ -23,13 +30,14 @@
             {{ end }}
         </div>
         {{- else }}
-        <div class="my-6">no subpage</div>
-        {{ end }}
-
+        <div class=""></div>
+        {{- end }}
+        {{- if not .Params.NoC2A -}}
         <a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
             href="{{- .RelPermalink -}}">
             See more...
         </a>
+        {{- end }}
     </div>
 </section>
 {{- end }}

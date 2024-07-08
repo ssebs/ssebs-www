@@ -2,10 +2,15 @@
 title: About me
 slug: about
 shortdesc: Who am I?
+feature: "{{< rawhtml >}}<img src=\"/img/me_wedding.jpg\" alt=\"/img/me_wedding.jpg\" class=\"mx-auto rounded-md w-[300px] p-4\" />{{< /rawhtml >}}"
 menus: main
 weight: 6
 date: "2024-05-31T15:43:45-07:00"
 ---
+I call myself a "professional fixer, hobbyist figure-outer". 
+
+Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and dog.
+<!--more-->
 
 {{< rawhtml >}}
 <div class="grid grid-cols-3">

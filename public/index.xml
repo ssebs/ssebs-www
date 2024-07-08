@@ -13,14 +13,14 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>I&amp;rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies.</description>
+      <description>&lt;p&gt;I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and dog.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact me</title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Fri, 31 May 2024 15:43:51 -0700</pubDate>
       <guid>http://localhost:1313/contact/</guid>
-      <description>If you&amp;rsquo;re interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</description>
+      <description>&lt;p&gt;Reach out to me if you want to connect on LinkedIn, or email me if you want to work on a project together!&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note: The form takes a few seconds to submit, so please be patient.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Or, you can email me at &lt;a href=&#34;mailto:contact@ssebs.com&#34;&gt;contact@ssebs.com&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mini Macro Pad</title>

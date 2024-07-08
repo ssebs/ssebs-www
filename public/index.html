@@ -276,11 +276,16 @@
   
 
 <section class="bg-primary-800 flex justify-center w-full">
-    <div class="grid lg:max-w-6xl md:max-w-4xl w-full gap-4 p-6 justify-start text-xl ">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Check out my projects</h3>
-        <div>
-            <p>Here&rsquo;s some of my more interesting projects (mostly the interesting ones). Most of my work projects I cannot share unfortunately.</div>
+        <div class="grid md:grid-cols-2">
+            <div class="post-content"><p>Here&rsquo;s some of my more interesting side projects.</p>
+<p>I use the Mini Macro Pad basically every day, for skipping songs, typing &ldquo;gg&rdquo; into games, and other shortcuts.Most of my work projects I cannot share unfortunately.</p>
+            </div>
+            <div>
+            </div>
+        </div>
 
         
         
@@ -399,9 +404,7 @@
             
             
             
-        </div>
-
-        <a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
+        </div><a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
             href="/projects/">
             See more...
         </a>
@@ -410,24 +413,21 @@
   
 
 <section class="bg-neutral-800 flex justify-center w-full">
-    <div class="grid lg:max-w-6xl md:max-w-4xl w-full gap-4 p-6 justify-start text-xl ">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Who am I?</h3>
-        <div>
-            <p>
-<div class="grid grid-cols-3">
+        <div class="grid md:grid-cols-2">
+            <div class="post-content"><p>I call myself a &ldquo;professional fixer, hobbyist figure-outer&rdquo;.</p>
+<p>Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and dog.</p>
+            </div>
+            <div><img src="/img/me_wedding.jpg" alt="/img/me_wedding.jpg" class="mx-auto rounded-md w-[300px] p-4" />
 
-
-<div class="md:col-span-2 col-span-3">
-
-I&rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.</div>
+            </div>
+        </div>
 
         
         
-        <div class="my-6">no subpage</div>
-        
-
-        <a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
+        <div class=""></div><a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
             href="/about/">
             See more...
         </a>
@@ -436,21 +436,75 @@ I&rsquo;ve been fascinated by computers from a young age, always eager to unrave
   
 
 <section class="bg-transparent flex justify-center w-full">
-    <div class="grid lg:max-w-6xl md:max-w-4xl w-full gap-4 p-6 justify-start text-xl ">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Ping me!</h3>
-        <div>
-            <p>If you&rsquo;re interested in one of my projects, or want to get in contact with me for a new project, definitely reach out!</div>
+        <div class="grid md:grid-cols-2">
+            <div class="post-content"><p>Reach out to me if you want to connect on LinkedIn, or email me if you want to work on a project together!</p>
+<blockquote>
+<p>Note: The form takes a few seconds to submit, so please be patient.</p>
+</blockquote>
+<p>Or, you can email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a></p>
+            </div>
+            <div><div class="grid gap-6 justify-center">
+    
+
+    <div id="msg-container" class="text-xl italic text-quinary"></div>
+
+    
+    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:w-[512px]">
+        <div class="grid sm:grid-cols-2 gap-2">
+            <input type="text" name="name"
+                class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Your Name"
+                required />
+            <input type="email" name="email"
+                class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                placeholder="Email Address" required />
+        </div>
+        <input type="text" name="_subject"
+            class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Subject"
+            required>
+
+        <textarea placeholder="Message" class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+            name="message" rows="10" required></textarea>
+
+        <button type="submit"
+            class="flex justify-center items-center self-center gap-2 w-[200px] bg-primary drop-shadow-lg rounded-md p-3 font-semibold text-lg">
+            Send
+            <div><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
+                    fill="#e8eaed">
+                    <path
+                        d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                </svg></div>
+        </button>
+        <input type="hidden" name="_captcha" value="false">
+        <input id="nextURL" type="hidden" name="_next" value="http://localhost:1313/">
+    </form>
+</div>
+
+<script>
+    
+    
+    const nextURL = document.getElementById("nextURL");
+    
+    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
+
+
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('msg')) {
+        const msgContainer = document.getElementById('msg-container');
+        msgContainer.textContent = decodeURI(urlParams.get("msg"));
+
+    }
+</script>
+
+            </div>
+        </div>
 
         
         
-        <div class="my-6">no subpage</div>
-        
-
-        <a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
-            href="/contact/">
-            See more...
-        </a>
+        <div class=""></div>
     </div>
 </section>
 
