@@ -1,31 +1,23 @@
 {{/* Expects to be in a .Pages loop, so "." is a Page */}}
+<div
+  class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition">
+  <a href="{{- .RelPermalink -}}">
+    <div class="text-xl font-medium">{{ .Title }}</div>
 
-<div class="card">
-  <div
-    class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition"
-  >
-    <a href="{{- .RelPermalink -}}">
-      <div class="text-xl font-medium">{{ .Title }}</div>
+    {{- if .Params.feature }}
+    <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" class="" width="auto" />
+    {{- else }}
+    <div class="w-auto h-[128px] border-neutral-700"></div>
+    {{- end}}
 
-      {{- if .Params.feature }}
-      <img
-        src="{{- .Params.feature | safeHTML -}}"
-        alt="{{- .Params.feature | plainify -}}"
-        class=""
-        width="auto"
-      />
-      {{- else }}
-      <div class="w-auto h-[128px] border-neutral-700"></div>
-      {{- end}}
-
-      <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
+    <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
+  </a>
+  <div class="flex flex-wrap gap-2 text-base">
+    {{ range .Params.tags }}
+    <a href="/tags/{{- . -}}"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      {{ . }}
     </a>
-    <div class="tag-box flex flex-wrap gap-2 text-base">
-      {{ range .Params.tags }}
-      <a href="/tags/{{- . -}}" class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-        {{ . }}
-      </a>
-      {{- end }}
-    </div>
+    {{- end }}
   </div>
 </div>

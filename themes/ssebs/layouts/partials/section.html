@@ -8,7 +8,8 @@
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         {{/* Title */}}
         <h3 class="text-3xl font-bold">{{- .Params.ShortDesc | safeHTML -}}</h3>
-        <div class="grid md:grid-cols-2">
+        {{/* Text content + feature */}}
+        <div class="text-white-dim grid md:grid-cols-2">
             <div class="post-content">
                 {{- .Summary -}}
                 {{/* {{- .Params.Description | markdownify -}} */}}
@@ -22,7 +23,7 @@
 
         {{/* If the section page has subpages, render top 3 */}}
         {{ if .Pages }}
-        <div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6 border border-red-500">
+        <div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6 ">
             {{ range $idx, $page := .Pages }}
             {{ if lt $idx 3}}
             {{ partial "card.html" $page }}
@@ -32,8 +33,10 @@
         {{- else }}
         <div class=""></div>
         {{- end }}
+
+        {{/* C2A */}}
         {{- if not .Params.NoC2A -}}
-        <a class="p-4 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
+        <a class="p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
             href="{{- .RelPermalink -}}">
             See more...
         </a>
