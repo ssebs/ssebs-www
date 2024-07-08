@@ -395,7 +395,7 @@
             
         </div>
 
-        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
+        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-quaternary font-medium rounded-md"
             href="/projects/">
             See more...
         </a>
@@ -424,7 +424,7 @@
         
         <div class=""></div>
 
-        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
+        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-quaternary font-medium rounded-md"
             href="/about/">
             See more...
         </a>
@@ -441,7 +441,7 @@
 
         
         <div class="text-white-dim grid md:grid-cols-2 ">
-            <div class="post-content text-lg"><p>Reach out to me if you want to connect on LinkedIn, or email me if you want to work on a project together!</p>
+            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me if you want to work on a project together!</p>
 <blockquote>
 <p>Note: The form takes a few seconds to submit, so please be patient.</p>
 </blockquote>
@@ -453,23 +453,32 @@
 
     
     <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:w-[512px]">
-        <div class="grid sm:grid-cols-2 gap-2">
-            <input type="text" name="name"
-                class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Your Name"
-                required />
-            <input type="email" name="email"
-                class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
-                placeholder="Email Address" required />
+        <div class="grid sm:grid-cols-2">
+            <label class="text-base w-[50%]" for="name">Your name:
+                <input type="text" name="name"
+                    class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="John Doe..." required />
+            </label>
+            <label class="text-base w-[50%]" for="email">Email:
+                <input type="email" name="email"
+                    class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="jdoe@example.com" required />
+            </label>
         </div>
-        <input type="text" name="_subject"
-            class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Subject"
-            required>
 
-        <textarea placeholder="Message" class="bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
-            name="message" rows="10" required></textarea>
+        <label class="text-base" for="_subject">Subject:</label>
+        <input type="text" name="_subject"
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+            placeholder="Dear ssebs" required>
+
+        <label class="text-base" for="message">Message:
+        </label>
+        <textarea placeholder="Let's work on something together."
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" name="message"
+            rows="10" required></textarea>
 
         <button type="submit"
-            class="flex justify-center items-center self-center gap-1 w-full bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold text-lg">
+            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quinary hover:bg-quaternary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
             Send
             <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#171717">
