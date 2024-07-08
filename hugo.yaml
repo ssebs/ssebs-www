@@ -12,6 +12,10 @@ params:
   author: Sebastian Safari
   copyright_start_year: 2015
   socials:
-    linkedin: https://linkedin.com/in/ssebs/
     # TODO: add icon
-    github: https://github.com/ssebs
+    linkedin: 
+      link: https://linkedin.com/in/ssebs/
+      weight: 1
+    github: 
+      link: https://github.com/ssebs
+      weight: 2

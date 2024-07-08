@@ -1,6 +1,6 @@
 ---
 title: Mini Macro Pad
-shortdesc: Macro Pad shortcut tool written in go.
+shortdesc: Run shortcuts and automate tasks with a press of a button!
 weight: 20
 date: "2024-05-18T14:08:45-07:00"
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png

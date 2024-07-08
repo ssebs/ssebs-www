@@ -12,7 +12,7 @@ date: "2024-05-31T15:43:51-07:00"
 Reach out to me if you want to connect on LinkedIn, or email me if you want to work on a project together!
 
 > Note: The form takes a few seconds to submit, so please be patient.
->  
+
 Or, you can email me at [contact@ssebs.com](mailto:contact@ssebs.com)
 <!--more-->
 

@@ -1,6 +1,6 @@
 ---
 title: CSV Editor
-shortdesc: A GUI CSV editor written in Python.
+shortdesc: A CSV editor written in Python. I was annoyed with Excel's Copy/Paste features, so I made something that worked for me.
 feature: https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true
 date: "2024-06-23T17:42:08-07:00"
 weight: 24

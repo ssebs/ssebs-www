@@ -1,17 +1,19 @@
 <footer class="bg-primary-800 min-h-64">
     <div class="grid justify-center p-6">
-        <h5 class="text-3xl text-white font-thin text-center p-6">Thanks for checking out my website!</h5>
+        <h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5>
         <div
             class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full m-6 gap-12 text-lg">
             <div class="flex justify-between items-end gap-6 min-w-80">
-                <img class="w-28 h-fit " src="/img/RocketOnly.png" alt="logo" />
+                <img class="w-28 h-fit" src="/img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="/" class="text-xl font-medium hover:text-quinary">ssebs</a>
+                    <a href="/" class="font-medium hover:text-quinary">
+                        {{- .Title -}}
+                    </a>
                     <ul>
                         {{- range site.Menus.main }}
                         <li class=''>
                             <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                                class="text-white-dim hover:text-tertiary">
+                                class="text-quinary hover:text-quaternary">
                                 {{- with .Page }}
                                 {{- .Params.ShortDesc | safeHTML -}}
                                 {{- else }}
@@ -25,7 +27,7 @@
             </div>
 
             <div class="grid gap-2 max-w-md text-base font-normal">
-                <h5 class="text-xl font-medium">Why <span class="text-quinary">ssebs</span>?</h5>
+                <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
                 <p>
                     When I was a kid and I had to come up with my first username, I ended up trying to find something
                     using my initials.
@@ -40,14 +42,25 @@
             </div>
 
             <div class="min-w-32 flex flex-col">
-                <div class="text-xl">My socials:</div>
+                <div class="text-xl">Socials</div>
                 <ul>
-                    {{- range $name, $link := site.Params.socials }}
+
+                    {{/* Sort socials by weight */}}
+                    {{ $socials := site.Params.socials }}
+                    {{ $socialArray := slice }}
+                    {{ range $name, $obj := $socials }}
+                    {{/* If adding to params, also hard code the key here */}}
+                    {{ $socialArray = $socialArray | append (dict "name" $name "text" $obj.text "link" $obj.link
+                    "weight" $obj.weight) }}
+                    {{ end }}
+                    {{ $sortedSocials := sort $socialArray "weight" "asc" }}
+
+                    {{- range $sortedSocials }}
                     <li>
-                        <a href="{{ $link }}" title="{{ $name }}" class="text-quinary hover:text-tertiary"
+                        <a href="{{ .link }}" title="{{ .name }}" class="text-quinary hover:text-quaternary"
                             target="_blank">
                             <span>
-                                {{- $name | title | safeHTML -}}
+                                {{- .name | title | safeHTML -}}
                                 {{/* Add arrow icon showing external page */}}
                                 <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
@@ -67,7 +80,7 @@
         </div>
     </div>
     <div class="text-center bg-neutral-700 p-6">
-        <span id="copyright-year">&copy;2024 - this should be replaced by js</span>
+        <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
     </div>
 </footer>
 
@@ -77,10 +90,17 @@
     const current = new Date().getFullYear();
     const fromYear = {{ .Site.Params.copyright_start_year -}};
 
+    const authorHTML = `<a 
+                            href="{{- .Site.Params.Socials.LinkedIn.Link -}}" 
+                            class="text-quaternary hover:text-quinary" target="_blank" 
+                            >
+                                {{ .Site.Params.author | safeJS -}}
+                        </a>`;
+
     if (current === fromYear) {
-        copyElement.innerHTML = `&copy;${current} - {{ .Site.Params.author | safeJS -}}`;
+        copyElement.innerHTML = `&copy;${current} | ${authorHTML}`;
     } else {
-        copyElement.innerHTML = `&copy;${fromYear} - ${current} - {{ .Site.Params.author | safeJS -}}`;
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
     }
 
 </script>

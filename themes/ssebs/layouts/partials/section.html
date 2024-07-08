@@ -8,9 +8,16 @@
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         {{/* Title */}}
         <h3 class="text-3xl font-bold">{{- .Params.ShortDesc | safeHTML -}}</h3>
+
+        {{/* Default to text only if no feature */}}
+        {{- $cols := "max-w-xl" -}}
+        {{- if .Params.Feature -}}
+        {{- $cols = "md:grid-cols-2"}}
+        {{- end}}
+
         {{/* Text content + feature */}}
-        <div class="text-white-dim grid md:grid-cols-2">
-            <div class="post-content">
+        <div class="text-white-dim grid {{ $cols }} ">
+            <div class="post-content text-lg">
                 {{- .Summary -}}
                 {{/* {{- .Params.Description | markdownify -}} */}}
             </div>
@@ -36,7 +43,7 @@
 
         {{/* C2A */}}
         {{- if not .Params.NoC2A -}}
-        <a class="p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
+        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-primary font-medium rounded-md"
             href="{{- .RelPermalink -}}">
             See more...
         </a>
