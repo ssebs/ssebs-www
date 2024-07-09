@@ -2,21 +2,25 @@
 title: About me
 slug: about
 shortdesc: Who am I?
-feature: "{{< rawhtml >}}<img src=\"/img/me_wedding.jpg\" alt=\"/img/me_wedding.jpg\" class=\"mx-auto rounded-md w-[300px] p-4\" />{{< /rawhtml >}}"
 menus: main
 weight: 6
 date: "2024-05-31T15:43:45-07:00"
 ---
+{{< columns >}}
 My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figure-outer". 
 
 Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
-<!--more-->
+
+<--->
 
 {{< rawhtml >}}
-  <div class="w-[256px] mx-auto"> 
-    <img class="rounded-full w-[256px] h-[256px]" src="/img/me_wedding.jpg" />
-  </div>
+<img class="rounded-md w-[256px]" src="/img/me_wedding.jpg" alt="Photo of me at my wedding." />
 {{< /rawhtml >}}
+
+{{< /columns >}}
+<!--more-->
+
+{{% spacer 1rem %}}
 
 {{< columns >}}
 ## My background
@@ -30,15 +34,20 @@ I've progressed through various roles, starting as a Registrar at PARC, and adva
 
 ## Where I am now
 
-In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success.
+In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success across many projects.
+
+The way I like to work:
+- With efficiency, I try to think of better / more efficient ways to solve problems
+- Doing things the right way, I'm not a fan of half-assing work. I'd rather do it the right way.
+- Focus on the details, but also think of the bigger picture.
+- I typically think of the MVP - the Minimum Viable Product as the goal. Once that's complete we can think about soft requirements and fun features.
+- Teach others as I learn, why not share my new found knowledge! I love to both mentor, and learn from others.
 
 {{< /columns >}}
 
-
-### How I think 
-- I'm efficiency oriented, always thinking of better and more efficient ways to solve problems.
-- I'm very detail oriented, but also have a need to fit my tasks to the bigger picture
-
+{{% spacer 1rem %}}
+## Resume copypasta
+The content below is basically copy/pasted from my resume.
 
 ## Success Stories
 

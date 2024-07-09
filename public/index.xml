@@ -13,7 +13,7 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;grid md:grid-cols-2 justify-items-center&#34;&gt;&#xA;    &#xA;    &lt;div&gt;&#xA;    &lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;    &#xA;    &lt;div&gt;&#xA;    &lt;img class=&#34;rounded-md w-[256px]&#34; src=&#34;http://localhost:1313/img/me_wedding.jpg&#34; alt=&#34;Photo of me at my wedding.&#34; /&gt;&#xA;&#xA;    &lt;/div&gt;&#xA;    &#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Contact me</title>
