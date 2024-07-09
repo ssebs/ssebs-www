@@ -25,6 +25,22 @@
     font-weight: bold !important;
 }
 
+.post-content ul {
+    list-style-position: outside;
+}
+.post-content li {
+    margin-left: 1rem;
+    list-style-type: disc;
+}
+.post-content li li {
+    margin-left: 1.5rem;
+    list-style-type: circle;
+}
+.post-content li li li {
+    margin-left: 2rem;
+    list-style-type: square;
+}
+
 .post-content a {
     color: #33ffe7;
     text-decoration: underline;
@@ -44,6 +60,10 @@ h3,
 h4,
 h5 {
     margin: 1rem auto;
+}
+
+.post-content {
+    color: #efefef;
 }
 
 blockquote {

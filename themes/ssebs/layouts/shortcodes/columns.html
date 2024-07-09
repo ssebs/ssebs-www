@@ -1,5 +1,5 @@
 {{/*  To split up the columns, add a <--->  */}}
-<div class="grid md:grid-cols-2 justify-items-center">
+<div class="grid md:grid-cols-2 justify-items-center gap-6">
     {{ range split .Inner "<--->" }}
     {{ printf "<div>" | htmlUnescape | safeHTML }}
     {{ . | markdownify }}

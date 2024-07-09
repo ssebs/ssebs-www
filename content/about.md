@@ -11,6 +11,8 @@ My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figur
 
 Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
 
+Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last naem.
+
 <--->
 
 {{< rawhtml >}}
@@ -29,23 +31,63 @@ I've been fascinated by computers from a young age, always eager to unravel thei
 
 I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
 
-
 <--->
 
-## Where I am now
+## Some of my hobbies
+- Guitar
+  - Mostly Metallica & other rock
+- Gaming
+  - VALORANT
+  - Forza
+  - Whatever is the game of the week
+- 3D Printing
+  - Gridfinity
+  - Custom models (Check out my [Macro Pad](/projects/go-mmp))
+  - Benchy
+- Programming
+  - Check out my [projects](/projects)
 
+{{< /columns >}}
+
+
+# TODO: ADD IMAGE HERE
+
+## Where I am now
 In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success across many projects.
 
-The way I like to work:
+
+### The way I like to work:
 - With efficiency, I try to think of better / more efficient ways to solve problems
 - Doing things the right way, I'm not a fan of half-assing work. I'd rather do it the right way.
 - Focus on the details, but also think of the bigger picture.
 - I typically think of the MVP - the Minimum Viable Product as the goal. Once that's complete we can think about soft requirements and fun features.
 - Teach others as I learn, why not share my new found knowledge! I love to both mentor, and learn from others.
 
-{{< /columns >}}
+{{% spacer 1rem %}}
+
+## Skills
+- Python, Golang, JavaScript, Bash, PowerShell
+- Docker, Chef, Ansible, Terraform
+- Load Balancing, NGINX, Apache, CI/CD, Docker, SQL, SSH, Disaster Recovery (DR)
+- LucidChart, ExcaliDraw, Markdown, MS Office (Word, Excel, etc.)
+- DNS, DHCP, IPAM, HTTP, TLS, Firewall
+- M365, SharePoint, Azure, Oracle Cloud, AWS, Active Directory, SAML, SSO  
 
 {{% spacer 1rem %}}
+
+## Soft skills
+- **Communication:** Effectively communicate complex technical concepts to non-technical stakeholders, both in writing and verbally.  
+- **Problem Solving:** Analytical thinker with a proven ability to troubleshoot and provide efficient solutions.  
+- **Adaptability:** Flexible and comfortable in dynamic, fast-paced environments, adapting to changing requirements. Quick learner and a team player.  
+- **Leadership:** Skilled in motivating teams, leading initiatives, and contributing to a positive work culture.  
+- **Time Management:** Efficiently manage time and priorities to meet deadlines, demonstrating strong organizational skills.  
+- **Attention to Detail:** Meticulous attention to detail in both technical work and documentation, ensuring accuracy and precision in all tasks.  
+- **Initiative:** Proactive and self-motivated, taking the initiative to address issues and propose improvements.
+
+
+
+{{% spacer 2rem %}}
+
 ## Resume copypasta
 The content below is basically copy/pasted from my resume.
 
@@ -74,30 +116,9 @@ The content below is basically copy/pasted from my resume.
 - Standardized documentation for high-quality impact metrics.
 
 
-## Skills
-- **Languages:** Python, Golang, JavaScript, Bash, PowerShell  
-- **Containers/Orchestration:** Docker, Chef, Ansible, Terraform, Disaster Recovery (DR)  
-- **Web Technologies:** HTML/CSS, ReactJS, Flask, REST  
-- **DevOps / Infrastructure:** Load Balancing, NGINX, Apache, CI/CD, Docker, SQL, Syncthing  
-- **Diagramming/Documentation:** LucidChart, Draw.io, Markdown, MS Office (Word, Excel, etc.)  
-- **Networking:** DNS, DHCP, IPAM, HTTP, TLS, Firewalld  
-- **Cloud Platforms/IAM:** M365, SharePoint, Azure, Oracle Cloud, AWS, Active Directory, SAML, SSO  
-- **Communication:** Effectively communicate complex technical concepts to non-technical stakeholders, both in writing and verbally.  
-- **Problem Solving:** Analytical thinker with a proven ability to troubleshoot and provide efficient solutions.  
-- **Adaptability:** Flexible and comfortable in dynamic, fast-paced environments, adapting to changing requirements. Quick learner and a team player.  
-- **Leadership:** Skilled in motivating teams, leading initiatives, and contributing to a positive work culture.  
-- **Time Management:** Efficiently manage time and priorities to meet deadlines, demonstrating strong organizational skills.  
-- **Attention to Detail:** Meticulous attention to detail in both technical work and documentation, ensuring accuracy and precision in all tasks.  
-- **Initiative:** Proactive and self-motivated, taking the initiative to address issues and propose improvements.
 
 Let's connect and explore how my skills and experiences align with your team's objectives, and how together, we can navigate the dynamic landscape of systems and software engineering.
 
-
-## Hobbies
-- Guitar
-- Gaming
-- 3D Printing
-- Programming
 
 ## Work background
 - PARC
