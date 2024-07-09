@@ -37,7 +37,7 @@
 
                         {{- $currentPage := . }}
                         {{ $textColorActive := "text-gray-300" }}
-
+                            
                         {{/* Pages from main menu */}}
                         {{- range site.Menus.main }}
                         {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) |

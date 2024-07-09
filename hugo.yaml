@@ -19,3 +19,8 @@ params:
     github: 
       link: https://github.com/ssebs
       weight: 2
+
+markup:
+  goldmark:
+    renderer: 
+      unsafe: true

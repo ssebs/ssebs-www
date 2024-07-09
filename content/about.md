@@ -7,24 +7,10 @@ menus: main
 weight: 6
 date: "2024-05-31T15:43:45-07:00"
 ---
-I call myself a "professional fixer, hobbyist figure-outer". 
+My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figure-outer". 
 
-Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and dog.
+Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
 <!--more-->
-
-{{< rawhtml >}}
-<div class="grid grid-cols-3">
-{{< /rawhtml >}}
-{{< rawhtml >}}
-<div class="md:col-span-2 col-span-3">
-{{< /rawhtml >}}
-I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
-
-I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
-
-{{< rawhtml >}}
-</div>
-{{< /rawhtml >}}
 
 {{< rawhtml >}}
   <div class="w-[256px] mx-auto"> 
@@ -32,11 +18,22 @@ I've progressed through various roles, starting as a Registrar at PARC, and adva
   </div>
 {{< /rawhtml >}}
 
-{{< rawhtml >}}
-</div>
-{{< /rawhtml >}}
+{{< columns >}}
+## My background
+
+I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
+
+I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
+
+
+<--->
+
+## Where I am now
 
 In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success.
+
+{{< /columns >}}
+
 
 ### How I think 
 - I'm efficiency oriented, always thinking of better and more efficient ways to solve problems.
