@@ -297,19 +297,15 @@
     <div id="msg-container" class="text-xl italic text-quinary"></div>
 
     
-    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:w-[512px]">
-        <div class="grid sm:grid-cols-2">
-            <label class="text-base w-[50%]" for="name">Your name:
-                <input type="text" name="name"
-                    class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
-                    placeholder="John Doe..." required />
-            </label>
-            <label class="text-base w-[50%]" for="email">Email:
-                <input type="email" name="email"
-                    class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
-                    placeholder="jdoe@example.com" required />
-            </label>
-        </div>
+    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:max-w-[512px]">
+        <label class="text-base " for="name">Your name:</label>
+            <input type="text" name="name"
+                class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                placeholder="John Doe..." required />
+        <label class="text-base " for="email">Email:</label>
+            <input type="email" name="email"
+                class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                placeholder="jdoe@example.com" required />
 
         <label class="text-base" for="_subject">Subject:</label>
         <input type="text" name="_subject"

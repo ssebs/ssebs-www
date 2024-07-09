@@ -10,7 +10,7 @@
         <h3 class="text-3xl font-bold">{{- .Params.ShortDesc | safeHTML -}}</h3>
 
         {{/* Default to text only if no feature */}}
-        {{- $cols := "max-w-xl" -}}
+        {{- $cols := "" -}}
         {{- if .Params.Feature -}}
         {{- $cols = "md:grid-cols-2"}}
         {{- end}}
