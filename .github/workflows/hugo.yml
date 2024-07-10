@@ -72,3 +72,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deploy to ssebs.github.io
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.PRIVATE_KEY }}
+          external_repository: ssebs/ssebs.github.io
+          publish_branch: gh-pages
+          publish_dir: ./public
