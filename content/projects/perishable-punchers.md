@@ -1,13 +1,13 @@
 ---
 title: Perishable Punchers
 shortdesc: Mortal Kombat like Game written in Java, back in highschool.
-feature: /img/projects/PerishablePunchers.jpg
+feature: ./img/projects/PerishablePunchers.jpg
 date: "2024-06-23T17:43:06-07:00"
 weight: 24
 tags: [programming, java, gamedev]
 ---
 
-![screenshot](/img/projects/PerishablePunchers.jpg)
+![screenshot](./img/projects/PerishablePunchers.jpg)
 
 Mortal Kombat like Game written in Java, back in highschool.
 

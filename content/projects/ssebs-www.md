@@ -1,7 +1,7 @@
 ---
 title: 'My Website'
 shortdesc: ssebs.com code
-feature: /img/projects/ssebs-www-current.png
+feature: ./img/projects/ssebs-www-current.png
 date: 2024-07-05T23:29:29-07:00
 weight: 28
 tags: [webdev, programming]
