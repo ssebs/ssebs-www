@@ -38,7 +38,7 @@ ssebs.com website code.
 - Clone this repo
 - Install [hugo](https://gohugo.io/)
   - Either manually, or use the `setup_env.sh` script
-- `hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0`
+- `hugo serve --noHTTPCache --disableFastRender --baseURL "http://localhost:1313/" --bind 0.0.0.0 --port 1313`
 
 ### Build
 - `HUGO_ENV=production hugo`
