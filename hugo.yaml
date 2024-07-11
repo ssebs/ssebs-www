@@ -8,6 +8,7 @@ buildDrafts: false
 summaryLength: 10
 
 params:
+  useBaseURL: false
   description: Hi, I'm Sebastian Safari. I'm an SRE who likes to make side projects, check them out!
   author: Sebastian Safari
   copyright_start_year: 2015

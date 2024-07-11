@@ -5,7 +5,6 @@ ssebs.com website code.
 ## TODO:
 - MVP website:
   - [ ] Home page - social icons in bottom right of hero / footer
-    - [ ] Contact form in footer, and contact page should have my socials
   - [ ] Add blog
     - [ ] e.g. things I learned or tech stuff I can share that's not a project (e.g. Hugo quick start + explain theme)
   - [ ] Content:
@@ -13,7 +12,6 @@ ssebs.com website code.
       - [ ] resume type (work)
       - [ ] my story
       - [ ] my hobbies (guitar, car, gaming, 3d printing)
-    - [ ] add games with download links
     - [ ] tag + categories for hobby stuff, like working on cars or guitar stuff
 - After MVP:
   - [ ] Add tags to each project and allow search by tags (show tags on page + clickable)
@@ -21,7 +19,7 @@ ssebs.com website code.
 - Finishing touches:
   - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
   - [ ] Dark/light mode https://tailwindcss.com/docs/dark-mode
-  - [ ] CI/CD Github Actions to build
+  - [x] CI/CD Github Actions to build
     - Also do ssebs.github.io?
   - [ ] Animations
     - [ ] animations on hover (menu, logo, header)
@@ -38,10 +36,13 @@ ssebs.com website code.
 - Clone this repo
 - Install [hugo](https://gohugo.io/)
   - Either manually, or use the `setup_env.sh` script
-- `hugo serve --noHTTPCache --disableFastRender --baseURL "http://localhost:1313/" --bind 0.0.0.0 --port 1313`
+- Local dev deployment:
+  - `hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0`
+- To deploy to another baseURL for testing
+  - `hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0`
 
 ### Build
-- `HUGO_ENV=production hugo`
+- `HUGO_ENV=production HUGO_PARAMS_USEBASEURL=true hugo --baseURL "https://your-url.com/" --minify`
 
 ## License
 [MIT](./LICENSE)

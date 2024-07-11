@@ -10,10 +10,7 @@ cd tmp
 curl -LJO https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_linux-amd64.tar.gz
 tar xf ./hugo_extended_0.128.2_linux-amd64.tar.gz
 
-echo 
-echo "Install php twig and configure the template files in VSCode to use twig lang for formatting!"
-echo "https://stackoverflow.com/a/60644216"
-echo 
 echo "To run server:"
-echo "    ./tmp/hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0"
+echo "./tmp/hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0"
 echo
+

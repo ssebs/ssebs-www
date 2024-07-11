@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on ssebs | Sebastian Safari</title>
-    <link>http://localhost:1313/tags/python/</link>
-    <description>Recent content in Python on ssebs | Sebastian Safari</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jun 2024 17:42:08 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>CSV Editor</title>
-      <link>http://localhost:1313/projects/csveditor/</link>
-      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
-      <guid>http://localhost:1313/projects/csveditor/</guid>
-      <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on ssebs | Sebastian Safari</title><link>https://your-url.com/tags/python/</link><description>Recent content in Python on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 23 Jun 2024 17:42:08 -0700</lastBuildDate><atom:link href="https://your-url.com/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>CSV Editor</title><link>https://your-url.com/projects/csveditor/</link><pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate><guid>https://your-url.com/projects/csveditor/</guid><description>A lightweight GUI csv editor written in python.
+Link to code: https://github.</description></item></channel></rss>
