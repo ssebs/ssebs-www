@@ -68,5 +68,6 @@ jobs:
         with:
           deploy_key: ${{ secrets.PRIVATE_KEY }}
           external_repository: ssebs/ssebs.github.io
-          publish_branch: gh-pages
+          publish_branch: master
+          allow_empty_commit: true
           publish_dir: ./public
