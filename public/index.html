@@ -1,30 +1,653 @@
-<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.128.2"><base href=https://your-url.com/><title>ssebs | Sebastian Safari </title><link rel=icon type=image/x-icon href=./img/favicon.ico><meta name=description content="Hi, I'm Sebastian Safari. I'm an SRE who likes to make side projects, check them out!"><meta name=viewport content="width=device-width,initial-scale=1"><meta charset=UTF-8><meta http-equiv=X-UAT-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><meta name=theme-color content="#41afff"><script src=https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js></script><script>tailwind.config={theme:{fontFamily:{sans:["Ubuntu","Sans-serif"]},extend:{colors:{primary:{DEFAULT:"#41afff",50:"#eff7ff",100:"#dfeeff",200:"#b8dfff",300:"#78c6ff",400:"#41afff",500:"#068df1",600:"#006fce",700:"#0058a7",800:"#024b8a",900:"#083f72",950:"#06274b"},secondary:{DEFAULT:"#333fff",50:"#ebf3ff",100:"#dbe8ff",200:"#bed5ff",300:"#97b7ff",400:"#6e8dff",500:"#4c65ff",600:"#333fff",700:"#2027e2",800:"#1d26b6",900:"#20298f",950:"#131653"},tertiary:{DEFAULT:"#2e6ae8",50:"#eff6ff",100:"#dceafd",200:"#c0dcfd",300:"#95c6fb",400:"#63a6f7",500:"#3e85f3",600:"#2e6ae8",700:"#2052d5",800:"#2142ac",900:"#203c88",950:"#182753"},quaternary:{DEFAULT:"#2ecce8",50:"#edfdfe",100:"#d1f8fc",200:"#a8f0f9",300:"#6ce2f4",400:"#2ecce8",500:"#0daecd",600:"#0d8bad",700:"#12708c",800:"#185a72",900:"#184c61",950:"#0a3142"},quinary:{DEFAULT:"#33ffe7",50:"#eefffc",100:"#c5fff7",200:"#8bfff2",300:"#33ffe7",400:"#14eddb",500:"#00d1c1",600:"#00a8a0",700:"#008580",800:"#056a67",900:"#0a5755",950:"#003435"},white:"#fff","white-dim":"#eee"}}}}</script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.0/github-markdown.min.css integrity="sha512-piMMx1q6Eqc47qlQaLBQi71vAQmVhKX4QK4EBQvzm1QvqS/CC1y8ZxaOoqi7sf4XPEVAH+j0JD6pAZroK1StXA==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=./css/style.css><script src=./js/main.js></script></head><body class=text-white><div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary"><header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl md:max-w-4xl tracking-wide relative z-50'><div class='flex justify-between items-center gap-5'><a href=./ class="flex align-center"><img class="w-14 pr-2" src=./img/RocketOnly.png alt=logo>
-<span class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</span></a><div class="flex justify-end m-0 gap-4"><nav id=collapseMenu class="flex items-center max-md:hidden max-md:w-full max-md:fixed max-md:z-50"><ul class="flex gap-6 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary"><div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary md:hidden"><a href=./ class="flex align-center"><img class="w-14 pr-2" src=./img/RocketOnly.png alt=logo>
-<span class="text-neutral-200 text-xl m-auto hover:text-primary">ssebs</span>
-</a><button id=toggleClose class='rounded-full bg-neutral-800 w-auto m-2 mt-3'><svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary" viewBox="0 0 320.591 320.591"><path d="M30.391 318.583a30.37 30.37.0 01-21.56-7.288c-11.774-11.844-11.774-30.973.0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366.0 01-21.256 7.288z" data-original="#000000"/><path d="M287.9 318.583a30.37 30.37.0 01-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504.0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368.0 01-23.078 7.288z" data-original="#000000"/></svg></button></div><li><a href=/projects/ title="My Projects" class="md:hover:text-primary text-gray-300 block font-semibold"><span>My Projects</span></a></li><li><a href=/about/ title="About me" class="md:hover:text-primary text-gray-300 block font-semibold"><span>About me</span></a></li><li><a href=/contact/ title="Contact me" class="md:hover:text-primary text-gray-300 block font-semibold"><span>Contact me</span></a></li><span>|</span><li><a href=#ZgotmplZ title=github class="md:hover:text-primary block font-semibold" target=_blank><span>Github<svg fill="none" shape-rendering="geometricPrecision" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12" style="display:inline;vertical-align:top"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></span></a></li><li><a href=#ZgotmplZ title=linkedin class="md:hover:text-primary block font-semibold" target=_blank><span>Linkedin<svg fill="none" shape-rendering="geometricPrecision" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12" style="display:inline;vertical-align:top"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></span></a></li></ul></nav><button id=toggleOpen class='md:hidden ml-auto'><svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4A1 1 0 013 5zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg></button></div></div></header></div><script type=text/javascript>var toggleOpen=document.getElementById("toggleOpen"),toggleClose=document.getElementById("toggleClose"),collapseMenu=document.getElementById("collapseMenu");function handleClick(){collapseMenu.style.display==="flex"?collapseMenu.style.display="none":collapseMenu.style.display="flex"}toggleOpen.addEventListener("click",handleClick),toggleClose.addEventListener("click",handleClick)</script><div class="flex justify-center"><div class="grid w-full"><div class="hero grid items-center justify-center w-full"><div class="hero-content grid items-center justify-center md:max-w-4xl w-full"><div class="max-mw-[40rem] p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-primary grid md:grid-cols-2"><img class="mx-auto rounded-md" title="A photo of my at my wedding." src=./img/me_wedding.jpg width=256px height=256px><div class="flex flex-col justify-between my-6 text-lg"><h1 class="text-3xl mb-4">Hey, I'm Sebastian Safari</h1><p>I'm an <span class=font-medium title="Site Reliability Engineer">SRE </span>who likes to make
-side
-projects.<br class=my-1>Some of them are even useful!</p><div class="flex mx-0 mt-6 gap-6"><a href=./projects><div class="p-2 rounded-xl border border-quinary hover:drop hover:bg-quinary hover:text-neutral-900">The <span class=font-semibold>useful</span>
-projects</div></a><a href=./about><div class="p-2 rounded-xl border border-primary hover:drop hover:bg-primary-800 hover:border-primary-800">Who
-am I?</div></a></div></div></div></div></div><section class="bg-primary-800 flex justify-center w-full"><div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl"><h3 class="text-3xl font-bold">Check out my projects</h3><div class="text-white-dim grid"><div class="post-content text-lg"><p>Here&rsquo;s some of my more interesting side projects. Most of my work projects I cannot share unfortunately.</p><p>I use the Mini Macro Pad basically every day, for skipping songs, typing &ldquo;gg&rdquo; into games, and other shortcuts.</p></div><div></div></div><div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6"><div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition"><a href=/projects/go-mmp/ class="grid gap-4 self-start"><div class="text-xl font-medium">Mini Macro Pad</div><img src=https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png alt=https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png class=w-auto><p class="text-lg text-white-dim">Run shortcuts and automate tasks with a press of a button!</p></a><div class="flex flex-wrap self-end gap-2 text-base h-fit"><a href=./tags/golang class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">golang
-</a><a href=./tags/programming class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">programming
-</a><a href=./tags/3d-printing class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">3d-printing
-</a><a href=./tags/arduino class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">arduino</a></div></div><div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition"><a href=/projects/perishable-punchers/ class="grid gap-4 self-start"><div class="text-xl font-medium">Perishable Punchers</div><img src=./img/projects/PerishablePunchers.jpg alt=./img/projects/PerishablePunchers.jpg class=w-auto><p class="text-lg text-white-dim">Mortal Kombat like Game written in Java, back in highschool.</p></a><div class="flex flex-wrap self-end gap-2 text-base h-fit"><a href=./tags/programming class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">programming
-</a><a href=./tags/java class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">java
-</a><a href=./tags/gamedev class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">gamedev</a></div></div><div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition"><a href=/projects/csveditor/ class="grid gap-4 self-start"><div class="text-xl font-medium">CSV Editor</div><img src="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true" alt="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true" class=w-auto><p class="text-lg text-white-dim">A CSV editor written in Python. I was annoyed with Excel's Copy/Paste features, so I made something that worked for me.</p></a><div class="flex flex-wrap self-end gap-2 text-base h-fit"><a href=./tags/python class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">python
-</a><a href=./tags/programming class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">programming</a></div></div></div><a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-quaternary font-medium rounded-md" href=/projects/>See more...</a></div></section><section class="bg-neutral-800 flex justify-center w-full"><div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl"><h3 class="text-3xl font-bold">Who am I?</h3><div class="text-white-dim grid"><div class="post-content text-lg"><div class="grid md:grid-cols-2 justify-items-center gap-6"><div><p>My name is Sebastian Safari, I call myself a &ldquo;professional fixer, hobbyist figure-outer&rdquo;.</p><p>Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.</p><p>Online, I go by <span class=text-quaternary>ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last naem.</p></div><div><img class="rounded-md w-[256px]" src=./img/me_wedding.jpg alt="Photo of me at my wedding."></div></div></div><div></div></div><div></div><a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-quaternary font-medium rounded-md" href=/about/>See more...</a></div></section><section class="bg-transparent flex justify-center w-full"><div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl"><h3 class="text-3xl font-bold">Ping me!</h3><div class="text-white-dim grid md:grid-cols-2"><div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href=https://linkedin.com/in/ssebs/>LinkedIn</a>, or email me if you want to work on a project together!</p><blockquote><p>Note: The form takes a few seconds to submit, so please be patient.</p></blockquote><p>Or, you can email me at <a href=mailto:contact@ssebs.com>contact@ssebs.com</a></p></div><div><div class="grid gap-6 justify-center"><div id=msg-container class="text-xl italic text-quinary"></div><form action=https://formsubmit.co/contact@ssebs.com method=POST class="flex flex-col gap-2 md:max-w-[512px]"><label class=text-base for=name>Your name:</label>
-<input type=text name=name class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="John Doe..." required>
-<label class=text-base for=email>Email:</label>
-<input type=email name=email class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder=jdoe@example.com required>
-<label class=text-base for=_subject>Subject:</label>
-<input type=text name=_subject class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" placeholder="Dear ssebs" required>
-<label class=text-base for=message>Message:
-</label><textarea placeholder="Let's work on something together." class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" name=message rows=10 required></textarea>
-<button type=submit class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quinary hover:bg-quaternary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
-Send<div><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#171717"><path d="M120-160v-640l760 320-760 320zm80-120 474-2e2-474-2e2v140l240 60-240 60v140zm0 0v-4e2 4e2z"/></svg></div></button>
-<input type=hidden name=_captcha value=false>
-<input id=nextURL type=hidden name=_next value=https://your-url.com//contact></form></div><script>const nextURL=document.getElementById("nextURL");nextURL.value=encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);const urlParams=new URLSearchParams(window.location.search);if(urlParams.get("msg")){const e=document.getElementById("msg-container");e.textContent=decodeURI(urlParams.get("msg"))}</script></div></div><div></div></div></section></div></div><footer class="bg-primary-800 min-h-64"><div class="grid justify-center p-6"><h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5><div class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full m-6 gap-12 text-lg"><div class="flex justify-between items-end gap-6 min-w-80"><img class="w-28 h-fit" src=./img/RocketOnly.png alt=logo><div class="flex flex-col items-start gap-2 min-w-48"><a href=./ class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a><ul><li><a href=/projects/ title="My Projects" class="text-quinary hover:text-quaternary">Check out my projects</a></li><li><a href=/about/ title="About me" class="text-quinary hover:text-quaternary">Who am I?</a></li><li><a href=/contact/ title="Contact me" class="text-quinary hover:text-quaternary">Ping me!</a></li></ul></div></div><div class="grid gap-2 max-w-md text-base font-normal"><h5 class="text-xl font-medium">Why <span class=text-quaternary>ssebs</span>?</h5><p>When I was a kid and I had to come up with my first username, I ended up trying to find something
-using my initials.</p><p>Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.</p><p>ssebs - S Seb S</p><p>...very interesting, I know!</p></div><div class="min-w-32 flex flex-col"><div class=text-xl>Socials</div><ul><li><a href=https://linkedin.com/in/ssebs/ title=linkedin class="text-quinary hover:text-quaternary" target=_blank><span>Linkedin<svg fill="none" shape-rendering="geometricPrecision" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12" style="display:inline;vertical-align:top"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></span></a></li><li><a href=https://github.com/ssebs title=github class="text-quinary hover:text-quaternary" target=_blank><span>Github<svg fill="none" shape-rendering="geometricPrecision" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12" style="display:inline;vertical-align:top"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></span></a></li></ul></div></div></div><div class="text-center bg-neutral-700 p-6"><span id=copyright-year>&copy;2024 - %lt;this should be replaced by js%gt;</span></div></footer><script>const copyElement=document.getElementById("copyright-year"),current=(new Date).getFullYear(),fromYear=2015,authorHTML=`<a 
-                            href="https://linkedin.com/in/ssebs/" 
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta name="generator" content="Hugo 0.127.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <base href="/" /><title> ssebs | Sebastian Safari </title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <meta name="description" content="Hi, I&#39;m Sebastian Safari. I&#39;m an SRE who likes to make side projects, check them out!">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+   
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+
+    <meta name="theme-color" content="#41afff">
+    
+  <script src="https://unpkg.com/tailwindcss-cdn@3.4.3/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ["Ubuntu", "Sans-serif"]
+        },
+        extend: {
+          colors: {
+            "primary": {
+              DEFAULT: "#41afff",
+              '50': '#eff7ff',
+              '100': '#dfeeff',
+              '200': '#b8dfff',
+              '300': '#78c6ff',
+              '400': '#41afff',
+              '500': '#068df1',
+              '600': '#006fce',
+              '700': '#0058a7',
+              '800': '#024b8a',
+              '900': '#083f72',
+              '950': '#06274b',
+            },
+            "secondary": {
+              DEFAULT: "#333fff",
+              '50': '#ebf3ff',
+              '100': '#dbe8ff',
+              '200': '#bed5ff',
+              '300': '#97b7ff',
+              '400': '#6e8dff',
+              '500': '#4c65ff',
+              '600': '#333fff',
+              '700': '#2027e2',
+              '800': '#1d26b6',
+              '900': '#20298f',
+              '950': '#131653',
+            },
+            "tertiary": {
+              DEFAULT: "#2e6ae8", '50': '#eff6ff',
+              '100': '#dceafd',
+              '200': '#c0dcfd',
+              '300': '#95c6fb',
+              '400': '#63a6f7',
+              '500': '#3e85f3',
+              '600': '#2e6ae8',
+              '700': '#2052d5',
+              '800': '#2142ac',
+              '900': '#203c88',
+              '950': '#182753',
+            },
+            "quaternary": {
+              DEFAULT: "#2ecce8", '50': '#edfdfe',
+              '100': '#d1f8fc',
+              '200': '#a8f0f9',
+              '300': '#6ce2f4',
+              '400': '#2ecce8',
+              '500': '#0daecd',
+              '600': '#0d8bad',
+              '700': '#12708c',
+              '800': '#185a72',
+              '900': '#184c61',
+              '950': '#0a3142',
+            },
+            "quinary": {
+              DEFAULT: "#33ffe7", '50': '#eefffc',
+              '100': '#c5fff7',
+              '200': '#8bfff2',
+              '300': '#33ffe7',
+              '400': '#14eddb',
+              '500': '#00d1c1',
+              '600': '#00a8a0',
+              '700': '#008580',
+              '800': '#056a67',
+              '900': '#0a5755',
+              '950': '#003435',
+            },
+            "white": "#fff",
+            "white-dim": "#eee"
+          },
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.6.0/github-markdown.min.css" integrity="sha512-piMMx1q6Eqc47qlQaLBQi71vAQmVhKX4QK4EBQvzm1QvqS/CC1y8ZxaOoqi7sf4XPEVAH+j0JD6pAZroK1StXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="./css/style.css">
+
+  
+  <script src="./js/main.js"></script>
+</head><body class="text-white"><div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary">
+    <header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl md:max-w-4xl tracking-wide relative z-50'>
+
+        <div class='flex justify-between items-center gap-5'>
+            
+            <a href="./" class="flex align-center">
+                <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+                <span class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</span>
+            </a>
+
+            
+            <div class="flex justify-end m-0 gap-4">
+                
+                
+                <nav id="collapseMenu" class="flex items-center max-md:hidden max-md:w-full max-md:fixed max-md:z-50 ">
+                    <ul
+                        class="flex gap-6 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary">
+
+                        
+                        <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary md:hidden">
+                            <a href="./" class="flex align-center">
+                                <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+                                <span class="text-neutral-200 text-xl m-auto hover:text-primary">ssebs</span>
+                            </a>
+                            <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3'>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary"
+                                    viewBox="0 0 320.591 320.591">
+                                    <path
+                                        d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                        data-original="#000000"></path>
+                                    <path
+                                        d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                        data-original="#000000"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                            
+                        
+                        <li>
+                            
+                            <a href="/projects/" title="My Projects"
+                                class="md:hover:text-primary text-gray-300 block font-semibold">
+                                <span>My Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            
+                            <a href="/about/" title="About me"
+                                class="md:hover:text-primary text-gray-300 block font-semibold">
+                                <span>About me</span>
+                            </a>
+                        </li>
+                        <li>
+                            
+                            <a href="/contact/" title="Contact me"
+                                class="md:hover:text-primary text-gray-300 block font-semibold">
+                                <span>Contact me</span>
+                            </a>
+                        </li>
+
+                        <span class="">&verbar;</span>
+
+                        
+                        <li>
+                            <a href="#ZgotmplZ" title="github" class="md:hover:text-primary block font-semibold"
+                                target="_blank">
+                                <span>Github
+                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        viewBox="0 0 24 24" height="12" width="12"
+                                        style="display: inline; vertical-align: top;">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                        <path d="M15 3h6v6"></path>
+                                        <path d="M10 14L21 3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ZgotmplZ" title="linkedin" class="md:hover:text-primary block font-semibold"
+                                target="_blank">
+                                <span>Linkedin
+                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        viewBox="0 0 24 24" height="12" width="12"
+                                        style="display: inline; vertical-align: top;">
+                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                        <path d="M15 3h6v6"></path>
+                                        <path d="M10 14L21 3"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <button id="toggleOpen" class='md:hidden ml-auto'>
+                    <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+</div>
+
+<script type="text/javascript">
+    var toggleOpen = document.getElementById('toggleOpen');
+    var toggleClose = document.getElementById('toggleClose');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function handleClick() {
+        if (collapseMenu.style.display === 'flex') {
+            collapseMenu.style.display = 'none';
+        } else {
+            collapseMenu.style.display = 'flex';
+        }
+    }
+
+    toggleOpen.addEventListener('click', handleClick);
+    toggleClose.addEventListener('click', handleClick);
+</script><div class="flex justify-center">
+	<div class="grid w-full">
+  <div class="hero grid items-center justify-center w-full">
+    <div class="hero-content grid items-center justify-center md:max-w-4xl w-full">
+        <div
+            class="max-mw-[40rem] p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-primary grid md:grid-cols-2 ">
+            <img class="mx-auto rounded-md " title="A photo of my at my wedding."
+                src="./img/me_wedding.jpg" width="256px" height="256px" />
+
+            <div class="flex flex-col justify-between my-6 text-lg">
+                <h1 class="text-3xl mb-4">Hey, I'm Sebastian Safari</h1>
+                <p class="">
+                    I'm an <span class="font-medium" title="Site Reliability Engineer"> SRE </span> who likes to make
+                    side
+                    projects.
+                    <br class="my-1">
+                    Some of them are even useful!
+                </p>
+                <div class="flex mx-0 mt-6 gap-6">
+                    <a href="./projects">
+                        <div
+                            class="p-2 rounded-xl border border-quinary hover:drop hover:bg-quinary hover:text-neutral-900">
+                            The <span class="font-semibold">useful</span>
+                            projects
+                        </div>
+                    </a>
+                    <a href="./about">
+                        <div
+                            class="p-2 rounded-xl border border-primary hover:drop hover:bg-primary-800 hover:border-primary-800">
+                            Who
+                            am I?</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+  
+
+<section class="bg-primary-800 flex justify-center w-full">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
+        
+        <h3 class="text-3xl font-bold">Check out my projects</h3>
+
+        
+
+        
+        <div class="text-white-dim grid  ">
+            <div class="post-content text-lg"><p>Here&rsquo;s some of my more interesting side projects. Most of my work projects I cannot share unfortunately.</p>
+<p>I use the Mini Macro Pad basically every day, for skipping songs, typing &ldquo;gg&rdquo; into games, and other shortcuts.</p>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        
+        
+        <div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6 ">
+            
+            
+            
+<div
+  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition">
+  
+  <a href="/projects/go-mmp/" class="grid gap-4 self-start">
+    <div class="text-xl font-medium">Mini Macro Pad</div>
+    <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" alt="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" class="w-auto" />
+
+    <p class="text-lg text-white-dim">Run shortcuts and automate tasks with a press of a button!</p>
+  </a>
+  
+  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+    
+    <a href="./tags/golang"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      golang
+    </a>
+    <a href="./tags/programming"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      programming
+    </a>
+    <a href="./tags/3d-printing"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      3d-printing
+    </a>
+    <a href="./tags/arduino"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      arduino
+    </a>
+  </div>
+</div>
+            
+            
+            
+            
+<div
+  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition">
+  
+  <a href="/projects/perishable-punchers/" class="grid gap-4 self-start">
+    <div class="text-xl font-medium">Perishable Punchers</div>
+    <img src="./img/projects/PerishablePunchers.jpg" alt="./img/projects/PerishablePunchers.jpg" class="w-auto" />
+
+    <p class="text-lg text-white-dim">Mortal Kombat like Game written in Java, back in highschool.</p>
+  </a>
+  
+  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+    
+    <a href="./tags/programming"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      programming
+    </a>
+    <a href="./tags/java"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      java
+    </a>
+    <a href="./tags/gamedev"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      gamedev
+    </a>
+  </div>
+</div>
+            
+            
+            
+            
+<div
+  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary hover:scale-110 transition">
+  
+  <a href="/projects/csveditor/" class="grid gap-4 self-start">
+    <div class="text-xl font-medium">CSV Editor</div>
+    <img src="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true" alt="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true" class="w-auto" />
+
+    <p class="text-lg text-white-dim">A CSV editor written in Python. I was annoyed with Excel's Copy/Paste features, so I made something that worked for me.</p>
+  </a>
+  
+  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+    
+    <a href="./tags/python"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      python
+    </a>
+    <a href="./tags/programming"
+      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+      programming
+    </a>
+  </div>
+</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-quaternary font-medium rounded-md"
+            href="/projects/">
+            See more...
+        </a>
+    </div>
+</section>
+  
+
+<section class="bg-neutral-800 flex justify-center w-full">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
+        
+        <h3 class="text-3xl font-bold">Who am I?</h3>
+
+        
+
+        
+        <div class="text-white-dim grid  ">
+            <div class="post-content text-lg"><div class="grid md:grid-cols-2 justify-items-center gap-6">
+    
+    <div>
+    <p>My name is Sebastian Safari, I call myself a &ldquo;professional fixer, hobbyist figure-outer&rdquo;.</p>
+<p>Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.</p>
+<p>Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last naem.</p>
+
+    </div>
+    
+    <div>
+    <img class="rounded-md w-[256px]" src="./img/me_wedding.jpg" alt="Photo of me at my wedding." />
+
+    </div>
+    
+</div>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        
+        
+        <div class=""></div>
+
+        <a class="text-base p-3 max-w-fit bg-quinary text-neutral-900 hover:bg-quaternary font-medium rounded-md"
+            href="/about/">
+            See more...
+        </a>
+    </div>
+</section>
+  
+
+<section class="bg-transparent flex justify-center w-full">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
+        
+        <h3 class="text-3xl font-bold">Ping me!</h3>
+
+        
+
+        
+        <div class="text-white-dim grid md:grid-cols-2 ">
+            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me if you want to work on a project together!</p>
+<blockquote>
+<p>Note: The form takes a few seconds to submit, so please be patient.</p>
+</blockquote>
+<p>Or, you can email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a></p>
+            </div>
+            <div><div class="grid gap-6 justify-center">
+    
+    <div id="msg-container" class="text-xl italic text-quinary"></div>
+
+    
+    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:max-w-[512px]">
+        <label class="text-base " for="name">Your name:</label>
+            <input type="text" name="name"
+                class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                placeholder="John Doe..." required />
+        <label class="text-base " for="email">Email:</label>
+            <input type="email" name="email"
+                class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                placeholder="jdoe@example.com" required />
+
+        <label class="text-base" for="_subject">Subject:</label>
+        <input type="text" name="_subject"
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+            placeholder="Dear ssebs" required>
+
+        <label class="text-base" for="message">Message:
+        </label>
+        <textarea placeholder="Let's work on something together."
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" name="message"
+            rows="10" required></textarea>
+
+        <button type="submit"
+            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quinary hover:bg-quaternary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
+            Send
+            <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#171717">
+                    <path
+                        d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                </svg></div>
+        </button>
+        <input type="hidden" name="_captcha" value="false">
+        <input id="nextURL" type="hidden" name="_next" value="http://localhost:1313//contact">
+    </form>
+</div>
+
+<script>
+    
+    
+    const nextURL = document.getElementById("nextURL");
+    
+    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
+
+
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('msg')) {
+        const msgContainer = document.getElementById('msg-container');
+        msgContainer.textContent = decodeURI(urlParams.get("msg"));
+
+    }
+</script>
+
+            </div>
+        </div>
+
+        
+        
+        <div class=""></div>
+
+        
+    </div>
+</section>
+
+  
+</div> 
+  </div><footer class="bg-primary-800 min-h-64">
+    <div class="grid justify-center p-6">
+        <h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5>
+        <div
+            class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full m-6 gap-12 text-lg">
+            <div class="flex justify-between items-end gap-6 min-w-80">
+                <img class="w-28 h-fit" src="./img/RocketOnly.png" alt="logo" />
+                <div class="flex flex-col items-start gap-2 min-w-48">
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
+                    <ul>
+                        <li class=''>
+                            <a href="/projects/" title="My Projects"
+                                class="text-quinary hover:text-quaternary">Check out my projects
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/about/" title="About me"
+                                class="text-quinary hover:text-quaternary">Who am I?
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/contact/" title="Contact me"
+                                class="text-quinary hover:text-quaternary">Ping me!
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid gap-2 max-w-md text-base font-normal">
+                <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
+                <p>
+                    When I was a kid and I had to come up with my first username, I ended up trying to find something
+                    using my initials.
+                </p>
+                <p>
+                    Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.
+                </p>
+                <p>
+                    ssebs - S Seb S
+                </p>
+                <p>...very interesting, I know!</p>
+            </div>
+
+            <div class="min-w-32 flex flex-col">
+                <div class="text-xl">Socials</div>
+                <ul>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="https://linkedin.com/in/ssebs/" title="linkedin" class="text-quinary hover:text-quaternary"
+                            target="_blank">
+                            <span>Linkedin
+                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    viewBox="0 0 24 24" height="12" width="12"
+                                    style="display: inline; vertical-align: top;">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14L21 3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ssebs" title="github" class="text-quinary hover:text-quaternary"
+                            target="_blank">
+                            <span>Github
+                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    viewBox="0 0 24 24" height="12" width="12"
+                                    style="display: inline; vertical-align: top;">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14L21 3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center bg-neutral-700 p-6">
+        <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
+    </div>
+</footer>
+
+<script>
+    
+    const copyElement = document.getElementById("copyright-year");
+    const current = new Date().getFullYear();
+    const fromYear =  2015 ;
+
+    const authorHTML = `<a 
+                            href="https:\/\/linkedin.com\/in\/ssebs\/" 
                             class="text-quaternary hover:text-quinary" target="_blank" 
                             >
-                                Sebastian Safari</a>`;current===fromYear?copyElement.innerHTML=`&copy;${current} | ${authorHTML}`:copyElement.innerHTML=`&copy;${fromYear} - ${current} | ${authorHTML}`</script></body></html>
+                                Sebastian Safari</a>`;
+
+    if (current === fromYear) {
+        copyElement.innerHTML = `&copy;${current} | ${authorHTML}`;
+    } else {
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
+    }
+
+</script></body>
+
+</html>
