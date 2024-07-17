@@ -28,14 +28,17 @@
 .post-content ul {
     list-style-position: outside;
 }
+
 .post-content li {
     margin-left: 1rem;
     list-style-type: disc;
 }
+
 .post-content li li {
     margin-left: 1.5rem;
     list-style-type: circle;
 }
+
 .post-content li li li {
     margin-left: 2rem;
     list-style-type: square;
@@ -85,11 +88,45 @@ body {
 }
 
 .hero {
-    min-height: calc(70vh - 80px); /* 80px is the header height. TODO make this a var */
+    min-height: calc(70vh - 80px);
+    /* 80px is the header height. TODO make this a var */
 }
+
 .hero-content {
     z-index: 2;
 }
+
+#collapseMenu {
+    transition: all 0.25s ease-in-out;
+}
+
+.showit {
+    visibility: visible;
+    opacity: 1;
+    max-height: 100vh;
+}
+
+.hideit {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+}
+
+/* > small */
+@media (min-width: 640px) {
+    .showit {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+    }
+
+    .hideit {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+    }
+}
+
 
 /* TODO: add blur to edge of clip-path! */
 /* hover overlay - see hero.html

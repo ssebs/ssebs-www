@@ -113,7 +113,7 @@
 </head><body class="text-white">
 <div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary">
     
-    <header class='py-6 px-6 w-full lg:max-w-6xl flex justify-between items-center gap-5 tracking-wide'>
+    <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
         
         <a href="./" class="flex align-center">
             <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
@@ -121,107 +121,107 @@
         </a>
 
         
-        <div class="flex justify-end m-0 gap-4">
-            <nav id="collapseMenu" class="flex items-center ">
-                <ul class="flex gap-6 sm:flex-row flex-col">
-                    
+        <nav class="flex justify-end m-0 gap-2 sm:flex-row flex-col items-center">
+            <button id="toggleOpen" class='sm:hidden flex ml-auto'>
+                <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+                    stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                        <animate dur="0.2s" attributeName="d"
+                            values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                            begin="start.begin" />
+                        <animate dur="0.2s" attributeName="d"
+                            values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                            begin="reverse.begin" />
+                    </path>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                    </rect>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
+                            begin="click" />
+                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                    </rect>
+                </svg>
+            </button>
+            
+            <ul id="collapseMenu" class="flex gap-6 sm:flex-row flex-col sm:showit hideit">
+                
 
-                    
-                    
-                    <li>
-                        <a href="/projects/" title="My Projects"
-                            class="md:hover:text-primary text-gray-200 block font-semibold">
-                            <span>My Projects</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="/about/" title="About me"
-                            class="md:hover:text-primary text-gray-200 block font-semibold">
-                            <span>About me</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="/contact/" title="Contact me"
-                            class="md:hover:text-primary text-gray-200 block font-semibold">
-                            <span>Contact me</span>
-                        </a>
-                    </li>
+                
+                
+                <li>
+                    <a href="/projects/" title="My Projects"
+                        class="md:hover:text-primary text-gray-200 block font-semibold">
+                        <span>My Projects</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="About me"
+                        class="md:hover:text-primary text-gray-200 block font-semibold">
+                        <span>About me</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/contact/" title="Contact me"
+                        class="md:hover:text-primary text-gray-200 block font-semibold">
+                        <span>Contact me</span>
+                    </a>
+                </li>
 
-                    
-                    <li>
-                        <a href="#ZgotmplZ" class="md:hover:text-primary block font-semibold text-gray-300" title="github"
-                             target="_blank">Github
-                            <svg fill="none" class="inline align-top mt-1" shape-rendering="geometricPrecision"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                viewBox="0 0 24 24" height="12" width="12">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                <path d="M15 3h6v6"></path>
-                                <path d="M10 14L21 3"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#ZgotmplZ" class="md:hover:text-primary block font-semibold text-gray-300" title="linkedin"
-                             target="_blank">Linkedin
-                            <svg fill="none" class="inline align-top mt-1" shape-rendering="geometricPrecision"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                viewBox="0 0 24 24" height="12" width="12">
-                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                <path d="M15 3h6v6"></path>
-                                <path d="M10 14L21 3"></path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-                <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3 sm:hidden'>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary" viewBox="0 0 320.591 320.591">
-                        <path
-                            d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                            data-original="#000000"></path>
-                        <path
-                            d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                            data-original="#000000"></path>
-                    </svg>
-                </button>
-                <button id="toggleOpen" class='sm:hidden ml-auto'>
-                    <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </nav>
-
-        </div>
+                
+                <li class="max-sm:hidden">
+                    <a href="#ZgotmplZ" class="md:hover:text-primary block font-semibold text-gray-300"
+                        title="github" target="_blank">Github
+                        <svg fill="none" class="inline align-top mt-1" shape-rendering="geometricPrecision"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            viewBox="0 0 24 24" height="12" width="12">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14L21 3"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="max-sm:hidden">
+                    <a href="#ZgotmplZ" class="md:hover:text-primary block font-semibold text-gray-300"
+                        title="linkedin" target="_blank">Linkedin
+                        <svg fill="none" class="inline align-top mt-1" shape-rendering="geometricPrecision"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            viewBox="0 0 24 24" height="12" width="12">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14L21 3"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
 </div>
 
 
-<div class="w-full py-2 border border-red-500">
-    <div class="h-20  w-[640px] border border-green-600 text-center text-xl">sm 640px</div>
-    <div class="h-20  w-[768px] border border-green-600 text-center text-xl">md 768px</div>
-    <div class="h-20  w-[1024px] border border-green-600 text-center text-xl">lg 1024px</div>
-    <div class="h-20  w-[1280px] border border-green-600 text-center text-xl">xl 1280px</div>
-    <div class="h-20  w-[1536px] border border-green-600 text-center text-xl">2xl 1536px</div>
-</div>
+
 
 <script type="text/javascript">
     var toggleOpen = document.getElementById('toggleOpen');
-    var toggleClose = document.getElementById('toggleClose');
     var collapseMenu = document.getElementById('collapseMenu');
 
-    function handleClick() {
-        if (collapseMenu.style.display === 'flex') {
-            collapseMenu.style.display = 'none';
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+    
+    function toggleElement(element) {
+        if (collapseMenu.classList.contains("showit")){
+            collapseMenu.classList.remove("showit")
+            collapseMenu.classList.add("hideit");   
         } else {
-            collapseMenu.style.display = 'flex';
+            collapseMenu.classList.remove("hideit")
+            collapseMenu.classList.add("showit"); 
         }
+        
+        
     }
-
-    toggleOpen.addEventListener('click', handleClick);
-    toggleClose.addEventListener('click', handleClick);
 </script><div class="flex justify-center">
 	<div class="grid w-full">
   <div class="hero grid items-center justify-center w-full">
