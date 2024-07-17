@@ -110,6 +110,8 @@
   
   <script src="./js/main.js"></script>
 </head><body class="text-white">
+
+
 <div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary">
     
     <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
@@ -120,7 +122,7 @@
         </a>
 
         
-        <nav class="flex justify-end m-0 gap-2 sm:flex-row flex-col items-center">
+        <nav class="">
             <button id="toggleOpen" class='sm:hidden flex ml-auto'>
                 <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
                     stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
@@ -143,7 +145,7 @@
                 </svg>
             </button>
             
-            <ul id="collapseMenu" class="flex gap-6 sm:flex-row flex-col sm:showit hideit">
+            <ul id="collapseMenu" class="flex gap-6 max-sm:flex-col hideit max-sm:gap-4">
                 
 
                 
@@ -171,7 +173,7 @@
                 </li>
 
                 
-                <li class="max-sm:hidden">
+                <li class="">
                     <a href="#ZgotmplZ" class="md:hover:text-primary block font-semibold text-gray-300"
                         title="github" target="_blank">Github
                         <svg fill="none" class="inline align-top mt-1" shape-rendering="geometricPrecision"
@@ -183,7 +185,7 @@
                         </svg>
                     </a>
                 </li>
-                <li class="max-sm:hidden">
+                <li class="">
                     <a href="#ZgotmplZ" class="md:hover:text-primary block font-semibold text-gray-300"
                         title="linkedin" target="_blank">Linkedin
                         <svg fill="none" class="inline align-top mt-1" shape-rendering="geometricPrecision"
@@ -202,7 +204,6 @@
 
 
 
-
 <script type="text/javascript">
     var toggleOpen = document.getElementById('toggleOpen');
     var collapseMenu = document.getElementById('collapseMenu');
@@ -210,17 +211,15 @@
     toggleOpen.addEventListener("click", () => {
         toggleElement(collapseMenu);
     })
-    
+
     function toggleElement(element) {
-        if (collapseMenu.classList.contains("showit")){
-            collapseMenu.classList.remove("showit")
-            collapseMenu.classList.add("hideit");   
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
         } else {
-            collapseMenu.classList.remove("hideit")
-            collapseMenu.classList.add("showit"); 
+            element.classList.remove("hideit")
+            element.classList.add("showit");
         }
-        
-        
     }
 </script><div class="flex justify-center">
     <div class="">

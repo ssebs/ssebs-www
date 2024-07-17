@@ -100,26 +100,23 @@ body {
     transition: all 0.25s ease-in-out;
 }
 
+/* all screens */
 .showit {
     visibility: visible;
     opacity: 1;
     max-height: 100vh;
+    margin: 1rem auto;
 }
 
+/* small screens */
 .hideit {
     visibility: hidden;
     opacity: 0;
     max-height: 0;
 }
 
-/* > small */
+/* screens > small */
 @media (min-width: 640px) {
-    .showit {
-        visibility: visible;
-        opacity: 1;
-        max-height: 100vh;
-    }
-
     .hideit {
         visibility: visible;
         opacity: 1;
