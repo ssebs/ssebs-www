@@ -110,115 +110,118 @@
 
   
   <script src="./js/main.js"></script>
-</head><body class="text-white"><div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary">
-    <header class='py-4 px-4 min-h-[80px] w-full lg:max-w-6xl md:max-w-4xl tracking-wide relative z-50'>
+</head><body class="text-white">
+<div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary">
+    
+    <header class='py-6 px-6 w-full lg:max-w-6xl flex justify-between items-center gap-5 tracking-wide'>
+        
+        <a href="./" class="flex align-center">
+            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+            <span class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</span>
+        </a>
 
-        <div class='flex justify-between items-center gap-5'>
+        
+        <div class="flex justify-end m-0 gap-4">
             
-            <a href="./" class="flex align-center">
-                <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
-                <span class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</span>
-            </a>
-
             
-            <div class="flex justify-end m-0 gap-4">
-                
-                
-                <nav id="collapseMenu" class="flex items-center max-md:hidden max-md:w-full max-md:fixed max-md:z-50 ">
-                    <ul
-                        class="flex gap-6 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary">
+            <nav id="collapseMenu" class="flex items-center max-md:hidden max-md:w-full max-md:fixed max-md:z-50 ">
+                <ul
+                    class="flex gap-6 max-md:flex-col max-md:bg-neutral-800 max-md:text-white max-md:fixed max-md:top-0 max-md:right-0 max-md:w-full max-md:h-screen max-md:rounded-md max-md:drop-shadow-md max-md:gap-2 max-md:border-b-2 max-md:border-primary">
 
+                    
+                    <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary md:hidden">
+                        <a href="./" class="flex align-center">
+                            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+                            <span class="text-neutral-200 text-xl m-auto hover:text-primary">ssebs</span>
+                        </a>
+                        <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3'>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary"
+                                viewBox="0 0 320.591 320.591">
+                                <path
+                                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                                    data-original="#000000"></path>
+                                <path
+                                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                                    data-original="#000000"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+
+                    
+                    <li>
                         
-                        <div class="flex justify-between gap-4 p-4 border-b-2 border-b-primary md:hidden">
-                            <a href="./" class="flex align-center">
-                                <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
-                                <span class="text-neutral-200 text-xl m-auto hover:text-primary">ssebs</span>
-                            </a>
-                            <button id="toggleClose" class='rounded-full bg-neutral-800 w-auto m-2 mt-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-quinary"
-                                    viewBox="0 0 320.591 320.591">
-                                    <path
-                                        d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                                        data-original="#000000"></path>
-                                    <path
-                                        d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                                        data-original="#000000"></path>
+                        <a href="/projects/" title="My Projects"
+                            class="md:hover:text-primary text-gray-300 block font-semibold">
+                            <span>My Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/about/" title="About me"
+                            class="md:hover:text-primary text-gray-300 block font-semibold">
+                            <span>About me</span>
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <a href="/contact/" title="Contact me"
+                            class="md:hover:text-primary text-gray-300 block font-semibold">
+                            <span>Contact me</span>
+                        </a>
+                    </li>
+
+                    <span class="">&verbar;</span>
+
+                    
+                    <li>
+                        <a href="#ZgotmplZ" title="github" class="md:hover:text-primary block font-semibold"
+                            target="_blank">
+                            <span>Github
+                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    viewBox="0 0 24 24" height="12" width="12"
+                                    style="display: inline; vertical-align: top;">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14L21 3"></path>
                                 </svg>
-                            </button>
-                        </div>
-                        
-                            
-                        
-                        <li>
-                            
-                            <a href="/projects/" title="My Projects"
-                                class="md:hover:text-primary text-gray-300 block font-semibold">
-                                <span>My Projects</span>
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <a href="/about/" title="About me"
-                                class="md:hover:text-primary text-gray-300 block font-semibold">
-                                <span>About me</span>
-                            </a>
-                        </li>
-                        <li>
-                            
-                            <a href="/contact/" title="Contact me"
-                                class="md:hover:text-primary text-gray-300 block font-semibold">
-                                <span>Contact me</span>
-                            </a>
-                        </li>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ZgotmplZ" title="linkedin" class="md:hover:text-primary block font-semibold"
+                            target="_blank">
+                            <span>Linkedin
+                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    viewBox="0 0 24 24" height="12" width="12"
+                                    style="display: inline; vertical-align: top;">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                                    <path d="M15 3h6v6"></path>
+                                    <path d="M10 14L21 3"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
 
-                        <span class="">&verbar;</span>
+                </ul>
+            </nav>
 
-                        
-                        <li>
-                            <a href="#ZgotmplZ" title="github" class="md:hover:text-primary block font-semibold"
-                                target="_blank">
-                                <span>Github
-                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                        viewBox="0 0 24 24" height="12" width="12"
-                                        style="display: inline; vertical-align: top;">
-                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                        <path d="M15 3h6v6"></path>
-                                        <path d="M10 14L21 3"></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#ZgotmplZ" title="linkedin" class="md:hover:text-primary block font-semibold"
-                                target="_blank">
-                                <span>Linkedin
-                                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                        viewBox="0 0 24 24" height="12" width="12"
-                                        style="display: inline; vertical-align: top;">
-                                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                        <path d="M15 3h6v6"></path>
-                                        <path d="M10 14L21 3"></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-
-                <button id="toggleOpen" class='md:hidden ml-auto'>
-                    <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-            </div>
+            <button id="toggleOpen" class='md:hidden ml-auto'>
+                <svg class="w-7 h-7 fill-white-dim" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
         </div>
+
     </header>
 </div>
+
+
+
 
 <script type="text/javascript">
     var toggleOpen = document.getElementById('toggleOpen');

@@ -5,6 +5,7 @@ ssebs.com website code.
 ## TODO:
 - MVP website:
   - [ ] Fix navbar
+  - [ ] Socials as icons instead of text links
   - [ ] Fix contact form
     - [ ] Use Supabase backend
   - [ ] About content
