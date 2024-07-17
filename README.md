@@ -4,20 +4,20 @@ ssebs.com website code.
 
 ## TODO:
 - MVP website:
+  - [ ] Fix navbar
+  - [ ] Fix contact form
+    - [ ] Use Supabase backend
+  - [ ] About content
+  - [ ] Add more coding projects
+  - [ ] Add hobby stuff in projects, like working on cars or guitar stuff
   - [ ] Home page - social icons in bottom right of hero / footer
-  - [ ] Add blog
-    - [ ] e.g. things I learned or tech stuff I can share that's not a project (e.g. Hugo quick start + explain theme)
-  - [ ] Content:
-    - [ ] About:
-      - [ ] resume type (work)
-      - [ ] my story
-      - [ ] my hobbies (guitar, car, gaming, 3d printing)
-    - [ ] tag + categories for hobby stuff, like working on cars or guitar stuff
+  - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
 - After MVP:
   - [ ] Add tags to each project and allow search by tags (show tags on page + clickable)
     - [ ] Tag search + Search Results page
+  - [ ] Add blog
+    - [ ] e.g. things I learned or tech stuff I can share that's not a project (e.g. Hugo quick start + explain theme)
 - Finishing touches:
-  - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
   - [ ] Dark/light mode https://tailwindcss.com/docs/dark-mode
   - [x] CI/CD Github Actions to build
     - Also do ssebs.github.io?
@@ -25,8 +25,7 @@ ssebs.com website code.
     - [ ] animations on hover (menu, logo, header)
   - [ ] scroll animation on mobile
     - text/content covers up sidebar, sidebar covers up img. (parallax)
-  - [ ] floating header styled like apple? Light with drop shadow, rounded
-- [ ] REPLACE Current (2024) img for ssebs-www
+- [ ] REPLACE Current (2024) img for ssebs-www project page
 - [ ] mini game Easter egg like Chrome dino
 
 ## Design

@@ -17,8 +17,6 @@ Here's what the GUI looks like, you can click the buttons to run the macro, or u
 
 Most of my keybinds are for an FPS shooter, for example typing "gg" in the chat. 
 
-
-
 ## What kind of macros can you make?
 - Shortcuts:
   - CTRL + C, CTRL + V, etc.
