@@ -78,3 +78,22 @@
     </header>
 </div>
 
+<script type="text/javascript">
+    var toggleOpen = document.getElementById('toggleOpen');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function toggleElement(element) {
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
+        } else {
+            element.classList.remove("hideit")
+            element.classList.add("showit");
+        }
+    }
+
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+
+</script>
