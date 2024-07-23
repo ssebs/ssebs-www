@@ -13,10 +13,11 @@
                 I'm a professional fixer, hobbyist figure-outer.
             </p>
         </div>
-        <a href="./about"
-            class="rounded-md border-b-1 border-b-primary text-quaternary hover:text-quinary">
+        {{- if ne .Page.RelPermalink "/about/" -}}
+        <a href="./about" class="rounded-md border-b-1 border-b-primary text-quaternary hover:text-quinary">
             Read more about me.
         </a>
+        {{- end -}}
     </div>
     <div class="">
         <div class="border-b border-neutral-600 font-semibold">

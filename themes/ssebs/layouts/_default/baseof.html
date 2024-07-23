@@ -18,11 +18,11 @@
     {{- block "main" . }}
     {{- end }}
     {{- else }}
-    <div class="">
+    <div class="m-4">
       {{ partial "breadcrumbs.html" . }}
       {{/* 2 col contents */}}
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
-        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center">
+        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center top-0 sticky">
           {{- partial "sidebar.html" . -}}
         </div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
