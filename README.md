@@ -12,7 +12,6 @@ ssebs.com website code.
   - [ ] Add more coding projects
   - [ ] Add hobby stuff in projects, like working on cars or guitar stuff
   - [ ] Home page - social icons in bottom right of hero / footer
-  - [ ] Install tailwind properly https://tailwindcss.com/blog/standalone-cli
 - After MVP:
   - [ ] Add tags to each project and allow search by tags (show tags on page + clickable)
     - [ ] Tag search + Search Results page
@@ -32,14 +31,21 @@ ssebs.com website code.
 ## Design
 ![home](.excalidraw.png)
 
-## Usage
-- Clone this repo
+## Dev setup
+- git clone https://github.com/ssebs/ssebs-www
 - Install [hugo](https://gohugo.io/)
   - Either manually, or use the `setup_env.sh` script
+- For ssebs Hugo theme, you need [Node.js](https://nodejs.org/en/download/package-manager) and the [Tailwind CLI](https://tailwindcss.com/docs/installation)
+  - `cd themes/ssebs/`
+  - `npm i`
+  - Run dev
+    - `npm run start`
+  - Build prod
+    - `npm run build`
 - Local dev deployment:
   - `hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0`
-- To deploy to another baseURL for testing
-  - `hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0`
+- To deploy to another baseURL for testing (behind LB)
+  - `hugo serve --noHTTPCache --disableFastRender --baseURL "https://your-url.com/" --bind 0.0.0.0`
 
 ### Build
 - `HUGO_ENV=production HUGO_PARAMS_USEBASEURL=true hugo --baseURL "https://your-url.com/" --minify`
