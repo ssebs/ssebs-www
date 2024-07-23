@@ -2,7 +2,7 @@
 title: Contact me
 slug: contact
 shortdesc: Ping me!
-sectionbg: bg-transparent
+sectionbg: transparent-bg
 NoC2A: true
 menus: main
 weight: 7

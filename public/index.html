@@ -344,7 +344,7 @@
 </section>
   
 
-<section class="bg-transparent flex justify-center w-full">
+<section class="transparent-bg flex justify-center w-full">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Ping me!</h3>
@@ -358,17 +358,23 @@
 <div class="grid">
     
     <div id="msg-container" class="text-3xl my-12 italic text-quinary hidden"></div>
+
     
-    
-    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:max-w-[512px]">
-        <label class="text-base " for="name">Your name:</label>
-            <input type="text" name="name"
-                class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
-                placeholder="John Doe..." required />
-        <label class="text-base " for="email">Email:</label>
-            <input type="email" name="email"
-                class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
-                placeholder="jdoe@example.com" required />
+    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 ">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
+            <label class="text-base" for="name">
+                <div>Your name:</div>
+                <input type="text" name="name"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="John Doe..." required />
+            </label>
+            <label class="text-base" for="email">
+                <div>Email:</div>
+                <input type="email" name="email"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="jdoe@example.com" required />
+            </label>
+        </div>
 
         <label class="text-base" for="_subject">Subject:</label>
         <input type="text" name="_subject"

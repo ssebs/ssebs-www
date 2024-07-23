@@ -83,6 +83,10 @@ img:not([src]) {
     visibility: hidden;
 }
 
+.transparent-bg{
+    background-color: rgba(1, 1, 1, 0.2);
+}
+
 /* Hero */
 body {
     position: relative;
