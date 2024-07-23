@@ -41,39 +41,10 @@
                 <p>...very interesting, I know!</p>
             </div>
 
-            <div class="min-w-32 flex flex-col">
+            <div class="min-w-32 flex flex-col gap-2">
                 <div class="text-xl">Socials</div>
-                <ul>
-
-                    {{/* Sort socials by weight */}}
-                    {{ $socials := site.Params.socials }}
-                    {{ $socialArray := slice }}
-                    {{ range $name, $obj := $socials }}
-                    {{/* If adding to params, also hard code the key here */}}
-                    {{ $socialArray = $socialArray | append (dict "name" $name "text" $obj.text "link" $obj.link
-                    "weight" $obj.weight) }}
-                    {{ end }}
-                    {{ $sortedSocials := sort $socialArray "weight" "asc" }}
-
-                    {{- range $sortedSocials }}
-                    <li>
-                        <a href="{{ .link }}" title="{{ .name }}" class="text-quinary hover:text-quaternary"
-                            target="_blank">
-                            <span>
-                                {{- .name | title | safeHTML -}}
-                                {{/* Add arrow icon showing external page */}}
-                                <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                    viewBox="0 0 24 24" height="12" width="12"
-                                    style="display: inline; vertical-align: top;">
-                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                                    <path d="M15 3h6v6"></path>
-                                    <path d="M10 14L21 3"></path>
-                                </svg>
-                            </span>
-                        </a>
-                    </li>
-                    {{- end }}
+                <ul class="flex gap-2">
+                    {{- partial "socials.html" (dict "iconsize" "2rem") }}
                 </ul>
             </div>
 

@@ -1,0 +1,29 @@
+{{/*
+We expect to be in an <ul>
+    expects (dict "aclass" "text-quinary hover:text-quaternary" "iconsize" "1rem" )
+*/}}
+
+    {{/* Sort socials by weight */}}
+    {{ $socials := site.Params.socials }}
+    {{ $socialArray := slice }}
+    {{ range $name, $obj := $socials }}
+    {{/* If adding to params, also hard code the key here */}}
+    {{ $socialArray = $socialArray | append (dict "name" $name "text" $obj.text "link" $obj.link "icon"
+    $obj.icon
+    "weight" $obj.weight) }}
+    {{ end }}
+    {{ $sortedSocials := sort $socialArray "weight" "asc" }}
+
+    {{- range $sortedSocials }}
+    <li>
+        <a href="{{ .link }}" title="{{ .name | title }}" target="_blank">
+            <span>
+                {{- with .icon -}}
+                {{- replaceRE `2rem` $.iconsize .  | safeHTML -}}
+                {{- else -}}
+                {{- .name | title | safeHTML -}}
+                {{- end -}}
+            </span>
+        </a>
+    </li>
+    {{- end }}

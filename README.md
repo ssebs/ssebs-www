@@ -6,8 +6,7 @@ ssebs.com website code.
 - MVP website:
   - [ ] Fix navbar
   - [ ] Socials as icons instead of text links
-  - [ ] Fix contact form
-    - [ ] Use Supabase backend
+  - [ ] Contact form - Supabase backend
   - [ ] About content
   - [ ] Add more coding projects
   - [ ] Add hobby stuff in projects, like working on cars or guitar stuff
