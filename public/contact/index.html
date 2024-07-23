@@ -187,15 +187,12 @@
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
 <div class="grid p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <h1 class="text-2xl">Contact me</h1>
-  <div class="post-content"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me if you want to work on a project together!</p>
-<blockquote>
-<p>Note: The form takes a few seconds to submit, so please be patient.</p>
-</blockquote>
-<p>Or, you can email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a></p>
-<div class="grid gap-6 justify-center">
+  <div class="post-content"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if you want to work on a project together!</p>
+<h4 id="feel-free-to-just-fill-out-the-form-below-if-you-want-to-send-me-a-quick-message">Feel free to just fill out the form below if you want to send me a quick message.</h4>
+<div class="grid">
     
-    <div id="msg-container" class="text-xl italic text-quinary"></div>
-
+    <div id="msg-container" class="text-3xl my-12 italic text-quinary hidden"></div>
+    
     
     <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:max-w-[512px]">
         <label class="text-base " for="name">Your name:</label>
@@ -244,10 +241,15 @@
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('msg')) {
         const msgContainer = document.getElementById('msg-container');
-        msgContainer.textContent = decodeURI(urlParams.get("msg"));
-
+        msgContainer.classList.remove("hidden");
+        const msg = decodeURI(urlParams.get("msg"));
+        msgContainer.textContent = msg;
+        window.alert(msg);
     }
-</script></div>
+</script>
+<blockquote>
+<p>Note: It takes a few seconds to submit, so please be patient.</p>
+</blockquote></div>
 </div>
         </div>
       </div>

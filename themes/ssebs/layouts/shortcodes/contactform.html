@@ -1,7 +1,7 @@
-<div class="grid gap-6 justify-center">
+<div class="grid">
     {{/* Show message if we got one */}}
-    <div id="msg-container" class="text-xl italic text-quinary"></div>
-
+    <div id="msg-container" class="text-3xl my-12 italic text-quinary hidden"></div>
+    
     {{/* ACTION cannot have a space! Check when auto-formatting */}}
     <form action="{{- .Get "action" -}}" method="POST" class="flex flex-col gap-2 md:max-w-[512px]">
         <label class="text-base " for="name">Your name:</label>
@@ -50,7 +50,9 @@
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('msg')) {
         const msgContainer = document.getElementById('msg-container');
-        msgContainer.textContent = decodeURI(urlParams.get("msg"));
-
+        msgContainer.classList.remove("hidden");
+        const msg = decodeURI(urlParams.get("msg"));
+        msgContainer.textContent = msg;
+        window.alert(msg);
     }
 </script>

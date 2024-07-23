@@ -183,7 +183,7 @@
         
 
         
-        <div class="text-white-dim grid  ">
+        <div class="text-white-dim grid gap-6  ">
             <div class="post-content text-lg"><p>Here&rsquo;s some of my more interesting side projects. Most of my work projects I cannot share unfortunately.</p>
 <p>I use the Mini Macro Pad basically every day, for skipping songs, typing &ldquo;gg&rdquo; into games, and other shortcuts.</p>
             </div>
@@ -311,7 +311,7 @@
         
 
         
-        <div class="text-white-dim grid  ">
+        <div class="text-white-dim grid gap-6  ">
             <div class="post-content text-lg"><div class="grid md:grid-cols-2 justify-items-center gap-6">
     
     <div>
@@ -352,17 +352,13 @@
         
 
         
-        <div class="text-white-dim grid md:grid-cols-2 ">
-            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me if you want to work on a project together!</p>
-<blockquote>
-<p>Note: The form takes a few seconds to submit, so please be patient.</p>
-</blockquote>
-<p>Or, you can email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a></p>
-            </div>
-            <div><div class="grid gap-6 justify-center">
+        <div class="text-white-dim grid gap-6  ">
+            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if you want to work on a project together!</p>
+<h4 id="feel-free-to-just-fill-out-the-form-below-if-you-want-to-send-me-a-quick-message">Feel free to just fill out the form below if you want to send me a quick message.</h4>
+<div class="grid">
     
-    <div id="msg-container" class="text-xl italic text-quinary"></div>
-
+    <div id="msg-container" class="text-3xl my-12 italic text-quinary hidden"></div>
+    
     
     <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 md:max-w-[512px]">
         <label class="text-base " for="name">Your name:</label>
@@ -411,11 +407,17 @@
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('msg')) {
         const msgContainer = document.getElementById('msg-container');
-        msgContainer.textContent = decodeURI(urlParams.get("msg"));
-
+        msgContainer.classList.remove("hidden");
+        const msg = decodeURI(urlParams.get("msg"));
+        msgContainer.textContent = msg;
+        window.alert(msg);
     }
 </script>
-
+<blockquote>
+<p>Note: It takes a few seconds to submit, so please be patient.</p>
+</blockquote>
+            </div>
+            <div>
             </div>
         </div>
 
