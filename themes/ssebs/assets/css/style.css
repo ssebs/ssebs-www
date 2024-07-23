@@ -1145,6 +1145,10 @@ select {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -3420,7 +3424,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 1rem inherit;
+  margin-bottom: 0.75rem;
 }
 
 .post-content {
@@ -3762,6 +3766,10 @@ body {
 
   .lg\:max-w-6xl {
     max-width: 72rem;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {

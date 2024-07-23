@@ -19,8 +19,9 @@
     {{- end }}
     {{- else }}
     <div class="">
+      {{ partial "breadcrumbs.html" . }}
       {{/* 2 col contents */}}
-      <div class="grid lg:grid-cols-4 gap-4 my-6 px-6">
+      <div class="grid lg:grid-cols-4 gap-4 mb-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center">
           {{- partial "sidebar.html" . -}}
         </div>
