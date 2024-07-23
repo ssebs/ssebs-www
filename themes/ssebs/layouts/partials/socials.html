@@ -1,6 +1,6 @@
 {{/*
 We expect to be in an <ul>
-    expects (dict "aclass" "text-quinary hover:text-quaternary" "iconsize" "1rem" )
+    expects (dict "color" "#41afff" "iconsize" "1rem" )
 */}}
 
     {{/* Sort socials by weight */}}
@@ -19,7 +19,8 @@ We expect to be in an <ul>
         <a href="{{ .link }}" title="{{ .name | title }}" target="_blank">
             <span>
                 {{- with .icon -}}
-                {{- replaceRE `2rem` $.iconsize .  | safeHTML -}}
+                {{/*  TODO: Fix by setting defaults  */}}
+                {{- replaceRE `2rem` $.iconsize . | replaceRE `#33ffe7` $.color  | safeHTML -}}
                 {{- else -}}
                 {{- .name | title | safeHTML -}}
                 {{- end -}}

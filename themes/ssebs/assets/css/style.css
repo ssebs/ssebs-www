@@ -1046,6 +1046,10 @@ select {
   top: 0px;
 }
 
+.top-6 {
+  top: 1.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1056,6 +1060,10 @@ select {
 
 .-z-10 {
   z-index: -10;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .order-first {
