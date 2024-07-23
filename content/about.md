@@ -11,12 +11,12 @@ My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figur
 
 Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
 
-Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last naem.
+Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.
 
-<--->
+<--COLSPLIT-->
 
 {{< rawhtml >}}
-<img class="rounded-md w-[256px]" src="./img/me_wedding.jpg" alt="Photo of me at my wedding." />
+<img class="rounded-md" width="256px" src="./img/me_vacay.jpg" alt="Photo of me on my honeymoon." />
 {{< /rawhtml >}}
 
 {{< /columns >}}
@@ -31,7 +31,7 @@ I've been fascinated by computers from a young age, always eager to unravel thei
 
 I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
 
-<--->
+<--COLSPLIT-->
 
 ## Some of my hobbies
 - Guitar
