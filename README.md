@@ -4,6 +4,7 @@ ssebs.com website code.
 
 ## TODO:
 - MVP website:
+  - [ ] Add another section to home page? Or add more stuff
   - [ ] Fix navbar
   - [ ] Socials as icons instead of text links
   - [ ] Contact form - Supabase backend

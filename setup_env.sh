@@ -20,6 +20,9 @@ cd ../themes/ssebs/
 npm install
 npm run build
 
+echo "To build tailwind:"
+echo "cd themes/ssebs; npm run build; cd ../../"
+echo
 echo "To run server:"
 echo "./tmp/hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0"
 echo
