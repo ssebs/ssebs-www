@@ -3,7 +3,7 @@ title: 'Miata'
 shortdesc: My project car, an ND RF Miata!
 feature: ./img/miata.jpg
 date: 2024-07-24T20:39:10-07:00
-weight: 25
+weight: 27
 tags: [cars, 3d-printing]
 ---
 

@@ -4,15 +4,12 @@ ssebs.com website code.
 
 ## TODO:
 - MVP website:
-  - [ ] Add another section to home page? Or add more stuff
-  - [ ] Fix navbar
-  - [ ] Socials as icons instead of text links
-  - [ ] Contact form - Supabase backend
-  - [ ] About content
-  - [ ] Add more coding projects
-  - [ ] Add hobby stuff in projects, like working on cars or guitar stuff
-  - [ ] Home page - social icons in bottom right of hero / footer
+  - [ ] Add anchor to post-content titles
 - After MVP:
+  - [ ] Sort tags on projects
+  - [ ] Move all images to projects folder
+  - [ ] Contact form - Supabase backend
+  - [ ] Add another section to home page? Or add more stuff
   - [ ] Add tags to each project and allow search by tags (show tags on page + clickable)
     - [ ] Tag search + Search Results page
   - [ ] Add blog

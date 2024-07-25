@@ -6,56 +6,98 @@
     <description>Recent content in Programming on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jul 2024 09:25:19 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2024 22:03:27 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini Macro Pad</title>
       <link>http://localhost:1313/projects/go-mmp/</link>
       <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
       <guid>http://localhost:1313/projects/go-mmp/</guid>
-      <description>go-mmp&#xA;Simplify task automation with an arduino and some 3D printing.</description>
+      <description>go-mmp&#xA;Github Repo&#xA;Simplify task automation with an arduino and some 3D printing.</description>
     </item>
     <item>
       <title>CSV Editor</title>
       <link>http://localhost:1313/projects/csveditor/</link>
       <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
       <guid>http://localhost:1313/projects/csveditor/</guid>
-      <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
+      <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
     </item>
     <item>
-      <title>Simpleshare</title>
-      <link>http://localhost:1313/projects/simpleshare/</link>
-      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
-      <guid>http://localhost:1313/projects/simpleshare/</guid>
-      <description>A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
+      <title>Images to PDF</title>
+      <link>http://localhost:1313/projects/img-2-pdf/</link>
+      <pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate>
+      <guid>http://localhost:1313/projects/img-2-pdf/</guid>
+      <description>Github Repo&#xA;Convert a selection of images files into a single PDF.</description>
     </item>
     <item>
       <title>Perishable Punchers</title>
       <link>http://localhost:1313/projects/perishable-punchers/</link>
       <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
       <guid>http://localhost:1313/projects/perishable-punchers/</guid>
-      <description>Mortal Kombat like Game written in Java, back in highschool.</description>
+      <description>Github Repo.&#xA;Mortal Kombat like Game written in Java, back in highschool.</description>
+    </item>
+    <item>
+      <title>Tipr</title>
+      <link>http://localhost:1313/projects/tipr/</link>
+      <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
+      <guid>http://localhost:1313/projects/tipr/</guid>
+      <description>Github Repo&#xA;A tip calculator that shows the tip amount and the total amount.</description>
+    </item>
+    <item>
+      <title>nccsv</title>
+      <link>http://localhost:1313/projects/nccsv/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
+      <guid>http://localhost:1313/projects/nccsv/</guid>
+      <description>Github Repo&#xA;Ncurses CSV Editor written in Python&#xA;TODO: Architecture Wireframes Home / Menu File selector Open Close Editor Layout Grid Entry Multiple views Home / Menu File selector Editor Custom widgets Layout Grid Entry (text editor with box) Scroll down / right [.</description>
+    </item>
+    <item>
+      <title>PeopleDB</title>
+      <link>http://localhost:1313/projects/peopledb/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/projects/peopledb/</guid>
+      <description>Github Repo&#xA;Person Database using python, flask, sqlite3, react.&#xA;Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description>
+    </item>
+    <item>
+      <title>ServerClip</title>
+      <link>http://localhost:1313/projects/serverclip/</link>
+      <pubDate>Wed, 24 Jul 2024 21:44:53 -0700</pubDate>
+      <guid>http://localhost:1313/projects/serverclip/</guid>
+      <description>Github Repo&#xA;Tool for copying contents of a file over nested ssh connections.</description>
+    </item>
+    <item>
+      <title>Simpleshare</title>
+      <link>http://localhost:1313/projects/simpleshare/</link>
+      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
+      <guid>http://localhost:1313/projects/simpleshare/</guid>
+      <description>Github Repo&#xA;A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
     </item>
     <item>
       <title>A Platformer of Some Sort</title>
       <link>http://localhost:1313/projects/a-platformer-of-some-sort/</link>
       <pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate>
       <guid>http://localhost:1313/projects/a-platformer-of-some-sort/</guid>
-      <description>A Platformer of Some Sort was my first long-term project.</description>
+      <description>Github Repo&#xA;A Platformer of Some Sort was my first long-term project.</description>
     </item>
     <item>
       <title>Breakout Pong</title>
       <link>http://localhost:1313/projects/breakout-pong/</link>
       <pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate>
       <guid>http://localhost:1313/projects/breakout-pong/</guid>
-      <description>Welcome to the start of it all: Breakout-Pong. This was the very first game I made.</description>
+      <description>Github Repo&#xA;Welcome to the start of it all: Breakout-Pong. This was the very first game I made.</description>
+    </item>
+    <item>
+      <title>Clean Mac Address</title>
+      <link>http://localhost:1313/projects/clean-mac-address/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:09 -0700</pubDate>
+      <guid>http://localhost:1313/projects/clean-mac-address/</guid>
+      <description>Github Repo&#xA;Program to &amp;ldquo;clean&amp;rdquo; MAC address for registrar input at PARC.</description>
     </item>
     <item>
       <title>My Website</title>
       <link>http://localhost:1313/projects/ssebs-www/</link>
       <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
       <guid>http://localhost:1313/projects/ssebs-www/</guid>
-      <description>ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!</description>
+      <description>Github Repo&#xA;ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills.</description>
     </item>
     <item>
       <title>Sir Flap a Lot</title>

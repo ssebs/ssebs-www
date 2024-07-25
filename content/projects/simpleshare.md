@@ -3,15 +3,13 @@ title: 'Simpleshare'
 shortdesc: A local file sharing utility written in Python
 feature: https://raw.githubusercontent.com/ssebs/simpleshare/master/img/upload.png
 date: 2024-07-23T09:25:19-07:00
-weight: 22
-tags: [programming, python]
+weight: 25
+tags: [programming, python, gui]
 ---
+[Github Repo](https://github.com/ssebs/simpleshare)
 
 A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.
 
-[Link to code](https://github.com/ssebs/simpleshare)
-
-## Screenshots
 ### Home
 ![home](https://raw.githubusercontent.com/ssebs/simpleshare/master/img/home.png)
 
@@ -111,5 +109,3 @@ A local file sharing utility written in Python. Uses multicast UDP to share the 
   - [x] Only Choose IP if more than 1 available
   - [ ] Share Thread issues
 
-## License
-[MIT](./LICENSE) &copy; 2019 Sebastian Safari

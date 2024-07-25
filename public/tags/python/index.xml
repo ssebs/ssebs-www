@@ -6,21 +6,42 @@
     <description>Recent content in Python on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jul 2024 09:25:19 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2024 22:03:27 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSV Editor</title>
       <link>http://localhost:1313/projects/csveditor/</link>
       <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
       <guid>http://localhost:1313/projects/csveditor/</guid>
-      <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
+      <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
+    </item>
+    <item>
+      <title>nccsv</title>
+      <link>http://localhost:1313/projects/nccsv/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
+      <guid>http://localhost:1313/projects/nccsv/</guid>
+      <description>Github Repo&#xA;Ncurses CSV Editor written in Python&#xA;TODO: Architecture Wireframes Home / Menu File selector Open Close Editor Layout Grid Entry Multiple views Home / Menu File selector Editor Custom widgets Layout Grid Entry (text editor with box) Scroll down / right [.</description>
+    </item>
+    <item>
+      <title>PeopleDB</title>
+      <link>http://localhost:1313/projects/peopledb/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/projects/peopledb/</guid>
+      <description>Github Repo&#xA;Person Database using python, flask, sqlite3, react.&#xA;Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description>
     </item>
     <item>
       <title>Simpleshare</title>
       <link>http://localhost:1313/projects/simpleshare/</link>
       <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
       <guid>http://localhost:1313/projects/simpleshare/</guid>
-      <description>A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
+      <description>Github Repo&#xA;A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
+    </item>
+    <item>
+      <title>Clean Mac Address</title>
+      <link>http://localhost:1313/projects/clean-mac-address/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:09 -0700</pubDate>
+      <guid>http://localhost:1313/projects/clean-mac-address/</guid>
+      <description>Github Repo&#xA;Program to &amp;ldquo;clean&amp;rdquo; MAC address for registrar input at PARC.</description>
     </item>
   </channel>
 </rss>

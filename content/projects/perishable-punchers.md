@@ -3,9 +3,10 @@ title: Perishable Punchers
 shortdesc: Mortal Kombat like Game written in Java, back in highschool.
 feature: ./img/projects/PerishablePunchers.jpg
 date: "2024-06-23T17:43:06-07:00"
-weight: 24
+weight: 23
 tags: [programming, java, gamedev]
 ---
+[Github Repo](https://github.com/ssebs/PerishablePunchers).
 
 ![screenshot](./img/projects/PerishablePunchers.jpg)
 
@@ -21,7 +22,6 @@ Try it out and have a (fire)ball! [Here](https://github.com/ssebs/PerishablePunc
 
 Note: you must use an old version of Java :c
 
-[Check out my old code on github](https://github.com/ssebs/PerishablePunchers/).
 
 ## Requirements
 - Java 1.6+

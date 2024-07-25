@@ -13,3 +13,5 @@ Here's some of my more interesting side projects. Some are games, others product
 I use the Mini Macro Pad basically every day, for skipping songs, typing "gg" into games, and other random shortcuts. 
 
 <!--more-->
+
+Check out my [Github](https://github.com/ssebs) to see the source code.

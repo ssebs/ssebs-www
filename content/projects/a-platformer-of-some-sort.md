@@ -6,6 +6,7 @@ date: 2024-07-07T15:31:48-07:00
 weight: 25
 tags: [programming, java, gamedev]
 ---
+[Github Repo](https://github.com/ssebs/Platformer)
 
 ![screenshot](./img/projects/Platformer.jpg)
 
@@ -14,5 +15,3 @@ A Platformer of Some Sort was my first long-term project. This was a wild 3 mont
 A Platformer Of Some Sort is just that, a platformer of some sort! It’s fairly simple, with a whopping 3 levels. Some animations are-lets say-not polished. There is a ridiculously funny story which was hand-written at the end of a long day of SAT’s, so you have to play the game and have a nice laugh. 
 
 [Here](https://github.com/ssebs/Platformer/raw/master/APlatformerOfSomeSort.jar) is a link to download the game. Just double click the jar and use the WASD keys and you’re all set!
-
-[Check out my old code on github](https://github.com/ssebs/Platformer).

@@ -6,6 +6,7 @@ date: 2024-07-07T15:28:56-07:00
 weight: 25
 tags: [programming, java, gamedev]
 ---
+[Github Repo](https://github.com/ssebs/BreakoutPongGame)
 
 ![screenshot](./img/projects/BreakoutPong.png)
 
@@ -16,5 +17,3 @@ Breakout Pong is a mix between the game Pong and the game Breakout. It plays lik
 [Here](https://github.com/ssebs/BreakoutPongGame/raw/master/BreakoutPong.jar) is a link to the github repo, I need to rebuild this but I'll get to that at some point. 
 
 Use the A,D,Left, and Right keys and you’re all set!
-
-[Check out my old code on github](https://github.com/ssebs/BreakoutPongGame/).
