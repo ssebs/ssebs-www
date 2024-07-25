@@ -1,0 +1,18 @@
+{{- define "main" }}
+<div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="post-content">
+        <h1>Page not found</h1>
+        <p>Could not find the <strong id="url" class="mx-1"></strong> page.</p>
+
+        <a href="./">
+            Return to the home page
+        </a>
+    </div>
+</div>
+<script>
+    const urlSpan = document.getElementById("url");
+    const pageURL = window.location.pathname.slice(1);
+
+    urlSpan.innerText = pageURL;
+</script>
+{{- end }}

@@ -1,0 +1,64 @@
+<div class="grid">
+    {{/* Show message, replaced in JS */}}
+    <div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden"></div>
+
+    {{/* ACTION cannot have a space! Check when auto-formatting */}}
+    <form action="{{- .Get "action" -}}" method="POST" class="flex flex-col gap-2 ">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
+            <label class="text-base" for="name">
+                <div>Your name:</div>
+                <input type="text" name="name"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="John Doe..." required />
+            </label>
+            <label class="text-base" for="email">
+                <div>Email:</div>
+                <input type="email" name="email"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="jdoe@example.com" required />
+            </label>
+        </div>
+
+        <label class="text-base" for="_subject">Subject:</label>
+        <input type="text" name="_subject"
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+            placeholder="Dear ssebs" required>
+
+        <label class="text-base" for="message">Message:
+        </label>
+        <textarea placeholder="Let's work on something together."
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" name="message"
+            rows="10" required></textarea>
+
+        <button type="submit"
+            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
+            Send
+            <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#171717">
+                    <path
+                        d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                </svg></div>
+        </button>
+        <input type="hidden" name="_captcha" value="false">
+        <input id="nextURL" type="hidden" name="_next" value="{{ .Site.BaseURL }}/contact">
+    </form>
+</div>
+
+<script>
+    // Overwrite _next location to current URL, Hugo's Permalink uses the hostname of the server, 
+    //   when that's localhost the redirect is broken.
+    const nextURL = document.getElementById("nextURL");
+    // nextURL.value = ;
+    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
+
+
+    // Get the msg from the params if there is one
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('msg')) {
+        const msgContainer = document.getElementById('msg-container');
+        msgContainer.classList.remove("hidden");
+        const msg = decodeURI(urlParams.get("msg"));
+        msgContainer.textContent = msg;
+        window.alert(msg);
+    }
+</script>

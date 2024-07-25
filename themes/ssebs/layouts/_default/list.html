@@ -1,0 +1,23 @@
+{{- define "main" }}
+{{- if .IsHome }}
+{{ partial "home.html" . }}
+{{- else }}
+<div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+	<h1 class="text-2xl">
+		{{- .Title -}}
+	</h1>
+
+	{{- if .Content }}
+	<div class="post-content">{{ .Content }}</div>
+	{{- else }}
+	<div class="m-4"></div>
+	{{- end }}
+	
+	<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
+		{{ range .Pages }}
+		{{ partial "card.html" . }}
+		{{- end }}
+	</div>
+</div>
+{{- end }}
+{{- end }}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gamedev on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/tags/gamedev/</link>
+    <description>Recent content in Gamedev on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jul 2024 15:32:42 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gamedev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perishable Punchers</title>
+      <link>http://localhost:1313/projects/perishable-punchers/</link>
+      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
+      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
+      <description>Github Repo.&#xA;Mortal Kombat like Game written in Java, back in highschool.</description>
+    </item>
+    <item>
+      <title>A Platformer of Some Sort</title>
+      <link>http://localhost:1313/projects/a-platformer-of-some-sort/</link>
+      <pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate>
+      <guid>http://localhost:1313/projects/a-platformer-of-some-sort/</guid>
+      <description>Github Repo&#xA;A Platformer of Some Sort was my first long-term project.</description>
+    </item>
+    <item>
+      <title>Breakout Pong</title>
+      <link>http://localhost:1313/projects/breakout-pong/</link>
+      <pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate>
+      <guid>http://localhost:1313/projects/breakout-pong/</guid>
+      <description>Github Repo&#xA;Welcome to the start of it all: Breakout-Pong. This was the very first game I made.</description>
+    </item>
+    <item>
+      <title>Sir Flap a Lot</title>
+      <link>http://localhost:1313/projects/sir-flap-a-lot/</link>
+      <pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate>
+      <guid>http://localhost:1313/projects/sir-flap-a-lot/</guid>
+      <description>Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store.</description>
+    </item>
+  </channel>
+</rss>

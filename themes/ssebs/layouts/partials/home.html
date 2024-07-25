@@ -1,0 +1,9 @@
+<div class="grid w-full">
+  {{ partial "hero.html" . }}
+
+  {{- range site.Menus.main }}
+  {{ partial "section.html" . }}
+  {{- end }}
+  
+  {{/*  <div class="post-content">{{ .Content }}</div>  */}}
+</div> 

@@ -1,0 +1,86 @@
+{{/* Full width bg/border */}}
+<div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
+    {{/* container */}}
+    <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
+        {{/* LOGO */}}
+        <a href="./" class="flex align-center">
+            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+            <span class="text-gray-300 text-xl m-auto hover:text-quaternary">ssebs</span>
+        </a>
+
+        {{/* Right justify stuff */}}
+        <nav class="">
+            <button id="toggleOpen" class='sm:hidden flex ml-auto'>
+                <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+                    stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                        <animate dur="0.2s" attributeName="d"
+                            values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                            begin="start.begin" />
+                        <animate dur="0.2s" attributeName="d"
+                            values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                            begin="reverse.begin" />
+                    </path>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                    </rect>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
+                            begin="click" />
+                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                    </rect>
+                </svg>
+            </button>
+            {{/* Renders the main menu as links, as well as social icons */}}
+            <div id="collapseMenu" class="flex flex-col items-center hideit gap-6 text-lg">
+                <ul class="flex max-sm:flex-col gap-4 align-middle">
+                    {{- $currentPage := . }}
+                    {{ $textColorActive := "text-gray-200" }}
+
+                    {{/* Pages from main menu */}}
+                    {{- range site.Menus.main }}
+                    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) |
+                    absLangURL}}
+                    {{- $page_url := $currentPage.RelPermalink | absLangURL }}
+                    {{- if eq $menu_item_url $page_url }}
+                    {{ $textColorActive = "text-quaternary" }}
+                    {{ else }}
+                    {{ $textColorActive = "text-gray-200" }}
+                    {{- end }}
+                    <li>
+                        <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
+                            class="md:hover:text-quaternary {{ $textColorActive }} block ">
+                            <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                                {{- .Name | safeHTML -}}
+                            </span>
+                        </a>
+                    </li>
+                    {{- end }}
+                </ul>
+                <ul class="flex justify-between gap-4 pt-4 sm:hidden">
+                    {{- partial "socials.html" (dict "color" "#41afff" "iconsize" "1.75rem") }}
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<script>
+    var toggleOpen = document.getElementById('toggleOpen');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function toggleElement(element) {
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
+        } else {
+            element.classList.remove("hideit")
+            element.classList.add("showit");
+        }
+    }
+
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+
+</script>

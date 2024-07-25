@@ -1,0 +1,18 @@
+name = "Ssebs"
+license = "MIT"
+licenselink = "https://github.com/ssebs/ssebs-www/blob/master/LICENSE"
+description = "ssebs theme for ssebs.com"
+homepage = "https://github.com/ssebs/ssebs-www/"
+tags = ["ssebs"]
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Sebastian Safari"
+  homepage = "https://github.com/ssebs"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
