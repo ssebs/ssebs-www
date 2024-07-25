@@ -2,6 +2,7 @@
 title: About me
 slug: about
 shortdesc: Who am I?
+C2AText: Read all about me!
 menus: main
 weight: 6
 date: "2024-05-31T15:43:45-07:00"
