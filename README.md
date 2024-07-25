@@ -5,6 +5,8 @@ ssebs.com website code.
 ## TODO:
 - MVP website:
   - [ ] Add anchor to post-content titles
+  - [ ] CI/CD to build docker img
+  - [ ] Publish from docker img
 - After MVP:
   - [ ] Sort tags on projects
   - [ ] Move all images to projects folder
