@@ -32,10 +32,7 @@
                 </svg>
             </button>
             {{/* Renders the main menu as links, as well as social icons */}}
-            <div id="collapseMenu" class="flex items-center hideit gap-6 text-lg">
-                <ul class="flex flex-col gap-4 sm:hidden">
-                    {{- partial "socials.html" (dict "color" "#41afff" "iconsize" "1.5rem") }}
-                </ul>
+            <div id="collapseMenu" class="flex flex-col items-center hideit gap-6 text-lg">
                 <ul class="flex max-sm:flex-col gap-4 align-middle">
                     {{- $currentPage := . }}
                     {{ $textColorActive := "text-gray-200" }}
@@ -59,8 +56,9 @@
                         </a>
                     </li>
                     {{- end }}
-
-
+                </ul>
+                <ul class="flex justify-between gap-4 pt-4 sm:hidden">
+                    {{- partial "socials.html" (dict "color" "#41afff" "iconsize" "1.75rem") }}
                 </ul>
             </div>
         </nav>
