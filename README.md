@@ -5,6 +5,7 @@ ssebs.com website code.
 ## TODO:
 - MVP website:
   - [ ] Add anchor to post-content titles
+  - [ ] Add socials list under C2A hero
   - [ ] CI/CD to build docker img
   - [ ] Publish from docker img
 - After MVP:
