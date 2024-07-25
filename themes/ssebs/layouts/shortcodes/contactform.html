@@ -1,6 +1,6 @@
 <div class="grid">
     {{/* Show message, replaced in JS */}}
-    <div id="msg-container" class="text-3xl my-12 italic text-quinary hidden"></div>
+    <div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden"></div>
 
     {{/* ACTION cannot have a space! Check when auto-formatting */}}
     <form action="{{- .Get "action" -}}" method="POST" class="flex flex-col gap-2 ">
@@ -31,7 +31,7 @@
             rows="10" required></textarea>
 
         <button type="submit"
-            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quinary hover:bg-quaternary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
+            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
             Send
             <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#171717">

@@ -13,7 +13,7 @@
                 I'm a professional fixer, hobbyist figure-outer.
             </p>
         </div>
-        <div class="flex flex-wrap">
+        <div class="grid">
             {{- if ne .Page.RelPermalink "/about/" -}}
             <a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
@@ -23,7 +23,7 @@
             {{- if ne .Page.RelPermalink "/contact/" -}}
             <a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
-                Let's connect!
+                Contact me!
             </a>
             {{- end -}}
         </div>
