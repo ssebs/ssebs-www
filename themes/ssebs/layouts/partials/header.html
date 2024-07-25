@@ -1,11 +1,11 @@
 {{/* Full width bg/border */}}
-<div class="bg-neutral-800 flex justify-center border-b-2 border-b-primary">
+<div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
     {{/* container */}}
     <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
         {{/* LOGO */}}
         <a href="./" class="flex align-center">
             <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
-            <span class="text-gray-300 text-xl m-auto hover:text-primary">ssebs</span>
+            <span class="text-gray-300 text-xl m-auto hover:text-quaternary">ssebs</span>
         </a>
 
         {{/* Right justify stuff */}}
@@ -43,13 +43,13 @@
                     absLangURL}}
                     {{- $page_url := $currentPage.RelPermalink | absLangURL }}
                     {{- if eq $menu_item_url $page_url }}
-                    {{ $textColorActive = "text-primary" }}
+                    {{ $textColorActive = "text-quaternary" }}
                     {{ else }}
                     {{ $textColorActive = "text-gray-200" }}
                     {{- end }}
                     <li>
                         <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                            class="md:hover:text-primary {{ $textColorActive }} block ">
+                            class="md:hover:text-quaternary {{ $textColorActive }} block ">
                             <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                                 {{- .Name | safeHTML -}}
                             </span>

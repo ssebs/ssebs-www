@@ -1,7 +1,7 @@
 {{/* TODO: fun positioning? */}}
-<div class="flex gap-2 lg:flex-col bg-neutral-800 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+<div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
     <div class="">
-        <img class="w-[75%] mx-auto my-4 rounded-md transition hover:drop-shadow-2xl hover:scale-125"
+        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md transition hover:drop-shadow-2xl hover:scale-125"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
@@ -13,11 +13,20 @@
                 I'm a professional fixer, hobbyist figure-outer.
             </p>
         </div>
-        {{- if ne .Page.RelPermalink "/about/" -}}
-        <a href="./about" class="rounded-md border-b-1 border-b-primary text-quaternary hover:text-quinary">
-            Read more about me.
-        </a>
-        {{- end -}}
+        <div class="flex flex-wrap">
+            {{- if ne .Page.RelPermalink "/about/" -}}
+            <a href="./about"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Read more about me.
+            </a>
+            {{- end -}}
+            {{- if ne .Page.RelPermalink "/contact/" -}}
+            <a href="./contact"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Let's connect!
+            </a>
+            {{- end -}}
+        </div>
     </div>
     <div class="">
         <div class="border-b border-neutral-600 font-semibold">

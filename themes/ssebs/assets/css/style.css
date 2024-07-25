@@ -1208,6 +1208,11 @@ select {
   margin-bottom: auto;
 }
 
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1430,6 +1435,22 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[256px\] {
+  width: 256px;
+}
+
+.w-\[128px\] {
+  width: 128px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .min-w-32 {
@@ -2594,9 +2615,29 @@ select {
   border-color: transparent;
 }
 
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 75 138 / var(--tw-border-opacity));
+}
+
+.border-white-dim {
+  --tw-border-opacity: 1;
+  border-color: rgb(238 238 238 / var(--tw-border-opacity));
+}
+
+.border-neutral-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity));
+}
+
 .border-b-primary {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(65 175 255 / var(--tw-border-opacity));
+}
+
+.border-b-quaternary {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(46 204 232 / var(--tw-border-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -3183,6 +3224,16 @@ select {
 .text-white-dim {
   --tw-text-opacity: 1;
   color: rgb(238 238 238 / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(2 75 138 / var(--tw-text-opacity));
+}
+
+.text-neutral-300 {
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3956,6 +4007,12 @@ body {
   text-align: center;
 }
 
+@media not all and (min-width: 768px) {
+  .max-md\:grow {
+    flex-grow: 1;
+  }
+}
+
 @media not all and (min-width: 640px) {
   .max-sm\:flex-col {
     flex-direction: column;
@@ -3969,6 +4026,14 @@ body {
 @media (min-width: 640px) {
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:w-\[75\%\] {
+    width: 75%;
+  }
+
+  .sm\:grow {
+    flex-grow: 1;
   }
 
   .sm\:items-center {
@@ -3985,6 +4050,10 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:w-\[75\%\] {
+    width: 75%;
+  }
+
   .md\:max-w-4xl {
     max-width: 56rem;
   }
@@ -4011,6 +4080,11 @@ body {
     --tw-text-opacity: 1;
     color: rgb(65 175 255 / var(--tw-text-opacity));
   }
+
+  .md\:hover\:text-quaternary:hover {
+    --tw-text-opacity: 1;
+    color: rgb(46 204 232 / var(--tw-text-opacity));
+  }
 }
 
 @media (min-width: 1024px) {
@@ -4032,6 +4106,10 @@ body {
 
   .lg\:w-\[16rem\] {
     width: 16rem;
+  }
+
+  .lg\:w-\[75\%\] {
+    width: 75%;
   }
 
   .lg\:max-w-4xl {
