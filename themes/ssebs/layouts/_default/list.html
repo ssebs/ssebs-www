@@ -12,12 +12,12 @@
 	{{- else }}
 	<div class="m-4"></div>
 	{{- end }}
-</div>
-
-<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
-	{{ range .Pages }}
-	{{ partial "card.html" . }}
-	{{- end }}
+	
+	<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
+		{{ range .Pages }}
+		{{ partial "card.html" . }}
+		{{- end }}
+	</div>
 </div>
 {{- end }}
 {{- end }}

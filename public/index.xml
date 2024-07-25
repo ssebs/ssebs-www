@@ -6,14 +6,14 @@
     <description>Recent content on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jul 2024 09:25:19 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2024 21:20:49 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;div class=&#34;grid md:grid-cols-2 justify-items-center gap-6&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;&#xA;&lt;p&gt;Online, I go by &lt;span class=&#34;text-quaternary&#34;&gt;ssebs&lt;/span&gt;. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.&lt;/p&gt;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;img class=&#34;rounded-md&#34; width=&#34;256px&#34; src=&#34;./img/me_vacay.jpg&#34; alt=&#34;Photo of me on my honeymoon.&#34; /&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/div&gt;</description>
+      <description>&lt;div class=&#34;grid md:grid-cols-2 justify-items-center gap-6&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;&#xA;&lt;p&gt;Online, I go by &lt;span class=&#34;text-quaternary&#34;&gt;ssebs&lt;/span&gt;. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.&lt;/p&gt;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;img src=&#34;./img/me_vacay.jpg&#34; alt=&#34;Photo of me on my honeymoon.&#34; class=&#34;w-[256px] rounded-md border-2 border-primary&#34;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Contact me</title>
@@ -49,6 +49,20 @@
       <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
       <guid>http://localhost:1313/projects/perishable-punchers/</guid>
       <description>Mortal Kombat like Game written in Java, back in highschool.</description>
+    </item>
+    <item>
+      <title>Audi S4</title>
+      <link>http://localhost:1313/projects/audi-s4/</link>
+      <pubDate>Wed, 24 Jul 2024 21:20:49 -0700</pubDate>
+      <guid>http://localhost:1313/projects/audi-s4/</guid>
+      <description>I used to own a 2014 Audi S4 (B8.5), had a few mods done, but ultimately it was too expensive to keep 😭.</description>
+    </item>
+    <item>
+      <title>Miata</title>
+      <link>http://localhost:1313/projects/miata/</link>
+      <pubDate>Wed, 24 Jul 2024 20:39:10 -0700</pubDate>
+      <guid>http://localhost:1313/projects/miata/</guid>
+      <description>I own and drive a 2021 Mazda MX-5 RF GT (Miata).</description>
     </item>
     <item>
       <title>A Platformer of Some Sort</title>

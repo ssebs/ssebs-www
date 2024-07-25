@@ -1,7 +1,8 @@
 {{/* Expects to be in a .Pages loop, so "." is a Page */}}
+
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all ">
-  {{/*  feature + shortdesc  */}}
+  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  {{/* feature + shortdesc */}}
   <a href="{{- .RelPermalink -}}" class="grid gap-4 self-start">
     <div class="text-xl font-medium">{{ .Title }}</div>
 
@@ -13,7 +14,7 @@
 
     <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
   </a>
-  {{/*  tags list  */}}
+  {{/* tags list */}}
   <div class="flex flex-wrap self-end gap-2 text-base h-fit">
     {{ range .Params.tags }}
     <a href="./tags/{{- . -}}"

@@ -156,7 +156,7 @@
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
 <div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
     <div class="">
-        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md transition hover:drop-shadow-2xl hover:scale-125"
+        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md border-2 border-primary"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
@@ -231,7 +231,24 @@
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
 <div class="grid p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-  <h1 class="text-2xl">Sir Flap a Lot</h1>
+  <div class="flex justify-between">
+    <h1 class="text-2xl">Sir Flap a Lot</h1>
+
+    <div class="mb-2 flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/java"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        java
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div></div>
   <div class="post-content"><p><img src="./img/projects/SFA.png" alt="screenshot"></p>
 <p>Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store. I thought, hey, maybe I can make something just as good. And sure enough, I tried for about a day or two then got bored. BUT, within that time, I made a PC port of it, using my own art and “Physics”. There are some broken things, like not being able to make it through some gaps, but hey, pretty good for two days. Also you may be thinking, “Hey, a lot is two words…”, and you’re right. But that’s the beauty in making your own games, you can do whatever you want.</p>
 <p>Instead of using a text-rendering library like I did with Breakout-Pong, I made my own. I made 10 images that were just numbers, and using some “Algorithms”, I made the score drawn represent an integer (score). Have a good look at this new rendering when you play Sir Flap Alot.</p>

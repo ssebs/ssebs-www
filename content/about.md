@@ -16,9 +16,7 @@ Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames,
 
 <--COLSPLIT-->
 
-{{< rawhtml >}}
-<img class="rounded-md" width="256px" src="./img/me_vacay.jpg" alt="Photo of me on my honeymoon." />
-{{< /rawhtml >}}
+{{< image src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." class="w-[256px] rounded-md border-2 border-primary" >}}
 
 {{< /columns >}}
 
