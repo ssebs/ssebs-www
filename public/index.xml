@@ -6,7 +6,7 @@
     <description>Recent content on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2024 15:32:42 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 09:25:19 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
@@ -30,18 +30,25 @@
       <description>go-mmp&#xA;Simplify task automation with an arduino and some 3D printing.</description>
     </item>
     <item>
-      <title>Perishable Punchers</title>
-      <link>http://localhost:1313/projects/perishable-punchers/</link>
-      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
-      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
-      <description>Mortal Kombat like Game written in Java, back in highschool.</description>
-    </item>
-    <item>
       <title>CSV Editor</title>
       <link>http://localhost:1313/projects/csveditor/</link>
       <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
       <guid>http://localhost:1313/projects/csveditor/</guid>
       <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
+    </item>
+    <item>
+      <title>Simpleshare</title>
+      <link>http://localhost:1313/projects/simpleshare/</link>
+      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
+      <guid>http://localhost:1313/projects/simpleshare/</guid>
+      <description>A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
+    </item>
+    <item>
+      <title>Perishable Punchers</title>
+      <link>http://localhost:1313/projects/perishable-punchers/</link>
+      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
+      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
+      <description>Mortal Kombat like Game written in Java, back in highschool.</description>
     </item>
     <item>
       <title>A Platformer of Some Sort</title>

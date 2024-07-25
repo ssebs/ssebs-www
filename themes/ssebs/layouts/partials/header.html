@@ -32,34 +32,37 @@
                 </svg>
             </button>
             {{/* Renders the main menu as links, as well as social icons */}}
-            <ul id="collapseMenu" class="flex gap-6 max-sm:flex-col hideit max-sm:gap-4">
-                {{- $currentPage := . }}
-                {{ $textColorActive := "text-gray-200" }}
-
-                {{/* Pages from main menu */}}
-                {{- range site.Menus.main }}
-                {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) |
-                absLangURL}}
-                {{- $page_url := $currentPage.RelPermalink | absLangURL }}
-                {{- if eq $menu_item_url $page_url }}
-                {{ $textColorActive = "text-primary" }}
-                {{ else }}
-                {{ $textColorActive = "text-gray-200" }}
-                {{- end }}
-                <li>
-                    <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                        class="md:hover:text-primary {{ $textColorActive }} block font-semibold">
-                        <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
-                            {{- .Name | safeHTML -}}
-                        </span>
-                    </a>
-                </li>
-                {{- end }}
-
-                <ul class="flex gap-2 sm:hidden">
+            <div id="collapseMenu" class="flex items-center hideit gap-6 text-lg">
+                <ul class="flex flex-col gap-4 sm:hidden">
                     {{- partial "socials.html" (dict "color" "#41afff" "iconsize" "1.5rem") }}
                 </ul>
-            </ul>
+                <ul class="flex max-sm:flex-col gap-4 align-middle">
+                    {{- $currentPage := . }}
+                    {{ $textColorActive := "text-gray-200" }}
+
+                    {{/* Pages from main menu */}}
+                    {{- range site.Menus.main }}
+                    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) |
+                    absLangURL}}
+                    {{- $page_url := $currentPage.RelPermalink | absLangURL }}
+                    {{- if eq $menu_item_url $page_url }}
+                    {{ $textColorActive = "text-primary" }}
+                    {{ else }}
+                    {{ $textColorActive = "text-gray-200" }}
+                    {{- end }}
+                    <li>
+                        <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
+                            class="md:hover:text-primary {{ $textColorActive }} block ">
+                            <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                                {{- .Name | safeHTML -}}
+                            </span>
+                        </a>
+                    </li>
+                    {{- end }}
+
+
+                </ul>
+            </div>
         </nav>
     </header>
 </div>

@@ -105,11 +105,10 @@
                         </a>
                     </li>
                     
-                    
                     <li>
                         <a href="/about/" title="About me"
-                            class="md:hover:text-primary text-primary block ">
-                            <span class="active">About me</span>
+                            class="md:hover:text-primary text-gray-200 block ">
+                            <span>About me</span>
                         </a>
                     </li>
                     
@@ -149,7 +148,10 @@
     <div class="m-4">
       <ul class="my-2 flex text-white-dim"><li class=""><a href="/">Home</a></li>
         <div class="mx-1" >&gt;</div>
-    <li class=""><a href="/about/">About me</a></li>
+        <li class=""><a href="/projects/">Projects
+        </a></li>
+        <div class="mx-1" >&gt;</div>
+    <li class=""><a href="/projects/simpleshare/">Simpleshare</a></li>
 </ul>
       
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -167,7 +169,9 @@
             <p>
                 I'm a professional fixer, hobbyist figure-outer.
             </p>
-        </div></div>
+        </div><a href="./about" class="rounded-md border-b-1 border-b-primary text-quaternary hover:text-quinary">
+            Read more about me.
+        </a></div>
     <div class="">
         <div class="border-b border-neutral-600 font-semibold">
             <h4>Skills:</h4>
@@ -223,149 +227,159 @@
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
 <div class="grid p-6 bg-neutral-800 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-  <h1 class="text-2xl">About me</h1>
-  <div class="post-content"><div class="grid md:grid-cols-2 justify-items-center gap-6">
-    
-    <div>
-    <p>My name is Sebastian Safari, I call myself a &ldquo;professional fixer, hobbyist figure-outer&rdquo;.</p>
-<p>Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.</p>
-<p>Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.</p>
+  <h1 class="text-2xl">Simpleshare</h1>
+  <div class="post-content"><p>A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</p>
+<p><a href="https://github.com/ssebs/simpleshare">Link to code</a></p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="home">Home</h3>
+<p><img src="https://raw.githubusercontent.com/ssebs/simpleshare/master/img/home.png" alt="home"></p>
+<h3 id="upload">Upload</h3>
+<p><img src="https://raw.githubusercontent.com/ssebs/simpleshare/master/img/upload.png" alt="upload"></p>
+<h3 id="download">Download</h3>
+<p><img src="https://raw.githubusercontent.com/ssebs/simpleshare/master/img/download.png" alt="download"></p>
+<h2 id="installation">Installation:</h2>
+<ul>
+<li>
+<p>Source:</p>
+<ul>
+<li>Install Python 3</li>
+<li>
+<pre tabindex="0"><code>$ git clone https://github.com/ssebs/simpleshare
+$ cd simpleshare/
+$ python -m venv venv
+</code></pre></li>
+<li>Linux:
+<ul>
+<li><code>$ source ./venv/bin/activate</code></li>
+</ul>
+</li>
+<li>Windows:
+<ul>
+<li><code>&gt; .\venv\Scripts\activate</code></li>
+</ul>
+</li>
+<li>
+<pre tabindex="0"><code>(venv) $ pip install -r requirements.txt
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p>Binary:</p>
+<ul>
+<li>Download a binary for your platform in the <a href="https://github.com/ssebs/simpleshare/releases">releases page</a>.</li>
+</ul>
+</li>
+<li>
+<p>PyPI:</p>
+<ul>
+<li><code>$ pip install simpleshare</code></li>
+<li><code>$ simpleshare</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="usage">Usage:</h2>
+<ul>
+<li>CLI
+<pre tabindex="0"><code>usage: simpleshare.py [-h] [--type {client,server}] [--ip IP] [FILENAME]
 
-    </div>
-    
-    <div>
-    <img class="rounded-md" width="256px" src="./img/me_vacay.jpg" alt="Photo of me on my honeymoon." />
+Local file sharing utility. Can be used as server and as a client. Run this
+without any arguments to run GUI.
 
-    </div>
-    
-</div>
-<div style="min-height: 1rem;">
-</div>
+positional arguments:
+  FILENAME              Name of the file you want to share, if running as the
+                        server.
 
-<div class="grid md:grid-cols-2 justify-items-center gap-6">
-    
-    <div>
-    <h2 id="my-background">My background</h2>
-<p>I&rsquo;ve been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.</p>
-<p>I&rsquo;ve progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.</p>
-
-    </div>
-    
-    <div>
-    <h2 id="some-of-my-hobbies">Some of my hobbies</h2>
+optional arguments:
+  -h, --help            show this help message and exit
+  --type {client,server}
+                        Type, how do you want to use this tool
+  --ip IP               IP address, only used if you&#39;re the server
+</code></pre></li>
+<li>GUI
 <ul>
-<li>Guitar
-<ul>
-<li>Mostly Metallica &amp; other rock</li>
-</ul>
-</li>
-<li>Gaming
-<ul>
-<li>VALORANT</li>
-<li>Forza</li>
-<li>Whatever is the game of the week</li>
-</ul>
-</li>
-<li>3D Printing
-<ul>
-<li>Gridfinity</li>
-<li>Custom models (Check out my <a href="/projects/go-mmp">Macro Pad</a>)</li>
-<li>Benchy</li>
-</ul>
-</li>
-<li>Programming
-<ul>
-<li>Check out my <a href="/projects">projects</a></li>
+<li>Double click the exe / binary.</li>
 </ul>
 </li>
 </ul>
-
-    </div>
-    
+<h2 id="building">Building</h2>
+<ul>
+<li>Linux:
+<ul>
+<li><code>$ make</code></li>
+</ul>
+</li>
+<li>Windows:
+<ul>
+<li><code>&gt; .\Makefile.bat</code></li>
+</ul>
+</li>
+<li><code>(venv) $ pyinstaller simpleshare/__main__.py --clean -F -n simpleshare</code></li>
+</ul>
+<h2 id="todo">TODO:</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Structure program
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 3 connections
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Server: Share filename (Multicast)</li>
+<li><input checked="" disabled="" type="checkbox"> Client: Reply to server saying that you want the file (UDP)</li>
+<li><input checked="" disabled="" type="checkbox"> Server: Send file to client (TCP)</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> CLI</li>
+<li><input checked="" disabled="" type="checkbox"> GUI</li>
+</ul>
+</li>
+<li>Server
+<ul>
+<li><input checked="" disabled="" type="checkbox"> &ldquo;Broadcast&rdquo; (multicast) that you&rsquo;re sharing &ldquo;x&rdquo; file</li>
+<li><input checked="" disabled="" type="checkbox"> Have server send files if requested to IP found.</li>
+<li><input checked="" disabled="" type="checkbox"> CLI</li>
+<li><input checked="" disabled="" type="checkbox"> GUI
+<ul>
+<li><input disabled="" type="checkbox"> DnD</li>
+<li><input checked="" disabled="" type="checkbox"> Custom timout</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Client
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Listen to see if anyone is sharing files</li>
+<li><input checked="" disabled="" type="checkbox"> List available files</li>
+<li><input checked="" disabled="" type="checkbox"> Download files to specified file name/path</li>
+<li><input checked="" disabled="" type="checkbox"> CLI</li>
+<li><input checked="" disabled="" type="checkbox"> GUI</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Make this work with 1 file, 1 client</li>
+<li><input disabled="" type="checkbox"> Make this work with 1 file, 2 clients</li>
+<li><input disabled="" type="checkbox"> Make this work with 2 files (2 servers), 1 client</li>
+<li><input disabled="" type="checkbox"> Make this work with 2 files (2 servers), 2 client</li>
+<li><input checked="" disabled="" type="checkbox"> Binary output (.exe, .app, etc.)
+<ul>
+<li><input disabled="" type="checkbox"> Icon support</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Refactor + document</li>
+<li><input disabled="" type="checkbox"> Unit Tests</li>
+</ul>
+<h2 id="bugs">Bugs:</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Threads won&rsquo;t stop properly</li>
+<li><input disabled="" type="checkbox"> Can&rsquo;t have 2 clients</li>
+<li><input disabled="" type="checkbox"> Can&rsquo;t have 2 servers</li>
+<li>GUI
+<ul>
+<li><input disabled="" type="checkbox"> Styling</li>
+<li><input checked="" disabled="" type="checkbox"> Only Choose IP if more than 1 available</li>
+<li><input disabled="" type="checkbox"> Share Thread issues</li>
+</ul>
+</li>
+</ul>
+<h2 id="license">License</h2>
+<p><a href="./LICENSE">MIT</a> © 2019 Sebastian Safari</p>
 </div>
-<h1 id="todo-add-image-here">TODO: ADD IMAGE HERE</h1>
-<h2 id="where-i-am-now">Where I am now</h2>
-<p>In my current role as a Site Reliability Engineer at Meta, I&rsquo;ve led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I&rsquo;ve played a key role in driving project success across many projects.</p>
-<h3 id="the-way-i-like-to-work">The way I like to work:</h3>
-<ul>
-<li>With efficiency, I try to think of better / more efficient ways to solve problems</li>
-<li>Doing things the right way, I&rsquo;m not a fan of half-assing work. I&rsquo;d rather do it the right way.</li>
-<li>Focus on the details, but also think of the bigger picture.</li>
-<li>I typically think of the MVP - the Minimum Viable Product as the goal. Once that&rsquo;s complete we can think about soft requirements and fun features.</li>
-<li>Teach others as I learn, why not share my new found knowledge! I love to both mentor, and learn from others.</li>
-</ul>
-<div style="min-height: 1rem;">
-</div>
-<h2 id="skills">Skills</h2>
-<ul>
-<li>Python, Golang, JavaScript, Bash, PowerShell</li>
-<li>Docker, Chef, Ansible, Terraform</li>
-<li>Load Balancing, NGINX, Apache, CI/CD, Docker, SQL, SSH, Disaster Recovery (DR)</li>
-<li>LucidChart, ExcaliDraw, Markdown, MS Office (Word, Excel, etc.)</li>
-<li>DNS, DHCP, IPAM, HTTP, TLS, Firewall</li>
-<li>M365, SharePoint, Azure, Oracle Cloud, AWS, Active Directory, SAML, SSO</li>
-</ul>
-<div style="min-height: 1rem;">
-</div>
-<h2 id="soft-skills">Soft skills</h2>
-<ul>
-<li><strong>Communication:</strong> Effectively communicate complex technical concepts to non-technical stakeholders, both in writing and verbally.</li>
-<li><strong>Problem Solving:</strong> Analytical thinker with a proven ability to troubleshoot and provide efficient solutions.</li>
-<li><strong>Adaptability:</strong> Flexible and comfortable in dynamic, fast-paced environments, adapting to changing requirements. Quick learner and a team player.</li>
-<li><strong>Leadership:</strong> Skilled in motivating teams, leading initiatives, and contributing to a positive work culture.</li>
-<li><strong>Time Management:</strong> Efficiently manage time and priorities to meet deadlines, demonstrating strong organizational skills.</li>
-<li><strong>Attention to Detail:</strong> Meticulous attention to detail in both technical work and documentation, ensuring accuracy and precision in all tasks.</li>
-<li><strong>Initiative:</strong> Proactive and self-motivated, taking the initiative to address issues and propose improvements.</li>
-</ul>
-<div style="min-height: 2rem;">
-</div>
-<h2 id="resume-copypasta">Resume copypasta</h2>
-<p>The content below is basically copy/pasted from my resume.</p>
-<h2 id="success-stories">Success Stories</h2>
-<h3 id="mentoring">Mentoring</h3>
-<ul>
-<li>Orchestrated and delivered insightful Lunch &amp; Learn sessions, showcasing expertise in creating comprehensive architecture diagrams and implementing code quality enhancements.</li>
-<li>Contributed to the team&rsquo;s success by ensuring on-time project delivery and offering guidance and practical tips for future project preparedness.</li>
-</ul>
-<h3 id="work-projects">Work Projects</h3>
-<h4 id="meta-application-onboardings">Meta Application Onboardings</h4>
-<ul>
-<li>Led multiple successful 3rd party app onboardings.</li>
-<li>Developed project briefs outlining scope, metrics, and milestones.</li>
-<li>Architected and implemented DR solutions for non-natively supported applications.</li>
-<li>Delegated tasks effectively to ensure project success.</li>
-<li>Automated processes post go-live and created comprehensive documentation.</li>
-</ul>
-<h4 id="parc-ipamdds-migration">PARC IPAM/DDS Migration</h4>
-<ul>
-<li>Migrated DNS, DHCP, and IPAM infrastructure from legacy to industry-standard solutions.</li>
-</ul>
-<h4 id="parc-research-line-db">PARC Research Line DB</h4>
-<ul>
-<li>Developed a full-stack web app to manage tasks, equipment, and users for a crucial revenue-generating asset.</li>
-</ul>
-<h4 id="meta-process-improvements-for-my-team">Meta Process Improvements (for my team)</h4>
-<ul>
-<li>Implemented task tagging and automation for improved efficiency.</li>
-<li>Standardized documentation for high-quality impact metrics.</li>
-</ul>
-<p>Let&rsquo;s connect and explore how my skills and experiences align with your team&rsquo;s objectives, and how together, we can navigate the dynamic landscape of systems and software engineering.</p>
-<h2 id="work-background">Work background</h2>
-<ul>
-<li>PARC
-<ul>
-<li>Registrar</li>
-<li>System Administrator</li>
-<li>Systems and Software Engineer</li>
-</ul>
-</li>
-<li>Meta (Crystal Equation)
-<ul>
-<li>Application Engineer L2</li>
-<li>Site Reliability Engineer L3</li>
-</ul>
-</li>
-</ul></div>
 </div>
         </div>
       </div>
@@ -378,7 +392,7 @@
             <div class="flex justify-between items-end gap-6 min-w-80">
                 <img class="w-28 h-fit" src="./img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="./" class="font-medium hover:text-quinary">About me</a>
+                    <a href="./" class="font-medium hover:text-quinary">Simpleshare</a>
                     <ul>
                         <li class=''>
                             <a href="/projects/" title="My Projects"

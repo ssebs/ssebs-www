@@ -6,7 +6,7 @@
     <description>Recent content in Python on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jun 2024 17:42:08 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 09:25:19 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSV Editor</title>
@@ -14,6 +14,13 @@
       <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
       <guid>http://localhost:1313/projects/csveditor/</guid>
       <description>A lightweight GUI csv editor written in python.&#xA;Link to code: https://github.</description>
+    </item>
+    <item>
+      <title>Simpleshare</title>
+      <link>http://localhost:1313/projects/simpleshare/</link>
+      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
+      <guid>http://localhost:1313/projects/simpleshare/</guid>
+      <description>A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
     </item>
   </channel>
 </rss>
