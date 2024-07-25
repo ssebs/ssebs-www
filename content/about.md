@@ -21,9 +21,12 @@ Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames,
 {{< /rawhtml >}}
 
 {{< /columns >}}
+
 <!--more-->
 
-{{% spacer 1rem %}}
+{{% spacer 2rem %}}
+<hr/>
+{{% spacer 2rem %}}
 
 {{< columns >}}
 ## My background
@@ -50,12 +53,10 @@ I've progressed through various roles, starting as a Registrar at PARC, and adva
 
 {{< /columns >}}
 
-
-# TODO: ADD IMAGE HERE
+{{% spacer 1rem %}}
 
 ## Where I am now
 In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success across many projects.
-
 
 ### The way I like to work:
 - With efficiency, I try to think of better / more efficient ways to solve problems
@@ -85,47 +86,37 @@ In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd
 - **Attention to Detail:** Meticulous attention to detail in both technical work and documentation, ensuring accuracy and precision in all tasks.  
 - **Initiative:** Proactive and self-motivated, taking the initiative to address issues and propose improvements.
 
+{{% spacer 1rem %}}
 
-
-{{% spacer 2rem %}}
-
-## Resume copypasta
-The content below is basically copy/pasted from my resume.
-
-## Success Stories
-
-### Mentoring
+## Mentoring
 - Orchestrated and delivered insightful Lunch & Learn sessions, showcasing expertise in creating comprehensive architecture diagrams and implementing code quality enhancements.
 - Contributed to the team's success by ensuring on-time project delivery and offering guidance and practical tips for future project preparedness.
 
-### Work Projects
-#### Meta Application Onboardings
+{{% spacer 1rem %}}
+
+## Work Projects
+
+{{% spacer 1rem %}}
+
+### Meta Application Onboardings
 - Led multiple successful 3rd party app onboardings.
 - Developed project briefs outlining scope, metrics, and milestones.
 - Architected and implemented DR solutions for non-natively supported applications.
 - Delegated tasks effectively to ensure project success.
 - Automated processes post go-live and created comprehensive documentation.
 
-#### PARC IPAM/DDS Migration
+{{% spacer 1rem %}}
+
+### PARC IPAM/DDS Migration
 - Migrated DNS, DHCP, and IPAM infrastructure from legacy to industry-standard solutions.
 
-#### PARC Research Line DB
+{{% spacer 1rem %}}
+
+### PARC Research Line DB
 - Developed a full-stack web app to manage tasks, equipment, and users for a crucial revenue-generating asset.
 
-#### Meta Process Improvements (for my team)
+{{% spacer 1rem %}}
+
+### Process Improvements at Meta (for my team)
 - Implemented task tagging and automation for improved efficiency.
 - Standardized documentation for high-quality impact metrics.
-
-
-
-Let's connect and explore how my skills and experiences align with your team's objectives, and how together, we can navigate the dynamic landscape of systems and software engineering.
-
-
-## Work background
-- PARC
-  - Registrar
-  - System Administrator
-  - Systems and Software Engineer
-- Meta (Crystal Equation)
-  - Application Engineer L2
-  - Site Reliability Engineer L3
