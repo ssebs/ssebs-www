@@ -7,7 +7,6 @@ ssebs.com website code.
 - MVP website:
   - [ ] Add anchor to post-content titles
   - [ ] Add socials list under C2A hero
-  - [ ] CI/CD to build docker img
 - After MVP:
   - [ ] Sort tags on projects
   - [ ] Move all images to projects folder
