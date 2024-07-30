@@ -11,7 +11,7 @@ RUN npm run build
 # Build site
 WORKDIR /src/
 ENV HUGO_ENV=production
-ENV HUGO_PARAMS_USEBASEURL=true 
+ENV HUGO_PARAMS_USEBASEURL=false
 
 # Run server
 EXPOSE 8080
