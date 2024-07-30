@@ -7,7 +7,6 @@ ssebs.com website code.
   - [ ] Add anchor to post-content titles
   - [ ] Add socials list under C2A hero
   - [ ] CI/CD to build docker img
-  - [ ] Publish from docker img
 - After MVP:
   - [ ] Sort tags on projects
   - [ ] Move all images to projects folder
@@ -49,6 +48,10 @@ ssebs.com website code.
 
 ### Build
 - `HUGO_ENV=production HUGO_PARAMS_USEBASEURL=true hugo --baseURL "https://your-url.com/" --minify`
+
+### Docker
+- `docker build -t ssebs-www .`
+- `docker run -p 8080:8080 ssebs-www`
 
 ## License
 [MIT](./LICENSE)
