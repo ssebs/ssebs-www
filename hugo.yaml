@@ -9,7 +9,7 @@ summaryLength: 10
 
 params:
   useBaseURL: false
-  description: Hi, I'm Sebastian Safari. I'm an SRE who likes to make side projects, check them out!
+  description: My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figure-outer". Basically, I work as a Site Reliability Engineer and like to program various projects.
   author: Sebastian Safari
   copyright_start_year: 2015
   socials:

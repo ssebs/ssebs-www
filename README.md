@@ -50,8 +50,8 @@ ssebs.com website code.
 - `HUGO_ENV=production HUGO_PARAMS_USEBASEURL=true hugo --baseURL "https://your-url.com/" --minify`
 
 ### Docker
-- `docker build -t ssebs-www .`
-- `docker run -p 8080:8080 ssebs-www`
+- `docker build -t ssebs/ssebs-www .`
+- `docker run -p 8080:8080 ssebs/ssebs-www`
 
 ## License
 [MIT](./LICENSE)

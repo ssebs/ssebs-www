@@ -10,7 +10,7 @@ date: "2024-05-31T15:43:45-07:00"
 {{< columns >}}
 My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figure-outer". 
 
-Basically, I work as a Site Reliability Engineer and like to program stuff on the side. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
+Basically, I work as a Site Reliability Engineer and like to program various projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
 
 Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.
 
