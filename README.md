@@ -31,7 +31,7 @@ ssebs.com website code.
 ![home](.excalidraw.png)
 
 ## Dev setup
-- git clone https://github.com/ssebs/ssebs-www
+- `git clone https://github.com/ssebs/ssebs-www`
 - Install [hugo](https://gohugo.io/)
   - Either manually, or use the `setup_env.sh` script
 - For ssebs Hugo theme, you need [Node.js](https://nodejs.org/en/download/package-manager) and the [Tailwind CLI](https://tailwindcss.com/docs/installation)

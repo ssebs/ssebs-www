@@ -16,6 +16,13 @@
       <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
     </item>
     <item>
+      <title>Simpleshare</title>
+      <link>http://localhost:1313/projects/simpleshare/</link>
+      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
+      <guid>http://localhost:1313/projects/simpleshare/</guid>
+      <description>Github Repo&#xA;A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application.</description>
+    </item>
+    <item>
       <title>nccsv</title>
       <link>http://localhost:1313/projects/nccsv/</link>
       <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
@@ -28,13 +35,6 @@
       <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
       <guid>http://localhost:1313/projects/peopledb/</guid>
       <description>Github Repo&#xA;Person Database using python, flask, sqlite3, react.&#xA;Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description>
-    </item>
-    <item>
-      <title>Simpleshare</title>
-      <link>http://localhost:1313/projects/simpleshare/</link>
-      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
-      <guid>http://localhost:1313/projects/simpleshare/</guid>
-      <description>Github Repo&#xA;A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
     </item>
     <item>
       <title>Clean Mac Address</title>

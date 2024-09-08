@@ -2,7 +2,7 @@
 <html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <base href="/" /><title> Images to PDF </title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-  <meta name="description" content="Hi, I&#39;m Sebastian Safari. I&#39;m an SRE who likes to make side projects, check them out!">
+  <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -244,58 +244,44 @@
         class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
         programming
       </a>
-      <a href="./tags/gui"
-        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-        gui
-      </a>
     </div></div>
   <div class="post-content"><p><a href="https://github.com/ssebs/images-to-pdf">Github Repo</a></p>
-<p><img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="gif of using the app"></p>
+<p><img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="Usage Example"></p>
 <p>Convert a selection of images files into a single PDF.</p>
+<p>I made a tool to convert multiple image files into a single PDF, addressing the limitation of
+my wife’s scanner by efficiently merging individual images into a single cohesive document.</p>
+<blockquote>
+<p>Written in go, there are no dependencies to worry about when sharing the tool!</p>
+</blockquote>
 <h2 id="building">Building</h2>
 <ul>
-<li>git clone <a href="https://github.com/ssebs/images-to-pdf">https://github.com/ssebs/images-to-pdf</a>
+<li>From source:
+<ul>
+<li><code>git clone https://github.com/ssebs/images-to-pdf</code>
 <ul>
 <li>You&rsquo;ll need to install a C compiler. See <a href="https://developer.fyne.io/started/">https://developer.fyne.io/started/</a></li>
 </ul>
 </li>
 <li><code>go build -o img2pdf.exe .\cmd\main.go</code></li>
-<li>Once the GUI is working&hellip;
-<ul>
-<li>Make sure <code>fyne</code> CLI is installed
-<ul>
-<li><code>go install fyne.io/fyne/v2/cmd/fyne@latest</code></li>
 </ul>
 </li>
-<li>Windows:
+<li>From go pkg
 <ul>
-<li><code>PS go-mmp&gt; fyne package -os windows</code></li>
-</ul>
-</li>
-<li>Mac:
-<ul>
-<li><code>$ fyne package -os darwin</code></li>
-</ul>
-</li>
-<li>Linux:
-<ul>
-<li><code>$ fyne package -os linux</code></li>
-</ul>
-</li>
+<li><code>go install github.com/ssebs/images-to-pdf@latest</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="cli-usage">CLI Usage</h2>
-<pre tabindex="0"><code>PS F:\LocalProgramming\images-to-pdf&gt; .\img2pdf.exe -h
-Images to PDF
-Usage of F:\LocalProgramming\images-to-pdf\img2pdf.exe:
-  -a=&lt;val&gt;    Whether or not to archive images (default to yes)
-  -d string
-        Folder where images are stored (default &#34;.&#34;)
-  -o string
-        Filename of PDF file (default &#34;out.pdf&#34;)
-PS F:\LocalProgramming\images-to-pdf&gt; 
-</code></pre><h2 id="how-to-run-cli">How to run CLI</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>PS F:\LocalProgramming\images-to-pdf&gt; .\img2pdf.exe -h
+</span></span><span style="display:flex;"><span>Images to PDF
+</span></span><span style="display:flex;"><span>Usage of F:\LocalProgramming\images-to-pdf\img2pdf.exe<span style="color:#960050;background-color:#1e0010">:</span>
+</span></span><span style="display:flex;"><span>  -a    Whether or not to archive images (use a=false <span style="color:#66d9ef">if</span> needed) (<span style="color:#66d9ef">default</span> true)
+</span></span><span style="display:flex;"><span>  -d string
+</span></span><span style="display:flex;"><span>        Folder where images are stored (<span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;.&#34;</span>)
+</span></span><span style="display:flex;"><span>  -o string
+</span></span><span style="display:flex;"><span>        Filename of PDF file (<span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;out.pdf&#34;</span>)
+</span></span><span style="display:flex;"><span>PS F:\LocalProgramming\images-to-pdf&gt; 
+</span></span></code></pre></div><h2 id="how-to-run-cli">How to run CLI</h2>
 <ul>
 <li>Download <a href="https://github.com/ssebs/images-to-pdf/releases/">img2pdf.exe from the releases page</a></li>
 <li>Move the <code>img2pdf.exe</code> file to the folder you want to convert images</li>

@@ -16,6 +16,13 @@
       <description>go-mmp&#xA;Github Repo&#xA;Simplify task automation with an arduino and some 3D printing.</description>
     </item>
     <item>
+      <title>Images to PDF</title>
+      <link>http://localhost:1313/projects/img-2-pdf/</link>
+      <pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate>
+      <guid>http://localhost:1313/projects/img-2-pdf/</guid>
+      <description>Github Repo&#xA;Convert a selection of images files into a single PDF.</description>
+    </item>
+    <item>
       <title>CSV Editor</title>
       <link>http://localhost:1313/projects/csveditor/</link>
       <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
@@ -23,11 +30,11 @@
       <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
     </item>
     <item>
-      <title>Images to PDF</title>
-      <link>http://localhost:1313/projects/img-2-pdf/</link>
-      <pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate>
-      <guid>http://localhost:1313/projects/img-2-pdf/</guid>
-      <description>Github Repo&#xA;Convert a selection of images files into a single PDF.</description>
+      <title>Simpleshare</title>
+      <link>http://localhost:1313/projects/simpleshare/</link>
+      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
+      <guid>http://localhost:1313/projects/simpleshare/</guid>
+      <description>Github Repo&#xA;A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application.</description>
     </item>
     <item>
       <title>Perishable Punchers</title>
@@ -63,13 +70,6 @@
       <pubDate>Wed, 24 Jul 2024 21:44:53 -0700</pubDate>
       <guid>http://localhost:1313/projects/serverclip/</guid>
       <description>Github Repo&#xA;Tool for copying contents of a file over nested ssh connections.</description>
-    </item>
-    <item>
-      <title>Simpleshare</title>
-      <link>http://localhost:1313/projects/simpleshare/</link>
-      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
-      <guid>http://localhost:1313/projects/simpleshare/</guid>
-      <description>Github Repo&#xA;A local file sharing utility written in Python. Uses multicast UDP to share the list of files, and TCP to transfer the files themselves.</description>
     </item>
     <item>
       <title>A Platformer of Some Sort</title>
