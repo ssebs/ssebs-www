@@ -6,7 +6,7 @@ ssebs.com website code.
 ## TODO:
 - [x] Fix iOS version (stretched img)
 - [x] Remove "me" from navbar
-- [ ] Add more details to one project at the bottom
+- [x] Add more details to one project at the bottom
 - [ ] CDN Assets (resume, images) for faster loading
 - [ ] Soon™️:
   - [ ] Sort tags on projects

@@ -13,7 +13,7 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;div class=&#34;grid md:grid-cols-2 justify-items-center gap-6&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program various projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;&#xA;&lt;p&gt;Online, I go by &lt;span class=&#34;text-quaternary&#34;&gt;ssebs&lt;/span&gt;. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.&lt;/p&gt;&#xA;&lt;p&gt;Want to see what kind of work I&amp;rsquo;ve done? Download my &lt;a href=&#34;http://localhost:1313/media/Sebastian-Safari-Resume.pdf&#34;&gt;resume!&lt;/a&gt;&lt;/p&gt;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;img src=&#34;./img/me_vacay.jpg&#34; alt=&#34;Photo of me on my honeymoon.&#34; class=&#34;w-[256px] rounded-md border-2 border-primary&#34;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/div&gt;</description>
+      <description>&lt;div class=&#34;grid md:grid-cols-2 justify-items-center gap-6&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program various projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;&#xA;&lt;p&gt;Online, I go by &lt;span class=&#34;text-quaternary&#34;&gt;ssebs&lt;/span&gt;. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.&lt;/p&gt;&#xA;&lt;p&gt;Want to see what kind of work I&amp;rsquo;ve done? Download my &lt;a href=&#34;http://localhost:1313/media/Sebastian-Safari-Resume.pdf&#34;&gt;resume!&lt;/a&gt;&lt;/p&gt;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;img src=&#34;./img/me_vacay.jpg&#34; alt=&#34;Photo of me on my honeymoon.&#34; class=&#34;w-[256px] rounded-md border-2 border-primary&#34; width=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Contact me</title>
@@ -27,7 +27,7 @@
       <link>http://localhost:1313/projects/go-mmp/</link>
       <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
       <guid>http://localhost:1313/projects/go-mmp/</guid>
-      <description>go-mmp&#xA;Github Repo&#xA;Simplify task automation with an arduino and some 3D printing.</description>
+      <description>go-mmp&#xA;Github Repo&#xA;Automate computer tasks or add new shortcuts with an arduino and 3D printing.</description>
     </item>
     <item>
       <title>Images to PDF</title>
