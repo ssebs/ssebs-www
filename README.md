@@ -4,10 +4,11 @@
 ssebs.com website code. 
 
 ## TODO:
-- MVP website:
-  - [ ] Add anchor to post-content titles
-  - [ ] Add socials list under C2A hero
-- After MVP:
+- [x] Fix iOS version (stretched img)
+- [x] Remove "me" from navbar
+- [ ] Add more details to one project at the bottom
+- [ ] CDN Assets (resume, images) for faster loading
+- [ ] Soon™️:
   - [ ] Sort tags on projects
   - [ ] Move all images to projects folder
   - [ ] Contact form - Supabase backend

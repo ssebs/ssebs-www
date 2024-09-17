@@ -51,7 +51,11 @@
                         <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
                             class="md:hover:text-quaternary {{ $textColorActive }} block ">
                             <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
-                                {{- .Name | safeHTML -}}
+                                {{- with .Page }}
+                                    {{- .Slug | title | safeHTML -}}
+                                {{- else }}
+                                    {{- .Name | safeHTML }}
+                                {{- end }}
                             </span>
                         </a>
                     </li>
