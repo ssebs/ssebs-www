@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1040,6 +1040,10 @@ select {
 
 .-top-6 {
   top: -1.5rem;
+}
+
+.end-1 {
+  inset-inline-end: 0.25rem;
 }
 
 .top-0 {
@@ -4009,10 +4013,6 @@ body {
     max-width: 56rem;
   }
 
-  .md\:max-w-md {
-    max-width: 28rem;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -4072,10 +4072,6 @@ body {
 
   .lg\:max-w-6xl {
     max-width: 72rem;
-  }
-
-  .lg\:max-w-md {
-    max-width: 28rem;
   }
 
   .lg\:grid-cols-4 {

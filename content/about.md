@@ -71,5 +71,5 @@ In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd
 
 ## My resume
 {{< rawhtml >}}
-<iframe src="/media/Sebastian-Safari-Resume.pdf" width="100%" height="800px">
+<iframe src="/media/Sebastian-Safari-Resume.pdf" width="100%" height="800px"></iframe>
 {{</ rawhtml >}}
