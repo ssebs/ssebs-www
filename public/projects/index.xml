@@ -6,7 +6,7 @@
     <description>Recent content in My Projects on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jul 2024 22:03:27 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2024 17:53:17 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini Macro Pad</title>
@@ -42,6 +42,13 @@
       <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
       <guid>http://localhost:1313/projects/perishable-punchers/</guid>
       <description>Github Repo.&#xA;Mortal Kombat like Game written in Java, back in highschool.</description>
+    </item>
+    <item>
+      <title>MVC Tip Calculator</title>
+      <link>http://localhost:1313/projects/mvctipcalc/</link>
+      <pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate>
+      <guid>http://localhost:1313/projects/mvctipcalc/</guid>
+      <description>Github Repo&#xA;Simple Model View Controller Fyne project that doubles as a tip calculator.</description>
     </item>
     <item>
       <title>Tipr</title>
