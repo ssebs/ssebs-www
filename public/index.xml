@@ -6,7 +6,7 @@
     <description>Recent content on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2024 17:53:17 -0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2024 22:02:05 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
@@ -70,6 +70,13 @@
       <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
       <guid>http://localhost:1313/projects/tipr/</guid>
       <description>Github Repo&#xA;A tip calculator that shows the tip amount and the total amount.</description>
+    </item>
+    <item>
+      <title>Building a GUI in Golang to speed up my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>Read the technical details on the project page&#xA;The story I was playing video games and was getting tired of typing &amp;ldquo;gg&amp;rdquo; manually.</description>
     </item>
     <item>
       <title>nccsv</title>
