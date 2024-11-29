@@ -1,7 +1,7 @@
 # ssebs-www
 [![Docker Image CI](https://github.com/ssebs/ssebs-www/actions/workflows/docker-image.yml/badge.svg)](https://github.com/ssebs/ssebs-www/actions/workflows/docker-image.yml)
 
-ssebs.com website code. 
+https://ssebs.com website code. 
 
 ## TODO:
 - [x] Fix iOS version (stretched img)
