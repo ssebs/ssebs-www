@@ -18,7 +18,7 @@ Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-
 
 <--COLSPLIT-->
 
-{{< image src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." class="w-[256px] rounded-md border-2 border-primary" >}}
+{{< image src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." width="360px" class="rounded-md border-2 border-primary" >}}
 
 {{< /columns >}}
 

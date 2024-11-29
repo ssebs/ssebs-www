@@ -1,15 +1,27 @@
 {{ with .Site.GetPage "projects" }}
 
-<section class="bg-neutral-900 flex justify-center w-full">
+<section class="bg-neutral-900 grid justify-center w-full pb-6">
     {{ with index .Pages 0}}
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
-        <h3 class="text-3xl font-semibold">More about my {{ .Title | safeHTML }} project.</h3>
+        <h3 class="text-3xl font-semibold">
+            A little bit more about the 
+            <a href="{{ .RelPermalink }}" class="text-quinary underline font-normal">{{.Title | safeHTML}}</a>
+        </h3>
          <div class="text-white-dim grid">
             {{- if .Content }}
-            <div class="post-content">{{ .Content }}</div>
+            <div class="post-content">{{ .Summary }}</div>
             {{- end }}
          </div>
     </div>
+    {{/* C2A */}}
+    {{- if not .Params.NoC2A -}}
+    <div class="mb-6">
+        <a class="text-base p-3 max-w-fit bg-quaternary text-neutral-900 hover:bg-quinary font-medium rounded-md"
+            href="{{- .RelPermalink -}}">
+            {{- with .Params.C2AText -}}{{ . }}{{- else -}} See more...{{- end -}}
+        </a>
+    </div>
+    {{- end }}
     {{ end }}
 </section>
 {{- else }}

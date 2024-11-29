@@ -14,8 +14,9 @@
 
     <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
   </a>
+  <div class="self-end">
   {{/* tags list */}}
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+  <div class="flex flex-wrap gap-2 text-base h-fit">
     {{ range .Params.tags }}
     <a href="./tags/{{- . -}}"
       class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
@@ -23,4 +24,8 @@
     </a>
     {{- end }}
   </div>
+  <div class="text-sm italic mt-2 text-white-dim ">
+    {{ .Date | time.Format ":date_medium" }}
+  </div>
+</div>
 </div>

@@ -35,6 +35,8 @@ It works with hardware like Arduino-based macro pads or directly through a deskt
 </div>
 </div>
 
+<!--more-->
+
 {{< spacer 2rem >}}
 
 ## Getting started

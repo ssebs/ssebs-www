@@ -1,7 +1,7 @@
 ---
 title: Contact me
 slug: contact
-shortdesc: Ping me!
+shortdesc: Let's Connect.
 sectionbg: transparent-bg
 NoC2A: true
 menus: main
