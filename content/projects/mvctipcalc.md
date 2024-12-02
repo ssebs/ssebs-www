@@ -17,6 +17,6 @@ The purpose of this is for me to learn MVC architecture, as well as using this a
 ![screenshot](https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true)
 
 ## More about why
-I created this side project while working on https://ssebs.com/projects/go-mmp/. I was expanding the UI from a simple grid of buttons to include a Drag and Drop interface to edit the Macros. 
+I created this side project while working on my [Mini Macro pad](/projects/go-mmp/). I was expanding the UI from a simple grid of buttons to include a Drag and Drop interface to edit the Macros. 
 
-If you'd like to read more, check out the [blog entry](/blog/LearningMVCTipCalc/)
+If you'd like to read more, check out the [blog entry](/blog/mvctipcalc/)

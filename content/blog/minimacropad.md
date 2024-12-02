@@ -8,7 +8,7 @@ weight: 20
 tags: [golang, programming, 3d-printing, arduino, gui]
 ---
 
-> Read the technical details on the [project page](https://ssebs.com/projects/go-mmp)
+> Read the technical details on the [project page](/projects/go-mmp)
 
 ## The story
 I was playing video games and was getting tired of typing "gg" manually. I knew it could be automated in some way, and I had a 3D printer and an Arduino laying around, so I got to work.
@@ -62,6 +62,7 @@ I started designing a quick UI, and got to work on my `v2` release.
 ### Drag and Drop
 
 ### Learning MVC with a tip calculator
-
+At this point, I felt I needed to learn MVC. 
+If you'd like to read more about that, check out the [blog entry](/blog/mvctipcalc/)
 
 REPLACE_ME_WITH_COMMENTS_SECTION

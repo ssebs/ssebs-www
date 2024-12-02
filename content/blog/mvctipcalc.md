@@ -1,13 +1,22 @@
 ---
 title: 'Learning the MVC pattern by making a Tip Calculator'
-slug: LearningMVCTipCalc
+slug: MVCTipCalc
 shortdesc: Learning the MVC pattern for my MiniMacroPad by making a Tip Calculator in Go with fyne.
 feature: https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true
 date: 2024-11-17T17:30:27-08:00
 weight: 24
 tags: [golang, programming, gui]
 ---
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+
 I made a basic tip calculator to learn the Model View Controller (MVC) pattern. But why? And how?
+
+Also see the [project page](/projects/mvctipcalc/)
+</div>
+<img src="./img/mvc.webp" width="360px" alt="MVC Diagram">
+</div>
+
 
 ### MVC?
 If you aren't already familiar with MVC, the main thing to know is that it creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.
