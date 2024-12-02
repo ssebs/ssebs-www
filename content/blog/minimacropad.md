@@ -4,8 +4,8 @@ slug: minimacropad
 shortdesc: The story of how my Mini Macro Pad was created and how far it's come.
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
 date: 2024-11-27T22:02:05-08:00
-weight: 25
-tags: []
+weight: 20
+tags: [golang, programming, 3d-printing, arduino, gui]
 ---
 
 > Read the technical details on the [project page](https://ssebs.com/projects/go-mmp)

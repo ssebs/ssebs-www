@@ -14,6 +14,9 @@
     <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-11-27T22:00:14-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/minimacropad/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/projects/go-mmp/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
@@ -29,14 +32,14 @@
     <loc>http://localhost:1313/projects/perishable-punchers/</loc>
     <lastmod>2024-06-23T17:43:06-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/learningmvctipcalc/</loc>
+    <lastmod>2024-11-17T17:30:27-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/projects/mvctipcalc/</loc>
     <lastmod>2024-11-14T17:53:17-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/tipr/</loc>
     <lastmod>2024-07-24T21:53:44-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/minimacropad/</loc>
-    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/nccsv/</loc>
     <lastmod>2024-07-24T22:03:27-07:00</lastmod>
@@ -68,13 +71,25 @@
     <loc>http://localhost:1313/projects/sir-flap-a-lot/</loc>
     <lastmod>2024-07-07T15:32:42-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
-    <lastmod>2024-07-24T22:03:27-07:00</lastmod>
+    <loc>http://localhost:1313/tags/3d-printing/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2024-07-24T22:03:27-07:00</lastmod>
+    <loc>http://localhost:1313/tags/arduino/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/golang/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gui/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/programming/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-11-27T22:02:05-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-07-24T22:03:27-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tui/</loc>
@@ -92,17 +107,8 @@
     <loc>http://localhost:1313/tags/webdev/</loc>
     <lastmod>2024-07-24T22:03:20-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/golang/</loc>
-    <lastmod>2024-07-24T21:53:52-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/cars/</loc>
     <lastmod>2024-07-24T21:20:49-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/3d-printing/</loc>
-    <lastmod>2024-07-24T20:39:10-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/gui/</loc>
-    <lastmod>2024-07-23T09:25:19-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/gamedev/</loc>
     <lastmod>2024-07-07T15:32:42-07:00</lastmod>
@@ -115,9 +121,6 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-05-18T14:12:18-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/arduino/</loc>
-    <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url>

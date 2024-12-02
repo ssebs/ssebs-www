@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/blog/minimacropad/</guid>
       <description>Read the technical details on the project page&#xA;The story I was playing video games and was getting tired of typing &amp;ldquo;gg&amp;rdquo; manually.</description>
     </item>
+    <item>
+      <title>Learning the MVC pattern by making a Tip Calculator</title>
+      <link>http://localhost:1313/blog/learningmvctipcalc/</link>
+      <pubDate>Sun, 17 Nov 2024 17:30:27 -0800</pubDate>
+      <guid>http://localhost:1313/blog/learningmvctipcalc/</guid>
+      <description>I made a basic tip calculator to learn the Model View Controller (MVC) pattern.</description>
+    </item>
   </channel>
 </rss>
