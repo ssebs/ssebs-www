@@ -7,7 +7,7 @@ date: 2024-11-17T17:30:27-08:00
 weight: 24
 tags: [golang, programming, gui]
 ---
-> Also see the [project page](/projects/mvctipcalc/)
+> Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
 
 <div class="grid grid-cols-2 justify-between">
 <div>
@@ -52,14 +52,120 @@ Before I got started with my Mini Macro Pad, I wanted to make a real MVC project
 ## Learning MVC with a tip calculator
 That simple MVC project is a tip calculator. I'll keep writing it in Golang + Fyne, and since I had already created a [tip calculator](https://github.com/ssebs/tipr) or [two](https://github.com/ssebs/tipr-mobile), I had a starting place.
 
-The main difference I learned about
+The main difference I learned about how I was writing my widgets before, and using MVC, is that I'd need 3 files for each component that manages data, or state, in some way.
 
-Here's a screenshot of the completed project, and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
+### The Model
+For my tip calculator, I had two inputs:
+1) The bill amount
+2) The tip percentage
 
-![screenshot](https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true)
+With those, I can (very easily) calculate both the tip amount, and the total amount (bill + tip).
+
+I needed to keep track of at least the first two numbers, and update the tip and total amount once one of those numbers changes.
+
+What this looked like in code was pretty simple:
+```golang
+type TipModel struct {
+	billAmount float32
+	tipPercent float32
+}
+
+func (tm *TipModel) GetBillAmount() float32 {
+	return tm.billAmount
+}
+
+func (tm *TipModel) GetTipPercent() float32 {
+	return tm.tipPercent
+}
+
+func (tm *TipModel) SetBillAmount(amount float32) {
+	tm.billAmount = amount
+}
+
+func (tm *TipModel) SetTipPercent(amount float32) {
+	tm.tipPercent = amount
+}
+. . .
+```
 
 
-Now that the MVC Tip Calculator was done, I felt confident enough to get started on my `v2` release.
+### The View
+My **View** is essentially a fyne widget with a few text boxes and some labels (you've seen the screenshot). 
+
+I also had a few important methods (functions) that the **Controller** would use. 
+- `SetOnSelectTip()`
+- `SetBillAmountEntryOnChanged()`
+- `SetFinalTipAmount()`
+- `SetFinalTotalAmount()`
+
+The code is a bit too long to show it all, but here's a couple highlights:
+```golang
+. . . 
+
+func (tv *TipView) GetBillAmount() (float32, error) {
+	value, err := strconv.ParseFloat(tv.billAmountEntry.Text, 32)
+	return float32(value), err
+}
+
+func (tv *TipView) SetFinalTotalAmount(amount float32) {
+	tv.finalTotalAmount.SetText(fmt.Sprintf("%s%.2f", CURRENCY, amount))
+	tv.finalTotalAmount.Refresh()
+}
+. . .
+```
+
+
+### The Controller
+The **Controller** is what connects the **Model** and **View** together. It will tell the **View** what to do when a user selects a new tip percentage. 
+
+When that happens it will:
+- Get the bill amount the tip percentage
+- Calculate both the tip amount and the total amount (bill + tip)
+- Update the **View** with the new calculated values, and have it `Refresh()`.
+
+Here's another little snippet:
+```golang
+. . .
+tc.TipView.SetBillAmountEntryOnChanged(func(s string) {
+    tc.UpdateModelFromView()
+    tc.CalcTipAndUpdate()
+})
+
+. . . 
+
+
+func (tc *TipController) UpdateModelFromView() {
+	// update model to current values
+	billAmount, err := tc.TipView.GetBillAmount()
+	if err != nil {
+		tc.TipView.SetErrorMsg("Bill amount must be a number.")
+		return
+	}
+	tipPercent, err := tc.TipView.GetTipPercent()
+	if err != nil {
+		tc.TipView.SetErrorMsg("Tip % must be a number.")
+		return
+	}
+	tc.TipModel.SetBillAmount(billAmount)
+	tc.TipModel.SetTipPercent(tipPercent)
+}
+
+func (tc *TipController) CalcTipAndUpdate() {
+	// calculate tip and total
+	finalTip := tc.TipModel.GetBillAmount() * (tc.TipModel.GetTipPercent() / 100)
+	finalTotal := tc.TipModel.GetBillAmount() + finalTip
+
+	// update view
+	tc.TipView.SetFinalTipAmount(finalTip)
+	tc.TipView.SetFinalTotalAmount(finalTotal)
+}
+
+```
+
+## What's next?
+If you want to read more of the code, check out the [Github Repo](https://github.com/ssebs/MVCTipCalc).
+
+Now that the MVC Tip Calculator was done, I felt confident enough to get started on my `v2` release! 
 
 If you'd like to read more about that, check out the [blog entry](/blog/minimacropad/).
 
