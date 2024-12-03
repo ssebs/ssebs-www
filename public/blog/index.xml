@@ -10,17 +10,24 @@
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a GUI in Golang to speed up my Mini Macro Pad</title>
-      <link>http://localhost:1313/blog/minimacropad/</link>
+      <link>http://localhost:1313/blog/mmpguieditor/</link>
       <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
-      <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>Read the technical details on the project page&#xA;The story I was playing video games and was getting tired of typing &amp;ldquo;gg&amp;rdquo; manually.</description>
+      <guid>http://localhost:1313/blog/mmpguieditor/</guid>
+      <description>Read the technical details on the project page&#xA;This is a follow up to the Mini Macro Pad project, so I&amp;rsquo;d suggest reading that if you haven&amp;rsquo;t already.</description>
     </item>
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>
       <link>http://localhost:1313/blog/mvctipcalc/</link>
       <pubDate>Sun, 17 Nov 2024 17:30:27 -0800</pubDate>
       <guid>http://localhost:1313/blog/mvctipcalc/</guid>
-      <description>I made a basic tip calculator to learn the Model View Controller (MVC) pattern.</description>
+      <description>Also see the project page&#xA;I made a basic tip calculator to learn the software development pattern.</description>
+    </item>
+    <item>
+      <title>3D printing and coding my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>Read the technical details on the project page&#xA;The story I was playing video games and was getting tired of typing &amp;ldquo;gg&amp;rdquo; manually.</description>
     </item>
   </channel>
 </rss>

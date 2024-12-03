@@ -7,6 +7,8 @@
     font-size: 1.5rem !important;
     line-height: 1.5rem !important;
     font-weight: bold !important;
+    
+    margin-top: 1.5rem;
 }
 
 .post-content h2 {
@@ -14,12 +16,16 @@
     font-size: 1.25rem !important;
     line-height: 1.5em !important;
     font-weight: bold !important;
+
+    margin-top: 1.5rem;
 }
 
 .post-content h3 {
     font-size: 1.125rem !important;
     line-height: 1.5rem !important;
     font-weight: bold !important;
+
+    margin-top: 1.5rem;
 }
 
 .post-content h4,
@@ -27,6 +33,8 @@
     font-size: 1rem !important;
     line-height: 1.5rem !important;
     font-weight: bold !important;
+
+    margin-top: 1.5rem;
 }
 
 .post-content ul {

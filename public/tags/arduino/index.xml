@@ -9,18 +9,25 @@
     <lastBuildDate>Wed, 27 Nov 2024 22:02:05 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a GUI in Golang to speed up my Mini Macro Pad</title>
-      <link>http://localhost:1313/blog/minimacropad/</link>
-      <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
-      <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>Read the technical details on the project page&#xA;The story I was playing video games and was getting tired of typing &amp;ldquo;gg&amp;rdquo; manually.</description>
-    </item>
-    <item>
       <title>Mini Macro Pad</title>
       <link>http://localhost:1313/projects/go-mmp/</link>
       <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
       <guid>http://localhost:1313/projects/go-mmp/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read more about the story in the &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;blog post&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/go-mmp&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;display: grid; grid-template-columns: 60% 40%; gap: 1rem;&#34;&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Mini Macro Pad (go-mmp)&lt;/strong&gt; is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p&gt;&#xA;&lt;p&gt;It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p&gt;&#xA;&lt;div style=&#34;min-height: 1rem;&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;what-kind-of-macros-can-you-make&#34;&gt;What kind of macros can you make?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shortcuts:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href=&#34;https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys&#34;&gt;in the list&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Macros:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Repeat keypresses (or mouse button presses)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whatever you can think of, feel free to submit PRs!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;  Screenshot of the GUI:&#xD;&#xA;  &lt;img src=&#34;https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read more about the story in the &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;making of blog post&lt;/a&gt; and the &lt;a href=&#34;http://localhost:1313/blog/mmpguieditor&#34;&gt;improving of blog post&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/go-mmp&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;display: grid; grid-template-columns: 60% 40%; gap: 1rem;&#34;&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Mini Macro Pad (go-mmp)&lt;/strong&gt; is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p&gt;&#xA;&lt;p&gt;It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p&gt;&#xA;&lt;div style=&#34;min-height: 1rem;&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;what-kind-of-macros-can-you-make&#34;&gt;What kind of macros can you make?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shortcuts:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href=&#34;https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys&#34;&gt;in the list&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Macros:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Repeat keypresses (or mouse button presses)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whatever you can think of, feel free to submit PRs!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;  Screenshot of the GUI:&#xD;&#xA;  &lt;img src=&#34;https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Building a GUI in Golang to speed up my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/mmpguieditor/</link>
+      <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
+      <guid>http://localhost:1313/blog/mmpguieditor/</guid>
+      <description>Read the technical details on the project page&#xA;This is a follow up to the Mini Macro Pad project, so I&amp;rsquo;d suggest reading that if you haven&amp;rsquo;t already.</description>
+    </item>
+    <item>
+      <title>3D printing and coding my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>Read the technical details on the project page&#xA;The story I was playing video games and was getting tired of typing &amp;ldquo;gg&amp;rdquo; manually.</description>
     </item>
   </channel>
 </rss>

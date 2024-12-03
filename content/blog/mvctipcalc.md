@@ -7,30 +7,35 @@ date: 2024-11-17T17:30:27-08:00
 weight: 24
 tags: [golang, programming, gui]
 ---
+> Also see the [project page](/projects/mvctipcalc/)
 
-<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div class="grid grid-cols-2 justify-between">
 <div>
+I made a basic tip calculator to learn the software development pattern. 
 
-I made a basic tip calculator to learn the Model View Controller (MVC) pattern. But why? And how?
+This is a simple form that shows the tip amount and the total amount when you enter in a bill amount, and a tip percentage.
 
-Also see the [project page](/projects/mvctipcalc/)
+But *why*? And *how*? And what's *MVC*?
+
 </div>
-<img src="./img/mvc.webp" width="360px" alt="MVC Diagram">
+<img src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Diagram" class="justify-self-end">
 </div>
 
-
-### MVC?
+### MVC, or Model View Controller
+<img style="float:right" src="./img/mvc.webp" width="320px" alt="MVC Diagram">
 If you aren't already familiar with MVC, the main thing to know is that it creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.
 
-If you'd like to learn more about implementing it, check out [Derek Banas' tutorial](https://www.youtube.com/watch?v=dTVVa2gfht8).
+> If you'd like to learn more about implementing it, check out [Derek Banas' tutorial](https://www.youtube.com/watch?v=dTVVa2gfht8).
 
-Basically, the Model is what the data looks like. My config is a collection of metadata, a list of `Macros` and their respective `Actions`, in a human and machine readable `.yaml` file.
+Basically, the **Model** is what the data looks like. My config is a collection of metadata, a list of `Macros` and their respective `Actions`, in a human and machine readable `.yaml` file.
 
 The View is what the user will see, so the actual form and drag and drop editors. The View should not actually update the model when changes happen. Instead, it will have get/set functions that are managed by the Controller.
 
 The Controller is the bridge between the Model and the View. It will listen for events from the View, and if one happens then it will update the model.
 
 For example, a "Save Config" button will be displayed in the View that a user can click. The Controller will add a "OnTapped" function, which will call the Model's `config.Save()` function. See [this code reference](https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go) for more details.
+
+<div style="clear: both;"></div>
 
 ## Why?
 While working on the `v2` release of my [Mini Macro Pad](/projects/go-mmp/), which was primarily implementing a GUI Config Editor, I was having trouble managing state changes. 
