@@ -280,21 +280,23 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 <blockquote>
 <p>If you&rsquo;d like to learn more about implementing it, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8">Derek Banas&rsquo; tutorial</a>.</p>
 </blockquote>
-<p>Basically, the <strong>Model</strong> is what the data looks like. My config is a collection of metadata, a list of <code>Macros</code> and their respective <code>Actions</code>, in a human and machine readable <code>.yaml</code> file.</p>
-<p>The View is what the user will see, so the actual form and drag and drop editors. The View should not actually update the model when changes happen. Instead, it will have get/set functions that are managed by the Controller.</p>
-<p>The Controller is the bridge between the Model and the View. It will listen for events from the View, and if one happens then it will update the model.</p>
-<p>For example, a &ldquo;Save Config&rdquo; button will be displayed in the View that a user can click. The Controller will add a &ldquo;OnTapped&rdquo; function, which will call the Model&rsquo;s <code>config.Save()</code> function. See <a href="https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go">this code reference</a> for more details.</p>
+<ul>
+<li>The <strong>Model</strong> is what the data looks like. My <code>config</code> is a collection of <code>Metadata</code>, a list of <code>Macros</code> and their respective <code>Actions</code>, in a human and machine readable <code>.yaml</code> file.</li>
+<li>The <strong>View</strong> is what the user will see, so the actual form and drag and drop editors. The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</li>
+<li>The <strong>Controller</strong> is the bridge between the Model and the <strong>View</strong>. It will listen for events from the <strong>View</strong>, and if one happens then it will update the model.</li>
+</ul>
+<p>For example, a &ldquo;Save Config&rdquo; button will be displayed in the <strong>View</strong> that a user can click. The <strong>Controller</strong> will add a <code>OnTapped</code> function, which will call the Model&rsquo;s <code>config.Save()</code> function. See <a href="https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go">this code reference</a> for more details.</p>
 <div style="clear: both;"></div>
 <h2 id="why">Why?</h2>
-<p>While working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, which was primarily implementing a GUI Config Editor, I was having trouble managing state changes.</p>
-<p>For example, when I&rsquo;d update the name of a Macro in a new editor window, it wouldn&rsquo;t sync to the regular window.</p>
-<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using (fyne.io) works.</p>
-<p>fyne.io is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose MVC, MVP, MVVM, or just using a single file to manage it all (the way I was doing it before).</p>
+<p>While working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, which was <a href="https://github.com/ssebs/go-mmp/pull/19">primarily implementing a GUI Config Editor</a>, I was having trouble managing state changes.</p>
+<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
+<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
+<p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
 <h2 id="how">How?</h2>
-<p>Okay so I had the reason why I needed to organize my code, but not the how. I had created a bunch of separate widget files for each part of my app. (e.g. macro editor, metadata editor, etc.)</p>
-<p>These would become Views, and I&rsquo;d move the config update functions to a Controller.</p>
-<p>Before I got started with my Mini Macro pad, I wanted to make a real MVC project to make sure I understood the concept.</p>
-<p>So, I made a basic MVC Tip Calculator using Golang + Fyne to get hands-on with the MVC architecture. I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
+<p>Okay so I had the reason why I needed to organize my code, but not the how. I had created a bunch of separate widget files for each part of my Mini Macro Pad. (e.g. macro editor, metadata editor, etc.). These would become <strong>Views</strong>, and I&rsquo;d move the config update functions to a <strong>Controller</strong>.</p>
+<p>Before I got started with my Mini Macro Pad, I wanted to make a real MVC project to make sure I understood the concept. I felt that I&rsquo;d learned a lot from Derek&rsquo;s video, and wanted to try for myself.</p>
+<h2 id="learning-mvc-with-a-tip-calculator">Learning MVC with a tip calculator</h2>
+<p>That simple MVC project is a tip calculator. I&rsquo;ll keep writing it in Golang + Fyne, and since I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, I had a starting place.</p>
 <p>I followed Derek&rsquo;s advice, and separated my files, and was able to implement it!</p>
 <p>Here&rsquo;s a screenshot of the completed project, and the <a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a></p>
 <p><img src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" alt="screenshot"></p>

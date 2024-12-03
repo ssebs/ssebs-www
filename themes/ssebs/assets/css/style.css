@@ -3705,9 +3705,12 @@ select {
 
 .post-content ul {
   list-style-position: outside;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .post-content li {
+  margin-bottom: 0.75rem;
   margin-left: 1rem;
   list-style-type: disc;
 }
