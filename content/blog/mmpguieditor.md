@@ -12,6 +12,7 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 This is a follow up to the [Mini Macro Pad](/blog/minimacropad/) project, so I'd suggest reading that if you haven't already.
 
 ## Creating a basic GUI in fyne
+replace_me
 
 ## Problems with being basic
 I was happy with what I had written, for a while at least. 
@@ -40,4 +41,4 @@ At this point, I felt I needed to learn how this was usually done. It turns out,
 I chose the Model-View-Controller architecture, as it was the most simple to get started. If you'd like to read more about that, check out the [blog entry](/blog/mvctipcalc/). Since that blog has that journey covered, I won't repeat it. 
 
 ## Applying MVC to my Mini Macro Pad
-
+replace_me
