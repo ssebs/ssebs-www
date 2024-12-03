@@ -1,12 +1,12 @@
 {{/* Expects to be in a .Pages loop, so "." is a Page */}}
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   {{/* feature + shortdesc */}}
   <a href="{{- .RelPermalink -}}" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
       {{ .Title }}
-    
+
       {{/* ONLY SHOW ON /blog/ */}}
       {{- if in .RelPermalink "blog" }}
       <div class="text-sm italic  text-white-dim ">
@@ -14,19 +14,24 @@
       </div>
       {{- end -}}
     </div>
-    
-    
+
+
     {{- if .Params.feature }}
-    <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" style="max-height: 288px; margin: auto;" >
-      {{- else }}
+    <div style="height: 248px;">
+      <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}"
+        style="max-height: 248px; margin: auto;">
+    </div>
+    {{- else }}
     <div></div>
     {{- end}}
+
   </a>
 
   {{/* DON'T SHOW IF ON /blog/ */}}
   {{- if not (in .RelPermalink "blog") }}
   <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
   {{- end }}
+
 
   <div class="self-end">
 

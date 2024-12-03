@@ -67,9 +67,11 @@ In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd
 - I typically think of the MVP - the Minimum Viable Product as the goal. Once that's complete we can think about soft requirements and fun features.
 - Teach others as I learn, why not share my new found knowledge! I love to both mentor, and learn from others.
 
+<!-- 
 {{% spacer 1rem %}}
 
 ## My resume
 {{< rawhtml >}}
 <iframe src="/media/Sebastian-Safari-Resume.pdf" width="100%" height="800px"></iframe>
-{{</ rawhtml >}}
+{{</ rawhtml >}} 
+-->

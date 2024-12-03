@@ -4,7 +4,7 @@ slug: MVCTipCalc
 shortdesc: Simple Model View Controller Fyne project that doubles as a tip calculator.
 feature: https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true
 date: 2024-11-14T17:53:17-08:00
-weight: 24
+weight: 22
 tags: [golang, programming, gui]
 ---
 [Github Repo](https://github.com/ssebs/MVCTipCalc)
