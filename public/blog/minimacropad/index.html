@@ -275,10 +275,33 @@
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
 <h2 id="the-story">The story</h2>
-<p>I was playing video games and was getting tired of typing &ldquo;gg&rdquo; manually. I knew it could be automated in some way, and I had a 3D printer and an Arduino laying around, so I got to work.</p>
-<p>I watched <a href="https://www.youtube.com/@ZackFreedman">Zack Freedman&rsquo;s</a> video on <a href="https://www.youtube.com/watch?v=yYcNi9hKxDk">How to build Mechanical Keyboards</a>, and got to work.</p>
-<p>Once I had the hardware all ready, I got to work writing my Macros in C.</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="the hardware" class="" width="256px">
+<p>I was playing video games and was getting tired of typing &ldquo;gg&rdquo; manually. I was also really into <a href="https://www.youtube.com/watch?v=qDvQNStNUiw">CSGO Surfing</a> for a while, and needed to &ldquo;reset&rdquo;.</p>
+<p>The way to reset yourself is:</p>
+<ul>
+<li>Pressing enter</li>
+<li>typing &ldquo;/r&rdquo;</li>
+<li>Pressing enter again</li>
+</ul>
+<p>Now, this doesn&rsquo;t sound like a lot to do, but if you&rsquo;re really focusing on getting that flick right, you don&rsquo;t really want to keep moving your hands to type &ldquo;/r&rdquo; again and again.</p>
+<p>I knew it could be automated in some way, and I had a 3D printer and an Arduino laying around, so I got to work.</p>
+<h2 id="the-macro-pad">The Macro Pad</h2>
+<p>I watched <a href="https://www.youtube.com/@ZackFreedman">Zack Freedman&rsquo;s</a> video on <a href="https://www.youtube.com/watch?v=yYcNi9hKxDk">How to build Mechanical Keyboards</a>, and was inspired.</p>
+<p>In my head, I was thinking of a number pad, but each key runs a Macro that I can choose instead of just typing the number.</p>
+<p>I learned a lot about how arduinos work, and got myself a Teensy LC.</p>
+<p>Without going into <em>too</em> much detail, basically what I needed was a few mechanical keyboard switches, some red and black wire, my arduino, and a 3D printer.</p>
+<p>To make a working switch, I&rsquo;d connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin.</p>
+<p>This ground pin is shared with the other button pins, so those can be connected together.</p>
+<p>Once I got my supplies, I printed out some 3D models I found on <a href="https://thangs.com">https://thangs.com</a>, and got to soldering.</p>
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+<p>I did eventually make my own <a href="https://than.gs/m/710028">3D Printed housing</a>.</p>
+<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
+</div>
+<div>
+<p>Wiring under the hood (please forgive the newbie soldering).</p>
+<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
+</div>
+</div>
 <h2 id="writing-macros-in-c">Writing Macros in C</h2>
 <p>I started off in the Arduino IDE using my Teensy LC as a human interface device (HID), and emulated pressing: enter, gg, enter. It was working and I was excited! Naturally, I wanted to add more Macros, but I was getting annoyed at writing scripts in C.</p>
 <h2 id="migration-to-serial">Migration to Serial</h2>
