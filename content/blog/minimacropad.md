@@ -52,19 +52,42 @@ Wiring under the hood (please forgive the newbie soldering).
 </div>
 
 ## Making the buttons do something
+Once everything was wired up, I opened up the Arduino IDE and looked up some tutorials.
 
+I chose the Teensy LC since it can be used as a Human-Interface-Device (HID), and is able to emulate keypresses.
 
-## Writing Macros in C
-I started off in the Arduino IDE using my Teensy LC as a human interface device (HID), and emulated pressing: enter, gg, enter. It was working and I was excited! Naturally, I wanted to add more Macros, but I was getting annoyed at writing scripts in C. 
+My plan was when you pressed a button, it would:
+- Check which button was pressed, and compare that to a list of "Macros".
+- These Macros would have a list of "Actions" that can be run.
+
+The "type gg" Macro would look something like this:
+- `Press("enter")`
+- `Type("gg")`
+- `Press("enter")`
+
+I got this working after adding some delays between each step. 
+
+Once I had my prototype up and running, I was excited!
+
+There was one problem though, it was really annoying to write C everytime I wanted to change a macro.
+
+I decided to change the architecture of the app a bit: instead of the arduino typing the keys, have it just send the button number over a serial connection, have a server listening for button presses, and have that run the macros instead.
+
+That way, I can update python code, or even better a config file, to make my changes.
 
 ## Migration to Serial
-I figured it would be easy if I just sent a single number over serial to a server that was listening for it, then if a button was pressed, I could compare the button number against a config file to run my macros for me.
+I decided to go with Python, and also make a small GUI so you can see what/where the macros are on your device.
 
-And voila, [my deprecated code was created](https://github.com/ssebs/MiniMacroPad/). I was also starting to forget where the macros were, and made a simple GUI in Tkinter, and had python listening for button presses.
+Here's a link to the [Github Repo](https://github.com/ssebs/MiniMacroPad), however this version has been deprecated for the Golang variant.
 
-This worked, but the user interface was ugly, and it was kinda slow. That's due to PyInstaller's exe files including a python vm.
+I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers.
 
-In the end, I learned a lot about python and refactoring my old spaghetti code. But it was time to learn something new.
+Once the server received a button press, it would compare the number to the config file, and run the Actions for that Macro.
+
+This worked, but the user interface was ugly, and it was kinda slow (mostly to startup). That's due to PyInstaller's exe files including a Python virtual machine.
+
+
+
 
 ## Switching to Go
 I wanted to learn golang for one main reason: it compiles cross platform to a single binary file. Having my code compile to 1 exe file was a great benefit of learning go, the other was to become a bit more marketable, and most importantly to improve as a programmer.

@@ -302,12 +302,31 @@
 <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
 </div>
 </div>
-<h2 id="writing-macros-in-c">Writing Macros in C</h2>
-<p>I started off in the Arduino IDE using my Teensy LC as a human interface device (HID), and emulated pressing: enter, gg, enter. It was working and I was excited! Naturally, I wanted to add more Macros, but I was getting annoyed at writing scripts in C.</p>
+<h2 id="making-the-buttons-do-something">Making the buttons do something</h2>
+<p>Once everything was wired up, I opened up the Arduino IDE and looked up some tutorials.</p>
+<p>I chose the Teensy LC since it can be used as a Human-Interface-Device (HID), and is able to emulate keypresses.</p>
+<p>My plan was when you pressed a button, it would:</p>
+<ul>
+<li>Check which button was pressed, and compare that to a list of &ldquo;Macros&rdquo;.</li>
+<li>These Macros would have a list of &ldquo;Actions&rdquo; that can be run.</li>
+</ul>
+<p>The &ldquo;type gg&rdquo; Macro would look something like this:</p>
+<ul>
+<li><code>Press(&quot;enter&quot;)</code></li>
+<li><code>Type(&quot;gg&quot;)</code></li>
+<li><code>Press(&quot;enter&quot;)</code></li>
+</ul>
+<p>I got this working after adding some delays between each step.</p>
+<p>Once I had my prototype up and running, I was excited!</p>
+<p>There was one problem though, it was really annoying to write C everytime I wanted to change a macro.</p>
+<p>I decided to change the architecture of the app a bit: instead of the arduino typing the keys, have it just send the button number over a serial connection, have a server listening for button presses, and have that run the macros instead.</p>
+<p>That way, I can update python code, or even better a config file, to make my changes.</p>
 <h2 id="migration-to-serial">Migration to Serial</h2>
-<p>I figured it would be easy if I just sent a single number over serial to a server that was listening for it, then if a button was pressed, I could compare the button number against a config file to run my macros for me.</p>
-<p>And voila, <a href="https://github.com/ssebs/MiniMacroPad/">my deprecated code was created</a>. I was also starting to forget where the macros were, and made a simple GUI in Tkinter, and had python listening for button presses.</p>
-<p>This worked, but the user interface was ugly, and it was kinda slow. That&rsquo;s due to PyInstaller&rsquo;s exe files including a python vm.</p>
+<p>I decided to go with Python, and also make a small GUI so you can see what/where the macros are on your device.</p>
+<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad">Github Repo</a>, however this version has been deprecated for the Golang variant.</p>
+<p>I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers.</p>
+<p>Once the server received a button press, it would compare the number to the config file, and run the Actions for that Macro.</p>
+<p>This worked, but the user interface was ugly, and it was kinda slow (mostly to startup). That&rsquo;s due to PyInstaller&rsquo;s exe files including a Python virtual machine.</p>
 <p>In the end, I learned a lot about python and refactoring my old spaghetti code. But it was time to learn something new.</p>
 <h2 id="switching-to-go">Switching to Go</h2>
 <p>I wanted to learn golang for one main reason: it compiles cross platform to a single binary file. Having my code compile to 1 exe file was a great benefit of learning go, the other was to become a bit more marketable, and most importantly to improve as a programmer.</p>
