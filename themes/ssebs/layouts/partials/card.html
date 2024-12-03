@@ -4,28 +4,41 @@
   class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   {{/* feature + shortdesc */}}
   <a href="{{- .RelPermalink -}}" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">{{ .Title }}</div>
-
+    <div class="text-lg font-medium">
+      {{ .Title }}
+    
+      {{/* ONLY SHOW ON /blog/ */}}
+      {{- if in .RelPermalink "blog" }}
+      <div class="text-sm italic  text-white-dim ">
+        {{ .Date | time.Format ":date_medium" }}
+      </div>
+      {{- end -}}
+    </div>
+    
+    
     {{- if .Params.feature }}
-    <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" class="w-auto" />
-    {{- else }}
+    <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}" style="max-height: 288px; margin: auto;" >
+      {{- else }}
     <div></div>
     {{- end}}
-
-    <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
   </a>
+
+  {{/* DON'T SHOW IF ON /blog/ */}}
+  {{- if not (in .RelPermalink "blog") }}
+  <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
+  {{- end }}
+
   <div class="self-end">
-  {{/* tags list */}}
-  <div class="flex flex-wrap gap-2 text-base h-fit">
-    {{ range .Params.tags }}
-    <a href="./tags/{{- . -}}"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      {{ . }}
-    </a>
-    {{- end }}
+
+    {{/* tags list */}}
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      {{ range .Params.tags }}
+      <a href="./tags/{{- . -}}"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        {{ . }}
+      </a>
+      {{- end }}
+    </div>
+
   </div>
-  <div class="text-sm italic mt-2 text-white-dim ">
-    {{ .Date | time.Format ":date_medium" }}
-  </div>
-</div>
 </div>

@@ -2,11 +2,13 @@
   {{ partial "hero.html" . }}
 
   {{- range site.Menus.main }}
+  {{- with .Page }}
 
-  {{- if not (in .Title "Blog") }}
-    {{ partial "section.html" . }}
+    {{- if not (in .RelPermalink "blog") }}
+      {{ partial "section.html" . }}
+    {{- end }}
+
   {{- end }}
-
   {{- end }}
   
   {{/*  Get the content of the first project and render it  */}}

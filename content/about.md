@@ -14,8 +14,6 @@ Basically, I work as a Site Reliability Engineer and like to program various pro
 
 Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.
 
-Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
-
 <--COLSPLIT-->
 
 {{< image src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." width="360px" class="rounded-md border-2 border-primary" >}}
@@ -23,6 +21,8 @@ Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-
 {{< /columns >}}
 
 <!--more-->
+
+Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
 
 {{% spacer 2rem %}}
 <hr/>
