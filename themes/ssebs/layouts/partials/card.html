@@ -9,7 +9,7 @@
 
       {{/* ONLY SHOW ON /blog/ */}}
       {{- if in .RelPermalink "blog" }}
-      <div class="text-sm italic  text-white-dim ">
+      <div class="text-sm italic text-quaternary py-2">
         {{ .Date | time.Format ":date_medium" }}
       </div>
       {{- end -}}
@@ -27,12 +27,10 @@
 
   </a>
 
+  <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
+  
   {{/* DON'T SHOW IF ON /blog/ */}}
   {{- if not (in .RelPermalink "blog") }}
-  <p class="text-lg text-white-dim">{{- .Params.ShortDesc | safeHTML -}}</p>
-  {{- end }}
-
-
   <div class="self-end">
 
     {{/* tags list */}}
@@ -46,4 +44,7 @@
     </div>
 
   </div>
+  
+  {{- end }}
+
 </div>
