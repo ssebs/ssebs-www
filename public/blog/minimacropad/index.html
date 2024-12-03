@@ -327,13 +327,42 @@
 <p>I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers.</p>
 <p>Once the server received a button press, it would compare the number to the config file, and run the Actions for that Macro.</p>
 <p>This worked, but the user interface was ugly, and it was kinda slow (mostly to startup). That&rsquo;s due to PyInstaller&rsquo;s exe files including a Python virtual machine.</p>
-<p>In the end, I learned a lot about python and refactoring my old spaghetti code. But it was time to learn something new.</p>
+<p>I continued working on this version for a while, but after a couple refactors (and learning some OOP mistakes), I decided I wanted to rewrite my code in Golang.</p>
 <h2 id="switching-to-go">Switching to Go</h2>
-<p>I wanted to learn golang for one main reason: it compiles cross platform to a single binary file. Having my code compile to 1 exe file was a great benefit of learning go, the other was to become a bit more marketable, and most importantly to improve as a programmer.</p>
-<p>I found the <a href="https://quii.gitbook.io/learn-go-with-tests">Learn Go with Tests</a> free online course, and got to work learning about pointers, interfaces, pointer receivers (basically methods), and how amazing writing code in Go was.</p>
-<p>Once I got a grasp of writing in Go, I stared looking for a GUI library to recreate my python code in a cleaner way.</p>
-<p>I learned about channels, composition, and a lot about reading the docs.</p>
-<p>If you&rsquo;d like to learn more about writing a GUI in go, check out my <a href="/blog/mmpguieditor/">blog entry</a></p>
+<p>Golang is a compiled programming language, whereas Python is interpreted. This essentially means that go is way faster, but is a bit more complicated to write.</p>
+<p>There was another bonus to using go: it compiles to a single binary file. This means no more Pyinstaller! Thus, no more startup time lag.</p>
+<blockquote>
+<p>I also wanted to learn go to become a better programmer, and improve in my career.</p>
+</blockquote>
+<p>I found the <a href="https://quii.gitbook.io/learn-go-with-tests">Learn Go with Tests</a> free online course, and got to work learning about pointers, interfaces, pointer receivers (basically methods), and how great writing code in Go was.</p>
+<p>One thing I particularly like about go is the error handling. In python, if you were to save text to a file you&rsquo;d want to use a <code>try/catch</code> block to check for any errors. You can always leave it out, but then the app will crash if there&rsquo;s an error.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;example.txt&#34;</span>,<span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        f<span style="color:#f92672">.</span>write(<span style="color:#e6db74">&#34;this will fail since we&#39;re only supposed to read the file&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>    print(e)
+</span></span></code></pre></div><p>In go, the function that opens, writes, or does anything to a file will return an error. You are supposed to check if there is an error right after. You can also ignore the error, but it&rsquo;s more in your face in go.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fileContents</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;this won&#39;t fail but if it did it would be checked.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;example.txt&#34;</span>, <span style="color:#a6e22e">fileContents</span>, <span style="color:#ae81ff">0644</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;failed to write file&#34;</span>, <span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="rewriting-in-go">Rewriting in Go</h2>
+<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+Since I was basically just copying my Python project into Go, I did that. 
+<p>I learned about channels, composition, and a lot about reading the docs and code for my GUI library.</p>
+<p>I ended up choosing <a href="https://fyne.io/">fyne.io</a>, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.</p>
+<p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to.</p>
+<p>I&rsquo;m pretty used to how websites work, The HTML DOM + JS route way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
+<p>But since I was familiar enough to be dangerous with Tkinter, I was able to hack my way around using fyne.</p>
+<p>Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
+<p>The startup time went from ~3 seconds, to about half a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p>A few bugs were fixed over time, but in the end I had released <code>v1.2.3</code> before I was ready for my next big change.</p>
+<p>Check out my <a href="/blog/mmpguieditor/">blog entry</a> on how I needed to learn MVC to manage state in fyne!</p>
+<div style="clear: both;"></div>
+<p>Thanks for reading!</p>
 </div>
 </div>
         </div>

@@ -86,16 +86,61 @@ Once the server received a button press, it would compare the number to the conf
 
 This worked, but the user interface was ugly, and it was kinda slow (mostly to startup). That's due to PyInstaller's exe files including a Python virtual machine.
 
-
-
+I continued working on this version for a while, but after a couple refactors (and learning some OOP mistakes), I decided I wanted to rewrite my code in Golang.
 
 ## Switching to Go
-I wanted to learn golang for one main reason: it compiles cross platform to a single binary file. Having my code compile to 1 exe file was a great benefit of learning go, the other was to become a bit more marketable, and most importantly to improve as a programmer.
+Golang is a compiled programming language, whereas Python is interpreted. This essentially means that go is way faster, but is a bit more complicated to write.
 
-I found the [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) free online course, and got to work learning about pointers, interfaces, pointer receivers (basically methods), and how amazing writing code in Go was.
+There was another bonus to using go: it compiles to a single binary file. This means no more Pyinstaller! Thus, no more startup time lag.
 
-Once I got a grasp of writing in Go, I stared looking for a GUI library to recreate my python code in a cleaner way.
+> I also wanted to learn go to become a better programmer, and improve in my career.
 
-I learned about channels, composition, and a lot about reading the docs.
+I found the [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) free online course, and got to work learning about pointers, interfaces, pointer receivers (basically methods), and how great writing code in Go was.
 
-If you'd like to learn more about writing a GUI in go, check out my [blog entry](/blog/mmpguieditor/)
+One thing I particularly like about go is the error handling. In python, if you were to save text to a file you'd want to use a `try/catch` block to check for any errors. You can always leave it out, but then the app will crash if there's an error.
+
+```python
+try:
+    with open("example.txt","r") as f:
+        f.write("this will fail since we're only supposed to read the file")
+except Exception as e:
+    print(e)
+```
+
+In go, the function that opens, writes, or does anything to a file will return an error. You are supposed to check if there is an error right after. You can also ignore the error, but it's more in your face in go.
+
+```golang
+
+fileContents := []byte("this won't fail but if it did it would be checked.")
+
+err := os.WriteFile("example.txt", fileContents, 0644)
+if err != nil {
+    fmt.Println("failed to write file", err)
+}
+```
+
+## Rewriting in Go
+<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+Since I was basically just copying my Python project into Go, I did that. 
+
+I learned about channels, composition, and a lot about reading the docs and code for my GUI library. 
+
+I ended up choosing [fyne.io](https://fyne.io/), as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.
+
+It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. 
+
+I'm pretty used to how websites work, The HTML DOM + JS route way of building applications made so much sense, mostly because I've spent lots of time working with it. 
+
+But since I was familiar enough to be dangerous with Tkinter, I was able to hack my way around using fyne.
+
+Once everything was working, I was amazed at how much snappier my macro pad felt!
+
+The startup time went from ~3 seconds, to about half a second. Running the macros felt the same, but the UI looked nicer too so I was happy.
+
+A few bugs were fixed over time, but in the end I had released `v1.2.3` before I was ready for my next big change. 
+
+Check out my [blog entry](/blog/mmpguieditor/) on how I needed to learn MVC to manage state in fyne!
+
+<div style="clear: both;"></div>
+
+Thanks for reading!

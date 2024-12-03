@@ -14,15 +14,7 @@ This is a follow up to the [Mini Macro Pad](/blog/minimacropad/) project, so I'd
 ## Learning Golang
 
 ## Writing a GUI
-I ended up choosing [fyne.io](https://fyne.io/), as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.
 
-It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. The HTML DOM + JS route way of building applications made so much sense, mostly because I've spent lots of time working with it. 
-
-Once everything was working though, I was amazed at how much snappier my macro pad felt!
-
-A few bugs were fixed over time, but in the end I had released `v1.2.3`.
-
-![screenshot](https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png)
 
 
 ## Making changes to your Macros, made easy.
