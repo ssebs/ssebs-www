@@ -1,7 +1,7 @@
 ---
 title: Improving my GUI to add more features to my Macro Pad
 slug: mmpguieditor
-shortdesc: 
+shortdesc: The story of the journey I took making a GUI in Go.
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
 date: 2024-11-27T22:02:05-08:00
 weight: 24
