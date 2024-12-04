@@ -1376,6 +1376,10 @@ select {
   height: 6rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -1383,6 +1387,10 @@ select {
 
 .min-h-64 {
   min-height: 16rem;
+}
+
+.min-h-72 {
+  min-height: 18rem;
 }
 
 .w-10 {

@@ -19,5 +19,19 @@
   {{- if .Content }}
   <div class="post-content">{{ .Content }}</div>
   {{- end }}
+
+  {{- if in .RelPermalink "blog" }}
+  <div>
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="{{ .File.UniqueID }}" data-page-url="{{ .Permalink }}" data-page-title="{{ .Title }}"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+{{- end }}
+
 </div>
 {{- end }}
