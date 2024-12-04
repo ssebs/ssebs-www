@@ -29,7 +29,7 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 
 - The **Model** is what the data looks like. My `config` is a collection of `Metadata`, a list of `Macros` and their respective `Actions`, in a human and machine readable `.yaml` file.
 - The **View** is what the user will see, so the actual form and drag and drop editors. The **View** should not actually update the **Model** when changes happen. Instead, it will have get/set functions that are managed by the **Controller**.
-- The **Controller** is the bridge between the Model and the **View**. It will listen for events from the **View**, and if one happens then it will update the model.
+- The **Controller** is the bridge between the **Model** and the **View**. It will listen for events from the **View**, and if one happens then it will update the **Model**.
 
 For example, a "Save Config" button will be displayed in the **View** that a user can click. The **Controller** will add a `OnTapped` function, which will call the Model's `config.Save()` function. See [this code reference](https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go) for more details.
 
@@ -50,9 +50,9 @@ Okay so I had the reason why I needed to organize my code, but not the how. I ha
 Before I got started with my Mini Macro Pad, I wanted to make a real MVC project to make sure I understood the concept. I felt that I'd learned a lot from Derek's video, and wanted to try for myself.
 
 ## Learning MVC with a tip calculator
-That simple MVC project is a tip calculator. I'll keep writing it in Golang + Fyne, and since I had already created a [tip calculator](https://github.com/ssebs/tipr) or [two](https://github.com/ssebs/tipr-mobile), I had a starting place.
+That simple MVC project is my tip calculator. I had already created a [tip calculator](https://github.com/ssebs/tipr) or [two](https://github.com/ssebs/tipr-mobile), so I had a starting place.
 
-The main difference I learned about how I was writing my widgets before, and using MVC, is that I'd need 3 files for each component that manages data, or state, in some way.
+Since the Mini Macro pad is written in Go + fyne, I stuck with that. I made a new project and got a fyne window open. The next thing I'd need is 3 files: `model.go`, `view.go`, and `controller.go`.
 
 ### The Model
 For my tip calculator, I had two inputs:
@@ -119,7 +119,7 @@ func (tv *TipView) SetFinalTotalAmount(amount float32) {
 The **Controller** is what connects the **Model** and **View** together. It will tell the **View** what to do when a user selects a new tip percentage. 
 
 When that happens it will:
-- Get the bill amount the tip percentage
+- Get the bill amount and the tip percentage from the **View** using the `GetBillAmount()` and `GetTipPercent()` functions.
 - Calculate both the tip amount and the total amount (bill + tip)
 - Update the **View** with the new calculated values, and have it `Refresh()`.
 

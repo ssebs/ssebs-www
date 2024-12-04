@@ -171,7 +171,8 @@
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
+            <h4>Sebastian Safari</h4>
+            <h1>TODO: make this into a centered container</h1>
             
         </div>
         <div class="grid gap-1 mb-2">
@@ -283,7 +284,7 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 <ul>
 <li>The <strong>Model</strong> is what the data looks like. My <code>config</code> is a collection of <code>Metadata</code>, a list of <code>Macros</code> and their respective <code>Actions</code>, in a human and machine readable <code>.yaml</code> file.</li>
 <li>The <strong>View</strong> is what the user will see, so the actual form and drag and drop editors. The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</li>
-<li>The <strong>Controller</strong> is the bridge between the Model and the <strong>View</strong>. It will listen for events from the <strong>View</strong>, and if one happens then it will update the model.</li>
+<li>The <strong>Controller</strong> is the bridge between the <strong>Model</strong> and the <strong>View</strong>. It will listen for events from the <strong>View</strong>, and if one happens then it will update the <strong>Model</strong>.</li>
 </ul>
 <p>For example, a &ldquo;Save Config&rdquo; button will be displayed in the <strong>View</strong> that a user can click. The <strong>Controller</strong> will add a <code>OnTapped</code> function, which will call the Model&rsquo;s <code>config.Save()</code> function. See <a href="https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go">this code reference</a> for more details.</p>
 <div style="clear: both;"></div>
@@ -296,8 +297,8 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 <p>Okay so I had the reason why I needed to organize my code, but not the how. I had created a bunch of separate widget files for each part of my Mini Macro Pad. (e.g. macro editor, metadata editor, etc.). These would become <strong>Views</strong>, and I&rsquo;d move the config update functions to a <strong>Controller</strong>.</p>
 <p>Before I got started with my Mini Macro Pad, I wanted to make a real MVC project to make sure I understood the concept. I felt that I&rsquo;d learned a lot from Derek&rsquo;s video, and wanted to try for myself.</p>
 <h2 id="learning-mvc-with-a-tip-calculator">Learning MVC with a tip calculator</h2>
-<p>That simple MVC project is a tip calculator. I&rsquo;ll keep writing it in Golang + Fyne, and since I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, I had a starting place.</p>
-<p>The main difference I learned about how I was writing my widgets before, and using MVC, is that I&rsquo;d need 3 files for each component that manages data, or state, in some way.</p>
+<p>That simple MVC project is my tip calculator. I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
+<p>Since the Mini Macro pad is written in Go + fyne, I stuck with that. I made a new project and got a fyne window open. The next thing I&rsquo;d need is 3 files: <code>model.go</code>, <code>view.go</code>, and <code>controller.go</code>.</p>
 <h3 id="the-model">The Model</h3>
 <p>For my tip calculator, I had two inputs:</p>
 <ol>
@@ -354,7 +355,7 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 <p>The <strong>Controller</strong> is what connects the <strong>Model</strong> and <strong>View</strong> together. It will tell the <strong>View</strong> what to do when a user selects a new tip percentage.</p>
 <p>When that happens it will:</p>
 <ul>
-<li>Get the bill amount the tip percentage</li>
+<li>Get the bill amount and the tip percentage from the <strong>View</strong> using the <code>GetBillAmount()</code> and <code>GetTipPercent()</code> functions.</li>
 <li>Calculate both the tip amount and the total amount (bill + tip)</li>
 <li>Update the <strong>View</strong> with the new calculated values, and have it <code>Refresh()</code>.</li>
 </ul>

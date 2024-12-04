@@ -14,7 +14,7 @@ This is a follow up to the [Mini Macro Pad](/blog/minimacropad/) blog post, so I
 
 A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code. 
 
-At first, I didn't agree with them, but now that I've spent enough time with it, I sorta do. It's not that you *can't* write a GUI in Go, it's that it's not really *made* for it. There's no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.
+At first, I didn't agree with them, but now that I've spent enough time with it, I sorta do. It's not that you *can't* write a GUI in Go, but that's not really what it's *made* for. There's no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.
 
 The main problem I ran into when working with [fyne.io](https://fyne.io/) was that the documentation *existed*, but was a bit hard to follow. The other was how the widgets were rendered. 
 
@@ -27,7 +27,7 @@ For example, a button looks like this:
 
 ```html
 <button
-    style="background-color: #222; border: 1px solid #fff;"
+    style="background-color: #222; border: 1px solid #fff; color: red;"
     onclick="funcName()"> Click me, I'm a button </button>
 ```
 </div>
@@ -38,13 +38,14 @@ For example, a button looks like this:
 
 {{< spacer 1rem >}}
 
-You can change the way the button looks using [CSS](https://www.w3schools.com/css/css3_buttons.asp) (which I've added inline for the example), but I won't get into that here. Importantly, you can set the background color, text color, height, width, layout, etc. all in a way that "makes sense". (At least to me.)
+You can change the way the button looks using [CSS](https://www.w3schools.com/css/css3_buttons.asp) (which I've added inline for the example), but I won't get into that here. More importantly, you can set the background color, text color, height, width, layout, etc. all in a way that "makes sense". (At least to me.)
 
 <hr>
 
 {{< spacer 1rem >}}
 
 <img style="float:right;" src="/img/fyne-button.png" alt="fyne button" width="300px" />
+
 
 In fyne, you can make a [button](https://docs.fyne.io/widget/button.html) with the following code:
 
@@ -55,9 +56,15 @@ myButton.Importance = widget.HighImportance
 
 {{< spacer 1rem >}}
 
-The Button is a [widget](https://docs.fyne.io/explore/widgets). A fyne widget can be added to a [container](https://docs.fyne.io/explore/container), like a `VBox`. This `VBox` will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets. 
+
+The Button is a [widget](https://docs.fyne.io/explore/widgets). A fyne widget can be added to a [container](https://docs.fyne.io/explore/container), like a `VBox`. This Vertical Box will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets. 
+
+{{< spacer 1rem >}}
+
+<img style="float: right;" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
 
 Compare this to the CSS [grid](https://css-tricks.com/snippets/css/complete-guide-grid/), or [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). These are very customizable and quite powerful by [comparison](https://docs.fyne.io/explore/layouts).
+
 
 One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting. 
 
@@ -70,7 +77,7 @@ To be clear, I have no hate for fyne at all. I feel like I've learned a ton abou
 ## Creating a basic GUI
 <img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
 
-To recreate (and improve) my Tkinter GUI from my old Python code, I got to work using a `GridWithColumns` container along with some `Buttons`. I used the same Config file as before (`yaml`), and parsed it into a structure. From there, I went through the list of Macros and made a button for each one.
+To recreate (and improve) my Tkinter GUI from my old Python code, I got to work using a `GridWithColumns` container along with some `Buttons`. I used the same Config file as before, and parsed it. From there, I went through the list of Macros and made a button for each one.
 
 Here's a snippet of the code, but check out the [full file](https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go) to read more.
 
@@ -87,8 +94,10 @@ for _, macro := range config.Macros {
 
 With this, I was able to make a basic grid of buttons, and run macros with them.
 
+<div style="clear: both;"></div>
+
 ## Running Macros when you press a button
-I could bore you with the implementation details of how I set up a couple goroutines and some channels to send buttonID's between them, and how that number is used to actually run the Macros, but I'll leave that up for [you to explore](https://github.com/ssebs/go-mmp) `:)`. 
+I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID's between them, and how that number is used to actually run the Macros, but instead I'll leave that up for [you to explore](https://github.com/ssebs/go-mmp). 
 
 The tl;dr is this:
 - The Config file is loaded
@@ -97,7 +106,6 @@ The tl;dr is this:
 - When a button is pressed, it will check for the matching Macro, and run the Actions in that Macro in order, using the parameters set in the config file.
   - e.g. `PressRelease("ENTER")` will press and release the enter button.
 
-<div style="clear: both;"></div>
 
 
 ## Problems with being basic
@@ -128,10 +136,10 @@ At this point, I felt I needed to learn how this was usually done.
 
 > It turns out, that you should structure your code in some way to keep it organized. 
 
-I chose the Model-View-Controller architecture, as it was the most simple to get started. If you'd like to read more about that, check out the [blog entry](/blog/mvctipcalc/). Since that blog has that journey covered, I won't repeat it. 
+I chose the Model-View-Controller architecture, as it was the most simple to get started. If you'd like to read more about that, check out the [blog post](/blog/mvctipcalc/). 
 
 ## Applying MVC to my Mini Macro Pad
-Once I learned about MVC, I started splitting up my widgets into 3 files. I started with the smallest piece of the UI, the Action editor, and got to work.
+Once I learned about MVC, I split up my widgets into 3 files starting with the smallest piece of the UI, the Action editor, and got to work.
 
 I thought I'd finish up in a few weeks or so, but I kept finding more work to do.
 
@@ -184,13 +192,13 @@ Same MVC concept as my [tip calculator](/projects/mvctipcalc/), but with one MVC
 I kept adding features, getting closer and closer to a finished product, all while struggling to get my layout how I wanted.
 
 ## Drag and Drop
-One interesting thing I added here was the ability to drag and drop the Macros (and the Actios within a Macro) around to swap positions of them.
+One interesting thing I added here was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them.
 
 The way I achieved this was by implementing the `Draggable` interface in my **Views**. To do that, you need to create 2 functions: `Dragged(e *fyne.DragEvent)` and `DragEnd()`.
 
 I used the `fyne.DragEvent` to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it's hovering over.
 
-The `DragEnd()` function just lets me know when the drag is over, so I can run `SwapMacros()` and actually do the swap.
+The `DragEnd()` function just lets me know when the drag is over, so I can run `SwapMacros()` to actually do the swap on the **Model**.
 
 I'm glossing over a lot of details here, but [check out the code](https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go) for more about that.
 

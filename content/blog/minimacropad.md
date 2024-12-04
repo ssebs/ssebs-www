@@ -76,7 +76,7 @@ That way, I can update Python code, or even better a config file, to make my cha
 
 I decided to go with Python, and also make a small GUI so you can see what/where the macros are on your device.
 
-> Here's a link to the [Github Repo](https://github.com/ssebs/MiniMacroPad), however this version has been *deprecated* for the new Golang variant.
+> Here's a link to the [Github Repo](https://github.com/ssebs/MiniMacroPad), however this version has been *deprecated*.
 
 I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. This worked, but the user interface was ugly, and it was kinda slow. That's due to PyInstaller's `.exe` files including a Python virtual machine.
 
@@ -85,7 +85,7 @@ I continued working on this version for a while, but after a couple refactors (a
 <div style="clear:both;"></div>
 
 ## Learning Go
-Golang is a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There was another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! Thus, no more startup time lag.
+Golang is a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There's another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! (No more startup time lag)
 
 > I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.
 
@@ -103,7 +103,7 @@ except Exception as e:
 
 {{< spacer 1rem >}}
 
-In go, the function that opens, writes, or does anything to a file will return an error. You are supposed to check if there is an error right after. You can also ignore the error, but it's more in your face in go.
+In Go, the function that opens, writes, or does anything to a file will return an error; you are supposed to check if there is an error right after. You can also ignore the error, but it's more *in your face* in Go.
 
 ```golang
 fileContents := []byte("this won't fail but if it did it would be checked.")
@@ -127,7 +127,7 @@ I'm pretty used to how websites work, which follows a strict Document-Object-Mod
 
 However, since I know enough to be dangerous with Tkinter, I was able to hack my way through using Fyne. Once everything was working, I was amazed at how much snappier my macro pad felt!
 
-The startup time went from ~3 seconds, to about half a second. Running the macros felt the same, but the UI looked nicer too so I was happy.
+The startup time went from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.
 
 A few bugs were fixed over time, but in the end I had released `v1.2.3` before I was ready for my next big change. 
 

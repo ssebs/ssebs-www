@@ -171,7 +171,8 @@
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
+            <h4>Sebastian Safari</h4>
+            <h1>TODO: make this into a centered container</h1>
             
         </div>
         <div class="grid gap-1 mb-2">
@@ -324,13 +325,13 @@
 <img style="float: right;" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
 <p>I decided to go with Python, and also make a small GUI so you can see what/where the macros are on your device.</p>
 <blockquote>
-<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad">Github Repo</a>, however this version has been <em>deprecated</em> for the new Golang variant.</p>
+<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
 </blockquote>
 <p>I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. This worked, but the user interface was ugly, and it was kinda slow. That&rsquo;s due to PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine.</p>
 <p>I continued working on this version for a while, but after a couple refactors (and learning some OOP-sies), I decided I wanted to rewrite my code in Golang.</p>
 <div style="clear:both;"></div>
 <h2 id="learning-go">Learning Go</h2>
-<p>Golang is a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There was another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! Thus, no more startup time lag.</p>
+<p>Golang is a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There&rsquo;s another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! (No more startup time lag)</p>
 <blockquote>
 <p>I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.</p>
 </blockquote>
@@ -343,7 +344,7 @@
 </span></span><span style="display:flex;"><span>    print(e)
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-<p>In go, the function that opens, writes, or does anything to a file will return an error. You are supposed to check if there is an error right after. You can also ignore the error, but it&rsquo;s more in your face in go.</p>
+<p>In Go, the function that opens, writes, or does anything to a file will return an error; you are supposed to check if there is an error right after. You can also ignore the error, but it&rsquo;s more <em>in your face</em> in Go.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">fileContents</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">&#34;this won&#39;t fail but if it did it would be checked.&#34;</span>)
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">WriteFile</span>(<span style="color:#e6db74">&#34;example.txt&#34;</span>, <span style="color:#a6e22e">fileContents</span>, <span style="color:#ae81ff">0644</span>)
@@ -357,7 +358,7 @@
 <p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to.</p>
 <p>I&rsquo;m pretty used to how websites work, which follows a strict Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
 <p>However, since I know enough to be dangerous with Tkinter, I was able to hack my way through using Fyne. Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
-<p>The startup time went from ~3 seconds, to about half a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p>The startup time went from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
 <p>A few bugs were fixed over time, but in the end I had released <code>v1.2.3</code> before I was ready for my next big change.</p>
 <p>Read more about how I <a href="/blog/mmpguieditor/">improved my GUI to add more features to my Macro Pad</a>!</p>
 <div style="clear: both;"></div>
