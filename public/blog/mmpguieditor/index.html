@@ -274,26 +274,68 @@
   <div class="post-content"><blockquote>
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
-<h2 id="creating-a-basic-gui-in-fyne">Creating a basic GUI in fyne</h2>
+<h2 id="exploring-fyne">Exploring fyne</h2>
 <p>This is a follow up to the <a href="/blog/minimacropad/">Mini Macro Pad</a> blog post, so I&rsquo;d suggest reading that if you haven&rsquo;t already.</p>
 <p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
 <p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, it&rsquo;s that it&rsquo;s not really <em>made</em> for it. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
 <p>The main problem I ran into when working with <a href="https://fyne.io/">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
 <p>Using HTML + CSS + JS, there&rsquo;s a standard <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Document-Object-Model</a>, which has standard ways that things are drawn.</p>
 <p>For example, a button looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> 
+<div class="flex flex-wrap gap-6">
+<div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #222; border: 1px solid #fff;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myFunctionName()&#34;</span>
-</span></span><span style="display:flex;"><span>    &gt; Click me, I&#39;m a button &lt;/<span style="color:#f92672">button</span>&gt;
-</span></span></code></pre></div><p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here.</p>
-<p>Essentially, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;funcName()&#34;</span>&gt; Click me, I&#39;m a button &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div></div>
+<img src="/img/html-button.png" alt="html button" width="256px"/>
+</div>
+<div style="min-height: 1rem;">
+</div>
+<p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here. Importantly, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
+<hr>
+<div style="min-height: 1rem;">
+</div>
+<img style="float:right;" src="/img/fyne-button.png" alt="fyne button" width="300px" />
 <p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html">button</a> with the following code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#e6db74">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#a6e22e">myFunctionName</span>())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#e6db74">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#a6e22e">funcName</span>())
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span>.<span style="color:#a6e22e">Importance</span> = <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">HighImportance</span>
-</span></span></code></pre></div><p>The problem is that you can&rsquo;t change the color, other than by setting the importance level. I can set it to blue, red, or gray depending on the importance setting.</p>
-<p>Laying out widgets is a whole other can of worms. Basically, you add <a href="https://docs.fyne.io/explore/widgets">widgets</a> to a <a href="https://docs.fyne.io/explore/container">container</a> with a <a href="https://docs.fyne.io/explore/layouts">layout</a>.</p>
-<p>Only the widget can control the size and position of a widget, you can&rsquo;t set the width or height manually.</p>
-<p>This would prove to be an issue once I started implementing my drag-and-drop feature.</p>
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>The Button is a <a href="https://docs.fyne.io/explore/widgets">widget</a>. A fyne widget can be added to a <a href="https://docs.fyne.io/explore/container">container</a>, like a <code>VBox</code>. This <code>VBox</code> will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets.</p>
+<p>Compare this to the CSS <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">grid</a>, or <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a>. These are very customizable and quite powerful by <a href="https://docs.fyne.io/explore/layouts">comparison</a>.</p>
+<p>One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting.</p>
+<blockquote>
+<p>In the example above, I&rsquo;m setting it to Blue by setting HighImportance.</p>
+</blockquote>
+<p>To be clear, I have no hate for fyne at all. I feel like I&rsquo;ve learned a ton about different ways to manage user interfaces, and I&rsquo;m glad that the project exists. I do think the documentation can be improved, but I could be the one contributing that <code>;)</code></p>
+<div style="clear: both;"></div>
+<h2 id="creating-a-basic-gui">Creating a basic GUI</h2>
+<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+<p>To recreate (and improve) my Tkinter GUI from my old Python code, I got to work using a <code>GridWithColumns</code> container along with some <code>Buttons</code>. I used the same Config file as before (<code>yaml</code>), and parsed it into a structure. From there, I went through the list of Macros and made a button for each one.</p>
+<p>Here&rsquo;s a snippet of the code, but check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go">full file</a> to read more.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">macro</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Macros</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">macroBtn</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#a6e22e">macro</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">macroRunner</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#a6e22e">macro</span>)
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">macrosContainer</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">macroBtn</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>With this, I was able to make a basic grid of buttons, and run macros with them.</p>
+<h2 id="running-macros-when-you-press-a-button">Running Macros when you press a button</h2>
+<p>I could bore you with the implementation details of how I set up a couple goroutines and some channels to send buttonID&rsquo;s between them, and how that number is used to actually run the Macros, but I&rsquo;ll leave that up for <a href="https://github.com/ssebs/go-mmp">you to explore</a> <code>:)</code>.</p>
+<p>The tl;dr is this:</p>
+<ul>
+<li>The Config file is loaded</li>
+<li>A new thread is created to listen for serial data (button presses)</li>
+<li>A GUI window is made and displays the buttons from the Config.</li>
+<li>When a button is pressed, it will check for the matching Macro, and run the Actions in that Macro in order, using the parameters set in the config file.
+<ul>
+<li>e.g. <code>PressRelease(&quot;ENTER&quot;)</code> will press and release the enter button.</li>
+</ul>
+</li>
+</ul>
+<div style="clear: both;"></div>
 <h2 id="problems-with-being-basic">Problems with being basic</h2>
 <p>I was happy with what I had written, for a while at least.</p>
 <p>I was talking about my project with some coworkers, and they mentioned that it wasn&rsquo;t super user friendly to update the Macros. I agreed, as YAML was a decent file format for a developer, but not everyone wants to be slinging YAML whenever they need to create a new shortcut.</p>

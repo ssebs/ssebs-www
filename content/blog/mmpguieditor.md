@@ -9,7 +9,7 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 ---
 > Read the technical details on the [project page](/projects/go-mmp)
 
-## Creating a basic GUI in fyne
+## Exploring fyne
 This is a follow up to the [Mini Macro Pad](/blog/minimacropad/) blog post, so I'd suggest reading that if you haven't already.
 
 A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code. 
@@ -22,31 +22,83 @@ Using HTML + CSS + JS, there's a standard [Document-Object-Model](https://develo
 
 For example, a button looks like this:
 
+<div class="flex flex-wrap gap-6">
+<div>
+
 ```html
-<button 
+<button
     style="background-color: #222; border: 1px solid #fff;"
-    onclick="myFunctionName()"
-    > Click me, I'm a button </button>
+    onclick="funcName()"> Click me, I'm a button </button>
 ```
+</div>
 
-You can change the way the button looks using [CSS](https://www.w3schools.com/css/css3_buttons.asp) (which I've added inline for the example), but I won't get into that here.
+<img src="/img/html-button.png" alt="html button" width="256px"/>
+</div>
 
-Essentially, you can set the background color, text color, height, width, layout, etc. all in a way that "makes sense". (At least to me.)
+
+{{< spacer 1rem >}}
+
+You can change the way the button looks using [CSS](https://www.w3schools.com/css/css3_buttons.asp) (which I've added inline for the example), but I won't get into that here. Importantly, you can set the background color, text color, height, width, layout, etc. all in a way that "makes sense". (At least to me.)
+
+<hr>
+
+{{< spacer 1rem >}}
+
+<img style="float:right;" src="/img/fyne-button.png" alt="fyne button" width="300px" />
 
 In fyne, you can make a [button](https://docs.fyne.io/widget/button.html) with the following code:
 
 ```golang
-myButton := widget.NewButton("Click me, I'm a button", myFunctionName())
+myButton := widget.NewButton("Click me, I'm a button", funcName())
 myButton.Importance = widget.HighImportance
 ```
 
-The problem is that you can't change the color, other than by setting the importance level. I can set it to blue, red, or gray depending on the importance setting. 
+{{< spacer 1rem >}}
 
-Laying out widgets is a whole other can of worms. Basically, you add [widgets](https://docs.fyne.io/explore/widgets) to a [container](https://docs.fyne.io/explore/container) with a [layout](https://docs.fyne.io/explore/layouts).
+The Button is a [widget](https://docs.fyne.io/explore/widgets). A fyne widget can be added to a [container](https://docs.fyne.io/explore/container), like a `VBox`. This `VBox` will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets. 
 
-Only the widget can control the size and position of a widget, you can't set the width or height manually.
+Compare this to the CSS [grid](https://css-tricks.com/snippets/css/complete-guide-grid/), or [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). These are very customizable and quite powerful by [comparison](https://docs.fyne.io/explore/layouts).
 
-This would prove to be an issue once I started implementing my drag-and-drop feature.
+One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting. 
+
+> In the example above, I'm setting it to Blue by setting HighImportance.
+
+To be clear, I have no hate for fyne at all. I feel like I've learned a ton about different ways to manage user interfaces, and I'm glad that the project exists. I do think the documentation can be improved, but I could be the one contributing that `;)`
+
+<div style="clear: both;"></div>
+
+## Creating a basic GUI
+<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+
+To recreate (and improve) my Tkinter GUI from my old Python code, I got to work using a `GridWithColumns` container along with some `Buttons`. I used the same Config file as before (`yaml`), and parsed it into a structure. From there, I went through the list of Macros and made a button for each one.
+
+Here's a snippet of the code, but check out the [full file](https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go) to read more.
+
+```golang
+for _, macro := range config.Macros {
+    macroBtn := widget.NewButton(macro.Name, func() {
+        macroRunner.Run(macro)
+    })
+    v.macrosContainer.Add(macroBtn)
+}
+```
+
+{{< spacer 1rem >}}
+
+With this, I was able to make a basic grid of buttons, and run macros with them.
+
+## Running Macros when you press a button
+I could bore you with the implementation details of how I set up a couple goroutines and some channels to send buttonID's between them, and how that number is used to actually run the Macros, but I'll leave that up for [you to explore](https://github.com/ssebs/go-mmp) `:)`. 
+
+The tl;dr is this:
+- The Config file is loaded
+- A new thread is created to listen for serial data (button presses)
+- A GUI window is made and displays the buttons from the Config.
+- When a button is pressed, it will check for the matching Macro, and run the Actions in that Macro in order, using the parameters set in the config file.
+  - e.g. `PressRelease("ENTER")` will press and release the enter button.
+
+<div style="clear: both;"></div>
+
 
 ## Problems with being basic
 I was happy with what I had written, for a while at least. 
