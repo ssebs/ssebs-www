@@ -131,7 +131,7 @@ The startup time went from ~3 seconds, to about half a second. Running the macro
 
 A few bugs were fixed over time, but in the end I had released `v1.2.3` before I was ready for my next big change. 
 
-Read more about how I [learned MVC to manage state in fyne](/blog/mmpguieditor/)!
+Read more about how I [improved my GUI to add more features to my Macro Pad](/blog/mmpguieditor/)!
 
 <div style="clear: both;"></div>
 

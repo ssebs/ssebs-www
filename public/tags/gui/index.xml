@@ -37,11 +37,11 @@
       <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
     </item>
     <item>
-      <title>Building a GUI in Golang to speed up my Mini Macro Pad</title>
+      <title>Improving my GUI to add more features to my Macro Pad</title>
       <link>http://localhost:1313/blog/mmpguieditor/</link>
       <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
       <guid>http://localhost:1313/blog/mmpguieditor/</guid>
-      <description>Read the technical details on the project page&#xA;This is a follow up to the Mini Macro Pad project, so I&amp;rsquo;d suggest reading that if you haven&amp;rsquo;t already.</description>
+      <description>Read the technical details on the project page&#xA;Creating a basic GUI in fyne This is a follow up to the Mini Macro Pad blog post, so I&amp;rsquo;d suggest reading that if you haven&amp;rsquo;t already.</description>
     </item>
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>

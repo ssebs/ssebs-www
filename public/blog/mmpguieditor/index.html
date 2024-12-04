@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <base href="/" /><title> Building a GUI in Golang to speed up my Mini Macro Pad </title>
+  <base href="/" /><title> Improving my GUI to add more features to my Macro Pad </title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
 
@@ -160,7 +160,7 @@
         <li class=""><a href="/blog/">Blog
         </a></li>
         <div class="mx-1" >&gt;</div>
-    <li class=""><a href="/blog/mmpguieditor/">Building a GUI in Golang to speed up my Mini Macro Pad</a></li>
+    <li class=""><a href="/blog/mmpguieditor/">Improving my GUI to add more features to my Macro Pad</a></li>
 </ul>
       
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -246,7 +246,7 @@
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-6xl w-full">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="flex justify-between flex-wrap">
-    <h1 class="text-2xl">Building a GUI in Golang to speed up my Mini Macro Pad</h1>
+    <h1 class="text-2xl">Improving my GUI to add more features to my Macro Pad</h1>
 
     <div class="flex flex-wrap gap-2 text-base h-fit">
       
@@ -274,9 +274,23 @@
   <div class="post-content"><blockquote>
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
-<p>This is a follow up to the <a href="/blog/minimacropad/">Mini Macro Pad</a> project, so I&rsquo;d suggest reading that if you haven&rsquo;t already.</p>
 <h2 id="creating-a-basic-gui-in-fyne">Creating a basic GUI in fyne</h2>
-<p>replace_me</p>
+<p>This is a follow up to the <a href="/blog/minimacropad/">Mini Macro Pad</a> blog post, so I&rsquo;d suggest reading that if you haven&rsquo;t already.</p>
+<p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
+<p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, it&rsquo;s that it&rsquo;s not really <em>made</em> for it. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
+<p>The main problem I ran into when working with <a href="https://fyne.io/">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
+<p>Using HTML + CSS + JS, there&rsquo;s a standard <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Document-Object-Model</a>, which has standard ways that things are drawn.</p>
+<p>For example, a button looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #222; border: 1px solid #fff;&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myFunctionName()&#34;</span>&gt; Click me, I&#39;m a button &lt;/<span style="color:#f92672">button</span>&gt;
+</span></span></code></pre></div><p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here.</p>
+<p>Essentially, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
+<p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html">button</a> with the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#e6db74">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#a6e22e">myFunctionName</span>())
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span>.<span style="color:#a6e22e">Importance</span> = <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">HighImportance</span>
+</span></span></code></pre></div><p>The problem is that you can&rsquo;t change the color, other than by setting the importance level. I can set it to blue, red, or gray depending on the importance setting.</p>
+<p>Laying out widgets is a whole other can of worms. Basically, you add <a href="https://docs.fyne.io/explore/widgets">widgets</a> to a <a href="https://docs.fyne.io/explore/container">container</a> with a <a href="https://docs.fyne.io/explore/layouts">layout</a>.</p>
+<p>Only the widget can control the size and position of a widget, you can&rsquo;t set the width or height manually.</p>
+<p>This would prove to be an issue once I started implementing my drag-and-drop feature.</p>
 <h2 id="problems-with-being-basic">Problems with being basic</h2>
 <p>I was happy with what I had written, for a while at least.</p>
 <p>I was talking about my project with some coworkers, and they mentioned that it wasn&rsquo;t super user friendly to update the Macros. I agreed, as YAML was a decent file format for a developer, but not everyone wants to be slinging YAML whenever they need to create a new shortcut.</p>
@@ -303,7 +317,7 @@
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
     data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
-      data-page-id="90fb84a46478557481fd844df69b9ee8" data-page-url="http://localhost:1313/blog/mmpguieditor/" data-page-title="Building a GUI in Golang to speed up my Mini Macro Pad"
+      data-page-id="90fb84a46478557481fd844df69b9ee8" data-page-url="http://localhost:1313/blog/mmpguieditor/" data-page-title="Improving my GUI to add more features to my Macro Pad"
       data-theme="dark">
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
