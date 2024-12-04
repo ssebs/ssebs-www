@@ -131,8 +131,70 @@ At this point, I felt I needed to learn how this was usually done.
 I chose the Model-View-Controller architecture, as it was the most simple to get started. If you'd like to read more about that, check out the [blog entry](/blog/mvctipcalc/). Since that blog has that journey covered, I won't repeat it. 
 
 ## Applying MVC to my Mini Macro Pad
-replace_me
+Once I learned about MVC, I started splitting up my widgets into 3 files. I started with the smallest piece of the UI, the Action editor, and got to work.
 
+I thought I'd finish up in a few weeks or so, but I kept finding more work to do.
+
+> You know how it goes.
+
+Here's a (relatively) tiny snippet of the [larger code base](https://github.com/ssebs/go-mmp):
+
+```golang
+// model
+type Action struct {
+	FuncName  string `yaml:"FuncName"`
+	FuncParam string `yaml:"FuncParam"`
+}
+
+// view
+type ActionItemEditorView struct {
+	widget.BaseWidget
+	funcSelect     *widget.Select
+	funcParamEntry *widget.Entry
+}
+. . .
+func (v *ActionItemEditorView) SetAction(a *models.Action) {
+	v.funcParamEntry.SetText(a.FuncParam)
+	v.funcParamEntry.Refresh()
+
+	v.funcSelect.SetSelected(a.FuncName)
+	v.funcSelect.Refresh()
+}
+func (v *ActionItemEditorView) SetOnFuncNameChanged(f func(string)) {
+	v.funcSelect.OnChanged = f
+}
+
+// controler
+ac := &ActionController{
+    Action:               a,
+    ActionItemEditorView: v,
+}
+
+ac.ActionItemEditorView.SetOnFuncNameChanged(func(s string) {
+    ac.Action.FuncName = s
+})
+
+ac.ActionItemEditorView.SetAction(ac.Action)
+```
+
+{{< spacer 1rem >}}
+
+Same MVC concept as my [tip calculator](/projects/mvctipcalc/), but with one MVC per widget.
+
+I kept adding features, getting closer and closer to a finished product, all while struggling to get my layout how I wanted.
+
+## Drag and Drop
+One interesting thing I added here was the ability to drag and drop the Macros (and the Actios within a Macro) around to swap positions of them.
+
+The way I achieved this was by implementing the `Draggable` interface in my **Views**. To do that, you need to create 2 functions: `Dragged(e *fyne.DragEvent)` and `DragEnd()`.
+
+I used the `fyne.DragEvent` to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it's hovering over.
+
+The `DragEnd()` function just lets me know when the drag is over, so I can run `SwapMacros()` and actually do the swap.
+
+I'm glossing over a lot of details here, but [check out the code](https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go) for more about that.
+
+I'm also glossing over the refactoring that I did, since that's pretty boring. tl;dr - I reorganized my code and cleaned it all up.
 
 ## The finished Config Editor
 
