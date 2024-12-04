@@ -3718,7 +3718,7 @@ select {
 }
 
 .post-content li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
   margin-left: 1rem;
   list-style-type: disc;
 }
@@ -3736,6 +3736,12 @@ select {
 .post-content a {
   color: #33ffe7;
   text-decoration: underline;
+}
+
+.post-content pre{
+  padding: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .img-container img {

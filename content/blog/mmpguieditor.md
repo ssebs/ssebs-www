@@ -1,7 +1,7 @@
 ---
 title: Building a GUI in Golang to speed up my Mini Macro Pad
 slug: mmpguieditor
-shortdesc: sdf
+shortdesc: 
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
 date: 2024-11-27T22:02:05-08:00
 weight: 24
