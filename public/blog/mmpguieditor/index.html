@@ -341,7 +341,8 @@
 <p>I was talking about my project with some coworkers, and they mentioned that it wasn&rsquo;t super user friendly to update the Macros. I agreed, as YAML was a decent file format for a developer, but not everyone wants to be slinging YAML whenever they need to create a new shortcut.</p>
 <p>So it was decided - I had to make a GUI Config Editor. I wanted to make an interface similar to what you&rsquo;d find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to meet the need.</p>
 <p>I started designing a quick UI in Excalidraw, and got to work on my <code>v2</code> release.</p>
-<h2 id="features">Features</h2>
+<img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
+<h2 id="features-i-wanted">Features I wanted</h2>
 <p>The main things I wanted to make easier were:</p>
 <ul>
 <li>Changing what the Macros did (updating the Actions)</li>
@@ -352,10 +353,38 @@
 <p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save nothing was updated. When I looked at the config file, it was updated but the UI and the actual running Macros weren&rsquo;t.</p>
 <p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
 <h2 id="learning-mvc-with-a-tip-calculator">Learning MVC with a tip calculator</h2>
-<p>At this point, I felt I needed to learn how this was usually done. It turns out, that you should structure your code in some way to keep it organized.</p>
+<p>At this point, I felt I needed to learn how this was usually done.</p>
+<blockquote>
+<p>It turns out, that you should structure your code in some way to keep it organized.</p>
+</blockquote>
 <p>I chose the Model-View-Controller architecture, as it was the most simple to get started. If you&rsquo;d like to read more about that, check out the <a href="/blog/mvctipcalc/">blog entry</a>. Since that blog has that journey covered, I won&rsquo;t repeat it.</p>
 <h2 id="applying-mvc-to-my-mini-macro-pad">Applying MVC to my Mini Macro Pad</h2>
 <p>replace_me</p>
+<h2 id="the-finished-config-editor">The finished Config Editor</h2>
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+<p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
+<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+</div>
+<div>
+Click on the name to change what they do.
+<p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
+<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+</div>
+</div>
+<p>Here&rsquo;s the before:</p>
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/10a220b7-b671-441f-8091-367c88647971" type="video/mp4">
+    Your browser does not support the video tag.
+</video> 
+<p>&hellip;and after:</p>
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/93dba44d-0294-4836-9b47-f18b098d896a" type="video/mp4">
+    Your browser does not support the video tag.
+</video> 
+<div style="min-height: 1rem;">
+</div>
+<p>Thanks for reading!</p>
 </div>
   <div>
     <p class="text-lg mb-2">Leave a comment!</p>

@@ -109,7 +109,9 @@ So it was decided - I had to make a GUI Config Editor. I wanted to make an inter
 
 I started designing a quick UI in Excalidraw, and got to work on my `v2` release.
 
-## Features
+<img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
+
+## Features I wanted
 The main things I wanted to make easier were:
 - Changing what the Macros did (updating the Actions) 
 - Moving the position of macros on the device using Drag and Drop
@@ -122,9 +124,51 @@ Aside from the annoyance of opening too many windows, it worked, at least the UI
 After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn't have `useState` or `useEffect`, so I was kinda on my own.
 
 ## Learning MVC with a tip calculator
-At this point, I felt I needed to learn how this was usually done. It turns out, that you should structure your code in some way to keep it organized. 
+At this point, I felt I needed to learn how this was usually done. 
+
+> It turns out, that you should structure your code in some way to keep it organized. 
 
 I chose the Model-View-Controller architecture, as it was the most simple to get started. If you'd like to read more about that, check out the [blog entry](/blog/mvctipcalc/). Since that blog has that journey covered, I won't repeat it. 
 
 ## Applying MVC to my Mini Macro Pad
 replace_me
+
+
+## The finished Config Editor
+
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+
+Just go to **Edit** > **Edit Config**, and drag-and-drop your macros into the correct positions
+
+<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+
+</div>
+<div>
+Click on the name to change what they do.
+
+Here's the "**gg**" Macro for example:
+
+<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+
+</div>
+</div>
+
+
+Here's the before:
+
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/10a220b7-b671-441f-8091-367c88647971" type="video/mp4">
+    Your browser does not support the video tag.
+</video> 
+
+...and after:
+
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/93dba44d-0294-4836-9b47-f18b098d896a" type="video/mp4">
+    Your browser does not support the video tag.
+</video> 
+
+{{< spacer 1rem >}}
+
+Thanks for reading!
