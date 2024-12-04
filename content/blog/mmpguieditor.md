@@ -23,7 +23,10 @@ Using HTML + CSS + JS, there's a standard [Document-Object-Model](https://develo
 For example, a button looks like this:
 
 ```html
-<button style="background-color: #222; border: 1px solid #fff;" onclick="myFunctionName()"> Click me, I'm a button </button>
+<button 
+    style="background-color: #222; border: 1px solid #fff;"
+    onclick="myFunctionName()"
+    > Click me, I'm a button </button>
 ```
 
 You can change the way the button looks using [CSS](https://www.w3schools.com/css/css3_buttons.asp) (which I've added inline for the example), but I won't get into that here.
