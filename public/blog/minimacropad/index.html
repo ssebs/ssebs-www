@@ -274,7 +274,10 @@
   <div class="post-content"><blockquote>
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
-<h2 id="the-story">The story</h2>
+<h2 id="whats-a-macro-pad">What&rsquo;s a Macro Pad?</h2>
+<p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &ldquo;skip song&rdquo; button on your keyboard.</p>
+<p>A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons.</p>
+<h2 id="why-i-wanted-a-macro-pad">Why I wanted a Macro Pad</h2>
 <p>I was playing video games and was getting tired of typing &ldquo;gg&rdquo; manually. I was also really into <a href="https://www.youtube.com/watch?v=qDvQNStNUiw">CSGO Surfing</a> for a while, and needed to &ldquo;reset&rdquo; my times pretty often.</p>
 <p>The way to &ldquo;reset&rdquo; yourself is by:</p>
 <ul>
@@ -283,15 +286,12 @@
 <li>Pressing enter again</li>
 </ul>
 <p>Now, this doesn&rsquo;t sound like a lot, but if you&rsquo;re really focused on getting that <em>flick</em> right, you don&rsquo;t want to keep moving your hands to type &ldquo;/r&rdquo; over and over.</p>
-<p>I knew it could be automated in some way, and I had a 3D printer and an Arduino laying around, so I got to work.</p>
-<h2 id="the-macro-pad">The Macro Pad</h2>
+<p>I knew it could be automated in some way, and I had a 3D printer and coding knowledge, so I got to work.</p>
+<h2 id="the-mini-macro-pads-hardware">The Mini Macro Pad&rsquo;s hardware</h2>
 <p>I watched <a href="https://www.youtube.com/@ZackFreedman">Zack Freedman&rsquo;s</a> video on <a href="https://www.youtube.com/watch?v=yYcNi9hKxDk">How to build Mechanical Keyboards</a>, and was inspired.</p>
-<p>Basically, (without going into too much detail) what I needed was a few mechanical keyboard switches, some red and black wire, my arduino, and a 3D printer.</p>
-<p>In my head, I was thinking of a number pad, but instead of sending numbers with a key press, each key would run a Macro.</p>
-<p>To make a working button, I&rsquo;d connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin.</p>
-<p>This ground pin is shared with the other button pins, so those can be connected together.</p>
-<p>Once I had my design ready, I printed out some 3D models I found on <a href="https://thangs.com">https://thangs.com</a>, and got to soldering.</p>
-<p>I chose the Teensy LC as my Serial device, since it can be used as a Human-Interface-Device (HID). That means I can emulate pressing buttons on a keyboard.</p>
+<p>Basically, (without going into too much detail) what I needed was a few mechanical keyboard switches, some wire, an arduino, and a 3D printer. I was planning to make essentially a number pad, but instead of sending numbers with a key press, each key would run a Macro.</p>
+<p>To make a working button, I&rsquo;d connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin. This ground pin is shared with the other button pins, so those can be connected together.</p>
+<p>Once I had my plan ready, I printed out some 3D models I found on <a href="https://thangs.com">https://thangs.com</a>, and got to soldering. I chose the Teensy LC as my Serial device, since it can be used as a Human-Interface-Device (HID). That means I can emulate pressing buttons on a keyboard.</p>
 <div style="min-height: 1rem;">
 </div>
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
@@ -311,30 +311,33 @@
 <li>Check which button was pressed, and compare that to a list of &ldquo;Macros&rdquo;.</li>
 <li>These Macros would have a list of &ldquo;Actions&rdquo; that can be run.</li>
 </ul>
-<p>The &ldquo;type gg&rdquo; Macro would look something like this:</p>
+<p>For example, the &ldquo;type gg&rdquo; Macro would look something like this:</p>
 <ul>
 <li><code>Press(&quot;enter&quot;)</code></li>
 <li><code>Type(&quot;gg&quot;)</code></li>
 <li><code>Press(&quot;enter&quot;)</code></li>
 </ul>
-<p>I copied some C code, and was able to get it working (after adding some delays between each step). Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change a macro.</p>
-<p>I decided to change the architecture of the app a bit: instead of the Arduino typing the keys, I&rsquo;d have it just send the button number over a serial connection. There would be an app listening for button presses, and that would run the macros on your computer instead.</p>
-<p>That way, I can update Python code, or even better a config file, to make my changes.</p>
-<h2 id="migration-to-serial">Migration to Serial</h2>
+<h2 id="writing-c">Writing C</h2>
+<p>I&rsquo;m familiar with the C programming language, but haven&rsquo;t really used it all that much. I followed some arduino tutorials and got my code to recognize when a button was pressed. Once that was done, I made a list of Macros that you can run, and hard coded what they did in C.</p>
+<p>I was able to get it working after adding some delays between each key press. Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change what a Macro did.</p>
+<p>I decided to change the architecture of the app a bit: instead of the Arduino typing the keys, I&rsquo;d have it just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.</p>
+<p>That way, I can update a config file to make my changes in a much faster way.</p>
+<h2 id="migration-to-serial--python">Migration to Serial + Python</h2>
 <img style="float: right;" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
-<p>I decided to go with Python, and also make a small GUI so you can see what/where the macros are on your device.</p>
+<p>I decided to go with Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.</p>
 <blockquote>
 <p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
 </blockquote>
-<p>I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. This worked, but the user interface was ugly, and it was kinda slow. That&rsquo;s due to PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine.</p>
-<p>I continued working on this version for a while, but after a couple refactors (and learning some OOP-sies), I decided I wanted to rewrite my code in Golang.</p>
+<p>I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. This worked, but the user interface was ugly, and it was kinda slow. This is due to PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine since Python is not compiled.</p>
+<p>I continued working on this version for a while, but after a couple refactors (and learning some <code>OOP</code>-sies), I decided I wanted to rewrite my code yet again.</p>
 <div style="clear:both;"></div>
-<h2 id="learning-go">Learning Go</h2>
-<p>Golang is a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There&rsquo;s another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! (No more startup time lag)</p>
+<h2 id="rewriting-in-go">Rewriting in Go</h2>
+<p>This time, I decided to write my code in Golang. This is a newer programming language, and it is sort of the middle ground between C and Python. Go&rsquo;s a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There&rsquo;s another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! (No more startup time lag)</p>
 <blockquote>
 <p>I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.</p>
 </blockquote>
 <p>I found the <a href="https://quii.gitbook.io/learn-go-with-tests">Learn Go with Tests</a> free online book, and got to work learning about pointers, interfaces, channels, and more.</p>
+<h3 id="sidebar">Sidebar</h3>
 <p>One thing I particularly like about Go is the error handling. In Python, if you were to save text to a file you&rsquo;d want to use a <code>try/catch</code> block to check for any errors. You can always leave it out, but Python won&rsquo;t warn you that using the <code>open()</code> function may create an error.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;example.txt&#34;</span>,<span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> f:
@@ -350,14 +353,17 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;failed to write file&#34;</span>, <span style="color:#a6e22e">err</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="rewriting-in-go">Rewriting in Go</h2>
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<h2 id="sidebar-over">Sidebar over</h2>
 <img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
-<p>Since I was basically just copying my Python project into Go, I did that. I learned a lot about structuring my code, since Go doesn&rsquo;t have inheritance, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals">composition</a> to fit my needs. There was also a lot of reading the docs/code for my GUI library.</p>
+<p>Since I was basically just copying my Python project into Go, I did that. I learned a lot about structuring my code, since Go doesn&rsquo;t have inheritance, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals">composition</a> to fit my needs. One important lesson I learned in doing this was to RTFM. The GUI library, and the godocs themselves, are mostly self-documenting.</p>
 <p>I ended up choosing <a href="https://fyne.io/">fyne.io</a> for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.</p>
-<p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to.</p>
-<p>I&rsquo;m pretty used to how websites work, which follows a strict Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
-<p>However, since I know enough to be dangerous with Tkinter, I was able to hack my way through using Fyne. Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
-<p>The startup time went from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I&rsquo;m used to how websites work, which follows the Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
+<p>However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne. Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I was able to complete the rewrite, and improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p><strong>INCLUDE_PICTURE</strong></p>
 <p>A few bugs were fixed over time, but in the end I had released <code>v1.2.3</code> before I was ready for my next big change.</p>
 <p>Read more about how I <a href="/blog/mmpguieditor/">improved my GUI to add more features to my Macro Pad</a>!</p>
 <div style="clear: both;"></div>
