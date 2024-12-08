@@ -10,9 +10,15 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 > Read the technical details on the [project page](/projects/go-mmp)
 
 ## What's a Macro Pad?
+<img style="float: right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
+
 Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a "skip song" button on your keyboard.
 
 A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons. 
+
+I did eventually make my own [3D Printed housing](https://than.gs/m/710028), and I call it my "Mini Macro Pad".
+
+<div style="clear: both;"></div>
 
 ## Why I wanted a Macro Pad
 I was playing video games and was getting tired of typing "gg" manually. I was also really into [CSGO Surfing](https://www.youtube.com/watch?v=qDvQNStNUiw) for a while, and needed to "reset" my times pretty often.
@@ -29,7 +35,7 @@ I knew it could be automated in some way, and I had a 3D printer and coding know
 ## The Mini Macro Pad's hardware
 I watched [Zack Freedman's](https://www.youtube.com/@ZackFreedman) video on [How to build Mechanical Keyboards](https://www.youtube.com/watch?v=yYcNi9hKxDk), and was inspired.
 
-Basically, (without going into too much detail) what I needed was a few mechanical keyboard switches, some wire, an arduino, and a 3D printer. I was planning to make essentially a number pad, but instead of sending numbers with a key press, each key would run a Macro.
+Basically, (without going into too much detail) what I needed was a few mechanical keyboard switches, some wire, an arduino, and a 3D printer. What I was essentially making was a number pad, but instead of sending numbers with a key press, each key would run a Macro.
 
 To make a working button, I'd connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin. This ground pin is shared with the other button pins, so those can be connected together.
 
@@ -37,25 +43,16 @@ Once I had my plan ready, I printed out some 3D models I found on https://thangs
 
 {{< spacer 1rem >}}
 
-<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
-<div>
-
-I did eventually make my own [3D Printed housing](https://than.gs/m/710028).
-
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
-</div>
-<div>
 
 Wiring under the hood (please forgive the newbie soldering).
 
 <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
-</div>
-</div>
+
 
 ## Making the buttons do stuff
 Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE. 
 
-My plan was when you pressed a button, it would:
+When you press a button, it will:
 - Check which button was pressed, and compare that to a list of "Macros".
 - These Macros would have a list of "Actions" that can be run.
 
@@ -67,7 +64,7 @@ For example, the "type gg" Macro would look something like this:
 ## Writing C
 I'm familiar with the C programming language, but haven't really used it all that much. I followed some arduino tutorials and got my code to recognize when a button was pressed. Once that was done, I made a list of Macros that you can run, and hard coded what they did in C.
 
-I was able to get it working after adding some delays between each key press. Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change what a Macro did.
+I was able to get it working after adding some time delays between each key press. Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change what a Macro did.
 
 I decided to change the architecture of the app a bit: instead of the Arduino typing the keys, I'd have it just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.
 
@@ -76,24 +73,26 @@ That way, I can update a config file to make my changes in a much faster way.
 ## Migration to Serial + Python
 <img style="float: right;" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
 
-I decided to go with Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.
+I decided on Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.
 
 > Here's a link to the [Github Repo](https://github.com/ssebs/MiniMacroPad), however this version has been *deprecated*.
 
-I used TKinter to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. This worked, but the user interface was ugly, and it was kinda slow. This is due to PyInstaller's `.exe` files including a Python virtual machine since Python is not compiled.
+I used [TKinter](https://docs.python.org/3/library/tkinter.html) to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. 
+
+This worked, but the user interface was ugly, and it was kinda slow. This is due to PyInstaller's `.exe` files including a Python virtual machine since Python is not compiled.
 
 I continued working on this version for a while, but after a couple refactors (and learning some `OOP`-sies), I decided I wanted to rewrite my code yet again.
 
 <div style="clear:both;"></div>
 
 ## Rewriting in Go
-This time, I decided to write my code in Golang. This is a newer programming language, and it is sort of the middle ground between C and Python. Go's a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There's another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! (No more startup time lag)
+This time, I decided to write my code in Golang. This is a modern low programming language, and is a middle ground between C and Python. Go's a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There's another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller! (No more startup time lag)
 
 > I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.
 
 I found the [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) free online book, and got to work learning about pointers, interfaces, channels, and more. 
 
-### Sidebar 
+### Quick sidebar about Go's error handling 
 One thing I particularly like about Go is the error handling. In Python, if you were to save text to a file you'd want to use a `try/catch` block to check for any errors. You can always leave it out, but Python won't warn you that using the `open()` function may create an error.
 
 ```python
