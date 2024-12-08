@@ -117,27 +117,30 @@ if err != nil {
 ```
 {{< spacer 1rem >}}
 
-## Sidebar over
+## Sidebar over, time to write a GUI in Go
 
 <img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
 
-Since I was basically just copying my Python project into Go, I did that. I learned a lot about structuring my code, since Go doesn't have inheritance, I learned to use [composition](https://go.dev/doc/effective_go#composite_literals) to fit my needs. One important lesson I learned in doing this was to RTFM. The GUI library, and the godocs themselves, are mostly self-documenting. 
+As I had a working version of my code written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go doesn't have inheritance, I learned to use [composition](https://go.dev/doc/effective_go#composite_literals) to fit my needs. 
+
+One important lesson I learned in doing this was to [RTFM](https://en.wikipedia.org/wiki/RTFM). The GUI library documentation *exists*, but it can be difficult to build everything you need from what you see on the getting started website. 
+
+I found that I needed to use VSCode's autocompletion to explore what methods were available, and use the "go to definition" button to read the source code to see how it should be used.
 
 I ended up choosing [fyne.io](https://fyne.io/) for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.
 
 It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I'm used to how websites work, which follows the Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I've spent lots of time working with it. 
 
-However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne. Once everything was working, I was amazed at how much snappier my macro pad felt!
+However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne. 
 
-## Conclusion
-I was able to complete the rewrite, and improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.
+## Conclusion, and what's next
+Once everything was working, I was amazed at how much snappier my macro pad felt! 
 
-**INCLUDE_PICTURE**
+I improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.
 
-A few bugs were fixed over time, but in the end I had released `v1.2.3` before I was ready for my next big change. 
+I was happy that I wrote, rewrote, and rewrote again my code, as I really did learn a lot in all this time. A few bugs were fixed, and a couple small features added, but in the end I had released `v1.2.3`.
 
-Read more about how I [improved my GUI to add more features to my Macro Pad](/blog/mmpguieditor/)!
+I say in the end, because what I had planned was going to be a major/breaking change. Read about how I improved my GUI to add a config editor to my Macro Pad [in part 2](/blog/mmpguieditor/)!
 
-<div style="clear: both;"></div>
 
-Thanks for reading!
+**Thanks for reading!**

@@ -343,19 +343,20 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-<h2 id="sidebar-over">Sidebar over</h2>
+<h2 id="sidebar-over-time-to-write-a-gui-in-go">Sidebar over, time to write a GUI in Go</h2>
 <img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
-<p>Since I was basically just copying my Python project into Go, I did that. I learned a lot about structuring my code, since Go doesn&rsquo;t have inheritance, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals">composition</a> to fit my needs. One important lesson I learned in doing this was to RTFM. The GUI library, and the godocs themselves, are mostly self-documenting.</p>
+<p>As I had a working version of my code written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go doesn&rsquo;t have inheritance, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals">composition</a> to fit my needs.</p>
+<p>One important lesson I learned in doing this was to <a href="https://en.wikipedia.org/wiki/RTFM">RTFM</a>. The GUI library documentation <em>exists</em>, but it can be difficult to build everything you need from what you see on the getting started website.</p>
+<p>I found that I needed to use VSCode&rsquo;s autocompletion to explore what methods were available, and use the &ldquo;go to definition&rdquo; button to read the source code to see how it should be used.</p>
 <p>I ended up choosing <a href="https://fyne.io/">fyne.io</a> for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.</p>
 <p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I&rsquo;m used to how websites work, which follows the Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
-<p>However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne. Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>I was able to complete the rewrite, and improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
-<p><strong>INCLUDE_PICTURE</strong></p>
-<p>A few bugs were fixed over time, but in the end I had released <code>v1.2.3</code> before I was ready for my next big change.</p>
-<p>Read more about how I <a href="/blog/mmpguieditor/">improved my GUI to add more features to my Macro Pad</a>!</p>
-<div style="clear: both;"></div>
-<p>Thanks for reading!</p>
+<p>However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne.</p>
+<h2 id="conclusion-and-whats-next">Conclusion, and what&rsquo;s next</h2>
+<p>Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
+<p>I improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p>I was happy that I wrote, rewrote, and rewrote again my code, as I really did learn a lot in all this time. A few bugs were fixed, and a couple small features added, but in the end I had released <code>v1.2.3</code>.</p>
+<p>I say in the end, because what I had planned was going to be a major/breaking change. Read about how I improved my GUI to add a config editor to my Macro Pad <a href="/blog/mmpguieditor/">in part 2</a>!</p>
+<p><strong>Thanks for reading!</strong></p>
 </div>
   <div>
     <p class="text-lg mb-2">Leave a comment!</p>
