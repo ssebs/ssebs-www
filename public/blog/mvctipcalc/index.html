@@ -262,37 +262,40 @@
 <blockquote>
 <p>If you&rsquo;d like to learn more about that, see the <a href="/blog/mmpguieditor/">blog post</a>.</p>
 </blockquote>
-<p>Before I could implement MVC for my Mini Macro Pad, I wanted to really grok MVC itself. I find that the best way to learn is by doing, so I decided to learn the MVC pattern by creating a tip calculator. I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
-<p>The tip calculator a simple form that shows the <code>tip amount</code> and the <code>total amount</code> when you enter in a <code>bill amount</code>, and a <code>tip percentage</code>.</p>
-<p>Since the Mini Macro pad is written in Go + <a href="https://fyne.io/">fyne.io</a>, I stuck with that.</p>
+<p>Before I could implement MVC for my Mini Macro Pad, I wanted to really grok MVC itself. I find that the best way to learn is by doing, so I decided to learn the MVC pattern by creating a tip calculator.</p>
+<blockquote>
+<p>I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
+</blockquote>
+<p>The tip calculator a baisc form that shows the <code>tip amount</code> and the <code>total amount</code> when you enter in a <code>bill amount</code>, and a <code>tip percentage</code>.</p>
+<p>Since my Mini Macro Pad is written in Go + <a href="https://fyne.io/">fyne.io</a>, I stuck with that.</p>
 <div style="clear: both;"></div>
 <h2 id="what-is-mvc">What is MVC?</h2>
 <img style="float:right" src="./img/mvc.webp" width="320px" alt="MVC Diagram">
 <p>Model-View-Controller is a software development pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.</p>
-<p>Contrast this to having a single file that manages what the GUI looks like, what happens when you press a button, and saving your changes to a file.</p>
-<blockquote>
-<p>If you&rsquo;d like to learn more about MVC, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8">Derek Banas&rsquo; tutorial</a>.</p>
-</blockquote>
+<p>Contrast this to having a single file that manages what the GUI looks like, what happens when you press a button, and saving your changes.</p>
 <ul>
 <li>The <strong>Model</strong> is what the data looks like. The <code>tip percent</code> and <code>bill amount</code> will be in our <strong>Model</strong>.</li>
 <li>The <strong>View</strong> is what the user will see (the actual form).
-<blockquote>
-<p>The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</p>
-</blockquote>
+<ul>
+<li>The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</li>
+</ul>
 </li>
 <li>The <strong>Controller</strong> is the bridge between the <strong>Model</strong> and the <strong>View</strong>. It will listen for events from the <strong>View</strong>, and will update the <strong>Model</strong>.</li>
 </ul>
+<blockquote>
+<p>If you&rsquo;d like to learn more about MVC, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8">Derek Banas&rsquo; tutorial</a>.</p>
+</blockquote>
 <div style="clear: both;"></div>
-<h2 id="implementing-mvc-for-a-tip-calculator">Implementing MVC for a tip calculator</h2>
-<p>Now that we know what MVC is, let&rsquo;s put it to use in a tip calculator. The code that you&rsquo;ll see below is just a snippet, if you want to see more details please check out the <a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a>.</p>
+<h2 id="implementing-mvc">Implementing MVC</h2>
+<p>Now that I learned about MVC, I&rsquo;ll put it to use in a tip calculator. The code snippets that you&rsquo;ll see below aren&rsquo;t full examples, if you want to see more details please check out the <a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a>.</p>
 <h3 id="the-model">The Model</h3>
 <p>For my tip calculator, I had two inputs:</p>
 <ol>
-<li>The <code>bill amount</code></li>
-<li>The <code>tip percentage</code></li>
+<li>The <code>bill amount</code> (how much your food costs)</li>
+<li>The <code>tip percentage</code> (how much you want to tip)</li>
 </ol>
-<p>With those, I can calculate both the <code>tip amount</code>, and the <code>total amount</code> (bill + tip).</p>
-<p>I needed to keep track of at least the first two numbers, and update the tip and <code>total amount</code> once one of those numbers changes.</p>
+<p>With those, I could calculate both the <code>tip amount</code> ($ to add), and the <code>total amount</code> ($ of bill + tip).</p>
+<p>I needed to keep track of at least the first two numbers, and update the <code>tip</code> and <code>total amount</code> once one of those numbers changed.</p>
 <p>The <strong>Model</strong> code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TipModel</span> <span style="color:#66d9ef">struct</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">billAmount</span> <span style="color:#66d9ef">float32</span>
@@ -315,8 +318,8 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tm</span>.<span style="color:#a6e22e">tipPercent</span> = <span style="color:#a6e22e">amount</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="the-view">The View</h3>
-<p>My <strong>View</strong> is a <a href="https://fyne.io/">fyne.io</a> widget with a few text boxes and some labels.</p>
-<p>I also had a few important methods (functions) that the <strong>Controller</strong> would use.</p>
+<p>My Tip Calculator <strong>View</strong> is a <a href="https://fyne.io/">fyne.io</a> widget with a few text boxes and some labels.</p>
+<p>I also had a few important functions that the <strong>Controller</strong> used.</p>
 <ul>
 <li><code>SetOnSelectTip()</code></li>
 <li><code>SetBillAmountEntryOnChanged()</code></li>
@@ -334,12 +337,12 @@
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tv</span>.<span style="color:#a6e22e">finalTotalAmount</span>.<span style="color:#a6e22e">Refresh</span>()
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="the-controller">The Controller</h3>
-<p>The <strong>Controller</strong> is what connects the <strong>Model</strong> and <strong>View</strong> together. It will tell the <strong>View</strong> what to do when a user selects a new <code>tip percentage</code>.</p>
-<p>When that happens it will:</p>
+<p>The <strong>Controller</strong> is what connects the <strong>Model</strong> and <strong>View</strong> together. It tells the <strong>View</strong> what to do when a user selects a new <code>tip percentage</code>.</p>
+<p>When that happens:</p>
 <ul>
-<li>Get the bill amount and the <code>tip percentage</code> from the <strong>View</strong> using the <code>GetBillAmount()</code> and <code>GetTipPercent()</code> functions.</li>
-<li>Calculate both the tip amount and the total amount (bill + tip)</li>
-<li>Update the <strong>View</strong> with the new calculated values, and have it <code>Refresh()</code>.</li>
+<li>The bill amount and the <code>tip percentage</code> are obtained from the <strong>View</strong> using the <code>GetBillAmount()</code> and <code>GetTipPercent()</code> functions.</li>
+<li>Both the <code>tip amount</code> and the <code>total amount</code> (bill + tip) are calculated</li>
+<li>The <strong>View</strong> is updated with the new calculated values, and will <code>Refresh()</code> to redraw the UI.</li>
 </ul>
 <p>Some of the <strong>Controller</strong> code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">tc</span>.<span style="color:#a6e22e">TipView</span>.<span style="color:#a6e22e">SetBillAmountEntryOnChanged</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) {
@@ -374,12 +377,13 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="bringing-it-all-together">Bringing it all together</h2>
 <img style="float:right;" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
-<p>The last step to get the tip calculator working was to connect all the pieces together. In my <code>main.go</code> file, I create an instance of the <strong>Model</strong>, create a fyne window and create a new <strong>View</strong>, and use both of those references in my <strong>Controller</strong>.</p>
+<p>The last step to get the tip calculator working was to connect all the pieces together.</p>
+<p>In my <code>main.go</code> file, I created an instance of the <strong>Model</strong>, created a fyne window and created a new <strong>View</strong>, and use both of those references in my <strong>Controller</strong>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">replace_me</span>
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-<p>&hellip;and with that, the tip calculator is complete!</p>
-<p>With all this done, I learned:</p>
+<p>&hellip;and with that, the tip calculator was completed!</p>
+<p>With all this done, I had learned:</p>
 <ul>
 <li>How to separate my widgets into 3 parts</li>
 <li>How nice it was to have a pattern to follow when writing my code</li>

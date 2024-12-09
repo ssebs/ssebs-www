@@ -6,7 +6,7 @@ date: "2024-05-18T14:08:45-07:00"
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
 tags: [golang, programming, 3d-printing, arduino, gui]
 ---
-> Read more about the story in the [making of blog post](/blog/minimacropad/) and the [improving of blog post](/blog/mmpguieditor)
+> Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/).
 
 [Github Repo](https://github.com/ssebs/go-mmp)
 
