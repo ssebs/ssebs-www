@@ -4,7 +4,7 @@
   {{- range site.Menus.main }}
   {{- with .Page }}
 
-    {{- if not (in .RelPermalink "blog") }}
+    {{- if not (in .RelPermalink "contact") }}
       {{ partial "section.html" . }}
     {{- end }}
 
