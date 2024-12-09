@@ -9,6 +9,25 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 ---
 > Read the technical details on the [project page](/projects/go-mmp)
 
+
+## DOC PLAN
+- Read Mini Macro Pad before this one
+  - "This is part 2 of my MMP project"
+- What's wrong with v1 / story
+- Solution idea
+- Expanding GUI in fyne
+- Fun with DnD
+- Having issues with state / GUI not syncing
+  - Realize I need to organize / structure my code better
+  - I find it best to learn by doing, so to learn MVC I need to implement it myself.
+  - Link to MVC Tip Calc
+- Using what I learned from my tip calc to implement MVC for my MMP
+- v2 released / what's new with the release
+- What's next for v3?
+  - See github issues
+
+
+
 For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
 
 I've been using React for a little while, which has [opinionated ways on how to manage state](https://react.dev/learn/managing-state), but this didn't translate to how the Golang GUI library I was using works.

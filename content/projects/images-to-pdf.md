@@ -14,7 +14,7 @@ tags: [golang, programming]
 Convert a selection of images files into a single PDF.
 
 I made a tool to convert multiple image files into a single PDF, addressing the limitation of
-my wife’s scanner by efficiently merging individual images into a single cohesive document.
+my wife's scanner by efficiently merging individual images into a single cohesive document.
 
 > Written in go, there are no dependencies to worry about when sharing the tool!
 

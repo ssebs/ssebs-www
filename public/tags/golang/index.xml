@@ -34,7 +34,7 @@
       <link>http://localhost:1313/blog/mmpguieditor/</link>
       <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
       <guid>http://localhost:1313/blog/mmpguieditor/</guid>
-      <description>Read the technical details on the project page&#xA;For example, when I&amp;rsquo;d update the name of a Macro in a new editor window, it wouldn&amp;rsquo;t sync to the regular window.</description>
+      <description>Read the technical details on the project page&#xA;DOC PLAN Read Mini Macro Pad before this one &amp;ldquo;This is part 2 of my MMP project&amp;rdquo; What&amp;rsquo;s wrong with v1 / story Solution idea Expanding GUI in fyne Fun with DnD Having issues with state / GUI not syncing Realize I need to organize / structure my code better I find it best to learn by doing, so to learn MVC I need to implement it myself.</description>
     </item>
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>

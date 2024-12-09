@@ -263,6 +263,32 @@
   <div class="post-content"><blockquote>
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
+<h2 id="doc-plan">DOC PLAN</h2>
+<ul>
+<li>Read Mini Macro Pad before this one
+<ul>
+<li>&ldquo;This is part 2 of my MMP project&rdquo;</li>
+</ul>
+</li>
+<li>What&rsquo;s wrong with v1 / story</li>
+<li>Solution idea</li>
+<li>Expanding GUI in fyne</li>
+<li>Fun with DnD</li>
+<li>Having issues with state / GUI not syncing
+<ul>
+<li>Realize I need to organize / structure my code better</li>
+<li>I find it best to learn by doing, so to learn MVC I need to implement it myself.</li>
+<li>Link to MVC Tip Calc</li>
+</ul>
+</li>
+<li>Using what I learned from my tip calc to implement MVC for my MMP</li>
+<li>v2 released / what&rsquo;s new with the release</li>
+<li>What&rsquo;s next for v3?
+<ul>
+<li>See github issues</li>
+</ul>
+</li>
+</ul>
 <p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
 <p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
 <p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
