@@ -263,6 +263,9 @@
   <div class="post-content"><blockquote>
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
+<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
+<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
+<p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
 <h2 id="exploring-fyne">Exploring fyne</h2>
 <p>This is a follow up to the <a href="/blog/minimacropad/">Mini Macro Pad</a> blog post, so I&rsquo;d suggest reading that if you haven&rsquo;t already.</p>
 <p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
@@ -427,7 +430,7 @@ Click on the name to change what they do.
 </video> 
 <div style="min-height: 1rem;">
 </div>
-<p>Thanks for reading!</p>
+<p><strong>Thanks for reading!</strong></p>
 </div>
   <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>

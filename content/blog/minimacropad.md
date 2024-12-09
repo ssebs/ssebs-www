@@ -1,7 +1,7 @@
 ---
 title: 3D printing and coding my Mini Macro Pad
 slug: minimacropad
-shortdesc: The story of how my Mini Macro Pad was created and the challenges I faced along the way.
+shortdesc: The journey of making my Mini Macro Pad was created and the challenges I faced along the way.
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png
 date: "2023-08-10"
 weight: 24
@@ -92,7 +92,7 @@ This time, I decided to write my code in Golang. This is a modern low programmin
 
 I found the [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) free online book, and got to work learning about pointers, interfaces, channels, and more. 
 
-### Quick sidebar about Go's error handling 
+## Quick sidebar about Go's error handling 
 One thing I particularly like about Go is the error handling. In Python, if you were to save text to a file you'd want to use a `try/catch` block to check for any errors. You can always leave it out, but Python won't warn you that using the `open()` function may create an error.
 
 ```python

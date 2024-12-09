@@ -255,47 +255,38 @@
   <div class="post-content"><blockquote>
 <p>Also see the <a href="/projects/mvctipcalc/">project page</a> and the <a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a></p>
 </blockquote>
-<div class="grid grid-cols-2 justify-between">
-<div>
-I made a basic tip calculator to learn the software development pattern. 
-<p>This is a simple form that shows the tip amount and the total amount when you enter in a bill amount, and a tip percentage.</p>
-<p>But <em>why</em>? And <em>how</em>? And what&rsquo;s <em>MVC</em>?</p>
-</div>
-<img src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Diagram" class="justify-self-end">
-</div>
+<img style="float:right;" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Diagram">
+<h2 id="why-did-i-make-a-tip-calculator">Why did I make a tip calculator?</h2>
+<p>I was working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, which was mostly just implementing a drag and drop config editor, and I was having trouble managing state.</p>
+<blockquote>
+<p>If you&rsquo;d like to learn more about that, see the <a href="/blog/mmpguieditor/">blog post</a>.</p>
+</blockquote>
+<p>I find the best way to learn is by doing, so I decided to learn the MVC pattern by creating a tip calculator. I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
+<p>The tip calculator a simple form that shows the <code>tip amount</code> and the <code>total amount</code> when you enter in a <code>bill amount</code>, and a <code>tip percentage</code>.</p>
+<p>Since the Mini Macro pad is written in Go + <a href="https://fyne.io/">fyne.io</a>, I stuck with that.</p>
+<div style="clear: both;"></div>
 <h3 id="mvc-or-model-view-controller">MVC, or Model View Controller</h3>
 <img style="float:right" src="./img/mvc.webp" width="320px" alt="MVC Diagram">
-If you aren't already familiar with MVC, the main thing to know is that it creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.
+<p>Model-View-Controller is a software development pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.</p>
+<p>Contrast this to having a single file that manages what the GUI looks like, what happens when you press a button, and saving your changes to a file.</p>
 <blockquote>
-<p>If you&rsquo;d like to learn more about implementing it, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8">Derek Banas&rsquo; tutorial</a>.</p>
+<p>If you&rsquo;d like to learn more about MVC, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8">Derek Banas&rsquo; tutorial</a>.</p>
 </blockquote>
 <ul>
-<li>The <strong>Model</strong> is what the data looks like. My <code>config</code> is a collection of <code>Metadata</code>, a list of <code>Macros</code> and their respective <code>Actions</code>, in a human and machine readable <code>.yaml</code> file.</li>
-<li>The <strong>View</strong> is what the user will see, so the actual form and drag and drop editors. The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</li>
+<li>The <strong>Model</strong> is what the data looks like. The <code>tip percent</code> and <code>bill amount</code> will be in our <strong>Model</strong>.</li>
+<li>The <strong>View</strong> is what the user will see, so the actual form. The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</li>
 <li>The <strong>Controller</strong> is the bridge between the <strong>Model</strong> and the <strong>View</strong>. It will listen for events from the <strong>View</strong>, and if one happens then it will update the <strong>Model</strong>.</li>
 </ul>
-<p>For example, a &ldquo;Save Config&rdquo; button will be displayed in the <strong>View</strong> that a user can click. The <strong>Controller</strong> will add a <code>OnTapped</code> function, which will call the Model&rsquo;s <code>config.Save()</code> function. See <a href="https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go">this code reference</a> for more details.</p>
 <div style="clear: both;"></div>
-<h2 id="why">Why?</h2>
-<p>While working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, which was <a href="https://github.com/ssebs/go-mmp/pull/19">primarily implementing a GUI Config Editor</a>, I was having trouble managing state changes.</p>
-<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
-<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
-<p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
-<h2 id="how">How?</h2>
-<p>Okay so I had the reason why I needed to organize my code, but not the how. I had created a bunch of separate widget files for each part of my Mini Macro Pad. (e.g. macro editor, metadata editor, etc.). These would become <strong>Views</strong>, and I&rsquo;d move the config update functions to a <strong>Controller</strong>.</p>
-<p>Before I got started with my Mini Macro Pad, I wanted to make a real MVC project to make sure I understood the concept. I felt that I&rsquo;d learned a lot from Derek&rsquo;s video, and wanted to try for myself.</p>
-<h2 id="learning-mvc-with-a-tip-calculator">Learning MVC with a tip calculator</h2>
-<p>That simple MVC project is my tip calculator. I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
-<p>Since the Mini Macro pad is written in Go + fyne, I stuck with that. I made a new project and got a fyne window open. The next thing I&rsquo;d need is 3 files: <code>model.go</code>, <code>view.go</code>, and <code>controller.go</code>.</p>
 <h3 id="the-model">The Model</h3>
 <p>For my tip calculator, I had two inputs:</p>
 <ol>
-<li>The bill amount</li>
-<li>The tip percentage</li>
+<li>The <code>bill amount</code></li>
+<li>The <code>tip percentage</code></li>
 </ol>
-<p>With those, I can (very easily) calculate both the tip amount, and the total amount (bill + tip).</p>
-<p>I needed to keep track of at least the first two numbers, and update the tip and total amount once one of those numbers changes.</p>
-<p>What this looked like in code was pretty simple:</p>
+<p>With those, I can (very easily) calculate both the <code>tip amount</code>, and the <code>total amount</code> (bill + tip).</p>
+<p>I needed to keep track of at least the first two numbers, and update the tip and <code>total amount</code> once one of those numbers changes.</p>
+<p>The <strong>Model</strong> code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TipModel</span> <span style="color:#66d9ef">struct</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">billAmount</span> <span style="color:#66d9ef">float32</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tipPercent</span> <span style="color:#66d9ef">float32</span>
@@ -318,7 +309,7 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>. . .
 </span></span></code></pre></div><h3 id="the-view">The View</h3>
-<p>My <strong>View</strong> is essentially a fyne widget with a few text boxes and some labels (you&rsquo;ve seen the screenshot).</p>
+<p>My <strong>View</strong> is essentially a <a href="https://fyne.io/">fyne.io</a> widget with a few text boxes and some labels (you&rsquo;ve seen the screenshot).</p>
 <p>I also had a few important methods (functions) that the <strong>Controller</strong> would use.</p>
 <ul>
 <li><code>SetOnSelectTip()</code></li>
@@ -326,7 +317,7 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 <li><code>SetFinalTipAmount()</code></li>
 <li><code>SetFinalTotalAmount()</code></li>
 </ul>
-<p>The code is a bit too long to show it all, but here&rsquo;s a couple highlights:</p>
+<p>Some of the <strong>View</strong> code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>. . . 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">tv</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">TipView</span>) <span style="color:#a6e22e">GetBillAmount</span>() (<span style="color:#66d9ef">float32</span>, <span style="color:#66d9ef">error</span>) {
@@ -347,7 +338,7 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 <li>Calculate both the tip amount and the total amount (bill + tip)</li>
 <li>Update the <strong>View</strong> with the new calculated values, and have it <code>Refresh()</code>.</li>
 </ul>
-<p>Here&rsquo;s another little snippet:</p>
+<p>Snippet of the <strong>Controller</strong> code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span>. . .
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">tc</span>.<span style="color:#a6e22e">TipView</span>.<span style="color:#a6e22e">SetBillAmountEntryOnChanged</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tc</span>.<span style="color:#a6e22e">UpdateModelFromView</span>()
@@ -382,11 +373,15 @@ If you aren't already familiar with MVC, the main thing to know is that it creat
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">tc</span>.<span style="color:#a6e22e">TipView</span>.<span style="color:#a6e22e">SetFinalTipAmount</span>(<span style="color:#a6e22e">finalTip</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">tc</span>.<span style="color:#a6e22e">TipView</span>.<span style="color:#a6e22e">SetFinalTotalAmount</span>(<span style="color:#a6e22e">finalTotal</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="whats-next">What&rsquo;s next?</h2>
+</span></span></code></pre></div><h2 id="solution-idea-for-tip-calc">Solution idea (for tip calc)</h2>
+<h2 id="implementing--screenshots">Implementing / screenshots</h2>
+<h2 id="bringing-it-all-together--what-i-learned">Bringing it all together / what I learned</h2>
+<h2 id="see-how-this-helped-with-my-gui-editor-link-again">See how this helped with my GUI Editor (link again)</h2>
+<h2 id="whats-next">What&rsquo;s next?</h2>
 <p>If you want to read more of the code, check out the <a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a>.</p>
 <p>Now that the MVC Tip Calculator was done, I felt confident enough to get started on my <code>v2</code> release!</p>
 <p>If you&rsquo;d like to read more about that, check out the <a href="/blog/minimacropad/">blog entry</a>.</p>
-<p>Thanks for reading!</p>
+<p><strong>Thanks for reading!</strong></p>
 </div>
   <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>

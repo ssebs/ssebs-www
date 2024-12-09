@@ -20,7 +20,7 @@
       <link>http://localhost:1313/blog/mmpguieditor/</link>
       <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
       <guid>http://localhost:1313/blog/mmpguieditor/</guid>
-      <description>Read the technical details on the project page&#xA;Exploring fyne This is a follow up to the Mini Macro Pad blog post, so I&amp;rsquo;d suggest reading that if you haven&amp;rsquo;t already.</description>
+      <description>Read the technical details on the project page&#xA;For example, when I&amp;rsquo;d update the name of a Macro in a new editor window, it wouldn&amp;rsquo;t sync to the regular window.</description>
     </item>
     <item>
       <title>3D printing and coding my Mini Macro Pad</title>

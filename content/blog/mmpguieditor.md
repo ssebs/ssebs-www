@@ -9,6 +9,15 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 ---
 > Read the technical details on the [project page](/projects/go-mmp)
 
+For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
+
+I've been using React for a little while, which has [opinionated ways on how to manage state](https://react.dev/learn/managing-state), but this didn't translate to how the Golang GUI library I was using works.
+
+The GUI library I'm using, [fyne.io](https://fyne.io), is structure / pattern agnostic, meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
+
+
+
+
 ## Exploring fyne
 This is a follow up to the [Mini Macro Pad](/blog/minimacropad/) blog post, so I'd suggest reading that if you haven't already.
 
@@ -241,4 +250,4 @@ Here's the before:
 
 {{< spacer 1rem >}}
 
-Thanks for reading!
+**Thanks for reading!**
