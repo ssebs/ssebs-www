@@ -429,7 +429,7 @@ Click on the name to change what they do.
 </div>
 <p>Thanks for reading!</p>
 </div>
-  <div>
+  <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
@@ -439,6 +439,16 @@ Click on the name to change what they do.
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
   </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
 
 </div>
         </div>

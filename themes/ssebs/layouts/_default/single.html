@@ -21,7 +21,7 @@
   {{- end }}
 
   {{- if in .RelPermalink "blog" }}
-  <div>
+  <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
@@ -31,6 +31,17 @@
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
   </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          // If the server responds successfully, display the comment section
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
+
 {{- end }}
 
 </div>

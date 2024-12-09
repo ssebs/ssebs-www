@@ -355,7 +355,7 @@
 <p>I say in the end, because what I had planned was going to be a major/breaking change. Read about how I improved my GUI to add a config editor to my Macro Pad <a href="/blog/mmpguieditor/">in part 2</a>!</p>
 <p><strong>Thanks for reading!</strong></p>
 </div>
-  <div>
+  <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
@@ -365,6 +365,16 @@
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
   </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
 
 </div>
         </div>
