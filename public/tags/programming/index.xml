@@ -51,11 +51,11 @@
       <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
     </item>
     <item>
-      <title>Improving my GUI to add more features to my Macro Pad</title>
+      <title>newtitle Improving my GUI to add more features to my Macro Pad</title>
       <link>http://localhost:1313/blog/mmpguieditor/</link>
       <pubDate>Wed, 27 Nov 2024 22:02:05 -0800</pubDate>
       <guid>http://localhost:1313/blog/mmpguieditor/</guid>
-      <description>Read the technical details on the project page&#xA;DOC PLAN Read Mini Macro Pad before this one &amp;ldquo;This is part 2 of my MMP project&amp;rdquo; What&amp;rsquo;s wrong with v1 / story Solution idea Expanding GUI in fyne Fun with DnD Having issues with state / GUI not syncing Realize I need to organize / structure my code better I find it best to learn by doing, so to learn MVC I need to implement it myself.</description>
+      <description>Before you read&amp;hellip; This is part 2 of my Mini Macro Pad project.</description>
     </item>
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>

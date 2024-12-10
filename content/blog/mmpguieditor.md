@@ -1,5 +1,5 @@
 ---
-title: Improving my GUI to add more features to my Macro Pad
+title: newtitle Improving my GUI to add more features to my Macro Pad
 slug: mmpguieditor
 shortdesc: The story of the journey I took making a GUI in Go.
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
@@ -7,26 +7,53 @@ date: 2024-11-27T22:02:05-08:00
 weight: 24
 tags: [golang, programming, 3d-printing, arduino, gui]
 ---
-> Read the technical details on the [project page](/projects/go-mmp)
+
+## Before you read...
+<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
+
+This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and coded it.
+
+## What's wrong with v1? Why make a v2?
+I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a problem.
+
+If you wanted to change any of the Macros, you had to open up a code editor and edit a `.yaml` file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.
+
+I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but decided that was the push I needed to get started.
+
+So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you'd find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to make changes on the fly.
+
+## Solution idea
+I started designing a quick UI in Excalidraw, and got to work on my `v2` release.
+
+<img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
 
 
-## DOC PLAN
-- Read Mini Macro Pad before this one
-  - "This is part 2 of my MMP project"
-- What's wrong with v1 / story
-- Solution idea
-- Expanding GUI in fyne
-- Fun with DnD
-- Having issues with state / GUI not syncing
-  - Realize I need to organize / structure my code better
-  - I find it best to learn by doing, so to learn MVC I need to implement it myself.
-  - Link to MVC Tip Calc
-- Using what I learned from my tip calc to implement MVC for my MMP
-- v2 released / what's new with the release
-- What's next for v3?
-  - See github issues
+## Features I wanted
+The main things I wanted to make easier were:
+- Changing what the Macros did (updating the Actions) 
+- Moving the position of macros on the device using Drag and Drop
+- Changing Metadata (like # of columns, and serial connection info) via the GUI
 
+I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions. 
 
+Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save nothing was updated. When I looked at the config file, it was updated but the UI and the actual running Macros weren't.
+
+After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn't have `useState` or `useEffect`, so I was kinda on my own.
+
+<div style="clear: both;"></div>
+
+## Expanding GUI in fyne
+## Fun with DnD
+## Having issues with state / GUI not syncing
+  ## Realize I need to organize / structure my code better
+  ## I find it best to learn by doing, so to learn MVC I need to implement it myself.
+  ## Link to MVC Tip Calc
+## Using what I learned from my tip calc to implement MVC for my MMP
+## v2 released / what's new with the release
+## What's next for v3?
+  ## See github issues
+
+--------------------------------------------------------------------------------------------------------------------
 
 For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
 
@@ -34,12 +61,7 @@ I've been using React for a little while, which has [opinionated ways on how to 
 
 The GUI library I'm using, [fyne.io](https://fyne.io), is structure / pattern agnostic, meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
 
-
-
-
 ## Exploring fyne
-This is a follow up to the [Mini Macro Pad](/blog/minimacropad/) blog post, so I'd suggest reading that if you haven't already.
-
 A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code. 
 
 At first, I didn't agree with them, but now that I've spent enough time with it, I sorta do. It's not that you *can't* write a GUI in Go, but that's not really what it's *made* for. There's no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.
@@ -134,30 +156,6 @@ The tl;dr is this:
 - When a button is pressed, it will check for the matching Macro, and run the Actions in that Macro in order, using the parameters set in the config file.
   - e.g. `PressRelease("ENTER")` will press and release the enter button.
 
-
-
-## Problems with being basic
-I was happy with what I had written, for a while at least. 
-
-I was talking about my project with some coworkers, and they mentioned that it wasn't super user friendly to update the Macros. I agreed, as YAML was a decent file format for a developer, but not everyone wants to be slinging YAML whenever they need to create a new shortcut.
-
-So it was decided - I had to make a GUI Config Editor. I wanted to make an interface similar to what you'd find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to meet the need.
-
-I started designing a quick UI in Excalidraw, and got to work on my `v2` release.
-
-<img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
-
-## Features I wanted
-The main things I wanted to make easier were:
-- Changing what the Macros did (updating the Actions) 
-- Moving the position of macros on the device using Drag and Drop
-- Changing Metadata (like # of columns, and serial connection info) via the GUI
-
-I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions. 
-
-Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save nothing was updated. When I looked at the config file, it was updated but the UI and the actual running Macros weren't.
-
-After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn't have `useState` or `useEffect`, so I was kinda on my own.
 
 ## Learning MVC with a tip calculator
 At this point, I felt I needed to learn how this was usually done. 

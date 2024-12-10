@@ -9,8 +9,6 @@ tags: [golang, programming, gui]
 ---
 > Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
 
-**TODO: clean up tense/my our/etc.**
-
 <img style="float:right;" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
 
 ## Why did I make a tip calculator? 
