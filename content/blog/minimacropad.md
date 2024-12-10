@@ -129,6 +129,23 @@ I found that I needed to use VSCode's autocompletion to explore what methods wer
 
 I ended up choosing [fyne.io](https://fyne.io/) for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.
 
+I used a `GridWithColumns` container along with some `Buttons`. I used the same config file as before, and parsed it. From there, I went through the list of Macros and made a `Button` for each one.
+
+Here's a snippet of the code, but check out the [full file](https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go) to read more.
+
+<div style="clear: both;"></div>
+
+```golang
+for _, macro := range config.Macros {
+    macroBtn := widget.NewButton(macro.Name, func() {
+        macroRunner.Run(macro)
+    })
+    v.macrosContainer.Add(macroBtn)
+}
+```
+
+{{< spacer 1rem >}}
+
 It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I'm used to how websites work, which follows the Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I've spent lots of time working with it. 
 
 However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne. 

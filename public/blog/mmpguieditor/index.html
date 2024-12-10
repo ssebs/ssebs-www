@@ -269,37 +269,25 @@
 <h2 id="whats-wrong-with-v1-why-make-a-v2">What&rsquo;s wrong with v1? Why make a v2?</h2>
 <p>I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a problem.</p>
 <p>If you wanted to change any of the Macros, you had to open up a code editor and edit a <code>.yaml</code> file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.</p>
-<p>I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but decided that was the push I needed to get started.</p>
+<p>I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but that was the push I needed to get started.</p>
 <p>So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you&rsquo;d find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to make changes on the fly.</p>
-<h2 id="solution-idea">Solution idea</h2>
-<p>I started designing a quick UI in Excalidraw, and got to work on my <code>v2</code> release.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>I started by designing a quick UI in Excalidraw, and thinking about what features I wanted to add.</p>
+<div class="flex">
+<div>Config editor view where you can drag and drop your Macros.</div>
+<div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
+</div>
 <img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
 <h2 id="features-i-wanted">Features I wanted</h2>
 <p>The main things I wanted to make easier were:</p>
 <ul>
 <li>Changing what the Macros did (updating the Actions)</li>
-<li>Moving the position of macros on the device using Drag and Drop</li>
-<li>Changing Metadata (like # of columns, and serial connection info) via the GUI</li>
+<li>Moving the position of Macros on the device using Drag and Drop</li>
+<li>Changing Metadata (like # of columns, and serial connection info)</li>
 </ul>
-<p>I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions.</p>
-<p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save nothing was updated. When I looked at the config file, it was updated but the UI and the actual running Macros weren&rsquo;t.</p>
-<p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
 <div style="clear: both;"></div>
+<p><strong>CONTINUE EDITING FROM HERE</strong></p>
 <h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
-<h2 id="fun-with-dnd">Fun with DnD</h2>
-<h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
-<h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
-<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
-<h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
-<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
-<h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
-<h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
-<h2 id="see-github-issues">See github issues</h2>
-<hr>
-<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
-<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
-<p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
-<h2 id="exploring-fyne">Exploring fyne</h2>
 <p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
 <p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, but that&rsquo;s not really what it&rsquo;s <em>made</em> for. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
 <p>The main problem I ran into when working with <a href="https://fyne.io/">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
@@ -336,20 +324,28 @@
 </blockquote>
 <p>To be clear, I have no hate for fyne at all. I feel like I&rsquo;ve learned a ton about different ways to manage user interfaces, and I&rsquo;m glad that the project exists. I do think the documentation can be improved, but I could be the one contributing that <code>;)</code></p>
 <div style="clear: both;"></div>
-<h2 id="creating-a-basic-gui">Creating a basic GUI</h2>
-<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
-<p>To recreate (and improve) my Tkinter GUI from my old Python code, I got to work using a <code>GridWithColumns</code> container along with some <code>Buttons</code>. I used the same Config file as before, and parsed it. From there, I went through the list of Macros and made a button for each one.</p>
-<p>Here&rsquo;s a snippet of the code, but check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go">full file</a> to read more.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">macro</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">Macros</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">macroBtn</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#a6e22e">macro</span>.<span style="color:#a6e22e">Name</span>, <span style="color:#66d9ef">func</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">macroRunner</span>.<span style="color:#a6e22e">Run</span>(<span style="color:#a6e22e">macro</span>)
-</span></span><span style="display:flex;"><span>    })
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">macrosContainer</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">macroBtn</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div style="min-height: 1rem;">
-</div>
-<p>With this, I was able to make a basic grid of buttons, and run macros with them.</p>
-<div style="clear: both;"></div>
+<h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
+<p>I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions.</p>
+<p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save, nothing was updated. When I looked at the config file, it was updated but the UI and the Macros themselves weren&rsquo;t.</p>
+<p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
+<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
+<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
+<p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
+<h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
+<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
+<h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
+<h2 id="fun-with-drag-and-drop">Fun with Drag and Drop</h2>
+<p>One cool thing I added was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them. I wanted to be able to move the order of some Actions in a Macro</p>
+<p>The way I achieved this was by implementing the <code>Draggable</code> interface in my <strong>Views</strong>. To do that, you need to create 2 functions: <code>Dragged(e *fyne.DragEvent)</code> and <code>DragEnd()</code>.</p>
+<p>I used the <code>fyne.DragEvent</code> to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it&rsquo;s hovering over.</p>
+<p>The <code>DragEnd()</code> function just lets me know when the drag is over, so I can run <code>SwapMacros()</code> to actually do the swap on the <strong>Model</strong>.</p>
+<p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go">check out the code</a> for more about that.</p>
+<p>I&rsquo;m also glossing over the refactoring that I did, since that&rsquo;s pretty boring. tl;dr - I reorganized my code and cleaned it all up.</p>
+<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
+<h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
+<h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
+<h2 id="see-github-issues">See github issues</h2>
+<hr>
 <h2 id="running-macros-when-you-press-a-button">Running Macros when you press a button</h2>
 <p>I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID&rsquo;s between them, and how that number is used to actually run the Macros, but instead I&rsquo;ll leave that up for <a href="https://github.com/ssebs/go-mmp">you to explore</a>.</p>
 <p>The tl;dr is this:</p>
@@ -415,13 +411,6 @@
 </div>
 <p>Same MVC concept as my <a href="/projects/mvctipcalc/">tip calculator</a>, but with one MVC per widget.</p>
 <p>I kept adding features, getting closer and closer to a finished product, all while struggling to get my layout how I wanted.</p>
-<h2 id="drag-and-drop">Drag and Drop</h2>
-<p>One interesting thing I added here was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them.</p>
-<p>The way I achieved this was by implementing the <code>Draggable</code> interface in my <strong>Views</strong>. To do that, you need to create 2 functions: <code>Dragged(e *fyne.DragEvent)</code> and <code>DragEnd()</code>.</p>
-<p>I used the <code>fyne.DragEvent</code> to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it&rsquo;s hovering over.</p>
-<p>The <code>DragEnd()</code> function just lets me know when the drag is over, so I can run <code>SwapMacros()</code> to actually do the swap on the <strong>Model</strong>.</p>
-<p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go">check out the code</a> for more about that.</p>
-<p>I&rsquo;m also glossing over the refactoring that I did, since that&rsquo;s pretty boring. tl;dr - I reorganized my code and cleaned it all up.</p>
 <h2 id="the-finished-config-editor">The finished Config Editor</h2>
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
 <div>
@@ -460,7 +449,7 @@ Click on the name to change what they do.
   </div>
 
   <script>
-    fetch('https://cusdis.ssebs.com', { method: 'HEAD' })
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
       .then(response => {
         if (response.ok) {
           

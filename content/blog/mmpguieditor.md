@@ -6,6 +6,7 @@ feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.p
 date: 2024-11-27T22:02:05-08:00
 weight: 24
 tags: [golang, programming, 3d-printing, arduino, gui]
+draft: true
 ---
 
 ## Before you read...
@@ -18,50 +19,34 @@ I was happy to have a working Macro Pad, and I used it for about a year or so wi
 
 If you wanted to change any of the Macros, you had to open up a code editor and edit a `.yaml` file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.
 
-I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but decided that was the push I needed to get started.
+I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but that was the push I needed to get started.
 
 So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you'd find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to make changes on the fly.
 
-## Solution idea
-I started designing a quick UI in Excalidraw, and got to work on my `v2` release.
+## Getting started
+I started by designing a quick UI in Excalidraw, and thinking about what features I wanted to add.
+
+<div class="flex">
+<div>Config editor view where you can drag and drop your Macros.</div>
+<div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
+</div>
 
 <img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
-
 
 ## Features I wanted
 The main things I wanted to make easier were:
 - Changing what the Macros did (updating the Actions) 
-- Moving the position of macros on the device using Drag and Drop
-- Changing Metadata (like # of columns, and serial connection info) via the GUI
-
-I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions. 
-
-Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save nothing was updated. When I looked at the config file, it was updated but the UI and the actual running Macros weren't.
-
-After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn't have `useState` or `useEffect`, so I was kinda on my own.
+- Moving the position of Macros on the device using Drag and Drop
+- Changing Metadata (like # of columns, and serial connection info)
 
 <div style="clear: both;"></div>
 
+
+
+**CONTINUE EDITING FROM HERE**
+
 ## Expanding GUI in fyne
-## Fun with DnD
-## Having issues with state / GUI not syncing
-  ## Realize I need to organize / structure my code better
-  ## I find it best to learn by doing, so to learn MVC I need to implement it myself.
-  ## Link to MVC Tip Calc
-## Using what I learned from my tip calc to implement MVC for my MMP
-## v2 released / what's new with the release
-## What's next for v3?
-  ## See github issues
 
---------------------------------------------------------------------------------------------------------------------
-
-For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
-
-I've been using React for a little while, which has [opinionated ways on how to manage state](https://react.dev/learn/managing-state), but this didn't translate to how the Golang GUI library I was using works.
-
-The GUI library I'm using, [fyne.io](https://fyne.io), is structure / pattern agnostic, meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
-
-## Exploring fyne
 A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code. 
 
 At first, I didn't agree with them, but now that I've spent enough time with it, I sorta do. It's not that you *can't* write a GUI in Go, but that's not really what it's *made* for. There's no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.
@@ -124,27 +109,46 @@ To be clear, I have no hate for fyne at all. I feel like I've learned a ton abou
 
 <div style="clear: both;"></div>
 
-## Creating a basic GUI
-<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
 
-To recreate (and improve) my Tkinter GUI from my old Python code, I got to work using a `GridWithColumns` container along with some `Buttons`. I used the same Config file as before, and parsed it. From there, I went through the list of Macros and made a button for each one.
+## Having issues with state / GUI not syncing
+I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions. 
 
-Here's a snippet of the code, but check out the [full file](https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go) to read more.
+Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save, nothing was updated. When I looked at the config file, it was updated but the UI and the Macros themselves weren't.
 
-```golang
-for _, macro := range config.Macros {
-    macroBtn := widget.NewButton(macro.Name, func() {
-        macroRunner.Run(macro)
-    })
-    v.macrosContainer.Add(macroBtn)
-}
-```
+After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn't have `useState` or `useEffect`, so I was kinda on my own.
 
-{{< spacer 1rem >}}
+For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
 
-With this, I was able to make a basic grid of buttons, and run macros with them.
+I've been using React for a little while, which has [opinionated ways on how to manage state](https://react.dev/learn/managing-state), but this didn't translate to how the Golang GUI library I was using works.
 
-<div style="clear: both;"></div>
+The GUI library I'm using, [fyne.io](https://fyne.io), is structure / pattern agnostic, meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
+
+
+  ## Realize I need to organize / structure my code better
+  ## I find it best to learn by doing, so to learn MVC I need to implement it myself.
+  ## Link to MVC Tip Calc
+
+
+## Fun with Drag and Drop
+One cool thing I added was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them. I wanted to be able to move the order of some Actions in a Macro
+
+The way I achieved this was by implementing the `Draggable` interface in my **Views**. To do that, you need to create 2 functions: `Dragged(e *fyne.DragEvent)` and `DragEnd()`.
+
+I used the `fyne.DragEvent` to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it's hovering over.
+
+The `DragEnd()` function just lets me know when the drag is over, so I can run `SwapMacros()` to actually do the swap on the **Model**.
+
+I'm glossing over a lot of details here, but [check out the code](https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go) for more about that.
+
+I'm also glossing over the refactoring that I did, since that's pretty boring. tl;dr - I reorganized my code and cleaned it all up.
+
+## Using what I learned from my tip calc to implement MVC for my MMP
+## v2 released / what's new with the release
+## What's next for v3?
+  ## See github issues
+
+--------------------------------------------------------------------------------------------------------------------
+
 
 ## Running Macros when you press a button
 I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID's between them, and how that number is used to actually run the Macros, but instead I'll leave that up for [you to explore](https://github.com/ssebs/go-mmp). 
@@ -216,19 +220,6 @@ ac.ActionItemEditorView.SetAction(ac.Action)
 Same MVC concept as my [tip calculator](/projects/mvctipcalc/), but with one MVC per widget.
 
 I kept adding features, getting closer and closer to a finished product, all while struggling to get my layout how I wanted.
-
-## Drag and Drop
-One interesting thing I added here was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them.
-
-The way I achieved this was by implementing the `Draggable` interface in my **Views**. To do that, you need to create 2 functions: `Dragged(e *fyne.DragEvent)` and `DragEnd()`.
-
-I used the `fyne.DragEvent` to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it's hovering over.
-
-The `DragEnd()` function just lets me know when the drag is over, so I can run `SwapMacros()` to actually do the swap on the **Model**.
-
-I'm glossing over a lot of details here, but [check out the code](https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go) for more about that.
-
-I'm also glossing over the refactoring that I did, since that's pretty boring. tl;dr - I reorganized my code and cleaned it all up.
 
 ## The finished Config Editor
 
