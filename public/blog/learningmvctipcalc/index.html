@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <base href="/" /><title> Learning the MVC pattern by making a Tip Calculator </title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+   
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+
+    <meta name="theme-color" content="#41afff">
+    
+  
+  <link rel="stylesheet" href="/css/style.min.css">
+
+  
+  <script src="./js/main.js"></script>
+</head><body class="text-white">
+
+
+<div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
+    
+    <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
+        
+        <a href="./" class="flex align-center">
+            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+            <span class="text-gray-300 text-xl m-auto hover:text-quaternary">ssebs</span>
+        </a>
+
+        
+        <nav class="">
+            <button id="toggleOpen" class='sm:hidden flex ml-auto'>
+                <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+                    stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                        <animate dur="0.2s" attributeName="d"
+                            values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                            begin="start.begin" />
+                        <animate dur="0.2s" attributeName="d"
+                            values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                            begin="reverse.begin" />
+                    </path>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                    </rect>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
+                            begin="click" />
+                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                    </rect>
+                </svg>
+            </button>
+            
+            <div id="collapseMenu" class="flex flex-col items-center hideit gap-6 text-lg">
+                <ul class="flex max-sm:flex-col gap-4 align-middle">
+                    
+
+                    
+                    
+                    <li>
+                        <a href="/projects/" title="My Projects"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Projects
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/" title="About me"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/contact/" title="Contact me"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Contact
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="Seb&#39;s Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="flex justify-between gap-4 pt-4 sm:hidden">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#41afff"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#41afff"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#41afff"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#41afff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<script>
+    var toggleOpen = document.getElementById('toggleOpen');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function toggleElement(element) {
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
+        } else {
+            element.classList.remove("hideit")
+            element.classList.add("showit");
+        }
+    }
+
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+
+</script><div class="flex justify-center">
+    <div class="m-4">
+      <ul class="my-2 flex text-white-dim"><li class=""><a href="/">Home</a></li>
+        <div class="mx-1" >&gt;</div>
+        <li class=""><a href="/blog/">Blog
+        </a></li>
+        <div class="mx-1" >&gt;</div>
+    <li class=""><a href="/blog/learningmvctipcalc/">Learning the MVC pattern by making a Tip Calculator</a></li>
+</ul>
+      
+      <div class="grid lg:grid-cols-4 gap-4 mb-6">
+        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
+<div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="">
+        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md border-2 border-primary"
+            title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
+
+        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
+            <h4>In a sentence...</h4>
+            
+        </div>
+        <div class="grid gap-1 mb-2">
+            <p>
+                I'm a professional fixer, hobbyist figure-outer.
+            </p>
+        </div>
+        <div class="grid"><a href="./about"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Read more about me.
+            </a><a href="./contact"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                See what I've been up to.
+            </a></div>
+    </div>
+    <div class="">
+        <div class="border-b border-neutral-600 font-semibold">
+            <h4>Skills:</h4>
+        </div>
+        <div class="p-4 flex flex-wrap justify-center gap-4">
+            <a href="./tags/python"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
+            <a href="./tags/golang"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">golang</a>
+            <a href="./tags/webdev"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black">Web
+                Dev</a>
+            <a href="./about"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black">DevOps</a>
+            <a href="./projects"
+                class="px-2 py-1 rounded-md border border-primary text-primary hover:bg-primary hover:text-black">
+                More projects
+            </a>
+        </div>
+        <ul class="flex justify-center gap-4">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+        </ul>
+    </div>
+</div></div>
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+<div class="grid p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="flex justify-between">
+    <h1 class="text-2xl">Learning the MVC pattern by making a Tip Calculator</h1>
+
+    <div class="mb-2 flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/golang"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        golang
+      </a>
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/gui"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gui
+      </a>
+    </div></div>
+  <div class="post-content"><p>I made a basic tip calculator to learn the Model View Controller (MVC) pattern. But why? And how?</p>
+<h3 id="mvc">MVC?</h3>
+<p>If you aren&rsquo;t already familiar with MVC, the main thing to know is that it creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.</p>
+<p>If you&rsquo;d like to learn more about implementing it, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8">Derek Banas&rsquo; tutorial</a>.</p>
+<p>Basically, the Model is what the data looks like. My config is a collection of metadata, a list of <code>Macros</code> and their respective <code>Actions</code>, in a human and machine readable <code>.yaml</code> file.</p>
+<p>The View is what the user will see, so the actual form and drag and drop editors. The View should not actually update the model when changes happen. Instead, it will have get/set functions that are managed by the Controller.</p>
+<p>The Controller is the bridge between the Model and the View. It will listen for events from the View, and if one happens then it will update the model.</p>
+<p>For example, a &ldquo;Save Config&rdquo; button will be displayed in the View that a user can click. The Controller will add a &ldquo;OnTapped&rdquo; function, which will call the Model&rsquo;s <code>config.Save()</code> function. See <a href="https://github.com/ssebs/MVCTipCalc/blob/main/internal/controller.go">this code reference</a> for more details.</p>
+<h2 id="why">Why?</h2>
+<p>While working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, which was primarily implementing a GUI Config Editor, I was having trouble managing state changes.</p>
+<p>For example, when I&rsquo;d update the name of a Macro in a new editor window, it wouldn&rsquo;t sync to the regular window.</p>
+<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using (fyne.io) works.</p>
+<p>fyne.io is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose MVC, MVP, MVVM, or just using a single file to manage it all (the way I was doing it before).</p>
+<h2 id="how">How?</h2>
+<p>Okay so I had the reason why I needed to organize my code, but not the how. I had created a bunch of separate widget files for each part of my app. (e.g. macro editor, metadata editor, etc.)</p>
+<p>These would become Views, and I&rsquo;d move the config update functions to a Controller.</p>
+<p>Before I got started with my Mini Macro pad, I wanted to make a real MVC project to make sure I understood the concept.</p>
+<p>So, I made a basic MVC Tip Calculator using Golang + Fyne to get hands-on with the MVC architecture. I had already created a <a href="https://github.com/ssebs/tipr">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile">two</a>, so I had a starting place.</p>
+<p>I followed Derek&rsquo;s advice, and separated my files, and was able to implement it!</p>
+<p>Here&rsquo;s a screenshot of the completed project, and the <a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a></p>
+<p><img src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" alt="screenshot"></p>
+<p>Now that the MVC Tip Calculator was done, I felt confident enough to get started on my <code>v2</code> release.</p>
+<p>If you&rsquo;d like to read more about that, check out the <a href="/blog/minimacropad/">blog entry</a>.</p>
+<p>Thanks for reading!</p>
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div><footer class="bg-secondary min-h-64">
+    <div class="grid justify-center p-6">
+        <h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5>
+        <div
+            class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full lg:mt-6 lg:p-6 mt-4 p-4 gap-12 text-lg">
+            <div class="flex justify-between items-end gap-6 min-w-80">
+                <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
+                <div class="flex flex-col items-start gap-2 min-w-48">
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
+                    <ul>
+                        <li class=''>
+                            <a href="/projects/" title="My Projects"
+                                class="text-quinary hover:text-quaternary">Check out my projects.
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/about/" title="About me"
+                                class="text-quinary hover:text-quaternary">Who am I?
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/contact/" title="Contact me"
+                                class="text-quinary hover:text-quaternary">Let's Connect.
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/blog/" title="Seb&#39;s Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid gap-2 max-w-md text-base font-normal">
+                <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
+                <p>
+                    When I was a kid and I had to come up with my first username, I ended up trying to find something
+                    using my initials.
+                </p>
+                <p>
+                    Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.
+                </p>
+                <p>
+                    ssebs - S Seb S
+                </p>
+                <p>...very interesting, I know!</p>
+            </div>
+
+            <div class="min-w-32 flex flex-col gap-2">
+                <div class="text-xl">Socials</div>
+                <ul class="flex gap-2">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center bg-neutral-700 p-6">
+        <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
+    </div>
+</footer>
+
+<script>
+    
+    const copyElement = document.getElementById("copyright-year");
+    const current = new Date().getFullYear();
+    const fromYear =  2015 ;
+
+    const authorHTML = `<a 
+                            href="https:\/\/linkedin.com\/in\/ssebs\/" 
+                            class="text-quaternary hover:text-quinary" target="_blank" 
+                            >
+                                Sebastian Safari</a>`;
+
+    if (current === fromYear) {
+        copyElement.innerHTML = `&copy;${current} | ${authorHTML}`;
+    } else {
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
+    }
+
+</script></body>
+
+</html>

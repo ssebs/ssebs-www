@@ -1,11 +1,11 @@
 {{- define "main" }}
-<div class="grid p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-  <div class="flex justify-between">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
     <h1 class="text-2xl">{{- .Title -}}</h1>
 
     {{/* Tags */}}
     {{- with .Params.tags -}}
-    <div class="mb-2 flex flex-wrap gap-2 text-base h-fit">
+    <div class="flex flex-wrap gap-2 text-base h-fit">
       {{ range . }}
       <a href="./tags/{{- . -}}"
         class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
@@ -18,6 +18,48 @@
 
   {{- if .Content }}
   <div class="post-content">{{ .Content }}</div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent click event from propagating to the document
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    // Reset the image when clicking outside of it
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
   {{- end }}
+
+  {{- if in .RelPermalink "blog" }}
+  <div id="comments_section" style="display: none;">
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="{{ .File.UniqueID }}" data-page-url="{{ .Permalink }}" data-page-title="{{ .Title }}"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          // If the server responds successfully, display the comment section
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
+
+{{- end }}
+
 </div>
 {{- end }}

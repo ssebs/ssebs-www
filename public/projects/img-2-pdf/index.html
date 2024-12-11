@@ -21,9 +21,6 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-
-  
-  <script src="./js/main.js"></script>
 </head><body class="text-white">
 
 
@@ -78,6 +75,14 @@
                         <a href="/about/" title="About me"
                             class="md:hover:text-quaternary text-gray-200 block ">
                             <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
                             </span>
                         </a>
                     </li>
@@ -158,32 +163,28 @@
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
 <div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-    <div class="">
-        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md border-2 border-primary"
+    <div class="mx-3">
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
+            <h4>Sebastian Safari</h4>
             
         </div>
-        <div class="grid gap-1 mb-2">
-            <p>
-                I'm a professional fixer, hobbyist figure-outer.
-            </p>
-        </div>
-        <div class="grid"><a href="./about"
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
-                Read more about me.
+                Who am I?
             </a><a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
             </a></div>
-    </div>
-    <div class="">
-        <div class="border-b border-neutral-600 font-semibold">
-            <h4>Skills:</h4>
-        </div>
-        <div class="p-4 flex flex-wrap justify-center gap-4">
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
             <a href="./tags/python"
                 class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
             <a href="./tags/golang"
@@ -198,7 +199,7 @@
                 More projects
             </a>
         </div>
-        <ul class="flex justify-center gap-4">
+        <ul class="flex justify-around gap-3 py-3">
 
     
     
@@ -233,11 +234,11 @@
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-<div class="grid p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-  <div class="flex justify-between">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
     <h1 class="text-2xl">Images to PDF</h1>
 
-    <div class="mb-2 flex flex-wrap gap-2 text-base h-fit">
+    <div class="flex flex-wrap gap-2 text-base h-fit">
       
       <a href="./tags/golang"
         class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
@@ -248,11 +249,11 @@
         programming
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/images-to-pdf">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/images-to-pdf" target="_blank">Github Repo</a></p>
 <p><img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="Usage Example"></p>
 <p>Convert a selection of images files into a single PDF.</p>
 <p>I made a tool to convert multiple image files into a single PDF, addressing the limitation of
-my wife’s scanner by efficiently merging individual images into a single cohesive document.</p>
+my wife&rsquo;s scanner by efficiently merging individual images into a single cohesive document.</p>
 <blockquote>
 <p>Written in go, there are no dependencies to worry about when sharing the tool!</p>
 </blockquote>
@@ -262,7 +263,7 @@ my wife’s scanner by efficiently merging individual images into a single cohes
 <ul>
 <li><code>git clone https://github.com/ssebs/images-to-pdf</code>
 <ul>
-<li>You&rsquo;ll need to install a C compiler. See <a href="https://developer.fyne.io/started/">https://developer.fyne.io/started/</a></li>
+<li>You&rsquo;ll need to install a C compiler. See <a href="https://developer.fyne.io/started/" target="_blank">https://developer.fyne.io/started/</a></li>
 </ul>
 </li>
 <li><code>go build -o img2pdf.exe .\cmd\main.go</code></li>
@@ -275,18 +276,18 @@ my wife’s scanner by efficiently merging individual images into a single cohes
 </li>
 </ul>
 <h2 id="cli-usage">CLI Usage</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>PS F:\LocalProgramming\images-to-pdf&gt; .\img2pdf.exe -h
-</span></span><span style="display:flex;"><span>Images to PDF
-</span></span><span style="display:flex;"><span>Usage of F:\LocalProgramming\images-to-pdf\img2pdf.exe<span style="color:#960050;background-color:#1e0010">:</span>
-</span></span><span style="display:flex;"><span>  -a    Whether or not to archive images (use a=false <span style="color:#66d9ef">if</span> needed) (<span style="color:#66d9ef">default</span> true)
-</span></span><span style="display:flex;"><span>  -d string
-</span></span><span style="display:flex;"><span>        Folder where images are stored (<span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;.&#34;</span>)
-</span></span><span style="display:flex;"><span>  -o string
-</span></span><span style="display:flex;"><span>        Filename of PDF file (<span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;out.pdf&#34;</span>)
-</span></span><span style="display:flex;"><span>PS F:\LocalProgramming\images-to-pdf&gt; 
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e5c07b">PS </span><span style="color:#e06c75">F:</span>\<span style="color:#e06c75">LocalProgramming</span>\<span style="color:#e5c07b">images-to</span><span style="color:#e06c75">-pdf</span>&gt; .\<span style="color:#e06c75">img2pdf</span>.<span style="color:#e06c75">exe</span> <span style="color:#e06c75">-h</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#e06c75">Images</span> <span style="color:#e06c75">to</span> <span style="color:#e06c75">PDF</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#e06c75">Usage</span> <span style="color:#e06c75">of</span> <span style="color:#e06c75">F:</span>\<span style="color:#e06c75">LocalProgramming</span>\<span style="color:#e5c07b">images-to</span><span style="color:#e06c75">-pdf</span>\<span style="color:#e06c75">img2pdf</span>.<span style="color:#e06c75">exe</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>  <span style="color:#e06c75">-a</span>    <span style="color:#e06c75">Whether</span> <span style="color:#e06c75">or</span> <span style="color:#e06c75">not</span> <span style="color:#e06c75">to</span> <span style="color:#e06c75">archive</span> <span style="color:#e06c75">images</span> (<span style="color:#e06c75">use</span> <span style="color:#e06c75">a</span>=<span style="color:#e06c75">false</span> <span style="color:#c678dd">if</span> <span style="color:#e06c75">needed</span>) (<span style="color:#c678dd">default</span> <span style="color:#e06c75">true</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>  <span style="color:#e06c75">-d</span> <span style="color:#e06c75">string</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span>        <span style="color:#e06c75">Folder</span> <span style="color:#e5c07b">where </span><span style="color:#e06c75">images</span> <span style="color:#e06c75">are</span> <span style="color:#e06c75">stored</span> (<span style="color:#c678dd">default</span> <span style="color:#98c379">&#34;.&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">7</span><span>  <span style="color:#e06c75">-o</span> <span style="color:#e06c75">string</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">8</span><span>        <span style="color:#e06c75">Filename</span> <span style="color:#e06c75">of</span> <span style="color:#e06c75">PDF</span> <span style="color:#e06c75">file</span> (<span style="color:#c678dd">default</span> <span style="color:#98c379">&#34;out.pdf&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">9</span><span><span style="color:#e5c07b">PS </span><span style="color:#e06c75">F:</span>\<span style="color:#e06c75">LocalProgramming</span>\<span style="color:#e5c07b">images-to</span><span style="color:#e06c75">-pdf</span>&gt; 
 </span></span></code></pre></div><h2 id="how-to-run-cli">How to run CLI</h2>
 <ul>
-<li>Download <a href="https://github.com/ssebs/images-to-pdf/releases/">img2pdf.exe from the releases page</a></li>
+<li>Download <a href="https://github.com/ssebs/images-to-pdf/releases/" target="_blank">img2pdf.exe from the releases page</a></li>
 <li>Move the <code>img2pdf.exe</code> file to the folder you want to convert images</li>
 <li>EZPZ:
 <ul>
@@ -309,6 +310,24 @@ my wife’s scanner by efficiently merging individual images into a single cohes
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+
 </div>
         </div>
       </div>
@@ -321,11 +340,11 @@ my wife’s scanner by efficiently merging individual images into a single cohes
             <div class="flex justify-between items-end gap-6 min-w-80">
                 <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="./" class="font-medium hover:text-quinary">Images to PDF</a>
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
                     <ul>
                         <li class=''>
                             <a href="/projects/" title="My Projects"
-                                class="text-quinary hover:text-quaternary">Check out my projects
+                                class="text-quinary hover:text-quaternary">Check out my projects.
                             </a>
                         </li>
                         <li class=''>
@@ -334,8 +353,13 @@ my wife’s scanner by efficiently merging individual images into a single cohes
                             </a>
                         </li>
                         <li class=''>
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li class=''>
                             <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Ping me!
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>

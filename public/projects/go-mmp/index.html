@@ -21,9 +21,6 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-
-  
-  <script src="./js/main.js"></script>
 </head><body class="text-white">
 
 
@@ -78,6 +75,14 @@
                         <a href="/about/" title="About me"
                             class="md:hover:text-quaternary text-gray-200 block ">
                             <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
                             </span>
                         </a>
                     </li>
@@ -158,32 +163,28 @@
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
 <div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-    <div class="">
-        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md border-2 border-primary"
+    <div class="mx-3">
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
+            <h4>Sebastian Safari</h4>
             
         </div>
-        <div class="grid gap-1 mb-2">
-            <p>
-                I'm a professional fixer, hobbyist figure-outer.
-            </p>
-        </div>
-        <div class="grid"><a href="./about"
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
-                Read more about me.
+                Who am I?
             </a><a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
             </a></div>
-    </div>
-    <div class="">
-        <div class="border-b border-neutral-600 font-semibold">
-            <h4>Skills:</h4>
-        </div>
-        <div class="p-4 flex flex-wrap justify-center gap-4">
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
             <a href="./tags/python"
                 class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
             <a href="./tags/golang"
@@ -198,7 +199,7 @@
                 More projects
             </a>
         </div>
-        <ul class="flex justify-center gap-4">
+        <ul class="flex justify-around gap-3 py-3">
 
     
     
@@ -233,11 +234,11 @@
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-<div class="grid p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-  <div class="flex justify-between">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
     <h1 class="text-2xl">Mini Macro Pad</h1>
 
-    <div class="mb-2 flex flex-wrap gap-2 text-base h-fit">
+    <div class="flex flex-wrap gap-2 text-base h-fit">
       
       <a href="./tags/golang"
         class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
@@ -260,7 +261,11 @@
         gui
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/go-mmp">Github Repo</a></p>
+  <div class="post-content"><blockquote>
+<p>Read how I <a href="/blog/minimacropad/">made the macro pad</a>.</p>
+</blockquote>
+<!-- > Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). -->
+<p><a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo</a></p>
 <div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
 <div>
 <p><strong>Mini Macro Pad (go-mmp)</strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.</p>
@@ -276,7 +281,7 @@
 </li>
 <li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
 <ul>
-<li>You can press whatever key you want, as long as it&rsquo;s <a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys">in the list</a>.</li>
+<li>You can press whatever key you want, as long as it&rsquo;s <a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list</a>.</li>
 </ul>
 </li>
 <li>Macros:
@@ -294,21 +299,21 @@
 </div>
 <div>
   Screenshot of the GUI:
-  <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png">
+  <img src="./img/MMPGUIScreenshot.png">
 </div>
 </div>
 <div style="min-height: 2rem;">
 </div>
 <h2 id="getting-started">Getting started</h2>
 <p>If you have a arduino/serial macro pad ready, great! You get to use the full functionality of go-mmp!</p>
-<p>See the the <a href="#3d-printing--hardware">3D Printing &amp; Hardware</a> section to get started with the physical device.</p>
+<p>See the the <a href="#3d-printing--hardware">3D Printing &amp;amp; Hardware</a> section to get started with the physical device.</p>
 <p>Don&rsquo;t have an Arduino but still want to run macros? You can use the GUI-only mode, which is the default, so you&rsquo;re all set!</p>
 <p>Just click on the buttons to run Macros.</p>
 <div style="min-height: 2rem;">
 </div>
 <h2 id="getting-set-up">Getting set up</h2>
 <ul>
-<li><a href="https://github.com/ssebs/go-mmp/releases/">Download the latest exe</a></li>
+<li><a href="https://github.com/ssebs/go-mmp/releases/" target="_blank">Download the latest exe</a></li>
 <li>Double click the <strong>Mini Macro Pad.exe</strong> file</li>
 <li>It will generate a configuration file in your home folder.
 <ul>
@@ -324,12 +329,12 @@
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
 <div>
 <p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+<img src="./img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
 </div>
 <div>
 Click on the name to change what they do.
 <p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+<img src="./img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
 </div>
 </div>
 <div style="min-height: 2rem;">
@@ -338,12 +343,12 @@ Click on the name to change what they do.
 <p>You&rsquo;ll need a microcontroller, some key switches, and a 3D Printer. I&rsquo;m using a Teensy LC, but you could use an Arduino Micro or ESP32.</p>
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
 <div>
-<p>My 3D Printed housing is available on <a href="https://than.gs/m/710028">thangs.com</a>.</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
+<p>My 3D Printed housing is available on <a href="https://than.gs/m/710028" target="_blank">thangs.com</a>.</p>
+<img src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
 </div>
 <div>
 <p>Wiring under the hood (please forgive the newbie soldering)</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
+<img src="./img/MMPWiring.jpg" width="256px" alt="macro pad wiring">
 </div>
 </div>
 <div style="min-height: 2rem;">
@@ -365,15 +370,32 @@ Click on the name to change what they do.
 <li>If your device sends 1 for the first button instead of 0, you can set the Indexing setting to 1</li>
 <li>Medatata Editor:</li>
 <li>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot">
+<img src="./img/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot">
 </li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/">https://github.com/ssebs/MiniMacroPad/</a></p>
-</blockquote>
-</div>
+<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/" target="_blank">https://github.com/ssebs/MiniMacroPad/</a></p>
+</blockquote></div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+
 </div>
         </div>
       </div>
@@ -386,11 +408,11 @@ Click on the name to change what they do.
             <div class="flex justify-between items-end gap-6 min-w-80">
                 <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="./" class="font-medium hover:text-quinary">Mini Macro Pad</a>
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
                     <ul>
                         <li class=''>
                             <a href="/projects/" title="My Projects"
-                                class="text-quinary hover:text-quaternary">Check out my projects
+                                class="text-quinary hover:text-quaternary">Check out my projects.
                             </a>
                         </li>
                         <li class=''>
@@ -399,8 +421,13 @@ Click on the name to change what they do.
                             </a>
                         </li>
                         <li class=''>
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li class=''>
                             <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Ping me!
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>

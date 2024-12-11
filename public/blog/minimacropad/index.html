@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <base href="/" /><title> 3D printing and coding my Mini Macro Pad </title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+   
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+
+    <meta name="theme-color" content="#41afff">
+    
+  
+  <link rel="stylesheet" href="/css/style.min.css">
+</head><body class="text-white">
+
+
+<div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
+    
+    <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
+        
+        <a href="./" class="flex align-center">
+            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+            <span class="text-gray-300 text-xl m-auto hover:text-quaternary">ssebs</span>
+        </a>
+
+        
+        <nav class="">
+            <button id="toggleOpen" class='sm:hidden flex ml-auto'>
+                <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+                    stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                        <animate dur="0.2s" attributeName="d"
+                            values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                            begin="start.begin" />
+                        <animate dur="0.2s" attributeName="d"
+                            values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                            begin="reverse.begin" />
+                    </path>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                    </rect>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
+                            begin="click" />
+                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                    </rect>
+                </svg>
+            </button>
+            
+            <div id="collapseMenu" class="flex flex-col items-center hideit gap-6 text-lg">
+                <ul class="flex max-sm:flex-col gap-4 align-middle">
+                    
+
+                    
+                    
+                    <li>
+                        <a href="/projects/" title="My Projects"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Projects
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/" title="About me"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/contact/" title="Contact me"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Contact
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="flex justify-between gap-4 pt-4 sm:hidden">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#41afff"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#41afff"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#41afff"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#41afff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<script>
+    var toggleOpen = document.getElementById('toggleOpen');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function toggleElement(element) {
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
+        } else {
+            element.classList.remove("hideit")
+            element.classList.add("showit");
+        }
+    }
+
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+
+</script><div class="flex justify-center">
+    <div class="m-4">
+      <ul class="my-2 flex text-white-dim"><li class=""><a href="/">Home</a></li>
+        <div class="mx-1" >&gt;</div>
+        <li class=""><a href="/blog/">Blog
+        </a></li>
+        <div class="mx-1" >&gt;</div>
+    <li class=""><a href="/blog/minimacropad/">3D printing and coding my Mini Macro Pad</a></li>
+</ul>
+      
+      <div class="grid lg:grid-cols-4 gap-4 mb-6">
+        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
+<div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="mx-3">
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
+            title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
+
+        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
+            <h4>Sebastian Safari</h4>
+            
+        </div>
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="./about"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Who am I?
+            </a><a href="./contact"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
+            </a></div>
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
+            <a href="./tags/python"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
+            <a href="./tags/golang"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">golang</a>
+            <a href="./tags/webdev"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black">Web
+                Dev</a>
+            <a href="./about"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black">DevOps</a>
+            <a href="./projects"
+                class="px-2 py-1 rounded-md border border-primary text-primary hover:bg-primary hover:text-black">
+                More projects
+            </a>
+        </div>
+        <ul class="flex justify-around gap-3 py-3">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+        </ul>
+    </div>
+</div></div>
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
+    <h1 class="text-2xl">3D printing and coding my Mini Macro Pad</h1>
+
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/golang"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        golang
+      </a>
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/3d-printing"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        3d-printing
+      </a>
+      <a href="./tags/arduino"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        arduino
+      </a>
+      <a href="./tags/gui"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gui
+      </a>
+      <a href="./tags/python"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        python
+      </a>
+    </div></div>
+  <div class="post-content"><blockquote>
+<p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
+</blockquote>
+<h2 id="whats-a-macro-pad">What&rsquo;s a Macro Pad?</h2>
+<img class="custom-float-right" src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+<p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &ldquo;skip song&rdquo; button on your keyboard.</p>
+<p>A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons to run shortcuts.</p>
+<p>I made my own <a href="https://than.gs/m/710028" target="_blank">3D Printed Macro Pad</a>, and call it a <strong>Mini Macro Pad</strong>.</p>
+<blockquote>
+<p>I&rsquo;m planning on redesigning and printing a new one, with a tutorial!</p>
+</blockquote>
+<blockquote>
+<p>Stay tuned for that&hellip;</p>
+</blockquote>
+<div style="clear: both;"></div>
+<h2 id="why-i-wanted-a-macro-pad">Why I wanted a Macro Pad</h2>
+<p>One day I was playing VALORANT, and I was getting tired of typing &ldquo;gg&rdquo; after each game. I was also really into <a href="https://www.youtube.com/watch?v=qDvQNStNUiw" target="_blank">CSGO Surfing</a> for a while, and needed to &ldquo;reset&rdquo; whenever I messed up.</p>
+<p>The way to &ldquo;reset&rdquo; yourself is by:</p>
+<ul>
+<li>Pressing enter</li>
+<li>Typing &ldquo;/r&rdquo;</li>
+<li>Pressing enter again</li>
+</ul>
+<p>Now, this doesn&rsquo;t sound like a lot, but if you&rsquo;re really focused on getting that <em>flick</em> right, you don&rsquo;t want to keep moving your hands to type &ldquo;/r&rdquo; over and over.</p>
+<p>I knew it could be automated in some way, and I had a 3D printer and programming know-how, so I got to work.</p>
+<h2 id="the-mini-macro-pads-hardware">The Mini Macro Pad&rsquo;s hardware</h2>
+<p>I watched <a href="https://www.youtube.com/@ZackFreedman" target="_blank">Zack Freedman&#39;s</a> video on <a href="https://www.youtube.com/watch?v=yYcNi9hKxDk" target="_blank">How to build Mechanical Keyboards</a>, and was inspired.</p>
+<p>Basically, (without going into too much detail) what I needed was a few mechanical keyboard switches, some wire, an arduino, and a 3D printer. What I was making was essentially a number pad, but instead of sending numbers with a key press, each press would run a Macro.</p>
+<p>To make a working button, I&rsquo;d connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin. This ground pin is shared with the other button pins, so those could all be connected together.</p>
+<p>Once I had my plan ready, I printed out some 3D models I found on <a href="https://thangs.com" target="_blank">https://thangs.com</a>, and got to soldering.</p>
+<blockquote>
+<p>I eventually made my own design, but I want to try again.</p>
+</blockquote>
+<p>I chose the Teensy LC as my Serial device, since it can be used as a Human-Interface-Device (HID). That means I can emulate pressing buttons on a keyboard.</p>
+<div style="min-height: 1rem;">
+</div>
+<p>Here&rsquo;s what the wiring looks like (<em>please forgive the newbie soldering</em>).</p>
+<img src="./img/MMPWiring.jpg" width="400px" alt="macro pad wiring">
+<h2 id="making-the-buttons-do-stuff">Making the buttons do stuff</h2>
+<p>Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE.</p>
+<p>My plan was to:</p>
+<ul>
+<li>Check which button number was pressed</li>
+<li>Compare that to a list of &ldquo;Macros&rdquo;</li>
+<li>Run a list of &ldquo;Actions&rdquo; that were set in the Macro to actually do stuff</li>
+</ul>
+<p>For example, the &ldquo;type gg&rdquo; Macro would look something like this:</p>
+<ul>
+<li><code>Press(&quot;enter&quot;)</code></li>
+<li><code>Type(&quot;gg&quot;)</code></li>
+<li><code>Press(&quot;enter&quot;)</code></li>
+</ul>
+<h2 id="writing-c">Writing C</h2>
+<p>I&rsquo;m familiar with the C programming language, but haven&rsquo;t really used it for any of my projects. I followed some Arduino tutorials and got my code to recognize when a button was pressed. Once that was done, I made a list of Macros that you could run, and hard coded what they did in an array.</p>
+<p>I was able to get it working after I added some delays between each key press. This was needed since most games don&rsquo;t expect you to type in less than a millisecond.</p>
+<p>Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change what a Macro did.</p>
+<p>I decided to change the architecture of my app a bit: instead of the Arduino itself typing the keys, it would just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.</p>
+<p>That way, I can update a config file to make my changes. Easy-peazy.</p>
+<h2 id="switching-to-serial--python">Switching to Serial + Python</h2>
+<img class="custom-float-right" src="./img/PythonMMPScreenshot.png" alt="python gui screenshot">
+<p>I decided to use Python for the new server code, as I was writing it at work and was pretty familiar with it. I also decided make a small GUI so you can see what/where the Macros are on your device.</p>
+<blockquote>
+<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad" target="_blank">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
+</blockquote>
+<p>I used <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">TKinter</a> to get a grid of buttons showing, and set up a basic server to listen for button presses. Once the server received a button press, it compared the number to the Macro in the config file, and ran the Actions in order for that Macro.</p>
+<p>This worked! &hellip;but the user interface was ugly &hellip;and it was kinda slow. This is because of PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine, and meant that it would take a bit of time to start up.</p>
+<p>I continued working on this version for a while, but after a couple refactors (and learning some <code>OOP</code>-sies), I decided I wanted to rewrite my code <em>yet again</em>.</p>
+<div style="clear:both;"></div>
+<h2 id="rewriting-in-go">Rewriting in Go</h2>
+<p>This time, I decided to write my code in Golang. This is a modern programming language, and is a middle ground between C and Python.</p>
+<p>Go&rsquo;s a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There&rsquo;s another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller, which meant no more startup time lag!</p>
+<p>I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.</p>
+<p>I found the <a href="https://quii.gitbook.io/learn-go-with-tests" target="_blank">Learn Go with Tests</a> free online book, and got to work learning about pointers, interfaces, channels, unit testing, and a bunch more.</p>
+<h2 id="quick-sidebar-about-gos-error-handling">Quick sidebar about Go's error handling</h2>
+<p>One thing I particularly like about Go is the error handling. If you wanted to save text to a file in Python, you should use a <code>try/except</code> block to check for any errors.</p>
+<p>You could always leave that out, but Python won&rsquo;t really warn you that using the <code>open()</code> function may fail.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">try</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#c678dd">with</span> <span style="color:#e5c07b">open</span>(<span style="color:#98c379">&#34;example.txt&#34;</span>, <span style="color:#98c379">&#34;r&#34;</span>) <span style="color:#c678dd">as</span> <span style="color:#e06c75">f</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>        <span style="color:#e06c75">f</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">write</span>(<span style="color:#98c379">&#34;this will fail since we&#39;re only supposed to read the file&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">except</span> <span style="color:#e06c75">Exception</span> <span style="color:#c678dd">as</span> <span style="color:#e06c75">e</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>    <span style="color:#e5c07b">print</span>(<span style="color:#e06c75">e</span>)
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>In Go, the function that opens, writes, or does anything to a file will return an error; you are supposed to check if there is an error right after.</p>
+<p>You could ignore the error, but it&rsquo;s more <em>in your face</em> in Go since it&rsquo;s returned by value in the <code>WriteFile()</code> function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">fileContents</span> <span style="color:#56b6c2">:=</span> []<span style="color:#e5c07b">byte</span>(<span style="color:#98c379">&#34;this won&#39;t fail but if it did it would be checked.&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#e06c75">err</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">os</span>.<span style="color:#61afef;font-weight:bold">WriteFile</span>(<span style="color:#98c379">&#34;example.txt&#34;</span>, <span style="color:#e06c75">fileContents</span>, <span style="color:#d19a66">0644</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">if</span> <span style="color:#e06c75">err</span> <span style="color:#56b6c2">!=</span> <span style="color:#e5c07b">nil</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>    <span style="color:#e06c75">fmt</span>.<span style="color:#61afef;font-weight:bold">Println</span>(<span style="color:#98c379">&#34;failed to write file&#34;</span>, <span style="color:#e06c75">err</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span>}
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<h2 id="sidebar-over-back-to-writing-a-gui-in-go">Sidebar over, back to writing a GUI in Go</h2>
+<img class="custom-float-right" src="./img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+<p>Since I had a working app written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go <a href="https://stackoverflow.com/a/34152076" target="_blank">doesn&#39;t have inheritance</a>, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals" target="_blank">composition</a> to fit my needs.</p>
+<p>One important lesson I learned in doing this was to <a href="https://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>. The GUI library documentation <em>exists</em>, but it can be difficult to build everything you need from what you see on the getting started page.</p>
+<p>I found that I needed to use VSCode&rsquo;s autocompletion to explore what methods were available, and use the &ldquo;go to definition&rdquo; button to read the source code to see how it should be used.</p>
+<p>I ended up choosing <a href="https://fyne.io/" target="_blank">fyne.io</a> for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.</p>
+<p>I used a <code>GridWithColumns</code> container along with some <code>Buttons</code>. I used the same config file as before, parsed it, went through the list of Macros and made a <code>Button</code> for each one.</p>
+<p>Here&rsquo;s a snippet of the code, but check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go" target="_blank">full file</a> to read more.</p>
+<div style="clear: both;"></div>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">for</span> <span style="color:#e06c75">_</span>, <span style="color:#e06c75">macro</span> <span style="color:#56b6c2">:=</span> <span style="color:#c678dd">range</span> <span style="color:#e06c75">config</span>.<span style="color:#e06c75">Macros</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#e06c75">macroBtn</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#e06c75">macro</span>.<span style="color:#e06c75">Name</span>, <span style="color:#c678dd">func</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>        <span style="color:#e06c75">macroRunner</span>.<span style="color:#61afef;font-weight:bold">Run</span>(<span style="color:#e06c75">macro</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>    })
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>    <span style="color:#e06c75">v</span>.<span style="color:#e06c75">macrosContainer</span>.<span style="color:#61afef;font-weight:bold">Add</span>(<span style="color:#e06c75">macroBtn</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span>}
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I&rsquo;ve been spoiled by the Document-Object-Model, which websites use. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
+<p>However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne.</p>
+<h2 id="conclusion-and-whats-next">Conclusion, and what&rsquo;s next</h2>
+<p>Once everything was working, I was amazed at how much snappier my macro pad felt! I improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p>I was pretty happy with how fyne worked once I got the hang of it, and I&rsquo;ll gladly use it in for future Go/GUI projects.</p>
+<p>By the end of this project, I rewrote my code about ~4 times, learning a lot with each rewrite. I fixed a few bugs, added a couple small features, and had released <code>v1.2.3</code> before I was ready to make another big change.</p>
+<p>&hellip;that big change was release <code>v2</code> on <a href="https://github.com/ssebs/go-mmp/releases/tag/v2.0.0" target="_blank">Github</a>, a new blog post will be out soon to talk about that!</p>
+<!-- Read about how I improved my GUI to add a config editor to my Macro Pad [in part 2](/blog/mmpguieditor/)! -->
+<p><strong>Thanks for reading!</strong></p>
+</div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+  <div id="comments_section" style="display: none;">
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="d41e4334458fda4bd1ccbcdaead95709" data-page-url="http://localhost:1313/blog/minimacropad/" data-page-title="3D printing and coding my Mini Macro Pad"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div><footer class="bg-secondary min-h-64">
+    <div class="grid justify-center p-6">
+        <h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5>
+        <div
+            class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full lg:mt-6 lg:p-6 mt-4 p-4 gap-12 text-lg">
+            <div class="flex justify-between items-end gap-6 min-w-80">
+                <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
+                <div class="flex flex-col items-start gap-2 min-w-48">
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
+                    <ul>
+                        <li class=''>
+                            <a href="/projects/" title="My Projects"
+                                class="text-quinary hover:text-quaternary">Check out my projects.
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/about/" title="About me"
+                                class="text-quinary hover:text-quaternary">Who am I?
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/contact/" title="Contact me"
+                                class="text-quinary hover:text-quaternary">Let's Connect.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid gap-2 max-w-md text-base font-normal">
+                <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
+                <p>
+                    When I was a kid and I had to come up with my first username, I ended up trying to find something
+                    using my initials.
+                </p>
+                <p>
+                    Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.
+                </p>
+                <p>
+                    ssebs - S Seb S
+                </p>
+                <p>...very interesting, I know!</p>
+            </div>
+
+            <div class="min-w-32 flex flex-col gap-2">
+                <div class="text-xl">Socials</div>
+                <ul class="flex gap-2">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center bg-neutral-700 p-6">
+        <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
+    </div>
+</footer>
+
+<script>
+    
+    const copyElement = document.getElementById("copyright-year");
+    const current = new Date().getFullYear();
+    const fromYear =  2015 ;
+
+    const authorHTML = `<a 
+                            href="https:\/\/linkedin.com\/in\/ssebs\/" 
+                            class="text-quaternary hover:text-quinary" target="_blank" 
+                            >
+                                Sebastian Safari</a>`;
+
+    if (current === fromYear) {
+        copyElement.innerHTML = `&copy;${current} | ${authorHTML}`;
+    } else {
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
+    }
+
+</script></body>
+
+</html>

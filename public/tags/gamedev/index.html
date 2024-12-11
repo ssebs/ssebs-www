@@ -21,9 +21,6 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-
-  
-  <script src="./js/main.js"></script>
 </head><body class="text-white">
 
 
@@ -78,6 +75,14 @@
                         <a href="/about/" title="About me"
                             class="md:hover:text-quaternary text-gray-200 block ">
                             <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
                             </span>
                         </a>
                     </li>
@@ -159,32 +164,28 @@
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
 <div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-    <div class="">
-        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md border-2 border-primary"
+    <div class="mx-3">
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
+            <h4>Sebastian Safari</h4>
             
         </div>
-        <div class="grid gap-1 mb-2">
-            <p>
-                I'm a professional fixer, hobbyist figure-outer.
-            </p>
-        </div>
-        <div class="grid"><a href="./about"
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
-                Read more about me.
+                Who am I?
             </a><a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
             </a></div>
-    </div>
-    <div class="">
-        <div class="border-b border-neutral-600 font-semibold">
-            <h4>Skills:</h4>
-        </div>
-        <div class="p-4 flex flex-wrap justify-center gap-4">
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
             <a href="./tags/python"
                 class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
             <a href="./tags/golang"
@@ -199,7 +200,7 @@
                 More projects
             </a>
         </div>
-        <ul class="flex justify-center gap-4">
+        <ul class="flex justify-around gap-3 py-3">
 
     
     
@@ -245,114 +246,170 @@
 	
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   
   <a href="/projects/perishable-punchers/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">Perishable Punchers</div>
-    <img src="./img/projects/PerishablePunchers.jpg" alt="./img/projects/PerishablePunchers.jpg" class="w-auto" />
+    <div class="text-lg font-medium">
+      Perishable Punchers
 
-    <p class="text-lg text-white-dim">Mortal Kombat like Game written in Java, back in highschool.</p>
+      </div>
+    <div style="height: 248px;">
+      <img src="./img/projects/PerishablePunchers.jpg" alt="./img/projects/PerishablePunchers.jpg"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
   </a>
+
+  <p class="text-lg text-white-dim">Mortal Kombat like Game written in Java, back in highschool.</p>
   
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+  
+  <div class="self-end">
+
     
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-    <a href="./tags/java"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      java
-    </a>
-    <a href="./tags/gamedev"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      gamedev
-    </a>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/java"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        java
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div>
+
   </div>
+
 </div>
 	
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   
   <a href="/projects/a-platformer-of-some-sort/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">A Platformer of Some Sort</div>
-    <img src="./img/projects/Platformer.jpg" alt="./img/projects/Platformer.jpg" class="w-auto" />
+    <div class="text-lg font-medium">
+      A Platformer of Some Sort
 
-    <p class="text-lg text-white-dim">A Platformer Of Some Sort is just that, a platformer of some sort!</p>
+      </div>
+    <div style="height: 248px;">
+      <img src="./img/projects/Platformer.jpg" alt="./img/projects/Platformer.jpg"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
   </a>
+
+  <p class="text-lg text-white-dim">A Platformer Of Some Sort is just that, a platformer of some sort!</p>
   
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+  
+  <div class="self-end">
+
     
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-    <a href="./tags/java"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      java
-    </a>
-    <a href="./tags/gamedev"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      gamedev
-    </a>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/java"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        java
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div>
+
   </div>
+
 </div>
 	
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   
   <a href="/projects/breakout-pong/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">Breakout Pong</div>
-    <img src="./img/projects/BreakoutPong.png" alt="./img/projects/BreakoutPong.png" class="w-auto" />
+    <div class="text-lg font-medium">
+      Breakout Pong
 
-    <p class="text-lg text-white-dim">Breakout Pong is a mix between the game Pong and the game Breakout</p>
+      </div>
+    <div style="height: 248px;">
+      <img src="./img/projects/BreakoutPong.png" alt="./img/projects/BreakoutPong.png"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
   </a>
+
+  <p class="text-lg text-white-dim">Breakout Pong is a mix between the game Pong and the game Breakout</p>
   
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+  
+  <div class="self-end">
+
     
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-    <a href="./tags/java"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      java
-    </a>
-    <a href="./tags/gamedev"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      gamedev
-    </a>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/java"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        java
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div>
+
   </div>
+
 </div>
 	
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   
   <a href="/projects/sir-flap-a-lot/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">Sir Flap a Lot</div>
-    <img src="./img/projects/SFA.png" alt="./img/projects/SFA.png" class="w-auto" />
+    <div class="text-lg font-medium">
+      Sir Flap a Lot
 
-    <p class="text-lg text-white-dim">Flappy bird clone from high school.</p>
+      </div>
+    <div style="height: 248px;">
+      <img src="./img/projects/SFA.png" alt="./img/projects/SFA.png"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
   </a>
+
+  <p class="text-lg text-white-dim">Flappy bird clone from high school.</p>
   
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+  
+  <div class="self-end">
+
     
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-    <a href="./tags/java"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      java
-    </a>
-    <a href="./tags/gamedev"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      gamedev
-    </a>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/java"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        java
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div>
+
   </div>
+
 </div>
 </div>
         </div>
@@ -366,11 +423,11 @@
             <div class="flex justify-between items-end gap-6 min-w-80">
                 <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="./" class="font-medium hover:text-quinary">Gamedev</a>
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
                     <ul>
                         <li class=''>
                             <a href="/projects/" title="My Projects"
-                                class="text-quinary hover:text-quaternary">Check out my projects
+                                class="text-quinary hover:text-quaternary">Check out my projects.
                             </a>
                         </li>
                         <li class=''>
@@ -379,8 +436,13 @@
                             </a>
                         </li>
                         <li class=''>
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li class=''>
                             <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Ping me!
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>

@@ -1,10 +1,8 @@
-{{/* We're in a range site.Menus.main */}}
-{{- with .Page }}
-
+{{/* We're in a Page */}}
 {{- $bg := "bg-neutral-900" }}
 {{- if .Params.SectionBG }} {{- $bg = .Params.SectionBG }} {{- end }}
 
-<section class="{{ $bg }} flex justify-center w-full">
+<section class="{{ $bg }} flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         {{/* Title */}}
         <h3 class="text-3xl font-bold">{{- .Params.ShortDesc | safeHTML -}}</h3>
@@ -16,7 +14,7 @@
         {{- end}}
 
         {{/* Text content + feature */}}
-        <div class="text-white-dim grid gap-6 {{ $cols }} ">
+        <div class="text-white-dim grid gap-4 {{ $cols }} ">
             <div class="post-content text-lg">
                 {{- .Summary -}}
                 {{/* {{- .Params.Description | markdownify -}} */}}
@@ -30,7 +28,7 @@
 
         {{/* If the section page has subpages, render top 3 */}}
         {{ if .Pages }}
-        <div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6 ">
+        <div class="grid md:grid-cols-3 auto-rows-fr gap-4 mb-6">
             {{ range $idx, $page := .Pages }}
             {{ if lt $idx 3}}
             {{ partial "card.html" $page }}
@@ -50,4 +48,3 @@
         {{- end }}
     </div>
 </section>
-{{- end }}

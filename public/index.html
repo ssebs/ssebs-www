@@ -22,9 +22,6 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-
-  
-  <script src="./js/main.js"></script>
 </head><body class="text-white">
 
 
@@ -79,6 +76,14 @@
                         <a href="/about/" title="About me"
                             class="md:hover:text-quaternary text-gray-200 block ">
                             <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
                             </span>
                         </a>
                     </li>
@@ -151,29 +156,30 @@
   <div class="hero grid items-center justify-center my-6 w-full">
     <div class="hero-content grid items-center justify-center md:max-w-4xl w-full">
         <div class="max-mw-[40rem] p-6 grid md:grid-cols-2">
-            <img class="mx-auto rounded-md border-2 border-primary" title="A photo of my at my wedding." src="./img/me_wedding.jpg"
-                width="256px" height="256px" />
+            <img class=" mx-auto rounded-md border-2 border-primary" title="A photo of my at my wedding." src="./img/me_wedding.jpg"
+                width="300px" height="300px" />
 
             <div class="flex flex-col justify-between my-6 md:text-lg text-white">
                 <h1 class="md:text-3xl text-2xl mb-4">Hey, I'm Sebastian Safari</h1>
                 <p class="">
                     I'm an <span class="font-medium" title="Site Reliability Engineer"> SRE </span> who likes to make
-                    stuff.
-                    <br class="my-1">
-                    Some of my project are even useful!
+                    stuff. I love to code and automate, and have a bunch of side projects.
                 </p>
-                <div class="flex mx-0 mt-6 gap-6">
+                <div class="flex flex-wrap mx-0 mt-6 gap-4">
                     <a href="./projects">
                         <div
                             class="p-2 rounded-xl border border-quinary bg-quinary text-neutral-900 hover:bg-secondary hover:border-secondary hover:text-white">
-                            The <span class="font-semibold">useful</span>
-                            projects
+                            See my projects
                         </div>
                     </a>
                     <a href="./about">
-                        <div class="p-2 rounded-xl border border-quaternary text-quaternary hover:bg-secondary hover:border-secondary hover:text-white font-semibold">
-                            Who
-                            am I?
+                        <div class="p-2 rounded-xl border border-primary text-primary hover:bg-secondary hover:border-secondary hover:text-white font-semibold">
+                            About me
+                        </div>
+                    </a>
+                    <a href="./blog">
+                        <div class="p-2 rounded-xl border border-white-dim text-white-dim hover:bg-secondary hover:border-secondary hover:text-white font-semibold">
+                            Learn my thought process
                         </div>
                     </a>
                 </div>
@@ -182,17 +188,18 @@
         </div>
     </div>
 </div>
+
   
 
-<section class="bg-secondary flex justify-center w-full">
+<section class="bg-secondary flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
-        <h3 class="text-3xl font-bold">Check out my projects</h3>
+        <h3 class="text-3xl font-bold">Check out my projects.</h3>
 
         
 
         
-        <div class="text-white-dim grid gap-6  ">
+        <div class="text-white-dim grid gap-4  ">
             <div class="post-content text-lg"><p>Here&rsquo;s some of my more interesting side projects. Some are games, others productivity tools, and even some non-tech stuff.</p>
 <p>I use the Mini Macro Pad basically every day, for skipping songs, typing &ldquo;gg&rdquo; into games, and other random shortcuts.</p>
             </div>
@@ -202,44 +209,58 @@
 
         
         
-        <div class="grid md:grid-cols-3 auto-rows-fr gap-6 my-6 ">
+        <div class="grid md:grid-cols-3 auto-rows-fr gap-4 mb-6">
             
             
             
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   
   <a href="/projects/go-mmp/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">Mini Macro Pad</div>
-    <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" alt="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" class="w-auto" />
+    <div class="text-lg font-medium">
+      Mini Macro Pad
 
-    <p class="text-lg text-white-dim">Run shortcuts and automate tasks with a press of a button!</p>
+      </div>
+    <div style="height: 248px;">
+      <img src="./img/MMPGUIScreenshot.png" alt="./img/MMPGUIScreenshot.png"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
   </a>
+
+  <p class="text-lg text-white-dim">Run shortcuts and automate tasks with a press of a button!</p>
   
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
+  
+  <div class="self-end">
+
     
-    <a href="./tags/golang"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      golang
-    </a>
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-    <a href="./tags/3d-printing"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      3d-printing
-    </a>
-    <a href="./tags/arduino"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      arduino
-    </a>
-    <a href="./tags/gui"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      gui
-    </a>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/golang"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        golang
+      </a>
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/3d-printing"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        3d-printing
+      </a>
+      <a href="./tags/arduino"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        arduino
+      </a>
+      <a href="./tags/gui"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gui
+      </a>
+    </div>
+
   </div>
+
 </div>
             
             
@@ -247,57 +268,85 @@
             
 
 <div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  
+  <a href="/projects/mvctipcalc/" class="grid gap-4 self-start">
+    <div class="text-lg font-medium">
+      MVC Tip Calculator
+
+      </div>
+    <div style="height: 248px;">
+      <img src="./img/MVCTipCalc.png" alt="./img/MVCTipCalc.png"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
+  </a>
+
+  <p class="text-lg text-white-dim">Simple Model View Controller Fyne project that doubles as a tip calculator.</p>
+  
+  
+  <div class="self-end">
+
+    
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/golang"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        golang
+      </a>
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/gui"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gui
+      </a>
+    </div>
+
+  </div>
+
+</div>
+            
+            
+            
+            
+
+<div
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
   
   <a href="/projects/img-2-pdf/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">Images to PDF</div>
-    <img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" class="w-auto" />
+    <div class="text-lg font-medium">
+      Images to PDF
 
-    <p class="text-lg text-white-dim">Convert a selection of images files into a single PDF</p>
+      </div>
+    <div style="height: 248px;">
+      <img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
   </a>
-  
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
-    
-    <a href="./tags/golang"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      golang
-    </a>
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-  </div>
-</div>
-            
-            
-            
-            
 
-<div
-  class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  <p class="text-lg text-white-dim">Convert a selection of images files into a single PDF</p>
   
-  <a href="/projects/csveditor/" class="grid gap-4 self-start">
-    <div class="text-xl font-medium">CSV Editor</div>
-    <img src="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true" alt="https://raw.githubusercontent.com/ssebs/csveditor/master/CSV_Editor.PNG?raw=true" class="w-auto" />
+  
+  <div class="self-end">
 
-    <p class="text-lg text-white-dim">A CSV editor written in Python. I was annoyed with Excel's Copy/Paste features, so I made something that worked for me.</p>
-  </a>
-  
-  <div class="flex flex-wrap self-end gap-2 text-base h-fit">
     
-    <a href="./tags/python"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      python
-    </a>
-    <a href="./tags/programming"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      programming
-    </a>
-    <a href="./tags/gui"
-      class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
-      gui
-    </a>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/golang"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        golang
+      </a>
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+    </div>
+
   </div>
+
 </div>
             
             
@@ -335,9 +384,11 @@
             href="/projects/">More of my projects</a>
     </div>
 </section>
+
+
   
 
-<section class="bg-neutral-900 flex justify-center w-full">
+<section class="bg-neutral-900 flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Who am I?</h3>
@@ -345,19 +396,18 @@
         
 
         
-        <div class="text-white-dim grid gap-6  ">
+        <div class="text-white-dim grid gap-4  ">
             <div class="post-content text-lg"><div class="grid md:grid-cols-2 justify-items-center gap-6">
     
     <div>
     <p>My name is Sebastian Safari, I call myself a &ldquo;professional fixer, hobbyist figure-outer&rdquo;.</p>
 <p>Basically, I work as a Site Reliability Engineer and like to program various projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.</p>
 <p>Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.</p>
-<p>Want to see what kind of work I&rsquo;ve done? Download my <a href="/media/Sebastian-Safari-Resume.pdf">resume!</a></p>
 
     </div>
     
     <div>
-    <img src="./img/me_vacay.jpg" alt="Photo of me on my honeymoon." class="w-[256px] rounded-md border-2 border-primary" width="">
+    <img src="./img/me_vacay.jpg" alt="Photo of me on my honeymoon." class="rounded-md border-2 border-primary" width="360px">
 
     </div>
     
@@ -375,20 +425,108 @@
             href="/about/">Read all about me!</a>
     </div>
 </section>
+
+
   
 
-<section class="transparent-bg flex justify-center w-full">
+<section class="bg-neutral-900 flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
-        <h3 class="text-3xl font-bold">Ping me!</h3>
+        <h3 class="text-3xl font-bold">See what I've been up to in my blog.</h3>
 
         
 
         
-        <div class="text-white-dim grid gap-6  ">
-            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if you want to work on a project together!</p>
-<h4 id="feel-free-to-just-fill-out-the-form-below-if-you-want-to-send-me-a-quick-message">Feel free to just fill out the form below if you want to send me a quick message.</h4>
-<div class="grid">
+        <div class="text-white-dim grid gap-4  ">
+            <div class="post-content text-lg"><p>Here I share the stories behind my projects—the process, the challenges, and the lessons learned.</p>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        
+        
+        <div class="grid md:grid-cols-3 auto-rows-fr gap-4 mb-6">
+            
+            
+            
+
+<div
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  
+  <a href="/blog/mvctipcalc/" class="grid gap-4 self-start">
+    <div class="text-lg font-medium">
+      Learning the MVC pattern by making a Tip Calculator
+
+      
+      <div class="text-sm italic text-quaternary py-2">
+        Nov 17, 2024
+      </div></div>
+    <div style="height: 248px;">
+      <img src="./img/MVCTipCalc.png" alt="./img/MVCTipCalc.png"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
+  </a>
+
+  <p class="text-lg text-white-dim">Learning the MVC pattern for my MiniMacroPad by making a Tip Calculator in Go.</p>
+  
+  
+
+</div>
+            
+            
+            
+            
+
+<div
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  
+  <a href="/blog/minimacropad/" class="grid gap-4 self-start">
+    <div class="text-lg font-medium">
+      3D printing and coding my Mini Macro Pad
+
+      
+      <div class="text-sm italic text-quaternary py-2">
+        Aug 10, 2023
+      </div></div>
+    <div style="height: 248px;">
+      <img src="./img/MMPPrinted.jpg" alt="./img/MMPPrinted.jpg"
+        style="max-height: 248px; margin: auto;">
+    </div>
+
+  </a>
+
+  <p class="text-lg text-white-dim">The journey of making my Mini Macro Pad was created and the challenges I faced along the way.</p>
+  
+  
+
+</div>
+            
+            
+        </div>
+
+        <a class="text-base p-3 max-w-fit bg-quaternary text-neutral-900 hover:bg-quinary font-medium rounded-md"
+            href="/blog/">See more...</a>
+    </div>
+</section>
+
+
+  
+
+<section class="transparent-bg flex justify-center w-full py-6">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
+        
+        <h3 class="text-3xl font-bold">Let's Connect.</h3>
+
+        
+
+        
+        <div class="text-white-dim grid gap-4  ">
+            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/" target="_blank">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a>.</p>
+<p>If you like to code, check out my <a href="https://github.com/ssebs/" target="_blank">Github</a>.</p>
+<h4 id="feel-free-to-fill-out-the-form-below-if-you-want-to-message-me">Feel free to fill out the form below if you want to message me.</h4>
+<div class="grid ">
     
     <div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden"></div>
 
@@ -467,16 +605,24 @@
         
     </div>
 </section>
+
   
   
   
 
-<section class="bg-neutral-900 flex justify-center w-full">
+<section class="bg-neutral-900 grid justify-center w-full pb-6">
     
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
-        <h3 class="text-3xl font-semibold">More about my Mini Macro Pad project.</h3>
-         <div class="text-white-dim grid">
-            <div class="post-content"><p><a href="https://github.com/ssebs/go-mmp">Github Repo</a></p>
+        <h3 class="text-3xl font-semibold">
+            A little bit more about the 
+            <a href="/projects/go-mmp/" class="text-quinary underline font-normal">Mini Macro Pad</a>
+        </h3>
+         <div class="text-white-dim grid text-base">
+            <div class="post-content"><blockquote>
+<p>Read how I <a href="/blog/minimacropad/">made the macro pad</a>.</p>
+</blockquote>
+<!-- > Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). -->
+<p><a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo</a></p>
 <div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
 <div>
 <p><strong>Mini Macro Pad (go-mmp)</strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.</p>
@@ -492,7 +638,7 @@
 </li>
 <li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
 <ul>
-<li>You can press whatever key you want, as long as it&rsquo;s <a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys">in the list</a>.</li>
+<li>You can press whatever key you want, as long as it&rsquo;s <a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list</a>.</li>
 </ul>
 </li>
 <li>Macros:
@@ -510,87 +656,14 @@
 </div>
 <div>
   Screenshot of the GUI:
-  <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png">
+  <img src="./img/MMPGUIScreenshot.png">
 </div>
-</div>
-<div style="min-height: 2rem;">
-</div>
-<h2 id="getting-started">Getting started</h2>
-<p>If you have a arduino/serial macro pad ready, great! You get to use the full functionality of go-mmp!</p>
-<p>See the the <a href="#3d-printing--hardware">3D Printing &amp; Hardware</a> section to get started with the physical device.</p>
-<p>Don&rsquo;t have an Arduino but still want to run macros? You can use the GUI-only mode, which is the default, so you&rsquo;re all set!</p>
-<p>Just click on the buttons to run Macros.</p>
-<div style="min-height: 2rem;">
-</div>
-<h2 id="getting-set-up">Getting set up</h2>
-<ul>
-<li><a href="https://github.com/ssebs/go-mmp/releases/">Download the latest exe</a></li>
-<li>Double click the <strong>Mini Macro Pad.exe</strong> file</li>
-<li>It will generate a configuration file in your home folder.
-<ul>
-<li>e.g. <code>C:\Users\ssebs\mmpConfig.yml</code> or <code>/home/ssebs/mmpConfig.yml</code></li>
-</ul>
-</li>
-<li>When you press a button on the Arduino based MacroPad, it will run a Macro that&rsquo;s set in your config.</li>
-</ul>
-<div style="min-height: 2rem;">
-</div>
-<h2 id="change-your-macros-on-the-fly">Change your Macros on the fly</h2>
-<p>New in <code>v2</code>, you can now update your Macros in the UI instead of from the config file.</p>
-<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
-<div>
-<p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
-</div>
-<div>
-Click on the name to change what they do.
-<p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
-</div>
-</div>
-<div style="min-height: 2rem;">
-</div>
-<h2 id="3d-printing--hardware">3D Printing &amp; Hardware</h2>
-<p>You&rsquo;ll need a microcontroller, some key switches, and a 3D Printer. I&rsquo;m using a Teensy LC, but you could use an Arduino Micro or ESP32.</p>
-<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
-<div>
-<p>My 3D Printed housing is available on <a href="https://than.gs/m/710028">thangs.com</a>.</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
-</div>
-<div>
-<p>Wiring under the hood (please forgive the newbie soldering)</p>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
-</div>
-</div>
-<div style="min-height: 2rem;">
-</div>
-<h3 id="got-an-arduino-all-hooked-up">Got an arduino all hooked up?</h3>
-<ul>
-<li>You&rsquo;ll need an arduino/serial based device that sends [0-9] numbers over a serial connection.
-<ul>
-<li>See the <a href="./arduino-mmp.ino">arduino-mmp.ino</a> source code.</li>
-<li>
-<blockquote>
-<p>Connecting and understanding baudrate, etc. is out of the scope of this guide.</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>Just edit your config, edit metadata, and set the Serial Port Name, Baud rate, and change <code>GUIMode</code> to <code>NORMAL</code>.
-<ul>
-<li>If your device sends 1 for the first button instead of 0, you can set the Indexing setting to 1</li>
-<li>Medatata Editor:</li>
-<li>
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot">
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/">https://github.com/ssebs/MiniMacroPad/</a></p>
-</blockquote>
-</div>
+</div></div>
          </div>
+    </div>
+    <div class="mb-6">
+        <a class="text-base p-3 max-w-fit bg-quaternary text-neutral-900 hover:bg-quinary font-medium rounded-md"
+            href="/projects/go-mmp/">See more...</a>
     </div>
     
 </section>
@@ -609,7 +682,7 @@ Click on the name to change what they do.
                     <ul>
                         <li class=''>
                             <a href="/projects/" title="My Projects"
-                                class="text-quinary hover:text-quaternary">Check out my projects
+                                class="text-quinary hover:text-quaternary">Check out my projects.
                             </a>
                         </li>
                         <li class=''>
@@ -618,8 +691,13 @@ Click on the name to change what they do.
                             </a>
                         </li>
                         <li class=''>
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li class=''>
                             <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Ping me!
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>

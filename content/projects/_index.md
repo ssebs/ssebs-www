@@ -1,7 +1,7 @@
 ---
 title: My Projects
 slug: projects
-shortdesc: Check out my projects
+shortdesc: Check out my projects.
 sectionbg: bg-secondary
 C2AText: More of my projects
 menus: main

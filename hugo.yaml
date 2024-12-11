@@ -30,3 +30,11 @@ markup:
   goldmark:
     renderer: 
       unsafe: true
+  highlight:
+    lineNos: true
+    anchorLineNos: false
+    codeFences: true
+    lineNoStart: 1
+    lineNumbersInTable: false
+    noClasses: true
+    style: onedark

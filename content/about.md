@@ -14,15 +14,15 @@ Basically, I work as a Site Reliability Engineer and like to program various pro
 
 Online, I go by <span class="text-quaternary">ssebs</span>. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.
 
-Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
-
 <--COLSPLIT-->
 
-{{< image src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." class="w-[256px] rounded-md border-2 border-primary" >}}
+{{< image src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." width="360px" class="rounded-md border-2 border-primary" >}}
 
 {{< /columns >}}
 
 <!--more-->
+
+Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
 
 {{% spacer 2rem %}}
 <hr/>
@@ -67,9 +67,11 @@ In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd
 - I typically think of the MVP - the Minimum Viable Product as the goal. Once that's complete we can think about soft requirements and fun features.
 - Teach others as I learn, why not share my new found knowledge! I love to both mentor, and learn from others.
 
+<!-- 
 {{% spacer 1rem %}}
 
 ## My resume
 {{< rawhtml >}}
 <iframe src="/media/Sebastian-Safari-Resume.pdf" width="100%" height="800px"></iframe>
-{{</ rawhtml >}}
+{{</ rawhtml >}} 
+-->

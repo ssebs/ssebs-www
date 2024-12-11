@@ -21,9 +21,6 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-
-  
-  <script src="./js/main.js"></script>
 </head><body class="text-white">
 
 
@@ -78,6 +75,14 @@
                         <a href="/about/" title="About me"
                             class="md:hover:text-quaternary text-gray-200 block ">
                             <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
                             </span>
                         </a>
                     </li>
@@ -158,32 +163,28 @@
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
 <div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
-    <div class="">
-        <img class="lg:w-[75%] w-[50%] mx-auto my-4 rounded-md border-2 border-primary"
+    <div class="mx-3">
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>In a sentence...</h4>
+            <h4>Sebastian Safari</h4>
             
         </div>
-        <div class="grid gap-1 mb-2">
-            <p>
-                I'm a professional fixer, hobbyist figure-outer.
-            </p>
-        </div>
-        <div class="grid"><a href="./about"
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
-                Read more about me.
+                Who am I?
             </a><a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
             </a></div>
-    </div>
-    <div class="">
-        <div class="border-b border-neutral-600 font-semibold">
-            <h4>Skills:</h4>
-        </div>
-        <div class="p-4 flex flex-wrap justify-center gap-4">
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
             <a href="./tags/python"
                 class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
             <a href="./tags/golang"
@@ -198,7 +199,7 @@
                 More projects
             </a>
         </div>
-        <ul class="flex justify-center gap-4">
+        <ul class="flex justify-around gap-3 py-3">
 
     
     
@@ -233,11 +234,11 @@
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-<div class="grid p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-  <div class="flex justify-between">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
     <h1 class="text-2xl">A Platformer of Some Sort</h1>
 
-    <div class="mb-2 flex flex-wrap gap-2 text-base h-fit">
+    <div class="flex flex-wrap gap-2 text-base h-fit">
       
       <a href="./tags/programming"
         class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
@@ -252,12 +253,30 @@
         gamedev
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/Platformer">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/Platformer" target="_blank">Github Repo</a></p>
 <p><img src="./img/projects/Platformer.jpg" alt="screenshot"></p>
 <p>A Platformer of Some Sort was my first long-term project. This was a wild 3 month process to make A Platformer Of Some Sort, which was a working title, but we had decided to leave it as such because it worked. This game took so long because I was unable to figure out the hit boxes and jumping, both of which are mediocre at best™ *Not a real Trademark</p>
-<p>A Platformer Of Some Sort is just that, a platformer of some sort! It’s fairly simple, with a whopping 3 levels. Some animations are-lets say-not polished. There is a ridiculously funny story which was hand-written at the end of a long day of SAT’s, so you have to play the game and have a nice laugh.</p>
-<p><a href="https://github.com/ssebs/Platformer/raw/master/APlatformerOfSomeSort.jar">Here</a> is a link to download the game. Just double click the jar and use the WASD keys and you’re all set!</p>
+<p>A Platformer Of Some Sort is just that, a platformer of some sort! It&rsquo;s fairly simple, with a whopping 3 levels. Some animations are-lets say-not polished. There is a ridiculously funny story which was hand-written at the end of a long day of SAT&rsquo;s, so you have to play the game and have a nice laugh.</p>
+<p><a href="https://github.com/ssebs/Platformer/raw/master/APlatformerOfSomeSort.jar" target="_blank">Here</a> is a link to download the game. Just double click the jar and use the WASD keys and you&rsquo;re all set!</p>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+
 </div>
         </div>
       </div>
@@ -270,11 +289,11 @@
             <div class="flex justify-between items-end gap-6 min-w-80">
                 <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="./" class="font-medium hover:text-quinary">A Platformer of Some Sort</a>
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
                     <ul>
                         <li class=''>
                             <a href="/projects/" title="My Projects"
-                                class="text-quinary hover:text-quaternary">Check out my projects
+                                class="text-quinary hover:text-quaternary">Check out my projects.
                             </a>
                         </li>
                         <li class=''>
@@ -283,8 +302,13 @@
                             </a>
                         </li>
                         <li class=''>
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li class=''>
                             <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Ping me!
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>

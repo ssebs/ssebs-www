@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <base href="/" /><title> From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop </title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+   
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+
+    <meta name="theme-color" content="#41afff">
+    
+  
+  <link rel="stylesheet" href="/css/style.min.css">
+</head><body class="text-white">
+
+
+<div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
+    
+    <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
+        
+        <a href="./" class="flex align-center">
+            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+            <span class="text-gray-300 text-xl m-auto hover:text-quaternary">ssebs</span>
+        </a>
+
+        
+        <nav class="">
+            <button id="toggleOpen" class='sm:hidden flex ml-auto'>
+                <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+                    stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                        <animate dur="0.2s" attributeName="d"
+                            values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                            begin="start.begin" />
+                        <animate dur="0.2s" attributeName="d"
+                            values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                            begin="reverse.begin" />
+                    </path>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                    </rect>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
+                            begin="click" />
+                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                    </rect>
+                </svg>
+            </button>
+            
+            <div id="collapseMenu" class="flex flex-col items-center hideit gap-6 text-lg">
+                <ul class="flex max-sm:flex-col gap-4 align-middle">
+                    
+
+                    
+                    
+                    <li>
+                        <a href="/projects/" title="My Projects"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Projects
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/" title="About me"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/contact/" title="Contact me"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Contact
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="Seb&#39;s Blog"
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="flex justify-between gap-4 pt-4 sm:hidden">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#41afff"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#41afff"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#41afff"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#41afff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<script>
+    var toggleOpen = document.getElementById('toggleOpen');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function toggleElement(element) {
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
+        } else {
+            element.classList.remove("hideit")
+            element.classList.add("showit");
+        }
+    }
+
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+
+</script><div class="flex justify-center">
+    <div class="m-4">
+      <ul class="my-2 flex text-white-dim"><li class=""><a href="/">Home</a></li>
+        <div class="mx-1" >&gt;</div>
+        <li class=""><a href="/blog/">Blog
+        </a></li>
+        <div class="mx-1" >&gt;</div>
+    <li class=""><a href="/blog/mmpguieditor/">From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop</a></li>
+</ul>
+      
+      <div class="grid lg:grid-cols-4 gap-4 mb-6">
+        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
+<div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="mx-3">
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
+            title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
+
+        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
+            <h4>Sebastian Safari</h4>
+            
+        </div>
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="./about"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Learn more about me.
+            </a><a href="./contact"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Contact me!
+            </a></div>
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
+            <a href="./tags/python"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">python</a>
+            <a href="./tags/golang"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black">golang</a>
+            <a href="./tags/webdev"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black">Web
+                Dev</a>
+            <a href="./about"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black">DevOps</a>
+            <a href="./projects"
+                class="px-2 py-1 rounded-md border border-primary text-primary hover:bg-primary hover:text-black">
+                More projects
+            </a>
+        </div>
+        <ul class="flex justify-around gap-3 py-3">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+        </ul>
+    </div>
+</div></div>
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
+    <h1 class="text-2xl">From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop</h1>
+
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/golang"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        golang
+      </a>
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/3d-printing"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        3d-printing
+      </a>
+      <a href="./tags/arduino"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        arduino
+      </a>
+      <a href="./tags/gui"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gui
+      </a>
+    </div></div>
+  <div class="post-content"><h2 id="plan-for-below">PLAN FOR BELOW</h2>
+<ul>
+<li>Read Mini Macro Pad before this one
+<ul>
+<li>&ldquo;This is part 2 of my MMP project&rdquo;</li>
+</ul>
+</li>
+<li>What&rsquo;s wrong with v1 / story</li>
+<li>Solution idea</li>
+<li>Expanding GUI in fyne</li>
+<li>Fun with DnD</li>
+<li>Having issues with state / GUI not syncing
+<ul>
+<li>Realize I need to organize / structure my code better</li>
+<li>I find it best to learn by doing, so to learn MVC I need to implement it myself.</li>
+<li>Link to MVC Tip Calc</li>
+</ul>
+</li>
+<li>Using what I learned from my tip calc to implement MVC for my MMP</li>
+<li>v2 released / what&rsquo;s new with the release</li>
+<li>What&rsquo;s next for v3?
+<ul>
+<li>See github issues</li>
+</ul>
+</li>
+</ul>
+<h2 id="before-you-read">Before you read&hellip;</h2>
+<p>This is part 2 of my <a href="/projects/go-mmp/">Mini Macro Pad</a> project. I recommend reading my <a href="/blog/minimacropad/">last blog post</a> to read about how I 3D printed and coded it.</p>
+<img class="custom-float-right" src="./img/MMPPrinted.jpg" alt="macro pad" width="256px">
+<h2 id="whats-wrong-with-v1-why-make-a-v2">What&rsquo;s wrong with v1? Why make a v2?</h2>
+<p>I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a problem.</p>
+<p>If you wanted to change any of the Macros, you had to open up a code editor and edit a <code>.yaml</code> file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.</p>
+<p>I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but that was the push I needed to get started.</p>
+<p>So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you&rsquo;d find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to make changes on the fly.</p>
+<div style="clear: both;"></div>
+<h2 id="features-i-wanted">Features I wanted</h2>
+<p>The main things I wanted to make easier were:</p>
+<ul>
+<li>Changing what the Macros did (updating the Actions)</li>
+<li>Moving the position of Macros on the device using Drag and Drop</li>
+<li>Changing Metadata (like # of columns, and serial connection info)</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>I started by designing a quick UI in Excalidraw, and thinking about what features I wanted to add.</p>
+<div class="flex">
+<div>Config editor view where you can drag and drop your Macros.</div>
+<div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
+</div>
+<img class="w-full" src="./img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
+<p><strong>Thanks for reading!</strong></p>
+<p><strong>CRAP TO COPY BELOW</strong></p>
+<h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
+<p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
+<p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, but that&rsquo;s not really what it&rsquo;s <em>made</em> for. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
+<p>The main problem I ran into when working with <a href="https://fyne.io/" target="_blank">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
+<p>Using HTML + CSS + JS, there&rsquo;s a standard <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document-Object-Model</a>, which has standard ways that things are drawn.</p>
+<p>For example, a button looks like this:</p>
+<div class="flex flex-wrap gap-6">
+<div>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>&lt;<span style="color:#e06c75">button</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#e06c75">style</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;background-color: #222; border: 1px solid #fff; color: red;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>    <span style="color:#e06c75">onclick</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;funcName()&#34;</span>&gt; Click me, I&#39;m a button &lt;/<span style="color:#e06c75">button</span>&gt;
+</span></span></code></pre></div></div>
+<img src="/img/html-button.png" alt="html button" width="256px"/>
+</div>
+<div style="min-height: 1rem;">
+</div>
+<p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp" target="_blank">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here. More importantly, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
+<hr>
+<div style="min-height: 1rem;">
+</div>
+<img class="custom-float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
+<p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html" target="_blank">button</a> with the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">myButton</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#98c379">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#61afef;font-weight:bold">funcName</span>())
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#e06c75">myButton</span>.<span style="color:#e06c75">Importance</span> = <span style="color:#e06c75">widget</span>.<span style="color:#e06c75">HighImportance</span>
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>The Button is a <a href="https://docs.fyne.io/explore/widgets" target="_blank">widget</a>. A fyne widget can be added to a <a href="https://docs.fyne.io/explore/container" target="_blank">container</a>, like a <code>VBox</code>. This Vertical Box will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets.</p>
+<div style="min-height: 1rem;">
+</div>
+<img class="custom-float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
+<p>Compare this to the CSS <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">grid</a>, or <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox</a>. These are very customizable and quite powerful by <a href="https://docs.fyne.io/explore/layouts" target="_blank">comparison</a>.</p>
+<p>One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting.</p>
+<blockquote>
+<p>In the example above, I&rsquo;m setting it to Blue by setting HighImportance.</p>
+</blockquote>
+<p>To be clear, I have no hate for fyne at all. I feel like I&rsquo;ve learned a ton about different ways to manage user interfaces, and I&rsquo;m glad that the project exists. I do think the documentation can be improved, but I could be the one contributing that <code>;)</code></p>
+<div style="clear: both;"></div>
+<h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
+<p>I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions.</p>
+<p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save, nothing was updated. When I looked at the config file, it was updated but the UI and the Macros themselves weren&rsquo;t.</p>
+<p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
+<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
+<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state" target="_blank">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
+<p>The GUI library I&rsquo;m using, <a href="https://fyne.io" target="_blank">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
+<h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
+<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
+<h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
+<h2 id="fun-with-drag-and-drop">Fun with Drag and Drop</h2>
+<p>One cool thing I added was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them. I wanted to be able to move the order of some Actions in a Macro</p>
+<p>The way I achieved this was by implementing the <code>Draggable</code> interface in my <strong>Views</strong>. To do that, you need to create 2 functions: <code>Dragged(e *fyne.DragEvent)</code> and <code>DragEnd()</code>.</p>
+<p>I used the <code>fyne.DragEvent</code> to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it&rsquo;s hovering over.</p>
+<p>The <code>DragEnd()</code> function just lets me know when the drag is over, so I can run <code>SwapMacros()</code> to actually do the swap on the <strong>Model</strong>.</p>
+<p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go" target="_blank">check out the code</a> for more about that.</p>
+<p>I&rsquo;m also glossing over the refactoring that I did, since that&rsquo;s pretty boring. tl;dr - I reorganized my code and cleaned it all up.</p>
+<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
+<h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
+<h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
+<h2 id="see-github-issues">See github issues</h2>
+<hr>
+<h2 id="running-macros-when-you-press-a-button">Running Macros when you press a button</h2>
+<p>I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID&rsquo;s between them, and how that number is used to actually run the Macros, but instead I&rsquo;ll leave that up for <a href="https://github.com/ssebs/go-mmp" target="_blank">you to explore</a>.</p>
+<p>The tl;dr is this:</p>
+<ul>
+<li>The Config file is loaded</li>
+<li>A new thread is created to listen for serial data (button presses)</li>
+<li>A GUI window is made and displays the buttons from the Config.</li>
+<li>When a button is pressed, it will check for the matching Macro, and run the Actions in that Macro in order, using the parameters set in the config file.
+<ul>
+<li>e.g. <code>PressRelease(&quot;ENTER&quot;)</code> will press and release the enter button.</li>
+</ul>
+</li>
+</ul>
+<h2 id="learning-mvc-with-a-tip-calculator">Learning MVC with a tip calculator</h2>
+<p>At this point, I felt I needed to learn how this was usually done.</p>
+<blockquote>
+<p>It turns out, that you should structure your code in some way to keep it organized.</p>
+</blockquote>
+<p>I chose the Model-View-Controller architecture, as it was the most simple to get started. If you&rsquo;d like to read more about that, check out the <a href="/blog/mvctipcalc/">blog post</a>.</p>
+<h2 id="applying-mvc-to-my-mini-macro-pad">Applying MVC to my Mini Macro Pad</h2>
+<p>Once I learned about MVC, I split up my widgets into 3 files starting with the smallest piece of the UI, the Action editor, and got to work.</p>
+<p>I thought I&rsquo;d finish up in a few weeks or so, but I kept finding more work to do.</p>
+<blockquote>
+<p>You know how it goes.</p>
+</blockquote>
+<p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp" target="_blank">larger code base</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// model
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">Action</span> <span style="color:#c678dd">struct</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>	<span style="color:#e06c75">FuncName</span>  <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncName&#34;`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>	<span style="color:#e06c75">FuncParam</span> <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncParam&#34;`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span><span style="color:#7f848e">// view
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">ActionItemEditorView</span> <span style="color:#c678dd">struct</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#e06c75">widget</span>.<span style="color:#e06c75">BaseWidget</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>	<span style="color:#e06c75">funcSelect</span>     <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Select</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>	<span style="color:#e06c75">funcParamEntry</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Entry</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span>. . .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">a</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">models</span>.<span style="color:#e06c75">Action</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">SetText</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncParam</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">18</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">SetSelected</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncName</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">19</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#e06c75">f</span> <span style="color:#c678dd">func</span>(<span style="color:#e5c07b">string</span>)) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#e06c75">OnChanged</span> = <span style="color:#e06c75">f</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25</span><span><span style="color:#7f848e">// controler
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26</span><span><span style="color:#7f848e"></span><span style="color:#e06c75">ac</span> <span style="color:#56b6c2">:=</span> <span style="color:#56b6c2">&amp;</span><span style="color:#e06c75">ActionController</span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>    <span style="color:#e06c75">Action</span>:               <span style="color:#e06c75">a</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span>    <span style="color:#e06c75">ActionItemEditorView</span>: <span style="color:#e06c75">v</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">31</span><span><span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#c678dd">func</span>(<span style="color:#e06c75">s</span> <span style="color:#e5c07b">string</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">32</span><span>    <span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>.<span style="color:#e06c75">FuncName</span> = <span style="color:#e06c75">s</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">33</span><span>})
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">34</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">35</span><span><span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>)
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>Same MVC concept as my <a href="/projects/mvctipcalc/">tip calculator</a>, but with one MVC per widget.</p>
+<p>I kept adding features, getting closer and closer to a finished product, all while struggling to get my layout how I wanted.</p>
+<h2 id="the-finished-config-editor">The finished Config Editor</h2>
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+<p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
+<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+</div>
+<div>
+Click on the name to change what they do.
+<p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
+<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+</div>
+</div>
+<p>Here&rsquo;s the before:</p>
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/10a220b7-b671-441f-8091-367c88647971" type="video/mp4">
+    Your browser does not support the video tag.
+</video> 
+<p>&hellip;and after:</p>
+<video width="100%" controls>
+  <source src="https://github.com/user-attachments/assets/93dba44d-0294-4836-9b47-f18b098d896a" type="video/mp4">
+    Your browser does not support the video tag.
+</video> 
+<div style="min-height: 1rem;">
+</div>
+</div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+  <div id="comments_section" style="display: none;">
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="90fb84a46478557481fd844df69b9ee8" data-page-url="http://localhost:1313/blog/mmpguieditor/" data-page-title="From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div><footer class="bg-secondary min-h-64">
+    <div class="grid justify-center p-6">
+        <h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5>
+        <div
+            class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full lg:mt-6 lg:p-6 mt-4 p-4 gap-12 text-lg">
+            <div class="flex justify-between items-end gap-6 min-w-80">
+                <img class="w-28 h-fit" width="7rem" src="./img/RocketOnly.png" alt="logo" />
+                <div class="flex flex-col items-start gap-2 min-w-48">
+                    <a href="./" class="font-medium hover:text-quinary">ssebs | Sebastian Safari</a>
+                    <ul>
+                        <li class=''>
+                            <a href="/projects/" title="My Projects"
+                                class="text-quinary hover:text-quaternary">Check out my projects.
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/about/" title="About me"
+                                class="text-quinary hover:text-quaternary">Who am I?
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/contact/" title="Contact me"
+                                class="text-quinary hover:text-quaternary">Let's Connect.
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a href="/blog/" title="Seb&#39;s Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid gap-2 max-w-md text-base font-normal">
+                <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
+                <p>
+                    When I was a kid and I had to come up with my first username, I ended up trying to find something
+                    using my initials.
+                </p>
+                <p>
+                    Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.
+                </p>
+                <p>
+                    ssebs - S Seb S
+                </p>
+                <p>...very interesting, I know!</p>
+            </div>
+
+            <div class="min-w-32 flex flex-col gap-2">
+                <div class="text-xl">Socials</div>
+                <ul class="flex gap-2">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center bg-neutral-700 p-6">
+        <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
+    </div>
+</footer>
+
+<script>
+    
+    const copyElement = document.getElementById("copyright-year");
+    const current = new Date().getFullYear();
+    const fromYear =  2015 ;
+
+    const authorHTML = `<a 
+                            href="https:\/\/linkedin.com\/in\/ssebs\/" 
+                            class="text-quaternary hover:text-quinary" target="_blank" 
+                            >
+                                Sebastian Safari</a>`;
+
+    if (current === fromYear) {
+        copyElement.innerHTML = `&copy;${current} | ${authorHTML}`;
+    } else {
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
+    }
+
+</script></body>
+
+</html>
