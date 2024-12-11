@@ -1,7 +1,7 @@
 ---
-title: newtitle Improving my GUI to add more features to my Macro Pad
+title: From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop
 slug: mmpguieditor
-shortdesc: The story of the journey I took making a GUI in Go.
+shortdesc: Learn how I upgraded my Macro Pad with a WYSIWYG config editor, drag-and-drop functionality, and MVC to improve code structure and state management.
 feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png
 date: 2024-11-27T22:02:05-08:00
 weight: 24
