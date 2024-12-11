@@ -3,7 +3,7 @@ title: Seb's Blog
 slug: blog
 menus: main
 shortdesc: See what I've been up to.
-sectionbg: transparent-bg
+# sectionbg: transparent-bg
 date: 2024-11-27T22:00:14-08:00
 weight: 8
 ---

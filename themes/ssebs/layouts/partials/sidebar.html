@@ -11,19 +11,19 @@
         <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
 
         <div class="grid py-3">
-            {{- if not (strings.Contains .Page.RelPermalink "/about/") -}}
+            {{- if ne .Page.RelPermalink "/about/" -}}
             <a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Learn more about me.
             </a>
             {{- end -}}
-            {{- if not (strings.Contains .Page.RelPermalink "/contact/") -}}
+            {{- if ne .Page.RelPermalink "/contact/" -}}
             <a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
             </a>
             {{- end -}}
-            {{- if not (strings.Contains .Page.RelPermalink "/blog/") -}}
+            {{- if ne .Page.RelPermalink "/blog/" -}}
             <a href="./blog"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 See what I've been up to.

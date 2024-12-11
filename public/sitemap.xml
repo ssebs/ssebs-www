@@ -8,11 +8,11 @@
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-05-31T15:43:45-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
-    <lastmod>2024-05-31T15:43:51-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-11-27T22:00:14-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/contact/</loc>
+    <lastmod>2024-05-31T15:43:51-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/go-mmp/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>

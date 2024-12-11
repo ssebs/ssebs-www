@@ -81,17 +81,17 @@
                     </li>
                     
                     <li>
-                        <a href="/contact/" title="Contact me"
+                        <a href="/blog/" title="Seb&#39;s Blog"
                             class="md:hover:text-quaternary text-gray-200 block ">
-                            <span>Contact
+                            <span>Blog
                             </span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="/blog/" title="Seb&#39;s Blog"
+                        <a href="/contact/" title="Contact me"
                             class="md:hover:text-quaternary text-gray-200 block ">
-                            <span>Blog
+                            <span>Contact
                             </span>
                         </a>
                     </li>
@@ -188,9 +188,10 @@
         </div>
     </div>
 </div>
-      
 
-<section class="bg-secondary flex justify-center w-full">
+  
+
+<section class="bg-secondary flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Check out my projects.</h3>
@@ -384,9 +385,10 @@
     </div>
 </section>
 
-      
 
-<section class="bg-neutral-900 flex justify-center w-full">
+  
+
+<section class="bg-neutral-900 flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">Who am I?</h3>
@@ -424,9 +426,10 @@
     </div>
 </section>
 
-      
 
-<section class="transparent-bg flex justify-center w-full">
+  
+
+<section class="bg-neutral-900 flex justify-center w-full py-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
         
         <h3 class="text-3xl font-bold">See what I've been up to.</h3>
@@ -505,6 +508,101 @@
 
         <a class="text-base p-3 max-w-fit bg-quaternary text-neutral-900 hover:bg-quinary font-medium rounded-md"
             href="/blog/">See more...</a>
+    </div>
+</section>
+
+
+  
+
+<section class="transparent-bg flex justify-center w-full py-6">
+    <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
+        
+        <h3 class="text-3xl font-bold">Let's Connect.</h3>
+
+        
+
+        
+        <div class="text-white-dim grid gap-4  ">
+            <div class="post-content text-lg"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/" target="_blank">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a>.</p>
+<p>If you like to code, check out my <a href="https://github.com/ssebs/" target="_blank">Github</a>.</p>
+<h4 id="feel-free-to-fill-out-the-form-below-if-you-want-to-message-me">Feel free to fill out the form below if you want to message me.</h4>
+<div class="grid ">
+    
+    <div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden"></div>
+
+    
+    <form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 ">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
+            <label class="text-base" for="name">
+                <div>Your name:</div>
+                <input type="text" name="name"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="John Doe..." required />
+            </label>
+            <label class="text-base" for="email">
+                <div>Email:</div>
+                <input type="email" name="email"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    placeholder="jdoe@example.com" required />
+            </label>
+        </div>
+
+        <label class="text-base" for="_subject">Subject:</label>
+        <input type="text" name="_subject"
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+            placeholder="Dear ssebs" required>
+
+        <label class="text-base" for="message">Message:
+        </label>
+        <textarea placeholder="Let's work on something together."
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" name="message"
+            rows="10" required></textarea>
+
+        <button type="submit"
+            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
+            Send
+            <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#171717">
+                    <path
+                        d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                </svg></div>
+        </button>
+        <input type="hidden" name="_captcha" value="false">
+        <input id="nextURL" type="hidden" name="_next" value="http://localhost:1313//contact">
+    </form>
+</div>
+
+<script>
+    
+    
+    const nextURL = document.getElementById("nextURL");
+    
+    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
+
+
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('msg')) {
+        const msgContainer = document.getElementById('msg-container');
+        msgContainer.classList.remove("hidden");
+        const msg = decodeURI(urlParams.get("msg"));
+        msgContainer.textContent = msg;
+        window.alert(msg);
+    }
+</script>
+<blockquote>
+<p>Note: It takes a few seconds to submit, so please be patient.</p>
+</blockquote>
+            </div>
+            <div>
+            </div>
+        </div>
+
+        
+        
+        <div class=""></div>
+
+        
     </div>
 </section>
 
@@ -593,13 +691,13 @@
                             </a>
                         </li>
                         <li class=''>
-                            <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Let's Connect.
+                            <a href="/blog/" title="Seb&#39;s Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to.
                             </a>
                         </li>
                         <li class=''>
-                            <a href="/blog/" title="Seb&#39;s Blog"
-                                class="text-quinary hover:text-quaternary">See what I've been up to.
+                            <a href="/contact/" title="Contact me"
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>
