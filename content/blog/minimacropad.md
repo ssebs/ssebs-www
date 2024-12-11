@@ -48,7 +48,6 @@ Wiring under the hood (please forgive the newbie soldering).
 
 <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
 
-<!-- 
 ## Making the buttons do stuff
 Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE. 
 

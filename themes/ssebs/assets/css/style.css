@@ -1454,6 +1454,10 @@ select {
   width: 100%;
 }
 
+.w-\[256px\] {
+  width: 256px;
+}
+
 .min-w-32 {
   min-width: 8rem;
 }
@@ -1493,6 +1497,14 @@ select {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-\[256px\] {
+  max-width: 256px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .flex-shrink {
@@ -4137,6 +4149,10 @@ body {
 
   .lg\:w-\[75\%\] {
     width: 75%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:max-w-4xl {

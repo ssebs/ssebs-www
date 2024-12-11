@@ -164,7 +164,7 @@
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
 <div class="flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
     <div class="mx-3">
-        <img class="mx-auto w-full my-4 rounded-md border-2 border-primary"
+        <img class="mx-auto lg:w-full max-w-[300px] my-4 rounded-md border-2 border-primary"
             title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
 
         <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
@@ -289,120 +289,83 @@
 </div>
 <p>Wiring under the hood (please forgive the newbie soldering).</p>
 <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
-<!-- 
-## Making the buttons do stuff
-Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE. 
-
-The goal is when you press a button, it will:
-- Check which button was pressed, and compare that to a list of "Macros".
-- These Macros would have a list of "Actions" that can be run.
-
-For example, the "type gg" Macro would look something like this:
-- `Press("enter")`
-- `Type("gg")`
-- `Press("enter")`
-
-## Writing C
-I'm familiar with the C programming language, but haven't really used it all that much. I followed some arduino tutorials and got my code to recognize when a button was pressed. Once that was done, I made a list of Macros that you could run, and hard coded what they did in C.
-
-I was able to get it working after adding some time delays between each key press. Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change what a Macro did.
-
-I decided to change the architecture of the app a bit: instead of the Arduino typing the keys, I'd have it just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.
-
-That way, I can update a config file to make my changes in a much faster way.
-
-## Switching to Serial + Python
+<h2 id="making-the-buttons-do-stuff">Making the buttons do stuff</h2>
+<p>Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE.</p>
+<p>The goal is when you press a button, it will:</p>
+<ul>
+<li>Check which button was pressed, and compare that to a list of &ldquo;Macros&rdquo;.</li>
+<li>These Macros would have a list of &ldquo;Actions&rdquo; that can be run.</li>
+</ul>
+<p>For example, the &ldquo;type gg&rdquo; Macro would look something like this:</p>
+<ul>
+<li><code>Press(&quot;enter&quot;)</code></li>
+<li><code>Type(&quot;gg&quot;)</code></li>
+<li><code>Press(&quot;enter&quot;)</code></li>
+</ul>
+<h2 id="writing-c">Writing C</h2>
+<p>I&rsquo;m familiar with the C programming language, but haven&rsquo;t really used it all that much. I followed some arduino tutorials and got my code to recognize when a button was pressed. Once that was done, I made a list of Macros that you could run, and hard coded what they did in C.</p>
+<p>I was able to get it working after adding some time delays between each key press. Once I had my prototype up and running, I was feeling pretty excited! There was one problem though, it was really annoying to write C every time I wanted to change what a Macro did.</p>
+<p>I decided to change the architecture of the app a bit: instead of the Arduino typing the keys, I&rsquo;d have it just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.</p>
+<p>That way, I can update a config file to make my changes in a much faster way.</p>
+<h2 id="switching-to-serial--python">Switching to Serial + Python</h2>
 <img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
-
-I decided on Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.
-
-> Here's a link to the [Github Repo](https://github.com/ssebs/MiniMacroPad), however this version has been *deprecated*.
-
-I used [TKinter](https://docs.python.org/3/library/tkinter.html) to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro. 
-
-This worked, but the user interface was ugly, and it was kinda slow. This is due to PyInstaller's `.exe` files including a Python virtual machine since Python is not compiled.
-
-I continued working on this version for a while, but after a couple refactors (and learning some `OOP`-sies), I decided I wanted to rewrite my code yet again.
-
+<p>I decided on Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.</p>
+<blockquote>
+<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
+</blockquote>
+<p>I used <a href="https://docs.python.org/3/library/tkinter.html">TKinter</a> to get a grid of buttons showing, and setup a basic server to listen for button numbers. Once the server received a button press, it compared the number to the config file, and run the Actions for that Macro.</p>
+<p>This worked, but the user interface was ugly, and it was kinda slow. This is due to PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine since Python is not compiled.</p>
+<p>I continued working on this version for a while, but after a couple refactors (and learning some <code>OOP</code>-sies), I decided I wanted to rewrite my code yet again.</p>
 <div style="clear:both;"></div>
-
-## Rewriting in Go
-This time, I decided to write my code in Golang. This is a modern low programming language, and is a middle ground between C and Python. Go's a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There's another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller, which meant no more startup time lag!
-
-> I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.
-
-I found the [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests) free online book, and got to work learning about pointers, interfaces, channels, unit testing, and more. 
-
-## Quick sidebar about Go's error handling 
-One thing I particularly like about Go is the error handling. In Python, if you were to save text to a file you'd want to use a `try/catch` block to check for any errors. You can always leave it out, but Python won't warn you that using the `open()` function may create an error.
-
-```python
-try:
-    with open("example.txt","r") as f:
-        f.write("this will fail since we're only supposed to read the file")
-except Exception as e:
-    print(e)
-```
-
-<div style="min-height: 1rem;">
+<h2 id="rewriting-in-go">Rewriting in Go</h2>
+<p>This time, I decided to write my code in Golang. This is a modern low programming language, and is a middle ground between C and Python. Go&rsquo;s a compiled programming language, whereas Python is interpreted. This essentially means that Go is much faster, but is a bit more work to write. There&rsquo;s another bonus to using Go: it compiles to a single binary file. This means I no longer had to use Pyinstaller, which meant no more startup time lag!</p>
+<blockquote>
+<p>I also wanted to learn Go to become a better programmer, and thought this was a very practical way to do so.</p>
+</blockquote>
+<p>I found the <a href="https://quii.gitbook.io/learn-go-with-tests">Learn Go with Tests</a> free online book, and got to work learning about pointers, interfaces, channels, unit testing, and more.</p>
+<h2 id="quick-sidebar-about-gos-error-handling">Quick sidebar about Go&rsquo;s error handling</h2>
+<p>One thing I particularly like about Go is the error handling. In Python, if you were to save text to a file you&rsquo;d want to use a <code>try/catch</code> block to check for any errors. You can always leave it out, but Python won&rsquo;t warn you that using the <code>open()</code> function may create an error.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">try</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#c678dd">with</span> <span style="color:#e5c07b">open</span>(<span style="color:#98c379">&#34;example.txt&#34;</span>,<span style="color:#98c379">&#34;r&#34;</span>) <span style="color:#c678dd">as</span> <span style="color:#e06c75">f</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>        <span style="color:#e06c75">f</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">write</span>(<span style="color:#98c379">&#34;this will fail since we&#39;re only supposed to read the file&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">except</span> <span style="color:#e06c75">Exception</span> <span style="color:#c678dd">as</span> <span style="color:#e06c75">e</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>    <span style="color:#e5c07b">print</span>(<span style="color:#e06c75">e</span>)
+</span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-
-In Go, the function that opens, writes, or does anything to a file will return an error; you are supposed to check if there is an error right after. You can also ignore the error, but it's more *in your face* in Go.
-
-```golang
-fileContents := []byte("this won't fail but if it did it would be checked.")
-
-err := os.WriteFile("example.txt", fileContents, 0644)
-if err != nil {
-    fmt.Println("failed to write file", err)
-}
-```
-<div style="min-height: 1rem;">
+<p>In Go, the function that opens, writes, or does anything to a file will return an error; you are supposed to check if there is an error right after. You can also ignore the error, but it&rsquo;s more <em>in your face</em> in Go.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">fileContents</span> <span style="color:#56b6c2">:=</span> []<span style="color:#e5c07b">byte</span>(<span style="color:#98c379">&#34;this won&#39;t fail but if it did it would be checked.&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#e06c75">err</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">os</span>.<span style="color:#61afef;font-weight:bold">WriteFile</span>(<span style="color:#98c379">&#34;example.txt&#34;</span>, <span style="color:#e06c75">fileContents</span>, <span style="color:#d19a66">0644</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">if</span> <span style="color:#e06c75">err</span> <span style="color:#56b6c2">!=</span> <span style="color:#e5c07b">nil</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>    <span style="color:#e06c75">fmt</span>.<span style="color:#61afef;font-weight:bold">Println</span>(<span style="color:#98c379">&#34;failed to write file&#34;</span>, <span style="color:#e06c75">err</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span>}
+</span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-
-## Sidebar over, time to write a GUI in Go
+<h2 id="sidebar-over-time-to-write-a-gui-in-go">Sidebar over, time to write a GUI in Go</h2>
 <img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
-
-As I had a working version of my code written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go doesn't have inheritance, I learned to use [composition](https://go.dev/doc/effective_go#composite_literals) to fit my needs. 
-
-One important lesson I learned in doing this was to [RTFM](https://en.wikipedia.org/wiki/RTFM). The GUI library documentation *exists*, but it can be difficult to build everything you need from what you see on the getting started website. 
-
-I found that I needed to use VSCode's autocompletion to explore what methods were available, and use the "go to definition" button to read the source code to see how it should be used.
-
-I ended up choosing [fyne.io](https://fyne.io/) for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.
-
-I used a `GridWithColumns` container along with some `Buttons`. I used the same config file as before, and parsed it. From there, I went through the list of Macros and made a `Button` for each one.
-
-Here's a snippet of the code, but check out the [full file](https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go) to read more.
-
+<p>As I had a working version of my code written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go doesn&rsquo;t have inheritance, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals">composition</a> to fit my needs.</p>
+<p>One important lesson I learned in doing this was to <a href="https://en.wikipedia.org/wiki/RTFM">RTFM</a>. The GUI library documentation <em>exists</em>, but it can be difficult to build everything you need from what you see on the getting started website.</p>
+<p>I found that I needed to use VSCode&rsquo;s autocompletion to explore what methods were available, and use the &ldquo;go to definition&rdquo; button to read the source code to see how it should be used.</p>
+<p>I ended up choosing <a href="https://fyne.io/">fyne.io</a> for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.</p>
+<p>I used a <code>GridWithColumns</code> container along with some <code>Buttons</code>. I used the same config file as before, and parsed it. From there, I went through the list of Macros and made a <code>Button</code> for each one.</p>
+<p>Here&rsquo;s a snippet of the code, but check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go">full file</a> to read more.</p>
 <div style="clear: both;"></div>
-
-```golang
-for _, macro := range config.Macros {
-    macroBtn := widget.NewButton(macro.Name, func() {
-        macroRunner.Run(macro)
-    })
-    v.macrosContainer.Add(macroBtn)
-}
-```
-
-<div style="min-height: 1rem;">
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">for</span> <span style="color:#e06c75">_</span>, <span style="color:#e06c75">macro</span> <span style="color:#56b6c2">:=</span> <span style="color:#c678dd">range</span> <span style="color:#e06c75">config</span>.<span style="color:#e06c75">Macros</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#e06c75">macroBtn</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#e06c75">macro</span>.<span style="color:#e06c75">Name</span>, <span style="color:#c678dd">func</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>        <span style="color:#e06c75">macroRunner</span>.<span style="color:#61afef;font-weight:bold">Run</span>(<span style="color:#e06c75">macro</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>    })
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>    <span style="color:#e06c75">v</span>.<span style="color:#e06c75">macrosContainer</span>.<span style="color:#61afef;font-weight:bold">Add</span>(<span style="color:#e06c75">macroBtn</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span>}
+</span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-
-It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I'm used to how websites work, which follows the Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I've spent lots of time working with it. 
-
-However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne. 
-
-## Conclusion, and what's next
-Once everything was working, I was amazed at how much snappier my macro pad felt! 
-
-I improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.
-
-I was happy that I wrote, rewrote, and rewrote again my code, as I really did learn a lot in all this time. A few bugs were fixed, and a couple small features added, but in the end I had released `v1.2.3`.
-
-I say in the end, because what I had planned was going to be a major/breaking change. Read about how I improved my GUI to add a config editor to my Macro Pad [in part 2](/blog/mmpguieditor/)!
-
-**Thanks for reading!**  -->
+<p>It took me a bit of time to learn how fyne works under the hood, it was quite different from what I was used to. I&rsquo;m used to how websites work, which follows the Document-Object-Model. The HTML/CSS + JavaScript way of building applications made so much sense, mostly because I&rsquo;ve spent lots of time working with it.</p>
+<p>However, since I know enough (to be dangerous) with Tkinter, I was able to hack my way through using Fyne.</p>
+<h2 id="conclusion-and-whats-next">Conclusion, and what&rsquo;s next</h2>
+<p>Once everything was working, I was amazed at how much snappier my macro pad felt!</p>
+<p>I improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
+<p>I was happy that I wrote, rewrote, and rewrote again my code, as I really did learn a lot in all this time. A few bugs were fixed, and a couple small features added, but in the end I had released <code>v1.2.3</code>.</p>
+<p>I say in the end, because what I had planned was going to be a major/breaking change. Read about how I improved my GUI to add a config editor to my Macro Pad <a href="/blog/mmpguieditor/">in part 2</a>!</p>
+<p><strong>Thanks for reading!</strong>  &ndash;&gt;</p>
 </div>
   <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>
