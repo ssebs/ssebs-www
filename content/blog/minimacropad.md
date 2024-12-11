@@ -155,6 +155,8 @@ I improved the startup time from ~3 seconds, to less than half of a second. Runn
 
 I was happy that I wrote, rewrote, and rewrote again my code, as I really did learn a lot in all this time. A few bugs were fixed, and a couple small features added, but in the end I had released `v1.2.3`.
 
-I say in the end, because what I had planned was going to be a major/breaking change. Read about how I improved my GUI to add a config editor to my Macro Pad [in part 2](/blog/mmpguieditor/)!
+I say in the end, because what I had planned was going to be a major/breaking change. I've released `v2` on [Github](https://github.com/ssebs/go-mmp/pull/19), a new blog post will be out soon!
 
-**Thanks for reading!**  -->
+<!-- Read about how I improved my GUI to add a config editor to my Macro Pad [in part 2](/blog/mmpguieditor/)! -->
+
+**Thanks for reading!** 

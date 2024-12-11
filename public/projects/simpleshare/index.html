@@ -253,7 +253,7 @@
         gui
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/simpleshare">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/simpleshare" target="_blank">Github Repo</a></p>
 <p>A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application. There&rsquo;s a simple GUI to enable ease of use for non-technical users.</p>
 <h3 id="home">Home</h3>
 <p><img src="https://raw.githubusercontent.com/ssebs/simpleshare/master/img/home.png" alt="home"></p>
@@ -290,7 +290,7 @@ $ python -m venv venv
 <li>
 <p>Binary:</p>
 <ul>
-<li>Download a binary for your platform in the <a href="https://github.com/ssebs/simpleshare/releases">releases page</a>.</li>
+<li>Download a binary for your platform in the <a href="https://github.com/ssebs/simpleshare/releases" target="_blank">releases page</a>.</li>
 </ul>
 </li>
 <li>
@@ -402,6 +402,23 @@ optional arguments:
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

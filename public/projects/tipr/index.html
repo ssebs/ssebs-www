@@ -257,9 +257,9 @@
         js
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/tipr">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/tipr" target="_blank">Github Repo</a></p>
 <p>A tip calculator that shows the tip amount and the total amount.</p>
-<p><a href="https://ssebs.github.io/tipr/">https://ssebs.github.io/tipr/</a></p>
+<p><a href="https://ssebs.github.io/tipr/" target="_blank">https://ssebs.github.io/tipr/</a></p>
 <p><img src="./img/tipr.png" alt="tipr screenshot"></p>
 <h2 id="usage">Usage</h2>
 <ul>
@@ -272,7 +272,7 @@
 </li>
 <li>Prod:
 <ul>
-<li>Go to <a href="https://ssebs.github.io/tipr/">https://ssebs.github.io/tipr/</a></li>
+<li>Go to <a href="https://ssebs.github.io/tipr/" target="_blank">https://ssebs.github.io/tipr/</a></li>
 <li>Clone this repo</li>
 <li><code>npm i</code></li>
 <li><code>npm run build</code></li>
@@ -281,6 +281,23 @@
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

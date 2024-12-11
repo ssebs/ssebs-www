@@ -18,6 +18,23 @@
 
   {{- if .Content }}
   <div class="post-content">{{ .Content }}</div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent click event from propagating to the document
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    // Reset the image when clicking outside of it
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
   {{- end }}
 
   {{- if in .RelPermalink "blog" }}

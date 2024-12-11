@@ -262,9 +262,10 @@
       </a>
     </div></div>
   <div class="post-content"><blockquote>
-<p>Read how I <a href="/blog/minimacropad/">made the macro pad</a>, and how I <a href="/blog/mmpguieditor/">added a config editor</a>.</p>
+<p>Read how I <a href="/blog/minimacropad/">made the macro pad</a>.</p>
 </blockquote>
-<p><a href="https://github.com/ssebs/go-mmp">Github Repo</a></p>
+<!-- > Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). -->
+<p><a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo</a></p>
 <div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
 <div>
 <p><strong>Mini Macro Pad (go-mmp)</strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.</p>
@@ -280,7 +281,7 @@
 </li>
 <li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
 <ul>
-<li>You can press whatever key you want, as long as it&rsquo;s <a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys">in the list</a>.</li>
+<li>You can press whatever key you want, as long as it&rsquo;s <a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list</a>.</li>
 </ul>
 </li>
 <li>Macros:
@@ -305,14 +306,14 @@
 </div>
 <h2 id="getting-started">Getting started</h2>
 <p>If you have a arduino/serial macro pad ready, great! You get to use the full functionality of go-mmp!</p>
-<p>See the the <a href="#3d-printing--hardware">3D Printing &amp; Hardware</a> section to get started with the physical device.</p>
+<p>See the the <a href="#3d-printing--hardware">3D Printing &amp;amp; Hardware</a> section to get started with the physical device.</p>
 <p>Don&rsquo;t have an Arduino but still want to run macros? You can use the GUI-only mode, which is the default, so you&rsquo;re all set!</p>
 <p>Just click on the buttons to run Macros.</p>
 <div style="min-height: 2rem;">
 </div>
 <h2 id="getting-set-up">Getting set up</h2>
 <ul>
-<li><a href="https://github.com/ssebs/go-mmp/releases/">Download the latest exe</a></li>
+<li><a href="https://github.com/ssebs/go-mmp/releases/" target="_blank">Download the latest exe</a></li>
 <li>Double click the <strong>Mini Macro Pad.exe</strong> file</li>
 <li>It will generate a configuration file in your home folder.
 <ul>
@@ -342,7 +343,7 @@ Click on the name to change what they do.
 <p>You&rsquo;ll need a microcontroller, some key switches, and a 3D Printer. I&rsquo;m using a Teensy LC, but you could use an Arduino Micro or ESP32.</p>
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
 <div>
-<p>My 3D Printed housing is available on <a href="https://than.gs/m/710028">thangs.com</a>.</p>
+<p>My 3D Printed housing is available on <a href="https://than.gs/m/710028" target="_blank">thangs.com</a>.</p>
 <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
 </div>
 <div>
@@ -375,8 +376,25 @@ Click on the name to change what they do.
 </li>
 </ul>
 <blockquote>
-<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/">https://github.com/ssebs/MiniMacroPad/</a></p>
+<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/" target="_blank">https://github.com/ssebs/MiniMacroPad/</a></p>
 </blockquote></div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

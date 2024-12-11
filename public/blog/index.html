@@ -264,8 +264,8 @@
 <h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
 <p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
 <p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, but that&rsquo;s not really what it&rsquo;s <em>made</em> for. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
-<p>The main problem I ran into when working with <a href="https://fyne.io/">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
-<p>Using HTML + CSS + JS, there&rsquo;s a standard <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Document-Object-Model</a>, which has standard ways that things are drawn.</p>
+<p>The main problem I ran into when working with <a href="https://fyne.io/" target="_blank">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
+<p>Using HTML + CSS + JS, there&rsquo;s a standard <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document-Object-Model</a>, which has standard ways that things are drawn.</p>
 <p>For example, a button looks like this:</p>
 <div class="flex flex-wrap gap-6">
 <div>
@@ -277,21 +277,21 @@
 </div>
 <div style="min-height: 1rem;">
 </div>
-<p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here. More importantly, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
+<p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp" target="_blank">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here. More importantly, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
 <hr>
 <div style="min-height: 1rem;">
 </div>
 <img class="custom-float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
-<p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html">button</a> with the following code:</p>
+<p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html" target="_blank">button</a> with the following code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">myButton</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#98c379">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#61afef;font-weight:bold">funcName</span>())
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#e06c75">myButton</span>.<span style="color:#e06c75">Importance</span> = <span style="color:#e06c75">widget</span>.<span style="color:#e06c75">HighImportance</span>
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-<p>The Button is a <a href="https://docs.fyne.io/explore/widgets">widget</a>. A fyne widget can be added to a <a href="https://docs.fyne.io/explore/container">container</a>, like a <code>VBox</code>. This Vertical Box will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets.</p>
+<p>The Button is a <a href="https://docs.fyne.io/explore/widgets" target="_blank">widget</a>. A fyne widget can be added to a <a href="https://docs.fyne.io/explore/container" target="_blank">container</a>, like a <code>VBox</code>. This Vertical Box will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets.</p>
 <div style="min-height: 1rem;">
 </div>
 <img class="custom-float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
-<p>Compare this to the CSS <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">grid</a>, or <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a>. These are very customizable and quite powerful by <a href="https://docs.fyne.io/explore/layouts">comparison</a>.</p>
+<p>Compare this to the CSS <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">grid</a>, or <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox</a>. These are very customizable and quite powerful by <a href="https://docs.fyne.io/explore/layouts" target="_blank">comparison</a>.</p>
 <p>One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting.</p>
 <blockquote>
 <p>In the example above, I&rsquo;m setting it to Blue by setting HighImportance.</p>
@@ -303,8 +303,8 @@
 <p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save, nothing was updated. When I looked at the config file, it was updated but the UI and the Macros themselves weren&rsquo;t.</p>
 <p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
 <p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
-<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
-<p>The GUI library I&rsquo;m using, <a href="https://fyne.io">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
+<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state" target="_blank">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
+<p>The GUI library I&rsquo;m using, <a href="https://fyne.io" target="_blank">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
 <h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
 <h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
 <h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
@@ -313,7 +313,7 @@
 <p>The way I achieved this was by implementing the <code>Draggable</code> interface in my <strong>Views</strong>. To do that, you need to create 2 functions: <code>Dragged(e *fyne.DragEvent)</code> and <code>DragEnd()</code>.</p>
 <p>I used the <code>fyne.DragEvent</code> to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it&rsquo;s hovering over.</p>
 <p>The <code>DragEnd()</code> function just lets me know when the drag is over, so I can run <code>SwapMacros()</code> to actually do the swap on the <strong>Model</strong>.</p>
-<p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go">check out the code</a> for more about that.</p>
+<p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go" target="_blank">check out the code</a> for more about that.</p>
 <p>I&rsquo;m also glossing over the refactoring that I did, since that&rsquo;s pretty boring. tl;dr - I reorganized my code and cleaned it all up.</p>
 <h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
 <h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
@@ -321,7 +321,7 @@
 <h2 id="see-github-issues">See github issues</h2>
 <hr>
 <h2 id="running-macros-when-you-press-a-button">Running Macros when you press a button</h2>
-<p>I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID&rsquo;s between them, and how that number is used to actually run the Macros, but instead I&rsquo;ll leave that up for <a href="https://github.com/ssebs/go-mmp">you to explore</a>.</p>
+<p>I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID&rsquo;s between them, and how that number is used to actually run the Macros, but instead I&rsquo;ll leave that up for <a href="https://github.com/ssebs/go-mmp" target="_blank">you to explore</a>.</p>
 <p>The tl;dr is this:</p>
 <ul>
 <li>The Config file is loaded</li>
@@ -345,7 +345,7 @@
 <blockquote>
 <p>You know how it goes.</p>
 </blockquote>
-<p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp">larger code base</a>:</p>
+<p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp" target="_blank">larger code base</a>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// model
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">Action</span> <span style="color:#c678dd">struct</span> {
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>	<span style="color:#e06c75">FuncName</span>  <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncName&#34;`</span>
@@ -412,31 +412,6 @@ Click on the name to change what they do.
 	
 	<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
 		
-		
-
-<div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
-  
-  <a href="/blog/mmpguieditor/" class="grid gap-4 self-start">
-    <div class="text-lg font-medium">
-      From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop
-
-      
-      <div class="text-sm italic text-quaternary py-2">
-        Nov 27, 2024
-      </div></div>
-    <div style="height: 248px;">
-      <img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" alt="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png"
-        style="max-height: 248px; margin: auto;">
-    </div>
-
-  </a>
-
-  <p class="text-lg text-white-dim">Learn how I upgraded my Macro Pad with a WYSIWYG config editor, drag-and-drop functionality, and MVC to improve code structure and state management.</p>
-  
-  
-
-</div>
 		
 
 <div

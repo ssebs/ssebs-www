@@ -234,7 +234,7 @@
     <h1 class="text-2xl">Contact me</h1>
 
     </div>
-  <div class="post-content"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if you want to work on a project together!</p>
+  <div class="post-content"><p>Reach out to me if you want to connect on <a href="https://linkedin.com/in/ssebs/" target="_blank">LinkedIn</a>, or email me at <a href="mailto:contact@ssebs.com">contact@ssebs.com</a> if you want to work on a project together!</p>
 <h4 id="feel-free-to-just-fill-out-the-form-below-if-you-want-to-send-me-a-quick-message">Feel free to just fill out the form below if you want to send me a quick message.</h4>
 <div class="grid">
     
@@ -303,6 +303,23 @@
 <blockquote>
 <p>Note: It takes a few seconds to submit, so please be patient.</p>
 </blockquote></div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

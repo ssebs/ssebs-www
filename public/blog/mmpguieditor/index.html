@@ -283,6 +283,23 @@
 <div style="clear: both;"></div>
 <p><strong>Thanks for reading!</strong></p>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
   <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>
     <div id="cusdis_thread" 

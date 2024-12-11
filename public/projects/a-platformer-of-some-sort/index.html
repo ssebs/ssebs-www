@@ -253,12 +253,29 @@
         gamedev
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/Platformer">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/Platformer" target="_blank">Github Repo</a></p>
 <p><img src="./img/projects/Platformer.jpg" alt="screenshot"></p>
 <p>A Platformer of Some Sort was my first long-term project. This was a wild 3 month process to make A Platformer Of Some Sort, which was a working title, but we had decided to leave it as such because it worked. This game took so long because I was unable to figure out the hit boxes and jumping, both of which are mediocre at best™ *Not a real Trademark</p>
 <p>A Platformer Of Some Sort is just that, a platformer of some sort! It&rsquo;s fairly simple, with a whopping 3 levels. Some animations are-lets say-not polished. There is a ridiculously funny story which was hand-written at the end of a long day of SAT&rsquo;s, so you have to play the game and have a nice laugh.</p>
-<p><a href="https://github.com/ssebs/Platformer/raw/master/APlatformerOfSomeSort.jar">Here</a> is a link to download the game. Just double click the jar and use the WASD keys and you&rsquo;re all set!</p>
+<p><a href="https://github.com/ssebs/Platformer/raw/master/APlatformerOfSomeSort.jar" target="_blank">Here</a> is a link to download the game. Just double click the jar and use the WASD keys and you&rsquo;re all set!</p>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

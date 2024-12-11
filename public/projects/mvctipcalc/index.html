@@ -253,7 +253,7 @@
         gui
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/MVCTipCalc">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo</a></p>
 <p>Simple Model View Controller Fyne project that doubles as a tip calculator.</p>
 <p>The purpose of this is for me to learn MVC architecture, as well as using this as a template repo.</p>
 <h2 id="screenshot-of-the-ui">Screenshot of the UI</h2>
@@ -262,6 +262,23 @@
 <p>I created this side project while working on my <a href="/projects/go-mmp/">Mini Macro pad</a>. I was expanding the UI from a simple grid of buttons to include a Drag and Drop interface to edit the Macros.</p>
 <p>If you&rsquo;d like to read more, check out the <a href="/blog/mvctipcalc/">blog entry</a></p>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

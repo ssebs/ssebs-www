@@ -265,7 +265,7 @@
         js
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/ssebs-www">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/ssebs-www" target="_blank">Github Repo</a></p>
 <p>ssebs.com has changed as I&rsquo;ve learned more webdev skills. Currently, you&rsquo;re seeing it!</p>
 <h2 id="current-2024">Current (2024)</h2>
 <p><img src="./img/projects/ssebs-www-current.png" alt="screenshot of current website"></p>
@@ -280,6 +280,23 @@
 <h3 id="2015-original">2015 (original)</h3>
 <p><img src="./img/projects/ssebs-www-2015.png" alt="screenshot of 2015 website"></p>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

@@ -265,7 +265,7 @@
         flask
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/Peopledb-py-react">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/Peopledb-py-react" target="_blank">Github Repo</a></p>
 <p>Person Database using python, flask, sqlite3, react.</p>
 <h2 id="home--search-page">Home / Search page</h2>
 <p><img src="https://raw.githubusercontent.com/ssebs/Peopledb-py-react/master/img/ppldb-home-search.png" alt="Home Page"></p>
@@ -304,7 +304,7 @@
 <li><code>$ cd Peopledb-py-react/</code></li>
 </ul>
 </li>
-<li>Clone the <a href="https://github.com/ssebs/flask-ppl-api">flask-ppl-api repo</a>
+<li>Clone the <a href="https://github.com/ssebs/flask-ppl-api" target="_blank">flask-ppl-api repo</a>
 <ul>
 <li><code>$ git clone https://github.com/ssebs/flask-ppl-api</code></li>
 </ul>
@@ -353,6 +353,23 @@
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

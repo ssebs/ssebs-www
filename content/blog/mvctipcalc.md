@@ -106,7 +106,6 @@ func (tv *TipView) SetFinalTotalAmount(amount float32) {
 	tv.finalTotalAmount.Refresh()
 }
 ```
-<!-- 
 
 ### The Controller
 The **Controller** is what connects the **Model** and **View** together. It tells the **View** what to do when a user selects a new `tip percentage`. 
@@ -159,8 +158,18 @@ The last step to get the tip calculator working was to connect all the pieces to
 In my `main.go` file, I created an instance of the **Model**, created a fyne window and created a new **View**, and use both of those references in my **Controller**.
 
 ```golang
-replace_me
+func main() {
+	myApp := app.New()
+	win := myApp.NewWindow("MVC Tip Calc")
 
+	tipModel := internal.NewTipModel()
+	tipView := internal.NewTipView()
+	tipController := internal.NewTipController(tipModel, tipView)
+
+	win.SetContent(tipController.TipView)
+	win.Show()
+	myApp.Run()
+}
 ```
 
 {{< spacer 1rem >}}
@@ -175,8 +184,10 @@ With all this done, I had learned:
 <div style="clear: both;"></div>
 
 ## See how this helped with my GUI Editor
-Now that I learned a bit about MVC and was able to implement it myself, I felt confident enough to get started on my `v2` release. Read more about how that went in the [blog post](/blog/mmpguieditor/).
+Now that I learned a bit about MVC and was able to implement it myself, I felt confident enough to get started on my `v2` release. 
+
+<!-- Read more about how that went in the [blog post](/blog/mmpguieditor/). -->
 
 If you want to read more of the code for this project, check out the [Github Repo](https://github.com/ssebs/MVCTipCalc).
 
-**Thanks for reading!** -->
+**Thanks for reading!**

@@ -258,25 +258,25 @@
 <li>This is an eBay special, wrapped in carbon fiber vinyl</li>
 </ul>
 </li>
-<li><a href="https://www.good-win-racing.com/Mazda-Performance-Part/61-2192.html">SmartTOP</a>
+<li><a href="https://www.good-win-racing.com/Mazda-Performance-Part/61-2192.html" target="_blank">SmartTOP</a>
 <ul>
 <li>This lets me put the top up/down without having to hold the button. Super useful!</li>
 </ul>
 </li>
-<li><a href="https://www.good-win-racing.com/Mazda-Performance-Part/61-1787.html">Goodwin Racing RoadsterSport SuperStreet Exhaust</a>
+<li><a href="https://www.good-win-racing.com/Mazda-Performance-Part/61-1787.html" target="_blank">Goodwin Racing RoadsterSport SuperStreet Exhaust</a>
 <ul>
-<li>With the <a href="https://www.good-win-racing.com/Mazda-Performance-Part/60-1325ND.html">baffle</a> so I don&rsquo;t annoy my neighbors</li>
+<li>With the <a href="https://www.good-win-racing.com/Mazda-Performance-Part/60-1325ND.html" target="_blank">baffle</a> so I don&rsquo;t annoy my neighbors</li>
 </ul>
 </li>
-<li><a href="https://www.good-win-racing.com/Mazda-Performance-Part/61-1847RF.html">Progress Lowering Springs</a>
+<li><a href="https://www.good-win-racing.com/Mazda-Performance-Part/61-1847RF.html" target="_blank">Progress Lowering Springs</a>
 <ul>
 <li>This helps me around turns, flat out!</li>
 </ul>
 </li>
 <li>Phone mount
 <ul>
-<li>I got a <a href="https://www.cravenspeed.com/the-gemini-phone-mount-for-mazda-mx-5-miata-rf-4th-gen-nd-vent-scissor/?srsltid=AfmBOorZgT2I4wws-0FWGw6N6hf0mnEBlPrBBsnKbfwC3mVehEV6okWz">phone mount</a> when I had an iPhone, but since moving to Android I didn&rsquo;t have Magsafe anymore.</li>
-<li>So, I designed and 3D printed a <a href="https://thangs.com/designer/sebsafari/3d-model/Pop%20Socket%20Adapter%20-949380?source=mymodels">Pop socket adapter</a>
+<li>I got a <a href="https://www.cravenspeed.com/the-gemini-phone-mount-for-mazda-mx-5-miata-rf-4th-gen-nd-vent-scissor/?srsltid=AfmBOorZgT2I4wws-0FWGw6N6hf0mnEBlPrBBsnKbfwC3mVehEV6okWz" target="_blank">phone mount</a> when I had an iPhone, but since moving to Android I didn&rsquo;t have Magsafe anymore.</li>
+<li>So, I designed and 3D printed a <a href="https://thangs.com/designer/sebsafari/3d-model/Pop%20Socket%20Adapter%20-949380?source=mymodels" target="_blank">Pop socket adapter</a>
 <ul>
 <li><img src="./img/phone_adapter.jpg" alt="phone adapter" class="w-[256px]" width=""></li>
 </ul>
@@ -285,6 +285,23 @@
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

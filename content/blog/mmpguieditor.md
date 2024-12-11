@@ -6,7 +6,7 @@ feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.p
 date: 2024-11-27T22:02:05-08:00
 weight: 24
 tags: [golang, programming, 3d-printing, arduino, gui]
-draft: false
+draft: true
 ---
 ## Before you read...
 This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and coded it.

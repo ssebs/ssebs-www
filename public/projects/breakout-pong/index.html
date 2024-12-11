@@ -253,13 +253,30 @@
         gamedev
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/BreakoutPongGame">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/BreakoutPongGame" target="_blank">Github Repo</a></p>
 <p><img src="./img/projects/BreakoutPong.png" alt="screenshot"></p>
 <p>Welcome to the start of it all: Breakout-Pong. This was the very first game I made. ‘Twas the final project of the first semester of AP Computer Science. I thought that making a simple Pong remake would be easy. Little did I know that having to learn OpenGL along with Java would mean a lot of googling.</p>
 <p>Breakout Pong is a mix between the game Pong and the game Breakout. It plays like a horizontal breakout until you break down the wall. Then it&rsquo;s all high-pace Pong action-with two balls!</p>
-<p><a href="https://github.com/ssebs/BreakoutPongGame/raw/master/BreakoutPong.jar">Here</a> is a link to the github repo, I need to rebuild this but I&rsquo;ll get to that at some point.</p>
+<p><a href="https://github.com/ssebs/BreakoutPongGame/raw/master/BreakoutPong.jar" target="_blank">Here</a> is a link to the github repo, I need to rebuild this but I&rsquo;ll get to that at some point.</p>
 <p>Use the A,D,Left, and Right keys and you&rsquo;re all set!</p>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

@@ -249,7 +249,7 @@
         programming
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/images-to-pdf">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/images-to-pdf" target="_blank">Github Repo</a></p>
 <p><img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="Usage Example"></p>
 <p>Convert a selection of images files into a single PDF.</p>
 <p>I made a tool to convert multiple image files into a single PDF, addressing the limitation of
@@ -263,7 +263,7 @@ my wife&rsquo;s scanner by efficiently merging individual images into a single c
 <ul>
 <li><code>git clone https://github.com/ssebs/images-to-pdf</code>
 <ul>
-<li>You&rsquo;ll need to install a C compiler. See <a href="https://developer.fyne.io/started/">https://developer.fyne.io/started/</a></li>
+<li>You&rsquo;ll need to install a C compiler. See <a href="https://developer.fyne.io/started/" target="_blank">https://developer.fyne.io/started/</a></li>
 </ul>
 </li>
 <li><code>go build -o img2pdf.exe .\cmd\main.go</code></li>
@@ -287,7 +287,7 @@ my wife&rsquo;s scanner by efficiently merging individual images into a single c
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">9</span><span><span style="color:#e5c07b">PS </span><span style="color:#e06c75">F:</span>\<span style="color:#e06c75">LocalProgramming</span>\<span style="color:#e5c07b">images-to</span><span style="color:#e06c75">-pdf</span>&gt; 
 </span></span></code></pre></div><h2 id="how-to-run-cli">How to run CLI</h2>
 <ul>
-<li>Download <a href="https://github.com/ssebs/images-to-pdf/releases/">img2pdf.exe from the releases page</a></li>
+<li>Download <a href="https://github.com/ssebs/images-to-pdf/releases/" target="_blank">img2pdf.exe from the releases page</a></li>
 <li>Move the <code>img2pdf.exe</code> file to the folder you want to convert images</li>
 <li>EZPZ:
 <ul>
@@ -310,6 +310,23 @@ my wife&rsquo;s scanner by efficiently merging individual images into a single c
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

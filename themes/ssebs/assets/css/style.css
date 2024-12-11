@@ -3889,6 +3889,15 @@ body {
   }
 }
 
+.bigImg {
+  transition: all 60ms ease;
+  transform: scale(1.5);
+  z-index: 10;
+  /* Bring the expanded image above other content */
+  position: relative;
+  /* So it stays within the page flow */
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

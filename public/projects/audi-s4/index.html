@@ -249,15 +249,15 @@
 <p><img src="./img/s4.jpg" alt="picture of my s4"></p>
 <h2 id="mods">Mods:</h2>
 <ul>
-<li><a href="https://vmrwheels.com/products/v801-titanium-black-shadow">VMR V801 Wheels</a></li>
+<li><a href="https://vmrwheels.com/products/v801-titanium-black-shadow" target="_blank">VMR V801 Wheels</a></li>
 <li>RS style grille</li>
-<li><a href="https://www.ctsturbo.com/product/cts-turbo-audi-b8-b8-5-s4-s5-q5-sq5-air-intake-system/">CTS Turbo Cold Air Intake</a>
+<li><a href="https://www.ctsturbo.com/product/cts-turbo-audi-b8-b8-5-s4-s5-q5-sq5-air-intake-system/" target="_blank">CTS Turbo Cold Air Intake</a>
 <ul>
 <li>Mostly for the sound!</li>
 </ul>
 </li>
-<li><a href="https://www.ecstuning.com/b-maxton-design-parts/trunk-spoiler-gloss-black/au-s4-b8f-cap1-g/">ECS Tuning Trunk Lip Spoiler</a></li>
-<li><a href="https://www.ecstuning.com/b-integrated-engineering-parts/stage-1-ie-performance-tune-includes-tcu-tune/iesocgj1tcu/">ECS Tuning Stage 1 ECU+TCU tune</a>
+<li><a href="https://www.ecstuning.com/b-maxton-design-parts/trunk-spoiler-gloss-black/au-s4-b8f-cap1-g/" target="_blank">ECS Tuning Trunk Lip Spoiler</a></li>
+<li><a href="https://www.ecstuning.com/b-integrated-engineering-parts/stage-1-ie-performance-tune-includes-tcu-tune/iesocgj1tcu/" target="_blank">ECS Tuning Stage 1 ECU&#43;TCU tune</a>
 <ul>
 <li>This bumped my power from 333 to 418!</li>
 </ul>
@@ -270,7 +270,7 @@
 <li><img src="./img/s4_turkey.jpg" alt="smashed windshield on my car" class="w-[300px]" width=""></li>
 </ul>
 </li>
-<li>My <a href="https://www.audizine.com/forum/showthread.php/760957-The-Official-Blown-Catalytic-Converter-Thread">Catalitic Converters failed</a>, and I ended up selling my car at this point.
+<li>My <a href="https://www.audizine.com/forum/showthread.php/760957-The-Official-Blown-Catalytic-Converter-Thread" target="_blank">Catalitic Converters failed</a>, and I ended up selling my car at this point.
 <ul>
 <li>
 <blockquote>
@@ -282,6 +282,23 @@
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

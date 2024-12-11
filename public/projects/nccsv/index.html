@@ -253,7 +253,7 @@
         programming
       </a>
     </div></div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/nccsv">Github Repo</a></p>
+  <div class="post-content"><p><a href="https://github.com/ssebs/nccsv" target="_blank">Github Repo</a></p>
 <p>Ncurses CSV Editor written in Python</p>
 
 <script src="https://asciinema.org/a/6gHETuFhyD4R9nAwtUGet5P9i.js" id="asciicast-6gHETuFhyD4R9nAwtUGet5P9i" async="true"></script>
@@ -361,6 +361,23 @@
 </li>
 </ul>
 </div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>

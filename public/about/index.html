@@ -283,10 +283,10 @@
 <li>3D Printing
 <ul>
 <li>Gridfinity</li>
-<li><a href="https://thangs.com/designer/sebsafari">Custom models</a>
+<li><a href="https://thangs.com/designer/sebsafari" target="_blank">Custom models</a>
 <ul>
 <li>Check out my <a href="/projects/go-mmp">Macro Pad</a>)</li>
-<li>Or my <a href="https://thangs.com/designer/sebsafari/3d-model/Pop%20Socket%20phone%20stand-579341">Pop Socket phone stand</a></li>
+<li>Or my <a href="https://thangs.com/designer/sebsafari/3d-model/Pop%20Socket%20phone%20stand-579341" target="_blank">Pop Socket phone stand</a></li>
 </ul>
 </li>
 </ul>
@@ -294,7 +294,7 @@
 <li>Programming
 <ul>
 <li>Check out my <a href="/projects">projects</a></li>
-<li>Or my <a href="https://github.com/ssebs">Github</a></li>
+<li>Or my <a href="https://github.com/ssebs" target="_blank">Github</a></li>
 </ul>
 </li>
 </ul>
@@ -323,6 +323,23 @@
 <iframe src="/media/Sebastian-Safari-Resume.pdf" width="100%" height="800px"></iframe>
  
 --></div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
 
 </div>
         </div>
