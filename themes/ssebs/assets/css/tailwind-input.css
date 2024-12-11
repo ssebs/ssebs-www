@@ -63,9 +63,12 @@
     color: #33ffe7;
     text-decoration: underline;
 }
+/* .post-content strong {
+    color: #2ecce8;
+} */
 .post-content pre{
     padding: 0.5rem;
-    width: fit-content;
+    white-space: pre-wrap;
 }
 
 .img-container img {

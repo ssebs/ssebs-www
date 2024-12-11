@@ -21,9 +21,6 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-
-  
-  <script src="./js/main.js"></script>
 </head><body class="text-white">
 
 
@@ -264,7 +261,7 @@
   TODO: Make pics responsive
 
   <div class="post-content"><h2 id="before-you-read">Before you read&hellip;</h2>
-<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
+<img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
 <p>This is part 2 of my <a href="/projects/go-mmp/">Mini Macro Pad</a> project. I recommend reading my <a href="/blog/minimacropad/">last blog post</a> to read about how I 3D printed and coded it.</p>
 <h2 id="whats-wrong-with-v1-why-make-a-v2">What&rsquo;s wrong with v1? Why make a v2?</h2>
 <p>I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a problem.</p>
@@ -277,7 +274,7 @@
 <div>Config editor view where you can drag and drop your Macros.</div>
 <div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
-<img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
+<img class="w-full" src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
 <h2 id="features-i-wanted">Features I wanted</h2>
 <p>The main things I wanted to make easier were:</p>
 <ul>
@@ -295,9 +292,9 @@
 <p>For example, a button looks like this:</p>
 <div class="flex flex-wrap gap-6">
 <div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">button</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #222; border: 1px solid #fff; color: red;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;funcName()&#34;</span>&gt; Click me, I&#39;m a button &lt;/<span style="color:#f92672">button</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>&lt;<span style="color:#e06c75">button</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#e06c75">style</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;background-color: #222; border: 1px solid #fff; color: red;&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>    <span style="color:#e06c75">onclick</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;funcName()&#34;</span>&gt; Click me, I&#39;m a button &lt;/<span style="color:#e06c75">button</span>&gt;
 </span></span></code></pre></div></div>
 <img src="/img/html-button.png" alt="html button" width="256px"/>
 </div>
@@ -307,16 +304,16 @@
 <hr>
 <div style="min-height: 1rem;">
 </div>
-<img style="float:right;" src="/img/fyne-button.png" alt="fyne button" width="300px" />
+<img class="lg:float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
 <p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html">button</a> with the following code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">NewButton</span>(<span style="color:#e6db74">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#a6e22e">funcName</span>())
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">myButton</span>.<span style="color:#a6e22e">Importance</span> = <span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">HighImportance</span>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">myButton</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#98c379">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#61afef;font-weight:bold">funcName</span>())
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#e06c75">myButton</span>.<span style="color:#e06c75">Importance</span> = <span style="color:#e06c75">widget</span>.<span style="color:#e06c75">HighImportance</span>
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
 <p>The Button is a <a href="https://docs.fyne.io/explore/widgets">widget</a>. A fyne widget can be added to a <a href="https://docs.fyne.io/explore/container">container</a>, like a <code>VBox</code>. This Vertical Box will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets.</p>
 <div style="min-height: 1rem;">
 </div>
-<img style="float: right;" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
+<img class="lg:float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
 <p>Compare this to the CSS <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">grid</a>, or <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a>. These are very customizable and quite powerful by <a href="https://docs.fyne.io/explore/layouts">comparison</a>.</p>
 <p>One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting.</p>
 <blockquote>
@@ -372,41 +369,41 @@
 <p>You know how it goes.</p>
 </blockquote>
 <p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp">larger code base</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#75715e">// model
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Action</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">FuncName</span>  <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`yaml:&#34;FuncName&#34;`</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">FuncParam</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`yaml:&#34;FuncParam&#34;`</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// view
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">ActionItemEditorView</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">BaseWidget</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">funcSelect</span>     <span style="color:#f92672">*</span><span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">Select</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">funcParamEntry</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">widget</span>.<span style="color:#a6e22e">Entry</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>. . .
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">v</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">ActionItemEditorView</span>) <span style="color:#a6e22e">SetAction</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">models</span>.<span style="color:#a6e22e">Action</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">funcParamEntry</span>.<span style="color:#a6e22e">SetText</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">FuncParam</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">funcParamEntry</span>.<span style="color:#a6e22e">Refresh</span>()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">funcSelect</span>.<span style="color:#a6e22e">SetSelected</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">FuncName</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">funcSelect</span>.<span style="color:#a6e22e">Refresh</span>()
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">v</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">ActionItemEditorView</span>) <span style="color:#a6e22e">SetOnFuncNameChanged</span>(<span style="color:#a6e22e">f</span> <span style="color:#66d9ef">func</span>(<span style="color:#66d9ef">string</span>)) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">funcSelect</span>.<span style="color:#a6e22e">OnChanged</span> = <span style="color:#a6e22e">f</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// controler
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">ac</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">ActionController</span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Action</span>:               <span style="color:#a6e22e">a</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ActionItemEditorView</span>: <span style="color:#a6e22e">v</span>,
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ac</span>.<span style="color:#a6e22e">ActionItemEditorView</span>.<span style="color:#a6e22e">SetOnFuncNameChanged</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">string</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ac</span>.<span style="color:#a6e22e">Action</span>.<span style="color:#a6e22e">FuncName</span> = <span style="color:#a6e22e">s</span>
-</span></span><span style="display:flex;"><span>})
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ac</span>.<span style="color:#a6e22e">ActionItemEditorView</span>.<span style="color:#a6e22e">SetAction</span>(<span style="color:#a6e22e">ac</span>.<span style="color:#a6e22e">Action</span>)
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// model
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">Action</span> <span style="color:#c678dd">struct</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>	<span style="color:#e06c75">FuncName</span>  <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncName&#34;`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>	<span style="color:#e06c75">FuncParam</span> <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncParam&#34;`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span><span style="color:#7f848e">// view
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">ActionItemEditorView</span> <span style="color:#c678dd">struct</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#e06c75">widget</span>.<span style="color:#e06c75">BaseWidget</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>	<span style="color:#e06c75">funcSelect</span>     <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Select</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>	<span style="color:#e06c75">funcParamEntry</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Entry</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span>. . .
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">a</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">models</span>.<span style="color:#e06c75">Action</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">SetText</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncParam</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">18</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">SetSelected</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncName</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">19</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#e06c75">f</span> <span style="color:#c678dd">func</span>(<span style="color:#e5c07b">string</span>)) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#e06c75">OnChanged</span> = <span style="color:#e06c75">f</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25</span><span><span style="color:#7f848e">// controler
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26</span><span><span style="color:#7f848e"></span><span style="color:#e06c75">ac</span> <span style="color:#56b6c2">:=</span> <span style="color:#56b6c2">&amp;</span><span style="color:#e06c75">ActionController</span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>    <span style="color:#e06c75">Action</span>:               <span style="color:#e06c75">a</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span>    <span style="color:#e06c75">ActionItemEditorView</span>: <span style="color:#e06c75">v</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">31</span><span><span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#c678dd">func</span>(<span style="color:#e06c75">s</span> <span style="color:#e5c07b">string</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">32</span><span>    <span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>.<span style="color:#e06c75">FuncName</span> = <span style="color:#e06c75">s</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">33</span><span>})
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">34</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">35</span><span><span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>)
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
 <p>Same MVC concept as my <a href="/projects/mvctipcalc/">tip calculator</a>, but with one MVC per widget.</p>

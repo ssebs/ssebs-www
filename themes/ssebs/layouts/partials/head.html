@@ -27,7 +27,4 @@
   {{ with resources.Get "./css/style.css" | minify }}
   <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- end }}
-
-  {{/* TODO: fix this */}}
-  <script src="./js/main.js"></script>
 </head>

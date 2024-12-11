@@ -6,11 +6,11 @@ feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.p
 date: 2024-11-27T22:02:05-08:00
 weight: 24
 tags: [golang, programming, 3d-printing, arduino, gui]
-draft: true
+draft: false
 ---
 
 ## Before you read...
-<img style="float:right;" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
+<img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
 
 This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and coded it.
 
@@ -31,7 +31,7 @@ I started by designing a quick UI in Excalidraw, and thinking about what feature
 <div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
 
-<img src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" width="100%" >
+<img class="w-full" src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
 
 ## Features I wanted
 The main things I wanted to make easier were:
@@ -40,8 +40,6 @@ The main things I wanted to make easier were:
 - Changing Metadata (like # of columns, and serial connection info)
 
 <div style="clear: both;"></div>
-
-
 
 **CONTINUE EDITING FROM HERE**
 
@@ -79,7 +77,7 @@ You can change the way the button looks using [CSS](https://www.w3schools.com/cs
 
 {{< spacer 1rem >}}
 
-<img style="float:right;" src="/img/fyne-button.png" alt="fyne button" width="300px" />
+<img class="lg:float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
 
 
 In fyne, you can make a [button](https://docs.fyne.io/widget/button.html) with the following code:
@@ -96,7 +94,7 @@ The Button is a [widget](https://docs.fyne.io/explore/widgets). A fyne widget ca
 
 {{< spacer 1rem >}}
 
-<img style="float: right;" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
+<img class="lg:float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
 
 Compare this to the CSS [grid](https://css-tricks.com/snippets/css/complete-guide-grid/), or [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). These are very customizable and quite powerful by [comparison](https://docs.fyne.io/explore/layouts).
 
