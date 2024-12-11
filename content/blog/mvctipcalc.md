@@ -20,7 +20,7 @@ Before I could implement MVC for my Mini Macro Pad, I wanted to really grok MVC 
 
 > I had already created a [tip calculator](https://github.com/ssebs/tipr) or [two](https://github.com/ssebs/tipr-mobile), so I had a starting place.
 
-The tip calculator a baisc form that shows the `tip amount` and the `total amount` when you enter in a `bill amount`, and a `tip percentage`. 
+The tip calculator a basic form that shows the `tip amount` and the `total amount` when you enter in a `bill amount`, and a `tip percentage`. 
 
 Since my Mini Macro Pad is written in Go + [fyne.io](https://fyne.io/), I stuck with that.
 
@@ -55,6 +55,7 @@ With those, I could calculate both the `tip amount` ($ to add), and the `total a
 I needed to keep track of at least the first two numbers, and update the `tip` and `total amount` once one of those numbers changed.
 
 The **Model** code:
+
 ```golang
 type TipModel struct {
 	billAmount float32
@@ -89,18 +90,23 @@ I also had a few important functions that the **Controller** used.
 - `SetFinalTotalAmount()`
 
 Some of the **View** code:
+
 ```golang
 func (tv *TipView) GetBillAmount() (float32, error) {
-	value, err := strconv.ParseFloat(tv.billAmountEntry.Text, 32)
+	value, err := strconv.ParseFloat(
+		tv.billAmountEntry.Text, 32
+	)
 	return float32(value), err
 }
 
 func (tv *TipView) SetFinalTotalAmount(amount float32) {
-	tv.finalTotalAmount.SetText(fmt.Sprintf("%s%.2f", CURRENCY, amount))
+	tv.finalTotalAmount.SetText(
+		fmt.Sprintf("%s%.2f", CURRENCY, amount)
+	)
 	tv.finalTotalAmount.Refresh()
 }
 ```
-
+<!-- 
 
 ### The Controller
 The **Controller** is what connects the **Model** and **View** together. It tells the **View** what to do when a user selects a new `tip percentage`. 
@@ -111,6 +117,7 @@ When that happens:
 - The **View** is updated with the new calculated values, and will `Refresh()` to redraw the UI.
 
 Some of the **Controller** code:
+
 ```golang
 tc.TipView.SetBillAmountEntryOnChanged(func(s string) {
     tc.UpdateModelFromView()
@@ -172,4 +179,4 @@ Now that I learned a bit about MVC and was able to implement it myself, I felt c
 
 If you want to read more of the code for this project, check out the [Github Repo](https://github.com/ssebs/MVCTipCalc).
 
-**Thanks for reading!**
+**Thanks for reading!** -->

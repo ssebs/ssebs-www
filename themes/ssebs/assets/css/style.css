@@ -3776,9 +3776,20 @@ select {
     color: #2ecce8;
 } */
 
-.post-content pre{
+.post-content pre {
   padding: 0.5rem;
   white-space: pre-wrap;
+}
+
+/* Max lg */
+
+@media (max-width: 1023px) {
+  .post-content pre {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
 }
 
 .img-container img {
@@ -3811,7 +3822,7 @@ img:not([src]) {
   visibility: hidden;
 }
 
-.transparent-bg{
+.transparent-bg {
   background-color: rgba(1, 1, 1, 0.2);
 }
 
