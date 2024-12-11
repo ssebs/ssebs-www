@@ -262,7 +262,7 @@
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
 <h2 id="whats-a-macro-pad">What&rsquo;s a Macro Pad?</h2>
-<img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
+<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
 <p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &ldquo;skip song&rdquo; button on your keyboard.</p>
 <p>A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons to run shortcuts.</p>
 <p>I did eventually make my own <a href="https://than.gs/m/710028">3D Printed housing</a>, and I call it my &ldquo;Mini Macro Pad&rdquo;.</p>
@@ -305,7 +305,7 @@
 <p>I decided to change the architecture of the app a bit: instead of the Arduino typing the keys, I&rsquo;d have it just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.</p>
 <p>That way, I can update a config file to make my changes in a much faster way.</p>
 <h2 id="switching-to-serial--python">Switching to Serial + Python</h2>
-<img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
+<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
 <p>I decided on Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.</p>
 <blockquote>
 <p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
@@ -339,7 +339,7 @@
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
 <h2 id="sidebar-over-time-to-write-a-gui-in-go">Sidebar over, time to write a GUI in Go</h2>
-<img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
 <p>As I had a working version of my code written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go doesn&rsquo;t have inheritance, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals">composition</a> to fit my needs.</p>
 <p>One important lesson I learned in doing this was to <a href="https://en.wikipedia.org/wiki/RTFM">RTFM</a>. The GUI library documentation <em>exists</em>, but it can be difficult to build everything you need from what you see on the getting started website.</p>
 <p>I found that I needed to use VSCode&rsquo;s autocompletion to explore what methods were available, and use the &ldquo;go to definition&rdquo; button to read the source code to see how it should be used.</p>

@@ -8,11 +8,10 @@ weight: 24
 tags: [golang, programming, 3d-printing, arduino, gui]
 draft: false
 ---
-
 ## Before you read...
-<img class="lg:float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
-
 This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and coded it.
+
+<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" alt="macro pad" width="256px">
 
 ## What's wrong with v1? Why make a v2?
 I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a problem.

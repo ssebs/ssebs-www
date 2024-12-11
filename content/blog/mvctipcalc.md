@@ -9,7 +9,7 @@ tags: [golang, programming, gui]
 ---
 > Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
 
-<img class="lg:float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
 
 ## Why did I make a tip calculator? 
 While working on the `v2` release of my [Mini Macro Pad](/projects/go-mmp/), I was having trouble managing state between different parts of the GUI. After some research, it seemed like the best path forward was to use MVC, or Model-View-Controller, to manage my app. 
@@ -27,7 +27,7 @@ Since my Mini Macro Pad is written in Go + [fyne.io](https://fyne.io/), I stuck 
 <div style="clear: both;"></div>
 
 ## What is MVC?
-<img class="lg:float-right" src="./img/mvc.webp" width="320px" alt="MVC Diagram">
+<img class="custom-float-right" src="./img/mvc.webp" width="320px" alt="MVC Diagram">
 
 Model-View-Controller is a software development pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow. 
 
@@ -152,7 +152,7 @@ func (tc *TipController) CalcTipAndUpdate() {
 ```
 
 ## Bringing it all together
-<img class="lg:float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
 
 The last step to get the tip calculator working was to connect all the pieces together. 
 

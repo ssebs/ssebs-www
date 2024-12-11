@@ -156,3 +156,15 @@ body {
     max-height: 100vh;
   }
 }
+
+/* Default: float none for all screen sizes */
+.custom-float-right {
+  float: none;
+}
+
+/* lg breakpoint: float right */
+@media (min-width: 1024px) {
+  .custom-float-right {
+    float: right;
+  }
+}

@@ -69,7 +69,7 @@ You can change the way the button looks using [CSS](https://www.w3schools.com/cs
 
 {{< spacer 1rem >}}
 
-<img class="lg:float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
+<img class="custom-float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
 
 
 In fyne, you can make a [button](https://docs.fyne.io/widget/button.html) with the following code:
@@ -86,7 +86,7 @@ The Button is a [widget](https://docs.fyne.io/explore/widgets). A fyne widget ca
 
 {{< spacer 1rem >}}
 
-<img class="lg:float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
+<img class="custom-float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
 
 Compare this to the CSS [grid](https://css-tricks.com/snippets/css/complete-guide-grid/), or [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/). These are very customizable and quite powerful by [comparison](https://docs.fyne.io/explore/layouts).
 

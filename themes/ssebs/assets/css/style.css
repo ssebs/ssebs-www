@@ -1422,10 +1422,6 @@ select {
   width: 1536px;
 }
 
-.w-\[50\%\] {
-  width: 50%;
-}
-
 .w-\[640px\] {
   width: 640px;
 }
@@ -1454,10 +1450,6 @@ select {
   width: 100%;
 }
 
-.w-\[256px\] {
-  width: 256px;
-}
-
 .min-w-32 {
   min-width: 8rem;
 }
@@ -1476,6 +1468,10 @@ select {
 
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .max-w-fit {
@@ -1497,14 +1493,6 @@ select {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-\[256px\] {
-  max-width: 256px;
-}
-
-.max-w-\[300px\] {
-  max-width: 300px;
 }
 
 .flex-shrink {
@@ -3885,7 +3873,23 @@ body {
     opacity: 1;
     max-height: 100vh;
   }
+}
 
+/* Default: float none for all screen sizes */
+
+.custom-float-right {
+  float: none;
+}
+
+/* lg breakpoint: float right */
+
+@media (min-width: 1024px) {
+  .custom-float-right {
+    float: right;
+  }
+}
+
+@media (min-width: 640px) {
   .sm\:container {
     width: 100%;
   }
@@ -4145,10 +4149,6 @@ body {
 
   .lg\:w-\[16rem\] {
     width: 16rem;
-  }
-
-  .lg\:w-\[75\%\] {
-    width: 75%;
   }
 
   .lg\:w-full {
