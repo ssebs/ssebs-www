@@ -253,7 +253,7 @@
   <div class="post-content"><blockquote>
 <p>Also see the <a href="/projects/mvctipcalc/">project page</a> and the <a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo</a></p>
 </blockquote>
-<img class="custom-float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="./img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
 <h2 id="why-did-i-make-a-tip-calculator">Why did I make a tip calculator?</h2>
 <p>While working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, I was having trouble managing state between different parts of the GUI. After some research, it seemed like the best path forward was to use MVC, or Model-View-Controller, to manage my app.</p>
 <blockquote>
@@ -377,7 +377,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>	<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">SetFinalTotalAmount</span>(<span style="color:#e06c75">finalTotal</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>}
 </span></span></code></pre></div><h2 id="bringing-it-all-together">Bringing it all together</h2>
-<img class="custom-float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="./img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
 <p>The last step to get the tip calculator working was to connect all the pieces together.</p>
 <p>In my <code>main.go</code> file, I created an instance of the <strong>Model</strong>, created a fyne window and created a new <strong>View</strong>, and use both of those references in my <strong>Controller</strong>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">main</span>() {

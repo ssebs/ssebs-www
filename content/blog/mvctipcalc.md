@@ -2,14 +2,14 @@
 title: 'Learning the MVC pattern by making a Tip Calculator'
 slug: mvctipcalc
 shortdesc: Learning the MVC pattern for my MiniMacroPad by making a Tip Calculator in Go.
-feature: https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true
+feature: ./img/MVCTipCalc.png
 date: 2024-11-17T17:30:27-08:00
 weight: 24
 tags: [golang, programming, gui]
 ---
 > Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
 
-<img class="custom-float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="./img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
 
 ## Why did I make a tip calculator? 
 While working on the `v2` release of my [Mini Macro Pad](/projects/go-mmp/), I was having trouble managing state between different parts of the GUI. After some research, it seemed like the best path forward was to use MVC, or Model-View-Controller, to manage my app. 
@@ -151,7 +151,7 @@ func (tc *TipController) CalcTipAndUpdate() {
 ```
 
 ## Bringing it all together
-<img class="custom-float-right" src="https://github.com/ssebs/MVCTipCalc/blob/main/Screenshot.png?raw=true" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="./img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
 
 The last step to get the tip calculator working was to connect all the pieces together. 
 

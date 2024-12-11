@@ -2,7 +2,7 @@
 title: 3D printing and coding my Mini Macro Pad
 slug: minimacropad
 shortdesc: The journey of making my Mini Macro Pad was created and the challenges I faced along the way.
-feature: https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png
+feature: ./img/MMPPrinted.jpg
 date: "2023-08-10"
 weight: 24
 tags: [golang, programming, 3d-printing, arduino, gui]
@@ -10,7 +10,7 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 > Read the technical details on the [project page](/projects/go-mmp)
 
 ## What's a Macro Pad?
-<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpbuilt.png" width="256px" alt="physical macro pad">
+<img class="custom-float-right" src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
 
 Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a "skip song" button on your keyboard.
 
@@ -46,7 +46,7 @@ Once I had my plan ready, I printed out some 3D models I found on https://thangs
 
 Wiring under the hood (please forgive the newbie soldering).
 
-<img src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/mmpwiring.png" width="256px" alt="macro pad wiring">
+<img src="./img/MMPWiring.jpg" width="256px" alt="macro pad wiring">
 
 ## Making the buttons do stuff
 Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE. 
@@ -70,7 +70,7 @@ I decided to change the architecture of the app a bit: instead of the Arduino ty
 That way, I can update a config file to make my changes in a much faster way.
 
 ## Switching to Serial + Python
-<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/MiniMacroPad/refs/heads/master/img/mmpscreenshot.png" alt="python gui screenshot">
+<img class="custom-float-right" src="./img/PythonMMPScreenshot.png" alt="python gui screenshot">
 
 I decided on Python for the new code, and also make a small GUI so you can see what/where the macros are on your device.
 
@@ -117,7 +117,7 @@ if err != nil {
 {{< spacer 1rem >}}
 
 ## Sidebar over, time to write a GUI in Go
-<img class="custom-float-right" src="https://raw.githubusercontent.com/ssebs/go-mmp/main/res/GUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+<img class="custom-float-right" src="./img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
 
 As I had a working version of my code written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go doesn't have inheritance, I learned to use [composition](https://go.dev/doc/effective_go#composite_literals) to fit my needs. 
 
