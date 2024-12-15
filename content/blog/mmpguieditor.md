@@ -57,6 +57,27 @@ I started by designing a quick UI in Excalidraw, and thinking about what feature
 
 <img class="w-full" src="./img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
 
+<div style="clear: both;"></div>
+
+## Expanding GUI in fyne
+
+## Fun with DnD
+
+## Having issues with state / GUI not syncing
+  
+  ## Realize I need to organize / structure my code better
+  
+  ## I find it best to learn by doing, so to learn MVC I need to implement it myself.
+  
+  ## Link to MVC Tip Calc
+
+## Using what I learned from my tip calc to implement MVC for my MMP
+
+## v2 released / what's new with the release
+
+## What's next for v3?
+- See github issues
+
 **Thanks for reading!**
 
 

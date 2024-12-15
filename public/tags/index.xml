@@ -6,7 +6,7 @@
     <description>Recent content in Tags on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Nov 2024 17:30:27 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang</title>
@@ -27,6 +27,20 @@
       <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>3d-Printing</title>
+      <link>http://localhost:1313/tags/3d-printing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/3d-printing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino</title>
+      <link>http://localhost:1313/tags/arduino/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/arduino/</guid>
       <description></description>
     </item>
     <item>
@@ -79,13 +93,6 @@
       <description></description>
     </item>
     <item>
-      <title>3d-Printing</title>
-      <link>http://localhost:1313/tags/3d-printing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/3d-printing/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Gamedev</title>
       <link>http://localhost:1313/tags/gamedev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -104,13 +111,6 @@
       <link>http://localhost:1313/tags/hugo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Arduino</title>
-      <link>http://localhost:1313/tags/arduino/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/arduino/</guid>
       <description></description>
     </item>
   </channel>

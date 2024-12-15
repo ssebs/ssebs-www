@@ -6,14 +6,14 @@
     <description>Recent content on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Nov 2024 17:30:27 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;div class=&#34;grid md:grid-cols-2 justify-items-center gap-6&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;p&gt;My name is Sebastian Safari, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;Basically, I work as a Site Reliability Engineer and like to program various projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;&#xA;&lt;p&gt;Online, I go by &lt;span class=&#34;text-quaternary&#34;&gt;ssebs&lt;/span&gt;. Like most usernames, I came up with that when I was a kid. Basically a combination of my first and last name.&lt;/p&gt;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div&gt;&#xD;&#xA;    &lt;img src=&#34;./img/me_vacay.jpg&#34; alt=&#34;Photo of me on my honeymoon.&#34; class=&#34;rounded-md border-2 border-primary&#34; width=&#34;360px&#34;&gt;&#xD;&#xA;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &#xD;&#xA;&lt;/div&gt;</description>
+      <description>&lt;img src=&#34;./img/me_vacay.jpg&#34; title=&#34;Photo of me on my honeymoon.&#34; width=&#34;360px&#34; class=&#34;rounded-md border-2 border-primary float-right mx-3&#34; /&gt;&#xD;&#xA;&lt;p&gt;My name is &lt;strong&gt;Sebastian Safari&lt;/strong&gt;, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;I work as a Site Reliability Engineer and like to program side projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact me</title>
@@ -67,9 +67,16 @@
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>
       <link>http://localhost:1313/blog/mvctipcalc/</link>
-      <pubDate>Sun, 17 Nov 2024 17:30:27 -0800</pubDate>
+      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/mvctipcalc/</guid>
       <description>Also see the project page and the Github Repo</description>
+    </item>
+    <item>
+      <title>3D printing and coding my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>Read the technical details on the project page&#xA;What&amp;rsquo;s a Macro Pad?</description>
     </item>
     <item>
       <title>Tipr</title>
@@ -77,13 +84,6 @@
       <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
       <guid>http://localhost:1313/projects/tipr/</guid>
       <description>Github Repo&#xA;A tip calculator that shows the tip amount and the total amount.</description>
-    </item>
-    <item>
-      <title>3D printing and coding my Mini Macro Pad</title>
-      <link>http://localhost:1313/blog/minimacropad/</link>
-      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>Read the technical details on the project page&#xA;What&amp;rsquo;s a Macro Pad?</description>
     </item>
     <item>
       <title>nccsv</title>
