@@ -1,4 +1,4 @@
-FROM hugomods/hugo:node
+FROM hugomods/hugo:node AS builder
 
 COPY . /src
 
@@ -13,6 +13,10 @@ WORKDIR /src/
 ENV HUGO_ENV=production
 ENV HUGO_PARAMS_USEBASEURL=false
 
-# Run server
+RUN hugo --baseURL https://ssebs.com --minify
+
+# Serve static site
+FROM nginx
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder ./src/public /usr/share/nginx/html
 EXPOSE 8080
-ENTRYPOINT [ "hugo", "server", "--bind", "0.0.0.0" ,"-p", "8080", "--baseURL", "https://ssebs.com"]

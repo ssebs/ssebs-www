@@ -1,54 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gui on ssebs | Sebastian Safari</title>
-    <link>http://localhost:1313/tags/gui/</link>
-    <description>Recent content in Gui on ssebs | Sebastian Safari</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gui/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mini Macro Pad</title>
-      <link>http://localhost:1313/projects/go-mmp/</link>
-      <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
-      <guid>http://localhost:1313/projects/go-mmp/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read how I &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;made the macro pad&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;!-- &gt; Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). --&gt;&#xD;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/go-mmp&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;display: grid; grid-template-columns: 60% 40%; gap: 1rem;&#34;&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Mini Macro Pad (go-mmp)&lt;/strong&gt; is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p&gt;&#xA;&lt;p&gt;It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p&gt;&#xA;&lt;div style=&#34;min-height: 1rem;&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;what-kind-of-macros-can-you-make&#34;&gt;What kind of macros can you make?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shortcuts:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href=&#34;https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys&#34; target=&#34;_blank&#34;&gt;in the list&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Macros:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Repeat keypresses (or mouse button presses)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whatever you can think of, feel free to submit PRs!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;  Screenshot of the GUI:&#xD;&#xA;  &lt;img src=&#34;./img/MMPGUIScreenshot.png&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>MVC Tip Calculator</title>
-      <link>http://localhost:1313/projects/mvctipcalc/</link>
-      <pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate>
-      <guid>http://localhost:1313/projects/mvctipcalc/</guid>
-      <description>Github Repo&#xA;Simple Model View Controller Fyne project that doubles as a tip calculator.</description>
-    </item>
-    <item>
-      <title>Simpleshare</title>
-      <link>http://localhost:1313/projects/simpleshare/</link>
-      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
-      <guid>http://localhost:1313/projects/simpleshare/</guid>
-      <description>Github Repo&#xA;A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application.</description>
-    </item>
-    <item>
-      <title>CSV Editor</title>
-      <link>http://localhost:1313/projects/csveditor/</link>
-      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
-      <guid>http://localhost:1313/projects/csveditor/</guid>
-      <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
-    </item>
-    <item>
-      <title>Learning the MVC pattern by making a Tip Calculator</title>
-      <link>http://localhost:1313/blog/mvctipcalc/</link>
-      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
-      <guid>http://localhost:1313/blog/mvctipcalc/</guid>
-      <description>Also see the project page and the Github Repo</description>
-    </item>
-    <item>
-      <title>3D printing and coding my Mini Macro Pad</title>
-      <link>http://localhost:1313/blog/minimacropad/</link>
-      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
-      <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>Read the technical details on the project page&#xA;What&amp;rsquo;s a Macro Pad?</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gui on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/gui/</link><description>Recent content in Gui on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate><atom:link href="https://ssebs.com/tags/gui/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini Macro Pad</title><link>https://ssebs.com/projects/go-mmp/</link><pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate><guid>https://ssebs.com/projects/go-mmp/</guid><description>&lt;blockquote>
+&lt;p>Read how I &lt;a href="https://ssebs.com/blog/minimacropad/">made the macro pad&lt;/a>.&lt;/p>
+&lt;/blockquote>
+&lt;!-- > Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). -->
+&lt;p>&lt;a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
+&lt;div>
+&lt;p>&lt;strong>Mini Macro Pad (go-mmp)&lt;/strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p>
+&lt;p>It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p>
+&lt;div style="min-height: 1rem;">
+&lt;/div>
+&lt;h3 id="what-kind-of-macros-can-you-make">What kind of macros can you make?&lt;/h3>
+&lt;ul>
+&lt;li>Shortcuts:
+&lt;ul>
+&lt;li>CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
+&lt;ul>
+&lt;li>You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Macros:
+&lt;ul>
+&lt;li>Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Repeat keypresses (or mouse button presses)
+&lt;ul>
+&lt;li>Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Whatever you can think of, feel free to submit PRs!&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div>
+ Screenshot of the GUI:
+ &lt;img src="./img/MMPGUIScreenshot.png">
+&lt;/div>
+&lt;/div></description></item><item><title>MVC Tip Calculator</title><link>https://ssebs.com/projects/mvctipcalc/</link><pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate><guid>https://ssebs.com/projects/mvctipcalc/</guid><description>Github Repo
+Simple Model View Controller Fyne project that doubles as a tip calculator.</description></item><item><title>Simpleshare</title><link>https://ssebs.com/projects/simpleshare/</link><pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate><guid>https://ssebs.com/projects/simpleshare/</guid><description>Github Repo
+A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application.</description></item><item><title>CSV Editor</title><link>https://ssebs.com/projects/csveditor/</link><pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate><guid>https://ssebs.com/projects/csveditor/</guid><description>Github Repo
+A lightweight GUI csv editor written in python.</description></item><item><title>Learning the MVC pattern by making a Tip Calculator</title><link>https://ssebs.com/blog/mvctipcalc/</link><pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate><guid>https://ssebs.com/blog/mvctipcalc/</guid><description>Also see the project page and the Github Repo</description></item><item><title>3D printing and coding my Mini Macro Pad</title><link>https://ssebs.com/blog/minimacropad/</link><pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate><guid>https://ssebs.com/blog/minimacropad/</guid><description>Read the technical details on the project page
+What&amp;rsquo;s a Macro Pad?</description></item></channel></rss>

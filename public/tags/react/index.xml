@@ -1,33 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>React on ssebs | Sebastian Safari</title>
-    <link>http://localhost:1313/tags/react/</link>
-    <description>Recent content in React on ssebs | Sebastian Safari</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jul 2024 22:03:20 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tipr</title>
-      <link>http://localhost:1313/projects/tipr/</link>
-      <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
-      <guid>http://localhost:1313/projects/tipr/</guid>
-      <description>Github Repo&#xA;A tip calculator that shows the tip amount and the total amount.</description>
-    </item>
-    <item>
-      <title>PeopleDB</title>
-      <link>http://localhost:1313/projects/peopledb/</link>
-      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
-      <guid>http://localhost:1313/projects/peopledb/</guid>
-      <description>Github Repo&#xA;Person Database using python, flask, sqlite3, react.&#xA;Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description>
-    </item>
-    <item>
-      <title>My Website</title>
-      <link>http://localhost:1313/projects/ssebs-www/</link>
-      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
-      <guid>http://localhost:1313/projects/ssebs-www/</guid>
-      <description>Github Repo&#xA;ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills.</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>React on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/react/</link><description>Recent content in React on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Jul 2024 22:03:20 -0700</lastBuildDate><atom:link href="https://ssebs.com/tags/react/index.xml" rel="self" type="application/rss+xml"/><item><title>Tipr</title><link>https://ssebs.com/projects/tipr/</link><pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate><guid>https://ssebs.com/projects/tipr/</guid><description>Github Repo
+A tip calculator that shows the tip amount and the total amount.</description></item><item><title>PeopleDB</title><link>https://ssebs.com/projects/peopledb/</link><pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate><guid>https://ssebs.com/projects/peopledb/</guid><description>Github Repo
+Person Database using python, flask, sqlite3, react.
+Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description></item><item><title>My Website</title><link>https://ssebs.com/projects/ssebs-www/</link><pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate><guid>https://ssebs.com/projects/ssebs-www/</guid><description>Github Repo
+ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills.</description></item></channel></rss>
