@@ -6,8 +6,15 @@
     <description>Recent content in My Blog on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Dec 2024 21:11:16 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2024 14:00:00 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title>
+      <link>http://localhost:1313/blog/mmpguieditor/</link>
+      <pubDate>Fri, 27 Dec 2024 14:00:00 -0800</pubDate>
+      <guid>http://localhost:1313/blog/mmpguieditor/</guid>
+      <description>PLAN FOR BELOW Read Mini Macro Pad before this one &amp;ldquo;This is part 2 of my MMP project&amp;rdquo; What&amp;rsquo;s wrong with v1 / story Solution idea Expanding GUI in fyne Fun with DnD Having issues with state / GUI not syncing Realize I need to organize / structure my code better I find it best to learn by doing, so to learn MVC I need to implement it myself.</description>
+    </item>
     <item>
       <title>3D Printing my Business Card</title>
       <link>http://localhost:1313/blog/bizcard/</link>
@@ -18,7 +25,7 @@
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>
       <link>http://localhost:1313/blog/mvctipcalc/</link>
-      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
+      <pubDate>Wed, 11 Dec 2024 20:45:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/mvctipcalc/</guid>
       <description>Also see the project page and the Github Repo</description>
     </item>

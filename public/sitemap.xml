@@ -35,11 +35,14 @@
     <loc>http://localhost:1313/projects/tipr/</loc>
     <lastmod>2024-07-24T21:53:44-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/mmpguieditor/</loc>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/bizcard/</loc>
     <lastmod>2024-12-26T21:11:16-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/mvctipcalc/</loc>
-    <lastmod>2024-12-10T20:45:41-08:00</lastmod>
+    <lastmod>2024-12-11T20:45:41-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/minimacropad/</loc>
     <lastmod>2024-12-10T18:45:41-08:00</lastmod>
@@ -75,22 +78,22 @@
     <lastmod>2024-07-07T15:32:42-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/3d-printing/</loc>
-    <lastmod>2024-12-26T21:11:16-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-12-26T21:11:16-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/golang/</loc>
-    <lastmod>2024-12-10T20:45:41-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/gui/</loc>
-    <lastmod>2024-12-10T20:45:41-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
-    <lastmod>2024-12-10T20:45:41-08:00</lastmod>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/arduino/</loc>
-    <lastmod>2024-12-10T18:45:41-08:00</lastmod>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/golang/</loc>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gui/</loc>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/programming/</loc>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-12-27T14:00:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-12-10T18:45:41-08:00</lastmod>

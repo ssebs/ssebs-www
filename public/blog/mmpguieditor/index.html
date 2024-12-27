@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <base href="/" /><title> From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop </title>
+  <base href="/" /><title> How I Improved my Macro Pad with a Drag-and-Drop Config Editor </title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
 
@@ -80,17 +80,17 @@
                     </li>
                     
                     <li>
-                        <a href="/contact/" title="Contact me"
+                        <a href="/blog/" title="My Blog"
                             class="md:hover:text-quaternary text-gray-200 block ">
-                            <span>Contact
+                            <span>Blog
                             </span>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="/blog/" title="Seb&#39;s Blog"
+                        <a href="/contact/" title="Contact me"
                             class="md:hover:text-quaternary text-gray-200 block ">
-                            <span>Blog
+                            <span>Contact
                             </span>
                         </a>
                     </li>
@@ -157,7 +157,7 @@
         <li class=""><a href="/blog/">Blog
         </a></li>
         <div class="mx-1" >&gt;</div>
-    <li class=""><a href="/blog/mmpguieditor/">From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop</a></li>
+    <li class=""><a href="/blog/mmpguieditor/">How I Improved my Macro Pad with a Drag-and-Drop Config Editor</a></li>
 </ul>
       
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -175,10 +175,13 @@
 
         <div class="grid py-3"><a href="./about"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
-                Learn more about me.
+                Who am I?
             </a><a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
             </a></div>
 
         <div class="flex justify-center flex-wrap gap-3 py-3">
@@ -233,7 +236,7 @@
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="grud">
-    <h1 class="text-2xl">From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop</h1>
+    <h1 class="text-2xl">How I Improved my Macro Pad with a Drag-and-Drop Config Editor</h1>
 
     <div class="flex flex-wrap gap-2 text-base h-fit">
       
@@ -307,9 +310,22 @@
 <div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
 <img class="w-full" src="./img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
+<div style="clear: both;"></div>
+<h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
+<h2 id="fun-with-dnd">Fun with DnD</h2>
+<h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
+<h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
+<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
+<h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
+<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
+<h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
+<h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
+<ul>
+<li>See github issues</li>
+</ul>
 <p><strong>Thanks for reading!</strong></p>
 <p><strong>CRAP TO COPY BELOW</strong></p>
-<h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
+<h2 id="expanding-gui-in-fyne-1">Expanding GUI in fyne</h2>
 <p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
 <p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, but that&rsquo;s not really what it&rsquo;s <em>made</em> for. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
 <p>The main problem I ran into when working with <a href="https://fyne.io/" target="_blank">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
@@ -346,16 +362,16 @@
 </blockquote>
 <p>To be clear, I have no hate for fyne at all. I feel like I&rsquo;ve learned a ton about different ways to manage user interfaces, and I&rsquo;m glad that the project exists. I do think the documentation can be improved, but I could be the one contributing that <code>;)</code></p>
 <div style="clear: both;"></div>
-<h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
+<h2 id="having-issues-with-state--gui-not-syncing-1">Having issues with state / GUI not syncing</h2>
 <p>I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions.</p>
 <p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save, nothing was updated. When I looked at the config file, it was updated but the UI and the Macros themselves weren&rsquo;t.</p>
 <p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
 <p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
 <p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state" target="_blank">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
 <p>The GUI library I&rsquo;m using, <a href="https://fyne.io" target="_blank">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
-<h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
-<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
-<h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
+<h2 id="realize-i-need-to-organize--structure-my-code-better-1">Realize I need to organize / structure my code better</h2>
+<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself-1">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
+<h2 id="link-to-mvc-tip-calc-1">Link to MVC Tip Calc</h2>
 <h2 id="fun-with-drag-and-drop">Fun with Drag and Drop</h2>
 <p>One cool thing I added was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them. I wanted to be able to move the order of some Actions in a Macro</p>
 <p>The way I achieved this was by implementing the <code>Draggable</code> interface in my <strong>Views</strong>. To do that, you need to create 2 functions: <code>Dragged(e *fyne.DragEvent)</code> and <code>DragEnd()</code>.</p>
@@ -363,9 +379,9 @@
 <p>The <code>DragEnd()</code> function just lets me know when the drag is over, so I can run <code>SwapMacros()</code> to actually do the swap on the <strong>Model</strong>.</p>
 <p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go" target="_blank">check out the code</a> for more about that.</p>
 <p>I&rsquo;m also glossing over the refactoring that I did, since that&rsquo;s pretty boring. tl;dr - I reorganized my code and cleaned it all up.</p>
-<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
-<h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
-<h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
+<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp-1">Using what I learned from my tip calc to implement MVC for my MMP</h2>
+<h2 id="v2-released--whats-new-with-the-release-1">v2 released / what&rsquo;s new with the release</h2>
+<h2 id="whats-next-for-v3-1">What&rsquo;s next for v3?</h2>
 <h2 id="see-github-issues">See github issues</h2>
 <hr>
 <h2 id="running-macros-when-you-press-a-button">Running Macros when you press a button</h2>
@@ -480,7 +496,7 @@ Click on the name to change what they do.
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
     data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
-      data-page-id="90fb84a46478557481fd844df69b9ee8" data-page-url="http://localhost:1313/blog/mmpguieditor/" data-page-title="From YAML to WYSIWYG - How I Improved My Macro Pad with MVC and Drag-and-Drop"
+      data-page-id="90fb84a46478557481fd844df69b9ee8" data-page-url="http://localhost:1313/blog/mmpguieditor/" data-page-title="How I Improved my Macro Pad with a Drag-and-Drop Config Editor"
       data-theme="dark">
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
@@ -521,13 +537,13 @@ Click on the name to change what they do.
                             </a>
                         </li>
                         <li class=''>
-                            <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary">Let's Connect.
+                            <a href="/blog/" title="My Blog"
+                                class="text-quinary hover:text-quaternary">See what I've been up to in my blog.
                             </a>
                         </li>
                         <li class=''>
-                            <a href="/blog/" title="Seb&#39;s Blog"
-                                class="text-quinary hover:text-quaternary">See what I've been up to.
+                            <a href="/contact/" title="Contact me"
+                                class="text-quinary hover:text-quaternary">Let's Connect.
                             </a>
                         </li>
                     </ul>
