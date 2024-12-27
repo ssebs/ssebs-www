@@ -4,28 +4,18 @@
 https://ssebs.com website code. 
 
 ## TODO:
-- [x] Fix iOS version (stretched img)
-- [x] Remove "me" from navbar
-- [x] Add more details to one project at the bottom
 - [ ] CDN Assets (resume, images) for faster loading
 - [ ] Soon™️:
   - [ ] Sort tags on projects
   - [ ] Move all images to projects folder
-  - [ ] Contact form - Supabase backend
-  - [ ] Add another section to home page? Or add more stuff
-  - [ ] Add tags to each project and allow search by tags (show tags on page + clickable)
-    - [ ] Tag search + Search Results page
-  - [ ] Add blog
-    - [ ] e.g. things I learned or tech stuff I can share that's not a project (e.g. Hugo quick start + explain theme)
+  - [ ] Contact form - REST/go backend
+  - [ ] Tag search + Search Results page
 - Finishing touches:
   - [ ] Dark/light mode https://tailwindcss.com/docs/dark-mode
-  - [x] CI/CD Github Actions to build
-    - Also do ssebs.github.io?
   - [ ] Animations
     - [ ] animations on hover (menu, logo, header)
   - [ ] scroll animation on mobile
     - text/content covers up sidebar, sidebar covers up img. (parallax)
-- [ ] REPLACE Current (2024) img for ssebs-www project page
 - [ ] mini game Easter egg like Chrome dino
 
 ## Design
