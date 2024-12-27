@@ -4,7 +4,7 @@ slug: minimacropad
 shortdesc: The journey of making my Mini Macro Pad was created and the challenges I faced along the way.
 feature: ./img/MMPPrinted.jpg
 date: 2024-12-10T18:45:41-08:00
-weight: 24
+weight: 25
 tags: [golang, programming, 3d-printing, arduino, gui, python]
 ---
 > Read the technical details on the [project page](/projects/go-mmp)

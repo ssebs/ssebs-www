@@ -1,57 +1,131 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/programming/</link><description>Recent content in Programming on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate><atom:link href="https://ssebs.com/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini Macro Pad</title><link>https://ssebs.com/projects/go-mmp/</link><pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate><guid>https://ssebs.com/projects/go-mmp/</guid><description>&lt;blockquote>
-&lt;p>Read how I &lt;a href="https://ssebs.com/blog/minimacropad/">made the macro pad&lt;/a>.&lt;/p>
-&lt;/blockquote>
-&lt;!-- > Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). -->
-&lt;p>&lt;a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo&lt;/a>&lt;/p>
-&lt;div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
-&lt;div>
-&lt;p>&lt;strong>Mini Macro Pad (go-mmp)&lt;/strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p>
-&lt;p>It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p>
-&lt;div style="min-height: 1rem;">
-&lt;/div>
-&lt;h3 id="what-kind-of-macros-can-you-make">What kind of macros can you make?&lt;/h3>
-&lt;ul>
-&lt;li>Shortcuts:
-&lt;ul>
-&lt;li>CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
-&lt;ul>
-&lt;li>You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Macros:
-&lt;ul>
-&lt;li>Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Repeat keypresses (or mouse button presses)
-&lt;ul>
-&lt;li>Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Whatever you can think of, feel free to submit PRs!&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;div>
- Screenshot of the GUI:
- &lt;img src="./img/MMPGUIScreenshot.png">
-&lt;/div>
-&lt;/div></description></item><item><title>MVC Tip Calculator</title><link>https://ssebs.com/projects/mvctipcalc/</link><pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate><guid>https://ssebs.com/projects/mvctipcalc/</guid><description>Github Repo
-Simple Model View Controller Fyne project that doubles as a tip calculator.</description></item><item><title>Images to PDF</title><link>https://ssebs.com/projects/img-2-pdf/</link><pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate><guid>https://ssebs.com/projects/img-2-pdf/</guid><description>Github Repo
-Convert a selection of images files into a single PDF.</description></item><item><title>Simpleshare</title><link>https://ssebs.com/projects/simpleshare/</link><pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate><guid>https://ssebs.com/projects/simpleshare/</guid><description>Github Repo
-A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application.</description></item><item><title>Perishable Punchers</title><link>https://ssebs.com/projects/perishable-punchers/</link><pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate><guid>https://ssebs.com/projects/perishable-punchers/</guid><description>Github Repo.
-Mortal Kombat like Game written in Java, back in highschool.</description></item><item><title>CSV Editor</title><link>https://ssebs.com/projects/csveditor/</link><pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate><guid>https://ssebs.com/projects/csveditor/</guid><description>Github Repo
-A lightweight GUI csv editor written in python.</description></item><item><title>Learning the MVC pattern by making a Tip Calculator</title><link>https://ssebs.com/blog/mvctipcalc/</link><pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate><guid>https://ssebs.com/blog/mvctipcalc/</guid><description>Also see the project page and the Github Repo</description></item><item><title>3D printing and coding my Mini Macro Pad</title><link>https://ssebs.com/blog/minimacropad/</link><pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate><guid>https://ssebs.com/blog/minimacropad/</guid><description>Read the technical details on the project page
-What&amp;rsquo;s a Macro Pad?</description></item><item><title>Tipr</title><link>https://ssebs.com/projects/tipr/</link><pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate><guid>https://ssebs.com/projects/tipr/</guid><description>Github Repo
-A tip calculator that shows the tip amount and the total amount.</description></item><item><title>nccsv</title><link>https://ssebs.com/projects/nccsv/</link><pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate><guid>https://ssebs.com/projects/nccsv/</guid><description>Github Repo
-Ncurses CSV Editor written in Python
-TODO: Architecture Wireframes Home / Menu File selector Open Close Editor Layout Grid Entry Multiple views Home / Menu File selector Editor Custom widgets Layout Grid Entry (text editor with box) Scroll down / right [.</description></item><item><title>PeopleDB</title><link>https://ssebs.com/projects/peopledb/</link><pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate><guid>https://ssebs.com/projects/peopledb/</guid><description>Github Repo
-Person Database using python, flask, sqlite3, react.
-Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description></item><item><title>ServerClip</title><link>https://ssebs.com/projects/serverclip/</link><pubDate>Wed, 24 Jul 2024 21:44:53 -0700</pubDate><guid>https://ssebs.com/projects/serverclip/</guid><description>Github Repo
-Tool for copying contents of a file over nested ssh connections.</description></item><item><title>A Platformer of Some Sort</title><link>https://ssebs.com/projects/a-platformer-of-some-sort/</link><pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate><guid>https://ssebs.com/projects/a-platformer-of-some-sort/</guid><description>Github Repo
-A Platformer of Some Sort was my first long-term project.</description></item><item><title>Breakout Pong</title><link>https://ssebs.com/projects/breakout-pong/</link><pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate><guid>https://ssebs.com/projects/breakout-pong/</guid><description>Github Repo
-Welcome to the start of it all: Breakout-Pong. This was the very first game I made.</description></item><item><title>Clean Mac Address</title><link>https://ssebs.com/projects/clean-mac-address/</link><pubDate>Wed, 24 Jul 2024 22:03:09 -0700</pubDate><guid>https://ssebs.com/projects/clean-mac-address/</guid><description>Github Repo
-Program to &amp;ldquo;clean&amp;rdquo; MAC address for registrar input at PARC.</description></item><item><title>My Website</title><link>https://ssebs.com/projects/ssebs-www/</link><pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate><guid>https://ssebs.com/projects/ssebs-www/</guid><description>Github Repo
-ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills.</description></item><item><title>Sir Flap a Lot</title><link>https://ssebs.com/projects/sir-flap-a-lot/</link><pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate><guid>https://ssebs.com/projects/sir-flap-a-lot/</guid><description>Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/tags/programming/</link>
+    <description>Recent content in Programming on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mini Macro Pad</title>
+      <link>http://localhost:1313/projects/go-mmp/</link>
+      <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
+      <guid>http://localhost:1313/projects/go-mmp/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read how I &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;made the macro pad&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;!-- &gt; Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). --&gt;&#xD;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/go-mmp&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;display: grid; grid-template-columns: 60% 40%; gap: 1rem;&#34;&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Mini Macro Pad (go-mmp)&lt;/strong&gt; is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p&gt;&#xA;&lt;p&gt;It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p&gt;&#xA;&lt;div style=&#34;min-height: 1rem;&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;what-kind-of-macros-can-you-make&#34;&gt;What kind of macros can you make?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shortcuts:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href=&#34;https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys&#34; target=&#34;_blank&#34;&gt;in the list&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Macros:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Repeat keypresses (or mouse button presses)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whatever you can think of, feel free to submit PRs!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;  Screenshot of the GUI:&#xD;&#xA;  &lt;img src=&#34;./img/MMPGUIScreenshot.png&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>MVC Tip Calculator</title>
+      <link>http://localhost:1313/projects/mvctipcalc/</link>
+      <pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate>
+      <guid>http://localhost:1313/projects/mvctipcalc/</guid>
+      <description>Github Repo&#xA;Simple Model View Controller Fyne project that doubles as a tip calculator.</description>
+    </item>
+    <item>
+      <title>Images to PDF</title>
+      <link>http://localhost:1313/projects/img-2-pdf/</link>
+      <pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate>
+      <guid>http://localhost:1313/projects/img-2-pdf/</guid>
+      <description>Github Repo&#xA;Convert a selection of images files into a single PDF.</description>
+    </item>
+    <item>
+      <title>Simpleshare</title>
+      <link>http://localhost:1313/projects/simpleshare/</link>
+      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
+      <guid>http://localhost:1313/projects/simpleshare/</guid>
+      <description>Github Repo&#xA;A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application.</description>
+    </item>
+    <item>
+      <title>Perishable Punchers</title>
+      <link>http://localhost:1313/projects/perishable-punchers/</link>
+      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
+      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
+      <description>Github Repo.&#xA;Mortal Kombat like Game written in Java, back in highschool.</description>
+    </item>
+    <item>
+      <title>CSV Editor</title>
+      <link>http://localhost:1313/projects/csveditor/</link>
+      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
+      <guid>http://localhost:1313/projects/csveditor/</guid>
+      <description>Github Repo&#xA;A lightweight GUI csv editor written in python.</description>
+    </item>
+    <item>
+      <title>Tipr</title>
+      <link>http://localhost:1313/projects/tipr/</link>
+      <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
+      <guid>http://localhost:1313/projects/tipr/</guid>
+      <description>Github Repo&#xA;A tip calculator that shows the tip amount and the total amount.</description>
+    </item>
+    <item>
+      <title>Learning the MVC pattern by making a Tip Calculator</title>
+      <link>http://localhost:1313/blog/mvctipcalc/</link>
+      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/blog/mvctipcalc/</guid>
+      <description>Also see the project page and the Github Repo</description>
+    </item>
+    <item>
+      <title>3D printing and coding my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>Read the technical details on the project page&#xA;What&amp;rsquo;s a Macro Pad?</description>
+    </item>
+    <item>
+      <title>nccsv</title>
+      <link>http://localhost:1313/projects/nccsv/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
+      <guid>http://localhost:1313/projects/nccsv/</guid>
+      <description>Github Repo&#xA;Ncurses CSV Editor written in Python&#xA;TODO: Architecture Wireframes Home / Menu File selector Open Close Editor Layout Grid Entry Multiple views Home / Menu File selector Editor Custom widgets Layout Grid Entry (text editor with box) Scroll down / right [.</description>
+    </item>
+    <item>
+      <title>PeopleDB</title>
+      <link>http://localhost:1313/projects/peopledb/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/projects/peopledb/</guid>
+      <description>Github Repo&#xA;Person Database using python, flask, sqlite3, react.&#xA;Home / Search page Detailed info / modify/delete page Create new user page Installing Install deps from pkg manager Ubuntu: $ sudo apt install python3 python3-pip sqlite3 nodejs npm Arch: $ sudo pacman -S sqlite3 nodejs npm python3 python3-pip Install python pip pkgs $ sudo pip3 install flask flask-cors pysqlite3 Clone this repo $ git clone https://github.</description>
+    </item>
+    <item>
+      <title>ServerClip</title>
+      <link>http://localhost:1313/projects/serverclip/</link>
+      <pubDate>Wed, 24 Jul 2024 21:44:53 -0700</pubDate>
+      <guid>http://localhost:1313/projects/serverclip/</guid>
+      <description>Github Repo&#xA;Tool for copying contents of a file over nested ssh connections.</description>
+    </item>
+    <item>
+      <title>A Platformer of Some Sort</title>
+      <link>http://localhost:1313/projects/a-platformer-of-some-sort/</link>
+      <pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate>
+      <guid>http://localhost:1313/projects/a-platformer-of-some-sort/</guid>
+      <description>Github Repo&#xA;A Platformer of Some Sort was my first long-term project.</description>
+    </item>
+    <item>
+      <title>Breakout Pong</title>
+      <link>http://localhost:1313/projects/breakout-pong/</link>
+      <pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate>
+      <guid>http://localhost:1313/projects/breakout-pong/</guid>
+      <description>Github Repo&#xA;Welcome to the start of it all: Breakout-Pong. This was the very first game I made.</description>
+    </item>
+    <item>
+      <title>Clean Mac Address</title>
+      <link>http://localhost:1313/projects/clean-mac-address/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:09 -0700</pubDate>
+      <guid>http://localhost:1313/projects/clean-mac-address/</guid>
+      <description>Github Repo&#xA;Program to &amp;ldquo;clean&amp;rdquo; MAC address for registrar input at PARC.</description>
+    </item>
+    <item>
+      <title>My Website</title>
+      <link>http://localhost:1313/projects/ssebs-www/</link>
+      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
+      <guid>http://localhost:1313/projects/ssebs-www/</guid>
+      <description>Github Repo&#xA;ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills.</description>
+    </item>
+    <item>
+      <title>Sir Flap a Lot</title>
+      <link>http://localhost:1313/projects/sir-flap-a-lot/</link>
+      <pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate>
+      <guid>http://localhost:1313/projects/sir-flap-a-lot/</guid>
+      <description>Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store.</description>
+    </item>
+  </channel>
+</rss>

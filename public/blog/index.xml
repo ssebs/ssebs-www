@@ -1,2 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My Blog on ssebs | Sebastian Safari</title><link>https://ssebs.com/blog/</link><description>Recent content in My Blog on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate><atom:link href="https://ssebs.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Learning the MVC pattern by making a Tip Calculator</title><link>https://ssebs.com/blog/mvctipcalc/</link><pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate><guid>https://ssebs.com/blog/mvctipcalc/</guid><description>Also see the project page and the Github Repo</description></item><item><title>3D printing and coding my Mini Macro Pad</title><link>https://ssebs.com/blog/minimacropad/</link><pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate><guid>https://ssebs.com/blog/minimacropad/</guid><description>Read the technical details on the project page
-What&amp;rsquo;s a Macro Pad?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Blog on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in My Blog on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2024 21:11:16 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D Printing my Business Card</title>
+      <link>http://localhost:1313/blog/bizcard/</link>
+      <pubDate>Thu, 26 Dec 2024 21:11:16 -0800</pubDate>
+      <guid>http://localhost:1313/blog/bizcard/</guid>
+      <description>View the CAD Model on OnShape&#xA;Why? Why create a business card?</description>
+    </item>
+    <item>
+      <title>Learning the MVC pattern by making a Tip Calculator</title>
+      <link>http://localhost:1313/blog/mvctipcalc/</link>
+      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/blog/mvctipcalc/</guid>
+      <description>Also see the project page and the Github Repo</description>
+    </item>
+    <item>
+      <title>3D printing and coding my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>Read the technical details on the project page&#xA;What&amp;rsquo;s a Macro Pad?</description>
+    </item>
+  </channel>
+</rss>

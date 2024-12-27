@@ -4,7 +4,7 @@ slug: mvctipcalc
 shortdesc: Learning the MVC pattern for my MiniMacroPad by making a Tip Calculator in Go.
 feature: ./img/MVCTipCalc.png
 date: 2024-12-10T20:45:41-08:00
-weight: 24
+weight: 25
 tags: [golang, programming, gui]
 ---
 > Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)

@@ -1,1 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/</link><description>Recent content in Tags on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate><atom:link href="https://ssebs.com/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Golang</title><link>https://ssebs.com/tags/golang/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/golang/</guid><description/></item><item><title>Gui</title><link>https://ssebs.com/tags/gui/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/gui/</guid><description/></item><item><title>Programming</title><link>https://ssebs.com/tags/programming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/programming/</guid><description/></item><item><title>3d-Printing</title><link>https://ssebs.com/tags/3d-printing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/3d-printing/</guid><description/></item><item><title>Arduino</title><link>https://ssebs.com/tags/arduino/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/arduino/</guid><description/></item><item><title>Python</title><link>https://ssebs.com/tags/python/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/python/</guid><description/></item><item><title>Tui</title><link>https://ssebs.com/tags/tui/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/tui/</guid><description/></item><item><title>Flask</title><link>https://ssebs.com/tags/flask/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/flask/</guid><description/></item><item><title>Js</title><link>https://ssebs.com/tags/js/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/js/</guid><description/></item><item><title>React</title><link>https://ssebs.com/tags/react/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/react/</guid><description/></item><item><title>Webdev</title><link>https://ssebs.com/tags/webdev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/webdev/</guid><description/></item><item><title>Cars</title><link>https://ssebs.com/tags/cars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/cars/</guid><description/></item><item><title>Gamedev</title><link>https://ssebs.com/tags/gamedev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/gamedev/</guid><description/></item><item><title>Java</title><link>https://ssebs.com/tags/java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/java/</guid><description/></item><item><title>Hugo</title><link>https://ssebs.com/tags/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ssebs.com/tags/hugo/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2024 20:45:41 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang</title>
+      <link>http://localhost:1313/tags/golang/</link>
+      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gui</title>
+      <link>http://localhost:1313/tags/gui/</link>
+      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/gui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Tue, 10 Dec 2024 20:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>3d-Printing</title>
+      <link>http://localhost:1313/tags/3d-printing/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/3d-printing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arduino</title>
+      <link>http://localhost:1313/tags/arduino/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/arduino/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tui</title>
+      <link>http://localhost:1313/tags/tui/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
+      <guid>http://localhost:1313/tags/tui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flask</title>
+      <link>http://localhost:1313/tags/flask/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/tags/flask/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>http://localhost:1313/tags/js/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdev</title>
+      <link>http://localhost:1313/tags/webdev/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
+      <guid>http://localhost:1313/tags/webdev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cars</title>
+      <link>http://localhost:1313/tags/cars/</link>
+      <pubDate>Wed, 24 Jul 2024 21:20:49 -0700</pubDate>
+      <guid>http://localhost:1313/tags/cars/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gamedev</title>
+      <link>http://localhost:1313/tags/gamedev/</link>
+      <pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate>
+      <guid>http://localhost:1313/tags/gamedev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
