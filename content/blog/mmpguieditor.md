@@ -11,10 +11,10 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 
 This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and programmed that.
 
-## What's wrong with it? Why fix something that isn't broken?
+## What's wrong with it? 
 <img class="custom-float-right" src="/img/MMPPrinted.jpg" alt="macro pad" width="300px">
 
-I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a **problem**.
+I was happy to have a working Macro Pad and used it for about a year with only a few tweaks to the code. However, there was a **problem**.
 
 If you wanted to change any of the Macros, you had to open up a code editor and edit a `.yaml` file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.
 
@@ -26,14 +26,14 @@ So it was decided - I had to make a GUI config editor. I wanted to make an inter
 
 <div style="clear: both;"></div>
 
-## Features I wanted
+## The Features I Wanted
 The main things I wanted to make easier were:
 - Changing what the Macros did when you pressed a button (updating the Actions for a Macro)
-- Moving the position of Macros on the device using Drag-and-Drop (to place the buttons properly)
+- Moving the position of Macros using Drag-and-Drop (to place the buttons properly)
 - Changing Metadata (like # of columns, and serial connection info)
 
-## Getting started
-I started by designing a quick UI in Excalidraw so I could plan the layout.
+## The Editor's Design
+I started by designing a basic UI in Excalidraw so I could plan the layout.
 
 <div class="flex">
 <div>Config editor view where you can drag and drop your Macros.</div>
@@ -44,12 +44,12 @@ I started by designing a quick UI in Excalidraw so I could plan the layout.
 
 <div style="clear: both;"></div>
 
-## Expanding GUI in fyne
-My existing `v1` code was pretty messy, my `gui.go` file was massive, it was getting hard to read, and I knew I needed to refactor it soon. I figured this could wait, at least until I had a basic config editor working.
+## Expanding my old GUI Code
+My existing `v1` code was pretty messy: my `gui.go` file was massive, it was getting hard to read, and I knew I needed to refactor it soon. I figured this could wait, at least until I had a basic config editor working.
 
 So, I created a new `test.go` file, and got to work building my GUI to match my diagrams. I was able to get a Grid of Macros like before, with a Delete and Edit button at the bottom. 
 
-To start, I just created a new window each time I needed to edit a particular part of the Config.
+For simplicity, I created a new window each time I needed to edit a particular section of the Config. 
 
 You'd start with a normal running Mini Macro Pad window, then click **Edit** => **Edit Config**. 
 
@@ -58,46 +58,46 @@ From there, you could Drag-and-Drop the Macros around, and click **Edit** to ope
 <img class="w-full" src="/img/mmpnewwindows.png" >
 
 ## Fun with Drag-and-Drop
-One thing that took me more time than I expected was getting the Drag-and-Drop to work properly. It turns out, a [fyne widget](https://docs.fyne.io/explore/widgets) can implement the [Draggable interface](https://docs.fyne.io/api/v2.1/draggable.html). However, the documentation for this was auto-generated from the source code, and did not have any working examples that I could use to learn from.
+One of the challenges that I faced was getting the Drag-and-Drop to work properly. I discovered that a [fyne widget](https://docs.fyne.io/explore/widgets) can implement the [Draggable interface](https://docs.fyne.io/api/v2.1/draggable.html). However, the documentation for this feature was auto-generated from the source code and lacked practical examples, making it harder to learn from.
+
+Luckily, I could use VSCode's **Go to Definition (F12)** function to see what a `*DragEvent` even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.
 
 Here's a screenshot of the doc:
 <img class="w-full" src="/img/fyne-draggable-api.png" >
 
-Luckily, I could use VSCode's **Go to Definition (F12)** function to see what a `*DragEvent` even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.
+The `Dragged()` method is called every time the mouse moves while holding down the left mouse button (LMB), and the `DragEnd()` method is called when you release it.
 
-The `Dragged()` method gets called every time your mouse moves while holding down LMB, and `DragEnd()` gets called once you let go.
+Once I have the mouse position, I can determine which Macro GUI component is being clicked. I check the (X, Y) coordinates of each Macro, along with its width and height, to see if the mouse is within its bounds. If it is, I store the index of the dragged Macro in a `draggedIdx` variable and move the Macro to the mouse position every frame.
 
-Once I had the position of the mouse, I could calculate which Macro GUI component I was clicking over. I'd check the (X,Y) coordinates of each Macro + the width/height and see if your mouse was inside. If it was, I'd save which Macro that was in a `draggedIdx` variable, and move the Macro to where the mouse is positioned every frame.
+Since this calculation is computationally expensive, it only runs the first time you start dragging something.
 
-> This calculation is "expensive", so I only run it the first time you start dragging something.
+When you release the mouse, I perform another check to see if you released it over a different Macro in the grid.
+- If so, the positions of the two Macros are swapped.
+- If not, the Macro returns to its original position.
 
-Then, when you let go, another calculation is made to see if you let go over another Macro in the grid. 
-- If so, the positions of the two Macros would swap
-- If not, it would reset back to where it came from
-
-> Interested in the implementation? Check out the [widget\'s code](https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go)!
+> Interested in the implementation? Check out the Drag and Drop [widget code](https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go)!
 
 ## Having issues with data not syncing
-Aside from the annoyance of opening too many windows, I was able to get everything *visibly* working. The problem was when I hit save, nothing was updated. When I looked at the `.yaml` config file, it was updated, but none of the other UI components were.
+Aside from the annoyance of opening too many windows, I was able to get everything *visibly* working. The problem was when I hit save - nothing was updated. When I looked at the `.yaml` config file, it was updated, but none of the other UI components were.
 
-For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
+For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, while the other would show the new one.
 
-The GUI library I'm using ([fyne.io](https://fyne.io)) is "pattern agnostic", meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
+The GUI library I'm using ([fyne.io](https://fyne.io)) is "pattern agnostic", meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*. You can even manage everything in a single file, as I was doing before.
 
 ## Realizing that it's time for a refactor
 <img class="custom-float-right" src="/img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
 
-I knew that technical debt from `gui.go` was going to catch up to me, and at this point, it was getting hard to follow what was going on in the code I just wrote. 
+I knew the technical debt from `gui.go` was catching up to me, and I was finding it hard to follow the code I had just written.
 
 > So much spaghetti, so little time.
 
-I realized that I needed to really think about how I want to structure my code before I start writing it. Not only did I want to get the data sync working, but I wanted to know the "best practice" way of writing it. 
+It became clear that I needed to rethink how to structure my code before writing more. My goal wasn’t just to get the data sync working; I also wanted to adopt best practices for how to write the code.
 
-From what I've found, the easiest to use is Model-View-Controller. Model-View-Controller is a software architecture pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow. 
+From my research, I found that the Model-View-Controller (MVC) pattern is the easiest to implement. MVC creates a separation of concerns, meaning each file in my codebase would have a single responsibility and a clear structure to follow.
 
-You can compare this to having a single file that manages what the GUI looks like, what happens when you press a button, and also saving your changes. (aka what I was doing now.)
+This is a significant shift from having a single file managing everything—what the GUI looks like, the actions triggered by button presses, and saving changes (which is how I had been doing it).
 
-So, I had to learn MVC.
+So, I needed to learn MVC.
 
 <div style="clear: both"></div>
 
