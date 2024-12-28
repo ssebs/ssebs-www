@@ -1,7 +1,7 @@
 ---
 title: How I Improved my Macro Pad with a Drag-and-Drop Config Editor
 slug: mmpguieditor
-shortdesc: Read how I upgraded my Macro Pad with a WYSIWYG config editor, drag-and-drop functionality, and MVC to improve code structure and state management.
+shortdesc: I upgraded my Macro Pad with a WYSIWYG editor, drag-and-drop functionality, and MVC.
 feature: ./img/ConfigEditor.png
 date: 2024-12-27T14:00:00-08:00
 weight: 25
@@ -77,28 +77,154 @@ Then, when you let go, another calculation is made to see if you let go over ano
 
 > Interested in the implementation? Check out the [widget\'s code](https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go)!
 
-## Having issues with state / GUI not syncing
-I was able to get everything *visibly* working, but when you'd save your changes only the `.yaml` file itself would update. None of the other components would update. 
+## Having issues with data not syncing
+Aside from the annoyance of opening too many windows, I was able to get everything *visibly* working. The problem was when I hit save, nothing was updated. When I looked at the `.yaml` config file, it was updated, but none of the other UI components were.
 
 For example, when I'd update the name of a `Macro` in a new editor window, it wouldn't sync to the regular window. One window would show the old value, and the other the new.
 
+The GUI library I'm using ([fyne.io](https://fyne.io)) is "pattern agnostic", meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
 
+## Realizing that it's time for a refactor
+<img class="custom-float-right" src="./img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
 
-### Realize I need to organize / structure my code better
-Once I was at this point, it was getting hard to follow what was going on in my own code I just wrote. 
+I knew that technical debt from `gui.go` was going to catch up to me, and at this point, it was getting hard to follow what was going on in the code I just wrote. 
 
-<img src="./img/whowrotethiscode.jpg" width="256px" alt="Obi Wan meme">
+> So much spaghetti, so little time.
 
-### I find it best to learn by doing, so to learn MVC I need to implement it myself.
-- Link to MVC Tip Calc
+I realized that I needed to really think about how I want to structure my code before I start writing it. Not only did I want to get the data sync working, but I wanted to know the "best practice" way of writing it. 
 
+From what I've found, the easiest to use is Model-View-Controller. Model-View-Controller is a software architecture pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow. 
 
+You can compare this to having a single file that manages what the GUI looks like, what happens when you press a button, and also saving your changes. (aka what I was doing now.)
 
-## Using what I learned from my tip calc to implement MVC for my MMP
+So, I had to learn MVC.
 
-## v2 released / what's new with the release
+<div style="clear: both"></div>
+
+## Learning MVC
+I find it best to learn by doing, so to learn MVC I need to implement it myself. Just reading some docs or watching a Youtube video is great to get the gist of a concept, but I won't truly **grok** it until I've used it.
+
+I've written a [blog post](./blog/mvctipcalc) about my journey in learning MVC by creating a tip calculator! Please check it out to read more, but to summarize:
+- The **Model** is where the data lives. 
+  - e.g. The bill amount and the percent you'd like to tip.
+- The **View** is what the user will see (the actual form). 
+  - The **View** should not actually update the **Model** when changes happen. Instead, it will have get/set functions that are managed by the **Controller**.
+- The **Controller** is the bridge between the **Model** and the **View**. 
+  - It will listen for events from the **View**, and will update the **Model**.
+
+## Applying MVC to my Mini Macro Pad
+Once I learned about MVC, I split up my widgets into 3 files starting with the smallest piece of the UI, the Action editor, and got to work.
+
+I thought I'd finish up in a few weeks or so, but I kept finding more work to do. (You know how it goes.)
+
+Here's a (relatively) tiny snippet of the [larger code base](https://github.com/ssebs/go-mmp):
+
+```golang
+// Model
+type Action struct {
+	FuncName  string `yaml:"FuncName"`
+	FuncParam string `yaml:"FuncParam"`
+}
+
+// View
+type ActionItemEditorView struct {
+	widget.BaseWidget
+	funcSelect     *widget.Select
+	funcParamEntry *widget.Entry
+}
+func (v *ActionItemEditorView) SetAction(a *models.Action) {
+	v.funcParamEntry.SetText(a.FuncParam)
+	v.funcParamEntry.Refresh()
+
+	v.funcSelect.SetSelected(a.FuncName)
+	v.funcSelect.Refresh()
+}
+func (v *ActionItemEditorView) SetOnFuncNameChanged(f func(string)) {
+	v.funcSelect.OnChanged = f
+}
+
+// Controller
+func NewActionController(a *models.Action, v *views.ActionItemEditorView) *ActionController {
+	ac := &ActionController{
+		Action:               a,
+		ActionItemEditorView: v,
+	}
+	ac.ActionItemEditorView.SetOnFuncNameChanged(func(s string) {
+		ac.Action.FuncName = s
+	})
+  ac.ActionItemEditorView.SetOnFuncParamChanged(func(s string) {
+		ac.Action.FuncParam = s
+	})
+  ac.UpdateActionView()
+  return ac
+}
+func (ac *ActionController) UpdateActionView() {
+	ac.ActionItemEditorView.SetAction(ac.Action)
+}
+```
+
+{{< spacer 1rem >}}
+
+Same MVC concept as my [tip calculator](/projects/mvctipcalc/), but with one MVC per widget. 
+
+## The finished Config Editor (v2 released)
+I continued working on the project it was fully functional, overall it took about 2 months to complete the `v2` release.
+
+### Here's what the new GUI Config Editor looks like:
+
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+
+Just go to **Edit** > **Edit Config**, and drag-and-drop your macros into the correct positions
+
+<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+
+</div>
+<div>
+Click on the name to change what they do.
+
+Here's the "**gg**" Macro for example:
+
+<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+
+</div>
+</div>
+
+### Before / After
+Here's what it took before to make changes to the config:
+
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/yw_C6MvAJ_s?si=ePGe-XeHRZP5ERPA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+{{< spacer 1rem >}}
+
+...and after:
+
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> 
+
+{{< spacer 1rem >}}
+
+Hopefully, you can see that it's much easier to make changes, and I'm happy with all that I've learned in doing this.
+
+## Final tweak
+One last thing - After using my new editor, I noticed that the Drag-and-Drop functionality was annoying to use. 
+
+Specifically, when adding a new Action, it gets added to the bottom of the list. If you wanted to move this to the 2nd position, you can't just insert it in position 2. Instead, you had to swap each item below pos 2 and make your way up. 
+
+This has been resolved in [v2.0.1](https://github.com/ssebs/go-mmp/releases/tag/v2.0.1), and the before & after can be found there.
 
 ## What's next for v3?
-- See github issues
+I've made lots of progress in `v2`, so what's left for `v3`? There couldn't be more stuff, right? It's done, *right*? *Right*?
+
+Well, I'd want at least these features:
+- Support using a Mouse + position in a Macro. (So you can click somewhere specific)
+- Make it possible to Record a Macro, rather than just use the editor to make one.
+- Make it possible to run a program / script from a keypress.
+- Make a first time setup window
+
+...there's more, but you can see the rest on the [Github Issues page](https://github.com/ssebs/go-mmp/issues).
 
 **Thanks for reading!**

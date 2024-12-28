@@ -311,22 +311,131 @@
 <blockquote>
 <p>Interested in the implementation? Check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go" target="_blank">widget&#39;s code</a>!</p>
 </blockquote>
-<h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
-<p>I was able to get everything <em>visibly</em> working, but when you&rsquo;d save your changes only the <code>.yaml</code> file itself would update. None of the other components would update.</p>
+<h2 id="having-issues-with-data-not-syncing">Having issues with data not syncing</h2>
+<p>Aside from the annoyance of opening too many windows, I was able to get everything <em>visibly</em> working. The problem was when I hit save, nothing was updated. When I looked at the <code>.yaml</code> config file, it was updated, but none of the other UI components were.</p>
 <p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
-<h3 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h3>
-<p>Once I was at this point, it was getting hard to follow what was going on in my own code I just wrote.</p>
-<img src="./img/whowrotethiscode.jpg" width="256px" alt="Obi Wan meme">
-<h3 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h3>
+<p>The GUI library I&rsquo;m using (<a href="https://fyne.io" target="_blank">fyne.io</a>) is &ldquo;pattern agnostic&rdquo;, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
+<h2 id="realizing-that-its-time-for-a-refactor">Realizing that it&rsquo;s time for a refactor</h2>
+<img class="custom-float-right" src="./img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
+<p>I knew that technical debt from <code>gui.go</code> was going to catch up to me, and at this point, it was getting hard to follow what was going on in the code I just wrote.</p>
+<blockquote>
+<p>So much spaghetti, so little time.</p>
+</blockquote>
+<p>I realized that I needed to really think about how I want to structure my code before I start writing it. Not only did I want to get the data sync working, but I wanted to know the &ldquo;best practice&rdquo; way of writing it.</p>
+<p>From what I&rsquo;ve found, the easiest to use is Model-View-Controller. Model-View-Controller is a software architecture pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.</p>
+<p>You can compare this to having a single file that manages what the GUI looks like, what happens when you press a button, and also saving your changes. (aka what I was doing now.)</p>
+<p>So, I had to learn MVC.</p>
+<div style="clear: both"></div>
+<h2 id="learning-mvc">Learning MVC</h2>
+<p>I find it best to learn by doing, so to learn MVC I need to implement it myself. Just reading some docs or watching a Youtube video is great to get the gist of a concept, but I won&rsquo;t truly <strong>grok</strong> it until I&rsquo;ve used it.</p>
+<p>I&rsquo;ve written a <a href="./blog/mvctipcalc">blog post</a> about my journey in learning MVC by creating a tip calculator! Please check it out to read more, but to summarize:</p>
 <ul>
-<li>Link to MVC Tip Calc</li>
+<li>The <strong>Model</strong> is where the data lives.
+<ul>
+<li>e.g. The bill amount and the percent you&rsquo;d like to tip.</li>
 </ul>
-<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
-<h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
+</li>
+<li>The <strong>View</strong> is what the user will see (the actual form).
+<ul>
+<li>The <strong>View</strong> should not actually update the <strong>Model</strong> when changes happen. Instead, it will have get/set functions that are managed by the <strong>Controller</strong>.</li>
+</ul>
+</li>
+<li>The <strong>Controller</strong> is the bridge between the <strong>Model</strong> and the <strong>View</strong>.
+<ul>
+<li>It will listen for events from the <strong>View</strong>, and will update the <strong>Model</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="applying-mvc-to-my-mini-macro-pad">Applying MVC to my Mini Macro Pad</h2>
+<p>Once I learned about MVC, I split up my widgets into 3 files starting with the smallest piece of the UI, the Action editor, and got to work.</p>
+<p>I thought I&rsquo;d finish up in a few weeks or so, but I kept finding more work to do. (You know how it goes.)</p>
+<p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp" target="_blank">larger code base</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// Model
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">Action</span> <span style="color:#c678dd">struct</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>	<span style="color:#e06c75">FuncName</span>  <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncName&#34;`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>	<span style="color:#e06c75">FuncParam</span> <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncParam&#34;`</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span><span style="color:#7f848e">// View
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">ActionItemEditorView</span> <span style="color:#c678dd">struct</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#e06c75">widget</span>.<span style="color:#e06c75">BaseWidget</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>	<span style="color:#e06c75">funcSelect</span>     <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Select</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>	<span style="color:#e06c75">funcParamEntry</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Entry</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">a</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">models</span>.<span style="color:#e06c75">Action</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">SetText</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncParam</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">SetSelected</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncName</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">18</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">19</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#e06c75">f</span> <span style="color:#c678dd">func</span>(<span style="color:#e5c07b">string</span>)) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#e06c75">OnChanged</span> = <span style="color:#e06c75">f</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span><span style="color:#7f848e">// Controller
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">NewActionController</span>(<span style="color:#e06c75">a</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">models</span>.<span style="color:#e06c75">Action</span>, <span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">views</span>.<span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionController</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26</span><span>	<span style="color:#e06c75">ac</span> <span style="color:#56b6c2">:=</span> <span style="color:#56b6c2">&amp;</span><span style="color:#e06c75">ActionController</span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>		<span style="color:#e06c75">Action</span>:               <span style="color:#e06c75">a</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span>		<span style="color:#e06c75">ActionItemEditorView</span>: <span style="color:#e06c75">v</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>	}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>	<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#c678dd">func</span>(<span style="color:#e06c75">s</span> <span style="color:#e5c07b">string</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">31</span><span>		<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>.<span style="color:#e06c75">FuncName</span> = <span style="color:#e06c75">s</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">32</span><span>	})
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">33</span><span>  <span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetOnFuncParamChanged</span>(<span style="color:#c678dd">func</span>(<span style="color:#e06c75">s</span> <span style="color:#e5c07b">string</span>) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">34</span><span>		<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>.<span style="color:#e06c75">FuncParam</span> = <span style="color:#e06c75">s</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">35</span><span>	})
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">36</span><span>  <span style="color:#e06c75">ac</span>.<span style="color:#61afef;font-weight:bold">UpdateActionView</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">37</span><span>  <span style="color:#c678dd">return</span> <span style="color:#e06c75">ac</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">38</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">39</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">ac</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionController</span>) <span style="color:#61afef;font-weight:bold">UpdateActionView</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">40</span><span>	<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">41</span><span>}
+</span></span></code></pre></div><div style="min-height: 1rem;">
+</div>
+<p>Same MVC concept as my <a href="/projects/mvctipcalc/">tip calculator</a>, but with one MVC per widget.</p>
+<h2 id="the-finished-config-editor-v2-released">The finished Config Editor (v2 released)</h2>
+<p>I continued working on the project it was fully functional, overall it took about 2 months to complete the <code>v2</code> release.</p>
+<h3 id="heres-what-the-new-gui-config-editor-looks-like">Here&rsquo;s what the new GUI Config Editor looks like:</h3>
+<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
+<div>
+<p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
+<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+</div>
+<div>
+Click on the name to change what they do.
+<p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
+<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+</div>
+</div>
+<h3 id="before--after">Before / After</h3>
+<p>Here&rsquo;s what it took before to make changes to the config:</p>
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/yw_C6MvAJ_s?si=ePGe-XeHRZP5ERPA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div style="min-height: 1rem;">
+</div>
+<p>&hellip;and after:</p>
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> 
+<div style="min-height: 1rem;">
+</div>
+<p>Hopefully, you can see that it&rsquo;s much easier to make changes, and I&rsquo;m happy with all that I&rsquo;ve learned in doing this.</p>
+<h2 id="final-tweak">Final tweak</h2>
+<p>One last thing - After using my new editor, I noticed that the Drag-and-Drop functionality was annoying to use.</p>
+<p>Specifically, when adding a new Action, it gets added to the bottom of the list. If you wanted to move this to the 2nd position, you can&rsquo;t just insert it in position 2. Instead, you had to swap each item below pos 2 and make your way up.</p>
+<p>This has been resolved in <a href="https://github.com/ssebs/go-mmp/releases/tag/v2.0.1" target="_blank">v2.0.1</a>, and the before &amp; after can be found there.</p>
 <h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
+<p>I&rsquo;ve made lots of progress in <code>v2</code>, so what&rsquo;s left for <code>v3</code>? There couldn&rsquo;t be more stuff, right? It&rsquo;s done, <em>right</em>? <em>Right</em>?</p>
+<p>Well, I&rsquo;d want at least these features:</p>
 <ul>
-<li>See github issues</li>
+<li>Support using a Mouse + position in a Macro. (So you can click somewhere specific)</li>
+<li>Make it possible to Record a Macro, rather than just use the editor to make one.</li>
+<li>Make it possible to run a program / script from a keypress.</li>
+<li>Make a first time setup window</li>
 </ul>
+<p>&hellip;there&rsquo;s more, but you can see the rest on the <a href="https://github.com/ssebs/go-mmp/issues" target="_blank">Github Issues page</a>.</p>
 <p><strong>Thanks for reading!</strong></p>
 </div>
   <script>
