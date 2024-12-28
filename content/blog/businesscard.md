@@ -12,7 +12,7 @@ Honestly, I don’t need one. Since most of my time is spent in front of a compu
 
 But the *real* reason why I made this was to test out my new [3D Effect Plate](https://us.store.bambulab.com/products/bambu-3d-effect-plate?variant=43050930241672) that I got for Christmas. (Thanks to my wife \<3)
 
-If you don't already know how 3D printers work, I'd recommend checking out [this video](https://www.youtube.com/watch?v=f94CnlQ0eq4) by Jared Owen on Youtube. He does a great job explaining how they work. 
+If you don't already know how 3D printers work, I'd recommend checking out [this video](https://www.youtube.com/watch?v=f94CnlQ0eq4) by Jared Owen on Youtube.
 
 ## Carbon Fiber Effects Plate
 <img class="custom-float-right ml-3" src="/img/bambu-carbon-fx-plate.jpg" width="256px" alt="Carbon Fiber effects plate">
