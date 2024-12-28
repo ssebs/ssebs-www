@@ -2,14 +2,14 @@
 title: 'Learning the MVC pattern by making a Tip Calculator'
 slug: mvctipcalc
 shortdesc: Learning the MVC pattern for my MiniMacroPad by making a Tip Calculator in Go.
-feature: ./img/MVCTipCalc.png
+feature: /img/MVCTipCalc.png
 date: 2024-12-11T20:45:41-08:00
 weight: 25
 tags: [golang, programming, gui]
 ---
 > Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
 
-<img class="custom-float-right" src="./img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
 
 ## Why did I make a tip calculator? 
 While working on the `v2` release of my [Mini Macro Pad](/projects/go-mmp/), I was having trouble managing state between different parts of the GUI. 
@@ -29,7 +29,7 @@ Since my Mini Macro Pad is written in Go + [fyne.io](https://fyne.io/), I stuck 
 <div style="clear: both;"></div>
 
 ## What is MVC?
-<img class="custom-float-right" src="./img/mvc.webp" width="320px" alt="MVC Diagram">
+<img class="custom-float-right" src="/img/mvc.webp" width="320px" alt="MVC Diagram">
 
 Model-View-Controller is a software architecture pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow. 
 
@@ -181,7 +181,7 @@ func main() {
 
 {{< spacer 1rem >}}
 
-<img class="custom-float-right" src="./img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
 
 ...and with that, the tip calculator was completed! 
 
@@ -194,9 +194,9 @@ With all this done, I had learned:
 ## See how this helped with my GUI Editor
 Now that I learned a bit about MVC and was able to implement it myself, I felt confident enough to get started on my `v2` release. 
 
-...I'm still working on writing that blog entry, but check out the `v2` release on [Github](https://github.com/ssebs/go-mmp/releases/tag/v2.0.0)!
+Read more about how that went in the [blog post](/blog/mmpguieditor)!
 
-<!-- Read more about how that went in the [blog post](/blog/mmpguieditor/). -->
+Check out the `v2` release on [Github](https://github.com/ssebs/go-mmp/releases/tag/v2.0.0)!
 
 If you want to read more of the code for this project, check out the [Github Repo](https://github.com/ssebs/MVCTipCalc).
 

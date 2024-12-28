@@ -269,7 +269,7 @@
 <p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
 </blockquote>
 <h2 id="whats-a-macro-pad">What&rsquo;s a Macro Pad?</h2>
-<img class="custom-float-right" src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+<img class="custom-float-right" src="/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
 <p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &ldquo;skip song&rdquo; button on your keyboard.</p>
 <p>A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons to run shortcuts.</p>
 <p>I made my own <a href="https://than.gs/m/710028" target="_blank">3D Printed Macro Pad</a>, and call it a <strong>Mini Macro Pad</strong>.</p>
@@ -302,7 +302,7 @@
 <div style="min-height: 1rem;">
 </div>
 <p>Here&rsquo;s what the wiring looks like (<em>please forgive the newbie soldering</em>).</p>
-<img src="./img/MMPWiring.jpg" width="400px" alt="macro pad wiring">
+<img src="/img/MMPWiring.jpg" width="400px" alt="macro pad wiring">
 <h2 id="making-the-buttons-do-stuff">Making the buttons do stuff</h2>
 <p>Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE.</p>
 <p>My plan was to:</p>
@@ -324,7 +324,7 @@
 <p>I decided to change the architecture of my app a bit: instead of the Arduino itself typing the keys, it would just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.</p>
 <p>That way, I can update a config file to make my changes. Easy-peazy.</p>
 <h2 id="switching-to-serial--python">Switching to Serial + Python</h2>
-<img class="custom-float-right" src="./img/PythonMMPScreenshot.png" alt="python gui screenshot">
+<img class="custom-float-right" src="/img/PythonMMPScreenshot.png" alt="python gui screenshot">
 <p>I decided to use Python for the new server code, as I was writing it at work and was pretty familiar with it. I also decided make a small GUI so you can see what/where the Macros are on your device.</p>
 <blockquote>
 <p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad" target="_blank">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
@@ -359,7 +359,7 @@
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
 <h2 id="sidebar-over-back-to-writing-a-gui-in-go">Sidebar over, back to writing a GUI in Go</h2>
-<img class="custom-float-right" src="./img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+<img class="custom-float-right" src="/img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
 <p>Since I had a working app written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go <a href="https://stackoverflow.com/a/34152076" target="_blank">doesn&#39;t have inheritance</a>, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals" target="_blank">composition</a> to fit my needs.</p>
 <p>One important lesson I learned in doing this was to <a href="https://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>. The GUI library documentation <em>exists</em>, but it can be difficult to build everything you need from what you see on the getting started page.</p>
 <p>I found that I needed to use VSCode&rsquo;s autocompletion to explore what methods were available, and use the &ldquo;go to definition&rdquo; button to read the source code to see how it should be used.</p>
@@ -381,8 +381,8 @@
 <p>Once everything was working, I was amazed at how much snappier my macro pad felt! I improved the startup time from ~3 seconds, to less than half of a second. Running the macros felt the same, but the UI looked nicer too so I was happy.</p>
 <p>I was pretty happy with how fyne worked once I got the hang of it, and I&rsquo;ll gladly use it in for future Go/GUI projects.</p>
 <p>By the end of this project, I rewrote my code about ~4 times, learning a lot with each rewrite. I fixed a few bugs, added a couple small features, and had released <code>v1.2.3</code> before I was ready to make another big change.</p>
-<p>&hellip;that big change was release <code>v2</code> on <a href="https://github.com/ssebs/go-mmp/releases/tag/v2.0.0" target="_blank">Github</a>, a new blog post will be out soon to talk about that!</p>
-<!-- Read about how I improved my GUI to add a config editor to my Macro Pad [in part 2](/blog/mmpguieditor/)! -->
+<p>&hellip;that big change was release <code>v2</code> on <a href="https://github.com/ssebs/go-mmp/releases/tag/v2.0.0" target="_blank">Github</a>.</p>
+<p>Read about how I improved my GUI to add a config editor to my Macro Pad <a href="/blog/mmpguieditor/">in part 2</a>!</p>
 <p><strong>Thanks for reading!</strong></p>
 </div>
   <script>

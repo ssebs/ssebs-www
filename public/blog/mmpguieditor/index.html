@@ -264,7 +264,7 @@
   <div class="post-content"><h2 id="before-you-read">Before you read&hellip;</h2>
 <p>This is part 2 of my <a href="/projects/go-mmp/">Mini Macro Pad</a> project. I recommend reading my <a href="/blog/minimacropad/">last blog post</a> to read about how I 3D printed and programmed that.</p>
 <h2 id="whats-wrong-with-it-why-fix-something-that-isnt-broken">What&rsquo;s wrong with it? Why fix something that isn&rsquo;t broken?</h2>
-<img class="custom-float-right" src="./img/MMPPrinted.jpg" alt="macro pad" width="300px">
+<img class="custom-float-right" src="/img/MMPPrinted.jpg" alt="macro pad" width="300px">
 <p>I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a <strong>problem</strong>.</p>
 <p>If you wanted to change any of the Macros, you had to open up a code editor and edit a <code>.yaml</code> file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.</p>
 <p>I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but this was the push I needed to get started.</p>
@@ -284,7 +284,7 @@
 <div>Config editor view where you can drag and drop your Macros.</div>
 <div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
-<img class="w-full" src="./img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
+<img class="w-full" src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
 <div style="clear: both;"></div>
 <h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
 <p>My existing <code>v1</code> code was pretty messy, my <code>gui.go</code> file was massive, it was getting hard to read, and I knew I needed to refactor it soon. I figured this could wait, at least until I had a basic config editor working.</p>
@@ -292,11 +292,11 @@
 <p>To start, I just created a new window each time I needed to edit a particular part of the Config.</p>
 <p>You&rsquo;d start with a normal running Mini Macro Pad window, then click <strong>Edit</strong> =&gt; <strong>Edit Config</strong>.</p>
 <p>From there, you could Drag-and-Drop the Macros around, and click <strong>Edit</strong> to open another window to edit that specific Macro.</p>
-<img class="w-full" src="./img/mmpnewwindows.png" >
+<img class="w-full" src="/img/mmpnewwindows.png" >
 <h2 id="fun-with-drag-and-drop">Fun with Drag-and-Drop</h2>
 <p>One thing that took me more time than I expected was getting the Drag-and-Drop to work properly. It turns out, a <a href="https://docs.fyne.io/explore/widgets" target="_blank">fyne widget</a> can implement the <a href="https://docs.fyne.io/api/v2.1/draggable.html" target="_blank">Draggable interface</a>. However, the documentation for this was auto-generated from the source code, and did not have any working examples that I could use to learn from.</p>
 <p>Here&rsquo;s a screenshot of the doc:
-<img class="w-full" src="./img/fyne-draggable-api.png" ></p>
+<img class="w-full" src="/img/fyne-draggable-api.png" ></p>
 <p>Luckily, I could use VSCode&rsquo;s <strong>Go to Definition (F12)</strong> function to see what a <code>*DragEvent</code> even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.</p>
 <p>The <code>Dragged()</code> method gets called every time your mouse moves while holding down LMB, and <code>DragEnd()</code> gets called once you let go.</p>
 <p>Once I had the position of the mouse, I could calculate which Macro GUI component I was clicking over. I&rsquo;d check the (X,Y) coordinates of each Macro + the width/height and see if your mouse was inside. If it was, I&rsquo;d save which Macro that was in a <code>draggedIdx</code> variable, and move the Macro to where the mouse is positioned every frame.</p>
@@ -316,7 +316,7 @@
 <p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
 <p>The GUI library I&rsquo;m using (<a href="https://fyne.io" target="_blank">fyne.io</a>) is &ldquo;pattern agnostic&rdquo;, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
 <h2 id="realizing-that-its-time-for-a-refactor">Realizing that it&rsquo;s time for a refactor</h2>
-<img class="custom-float-right" src="./img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
+<img class="custom-float-right" src="/img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
 <p>I knew that technical debt from <code>gui.go</code> was going to catch up to me, and at this point, it was getting hard to follow what was going on in the code I just wrote.</p>
 <blockquote>
 <p>So much spaghetti, so little time.</p>
@@ -328,7 +328,7 @@
 <div style="clear: both"></div>
 <h2 id="learning-mvc">Learning MVC</h2>
 <p>I find it best to learn by doing, so to learn MVC I need to implement it myself. Just reading some docs or watching a Youtube video is great to get the gist of a concept, but I won&rsquo;t truly <strong>grok</strong> it until I&rsquo;ve used it.</p>
-<p>I&rsquo;ve written a <a href="./blog/mvctipcalc">blog post</a> about my journey in learning MVC by creating a tip calculator! Please check it out to read more, but to summarize:</p>
+<p>I&rsquo;ve written a <a href="/blog/mvctipcalc">blog post</a> about my journey in learning MVC by creating a tip calculator! Please check it out to read more, but to summarize:</p>
 <ul>
 <li>The <strong>Model</strong> is where the data lives.
 <ul>
@@ -417,7 +417,7 @@ Click on the name to change what they do.
 </div>
 <p>&hellip;and after:</p>
 <div class="videoWrapper">
-<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> 
 <div style="min-height: 1rem;">
 </div>

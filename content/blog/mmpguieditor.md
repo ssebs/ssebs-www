@@ -2,7 +2,7 @@
 title: How I Improved my Macro Pad with a Drag-and-Drop Config Editor
 slug: mmpguieditor
 shortdesc: I upgraded my Macro Pad with a WYSIWYG editor, drag-and-drop functionality, and MVC.
-feature: ./img/ConfigEditor.png
+feature: /img/ConfigEditor.png
 date: 2024-12-27T14:00:00-08:00
 weight: 25
 tags: [golang, programming, 3d-printing, arduino, gui]
@@ -12,7 +12,7 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and programmed that.
 
 ## What's wrong with it? Why fix something that isn't broken?
-<img class="custom-float-right" src="./img/MMPPrinted.jpg" alt="macro pad" width="300px">
+<img class="custom-float-right" src="/img/MMPPrinted.jpg" alt="macro pad" width="300px">
 
 I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a **problem**.
 
@@ -40,7 +40,7 @@ I started by designing a quick UI in Excalidraw so I could plan the layout.
 <div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
 
-<img class="w-full" src="./img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
+<img class="w-full" src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
 
 <div style="clear: both;"></div>
 
@@ -55,13 +55,13 @@ You'd start with a normal running Mini Macro Pad window, then click **Edit** => 
 
 From there, you could Drag-and-Drop the Macros around, and click **Edit** to open another window to edit that specific Macro.
 
-<img class="w-full" src="./img/mmpnewwindows.png" >
+<img class="w-full" src="/img/mmpnewwindows.png" >
 
 ## Fun with Drag-and-Drop
 One thing that took me more time than I expected was getting the Drag-and-Drop to work properly. It turns out, a [fyne widget](https://docs.fyne.io/explore/widgets) can implement the [Draggable interface](https://docs.fyne.io/api/v2.1/draggable.html). However, the documentation for this was auto-generated from the source code, and did not have any working examples that I could use to learn from.
 
 Here's a screenshot of the doc:
-<img class="w-full" src="./img/fyne-draggable-api.png" >
+<img class="w-full" src="/img/fyne-draggable-api.png" >
 
 Luckily, I could use VSCode's **Go to Definition (F12)** function to see what a `*DragEvent` even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.
 
@@ -85,7 +85,7 @@ For example, when I'd update the name of a `Macro` in a new editor window, it wo
 The GUI library I'm using ([fyne.io](https://fyne.io)) is "pattern agnostic", meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*, or just using a single file to manage it all (the way I was doing it before).
 
 ## Realizing that it's time for a refactor
-<img class="custom-float-right" src="./img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
+<img class="custom-float-right" src="/img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
 
 I knew that technical debt from `gui.go` was going to catch up to me, and at this point, it was getting hard to follow what was going on in the code I just wrote. 
 
@@ -104,7 +104,7 @@ So, I had to learn MVC.
 ## Learning MVC
 I find it best to learn by doing, so to learn MVC I need to implement it myself. Just reading some docs or watching a Youtube video is great to get the gist of a concept, but I won't truly **grok** it until I've used it.
 
-I've written a [blog post](./blog/mvctipcalc) about my journey in learning MVC by creating a tip calculator! Please check it out to read more, but to summarize:
+I've written a [blog post](/blog/mvctipcalc) about my journey in learning MVC by creating a tip calculator! Please check it out to read more, but to summarize:
 - The **Model** is where the data lives. 
   - e.g. The bill amount and the percent you'd like to tip.
 - The **View** is what the user will see (the actual form). 
@@ -202,7 +202,7 @@ Here's what it took before to make changes to the config:
 ...and after:
 
 <div class="videoWrapper">
-<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> 
 
 {{< spacer 1rem >}}

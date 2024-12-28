@@ -6,8 +6,7 @@ date: "2024-05-18T14:08:45-07:00"
 feature: ./img/MMPGUIScreenshot.png
 tags: [golang, programming, 3d-printing, arduino, gui]
 ---
-> Read how I [made the macro pad](/blog/minimacropad/).
-<!-- > Read how I [made the macro pad](/blog/minimacropad/), and how I [added a config editor](/blog/mmpguieditor/). -->
+> Read how [I made the macro pad](/blog/minimacropad/), and how [I added a config editor](/blog/mmpguieditor/) to it.
 
 [Github Repo](https://github.com/ssebs/go-mmp)
 
@@ -115,3 +114,8 @@ Wiring under the hood (please forgive the newbie soldering)
   - <img src="./img/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot">
 
 > If you're curious, check out the older python code at https://github.com/ssebs/MiniMacroPad/
+
+### Example Config Edits
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div> 
