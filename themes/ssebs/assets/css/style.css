@@ -3656,7 +3656,8 @@ select {
 
 .post-content pre {
   padding: 0.5rem;
-  white-space: pre-wrap;
+  max-width: 80vw;
+  overflow-x: auto;
 }
 
 /* Max lg */
