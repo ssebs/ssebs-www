@@ -261,50 +261,25 @@
         gui
       </a>
     </div></div>
-  <div class="post-content"><h2 id="plan-for-below">PLAN FOR BELOW</h2>
-<ul>
-<li>Read Mini Macro Pad before this one
-<ul>
-<li>&ldquo;This is part 2 of my MMP project&rdquo;</li>
-</ul>
-</li>
-<li>What&rsquo;s wrong with v1 / story</li>
-<li>Solution idea</li>
-<li>Expanding GUI in fyne</li>
-<li>Fun with DnD</li>
-<li>Having issues with state / GUI not syncing
-<ul>
-<li>Realize I need to organize / structure my code better</li>
-<li>I find it best to learn by doing, so to learn MVC I need to implement it myself.</li>
-<li>Link to MVC Tip Calc</li>
-</ul>
-</li>
-<li>Using what I learned from my tip calc to implement MVC for my MMP</li>
-<li>v2 released / what&rsquo;s new with the release</li>
-<li>What&rsquo;s next for v3?
-<ul>
-<li>See github issues</li>
-</ul>
-</li>
-</ul>
-<h2 id="before-you-read">Before you read&hellip;</h2>
-<p>This is part 2 of my <a href="/projects/go-mmp/">Mini Macro Pad</a> project. I recommend reading my <a href="/blog/minimacropad/">last blog post</a> to read about how I 3D printed and coded it.</p>
-<img class="custom-float-right" src="./img/MMPPrinted.jpg" alt="macro pad" width="256px">
-<h2 id="whats-wrong-with-v1-why-make-a-v2">What&rsquo;s wrong with v1? Why make a v2?</h2>
-<p>I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a problem.</p>
+  <div class="post-content"><h2 id="before-you-read">Before you read&hellip;</h2>
+<p>This is part 2 of my <a href="/projects/go-mmp/">Mini Macro Pad</a> project. I recommend reading my <a href="/blog/minimacropad/">last blog post</a> to read about how I 3D printed and programmed that.</p>
+<h2 id="whats-wrong-with-it-why-fix-something-that-isnt-broken">What&rsquo;s wrong with it? Why fix something that isn&rsquo;t broken?</h2>
+<img class="custom-float-right" src="./img/MMPPrinted.jpg" alt="macro pad" width="300px">
+<p>I was happy to have a working Macro Pad, and I used it for about a year or so with only a few tweaks to the code, but there was a <strong>problem</strong>.</p>
 <p>If you wanted to change any of the Macros, you had to open up a code editor and edit a <code>.yaml</code> file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.</p>
-<p>I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but that was the push I needed to get started.</p>
-<p>So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you&rsquo;d find in a Logitech or Razor keyboard driver. Obviously not as complex, but enough to make changes on the fly.</p>
+<p>I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but this was the push I needed to get started.</p>
+<p>So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you&rsquo;d find in a Logitech or Razor keyboard driver.</p>
+<p><em>Obviously not as complex</em>, but enough to make changes on the fly.</p>
 <div style="clear: both;"></div>
 <h2 id="features-i-wanted">Features I wanted</h2>
 <p>The main things I wanted to make easier were:</p>
 <ul>
-<li>Changing what the Macros did (updating the Actions)</li>
-<li>Moving the position of Macros on the device using Drag and Drop</li>
+<li>Changing what the Macros did when you pressed a button (updating the Actions for a Macro)</li>
+<li>Moving the position of Macros on the device using Drag-and-Drop (to place the buttons properly)</li>
 <li>Changing Metadata (like # of columns, and serial connection info)</li>
 </ul>
 <h2 id="getting-started">Getting started</h2>
-<p>I started by designing a quick UI in Excalidraw, and thinking about what features I wanted to add.</p>
+<p>I started by designing a quick UI in Excalidraw so I could plan the layout.</p>
 <div class="flex">
 <div>Config editor view where you can drag and drop your Macros.</div>
 <div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
@@ -312,11 +287,40 @@
 <img class="w-full" src="./img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
 <div style="clear: both;"></div>
 <h2 id="expanding-gui-in-fyne">Expanding GUI in fyne</h2>
-<h2 id="fun-with-dnd">Fun with DnD</h2>
+<p>My existing <code>v1</code> code was pretty messy, my <code>gui.go</code> file was massive, it was getting hard to read, and I knew I needed to refactor it soon. I figured this could wait, at least until I had a basic config editor working.</p>
+<p>So, I created a new <code>test.go</code> file, and got to work building my GUI to match my diagrams. I was able to get a Grid of Macros like before, with a Delete and Edit button at the bottom.</p>
+<p>To start, I just created a new window each time I needed to edit a particular part of the Config.</p>
+<p>You&rsquo;d start with a normal running Mini Macro Pad window, then click <strong>Edit</strong> =&gt; <strong>Edit Config</strong>.</p>
+<p>From there, you could Drag-and-Drop the Macros around, and click <strong>Edit</strong> to open another window to edit that specific Macro.</p>
+<img class="w-full" src="./img/mmpnewwindows.png" >
+<h2 id="fun-with-drag-and-drop">Fun with Drag-and-Drop</h2>
+<p>One thing that took me more time than I expected was getting the Drag-and-Drop to work properly. It turns out, a <a href="https://docs.fyne.io/explore/widgets" target="_blank">fyne widget</a> can implement the <a href="https://docs.fyne.io/api/v2.1/draggable.html" target="_blank">Draggable interface</a>. However, the documentation for this was auto-generated from the source code, and did not have any working examples that I could use to learn from.</p>
+<p>Here&rsquo;s a screenshot of the doc:
+<img class="w-full" src="./img/fyne-draggable-api.png" ></p>
+<p>Luckily, I could use VSCode&rsquo;s <strong>Go to Definition (F12)</strong> function to see what a <code>*DragEvent</code> even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.</p>
+<p>The <code>Dragged()</code> method gets called every time your mouse moves while holding down LMB, and <code>DragEnd()</code> gets called once you let go.</p>
+<p>Once I had the position of the mouse, I could calculate which Macro GUI component I was clicking over. I&rsquo;d check the (X,Y) coordinates of each Macro + the width/height and see if your mouse was inside. If it was, I&rsquo;d save which Macro that was in a <code>draggedIdx</code> variable, and move the Macro to where the mouse is positioned every frame.</p>
+<blockquote>
+<p>This calculation is &ldquo;expensive&rdquo;, so I only run it the first time you start dragging something.</p>
+</blockquote>
+<p>Then, when you let go, another calculation is made to see if you let go over another Macro in the grid.</p>
+<ul>
+<li>If so, the positions of the two Macros would swap</li>
+<li>If not, it would reset back to where it came from</li>
+</ul>
+<blockquote>
+<p>Interested in the implementation? Check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go" target="_blank">widget&#39;s code</a>!</p>
+</blockquote>
 <h2 id="having-issues-with-state--gui-not-syncing">Having issues with state / GUI not syncing</h2>
-<h2 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h2>
-<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
-<h2 id="link-to-mvc-tip-calc">Link to MVC Tip Calc</h2>
+<p>I was able to get everything <em>visibly</em> working, but when you&rsquo;d save your changes only the <code>.yaml</code> file itself would update. None of the other components would update.</p>
+<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
+<h3 id="realize-i-need-to-organize--structure-my-code-better">Realize I need to organize / structure my code better</h3>
+<p>Once I was at this point, it was getting hard to follow what was going on in my own code I just wrote.</p>
+<img src="./img/whowrotethiscode.jpg" width="256px" alt="Obi Wan meme">
+<h3 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h3>
+<ul>
+<li>Link to MVC Tip Calc</li>
+</ul>
 <h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp">Using what I learned from my tip calc to implement MVC for my MMP</h2>
 <h2 id="v2-released--whats-new-with-the-release">v2 released / what&rsquo;s new with the release</h2>
 <h2 id="whats-next-for-v3">What&rsquo;s next for v3?</h2>
@@ -324,155 +328,6 @@
 <li>See github issues</li>
 </ul>
 <p><strong>Thanks for reading!</strong></p>
-<p><strong>CRAP TO COPY BELOW</strong></p>
-<h2 id="expanding-gui-in-fyne-1">Expanding GUI in fyne</h2>
-<p>A few people have questioned my use of Golang to write a GUI, since Go is most well-known for writing backend web server code.</p>
-<p>At first, I didn&rsquo;t agree with them, but now that I&rsquo;ve spent enough time with it, I sorta do. It&rsquo;s not that you <em>can&rsquo;t</em> write a GUI in Go, but that&rsquo;s not really what it&rsquo;s <em>made</em> for. There&rsquo;s no standard library that I can use, nor a plethora of examples I can refer to, but it is possible.</p>
-<p>The main problem I ran into when working with <a href="https://fyne.io/" target="_blank">fyne.io</a> was that the documentation <em>existed</em>, but was a bit hard to follow. The other was how the widgets were rendered.</p>
-<p>Using HTML + CSS + JS, there&rsquo;s a standard <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank">Document-Object-Model</a>, which has standard ways that things are drawn.</p>
-<p>For example, a button looks like this:</p>
-<div class="flex flex-wrap gap-6">
-<div>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>&lt;<span style="color:#e06c75">button</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#e06c75">style</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;background-color: #222; border: 1px solid #fff; color: red;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>    <span style="color:#e06c75">onclick</span><span style="color:#56b6c2">=</span><span style="color:#98c379">&#34;funcName()&#34;</span>&gt; Click me, I&#39;m a button &lt;/<span style="color:#e06c75">button</span>&gt;
-</span></span></code></pre></div></div>
-<img src="/img/html-button.png" alt="html button" width="256px"/>
-</div>
-<div style="min-height: 1rem;">
-</div>
-<p>You can change the way the button looks using <a href="https://www.w3schools.com/css/css3_buttons.asp" target="_blank">CSS</a> (which I&rsquo;ve added inline for the example), but I won&rsquo;t get into that here. More importantly, you can set the background color, text color, height, width, layout, etc. all in a way that &ldquo;makes sense&rdquo;. (At least to me.)</p>
-<hr>
-<div style="min-height: 1rem;">
-</div>
-<img class="custom-float-right" src="/img/fyne-button.png" alt="fyne button" width="300px" />
-<p>In fyne, you can make a <a href="https://docs.fyne.io/widget/button.html" target="_blank">button</a> with the following code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">myButton</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#98c379">&#34;Click me, I&#39;m a button&#34;</span>, <span style="color:#61afef;font-weight:bold">funcName</span>())
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#e06c75">myButton</span>.<span style="color:#e06c75">Importance</span> = <span style="color:#e06c75">widget</span>.<span style="color:#e06c75">HighImportance</span>
-</span></span></code></pre></div><div style="min-height: 1rem;">
-</div>
-<p>The Button is a <a href="https://docs.fyne.io/explore/widgets" target="_blank">widget</a>. A fyne widget can be added to a <a href="https://docs.fyne.io/explore/container" target="_blank">container</a>, like a <code>VBox</code>. This Vertical Box will stack whatever widgets you add in a vertical list, and will resize to make it fit the window. It does this by setting the minimum size of the child widgets.</p>
-<div style="min-height: 1rem;">
-</div>
-<img class="custom-float-right" src="/img/flexbox.svg" width="300px" alt="flexbox diagram" />
-<p>Compare this to the CSS <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">grid</a>, or <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flexbox</a>. These are very customizable and quite powerful by <a href="https://docs.fyne.io/explore/layouts" target="_blank">comparison</a>.</p>
-<p>One last thing before I move on, changing colors in fyne is done by setting the theme, and using them is done by setting the importance level. It can be set to blue, red, or gray depending on the importance setting.</p>
-<blockquote>
-<p>In the example above, I&rsquo;m setting it to Blue by setting HighImportance.</p>
-</blockquote>
-<p>To be clear, I have no hate for fyne at all. I feel like I&rsquo;ve learned a ton about different ways to manage user interfaces, and I&rsquo;m glad that the project exists. I do think the documentation can be improved, but I could be the one contributing that <code>;)</code></p>
-<div style="clear: both;"></div>
-<h2 id="having-issues-with-state--gui-not-syncing-1">Having issues with state / GUI not syncing</h2>
-<p>I was able to get these implemented relatively quickly, by creating a new window for the editor, then opening another new window for the macro when you clicked on it, then creating another window for editing the actions.</p>
-<p>Aside from the annoyance of opening too many windows, it worked, at least the UI looked like it worked, but when I hit save, nothing was updated. When I looked at the config file, it was updated but the UI and the Macros themselves weren&rsquo;t.</p>
-<p>After banging my head against the wall for a bit, I decided I needed to learn how to manage state. I was familar with React, but fyne doesn&rsquo;t have <code>useState</code> or <code>useEffect</code>, so I was kinda on my own.</p>
-<p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, and the other the new.</p>
-<p>I&rsquo;ve been using React for a little while, which has <a href="https://react.dev/learn/managing-state" target="_blank">opinionated ways on how to manage state</a>, but this didn&rsquo;t translate to how the Golang GUI library I was using works.</p>
-<p>The GUI library I&rsquo;m using, <a href="https://fyne.io" target="_blank">fyne.io</a>, is structure / pattern agnostic, meaning it doesn&rsquo;t care if you choose <em>MVC</em>, <em>MVP</em>, <em>MVVM</em>, or just using a single file to manage it all (the way I was doing it before).</p>
-<h2 id="realize-i-need-to-organize--structure-my-code-better-1">Realize I need to organize / structure my code better</h2>
-<h2 id="i-find-it-best-to-learn-by-doing-so-to-learn-mvc-i-need-to-implement-it-myself-1">I find it best to learn by doing, so to learn MVC I need to implement it myself.</h2>
-<h2 id="link-to-mvc-tip-calc-1">Link to MVC Tip Calc</h2>
-<h2 id="fun-with-drag-and-drop">Fun with Drag and Drop</h2>
-<p>One cool thing I added was the ability to drag and drop the Macros (and the Actions within a Macro) around to swap positions of them. I wanted to be able to move the order of some Actions in a Macro</p>
-<p>The way I achieved this was by implementing the <code>Draggable</code> interface in my <strong>Views</strong>. To do that, you need to create 2 functions: <code>Dragged(e *fyne.DragEvent)</code> and <code>DragEnd()</code>.</p>
-<p>I used the <code>fyne.DragEvent</code> to get the position of the mouse, and compared that to the position of each Macro button. With that information, I can track which Macro was being dragged, and which other Macro it&rsquo;s hovering over.</p>
-<p>The <code>DragEnd()</code> function just lets me know when the drag is over, so I can run <code>SwapMacros()</code> to actually do the swap on the <strong>Model</strong>.</p>
-<p>I&rsquo;m glossing over a lot of details here, but <a href="https://github.com/ssebs/go-mmp/blob/v2.0.0/views/drag_and_drop_view.go" target="_blank">check out the code</a> for more about that.</p>
-<p>I&rsquo;m also glossing over the refactoring that I did, since that&rsquo;s pretty boring. tl;dr - I reorganized my code and cleaned it all up.</p>
-<h2 id="using-what-i-learned-from-my-tip-calc-to-implement-mvc-for-my-mmp-1">Using what I learned from my tip calc to implement MVC for my MMP</h2>
-<h2 id="v2-released--whats-new-with-the-release-1">v2 released / what&rsquo;s new with the release</h2>
-<h2 id="whats-next-for-v3-1">What&rsquo;s next for v3?</h2>
-<h2 id="see-github-issues">See github issues</h2>
-<hr>
-<h2 id="running-macros-when-you-press-a-button">Running Macros when you press a button</h2>
-<p>I could bore you with the implementation details of how I set up a couple goroutines, some channels to send buttonID&rsquo;s between them, and how that number is used to actually run the Macros, but instead I&rsquo;ll leave that up for <a href="https://github.com/ssebs/go-mmp" target="_blank">you to explore</a>.</p>
-<p>The tl;dr is this:</p>
-<ul>
-<li>The Config file is loaded</li>
-<li>A new thread is created to listen for serial data (button presses)</li>
-<li>A GUI window is made and displays the buttons from the Config.</li>
-<li>When a button is pressed, it will check for the matching Macro, and run the Actions in that Macro in order, using the parameters set in the config file.
-<ul>
-<li>e.g. <code>PressRelease(&quot;ENTER&quot;)</code> will press and release the enter button.</li>
-</ul>
-</li>
-</ul>
-<h2 id="learning-mvc-with-a-tip-calculator">Learning MVC with a tip calculator</h2>
-<p>At this point, I felt I needed to learn how this was usually done.</p>
-<blockquote>
-<p>It turns out, that you should structure your code in some way to keep it organized.</p>
-</blockquote>
-<p>I chose the Model-View-Controller architecture, as it was the most simple to get started. If you&rsquo;d like to read more about that, check out the <a href="/blog/mvctipcalc/">blog post</a>.</p>
-<h2 id="applying-mvc-to-my-mini-macro-pad">Applying MVC to my Mini Macro Pad</h2>
-<p>Once I learned about MVC, I split up my widgets into 3 files starting with the smallest piece of the UI, the Action editor, and got to work.</p>
-<p>I thought I&rsquo;d finish up in a few weeks or so, but I kept finding more work to do.</p>
-<blockquote>
-<p>You know how it goes.</p>
-</blockquote>
-<p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp" target="_blank">larger code base</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// model
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">Action</span> <span style="color:#c678dd">struct</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>	<span style="color:#e06c75">FuncName</span>  <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncName&#34;`</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>	<span style="color:#e06c75">FuncParam</span> <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncParam&#34;`</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span><span style="color:#7f848e">// view
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span><span style="color:#7f848e"></span><span style="color:#c678dd">type</span> <span style="color:#e06c75">ActionItemEditorView</span> <span style="color:#c678dd">struct</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#e06c75">widget</span>.<span style="color:#e06c75">BaseWidget</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>	<span style="color:#e06c75">funcSelect</span>     <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Select</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>	<span style="color:#e06c75">funcParamEntry</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">widget</span>.<span style="color:#e06c75">Entry</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span>. . .
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">a</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">models</span>.<span style="color:#e06c75">Action</span>) {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">SetText</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncParam</span>)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcParamEntry</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">18</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">SetSelected</span>(<span style="color:#e06c75">a</span>.<span style="color:#e06c75">FuncName</span>)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">19</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#61afef;font-weight:bold">Refresh</span>()
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">v</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">ActionItemEditorView</span>) <span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#e06c75">f</span> <span style="color:#c678dd">func</span>(<span style="color:#e5c07b">string</span>)) {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22</span><span>	<span style="color:#e06c75">v</span>.<span style="color:#e06c75">funcSelect</span>.<span style="color:#e06c75">OnChanged</span> = <span style="color:#e06c75">f</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25</span><span><span style="color:#7f848e">// controler
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26</span><span><span style="color:#7f848e"></span><span style="color:#e06c75">ac</span> <span style="color:#56b6c2">:=</span> <span style="color:#56b6c2">&amp;</span><span style="color:#e06c75">ActionController</span>{
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>    <span style="color:#e06c75">Action</span>:               <span style="color:#e06c75">a</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span>    <span style="color:#e06c75">ActionItemEditorView</span>: <span style="color:#e06c75">v</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">31</span><span><span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetOnFuncNameChanged</span>(<span style="color:#c678dd">func</span>(<span style="color:#e06c75">s</span> <span style="color:#e5c07b">string</span>) {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">32</span><span>    <span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>.<span style="color:#e06c75">FuncName</span> = <span style="color:#e06c75">s</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">33</span><span>})
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">34</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">35</span><span><span style="color:#e06c75">ac</span>.<span style="color:#e06c75">ActionItemEditorView</span>.<span style="color:#61afef;font-weight:bold">SetAction</span>(<span style="color:#e06c75">ac</span>.<span style="color:#e06c75">Action</span>)
-</span></span></code></pre></div><div style="min-height: 1rem;">
-</div>
-<p>Same MVC concept as my <a href="/projects/mvctipcalc/">tip calculator</a>, but with one MVC per widget.</p>
-<p>I kept adding features, getting closer and closer to a finished product, all while struggling to get my layout how I wanted.</p>
-<h2 id="the-finished-config-editor">The finished Config Editor</h2>
-<div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
-<div>
-<p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
-<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
-</div>
-<div>
-Click on the name to change what they do.
-<p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
-<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
-</div>
-</div>
-<p>Here&rsquo;s the before:</p>
-<video width="100%" controls>
-  <source src="https://github.com/user-attachments/assets/10a220b7-b671-441f-8091-367c88647971" type="video/mp4">
-    Your browser does not support the video tag.
-</video> 
-<p>&hellip;and after:</p>
-<video width="100%" controls>
-  <source src="https://github.com/user-attachments/assets/93dba44d-0294-4836-9b47-f18b098d896a" type="video/mp4">
-    Your browser does not support the video tag.
-</video> 
-<div style="min-height: 1rem;">
-</div>
 </div>
   <script>
     document.querySelectorAll(".post-content img").forEach((imgElem) => {
