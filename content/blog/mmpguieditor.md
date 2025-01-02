@@ -14,9 +14,9 @@ This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend re
 ## What's wrong with it? 
 <img class="custom-float-right" src="/img/MMPPrinted.jpg" alt="macro pad" width="300px">
 
-I was happy to have a working Macro Pad and used it for about a year with only a few tweaks to the code. However, there was a **problem**.
+I was happy to have a working Macro Pad and used it for about a year or so with only a few tweaks to the code. However, there was a problem: to change any of the Macros, you had to open up a code editor and edit a `.yaml` file. 
 
-If you wanted to change any of the Macros, you had to open up a code editor and edit a `.yaml` file. While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.
+While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.
 
 I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but this was the push I needed to get started.
 
@@ -35,9 +35,9 @@ The main things I wanted to make easier were:
 ## The Editor's Design
 I started by designing a basic UI in Excalidraw so I could plan the layout.
 
-<div class="flex">
-<div>Config editor view where you can drag and drop your Macros.</div>
-<div>Macro editor where you can drag and drop Actions to make your shortcuts.</div>
+<div class="flex gap-2 justify-between">
+<div>On the left is the Config editor where you can drag and drop your Macros.</div>
+<div>On the right is the Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
 
 <img class="w-full" src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
@@ -49,16 +49,16 @@ My existing `v1` code was pretty messy: my `gui.go` file was massive, it was get
 
 So, I created a new `test.go` file, and got to work building my GUI to match my diagrams. I was able to get a Grid of Macros like before, with a Delete and Edit button at the bottom. 
 
-For simplicity, I created a new window each time I needed to edit a particular section of the Config. 
+For this test, I just created a new window each time I needed to edit a particular section of the Config. (Like the Actions for a Macro, or the Metadata, etc.)
 
-You'd start with a normal running Mini Macro Pad window, then click **Edit** => **Edit Config**. 
+Once I got the layout looking okay, I copy/pasted my code into my `gui.go` file. After that was added, you could open up the editor by running the regular Mini Macro Pad window, then clicking **Edit** => **Edit Config**. 
 
 From there, you could Drag-and-Drop the Macros around, and click **Edit** to open another window to edit that specific Macro.
 
 <img class="w-full" src="/img/mmpnewwindows.png" >
 
 ## Fun with Drag-and-Drop
-One of the challenges that I faced was getting the Drag-and-Drop to work properly. I discovered that a [fyne widget](https://docs.fyne.io/explore/widgets) can implement the [Draggable interface](https://docs.fyne.io/api/v2.1/draggable.html). However, the documentation for this feature was auto-generated from the source code and lacked practical examples, making it harder to learn from.
+One of the challenges that I faced was getting the Drag-and-Drop to work properly. I discovered that a [fyne widget](https://docs.fyne.io/explore/widgets) can implement the [Draggable interface](https://docs.fyne.io/api/v2.1/draggable.html). This was great! Luckily the library has a method to implement Drag-and-Drop - however, the documentation for this feature was auto-generated from the source code and lacked practical examples, making it hard to learn from.
 
 Luckily, I could use VSCode's **Go to Definition (F12)** function to see what a `*DragEvent` even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.
 
