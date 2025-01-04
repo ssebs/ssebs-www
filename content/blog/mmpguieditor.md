@@ -3,7 +3,7 @@ title: How I Improved my Macro Pad with a Drag-and-Drop Config Editor
 slug: mmpguieditor
 shortdesc: I upgraded my Macro Pad with a WYSIWYG editor, drag-and-drop functionality, and MVC.
 feature: /img/ConfigEditor.png
-date: 2024-12-27T14:00:00-08:00
+date: 2025-01-03T09:00:00-08:00
 weight: 25
 tags: [golang, programming, 3d-printing, arduino, gui]
 ---
