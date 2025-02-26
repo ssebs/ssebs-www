@@ -50,7 +50,10 @@ It’s a fast-paced restaurant sim—until it isn’t. How long can you keep thi
 <hr>
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=URPdRxzi07To_0BU&amp;list=PLaWBDhKq75KUStN0ub6OqckbAyCvIGxad" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=URPdRxzi07To_0BU&amp;list=PLaWBDhKq75KUStN0ub6OqckbAyCvIGxad" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 ## Should I release on Steam?
 I'm planning to release the demo of the game for free on [Itch.io page](https://theofficialssebs.itch.io/guac-and-load), but I'm still debating whether or not I should also release it on Steam.
