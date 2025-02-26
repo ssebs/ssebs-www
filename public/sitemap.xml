@@ -17,6 +17,9 @@
     <loc>http://localhost:1313/projects/go-mmp/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/projects/guac-and-load/</loc>
+    <lastmod>2025-02-25T17:05:19-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/projects/mvctipcalc/</loc>
     <lastmod>2024-11-14T17:53:17-08:00</lastmod>
   </url><url>
@@ -77,6 +80,15 @@
     <loc>http://localhost:1313/projects/sir-flap-a-lot/</loc>
     <lastmod>2024-07-07T15:32:42-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/gamedev/</loc>
+    <lastmod>2025-02-25T17:05:19-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/programming/</loc>
+    <lastmod>2025-02-25T17:05:19-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-02-25T17:05:19-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/3d-printing/</loc>
     <lastmod>2025-01-03T09:00:00-08:00</lastmod>
   </url><url>
@@ -87,12 +99,6 @@
     <lastmod>2025-01-03T09:00:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/gui/</loc>
-    <lastmod>2025-01-03T09:00:00-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
-    <lastmod>2025-01-03T09:00:00-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-01-03T09:00:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
@@ -115,9 +121,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/cars/</loc>
     <lastmod>2024-07-24T21:20:49-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/gamedev/</loc>
-    <lastmod>2024-07-07T15:32:42-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/java/</loc>
     <lastmod>2024-07-07T15:32:42-07:00</lastmod>

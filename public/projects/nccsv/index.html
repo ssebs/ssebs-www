@@ -21,7 +21,17 @@
     
   
   <link rel="stylesheet" href="/css/style.min.css">
-</head><body class="text-white">
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZW95SH05P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZW95SH05P');
+</script>
+<body class="text-white">
 
 
 <div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
@@ -377,6 +387,26 @@
         }
       });
     });
+  </script>
+  <div id="comments_section" style="display: none;">
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="4c100dfa19f6a385e46d5c4359caac66" data-page-url="http://localhost:1313/projects/nccsv/" data-page-title="nccsv"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
   </script>
 
 </div>

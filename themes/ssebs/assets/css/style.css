@@ -3758,6 +3758,7 @@ body {
 
 .custom-float-right {
   float: none;
+  margin: 0.5rem;
 }
 
 /* lg breakpoint: float right */
@@ -3765,6 +3766,7 @@ body {
 @media (min-width: 1024px) {
   .custom-float-right {
     float: right;
+    margin: 0.5rem;
   }
 }
 

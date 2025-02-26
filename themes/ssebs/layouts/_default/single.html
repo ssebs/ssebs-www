@@ -37,7 +37,7 @@
   </script>
   {{- end }}
 
-  {{- if in .RelPermalink "blog" }}
+  {{- if or (in .RelPermalink "blog") (in .RelPermalink "projects") }}
   <div id="comments_section" style="display: none;">
     <p class="text-lg mb-2">Leave a comment!</p>
     <div id="cusdis_thread" 
