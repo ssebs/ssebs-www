@@ -2,7 +2,7 @@
 title: 'Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs'
 slug: guac-and-load-update-1
 shortdesc: A look at the early days of Guac and Load—game loops, Godot struggles, and enough programmer art to make your eyes water.
-feature: ./img/guac-and-load-gal/guac-and-load-0.jpg
+feature: ./img/guac-and-load-gal/guac-and-load-5.jpg
 date: 2025-03-13T20:54:26-07:00
 weight: 25
 tags: [programming, gamedev]
@@ -10,7 +10,7 @@ tags: [programming, gamedev]
 [Itch.io Page](https://theofficialssebs.itch.io/guac-and-load)
 
 ## What's Guac and Load?
-<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-0.jpg" width="512px" alt="Game screenshot">
+<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-5.jpg" width="512px" alt="Game screenshot">
 
 **Guac and Load** is what I'm calling my first 3D video game. It's a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival. 
 
@@ -25,7 +25,7 @@ Basically, it's a half work-simulator, half zombies game.
 ## What do I have so far?
 I started this project in early February 2025 after my best friend suggested making a Chipotle Simulator. 
 
-After a few weeks of ~~strugging with~~ **learning** [Godot](https://godotengine.org/), I’ve got the core gameplay loop working, and my creative juices flowing!
+After a few weeks of ~~strugging with~~ **learning** [Godot](https://godotengine.org/), I've got the core gameplay loop working, and my creative juices flowing!
 
 Right now, you can:
 - Cook food (rice, beans, meat, etc.).
@@ -34,9 +34,9 @@ Right now, you can:
 - Interact with customers and complete transactions.
 - Earn money.
 
-It’s starting to feel like a game, but there’s still a long way to go.
+It's starting to feel like a game, but there's still a long way to go.
 
-## What’s next?
+## What's next?
 
 ### Gameplay
 I'd like to add some more features to make the game more interesting / complete.
@@ -52,7 +52,7 @@ I'd like to add some more features to make the game more interesting / complete.
 - Being able to save the game would also be nice.
 
 ### Art
-Right now, the game is very "programmer art" — it works, but it’s not pretty. The next big step is **art assets**, so everything looks more like an actual restaurant and less like a debug playground.
+Right now, the game is very "programmer art" — it works, but it's not pretty. The next big step is **art assets**, so everything looks more like an actual restaurant and less like a debug playground.
 
 Aside from replacing all the 3D models, I need to refine:
 - UI elements for order management.
@@ -71,7 +71,7 @@ I've also got to add more stuff to the game for the gameplay that I've already m
 - Fixing some technical debt
   - I won't get into this for now 😁
 
-## What I’ve learned so far
+## What I've learned so far
 This project has been a crash course in structuring game code *correctly* — or at least learning how to refactor as I go. 
 
 Here are some of my takeaways so far...
@@ -89,7 +89,7 @@ Without getting into too much detail, you can set a `signal` on a child class. E
 
 From the parent, you can connect a callback function to that, so when a Customer's order has been updated, the parent can know about it.
 
-### Physics and game logic don’t always mix
+### Physics and game logic don't always mix
 My food objects started as `RigidBody3D`, but handling physics while keeping items manageable was a headache. Switching to custom classes and `Resources` helped keep a separation of concerns. I'm still learning about `Resources`, but a good use case for my game is a Customer's order.
 
 An `OrderResource` has a list of `FoodItemResources` and a function to generate a new random order. These `FoodItemResources` keep track of the type of food they are, the cook state, name, and have a signal that fires when one of these values change.
@@ -118,8 +118,8 @@ I'm also uploading small updates on my Youtube channel, here's the playlist if y
 
 ## Final Thoughts
 
-This project has been a blast so far, and I’m excited to keep improving it. If you want to follow along, check out the [Itch.io page](https://theofficialssebs.itch.io/guac-and-load) for updates.
+This project has been a blast so far, and I'm excited to keep improving it. If you want to follow along, check out the [Itch.io page](https://theofficialssebs.itch.io/guac-and-load) for updates.
 
-Back to the code - I’ve got burritos (and zombies) to deal with.
+Back to the code - I've got burritos (and zombies) to deal with.
 
 **Thanks for reading!**

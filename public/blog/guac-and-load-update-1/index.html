@@ -261,7 +261,7 @@
     </div></div>
   <div class="post-content"><p><a href="https://theofficialssebs.itch.io/guac-and-load" target="_blank">Itch.io Page</a></p>
 <h2 id="whats-guac-and-load">What&rsquo;s Guac and Load?</h2>
-<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-0.jpg" width="512px" alt="Game screenshot">
+<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-5.jpg" width="512px" alt="Game screenshot">
 <p><strong>Guac and Load</strong> is what I&rsquo;m calling my first 3D video game. It&rsquo;s a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.</p>
 <blockquote>
 <p>Okay&hellip; what does that mean?</p>
@@ -271,7 +271,7 @@
 <p>Basically, it&rsquo;s a half work-simulator, half zombies game.</p>
 <h2 id="what-do-i-have-so-far">What do I have so far?</h2>
 <p>I started this project in early February 2025 after my best friend suggested making a Chipotle Simulator.</p>
-<p>After a few weeks of <del>strugging with</del> <strong>learning</strong> <a href="https://godotengine.org/" target="_blank">Godot</a>, I’ve got the core gameplay loop working, and my creative juices flowing!</p>
+<p>After a few weeks of <del>strugging with</del> <strong>learning</strong> <a href="https://godotengine.org/" target="_blank">Godot</a>, I&rsquo;ve got the core gameplay loop working, and my creative juices flowing!</p>
 <p>Right now, you can:</p>
 <ul>
 <li>Cook food (rice, beans, meat, etc.).</li>
@@ -280,8 +280,8 @@
 <li>Interact with customers and complete transactions.</li>
 <li>Earn money.</li>
 </ul>
-<p>It’s starting to feel like a game, but there’s still a long way to go.</p>
-<h2 id="whats-next">What’s next?</h2>
+<p>It&rsquo;s starting to feel like a game, but there&rsquo;s still a long way to go.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
 <h3 id="gameplay">Gameplay</h3>
 <p>I&rsquo;d like to add some more features to make the game more interesting / complete.</p>
 <ul>
@@ -303,7 +303,7 @@
 <li>Being able to save the game would also be nice.</li>
 </ul>
 <h3 id="art">Art</h3>
-<p>Right now, the game is very &ldquo;programmer art&rdquo; — it works, but it’s not pretty. The next big step is <strong>art assets</strong>, so everything looks more like an actual restaurant and less like a debug playground.</p>
+<p>Right now, the game is very &ldquo;programmer art&rdquo; — it works, but it&rsquo;s not pretty. The next big step is <strong>art assets</strong>, so everything looks more like an actual restaurant and less like a debug playground.</p>
 <p>Aside from replacing all the 3D models, I need to refine:</p>
 <ul>
 <li>UI elements for order management.</li>
@@ -339,6 +339,11 @@
     
     <div class="gallery-item">
       <img src="/img/guac-and-load-gal/guac-and-load-4.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
+    </div>
+  
+    
+    <div class="gallery-item">
+      <img src="/img/guac-and-load-gal/guac-and-load-5.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
     </div>
   
 </div>
@@ -462,7 +467,7 @@ function changeImage(direction) {
 </ul>
 </li>
 </ul>
-<h2 id="what-ive-learned-so-far">What I’ve learned so far</h2>
+<h2 id="what-ive-learned-so-far">What I&rsquo;ve learned so far</h2>
 <p>This project has been a crash course in structuring game code <em>correctly</em> — or at least learning how to refactor as I go.</p>
 <p>Here are some of my takeaways so far&hellip;</p>
 <h3 id="refactoring-is-inevitable">Refactoring is inevitable</h3>
@@ -472,7 +477,7 @@ function changeImage(direction) {
 <p>Signals are an implementation of the <a href="https://gameprogrammingpatterns.com/observer.html" target="_blank">Observer</a> pattern, and since Godot is Node/tree based, they are used frequently.</p>
 <p>Without getting into too much detail, you can set a <code>signal</code> on a child class. E.g.<code>Customer</code> =&gt; <code>order_updated(order: OrderResource)</code>.</p>
 <p>From the parent, you can connect a callback function to that, so when a Customer&rsquo;s order has been updated, the parent can know about it.</p>
-<h3 id="physics-and-game-logic-dont-always-mix">Physics and game logic don’t always mix</h3>
+<h3 id="physics-and-game-logic-dont-always-mix">Physics and game logic don&rsquo;t always mix</h3>
 <p>My food objects started as <code>RigidBody3D</code>, but handling physics while keeping items manageable was a headache. Switching to custom classes and <code>Resources</code> helped keep a separation of concerns. I&rsquo;m still learning about <code>Resources</code>, but a good use case for my game is a Customer&rsquo;s order.</p>
 <p>An <code>OrderResource</code> has a list of <code>FoodItemResources</code> and a function to generate a new random order. These <code>FoodItemResources</code> keep track of the type of food they are, the cook state, name, and have a signal that fires when one of these values change.</p>
 <p>For example, a piece of chicken might have this data:</p>
@@ -497,8 +502,8 @@ function changeImage(direction) {
 <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=URPdRxzi07To_0BU&amp;list=PLaWBDhKq75KUStN0ub6OqckbAyCvIGxad" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <h2 id="final-thoughts">Final Thoughts</h2>
-<p>This project has been a blast so far, and I’m excited to keep improving it. If you want to follow along, check out the <a href="https://theofficialssebs.itch.io/guac-and-load" target="_blank">Itch.io page</a> for updates.</p>
-<p>Back to the code - I’ve got burritos (and zombies) to deal with.</p>
+<p>This project has been a blast so far, and I&rsquo;m excited to keep improving it. If you want to follow along, check out the <a href="https://theofficialssebs.itch.io/guac-and-load" target="_blank">Itch.io page</a> for updates.</p>
+<p>Back to the code - I&rsquo;ve got burritos (and zombies) to deal with.</p>
 <p><strong>Thanks for reading!</strong></p>
 </div>
   <script>
