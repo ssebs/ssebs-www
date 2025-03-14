@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <base href="/" /><title> My Blog </title>
+  <base href="/" /><title> Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs </title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
 
@@ -89,11 +89,10 @@
                         </a>
                     </li>
                     
-                    
                     <li>
                         <a href="/blog/" title="My Blog"
-                            class="md:hover:text-quaternary text-quaternary block ">
-                            <span class="active">Blog
+                            class="md:hover:text-quaternary text-gray-200 block ">
+                            <span>Blog
                             </span>
                         </a>
                     </li>
@@ -165,7 +164,10 @@
     <div class="m-4">
       <ul class="my-2 flex text-white-dim"><li class=""><a href="/">Home</a></li>
         <div class="mx-1" >&gt;</div>
-    <li class=""><a href="/blog/">My Blog</a></li>
+        <li class=""><a href="/blog/">Blog
+        </a></li>
+        <div class="mx-1" >&gt;</div>
+    <li class=""><a href="/blog/guac-and-load-update-1/">Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</a></li>
 </ul>
       
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -187,6 +189,9 @@
             </a><a href="./contact"
                 class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
                 Contact me!
+            </a><a href="./blog"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary">
+                Dive into my blog!
             </a></div>
 
         <div class="flex justify-center flex-wrap gap-3 py-3">
@@ -239,140 +244,301 @@
     </div>
 </div></div>
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
-<div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-	<h1 class="text-2xl">My Blog</h1>
-	<div class="post-content"><p>Here I share the stories behind my projects—the process, the challenges, and the lessons learned.</p>
-<p>I’m not a professional writer, but I want to share what I’ve learned through my experiences. Hopefully, something here resonates with you.</p>
-<p>If you&rsquo;re curious about what worked, what didn&rsquo;t, and how it all came together, check out my latest posts below!</p></div>
-	
-	<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
-		
-		
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
+    <h1 class="text-2xl">Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</h1>
 
-<div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
-  
-  <a href="/blog/guac-and-load-update-1/" class="grid gap-4 self-start">
-    <div class="text-lg font-medium">
-      Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs
-
+    <div class="flex flex-wrap gap-2 text-base h-fit">
       
-      <div class="text-sm italic text-quaternary py-2">
-        Mar 13, 2025
-      </div></div>
-    <div style="height: 248px;">
-      <img src="./img/guac-and-load-gal/guac-and-load-0.jpg" alt="./img/guac-and-load-gal/guac-and-load-0.jpg"
-        style="max-height: 248px; margin: auto;">
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div></div>
+  <div class="post-content"><p><a href="https://theofficialssebs.itch.io/guac-and-load" target="_blank">Itch.io Page</a></p>
+<h2 id="whats-guac-and-load">What&rsquo;s Guac and Load?</h2>
+<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-0.jpg" width="512px" alt="Game screenshot">
+<p><strong>Guac and Load</strong> is what I&rsquo;m calling my first 3D video game. It&rsquo;s a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.</p>
+<blockquote>
+<p>Okay&hellip; what does that mean?</p>
+</blockquote>
+<p>It&rsquo;s a restaurant simulator, like Fast Food Simulator or Supermarket Simulator, but with a twist:</p>
+<p>Once you start missing orders, some of the customers are a <strong>lot</strong> more&hellip; &ldquo;impatient&rdquo; than others. Some are even willing to fight for their food! You need to <em>Guac and Load</em> to fight them off and survive.</p>
+<p>Basically, it&rsquo;s a half work-simulator, half zombies game.</p>
+<h2 id="what-do-i-have-so-far">What do I have so far?</h2>
+<p>I started this project in early February 2025 after my best friend suggested making a Chipotle Simulator.</p>
+<p>After a few weeks of <del>strugging with</del> <strong>learning</strong> <a href="https://godotengine.org/" target="_blank">Godot</a>, I’ve got the core gameplay loop working, and my creative juices flowing!</p>
+<p>Right now, you can:</p>
+<ul>
+<li>Cook food (rice, beans, meat, etc.).</li>
+<li>Chop ingredients to add to the food trays.</li>
+<li>Assemble bowls based on customer orders. (Burritos coming soon)</li>
+<li>Interact with customers and complete transactions.</li>
+<li>Earn money.</li>
+</ul>
+<p>It’s starting to feel like a game, but there’s still a long way to go.</p>
+<h2 id="whats-next">What’s next?</h2>
+<h3 id="gameplay">Gameplay</h3>
+<p>I&rsquo;d like to add some more features to make the game more interesting / complete.</p>
+<ul>
+<li>Progression
+<ul>
+<li>Unlocking more food types</li>
+<li>Unlocking more weapons</li>
+<li>Upgrades</li>
+<li>Emotes?</li>
+</ul>
+</li>
+<li>Zombies mode</li>
+<li>Customer/Zombie AI</li>
+<li>Day/night cycle
+<ul>
+<li>I&rsquo;m still deciding, but I think this is how I&rsquo;ll switch between working and fighting off zombies?</li>
+</ul>
+</li>
+<li>Being able to save the game would also be nice.</li>
+</ul>
+<h3 id="art">Art</h3>
+<p>Right now, the game is very &ldquo;programmer art&rdquo; — it works, but it’s not pretty. The next big step is <strong>art assets</strong>, so everything looks more like an actual restaurant and less like a debug playground.</p>
+<p>Aside from replacing all the 3D models, I need to refine:</p>
+<ul>
+<li>UI elements for order management.</li>
+<li>Better visual feedback for cooking and prepping.</li>
+<li>Animations to make interactions feel smoother.</li>
+</ul>
+
+
+
+
+<div class="gallery">
+  
+    
+    <div class="gallery-item">
+      <img src="/img/guac-and-load-gal/guac-and-load-0.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
     </div>
-
-  </a>
-
-  <p class="text-lg text-white-dim">A look at the early days of Guac and Load—game loops, Godot struggles, and enough programmer art to make your eyes water.</p>
   
-  
-
-</div>
-		
-
-<div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
-  
-  <a href="/blog/mmpguieditor/" class="grid gap-4 self-start">
-    <div class="text-lg font-medium">
-      How I Improved my Macro Pad with a Drag-and-Drop Config Editor
-
-      
-      <div class="text-sm italic text-quaternary py-2">
-        Jan 3, 2025
-      </div></div>
-    <div style="height: 248px;">
-      <img src="/img/ConfigEditor.png" alt="/img/ConfigEditor.png"
-        style="max-height: 248px; margin: auto;">
+    
+    <div class="gallery-item">
+      <img src="/img/guac-and-load-gal/guac-and-load-1.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
     </div>
-
-  </a>
-
-  <p class="text-lg text-white-dim">I upgraded my Macro Pad with a WYSIWYG editor, drag-and-drop functionality, and MVC.</p>
   
-  
-
-</div>
-		
-
-<div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
-  
-  <a href="/blog/bizcard/" class="grid gap-4 self-start">
-    <div class="text-lg font-medium">
-      3D Printing my Business Card
-
-      
-      <div class="text-sm italic text-quaternary py-2">
-        Dec 26, 2024
-      </div></div>
-    <div style="height: 248px;">
-      <img src="/img/bizcardboth.jpg" alt="/img/bizcardboth.jpg"
-        style="max-height: 248px; margin: auto;">
+    
+    <div class="gallery-item">
+      <img src="/img/guac-and-load-gal/guac-and-load-2.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
     </div>
-
-  </a>
-
-  <p class="text-lg text-white-dim">Learn about how I 3D printed a business card with a carbon fiber texture.</p>
   
-  
-
-</div>
-		
-
-<div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
-  
-  <a href="/blog/mvctipcalc/" class="grid gap-4 self-start">
-    <div class="text-lg font-medium">
-      Learning the MVC pattern by making a Tip Calculator
-
-      
-      <div class="text-sm italic text-quaternary py-2">
-        Dec 11, 2024
-      </div></div>
-    <div style="height: 248px;">
-      <img src="/img/MVCTipCalc.png" alt="/img/MVCTipCalc.png"
-        style="max-height: 248px; margin: auto;">
+    
+    <div class="gallery-item">
+      <img src="/img/guac-and-load-gal/guac-and-load-3.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
     </div>
-
-  </a>
-
-  <p class="text-lg text-white-dim">Learning the MVC pattern for my MiniMacroPad by making a Tip Calculator in Go.</p>
   
-  
-
-</div>
-		
-
-<div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
-  
-  <a href="/blog/minimacropad/" class="grid gap-4 self-start">
-    <div class="text-lg font-medium">
-      3D printing and coding my Mini Macro Pad
-
-      
-      <div class="text-sm italic text-quaternary py-2">
-        Dec 10, 2024
-      </div></div>
-    <div style="height: 248px;">
-      <img src="/img/MMPPrinted.jpg" alt="/img/MMPPrinted.jpg"
-        style="max-height: 248px; margin: auto;">
+    
+    <div class="gallery-item">
+      <img src="/img/guac-and-load-gal/guac-and-load-4.jpg" width="256px" alt="Gallery Image" onclick="openLightbox(event)">
     </div>
-
-  </a>
-
-  <p class="text-lg text-white-dim">The journey of making my Mini Macro Pad was created and the challenges I faced along the way.</p>
   
-  
-
 </div>
-	</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close" onclick="event.stopPropagation();">&times;</span>
+  <div class="lightbox-container" onclick="event.stopPropagation();">
+    <a class="prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</a>
+    <img id="lightbox-img" class="lightbox-content" style="display: none;">
+    <a class="next" onclick="changeImage(1); event.stopPropagation();">&#10095;</a>
+  </div>
+</div>
+
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  gap: 1rem;
+}
+.gallery-item img {
+  width:256px;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+}
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  display: block;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+.prev, .next {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
+
+<script>
+let currentIndex = 0;
+let images = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  images = Array.from(document.querySelectorAll(".gallery-item img"));
+  closeLightbox()
+});
+
+function openLightbox(event) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightbox.style.display = "flex";
+  lightboxImg.style.display = "block";
+  lightboxImg.src = event.target.src;
+  currentIndex = images.indexOf(event.target);
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeImage(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  } else if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  const lightboxImg = document.getElementById("lightbox-img");
+  lightboxImg.style.display = "block";
+  lightboxImg.src = images[currentIndex].src;
+}
+</script>
+
+<h3 id="misc">Misc</h3>
+<p>I&rsquo;ve also got to add more stuff to the game for the gameplay that I&rsquo;ve already made:</p>
+<ul>
+<li>More food (cheese, sour cream, drinks, chips, and <strong>guac</strong>, for example)</li>
+<li>Changing the way you fill the bowls
+<ul>
+<li>Right now, you just click to add 1 unit of food to a bowl.</li>
+<li>Later, I&rsquo;d like to click and hold to add as much or as little as you&rsquo;d like</li>
+</ul>
+</li>
+<li>Fixing some technical debt
+<ul>
+<li>I won&rsquo;t get into this for now 😁</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-ive-learned-so-far">What I’ve learned so far</h2>
+<p>This project has been a crash course in structuring game code <em>correctly</em> — or at least learning how to refactor as I go.</p>
+<p>Here are some of my takeaways so far&hellip;</p>
+<h3 id="refactoring-is-inevitable">Refactoring is inevitable</h3>
+<p>The more I learn about Godot, the more I realize I could have done things better. Instead of rewriting everything, I focus on fixing one system at a time — <em>MVP first, polish later.</em></p>
+<p>This works for a while, but eventually the <a href="https://www.youtube.com/shorts/WHQZ1gKUQRo" target="_blank">spaghetti</a> catches up to you. Reading the Godot docs, and watching Youtube tutorials helped keep me learning the right way to do things.</p>
+<p>For example, calling functions from other scripts is usually a breeze in programming. You&rsquo;d just import the file and call the function you need, but in Godot you must use <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html" target="_blank">signals</a>.</p>
+<p>Signals are an implementation of the <a href="https://gameprogrammingpatterns.com/observer.html" target="_blank">Observer</a> pattern, and since Godot is Node/tree based, they are used frequently.</p>
+<p>Without getting into too much detail, you can set a <code>signal</code> on a child class. E.g.<code>Customer</code> =&gt; <code>order_updated(order: OrderResource)</code>.</p>
+<p>From the parent, you can connect a callback function to that, so when a Customer&rsquo;s order has been updated, the parent can know about it.</p>
+<h3 id="physics-and-game-logic-dont-always-mix">Physics and game logic don’t always mix</h3>
+<p>My food objects started as <code>RigidBody3D</code>, but handling physics while keeping items manageable was a headache. Switching to custom classes and <code>Resources</code> helped keep a separation of concerns. I&rsquo;m still learning about <code>Resources</code>, but a good use case for my game is a Customer&rsquo;s order.</p>
+<p>An <code>OrderResource</code> has a list of <code>FoodItemResources</code> and a function to generate a new random order. These <code>FoodItemResources</code> keep track of the type of food they are, the cook state, name, and have a signal that fires when one of these values change.</p>
+<p>For example, a piece of chicken might have this data:</p>
+<ul>
+<li><strong>Name</strong>: <code>Pollo Asado</code></li>
+<li><strong>CookState</strong>: <code>COOKED</code></li>
+<li><strong>FoodType</strong>: <code>CHICKEN</code></li>
+<li><strong>NeedsChopping</strong>: <code>True</code></li>
+</ul>
+<h3 id="state-machines">State Machines</h3>
+<p>To get everything moving, I was mixing my logic and animations in 1 <code>customer.gd</code> file, but that was proving to be a challenge when I wanted more complex logic. I soon learned about State Machines.</p>
+<p>Essentially, the customer AI can be in 1 of many <code>State</code>s, and will play a specific animation and have logic related to that state.</p>
+<ul>
+<li>For example, <code>IdleState</code> just plays the &ldquo;Idle&rdquo; animation.</li>
+<li>The <code>WalkingState</code> moves the AI to the next point in it&rsquo;s navigation, along with playing and looping the &ldquo;Walking&rdquo; animation.</li>
+<li>Finally, when the <code>Customer</code> pays and leaves, they enter the <code>LeaveState</code>, where they walk away from the building and play the &ldquo;Death&rdquo; animation at the end, then despawn.</li>
+</ul>
+<h2 id="where-can-i-see-more">Where can I see more?</h2>
+<p>You can play the demo / dev versions of the game now on <a href="https://theofficialssebs.itch.io/guac-and-load" target="_blank">Itch.io</a>!</p>
+<p>I&rsquo;m also uploading small updates on my Youtube channel, here&rsquo;s the playlist if you&rsquo;d like to check out the progression!</p>
+<div class="videoWrapper">
+<iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=URPdRxzi07To_0BU&amp;list=PLaWBDhKq75KUStN0ub6OqckbAyCvIGxad" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This project has been a blast so far, and I’m excited to keep improving it. If you want to follow along, check out the <a href="https://theofficialssebs.itch.io/guac-and-load" target="_blank">Itch.io page</a> for updates.</p>
+<p>Back to the code - I’ve got burritos (and zombies) to deal with.</p>
+<p><strong>Thanks for reading!</strong></p>
+</div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+  <div id="comments_section" style="display: none;">
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="a285d5d5a3253d69f06f2963ace78733" data-page-url="http://localhost:1313/blog/guac-and-load-update-1/" data-page-title="Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
+
 </div>
         </div>
       </div>

@@ -6,7 +6,7 @@
     <description>Recent content in Programming on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Feb 2025 17:05:19 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Mar 2025 20:54:26 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini Macro Pad</title>
@@ -63,6 +63,13 @@
       <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
       <guid>http://localhost:1313/projects/tipr/</guid>
       <description>Github Repo&#xA;A tip calculator that shows the tip amount and the total amount.</description>
+    </item>
+    <item>
+      <title>Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</title>
+      <link>http://localhost:1313/blog/guac-and-load-update-1/</link>
+      <pubDate>Thu, 13 Mar 2025 20:54:26 -0700</pubDate>
+      <guid>http://localhost:1313/blog/guac-and-load-update-1/</guid>
+      <description>Itch.io Page&#xA;What&amp;rsquo;s Guac and Load? Guac and Load is what I&amp;rsquo;m calling my first 3D video game.</description>
     </item>
     <item>
       <title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title>
