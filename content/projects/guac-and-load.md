@@ -7,6 +7,8 @@ date: 2025-02-25T17:05:19-08:00
 weight: 20
 tags: [programming, gamedev, python]
 ---
+> Interested in the behind-the-scenes? Check out [dev update 1](/blog/guac-and-load-update-1/).
+
 Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/)! 
 
 ## What is it?

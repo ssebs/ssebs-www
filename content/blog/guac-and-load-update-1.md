@@ -2,15 +2,15 @@
 title: 'Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs'
 slug: guac-and-load-update-1
 shortdesc: A look at the early days of Guac and Load—game loops, Godot struggles, and enough programmer art to make your eyes water.
-feature: ./img/guac-and-load-gal/guac-and-load-5.jpg
+feature: ./img/guac-and-load-gal/guac-and-load.png
 date: 2025-03-13T20:54:26-07:00
 weight: 25
 tags: [programming, gamedev]
 ---
-[Itch.io Page](https://theofficialssebs.itch.io/guac-and-load)
+Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/) and the [project page](/projects/guac-and-load/)
 
 ## What's Guac and Load?
-<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-5.jpg" width="512px" alt="Game screenshot">
+<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load.png" width="512px" alt="Game screenshot">
 
 **Guac and Load** is what I'm calling my first 3D video game. It's a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival. 
 
@@ -109,7 +109,7 @@ Essentially, the customer AI can be in 1 of many `State`s, and will play a speci
   - Finally, when the `Customer` pays and leaves, they enter the `LeaveState`, where they walk away from the building and play the "Death" animation at the end, then despawn.
   
 ## Where can I see more?
-You can play the demo / dev versions of the game now on [Itch.io](https://theofficialssebs.itch.io/guac-and-load)!
+Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/)! 
 
 I'm also uploading small updates on my Youtube channel, here's the playlist if you'd like to check out the progression!
 <div class="videoWrapper">
@@ -118,7 +118,7 @@ I'm also uploading small updates on my Youtube channel, here's the playlist if y
 
 ## Final Thoughts
 
-This project has been a blast so far, and I'm excited to keep improving it. If you want to follow along, check out the [Itch.io page](https://theofficialssebs.itch.io/guac-and-load) for updates.
+This project has been a blast so far, and I'm excited to keep improving it. If you want to follow along, check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/) for updates.
 
 Back to the code - I've got burritos (and zombies) to deal with.
 
