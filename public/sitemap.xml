@@ -14,11 +14,11 @@
     <loc>http://localhost:1313/contact/</loc>
     <lastmod>2024-05-31T15:43:51-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/guac-and-load/</loc>
-    <lastmod>2025-02-25T17:05:19-08:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/projects/go-mmp/</loc>
     <lastmod>2024-05-18T14:08:45-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/guac-and-load/</loc>
+    <lastmod>2025-02-25T17:05:19-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/mvctipcalc/</loc>
     <lastmod>2024-11-14T17:53:17-08:00</lastmod>
