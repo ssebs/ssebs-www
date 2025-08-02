@@ -163,11 +163,22 @@ body {
   float: none;
   margin: 0.5rem;
 }
+.custom-float-left {
+  float: none;
+  margin: 0.5rem;
+}
 
 /* lg breakpoint: float right */
 @media (min-width: 1024px) {
   .custom-float-right {
     float: right;
+    margin: 0.5rem;
+  }
+}
+/* lg breakpoint: float left */
+@media (min-width: 1024px) {
+  .custom-float-left {
+    float: left;
     margin: 0.5rem;
   }
 }
