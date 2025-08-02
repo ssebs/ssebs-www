@@ -167,7 +167,7 @@
         <li class=""><a href="/blog/">Blog
         </a></li>
         <div class="mx-1" >&gt;</div>
-    <li class=""><a href="/blog/replace_me_or_delete/">Guac and Load Update #2: Lessons learned &amp; Retro</a></li>
+    <li class=""><a href="/blog/guac-and-load-update-2/">Guac and Load Update #2: Lessons learned &amp; Retro</a></li>
 </ul>
       
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -248,8 +248,118 @@
   <div class="grud">
     <h1 class="text-2xl">Guac and Load Update #2: Lessons learned &amp; Retro</h1>
 
-    </div>
-  <div class="post-content"><p><a href="https://github.com/ssebs/" target="_blank">Github Repo</a></p>
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/gamedev"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+    </div></div>
+  <div class="post-content"><blockquote>
+<p>This is the second Guac &amp; Load update, check out the <a href="/blog/guac-and-load-update-1">first one</a> to see how I got started.</p>
+</blockquote>
+<h2 id="status-update">Status Update</h2>
+<p>Alright, first thing&rsquo;s first: I&rsquo;ve completed the game &amp; it&rsquo;s live now on <a href="https://store.steampowered.com/app/3800880/Guac__Load/" target="_blank">Steam</a>!</p>
+<p>My first blog post about Guac &amp; Load went into detail about the development process, but I&rsquo;ll keep that section short this time.</p>
+<p>I decided (a bit late in the process) to publish the game on Steam. I wanted to add some end goal without spending <em>too</em> much time working on the game, so I added some achievements.</p>
+<h1 id="add_image_here">ADD_IMAGE_HERE</h1>
+<h2 id="achievements">Achievements</h2>
+<p>I won&rsquo;t list all of them, but here are a few notable ones:</p>
+<ul>
+<li><strong>Going deaf</strong>
+<ul>
+<li>
+<h1 id="add_image_here-1">ADD_IMAGE_HERE</h1>
+</li>
+<li>This was mostly just to test the achievement API, but ended up being a fun addition.</li>
+<li>To get this, you open up the pause menu and click the &ldquo;Go Deaf&rdquo; button.</li>
+<li>Once you click it, the THX sound plays at full volume &amp; you get your achievement.</li>
+</ul>
+</li>
+<li><strong>Washing your hands</strong>
+<ul>
+<li>
+<h1 id="add_image_here-2">ADD_IMAGE_HERE</h1>
+</li>
+<li>I had a sink in the kitchen, so I made it useful.</li>
+<li>If you wash your hands during a shift, you won&rsquo;t give the customers Z-Coli, meaning they won&rsquo;t turn into zombies.</li>
+</ul>
+</li>
+<li><strong>Lasting 5 zombies rounds</strong>
+<ul>
+<li>
+<h1 id="add_image_here-3">ADD_IMAGE_HERE</h1>
+</li>
+<li>If you didn&rsquo;t wash your hands, you&rsquo;d eventually give the customers Z-Coli &amp; turn them into zombies.</li>
+<li>This achievement is pretty self explanatory.</li>
+</ul>
+</li>
+<li><strong>100% perfect orders</strong>
+<ul>
+<li>
+<h1 id="add_image_here-4">ADD_IMAGE_HERE</h1>
+</li>
+<li>If you make all the bowls perfectly (before the outbreak), you&rsquo;ll get this one.</li>
+</ul>
+</li>
+</ul>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<p>In working on the game for 6 months, I learned a thing or two.</p>
+<h3 id="1-to-make-a-game-i-had-to-wear-many-hats">1: To make a game, I had to wear many hats:</h3>
+<ul>
+<li>Programming</li>
+<li>Art (3D models + screenshots + trailer for steam page)</li>
+<li>Game / level design</li>
+<li>Project Manager</li>
+<li>Play tester</li>
+<li>&hellip;and more</li>
+</ul>
+<h3 id="2-to-release-a-game-i-had-to">2: To <strong>release</strong> a game, I had to:</h3>
+<ul>
+<li>Let it be a bit janky
+<ul>
+<li>Getting an MVP out there was the goal, so some features were scrapped</li>
+</ul>
+</li>
+<li>Context switch for most of the project</li>
+<li>Spent a lot of time working on the game
+<ul>
+<li>Pushing through the last stages is hard</li>
+<li>Not letting myself get burnt out was very important too</li>
+<li>Balance my after-work time, I can&rsquo;t just grind for 6 months and ignore my other duties.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-i-needed-a-clearly-scoped-goal">3: I needed a clearly scoped goal</h3>
+<p>It turned out, I didn&rsquo;t have a clear gameplay loop planned out. This proved to be an issue.</p>
+<p>When I started the project, I wanted to make a Chipotle Simulator. Just cooking food &amp; preparing bowls. This got boring to play, and it was going to be a lot of work to add progression to try and make it fun.</p>
+<p>I came up with the name &ldquo;Guac &amp; Load&rdquo;, which was great, but there was no &ldquo;&amp; Load&rdquo; aspect to the game yet. I wanted to make a zombie game before, so I figured I could just add that.</p>
+<p>The problem was the transition from one game mode to the next, how would I turn a cooking sim into a zombie game?</p>
+<p>This is where the motivation of making the game was starting to get lost, and I had to stick with being diciplined to make it to release.</p>
+<p>I ended up making a day cycle, and on the 3rd day there would be a Z-Coli outbreak if you didn&rsquo;t wash your hands. It&rsquo;s okay, but good enough.</p>
+<h3 id="4-the-9090-rule-is-real">4: The 90/90 rule is real</h3>
+<p>If you aren&rsquo;t aware, the 90/90 rule states that:</p>
+<blockquote>
+<p>The first 90% of a software project takes 90% of the time. The remaining 10% takes another 90% of the time.</p>
+</blockquote>
+<p>In other words, getting the gameplay loop going, adding features, making the game look like it&rsquo;s ready takes up the majority of the time, but the <strong>polish</strong> takes just as long.</p>
+<p>Getting the game-breaking bugs fixed, UI working, save systems, exporting, and all the things to make a game feel completed takes just as much time.</p>
+<h2 id="retrospective">Retrospective</h2>
+<h1 id="add_image_here-5">ADD_IMAGE_HERE</h1>
+<p>For all the work that it took, it&rsquo;s an okay game. I&rsquo;m proud of it, but it&rsquo;s not breaking any sales records.</p>
+<p>I&rsquo;m happy I spent the time learning how to make a game, and I&rsquo;m really happy that I put in the work to finish the project. I really didn&rsquo;t want a half finished demo that was too buggy to give out.</p>
+<p>I released the game as early access, so I&rsquo;ll eventually add some more features &amp; bug fixes.</p>
+<p>I would make another game, for sure. I think instead of planning out how I&rsquo;d implement a game, I&rsquo;d plan out what I want the game to be. More focus on the gameplay, and less on the technical side.</p>
+<p>I am saying that now that I have made a game &amp; know how that&rsquo;s done.</p>
+<h2 id="whats-next">What&rsquo;s Next</h2>
+<p>Now that I&rsquo;ve completed my game, I&rsquo;m going to take a break from game dev. This probably means I&rsquo;m going to forget my Godot specific knowledge, but that&rsquo;s alright.</p>
+<p>I have a backlog of other project, and other hobbies to get back into.</p>
+<p>Once I get the gamedev itch again, I&rsquo;ll be more prepared.</p>
+<p><strong>Thanks for reading!</strong></p>
 </div>
   <script>
     document.querySelectorAll(".post-content img").forEach((imgElem) => {
@@ -273,7 +383,7 @@
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
     data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
-      data-page-id="ee211cb0b09c9032e4e34cb22311d6ba" data-page-url="http://localhost:1313/blog/replace_me_or_delete/" data-page-title="Guac and Load Update #2: Lessons learned &amp; Retro"
+      data-page-id="ee211cb0b09c9032e4e34cb22311d6ba" data-page-url="http://localhost:1313/blog/guac-and-load-update-2/" data-page-title="Guac and Load Update #2: Lessons learned &amp; Retro"
       data-theme="dark">
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>

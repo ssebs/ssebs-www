@@ -6,8 +6,15 @@
     <description>Recent content in My Blog on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 20:54:26 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 02 Aug 2025 07:26:45 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guac and Load Update #2: Lessons learned &amp; Retro</title>
+      <link>http://localhost:1313/blog/guac-and-load-update-2/</link>
+      <pubDate>Sat, 02 Aug 2025 07:26:45 -0700</pubDate>
+      <guid>http://localhost:1313/blog/guac-and-load-update-2/</guid>
+      <description>This is the second Guac &amp;amp; Load update, check out the first one to see how I got started.</description>
+    </item>
     <item>
       <title>Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</title>
       <link>http://localhost:1313/blog/guac-and-load-update-1/</link>
