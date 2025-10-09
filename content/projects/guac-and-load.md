@@ -4,7 +4,7 @@ slug: guac-and-load
 shortdesc: Guac & Load is a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.
 feature: ./img/guac-and-load-gal/guac-and-load-0.png
 date: 2025-02-25T17:05:19-08:00
-weight: 21
+weight: 22
 tags: [programming, gamedev, python]
 ---
 > Interested in the behind-the-scenes? Check out [dev update 1](/blog/guac-and-load-update-1/) and [update 2](/blog/guac-and-load-update-2/).
