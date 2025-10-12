@@ -18,8 +18,6 @@ https://ssebs.com website code.
     - text/content covers up sidebar, sidebar covers up img. (parallax)
 - [ ] mini game Easter egg like Chrome dino
 
-## Design
-![home](.excalidraw.png)
 
 ## Dev setup
 - `git clone https://github.com/ssebs/ssebs-www`
@@ -43,6 +41,9 @@ https://ssebs.com website code.
 ### Docker
 - `docker build -t ssebs/ssebs-www .`
 - `docker run -p 8080:8080 ssebs/ssebs-www`
+
+## Wireframe
+![home](.excalidraw.png)
 
 ## License
 [MIT](./LICENSE)
