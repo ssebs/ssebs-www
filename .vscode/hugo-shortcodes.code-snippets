@@ -1,0 +1,92 @@
+{
+  "Hugo Image Float Right": {
+    "scope": "markdown",
+    "prefix": "img-float-right",
+    "body": [
+      "{{< img-float-right src=\"$1\" width=\"$2\" alt=\"$3\" >}}"
+    ],
+    "description": "Insert a right-floating image with custom width"
+  },
+  "Hugo Image Full Width": {
+    "scope": "markdown",
+    "prefix": "img-full",
+    "body": [
+      "{{< img-full src=\"$1\" alt=\"$2\" >}}"
+    ],
+    "description": "Insert a full-width image with vertical margin"
+  },
+  "Hugo Image Block": {
+    "scope": "markdown",
+    "prefix": "img-block",
+    "body": [
+      "{{< img-block src=\"$1\" width=\"$2\" alt=\"$3\" >}}"
+    ],
+    "description": "Insert a standard block image with optional width"
+  },
+  "Hugo Image Block with Class": {
+    "scope": "markdown",
+    "prefix": "img-block-class",
+    "body": [
+      "{{< img-block src=\"$1\" width=\"$2\" class=\"$3\" alt=\"$4\" >}}"
+    ],
+    "description": "Insert a block image with custom Tailwind classes"
+  },
+  "Hugo Image (existing shortcode)": {
+    "scope": "markdown",
+    "prefix": "img",
+    "body": [
+      "{{< image src=\"$1\" title=\"$2\" class=\"$3\" >}}"
+    ],
+    "description": "Insert image using existing image shortcode"
+  },
+  "Hugo Image Gallery": {
+    "scope": "markdown",
+    "prefix": "img-gallery",
+    "body": [
+      "{{< img-gallery gallery_dir=\"$1\" width=\"$2\" >}}"
+    ],
+    "description": "Insert an image gallery with lightbox from a directory"
+  },
+  "Hugo Spacer": {
+    "scope": "markdown",
+    "prefix": "spacer",
+    "body": [
+      "{{< spacer ${1:1rem} >}}"
+    ],
+    "description": "Insert a vertical spacer with custom height"
+  },
+  "Hugo Raw HTML": {
+    "scope": "markdown",
+    "prefix": "rawhtml",
+    "body": [
+      "{{< rawhtml >}}",
+      "$1",
+      "{{< /rawhtml >}}"
+    ],
+    "description": "Insert raw HTML block"
+  },
+  "Hugo Blue Section": {
+    "scope": "markdown",
+    "prefix": "blueSection",
+    "body": [
+      "{{< blueSection >}}",
+      "$1",
+      "{{< /blueSection >}}"
+    ],
+    "description": "Insert a blue section container"
+  },
+  "Hugo Columns": {
+    "scope": "markdown",
+    "prefix": "columns",
+    "body": [
+      "{{< columns >}}",
+      "$1",
+      "",
+      "<--COLSPLIT-->",
+      "",
+      "$2",
+      "{{< /columns >}}"
+    ],
+    "description": "Insert a 2-column layout (use <--COLSPLIT--> to separate columns)"
+  }
+}

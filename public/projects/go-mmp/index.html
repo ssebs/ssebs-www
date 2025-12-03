@@ -243,7 +243,7 @@
         </ul>
     </div>
 </div></div>
-        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full overflow-x-hidden">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="grud">
     <h1 class="text-2xl">Mini Macro Pad</h1>
@@ -271,8 +271,9 @@
         gui
       </a>
     </div></div>
-  <div class="post-content"><blockquote>
-<p>Read how <a href="/blog/minimacropad/">I made the macro pad</a>, and how <a href="/blog/mmpguieditor/">I added a config editor</a> to it.</p></blockquote>
+  <div class="post-content overflow-x-hidden break-words"><blockquote>
+<p>Read how <a href="/blog/minimacropad/">I made the macro pad</a>, and how <a href="/blog/mmpguieditor/">I added a config editor</a> to it.</p>
+</blockquote>
 <p><a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo</a></p>
 <div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
 <div>
@@ -307,14 +308,15 @@
 </div>
 <div>
   Screenshot of the GUI:
-  <img src="./img/MMPGUIScreenshot.png">
+  <img class="block" src="./img/MMPGUIScreenshot.png"   alt="Screenshot of the GUI">
+
 </div>
 </div>
 <div style="min-height: 2rem;">
 </div>
 <h2 id="getting-started">Getting started</h2>
 <p>If you have a arduino/serial macro pad ready, great! You get to use the full functionality of go-mmp!</p>
-<p>See the the <a href="#3d-printing--hardware">3D Printing &amp; Hardware</a> section to get started with the physical device.</p>
+<p>See the the <a href="#3d-printing--hardware">3D Printing &amp;amp; Hardware</a> section to get started with the physical device.</p>
 <p>Don&rsquo;t have an Arduino but still want to run macros? You can use the GUI-only mode, which is the default, so you&rsquo;re all set!</p>
 <p>Just click on the buttons to run Macros.</p>
 <div style="min-height: 2rem;">
@@ -337,12 +339,14 @@
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
 <div>
 <p>Just go to <strong>Edit</strong> &gt; <strong>Edit Config</strong>, and drag-and-drop your macros into the correct positions</p>
-<img src="./img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+<img class="block" src="./img/ConfigEditor.png" width="400px"  alt="Config Editor Screenshot">
+
 </div>
 <div>
 Click on the name to change what they do.
 <p>Here&rsquo;s the &ldquo;<strong>gg</strong>&rdquo; Macro for example:</p>
-<img src="./img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+<img class="block" src="./img/MacroEditor.png" width="360px"  alt="Macro Editor Screenshot">
+
 </div>
 </div>
 <div style="min-height: 2rem;">
@@ -352,11 +356,13 @@ Click on the name to change what they do.
 <div style="display: grid; grid-template-columns: 50% 50%; gap: 1rem;">
 <div>
 <p>My 3D Printed housing is available on <a href="https://than.gs/m/710028" target="_blank">thangs.com</a>.</p>
-<img src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+<img class="block" src="./img/MMPPrinted.jpg" width="256px"  alt="physical macro pad">
+
 </div>
 <div>
 <p>Wiring under the hood (please forgive the newbie soldering)</p>
-<img src="./img/MMPWiring.jpg" width="256px" alt="macro pad wiring">
+<img class="block" src="./img/MMPWiring.jpg" width="256px"  alt="macro pad wiring">
+
 </div>
 </div>
 <div style="min-height: 2rem;">
@@ -368,7 +374,8 @@ Click on the name to change what they do.
 <li>See the <a href="./arduino-mmp.ino">arduino-mmp.ino</a> source code.</li>
 <li>
 <blockquote>
-<p>Connecting and understanding baudrate, etc. is out of the scope of this guide.</p></blockquote>
+<p>Connecting and understanding baudrate, etc. is out of the scope of this guide.</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -376,14 +383,14 @@ Click on the name to change what they do.
 <ul>
 <li>If your device sends 1 for the first button instead of 0, you can set the Indexing setting to 1</li>
 <li>Medatata Editor:</li>
-<li>
-<img src="./img/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot">
+<li><img class="block" src="./img/MetadataEditor.png" width="400px"  alt="MetadataEditor screenshot">
 </li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/" target="_blank">https://github.com/ssebs/MiniMacroPad/</a></p></blockquote>
+<p>If you&rsquo;re curious, check out the older python code at <a href="https://github.com/ssebs/MiniMacroPad/" target="_blank">https://github.com/ssebs/MiniMacroPad/</a></p>
+</blockquote>
 <h3 id="example-config-edits">Example Config Edits</h3>
 <div class="videoWrapper">
 <iframe src="https://www.youtube-nocookie.com/embed/il5q0rUNj14?si=QCEOcXhOhrB_0ZgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

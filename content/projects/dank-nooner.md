@@ -8,7 +8,7 @@ weight: 21
 tags: [programming, gamedev, python]
 ---
 
-<img class="custom-float-right ml-3" src="./img/projects/dank-nooner/NewIcon.png" width="300px" alt="Game Icon">
+{{< img-float-right src="./img/projects/dank-nooner/NewIcon.png" width="300px" alt="Game Icon" >}}
 
 [Github Repo](https://github.com/ssebs/danknooner)
 
@@ -49,10 +49,10 @@ For now, the game is playable, so check it out on [Itch.io!](https://theofficial
 
 ## In-Game Screenshots
 
-<img class="my-6" src="./img/projects/dank-nooner/screenshot01.png" width="100%" alt="Screenshot of the game in the main menu">
+{{< img-full src="./img/projects/dank-nooner/screenshot01.png" alt="Screenshot of the game in the main menu" >}}
 
-<img class="my-6" src="./img/projects/dank-nooner/screenshot03.png" width="100%" alt="Screenshot of the gameplay, holding a wheelie">
+{{< img-full src="./img/projects/dank-nooner/screenshot03.png" alt="Screenshot of the gameplay, holding a wheelie" >}}
 
-<img class="my-6" src="./img/projects/dank-nooner/screenshot02.png" width="100%" alt="Screenshot of the game in the tutorial">
+{{< img-full src="./img/projects/dank-nooner/screenshot02.png" alt="Screenshot of the game in the tutorial" >}}
 
-<img class="my-6" src="./img/projects/dank-nooner/screenshot04.png" width="100%" alt="Screenshot of the game in the upgrade menu">
+{{< img-full src="./img/projects/dank-nooner/screenshot04.png" alt="Screenshot of the game in the upgrade menu" >}}

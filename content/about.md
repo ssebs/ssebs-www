@@ -7,7 +7,7 @@ menus: main
 weight: 6
 date: "2024-05-31T15:43:45-07:00"
 ---
-<img src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." width="360px" class="rounded-md border-2 border-primary float-right mx-3" />
+{{< img-block src="./img/me_vacay.jpg" title="Photo of me on my honeymoon." width="360px" class="rounded-md border-2 border-primary float-right mx-3" alt="Photo of me on my honeymoon." >}}
 
 My name is **Sebastian Safari**, I call myself a "professional fixer, hobbyist figure-outer". 
 

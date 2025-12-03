@@ -1,0 +1,1 @@
+<img class="{{ with .Get "class" }}{{ . }}{{ else }}block{{ end }}" src="{{ .Get "src" }}" {{ with .Get "width" }}width="{{ . }}"{{ end }} {{ with .Get "title" }}title="{{ . }}"{{ end }} alt="{{ .Get "alt" }}">

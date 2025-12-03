@@ -17,7 +17,7 @@
   </div>
 
   {{- if .Content }}
-  <div class="post-content">{{ .Content }}</div>
+  <div class="post-content overflow-x-hidden break-words">{{ .Content }}</div>
   <script>
     document.querySelectorAll(".post-content img").forEach((imgElem) => {
       imgElem.addEventListener("click", (event) => {

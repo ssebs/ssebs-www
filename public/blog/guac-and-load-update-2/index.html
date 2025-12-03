@@ -243,7 +243,7 @@
         </ul>
     </div>
 </div></div>
-        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full overflow-x-hidden">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="grud">
     <h1 class="text-2xl">Guac and Load Update #2: Lessons learned &amp; Retro</h1>
@@ -259,10 +259,12 @@
         gamedev
       </a>
     </div></div>
-  <div class="post-content"><blockquote>
-<p>This is the second Guac &amp; Load update, check out the <a href="/blog/guac-and-load-update-1">first one</a> to see how I got started.</p></blockquote>
+  <div class="post-content overflow-x-hidden break-words"><blockquote>
+<p>This is the second Guac &amp; Load update, check out the <a href="/blog/guac-and-load-update-1">first one</a> to see how I got started.</p>
+</blockquote>
 <h2 id="status-update">Status Update</h2>
 <img class="custom-float-right ml-3" src="/img/guac-blog-2/outside.png" width="512px" alt="Game screenshot">
+
 <p>Alright, first thing&rsquo;s first: I&rsquo;ve completed the game &amp; it&rsquo;s live now on <a href="https://store.steampowered.com/app/3800880/Guac__Load/" target="_blank">Steam</a>!</p>
 <p>My first blog post about Guac &amp; Load went into detail about the development process, but I&rsquo;ll keep that section short this time.</p>
 <p>I decided (a bit late in the process) to publish the game on Steam. I wanted to add some end goal without spending <em>too</em> much time working on the game, so I added some achievements.</p>
@@ -271,6 +273,7 @@
 <p>I won&rsquo;t list all of them, but here are a few notable ones:</p>
 <h3 id="going-deaf">Going deaf</h3>
 <img class="custom-float-right ml-3" src="/img/guac-blog-2/go_deaf.png" width="512px" alt="Screenshot of going deaf button in pause menu">
+
 <ul>
 <li>This was mostly just to test the achievement API, but ended up being a fun addition.</li>
 <li>To get this, you open up the pause menu and click the &ldquo;Go Deaf&rdquo; button.</li>
@@ -279,6 +282,7 @@
 <div style="clear: both;"></div>
 <h3 id="washing-your-hands">Washing your hands</h3>
 <img class="custom-float-right ml-3" src="/img/guac-blog-2/wash_hands.png" width="512px" alt="Screenshot of player washing hands">
+
 <ul>
 <li>I had a sink in the kitchen, so I made it useful.</li>
 <li>If you wash your hands during a shift, you won&rsquo;t give the customers Z-Coli, meaning they won&rsquo;t turn into zombies.</li>
@@ -286,6 +290,7 @@
 <div style="clear: both;"></div>
 <h3 id="lasting-5-zombies-rounds">Lasting 5 zombies rounds</h3>
 <img class="custom-float-right ml-3" src="/img/guac-blog-2/zombie_hallway.png" width="512px" alt="Screenshot of zombies">
+
 <ul>
 <li>If you didn&rsquo;t wash your hands, you&rsquo;d eventually give the customers Z-Coli &amp; turn them into zombies.</li>
 <li>This achievement is pretty self explanatory.</li>
@@ -293,7 +298,10 @@
 <div style="clear: both;"></div>
 <h3 id="100-perfect-orders">100% perfect orders</h3>
 <img class="custom-float-right ml-3" src="/img/guac-blog-2/taking_order.png" width="512px" alt="Screenshot of taking orders">
-  - If you make all the bowls perfectly (before the outbreak), you'll get this one.
+
+<ul>
+<li>If you make all the bowls perfectly (before the outbreak), you&rsquo;ll get this one.</li>
+</ul>
 <div style="clear: both;"></div>
 <h2 id="lessons-learned">Lessons Learned</h2>
 <p>In working on the game for 6 months, I learned a thing or two.</p>
@@ -332,11 +340,13 @@
 <h3 id="4-the-9090-rule-is-real">4: The 90/90 rule is real</h3>
 <p>If you aren&rsquo;t aware, the 90/90 rule states that:</p>
 <blockquote>
-<p>The first 90% of a software project takes 90% of the time. The remaining 10% takes another 90% of the time.</p></blockquote>
+<p>The first 90% of a software project takes 90% of the time. The remaining 10% takes another 90% of the time.</p>
+</blockquote>
 <p>In other words, getting the gameplay loop going, adding features, making the game look like it&rsquo;s ready takes up the majority of the time, but the <strong>polish</strong> takes just as long.</p>
 <p>Getting the game-breaking bugs fixed, UI working, save systems, exporting, and all the things to make a game feel completed takes just as much time.</p>
 <h2 id="retrospective">Retrospective</h2>
-<img src="/img/guac-blog-2/meme.jpg" class="m-3" width="500px" alt="Meme">
+<img class="m-3" src="/img/guac-blog-2/meme.jpg" width="500px"  alt="Meme">
+
 <p>For all the work that it took, it&rsquo;s an okay game. I&rsquo;m proud of it, but it&rsquo;s not breaking any sales records.</p>
 <p>I&rsquo;m happy I spent the time learning how to make a game, and I&rsquo;m really happy that I put in the work to finish the project. I really didn&rsquo;t want a half finished demo that was too buggy to give out.</p>
 <p>I released the game as early access, so I&rsquo;ll eventually add some more features &amp; bug fixes.</p>

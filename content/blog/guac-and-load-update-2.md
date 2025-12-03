@@ -11,7 +11,7 @@ tags: [programming, gamedev]
 > This is the second Guac & Load update, check out the [first one](/blog/guac-and-load-update-1) to see how I got started.
 
 ## Status Update
-<img class="custom-float-right ml-3" src="/img/guac-blog-2/outside.png" width="512px" alt="Game screenshot">
+{{< img-float-right src="/img/guac-blog-2/outside.png" width="512px" alt="Game screenshot" >}}
 
 Alright, first thing's first: I've completed the game & it's live now on [Steam](https://store.steampowered.com/app/3800880/Guac__Load/)!
 
@@ -24,7 +24,7 @@ I decided (a bit late in the process) to publish the game on Steam. I wanted to 
 ## Achievements 
 I won't list all of them, but here are a few notable ones:
 ### Going deaf
-<img class="custom-float-right ml-3" src="/img/guac-blog-2/go_deaf.png" width="512px" alt="Screenshot of going deaf button in pause menu">
+{{< img-float-right src="/img/guac-blog-2/go_deaf.png" width="512px" alt="Screenshot of going deaf button in pause menu" >}}
 
   - This was mostly just to test the achievement API, but ended up being a fun addition.
   - To get this, you open up the pause menu and click the "Go Deaf" button.
@@ -33,7 +33,7 @@ I won't list all of them, but here are a few notable ones:
 <div style="clear: both;"></div>
 
 ### Washing your hands
-<img class="custom-float-right ml-3" src="/img/guac-blog-2/wash_hands.png" width="512px" alt="Screenshot of player washing hands">
+{{< img-float-right src="/img/guac-blog-2/wash_hands.png" width="512px" alt="Screenshot of player washing hands" >}}
 
   - I had a sink in the kitchen, so I made it useful. 
   - If you wash your hands during a shift, you won't give the customers Z-Coli, meaning they won't turn into zombies.
@@ -41,7 +41,7 @@ I won't list all of them, but here are a few notable ones:
 <div style="clear: both;"></div>
 
 ### Lasting 5 zombies rounds
-<img class="custom-float-right ml-3" src="/img/guac-blog-2/zombie_hallway.png" width="512px" alt="Screenshot of zombies">
+{{< img-float-right src="/img/guac-blog-2/zombie_hallway.png" width="512px" alt="Screenshot of zombies" >}}
 
   - If you didn't wash your hands, you'd eventually give the customers Z-Coli & turn them into zombies.
   - This achievement is pretty self explanatory.
@@ -49,7 +49,7 @@ I won't list all of them, but here are a few notable ones:
 <div style="clear: both;"></div>
 
 ### 100% perfect orders
-<img class="custom-float-right ml-3" src="/img/guac-blog-2/taking_order.png" width="512px" alt="Screenshot of taking orders">
+{{< img-float-right src="/img/guac-blog-2/taking_order.png" width="512px" alt="Screenshot of taking orders" >}}
   - If you make all the bowls perfectly (before the outbreak), you'll get this one.
 
 <div style="clear: both;"></div>
@@ -101,7 +101,7 @@ Getting the game-breaking bugs fixed, UI working, save systems, exporting, and a
 
 ## Retrospective
 
-<img src="/img/guac-blog-2/meme.jpg" class="m-3" width="500px" alt="Meme">
+{{< img-block src="/img/guac-blog-2/meme.jpg" class="m-3" width="500px" alt="Meme" >}}
 
 For all the work that it took, it's an okay game. I'm proud of it, but it's not breaking any sales records. 
 

@@ -243,7 +243,7 @@
         </ul>
     </div>
 </div></div>
-        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full overflow-x-hidden">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="grud">
     <h1 class="text-2xl">Learning the MVC pattern by making a Tip Calculator</h1>
@@ -263,21 +263,25 @@
         gui
       </a>
     </div></div>
-  <div class="post-content"><blockquote>
-<p>Also see the <a href="/projects/mvctipcalc/">project page</a> and the <a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo</a></p></blockquote>
-<img class="custom-float-right" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+  <div class="post-content overflow-x-hidden break-words"><blockquote>
+<p>Also see the <a href="/projects/mvctipcalc/">project page</a> and the <a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo</a></p>
+</blockquote>
+<img class="custom-float-right ml-3" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+
 <h2 id="why-did-i-make-a-tip-calculator">Why did I make a tip calculator?</h2>
 <p>While working on the <code>v2</code> release of my <a href="/projects/go-mmp/">Mini Macro Pad</a>, I was having trouble managing state between different parts of the GUI.</p>
 <p>After a bit of research, it seemed like the best path forward was to use the MVC, or Model-View-Controller, software architecture pattern to manage my app.</p>
 <!-- > If you'd like to learn more about that, see the [blog post](/blog/mmpguieditor/). -->
 <p>Before I could implement MVC for my Mini Macro Pad, I wanted to really <a href="https://www.merriam-webster.com/dictionary/grok" target="_blank">grok</a> MVC itself. I find that the best way to learn is by doing, so I decided to learn MVC by creating a tip calculator.</p>
 <blockquote>
-<p>I had already created a <a href="https://github.com/ssebs/tipr" target="_blank">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile" target="_blank">two</a>, so I had a starting place.</p></blockquote>
+<p>I had already created a <a href="https://github.com/ssebs/tipr" target="_blank">tip calculator</a> or <a href="https://github.com/ssebs/tipr-mobile" target="_blank">two</a>, so I had a starting place.</p>
+</blockquote>
 <p>The tip calculator a basic form that calculates both the <code>tip amount</code> and <code>total bill amount</code> from the <code>bill</code> and <code>tip %</code></p>
 <p>Since my Mini Macro Pad is written in Go + <a href="https://fyne.io/" target="_blank">fyne.io</a>, I stuck with that.</p>
 <div style="clear: both;"></div>
 <h2 id="what-is-mvc">What is MVC?</h2>
-<img class="custom-float-right" src="/img/mvc.webp" width="320px" alt="MVC Diagram">
+<img class="custom-float-right ml-3" src="/img/mvc.webp" width="320px" alt="MVC Diagram">
+
 <p>Model-View-Controller is a software architecture pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow.</p>
 <p>You can compare this to having a single file that manages what the GUI looks like, what happens when you press a button, and also saving your changes.</p>
 <ul>
@@ -297,7 +301,7 @@
 </ul>
 </li>
 </ul>
-<p>If you&rsquo;d like to learn more about MVC, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8" target="_blank">Derek Banas' tutorial</a>. This was the video that really helped me understand what was happening.</p>
+<p>If you&rsquo;d like to learn more about MVC, check out <a href="https://www.youtube.com/watch?v=dTVVa2gfht8" target="_blank">Derek Banas&#39; tutorial</a>. This was the video that really helped me understand what was happening.</p>
 <div style="clear: both;"></div>
 <h2 id="implementing-mvc">Implementing MVC</h2>
 <p>Now that I had learned about MVC, I put it to use making the tip calculator. Note that the code snippets that you&rsquo;ll see below aren&rsquo;t full examples, if you want to see more details please check out the <a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo</a>.</p>
@@ -368,8 +372,8 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>})
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">tc</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">TipController</span>) <span style="color:#61afef;font-weight:bold">UpdateModelFromView</span>() {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span>	<span style="color:#7f848e">// update model to current values</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span>	<span style="color:#e06c75">billAmount</span>, <span style="color:#e06c75">err</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">GetBillAmount</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span>	<span style="color:#7f848e">// update model to current values
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span><span style="color:#7f848e"></span>	<span style="color:#e06c75">billAmount</span>, <span style="color:#e06c75">err</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">GetBillAmount</span>()
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#c678dd">if</span> <span style="color:#e06c75">err</span> <span style="color:#56b6c2">!=</span> <span style="color:#e5c07b">nil</span> {
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>		<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">SetErrorMsg</span>(<span style="color:#98c379">&#34;Bill amount must be a number.&#34;</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>		<span style="color:#c678dd">return</span>
@@ -384,12 +388,12 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20</span><span>}
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22</span><span><span style="color:#c678dd">func</span> (<span style="color:#e06c75">tc</span> <span style="color:#56b6c2">*</span><span style="color:#e06c75">TipController</span>) <span style="color:#61afef;font-weight:bold">CalcTipAndUpdate</span>() {
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>	<span style="color:#7f848e">// calculate tip and total</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span>	<span style="color:#e06c75">finalTip</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipModel</span>.<span style="color:#61afef;font-weight:bold">GetBillAmount</span>() <span style="color:#56b6c2">*</span> (<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipModel</span>.<span style="color:#61afef;font-weight:bold">GetTipPercent</span>() <span style="color:#56b6c2">/</span> <span style="color:#d19a66">100</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>	<span style="color:#7f848e">// calculate tip and total
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span><span style="color:#7f848e"></span>	<span style="color:#e06c75">finalTip</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipModel</span>.<span style="color:#61afef;font-weight:bold">GetBillAmount</span>() <span style="color:#56b6c2">*</span> (<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipModel</span>.<span style="color:#61afef;font-weight:bold">GetTipPercent</span>() <span style="color:#56b6c2">/</span> <span style="color:#d19a66">100</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25</span><span>	<span style="color:#e06c75">finalTotal</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipModel</span>.<span style="color:#61afef;font-weight:bold">GetBillAmount</span>() <span style="color:#56b6c2">+</span> <span style="color:#e06c75">finalTip</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>	<span style="color:#7f848e">// update view</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span>	<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">SetFinalTipAmount</span>(<span style="color:#e06c75">finalTip</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>	<span style="color:#7f848e">// update view
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span><span style="color:#7f848e"></span>	<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">SetFinalTipAmount</span>(<span style="color:#e06c75">finalTip</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>	<span style="color:#e06c75">tc</span>.<span style="color:#e06c75">TipView</span>.<span style="color:#61afef;font-weight:bold">SetFinalTotalAmount</span>(<span style="color:#e06c75">finalTotal</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>}
 </span></span></code></pre></div><h2 id="bringing-it-all-together">Bringing it all together</h2>
@@ -415,7 +419,8 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>}
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
-<img class="custom-float-right" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+<img class="custom-float-right ml-3" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+
 <p>&hellip;and with that, the tip calculator was completed!</p>
 <p>With all this done, I had learned:</p>
 <ul>

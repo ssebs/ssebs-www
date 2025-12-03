@@ -9,7 +9,7 @@ tags: [golang, programming, gui]
 ---
 > Also see the [project page](/projects/mvctipcalc/) and the [Github Repo](https://github.com/ssebs/MVCTipCalc)
 
-<img class="custom-float-right" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+{{< img-float-right src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot" >}}
 
 ## Why did I make a tip calculator? 
 While working on the `v2` release of my [Mini Macro Pad](/projects/go-mmp/), I was having trouble managing state between different parts of the GUI. 
@@ -29,7 +29,7 @@ Since my Mini Macro Pad is written in Go + [fyne.io](https://fyne.io/), I stuck 
 <div style="clear: both;"></div>
 
 ## What is MVC?
-<img class="custom-float-right" src="/img/mvc.webp" width="320px" alt="MVC Diagram">
+{{< img-float-right src="/img/mvc.webp" width="320px" alt="MVC Diagram" >}}
 
 Model-View-Controller is a software architecture pattern that creates a separation of concerns, so each file in my codebase has a single purpose and a structure to follow. 
 
@@ -181,7 +181,7 @@ func main() {
 
 {{< spacer 1rem >}}
 
-<img class="custom-float-right" src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+{{< img-float-right src="/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot" >}}
 
 ...and with that, the tip calculator was completed! 
 

@@ -11,20 +11,19 @@ tags: [golang, programming, 3d-printing, arduino, gui]
 
 This is part 2 of my [Mini Macro Pad](/projects/go-mmp/) project. I recommend reading my [last blog post](/blog/minimacropad/) to read about how I 3D printed and programmed that.
 
-## What's wrong with it? 
-<img class="custom-float-right" src="/img/MMPPrinted.jpg" alt="macro pad" width="300px">
+## What's wrong with it?
 
-I was happy to have a working Macro Pad and used it for about a year or so with only a few tweaks to the code. However, there was a problem: to change any of the Macros, you had to open up a code editor and edit a `.yaml` file. 
+I was happy to have a working Macro Pad and used it for about a year or so with only a few tweaks to the code. However, there was a problem: to change any of the Macros, you had to open up a code editor and edit a `.yaml` file.
+
+{{< img-block src="/img/MMPPrinted.jpg" class="w-96 mx-auto my-4" alt="macro pad" >}}
 
 While this worked, it was a bit of a pain to use, and changing anything on the fly was simply not possible.
 
 I was talking to my friends about it, and they suggested making a <span class="font-semibold" title="What you see is what you get">WYSIWYG</span> config editor. I had always planned on doing that eventually, but this was the push I needed to get started.
 
-So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you'd find in a Logitech or Razor keyboard driver. 
+So it was decided - I had to make a GUI config editor. I wanted to make an interface similar to what you'd find in a Logitech or Razor keyboard driver.
 
 *Obviously not as complex*, but enough to make changes on the fly.
-
-<div style="clear: both;"></div>
 
 ## The Features I Wanted
 The main things I wanted to make easier were:
@@ -40,7 +39,7 @@ I started by designing a basic UI in Excalidraw so I could plan the layout.
 <div>On the right is the Macro editor where you can drag and drop Actions to make your shortcuts.</div>
 </div>
 
-<img class="w-full" src="/img/GUIEditorDiagram.png" alt="GUI Editor Diagram" >
+{{< img-block src="/img/GUIEditorDiagram.png" class="w-full" alt="GUI Editor Diagram" >}}
 
 <div style="clear: both;"></div>
 
@@ -55,7 +54,7 @@ Once I got the layout looking okay, I copy/pasted my code into my `gui.go` file.
 
 From there, you could Drag-and-Drop the Macros around, and click **Edit** to open another window to edit that specific Macro.
 
-<img class="w-full" src="/img/mmpnewwindows.png" >
+{{< img-block src="/img/mmpnewwindows.png" class="w-full" alt="" >}}
 
 ## Fun with Drag-and-Drop
 One of the challenges that I faced was getting the Drag-and-Drop to work properly. I discovered that a [fyne widget](https://docs.fyne.io/explore/widgets) can implement the [Draggable interface](https://docs.fyne.io/api/v2.1/draggable.html). This was great! Luckily the library has a method to implement Drag-and-Drop - however, the documentation for this feature was auto-generated from the source code and lacked practical examples, making it hard to learn from.
@@ -63,7 +62,7 @@ One of the challenges that I faced was getting the Drag-and-Drop to work properl
 Luckily, I could use VSCode's **Go to Definition (F12)** function to see what a `*DragEvent` even is, and what kind of data it will give me. After playing with the code for a bit, I found out that it gave both the actual and delta position of the mouse in (X,Y) coordinates.
 
 Here's a screenshot of the doc:
-<img class="w-full" src="/img/fyne-draggable-api.png" >
+{{< img-block src="/img/fyne-draggable-api.png" class="w-full" alt="" >}}
 
 The `Dragged()` method is called every time the mouse moves while holding down the left mouse button (LMB), and the `DragEnd()` method is called when you release it.
 
@@ -85,21 +84,20 @@ For example, when I'd update the name of a `Macro` in a new editor window, it wo
 The GUI library I'm using ([fyne.io](https://fyne.io)) is "pattern agnostic", meaning it doesn't care if you choose *MVC*, *MVP*, *MVVM*. You can even manage everything in a single file, as I was doing before.
 
 ## Realizing that it's time for a refactor
-<img class="custom-float-right" src="/img/whowrotethiscode.jpg" width="400px" alt="Obi Wan meme">
 
 I knew the technical debt from `gui.go` was catching up to me, and I was finding it hard to follow the code I had just written.
 
+{{< img-block src="/img/whowrotethiscode.jpg" class="w-96 mx-auto my-4" alt="Obi Wan meme" >}}
+
 > So much spaghetti, so little time.
 
-It became clear that I needed to rethink how to structure my code before writing more. My goal wasn’t just to get the data sync working; I also wanted to adopt best practices for how to write the code.
+It became clear that I needed to rethink how to structure my code before writing more. My goal wasn't just to get the data sync working; I also wanted to adopt best practices for how to write the code.
 
 From my research, I found that the Model-View-Controller (MVC) pattern is the easiest to implement. MVC creates a separation of concerns, meaning each file in my codebase would have a single responsibility and a clear structure to follow.
 
 This is a significant shift from having a single file managing everything—what the GUI looks like, the actions triggered by button presses, and saving changes (which is how I had been doing it).
 
 So, I needed to learn MVC.
-
-<div style="clear: both"></div>
 
 ## Learning MVC
 I find it best to learn by doing, so to learn MVC I need to implement it myself. Just reading some docs or watching a Youtube video is great to get the gist of a concept, but I won't truly **grok** it until I've used it.
@@ -177,7 +175,7 @@ I continued working on the project it was fully functional, overall it took abou
 
 Just go to **Edit** > **Edit Config**, and drag-and-drop your macros into the correct positions
 
-<img src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+{{< img-block src="/img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot" >}}
 
 </div>
 <div>
@@ -185,7 +183,7 @@ Click on the name to change what they do.
 
 Here's the "**gg**" Macro for example:
 
-<img src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+{{< img-block src="/img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot" >}}
 
 </div>
 </div>

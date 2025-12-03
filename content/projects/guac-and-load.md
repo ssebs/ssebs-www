@@ -14,8 +14,8 @@ Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac
 ## What is it?
 **Guac and Load** is a fast-paced restaurant sim where chaos in the kitchen turns into a fight for survival.
 
-<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/library_capsule.png" width="300px" alt="Game screenshot">
-<!-- <img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load-0.png" width="512px" alt="Game screenshot"> -->
+{{< img-float-right src="/img/guac-and-load-gal/library_capsule.png" width="300px" alt="Game screenshot" >}}
+<!-- {{< img-float-right src="/img/guac-and-load-gal/guac-and-load-0.png" width="512px" alt="Game screenshot" >}} -->
 
 > Okay... what does that mean?
 
@@ -33,14 +33,14 @@ I've been working on this since February 2025, and I plan to release the game in
 - Build burrito bowls for customers
 - Run the register and keep the line moving
 
-<img class="my-6" src="/img/guac-and-load-gal/shift.png" width="100%" alt="Adding rice to stove">
+{{< img-full src="/img/guac-and-load-gal/shift.png" alt="Adding rice to stove" >}}
 
 ### 🧟 But Watch Out...
 - Some customers can get aggressive, must be the Z-Coli outbreak!
 - Grab kitchen tools or the guac gun to fight back
 - Survive furious ex-customers and keep the restaurant alive
 
-<img class="my-6" src="/img/guac-and-load-gal/zombie.png" width="100%" alt="Zombie attacking player">
+{{< img-full src="/img/guac-and-load-gal/zombie.png" alt="Zombie attacking player" >}}
 
 ### 🌀 Gameplay Loop
 Each shift starts calm—just another day behind the counter. But after a while, everything changes. The pressure builds. The music shifts. The customers? Not so friendly anymore.
@@ -50,7 +50,7 @@ Each shift starts calm—just another day behind the counter. But after a while,
 - Preparing customer's orders. A customer has a specific order that you must fulfill, you get money based on how accurate your order is.
 - Zombies (infected by Z-Coli) will come and you'll need to fight to survive.
 
-<img class="my-6" src="/img/guac-and-load-gal/bowl.png" width="100%" alt="Building bowl for customer">
+{{< img-full src="/img/guac-and-load-gal/bowl.png" alt="Building bowl for customer" >}}
 
 ## Official Trailer
 

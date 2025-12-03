@@ -243,7 +243,7 @@
         </ul>
     </div>
 </div></div>
-        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full">
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full overflow-x-hidden">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="grud">
     <h1 class="text-2xl">3D printing and coding my Mini Macro Pad</h1>
@@ -275,17 +275,21 @@
         python
       </a>
     </div></div>
-  <div class="post-content"><blockquote>
-<p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p></blockquote>
+  <div class="post-content overflow-x-hidden break-words"><blockquote>
+<p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
+</blockquote>
 <h2 id="whats-a-macro-pad">What&rsquo;s a Macro Pad?</h2>
-<img class="custom-float-right" src="/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+<img class="custom-float-right ml-3" src="/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+
 <p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &ldquo;skip song&rdquo; button on your keyboard.</p>
 <p>A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons to run shortcuts.</p>
 <p>I made my own <a href="https://than.gs/m/710028" target="_blank">3D Printed Macro Pad</a>, and call it a <strong>Mini Macro Pad</strong>.</p>
 <blockquote>
-<p>I&rsquo;m planning on redesigning and printing a new one, with a tutorial!</p></blockquote>
+<p>I&rsquo;m planning on redesigning and printing a new one, with a tutorial!</p>
+</blockquote>
 <blockquote>
-<p>Stay tuned for that&hellip;</p></blockquote>
+<p>Stay tuned for that&hellip;</p>
+</blockquote>
 <div style="clear: both;"></div>
 <h2 id="why-i-wanted-a-macro-pad">Why I wanted a Macro Pad</h2>
 <p>One day I was playing VALORANT, and I was getting tired of typing &ldquo;gg&rdquo; after each game. I was also really into <a href="https://www.youtube.com/watch?v=qDvQNStNUiw" target="_blank">CSGO Surfing</a> for a while, and needed to &ldquo;reset&rdquo; whenever I messed up.</p>
@@ -298,17 +302,19 @@
 <p>Now, this doesn&rsquo;t sound like a lot, but if you&rsquo;re really focused on getting that <em>flick</em> right, you don&rsquo;t want to keep moving your hands to type &ldquo;/r&rdquo; over and over.</p>
 <p>I knew it could be automated in some way, and I had a 3D printer and programming know-how, so I got to work.</p>
 <h2 id="the-mini-macro-pads-hardware">The Mini Macro Pad&rsquo;s hardware</h2>
-<p>I watched <a href="https://www.youtube.com/@ZackFreedman" target="_blank">Zack Freedman's</a> video on <a href="https://www.youtube.com/watch?v=yYcNi9hKxDk" target="_blank">How to build Mechanical Keyboards</a>, and was inspired.</p>
+<p>I watched <a href="https://www.youtube.com/@ZackFreedman" target="_blank">Zack Freedman&#39;s</a> video on <a href="https://www.youtube.com/watch?v=yYcNi9hKxDk" target="_blank">How to build Mechanical Keyboards</a>, and was inspired.</p>
 <p>Basically, (without going into too much detail) what I needed was a few mechanical keyboard switches, some wire, an arduino, and a 3D printer. What I was making was essentially a number pad, but instead of sending numbers with a key press, each press would run a Macro.</p>
 <p>To make a working button, I&rsquo;d connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin. This ground pin is shared with the other button pins, so those could all be connected together.</p>
 <p>Once I had my plan ready, I printed out some 3D models I found on <a href="https://thangs.com" target="_blank">https://thangs.com</a>, and got to soldering.</p>
 <blockquote>
-<p>I eventually made my own design, but I want to try again.</p></blockquote>
+<p>I eventually made my own design, but I want to try again.</p>
+</blockquote>
 <p>I chose the Teensy LC as my Serial device, since it can be used as a Human-Interface-Device (HID). That means I can emulate pressing buttons on a keyboard.</p>
 <div style="min-height: 1rem;">
 </div>
 <p>Here&rsquo;s what the wiring looks like (<em>please forgive the newbie soldering</em>).</p>
-<img src="/img/MMPWiring.jpg" width="400px" alt="macro pad wiring">
+<img class="block" src="/img/MMPWiring.jpg" width="400px"  alt="macro pad wiring">
+
 <h2 id="making-the-buttons-do-stuff">Making the buttons do stuff</h2>
 <p>Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE.</p>
 <p>My plan was to:</p>
@@ -330,10 +336,12 @@
 <p>I decided to change the architecture of my app a bit: instead of the Arduino itself typing the keys, it would just send the button number over a serial connection. There would be a separate app listening for button presses, and that would run the macros on your computer instead.</p>
 <p>That way, I can update a config file to make my changes. Easy-peazy.</p>
 <h2 id="switching-to-serial--python">Switching to Serial + Python</h2>
-<img class="custom-float-right" src="/img/PythonMMPScreenshot.png" alt="python gui screenshot">
+<img class="custom-float-right ml-3" src="/img/PythonMMPScreenshot.png" width="" alt="python gui screenshot">
+
 <p>I decided to use Python for the new server code, as I was writing it at work and was pretty familiar with it. I also decided make a small GUI so you can see what/where the Macros are on your device.</p>
 <blockquote>
-<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad" target="_blank">Github Repo</a>, however this version has been <em>deprecated</em>.</p></blockquote>
+<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad" target="_blank">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
+</blockquote>
 <p>I used <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">TKinter</a> to get a grid of buttons showing, and set up a basic server to listen for button presses. Once the server received a button press, it compared the number to the Macro in the config file, and ran the Actions in order for that Macro.</p>
 <p>This worked! &hellip;but the user interface was ugly &hellip;and it was kinda slow. This is because of PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine, and meant that it would take a bit of time to start up.</p>
 <p>I continued working on this version for a while, but after a couple refactors (and learning some <code>OOP</code>-sies), I decided I wanted to rewrite my code <em>yet again</em>.</p>
@@ -364,8 +372,9 @@
 </span></span></code></pre></div><div style="min-height: 1rem;">
 </div>
 <h2 id="sidebar-over-back-to-writing-a-gui-in-go">Sidebar over, back to writing a GUI in Go</h2>
-<img class="custom-float-right" src="/img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
-<p>Since I had a working app written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go <a href="https://stackoverflow.com/a/34152076" target="_blank">doesn't have inheritance</a>, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals" target="_blank">composition</a> to fit my needs.</p>
+<img class="custom-float-right ml-3" src="/img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+
+<p>Since I had a working app written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go <a href="https://stackoverflow.com/a/34152076" target="_blank">doesn&#39;t have inheritance</a>, I learned to use <a href="https://go.dev/doc/effective_go#composite_literals" target="_blank">composition</a> to fit my needs.</p>
 <p>One important lesson I learned in doing this was to <a href="https://en.wikipedia.org/wiki/RTFM" target="_blank">RTFM</a>. The GUI library documentation <em>exists</em>, but it can be difficult to build everything you need from what you see on the getting started page.</p>
 <p>I found that I needed to use VSCode&rsquo;s autocompletion to explore what methods were available, and use the &ldquo;go to definition&rdquo; button to read the source code to see how it should be used.</p>
 <p>I ended up choosing <a href="https://fyne.io/" target="_blank">fyne.io</a> for my GUI library, as it was the most supported library I found. I got the basics down, and finished recreating the old functionality of my Mini Macro Pad app.</p>

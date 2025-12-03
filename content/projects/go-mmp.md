@@ -33,7 +33,7 @@ It works with hardware like Arduino-based macro pads or directly through a deskt
 </div>
 <div>
   Screenshot of the GUI:
-  <img src="./img/MMPGUIScreenshot.png">
+  {{< img-block src="./img/MMPGUIScreenshot.png" alt="Screenshot of the GUI" >}}
 </div>
 </div>
 
@@ -69,7 +69,7 @@ New in `v2`, you can now update your Macros in the UI instead of from the config
 
 Just go to **Edit** > **Edit Config**, and drag-and-drop your macros into the correct positions
 
-<img src="./img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot">
+{{< img-block src="./img/ConfigEditor.png" width="400px" alt="Config Editor Screenshot" >}}
 
 </div>
 <div>
@@ -77,7 +77,7 @@ Click on the name to change what they do.
 
 Here's the "**gg**" Macro for example:
 
-<img src="./img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot">
+{{< img-block src="./img/MacroEditor.png" width="360px" alt="Macro Editor Screenshot" >}}
 
 </div>
 </div>
@@ -92,13 +92,13 @@ You'll need a microcontroller, some key switches, and a 3D Printer. I'm using a 
 
 My 3D Printed housing is available on [thangs.com](https://than.gs/m/710028).
 
-<img src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+{{< img-block src="./img/MMPPrinted.jpg" width="256px" alt="physical macro pad" >}}
 </div>
 <div>
 
 Wiring under the hood (please forgive the newbie soldering)
 
-<img src="./img/MMPWiring.jpg" width="256px" alt="macro pad wiring">
+{{< img-block src="./img/MMPWiring.jpg" width="256px" alt="macro pad wiring" >}}
 </div>
 </div>
 
@@ -111,7 +111,7 @@ Wiring under the hood (please forgive the newbie soldering)
 - Just edit your config, edit metadata, and set the Serial Port Name, Baud rate, and change `GUIMode` to `NORMAL`.
   - If your device sends 1 for the first button instead of 0, you can set the Indexing setting to 1
   - Medatata Editor:
-  - <img src="./img/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot">
+  - {{< img-block src="./img/MetadataEditor.png" width="400px" alt="MetadataEditor screenshot" >}}
 
 > If you're curious, check out the older python code at https://github.com/ssebs/MiniMacroPad/
 

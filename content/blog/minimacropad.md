@@ -10,7 +10,7 @@ tags: [golang, programming, 3d-printing, arduino, gui, python]
 > Read the technical details on the [project page](/projects/go-mmp)
 
 ## What's a Macro Pad?
-<img class="custom-float-right" src="/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+{{< img-float-right src="/img/MMPPrinted.jpg" width="256px" alt="physical macro pad" >}}
 
 Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a "skip song" button on your keyboard.
 
@@ -53,7 +53,7 @@ I chose the Teensy LC as my Serial device, since it can be used as a Human-Inter
 
 Here's what the wiring looks like (*please forgive the newbie soldering*).
 
-<img src="/img/MMPWiring.jpg" width="400px" alt="macro pad wiring">
+{{< img-block src="/img/MMPWiring.jpg" width="400px" alt="macro pad wiring" >}}
 
 ## Making the buttons do stuff
 Once everything was wired up, I looked up some tutorials, and opened up the Arduino IDE. 
@@ -80,7 +80,7 @@ I decided to change the architecture of my app a bit: instead of the Arduino its
 That way, I can update a config file to make my changes. Easy-peazy.
 
 ## Switching to Serial + Python
-<img class="custom-float-right" src="/img/PythonMMPScreenshot.png" alt="python gui screenshot">
+{{< img-float-right src="/img/PythonMMPScreenshot.png" alt="python gui screenshot" >}}
 
 I decided to use Python for the new server code, as I was writing it at work and was pretty familiar with it. I also decided make a small GUI so you can see what/where the Macros are on your device.
 
@@ -133,7 +133,7 @@ if err != nil {
 {{< spacer 1rem >}}
 
 ## Sidebar over, back to writing a GUI in Go
-<img class="custom-float-right" src="/img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot">
+{{< img-float-right src="/img/MMPGUIScreenshot.png" width="400px" alt="Mini Macro Pad Screenshot" >}}
 
 Since I had a working app written in Python, I started off by porting over my code to Go. I learned a lot about structuring my code, since Go [doesn\'t have inheritance](https://stackoverflow.com/a/34152076), I learned to use [composition](https://go.dev/doc/effective_go#composite_literals) to fit my needs. 
 

@@ -22,8 +22,8 @@ I took the [CMSP](https://motorcyclesafetyca.com/) course over a weekend, got my
 
 ## Pics
 
-<img class="my-6" src="/img/projects/ninja-500/1.jpg" width="100%" alt="Picture of my motorcycle">
+{{< img-full src="/img/projects/ninja-500/1.jpg" alt="Picture of my motorcycle" >}}
 
-<img class="my-6" src="/img/projects/ninja-500/2.jpg" width="100%" alt="Picture of my motorcycle">
+{{< img-full src="/img/projects/ninja-500/2.jpg" alt="Picture of my motorcycle" >}}
 
-<img class="my-6" src="/img/projects/ninja-500/3.png" width="100%" alt="Picture of my motorcycle">
+{{< img-full src="/img/projects/ninja-500/3.png" alt="Picture of my motorcycle" >}}

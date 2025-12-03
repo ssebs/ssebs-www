@@ -10,7 +10,7 @@ tags: [programming, gamedev]
 Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/) and the [project page](/projects/guac-and-load/)
 
 ## What's Guac and Load?
-<img class="custom-float-right ml-3" src="/img/guac-and-load-gal/guac-and-load.png" width="512px" alt="Game screenshot">
+{{< img-float-right src="/img/guac-and-load-gal/guac-and-load.png" width="512px" alt="Game screenshot" >}}
 
 **Guac and Load** is what I'm calling my first 3D video game. It's a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival. 
 
