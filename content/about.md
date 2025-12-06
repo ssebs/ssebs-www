@@ -11,45 +11,44 @@ date: "2024-05-31T15:43:45-07:00"
 
 My name is **Sebastian Safari**, I call myself a "professional fixer, hobbyist figure-outer". 
 
-I work as a Site Reliability Engineer and like to program side projects. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
+I work as a Site Reliability Engineer and like to make side projects. These projects range from making video games, 3D printing, and programming things for myself or my family. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
 
 <!--more-->
 
 > Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
 
 ## My background
-I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I crafted a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
+I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I make a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
 
 I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
 
 ## Where I am now
-In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and automated and standardized processes for efficiency. Proficient in Python, Linux, Chef, and DevOps practices, I've played a key role in driving project success across many projects.
+In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and standardized processes for efficiency. 
 
-### The way I like to work:
-- With efficiency, I try to think of better / more efficient ways to solve problems
-- Doing things the right way, I'm not a fan of "half-assing" work. If you're going to do it, do it right.
-- Focus on the details, but also think of the bigger picture.
+Recently, I've been working as a full-stack developer for an internal tool. Ranging from React, Hack (php), and Python, I've been having fun! I can't say too much about the specifics, but I've been adding impactful features & trying to improve the reliability of the app.
+
+### Some of my values:
+- I always try to find efficient ways to solve problems.
+- I like doing things the right way, I'm not a fan of "half-assing" work. If you're going to do it, do it right.
 - I typically think of the MVP - the Minimum Viable Product as the goal. Once that's complete we can think about soft requirements and fun features.
-- Teach others as I learn, why not share my new found knowledge! I love to both mentor, and learn from others.
+- Teaching others as I learn is key. I believe you only really *know* something when you can teach someone else.
 
 ## Personal stuff
 Online, I go by <span class="text-quaternary">ssebs</span>. 
 
-## Some of my hobbies
-- Guitar
-  - Mostly Metallica & other rock
-- Gaming
-  - VALORANT
-  - Forza
-  - Whatever is the game of the week
+### More about my hobbies
 - 3D Printing
-  - Gridfinity
+  - Random things around the house. (storage dividers, mounts, etc.)
   - [Custom models](https://thangs.com/designer/sebsafari) 
-    - Check out my [Macro Pad](/projects/go-mmp))
+    - Check out my [Macro Pad](/projects/go-mmp)
     - Or my [Pop Socket phone stand](https://thangs.com/designer/sebsafari/3d-model/Pop%20Socket%20phone%20stand-579341)
 - Programming
   - Check out my [projects](/projects)
   - Or my [Github](https://github.com/ssebs)
+- Game Dev
+  - Check out the [games I've made](/tags/gamedev)!
+    - [Guac & Load](/projects/guac-and-load) is available on [Steam](https://store.steampowered.com/app/3800880/Guac__Load/)
+    - [Dank Nooner](/projects/dank-nooner) is a motorcycle wheelie game free on [Itch.io](https://theofficialssebs.itch.io/dank-nooner)
 
 ## Music
 I've got a weird taste in music, lots of Metal, some Hip Hop, Pop, and EDM.
