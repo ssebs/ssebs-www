@@ -1,9 +1,9 @@
-<ul class="my-2 flex text-white-dim">
+<ul class="my-2 flex text-white-dim flex-wrap items-center">
     {{- range .Ancestors.Reverse }}
     {{- if .IsHome -}}
-        <li class=""><a href="{{ .RelPermalink }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ .RelPermalink }}" class="breadcrumb-link">Home</a></li>
     {{- else }}
-        <li class=""><a href="{{ .RelPermalink }}">
+        <li class="breadcrumb-item"><a href="{{ .RelPermalink }}" class="breadcrumb-link">
             {{- with .Slug }}
             {{- . | title -}}
             {{- else }}
@@ -11,7 +11,7 @@
             {{- end }}
         </a></li>
         {{- end }}
-        <div class="mx-1" >&gt;</div>
+        <div class="mx-1 breadcrumb-item breadcrumb-separator">&gt;</div>
     {{- end }}
-    <li class=""><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li class="breadcrumb-item"><a href="{{ .RelPermalink }}" class="breadcrumb-link text-quaternary">{{ .Title }}</a></li>
 </ul>
