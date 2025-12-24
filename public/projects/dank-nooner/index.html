@@ -262,13 +262,17 @@
         class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
         python
       </a>
+      <a href="./tags/godot"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        godot
+      </a>
     </div></div>
   <div class="post-content overflow-x-hidden break-words"><img class="custom-float-right ml-3" src="./img/projects/dank-nooner/NewIcon.png" width="300px" alt="Game Icon">
 
-<p><a href="https://github.com/ssebs/danknooner" target="_blank">Github Repo</a></p>
-<p><a href="https://theofficialssebs.itch.io/dank-nooner" target="_blank">Play the game now on Itch.io!</a></p>
+<p><a href="https://github.com/ssebs/DankNooner" target="_blank">Github Repo</a></p>
+<p><a href="/projects/dank-nooner/#v1---play-now">Play v1 now!</a></p>
 <h2 id="what-is-it">What is it?</h2>
-<p><strong>Dank Nooner</strong> is a wheelie challenge game, try to hold a wheelie for as long as you can &amp; earn points to upgrade your bike.</p>
+<p><strong>Dank Nooner V1</strong> is a wheelie challenge game where you try to hold a wheelie for as long as you can &amp; earn points to upgrade your bike. <a href="/projects/dank-nooner/#v2---coming-soon">V2 is coming soon</a> with a full open-world experience!</p>
 <h3 id="the-controls">The controls:</h3>
 <ul>
 <li>Click &amp; hold your Left Mouse Button to &ldquo;grip the throttle&rdquo;</li>
@@ -280,19 +284,74 @@
 <ul>
 <li>Your Web Browser</li>
 <li>Windows</li>
-<li>Android</li>
 <li>Linux</li>
 </ul>
 <div style="clear:both"> </div>
 <h2 id="but-why">But why?</h2>
-<p>After <a href="./projects/guac-and-load/">Guac &amp;amp; Load</a>&rsquo;s development, I was pretty tired of gamedev. I started doing other things with my time, including learning how to ride a <a href="./projects/ninja-500/">motorcycle</a>.</p>
+<p>After <a href="./projects/guac-and-load/">Guac &amp; Load</a>&rsquo;s development, I was pretty tired of gamedev. I started doing other things with my time, including learning how to ride a <a href="./projects/ninja-500/">motorcycle</a>.</p>
 <p>I heard the term &ldquo;dank nooner&rdquo;, which is basically a crazy wheelie where the bike is so high up, it&rsquo;s close to 12 o&rsquo;clock (aka noon). I loved this term, and got the idea to come up with a basic wheelie control game similar to those old flash games, so I got to work.</p>
-<h2 id="so-hows-the-progress">So how&rsquo;s the progress?</h2>
-<p>I figured it would take a couple weeks, and I got most of the basic mechanics down in that time. After all my time working on Guac &amp; Load, progress was pretty quick! I learned a ton working on it, so the basics for the new game was done in about a week or two.</p>
-<p>I&rsquo;m not setting a deadline for this game, and will just work on it when I&rsquo;m in the mood, but I have a few features &amp; polish that I want to add.</p>
-<p>I&rsquo;ve got the To-Do list on <a href="https://github.com/ssebs/danknooner" target="_blank">Github</a>, feel free to submit an issue to request a feature!</p>
-<p>For now, the game is playable, so check it out on <a href="https://theofficialssebs.itch.io/dank-nooner" target="_blank">Itch.io!</a></p>
-<h2 id="in-game-screenshots">In-Game Screenshots</h2>
+<h2 id="v2---coming-soon">V2 - Coming Soon!</h2>
+<p>I&rsquo;m working on a major rewrite of Dank Nooner! V2 will be a full open-world 3D experience built in Godot.</p>
+<h3 id="whats-planned-for-v2">What&rsquo;s planned for V2:</h3>
+<ul>
+<li><strong>Physics-Based Controls</strong>: Manage clutch, throttle, and balance with ragdoll crash physics</li>
+<li><strong>Multiplayer</strong>: Competitive races, co-op missions, and free-roam riding with friends</li>
+<li><strong>Open World</strong>: Explore a city, hillside, race track, and dirt track areas</li>
+<li><strong>Tricks System</strong>: Fill your nitrous meter by pulling off tricks like wheelies, stoppies, and more</li>
+<li><strong>Story Mode</strong>: Narrative progression with missions</li>
+<li><strong>Progression System</strong>: Start on a bicycle and work your way up to sport bikes, learning new tricks along the way</li>
+<li><strong>Bike Customization</strong>: Upgrade and customize your rides</li>
+</ul>
+<p>Check out the <a href="https://github.com/ssebs/DankNooner" target="_blank">Github repo</a> for updates on V2 development!</p>
+<h2 id="v1---play-now">V1 - Play Now</h2>
+<p>V1 is the original proof-of-concept that started it all. It&rsquo;s a simple but fun wheelie balance challenge where you earn points to upgrade your bike.</p>
+
+<div class="game-embed-container my-8" id="game-wrapper-18841257d5359608">
+  <div id="game-placeholder-18841257d5359608" class="relative bg-gray-800 rounded flex items-center justify-center cursor-pointer" style="width: 100%; height: 600px;">
+    <div class="text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="white" class="mx-auto mb-4">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <p class="text-white text-xl">Click to Play</p>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  var gameSrc = '\/dank-nooner-v1\/';
+  var width = '100%';
+  var height = '600px';
+  var uid = '18841257d5359608';
+
+  var placeholder = document.getElementById('game-placeholder-' + uid);
+  var wrapper = document.getElementById('game-wrapper-' + uid);
+
+  placeholder.addEventListener('click', function() {
+    var container = document.createElement('div');
+
+    var buttonDiv = document.createElement('div');
+    buttonDiv.className = 'flex justify-end mb-2';
+    buttonDiv.innerHTML = '<a href="' + gameSrc + '" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>Fullscreen</a>';
+
+    var iframe = document.createElement('iframe');
+    iframe.src = gameSrc;
+    iframe.style.width = width;
+    iframe.style.height = height;
+    iframe.style.border = 'none';
+    iframe.style.display = 'block';
+    iframe.style.margin = '0 auto';
+    iframe.allowFullscreen = true;
+
+    container.appendChild(buttonDiv);
+    container.appendChild(iframe);
+
+    placeholder.remove();
+    wrapper.appendChild(container);
+  });
+})();
+</script>
+
+<h2 id="v1-screenshots">V1 Screenshots</h2>
 <img class="my-6" src="./img/projects/dank-nooner/screenshot01.png" width="100%" alt="Screenshot of the game in the main menu">
 
 <img class="my-6" src="./img/projects/dank-nooner/screenshot03.png" width="100%" alt="Screenshot of the gameplay, holding a wheelie">

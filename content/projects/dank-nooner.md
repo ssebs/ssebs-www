@@ -5,18 +5,18 @@ shortdesc: Hold a wheelie on a motorcycle as long as you can. Upgrade your bike 
 feature: ./img/projects/dank-nooner/NewIcon.png
 date: 2025-10-06T18:24:03-07:00
 weight: 21
-tags: [programming, gamedev, python]
+tags: [programming, gamedev, python, godot]
 ---
 
 {{< img-float-right src="./img/projects/dank-nooner/NewIcon.png" width="300px" alt="Game Icon" >}}
 
-[Github Repo](https://github.com/ssebs/danknooner)
+[Github Repo](https://github.com/ssebs/DankNooner)
 
-[Play the game now on Itch.io!](https://theofficialssebs.itch.io/dank-nooner)
+[Play v1 now!](/projects/dank-nooner/#v1---play-now)
 
 ## What is it?
 
-**Dank Nooner** is a wheelie challenge game, try to hold a wheelie for as long as you can & earn points to upgrade your bike.
+**Dank Nooner V1** is a wheelie challenge game where you try to hold a wheelie for as long as you can & earn points to upgrade your bike. [V2 is coming soon](/projects/dank-nooner/#v2---coming-soon) with a full open-world experience!
 
 ### The controls:
 - Click & hold your Left Mouse Button to "grip the throttle"
@@ -28,7 +28,6 @@ This game is open source, check out the code & upcoming features at https://gith
 ### You can play on:
 - Your Web Browser
 - Windows
-- Android
 - Linux
 
 <div style="clear:both"> </div>
@@ -38,16 +37,28 @@ After [Guac & Load](./projects/guac-and-load/)'s development, I was pretty tired
 
 I heard the term "dank nooner", which is basically a crazy wheelie where the bike is so high up, it's close to 12 o'clock (aka noon). I loved this term, and got the idea to come up with a basic wheelie control game similar to those old flash games, so I got to work.
 
-## So how's the progress?
-I figured it would take a couple weeks, and I got most of the basic mechanics down in that time. After all my time working on Guac & Load, progress was pretty quick! I learned a ton working on it, so the basics for the new game was done in about a week or two.
+## V2 - Coming Soon!
 
-I'm not setting a deadline for this game, and will just work on it when I'm in the mood, but I have a few features & polish that I want to add. 
+I'm working on a major rewrite of Dank Nooner! V2 will be a full open-world 3D experience built in Godot.
 
-I've got the To-Do list on [Github](https://github.com/ssebs/danknooner), feel free to submit an issue to request a feature!
+### What's planned for V2:
+- **Physics-Based Controls**: Manage clutch, throttle, and balance with ragdoll crash physics
+- **Multiplayer**: Competitive races, co-op missions, and free-roam riding with friends
+- **Open World**: Explore a city, hillside, race track, and dirt track areas
+- **Tricks System**: Fill your nitrous meter by pulling off tricks like wheelies, stoppies, and more
+- **Story Mode**: Narrative progression with missions
+- **Progression System**: Start on a bicycle and work your way up to sport bikes, learning new tricks along the way
+- **Bike Customization**: Upgrade and customize your rides
 
-For now, the game is playable, so check it out on [Itch.io!](https://theofficialssebs.itch.io/dank-nooner)
+Check out the [Github repo](https://github.com/ssebs/DankNooner) for updates on V2 development!
 
-## In-Game Screenshots
+## V1 - Play Now
+
+V1 is the original proof-of-concept that started it all. It's a simple but fun wheelie balance challenge where you earn points to upgrade your bike.
+
+{{< game-embed src="/dank-nooner-v1/" width="100%" height="600px" >}}
+
+## V1 Screenshots
 
 {{< img-full src="./img/projects/dank-nooner/screenshot01.png" alt="Screenshot of the game in the main menu" >}}
 

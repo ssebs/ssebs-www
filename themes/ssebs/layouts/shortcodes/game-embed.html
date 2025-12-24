@@ -1,0 +1,45 @@
+{{ $uid := printf "%x" now.UnixNano }}
+<div class="game-embed-container my-8" id="game-wrapper-{{ $uid }}">
+  <div id="game-placeholder-{{ $uid }}" class="relative bg-gray-800 rounded flex items-center justify-center cursor-pointer" style="width: {{ .Get "width" | default "100%" }}; height: {{ .Get "height" | default "600px" }};">
+    <div class="text-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="white" class="mx-auto mb-4">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <p class="text-white text-xl">Click to Play</p>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  var gameSrc = '{{ .Get "src" }}';
+  var width = '{{ .Get "width" | default "100%" }}';
+  var height = '{{ .Get "height" | default "600px" }}';
+  var uid = '{{ $uid }}';
+
+  var placeholder = document.getElementById('game-placeholder-' + uid);
+  var wrapper = document.getElementById('game-wrapper-' + uid);
+
+  placeholder.addEventListener('click', function() {
+    var container = document.createElement('div');
+
+    var buttonDiv = document.createElement('div');
+    buttonDiv.className = 'flex justify-end mb-2';
+    buttonDiv.innerHTML = '<a href="' + gameSrc + '" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded hover:bg-blue-700 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>Fullscreen</a>';
+
+    var iframe = document.createElement('iframe');
+    iframe.src = gameSrc;
+    iframe.style.width = width;
+    iframe.style.height = height;
+    iframe.style.border = 'none';
+    iframe.style.display = 'block';
+    iframe.style.margin = '0 auto';
+    iframe.allowFullscreen = true;
+
+    container.appendChild(buttonDiv);
+    container.appendChild(iframe);
+
+    placeholder.remove();
+    wrapper.appendChild(container);
+  });
+})();
+</script>

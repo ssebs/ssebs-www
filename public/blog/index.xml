@@ -13,42 +13,42 @@
       <link>http://localhost:1313/blog/guac-and-load-update-2/</link>
       <pubDate>Sat, 02 Aug 2025 07:26:45 -0700</pubDate>
       <guid>http://localhost:1313/blog/guac-and-load-update-2/</guid>
-      <description>This is the second Guac &amp;amp; Load update, check out the first one to see how I got started.</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is the second Guac &amp;amp; Load update, check out the &lt;a href=&#34;http://localhost:1313/blog/guac-and-load-update-1&#34;&gt;first one&lt;/a&gt; to see how I got started.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</title>
       <link>http://localhost:1313/blog/guac-and-load-update-1/</link>
       <pubDate>Thu, 13 Mar 2025 20:54:26 -0700</pubDate>
       <guid>http://localhost:1313/blog/guac-and-load-update-1/</guid>
-      <description>Check out the Steam store page and the project page</description>
+      <description>&lt;p&gt;Check out the &lt;a href=&#34;https://store.steampowered.com/app/3800880/Guac__Load/&#34; target=&#34;_blank&#34;&gt;Steam store page&lt;/a&gt; and the &lt;a href=&#34;http://localhost:1313/projects/guac-and-load/&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-guac-and-load&#34;&gt;What&amp;rsquo;s Guac and Load?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/guac-and-load-gal/guac-and-load.png&#34; width=&#34;512px&#34; alt=&#34;Game screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Guac and Load&lt;/strong&gt; is what I&amp;rsquo;m calling my first 3D video game. It&amp;rsquo;s a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title>
       <link>http://localhost:1313/blog/mmpguieditor/</link>
       <pubDate>Fri, 03 Jan 2025 09:00:00 -0800</pubDate>
       <guid>http://localhost:1313/blog/mmpguieditor/</guid>
-      <description>Before you read&amp;hellip; This is part 2 of my Mini Macro Pad project.</description>
+      <description>&lt;h2 id=&#34;before-you-read&#34;&gt;Before you read&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;This is part 2 of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt; project. I recommend reading my &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;last blog post&lt;/a&gt; to read about how I 3D printed and programmed that.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3D Printing my Business Card</title>
       <link>http://localhost:1313/blog/bizcard/</link>
       <pubDate>Thu, 26 Dec 2024 21:11:16 -0800</pubDate>
       <guid>http://localhost:1313/blog/bizcard/</guid>
-      <description>Why make a business card? Honestly, I don’t need one. Since most of my time is spent in front of a computer or in meetings, it’s not something I’ll use very often.</description>
+      <description>&lt;h2 id=&#34;why-make-a-business-card&#34;&gt;Why make a business card?&lt;/h2&gt;&#xA;&lt;p&gt;Honestly, I don’t need one. Since most of my time is spent in front of a computer or in meetings, it’s not something I’ll use very often. I could say I&amp;rsquo;d use them to schmooze at a tech conference and be useful for my career.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Learning the MVC pattern by making a Tip Calculator</title>
       <link>http://localhost:1313/blog/mvctipcalc/</link>
       <pubDate>Wed, 11 Dec 2024 20:45:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/mvctipcalc/</guid>
-      <description>Also see the project page and the Github Repo</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Also see the &lt;a href=&#34;http://localhost:1313/projects/mvctipcalc/&#34;&gt;project page&lt;/a&gt; and the &lt;a href=&#34;https://github.com/ssebs/MVCTipCalc&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MVCTipCalc.png&#34; width=&#34;320px&#34; alt=&#34;MVC Screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;why-did-i-make-a-tip-calculator&#34;&gt;Why did I make a tip calculator?&lt;/h2&gt;&#xA;&lt;p&gt;While working on the &lt;code&gt;v2&lt;/code&gt; release of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt;, I was having trouble managing state between different parts of the GUI.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3D printing and coding my Mini Macro Pad</title>
       <link>http://localhost:1313/blog/minimacropad/</link>
       <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>Read the technical details on the project page&#xA;What&amp;rsquo;s a Macro Pad?</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read the technical details on the &lt;a href=&#34;http://localhost:1313/projects/go-mmp&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;whats-a-macro-pad&#34;&gt;What&amp;rsquo;s a Macro Pad?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MMPPrinted.jpg&#34; width=&#34;256px&#34; alt=&#34;physical macro pad&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

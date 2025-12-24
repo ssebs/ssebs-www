@@ -5,7 +5,7 @@ shortdesc: A look at the early days of Guac and Load—game loops, Godot struggl
 feature: ./img/guac-and-load-gal/guac-and-load.png
 date: 2025-03-13T20:54:26-07:00
 weight: 25
-tags: [programming, gamedev]
+tags: [programming, gamedev, godot, python]
 ---
 Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/) and the [project page](/projects/guac-and-load/)
 

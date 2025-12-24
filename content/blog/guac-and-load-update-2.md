@@ -5,7 +5,7 @@ shortdesc: The game launched! Lessons learned and retrospective of making a game
 feature: ./img/guac-blog-2/outside.png
 date: 2025-08-02T07:26:45-07:00
 weight: 25
-tags: [programming, gamedev]
+tags: [programming, gamedev, godot, python]
 ---
 
 > This is the second Guac & Load update, check out the [first one](/blog/guac-and-load-update-1) to see how I got started.
