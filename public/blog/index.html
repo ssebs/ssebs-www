@@ -247,12 +247,12 @@
 <p>I’m not a professional writer, but I want to share what I’ve learned through my experiences. Hopefully, something here resonates with you.</p>
 <p>If you&rsquo;re curious about what worked, what didn&rsquo;t, and how it all came together, check out my latest posts below!</p></div>
 	
-	<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
+	<div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6 cards-reveal-container">
 		
 		
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/guac-and-load-update-2/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -277,7 +277,7 @@
 		
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/guac-and-load-update-1/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -302,7 +302,7 @@
 		
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/mmpguieditor/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -327,7 +327,7 @@
 		
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/bizcard/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -352,7 +352,7 @@
 		
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/mvctipcalc/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -377,7 +377,7 @@
 		
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/minimacropad/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -531,6 +531,25 @@
     }, { threshold: 0.1 });
 
     footerObserver.observe(footer);
+
+    
+    const cardContainers = document.querySelectorAll('.cards-reveal-container');
+
+    const cardRevealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                cardRevealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    cardContainers.forEach(container => {
+        cardRevealObserver.observe(container);
+    });
 
 </script></body>
 

@@ -28,7 +28,7 @@
 
         {{/* If the section page has subpages, render top 3 */}}
         {{ if .Pages }}
-        <div class="grid md:grid-cols-3 auto-rows-fr gap-4 mb-6">
+        <div class="grid md:grid-cols-3 auto-rows-fr gap-4 mb-6 cards-reveal-container">
             {{ range $idx, $page := .Pages }}
             {{ if lt $idx 3}}
             {{ partial "card.html" $page }}

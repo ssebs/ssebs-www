@@ -308,8 +308,8 @@
 <h2 id="v1---play-now">V1 - Play Now</h2>
 <p>V1 is the original proof-of-concept that started it all. It&rsquo;s a simple but fun wheelie balance challenge where you earn points to upgrade your bike.</p>
 
-<div class="game-embed-container my-8" id="game-wrapper-188414d5cf820d38">
-  <div id="game-placeholder-188414d5cf820d38" class="relative bg-gray-800 rounded flex items-center justify-center cursor-pointer" style="width: 100%; height: 600px;">
+<div class="game-embed-container my-8" id="game-wrapper-1884151618f5c94c">
+  <div id="game-placeholder-1884151618f5c94c" class="relative bg-gray-800 rounded flex items-center justify-center cursor-pointer" style="width: 100%; height: 600px;">
     <div class="text-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="white" class="mx-auto mb-4">
         <path d="M8 5v14l11-7z"/>
@@ -323,7 +323,7 @@
   var gameSrc = '\/dank-nooner-v1\/';
   var width = '100%';
   var height = '600px';
-  var uid = '188414d5cf820d38';
+  var uid = '1884151618f5c94c';
 
   var placeholder = document.getElementById('game-placeholder-' + uid);
   var wrapper = document.getElementById('game-wrapper-' + uid);
@@ -532,6 +532,25 @@
     }, { threshold: 0.1 });
 
     footerObserver.observe(footer);
+
+    
+    const cardContainers = document.querySelectorAll('.cards-reveal-container');
+
+    const cardRevealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                cardRevealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    cardContainers.forEach(container => {
+        cardRevealObserver.observe(container);
+    });
 
 </script></body>
 

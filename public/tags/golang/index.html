@@ -258,7 +258,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/projects/go-mmp/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -308,7 +308,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/projects/mvctipcalc/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -350,7 +350,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/projects/img-2-pdf/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -388,7 +388,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/mmpguieditor/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -413,7 +413,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/mvctipcalc/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -438,7 +438,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/blog/minimacropad/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -463,7 +463,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/projects/serverclip/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -498,7 +498,7 @@
 	
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
   
   <a href="/projects/ssebs-www/" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -680,6 +680,25 @@
     }, { threshold: 0.1 });
 
     footerObserver.observe(footer);
+
+    
+    const cardContainers = document.querySelectorAll('.cards-reveal-container');
+
+    const cardRevealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                cardRevealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    cardContainers.forEach(container => {
+        cardRevealObserver.observe(container);
+    });
 
 </script></body>
 

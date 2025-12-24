@@ -700,3 +700,55 @@ body {
 .footer-story:hover {
   border-left-color: #41afff;
 }
+
+/* ==================== */
+/* CARD SCROLL REVEAL   */
+/* ==================== */
+
+/* Cards container - needed for nth-child targeting */
+.cards-reveal-container {
+  /* Container styles inherited from grid parent */
+}
+
+/* Initial hidden state for cards */
+.cards-reveal-container > .card-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Revealed state when scrolled into view */
+.cards-reveal-container.revealed > .card-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays using nth-child */
+.cards-reveal-container.revealed > .card-reveal:nth-child(1) { transition-delay: 0ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(2) { transition-delay: 100ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(3) { transition-delay: 200ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(4) { transition-delay: 300ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(5) { transition-delay: 400ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(6) { transition-delay: 500ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(7) { transition-delay: 600ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(8) { transition-delay: 700ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(9) { transition-delay: 800ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(10) { transition-delay: 900ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(11) { transition-delay: 1000ms; }
+.cards-reveal-container.revealed > .card-reveal:nth-child(12) { transition-delay: 1100ms; }
+
+/* For list pages with many cards, cap the delay after 12 */
+.cards-reveal-container.revealed > .card-reveal:nth-child(n+13) { transition-delay: 1200ms; }
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .cards-reveal-container > .card-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .cards-reveal-container.revealed > .card-reveal {
+    transition-delay: 0ms !important;
+  }
+}
