@@ -40,7 +40,7 @@
     <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
         
         <a href="./" class="flex align-center logo-hover">
-            <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
+            <img class="w-14 pr-2 animate-float-cycle" src="./img/RocketOnly.png" alt="logo" />
             <span class="logo-text text-gray-300 text-xl m-auto hover:text-quaternary transition-colors duration-300">&lt;ssebs&nbsp;/&gt;</span>
         </a>
 
@@ -720,14 +720,14 @@
   
 </div>
 
-  </div><footer class="bg-secondary min-h-64">
+  </div><footer id="site-footer" class="bg-secondary min-h-64">
     <div class="grid justify-center p-6">
         <h5 class="footer-title text-3xl text-white font-thin text-center p-8">Thanks for stopping by!</h5>
         <div class="footer-divider w-full max-w-2xl mx-auto mb-6"></div>
         <div
             class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full lg:mt-6 lg:p-6 mt-4 p-4 gap-12 text-lg">
             <div class="footer-section flex justify-between items-end gap-6 min-w-80">
-                <img width="128px" src="./img/RocketOnly.png" alt="logo" class="logo-hover animate-float" />
+                <img width="128px" src="./img/RocketOnly.png" alt="logo" class="logo-hover footer-logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
                     <a href="./" class="font-medium hover:text-quinary transition-colors duration-300">ssebs | Sebastian Safari</a>
                     <ul class="space-y-1">
@@ -832,6 +832,21 @@
     } else {
         copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
     }
+
+    
+    const footer = document.getElementById('site-footer');
+    const footerAnimatedElements = footer.querySelectorAll('.footer-title, .footer-divider, .footer-section, .footer-copyright, .footer-logo');
+
+    const footerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                footerAnimatedElements.forEach(el => el.classList.add('animate'));
+                footerObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    footerObserver.observe(footer);
 
 </script></body>
 
