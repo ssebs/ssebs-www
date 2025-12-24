@@ -16,7 +16,7 @@
 <button
     {{ printf "onclick=%q" $f | safeHTMLAttr }}
 
-    class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-{{ $c }}-600 hover:bg-{{ $c }}-700 active:bg-{{ $c }}-600"
+    class="px-5 py-2.5 rounded-lg text-white text-sm tracking-wider font-medium border border-current outline-none bg-{{ $c }}-600 hover:bg-{{ $c }}-700 active:bg-{{ $c }}-600 transition-colors duration-300"
     
     type="button"
     >

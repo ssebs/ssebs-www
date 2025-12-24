@@ -5,7 +5,7 @@
         {{/* LOGO */}}
         <a href="./" class="flex align-center">
             <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
-            <span class="logo-text text-gray-300 text-xl m-auto hover:text-quaternary">&lt;ssebs&nbsp;/&gt;</span>
+            <span class="logo-text text-gray-300 text-xl m-auto hover:text-quaternary transition-colors duration-300">&lt;ssebs&nbsp;/&gt;</span>
         </a>
 
         {{/* Right justify stuff */}}
@@ -49,7 +49,7 @@
                     {{- end }}
                     <li>
                         <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                            class="md:hover:text-quaternary {{ $textColorActive }} block ">
+                            class="md:hover:text-quaternary {{ $textColorActive }} block transition-colors duration-300">
                             <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                                 {{- with .Page }}
                                     {{- .Slug | title | safeHTML -}}

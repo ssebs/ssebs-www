@@ -6,14 +6,14 @@
             <div class="flex justify-between items-end gap-6 min-w-80">
                 <img width="128px" src="./img/RocketOnly.png" alt="logo" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
-                    <a href="./" class="font-medium hover:text-quinary">
+                    <a href="./" class="font-medium hover:text-quinary transition-colors duration-300">
                         {{- .Site.Title -}}
                     </a>
                     <ul>
                         {{- range site.Menus.main }}
                         <li class=''>
                             <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                                class="text-quinary hover:text-quaternary">
+                                class="text-quinary hover:text-quaternary transition-colors duration-300">
                                 {{- with .Page }}
                                 {{- .Params.ShortDesc | safeHTML -}}
                                 {{- else }}
@@ -63,7 +63,7 @@
 
     const authorHTML = `<a 
                             href="{{- .Site.Params.Socials.LinkedIn.Link -}}" 
-                            class="text-quaternary hover:text-quinary" target="_blank" 
+                            class="text-quaternary hover:text-quinary transition-colors duration-300" target="_blank" 
                             >
                                 {{ .Site.Params.author | safeJS -}}
                         </a>`;
