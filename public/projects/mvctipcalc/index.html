@@ -318,56 +318,58 @@
     </div>
   </div><footer class="bg-secondary min-h-64">
     <div class="grid justify-center p-6">
-        <h5 class="text-3xl text-white font-thin text-center p-8">Thanks for checking out my website!</h5>
+        <h5 class="footer-title text-3xl text-white font-thin text-center p-8">Thanks for stopping by!</h5>
+        <div class="footer-divider w-full max-w-2xl mx-auto mb-6"></div>
         <div
             class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full lg:mt-6 lg:p-6 mt-4 p-4 gap-12 text-lg">
-            <div class="flex justify-between items-end gap-6 min-w-80">
-                <img width="128px" src="./img/RocketOnly.png" alt="logo" class="logo-hover" />
+            <div class="footer-section flex justify-between items-end gap-6 min-w-80">
+                <img width="128px" src="./img/RocketOnly.png" alt="logo" class="logo-hover animate-float" />
                 <div class="flex flex-col items-start gap-2 min-w-48">
                     <a href="./" class="font-medium hover:text-quinary transition-colors duration-300">ssebs | Sebastian Safari</a>
-                    <ul>
-                        <li class=''>
+                    <ul class="space-y-1">
+                        <li>
                             <a href="/projects/" title="My Projects"
-                                class="text-quinary hover:text-quaternary transition-colors duration-300">Check out my projects.
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">Check out my projects.
                             </a>
                         </li>
-                        <li class=''>
+                        <li>
                             <a href="/about/" title="About me"
-                                class="text-quinary hover:text-quaternary transition-colors duration-300">Who am I?
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">Who am I?
                             </a>
                         </li>
-                        <li class=''>
+                        <li>
                             <a href="/blog/" title="My Blog"
-                                class="text-quinary hover:text-quaternary transition-colors duration-300">See what I've been up to in my blog.
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">See what I've been up to in my blog.
                             </a>
                         </li>
-                        <li class=''>
+                        <li>
                             <a href="/contact/" title="Contact me"
-                                class="text-quinary hover:text-quaternary transition-colors duration-300">Let's Connect.
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">Let's Connect.
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="grid gap-2 max-w-md text-base font-normal">
+            <div class="footer-section grid gap-2 max-w-md text-base font-normal">
                 <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
-                <p>
-                    When I was a kid and I had to come up with my first username, I ended up trying to find something
-                    using my initials.
-                </p>
-                <p>
-                    Seb was taken, and so was SebS, so I added "S" from my last name at the front and the back.
-                </p>
-                <p>
-                    ssebs - S Seb S
-                </p>
-                <p>...very interesting, I know!</p>
+                <div class="footer-story space-y-2 text-gray-300">
+                    <p>
+                        Back when I needed my first username, I wanted something using my initials.
+                    </p>
+                    <p>
+                        "Seb" was taken. "SebS" was taken too. So I got creative and wrapped it with an extra "S" from my last name.
+                    </p>
+                    <p class="text-quaternary font-medium">
+                        ssebs = S + Seb + S
+                    </p>
+                    <p class="text-sm text-gray-400 italic">Riveting origin story, right?</p>
+                </div>
             </div>
 
-            <div class="min-w-32 flex flex-col gap-2">
-                <div class="text-xl">Socials</div>
-                <ul class="flex gap-2">
+            <div class="footer-section min-w-32 flex flex-col gap-3">
+                <div class="text-xl font-medium">Let's Connect</div>
+                <ul class="flex gap-3">
 
     
     
@@ -399,11 +401,12 @@
         </a>
     </li>
                 </ul>
+                <p class="text-sm text-gray-400 mt-2">Always happy to chat!</p>
             </div>
 
         </div>
     </div>
-    <div class="text-center bg-neutral-700 p-6">
+    <div class="footer-copyright text-center bg-neutral-700 p-6">
         <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
     </div>
 </footer>
