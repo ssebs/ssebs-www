@@ -3,7 +3,7 @@
     {{/* container */}}
     <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
         {{/* LOGO */}}
-        <a href="./" class="flex align-center">
+        <a href="./" class="flex align-center logo-hover">
             <img class="w-14 pr-2" src="./img/RocketOnly.png" alt="logo" />
             <span class="logo-text text-gray-300 text-xl m-auto hover:text-quaternary transition-colors duration-300">&lt;ssebs&nbsp;/&gt;</span>
         </a>
@@ -49,7 +49,7 @@
                     {{- end }}
                     <li>
                         <a href="{{ .URL }}" title="{{ .Title | default .Name }}"
-                            class="md:hover:text-quaternary {{ $textColorActive }} block transition-colors duration-300">
+                            class="md:hover:text-quaternary {{ $textColorActive }} block transition-colors duration-300 nav-link-animated">
                             <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
                                 {{- with .Page }}
                                     {{- .Slug | title | safeHTML -}}

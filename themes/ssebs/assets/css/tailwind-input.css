@@ -236,3 +236,290 @@ body {
 
 .logo-text {
 }
+
+/* ==================== */
+/* ANIMATIONS & POLISH  */
+/* ==================== */
+
+/* Keyframe Definitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(65, 175, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(65, 175, 255, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.4s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out forwards;
+}
+
+/* Stagger delays for sequential animations */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Initially hidden for animations */
+.animate-on-load {
+  opacity: 0;
+}
+
+/* Enhanced Card Hover Effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(65, 175, 255, 0.1);
+}
+
+/* Image zoom inside cards */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-container img {
+  transition: transform 0.4s ease;
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Button hover effects with glow */
+.btn-glow {
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(51, 255, 231, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-glow:active {
+  transform: translateY(0);
+}
+
+/* Nav link underline animation */
+.nav-link-animated {
+  position: relative;
+}
+
+.nav-link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #33ffe7, #41afff);
+  transition: width 0.3s ease;
+}
+
+.nav-link-animated:hover::after {
+  width: 100%;
+}
+
+/* Social icon hover effects */
+.social-icon-hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon-hover:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(51, 255, 231, 0.6));
+}
+
+/* Form input focus effects */
+.input-glow {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.input-glow:focus {
+  border-color: #41afff;
+  box-shadow: 0 0 0 3px rgba(65, 175, 255, 0.2), 0 0 20px rgba(65, 175, 255, 0.1);
+  background-color: rgba(65, 175, 255, 0.05);
+}
+
+/* Image fade-in on load */
+.img-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.img-fade-in.loaded {
+  opacity: 1;
+}
+
+/* Tag/badge hover effect */
+.tag-hover {
+  transition: all 0.25s ease;
+}
+
+.tag-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo hover effect */
+.logo-hover {
+  transition: transform 0.3s ease;
+}
+
+.logo-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Sidebar fade-in */
+.sidebar-animate {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Hero section animations */
+.hero-title {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-image {
+  animation: scaleIn 0.8s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.hero-text {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.hero-cta {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-cta:nth-child(1) { animation-delay: 0.3s; }
+.hero-cta:nth-child(2) { animation-delay: 0.4s; }
+.hero-cta:nth-child(3) { animation-delay: 0.5s; }
+
+/* Floating animation for decorative elements */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Focus visible styles for accessibility */
+.focus-ring:focus-visible {
+  outline: 2px solid #41afff;
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .card-hover:hover {
+    transform: none;
+  }
+
+  .btn-glow:hover {
+    transform: none;
+  }
+
+  .social-icon-hover:hover {
+    transform: scale(1.1);
+  }
+
+  .tag-hover:hover {
+    transform: none;
+  }
+}

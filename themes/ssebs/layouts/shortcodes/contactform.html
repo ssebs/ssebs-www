@@ -1,6 +1,6 @@
-<div class="grid ">
+<div class="grid animate-fade-in-up">
     {{/* Show message, replaced in JS */}}
-    <div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden"></div>
+    <div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden animate-fade-in"></div>
 
     {{/* ACTION cannot have a space! Check when auto-formatting */}}
     <form action="{{- .Get "action" -}}" method="POST" class="flex flex-col gap-2 ">
@@ -8,30 +8,30 @@
             <label class="text-base" for="name">
                 <div>Your name:</div>
                 <input type="text" name="name"
-                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none"
                     placeholder="John Doe..." required />
             </label>
             <label class="text-base" for="email">
                 <div>Email:</div>
                 <input type="email" name="email"
-                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+                    class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none"
                     placeholder="jdoe@example.com" required />
             </label>
         </div>
 
         <label class="text-base" for="_subject">Subject:</label>
         <input type="text" name="_subject"
-            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3"
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none"
             placeholder="Dear ssebs" required>
 
         <label class="text-base" for="message">Message:
         </label>
         <textarea placeholder="Let's work on something together."
-            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3" name="message"
+            class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none" name="message"
             rows="10" required></textarea>
 
         <button type="submit"
-            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold">
+            class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold btn-glow">
             Send
             <div><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#171717">

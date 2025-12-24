@@ -41,7 +41,7 @@
 
         {{/* C2A */}}
         {{- if not .Params.NoC2A -}}
-        <a class="text-base p-3 max-w-fit bg-quaternary text-neutral-900 hover:bg-quinary font-medium rounded-md transition-colors duration-300"
+        <a class="text-base p-3 max-w-fit bg-quaternary text-neutral-900 hover:bg-quinary font-medium rounded-md transition-colors duration-300 btn-glow"
             href="{{- .RelPermalink -}}">
             {{- with .Params.C2AText -}}{{ . }}{{- else -}} See more...{{- end -}}
         </a>

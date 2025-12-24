@@ -16,7 +16,7 @@ We expect to be in an <ul>
 
     {{- range $sortedSocials }}
     <li>
-        <a href="{{ .link }}" title="{{ .name | title }}" target="_blank">
+        <a href="{{ .link }}" title="{{ .name | title }}" target="_blank" class="social-icon-hover inline-block">
             <span>
                 {{- with .icon -}}
                 {{/*  TODO: Fix by setting defaults  */}}

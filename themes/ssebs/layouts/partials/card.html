@@ -1,7 +1,7 @@
 {{/* Expects to be in a .Pages loop, so "." is a Page */}}
 
 <div
-  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md hover:scale-[102%] transition-all border-2 border-primary">
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary">
   {{/* feature + shortdesc */}}
   <a href="{{- .RelPermalink -}}" class="grid gap-4 self-start">
     <div class="text-lg font-medium">
@@ -17,7 +17,7 @@
 
 
     {{- if .Params.feature }}
-    <div style="height: 248px;">
+    <div class="img-zoom-container rounded-md" style="height: 248px;">
       <img src="{{- .Params.feature | safeHTML -}}" alt="{{- .Params.feature | plainify -}}"
         style="max-height: 248px; margin: auto;">
     </div>
@@ -37,7 +37,7 @@
     <div class="flex flex-wrap gap-2 text-base h-fit">
       {{ range .Params.tags }}
       <a href="./tags/{{- . -}}"
-        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black transition-all duration-300">
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 tag-hover">
         {{ . }}
       </a>
       {{- end }}
