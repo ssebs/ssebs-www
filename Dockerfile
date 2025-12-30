@@ -13,7 +13,7 @@ WORKDIR /src/
 ENV HUGO_ENV=production
 ENV HUGO_PARAMS_USEBASEURL=false
 
-RUN hugo --baseURL https://ssebs.com --minify
+RUN hugo --baseURL https://ssebs.com/ --minify
 
 # Serve static site
 FROM nginx
