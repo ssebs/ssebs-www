@@ -6,7 +6,7 @@
     <description>Recent content on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Oct 2025 14:26:01 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 01 Jan 2026 13:13:15 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
@@ -91,6 +91,13 @@
       <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
       <guid>http://localhost:1313/projects/tipr/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/tipr&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A tip calculator that shows the tip amount and the total amount.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Leaning how to code procedural animations for my new game, Dank Nooner.</title>
+      <link>http://localhost:1313/blog/godot-ik/</link>
+      <pubDate>Thu, 01 Jan 2026 13:13:15 -0800</pubDate>
+      <guid>http://localhost:1313/blog/godot-ik/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/moto-player-controller-godot/&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-dank-nooner&#34;&gt;What is Dank Nooner?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;./img/projects/dank-nooner/screenshot03.png&#34; width=&#34;400&#34; alt=&#34;dank nooner screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Dank Nooner&lt;/strong&gt; is a motorcycle stunt game built in Godot. The current V1 proof of concept is a simple wheelie balance challenge game where you hold a wheelie as long as you can and earn points to upgrade your bike.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Guac and Load Update #2: Lessons learned &amp; Retro</title>
