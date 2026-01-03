@@ -1,7 +1,7 @@
 ---
-title: Leaning how to code procedural animations for my new game, Dank Nooner.
+title: Creating Procedural Animations to Save Time in Godot
 slug: godot-ik
-shortdesc: Custom procedural animations are easier to create and update, which is great since I'll need to make a bunch for each trick in my game.
+shortdesc: I'm leaning how to code procedural animations for my new game, Dank Nooner (v2)!
 feature: ./img/dank-nooner-v2/moto-player-controller-wheelie-anim.png
 date: 2026-01-01T13:13:15-08:00
 weight: 25
@@ -9,19 +9,21 @@ tags: [programming, gamedev, godot, python]
 
 ---
 
-[Github Repo](https://github.com/ssebs/moto-player-controller-godot/)
+[Github repo for this blog](https://github.com/ssebs/moto-player-controller-godot/) | [GitHub repo for DankNooner](https://github.com/ssebs/danknooner)
 
 ## What is Dank Nooner?
 
 {{< img-float-right src="./img/projects/dank-nooner/screenshot03.png" width="400" alt="dank nooner screenshot" >}}
 
-**Dank Nooner** is a motorcycle stunt game built in Godot. The current V1 proof of concept is a simple wheelie balance challenge game where you hold a wheelie as long as you can and earn points to upgrade your bike.
+**Dank Nooner** is a motorcycle stunt game built in Godot. The v1 proof of concept is a simple wheelie balance challenge game where you hold a wheelie as long as you can and earn points to upgrade your bike.
 
 The goal for **V2** is a full rewrite expanding into an open-world 3D game. You'll progress from a bicycle up to sport bikes, learning new tricks and completing missions along the way. 
 
-The physics should feel fun but challenging—managing clutch, throttle, and balance—with ragdoll crashes when you bail. Doing wheelies fills your NOS meter. Planned features include upgrades, customization, multiplayer (races, co-op, free roam), and eventually a story mode.
+The physics should feel fun but challenging—managing clutch, throttle, and balance—with ragdoll crashes when you bail. Doing wheelies fills your NOS meter. 
 
-[V1 is playable on the project page!](/projects/dank-nooner) | [GitHub](https://github.com/ssebs/danknooner)
+Planned features include upgrades, customization, multiplayer (races, co-op, free roam), and eventually a story mode.
+
+[Play v1 now the project page!](/projects/dank-nooner)
 
 
 ### Milestones
@@ -37,8 +39,7 @@ The physics should feel fun but challenging—managing clutch, throttle, and bal
 
 Regular animations look great, but they take a lot of work to make look good. AAA game studios use motion capture on real people, but I don't have that kind of budget.
 
-Procedural animations are simply animations that are controlled via code. There's some math going on behind the scenes ([Inverse Kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics)), but I'm just using it.
-
+Procedural animations are simply animations that are controlled via code. These are easier to create and update, which is great since I'll need to make a bunch for each trick in my game. There's some math going on behind the scenes ([Inverse Kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics)), but I'm just using it.
 
 Basically, I can move a "target" position marker in the game engine, and the IK node (e.g. left arm) will move the hand to it. I can change a bunch of different parameters to make it look real. 
 
