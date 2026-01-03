@@ -279,25 +279,37 @@
 <p>Planned features include upgrades, customization, multiplayer (races, co-op, free roam), and eventually a story mode.</p>
 <p><a href="/projects/dank-nooner">Play v1 now the project page!</a></p>
 <h3 id="milestones">Milestones</h3>
-<multiplayer>
-<p><moto-controller> - this is where this blog comes in</p>
-<img class="block" src="./img/dank-nooner-v2/moto-player-controller-wheelie-anim.png" width="512px"  alt="moto-player-controller-wheelie-animation">
-
+<p>Here&rsquo;s my rough roadmap for v2:</p>
+<ol>
+<li><strong>Multiplayer POC</strong> - ✓ Complete</li>
+<li><strong>Inverse Kinematics POC</strong> - ✓ Complete (this blog post!)</li>
+<li><strong>Player Controller + Animations</strong> - Currently in progress</li>
+<li><strong>MVP: Freeroam + Tricks Demo</strong> - Multiplayer support, basic customization, open-world, and fundamental tricks</li>
+<li><strong>Full Game</strong> - Advanced tricks, unlocks, quests, and story mode</li>
+</ol>
+<p>I&rsquo;m targeting 1-2 years from January 2026 for the full release. We&rsquo;ll see how that goes!</p>
 <h2 id="procedural-animations-why-not-regular-animations">Procedural Animations? Why not regular animations?</h2>
-<img class="custom-float-right ml-3" src="./img/dank-nooner-v2/moto-player-controller-leaning-anim.png" width="600" alt="Player controller leaning over animation">
+<img class="custom-float-right ml-3" src="./img/dank-nooner-v2/moto-player-controller-leaning-anim.png" width="500" alt="Player controller leaning over animation">
 
 <p>Regular animations look great, but they take a lot of work to make look good. AAA game studios use motion capture on real people, but I don&rsquo;t have that kind of budget.</p>
 <p>Procedural animations are simply animations that are controlled via code. These are easier to create and update, which is great since I&rsquo;ll need to make a bunch for each trick in my game. There&rsquo;s some math going on behind the scenes (<a href="https://en.wikipedia.org/wiki/Inverse_kinematics" target="_blank">Inverse Kinematics</a>), but I&rsquo;m just using it.</p>
+<img class="custom-float-right ml-3" src="./img/dank-nooner-v2/moto-player-controller-wheelie-anim.png" width="500" alt="moto-player-controller-wheelie-animation">
+
 <p>Basically, I can move a &ldquo;target&rdquo; position marker in the game engine, and the IK node (e.g. left arm) will move the hand to it. I can change a bunch of different parameters to make it look real.</p>
 <p>I can use this with godot&rsquo;s AnimationPlayer node to create custom animations.</p>
 <h2 id="show-me-an-example">Show me an example:</h2>
 <p>I created IK nodes for the motorcycle rider&rsquo;s arms, legs, and head. Their butt is positioned manually.</p>
 <video controls>
-  <source src="./img/dank-nooner-v2/godot-inverse-kinematics.mp4" type="video/webm" />
+  <source src="./img/dank-nooner-v2/godot-inverse-kinematics.mp4" type="video/mp4" />
 </video>
 <blockquote>
 <p>You can see that I&rsquo;ve moving the target and the leg is moving naturally.</p></blockquote>
 <h2 id="whats-next-for-dank-nooner">What&rsquo;s next for Dank Nooner?</h2>
+<p>Now that I have the IK system working, I need to create animations for each trick. The plan is to set up target positions for different poses (wheelie, stoppie, leaning, etc.) and blend between them based on the bike&rsquo;s physics.</p>
+<p>I&rsquo;m also working on the motorcycle physics themselves. Getting the clutch, throttle, and balance to feel fun but challenging is tricky — too realistic and it&rsquo;s frustrating, too easy and there&rsquo;s no skill involved.</p>
+<p>Once I have a rideable bike with a few tricks, I&rsquo;ll start building out the open world. I&rsquo;m thinking of starting with a small test area before committing to a full city.</p>
+<p>If you want to follow along, check out the <a href="https://github.com/ssebs/danknooner" target="_blank">GitHub repo</a> or the <a href="/projects/dank-nooner">project page</a>.</p>
+<p><strong>Thanks for reading!</strong></p>
 </div>
   <script>
     document.querySelectorAll(".post-content img").forEach((imgElem) => {
