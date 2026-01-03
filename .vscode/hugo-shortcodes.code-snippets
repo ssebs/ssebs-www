@@ -88,5 +88,10 @@
       "{{< /columns >}}"
     ],
     "description": "Insert a 2-column layout (use <--COLSPLIT--> to separate columns)"
+  },
+  "Hugo ClearFix": {
+    "scope": "markdown",
+    "prefix": "clearfix",
+    "body": "{{< clearfix >}}"
   }
 }

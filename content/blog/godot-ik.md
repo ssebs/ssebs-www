@@ -1,7 +1,7 @@
 ---
 title: Creating Procedural Animations to Save Time in Godot
 slug: godot-ik
-shortdesc: I'm leaning how to code procedural animations for my new game, Dank Nooner (v2)!
+shortdesc: I'm learning how to code procedural animations for my new game, Dank Nooner (v2)!
 feature: ./img/dank-nooner-v2/moto-player-controller-wheelie-anim.png
 date: 2026-01-01T13:13:15-08:00
 weight: 25
@@ -23,15 +23,15 @@ The physics should feel fun but challenging—managing clutch, throttle, and bal
 
 Planned features include upgrades, customization, multiplayer (races, co-op, free roam), and eventually a story mode.
 
-[Play v1 now the project page!](/projects/dank-nooner)
+[Play v1 now on the project page!](/projects/dank-nooner)
 
 
 ### Milestones
 Here's my rough roadmap for v2:
 
-1. **Multiplayer POC** - ✓ Complete
+1. **Multiplayer POC** - Complete, see the [repo](https://github.com/ssebs/multiplayer-poc-godot.git)
 2. **Inverse Kinematics POC** - ✓ Complete (this blog post!)
-3. **Player Controller + Animations** - Currently in progress
+3. **Player Controller + Animations** - Currently in progress, see the [repo](https://github.com/ssebs/moto-player-controller-godot/)
 4. **MVP: Freeroam + Tricks Demo** - Multiplayer support, basic customization, open-world, and fundamental tricks
 5. **Full Game** - Advanced tricks, unlocks, quests, and story mode
 
@@ -51,6 +51,7 @@ Basically, I can move a "target" position marker in the game engine, and the IK 
 
 I can use this with godot's AnimationPlayer node to create custom animations. 
 
+{{< clearfix >}}
 
 ## Show me an example:
 I created IK nodes for the motorcycle rider's arms, legs, and head. Their butt is positioned manually.
@@ -60,7 +61,7 @@ I created IK nodes for the motorcycle rider's arms, legs, and head. Their butt i
   <source src="./img/dank-nooner-v2/godot-inverse-kinematics.mp4" type="video/mp4" />
 </video>
 
-> You can see that I've moving the target and the leg is moving naturally.
+> You can see that I'm moving the target and the leg is moving naturally.
 
 ## What's next for Dank Nooner?
 
