@@ -25,7 +25,8 @@
         <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
           {{- partial "sidebar.html" . -}}
         </div>
-        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-4xl w-full overflow-x-hidden">
+        {{/*  Used to be max-w-4xl, needed some more space  */}}
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-[60rem] w-full overflow-x-hidden">
           {{- block "main" . }}{{- end }}
         </div>
       </div>

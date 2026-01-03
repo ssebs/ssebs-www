@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hugo on ssebs | Sebastian Safari</title>
-    <link>http://localhost:1313/tags/hugo/</link>
-    <description>Recent content in Hugo on ssebs | Sebastian Safari</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jul 2024 23:29:29 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Website</title>
-      <link>http://localhost:1313/projects/ssebs-www/</link>
-      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
-      <guid>http://localhost:1313/projects/ssebs-www/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/ssebs-www&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/hugo/</link><description>Recent content in Hugo on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 05 Jul 2024 23:29:29 -0700</lastBuildDate><atom:link href="https://ssebs.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>My Website</title><link>https://ssebs.com/projects/ssebs-www/</link><pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate><guid>https://ssebs.com/projects/ssebs-www/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/ssebs-www" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!&lt;/p></description></item></channel></rss>

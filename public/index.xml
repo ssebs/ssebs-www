@@ -1,208 +1,209 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ssebs | Sebastian Safari</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on ssebs | Sebastian Safari</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 12 Oct 2025 14:26:01 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About me</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;img class=&#34;rounded-md border-2 border-primary float-right mx-3&#34; src=&#34;./img/me_vacay.jpg&#34; width=&#34;360px&#34; title=&#34;Photo of me on my honeymoon.&#34; alt=&#34;Photo of me on my honeymoon.&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;My name is &lt;strong&gt;Sebastian Safari&lt;/strong&gt;, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p&gt;&#xA;&lt;p&gt;I work as a Site Reliability Engineer and like to make side projects. These projects range from making video games, 3D printing, and programming things for myself or my family. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Contact me</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Fri, 31 May 2024 15:43:51 -0700</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;p&gt;Reach out to me if you want to connect on &lt;a href=&#34;https://linkedin.com/in/ssebs/&#34; target=&#34;_blank&#34;&gt;LinkedIn&lt;/a&gt;, or email me at &lt;a href=&#34;mailto:contact@ssebs.com&#34;&gt;contact@ssebs.com&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you like to code, check out my &lt;a href=&#34;https://github.com/ssebs/&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h4 id=&#34;feel-free-to-fill-out-the-form-below-if-you-want-to-message-me&#34;&gt;Feel free to fill out the form below if you want to message me.&lt;/h4&gt;&#xA;&lt;div class=&#34;grid animate-fade-in-up&#34;&gt;&#xD;&#xA;    &#xD;&#xA;    &lt;div id=&#34;msg-container&#34; class=&#34;text-3xl my-12 italic text-quaternary hidden animate-fade-in&#34;&gt;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;    &#xD;&#xA;    &lt;form action=&#34;https://formsubmit.co/contact@ssebs.com&#34; method=&#34;POST&#34; class=&#34;flex flex-col gap-2 &#34;&gt;&#xD;&#xA;        &lt;div class=&#34;grid md:grid-cols-2 grid-cols-1 gap-2&#34;&gt;&#xD;&#xA;            &lt;label class=&#34;text-base&#34; for=&#34;name&#34;&gt;&#xD;&#xA;                &lt;div&gt;Your name:&lt;/div&gt;&#xD;&#xA;                &lt;input type=&#34;text&#34; name=&#34;name&#34;&#xD;&#xA;                    class=&#34;w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none&#34;&#xD;&#xA;                    placeholder=&#34;John Doe...&#34; required /&gt;&#xD;&#xA;            &lt;/label&gt;&#xD;&#xA;            &lt;label class=&#34;text-base&#34; for=&#34;email&#34;&gt;&#xD;&#xA;                &lt;div&gt;Email:&lt;/div&gt;&#xD;&#xA;                &lt;input type=&#34;email&#34; name=&#34;email&#34;&#xD;&#xA;                    class=&#34;w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none&#34;&#xD;&#xA;                    placeholder=&#34;jdoe@example.com&#34; required /&gt;&#xD;&#xA;            &lt;/label&gt;&#xD;&#xA;        &lt;/div&gt;&#xD;&#xA;&#xD;&#xA;        &lt;label class=&#34;text-base&#34; for=&#34;_subject&#34;&gt;Subject:&lt;/label&gt;&#xD;&#xA;        &lt;input type=&#34;text&#34; name=&#34;_subject&#34;&#xD;&#xA;            class=&#34;text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none&#34;&#xD;&#xA;            placeholder=&#34;Dear ssebs&#34; required&gt;&#xD;&#xA;&#xD;&#xA;        &lt;label class=&#34;text-base&#34; for=&#34;message&#34;&gt;Message:&#xD;&#xA;        &lt;/label&gt;&#xD;&#xA;        &lt;textarea placeholder=&#34;Let&#39;s work on something together.&#34;&#xD;&#xA;            class=&#34;text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none&#34; name=&#34;message&#34;&#xD;&#xA;            rows=&#34;10&#34; required&gt;&lt;/textarea&gt;&#xD;&#xA;&#xD;&#xA;        &lt;button type=&#34;submit&#34;&#xD;&#xA;            class=&#34;text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold btn-glow&#34;&gt;&#xD;&#xA;            Send&#xD;&#xA;            &lt;div&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;24px&#34; viewBox=&#34;0 -960 960 960&#34; width=&#34;24px&#34;&#xD;&#xA;                    fill=&#34;#171717&#34;&gt;&#xD;&#xA;                    &lt;path&#xD;&#xA;                        d=&#34;M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z&#34; /&gt;&#xD;&#xA;                &lt;/svg&gt;&lt;/div&gt;&#xD;&#xA;        &lt;/button&gt;&#xD;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;_captcha&#34; value=&#34;false&#34;&gt;&#xD;&#xA;        &lt;input id=&#34;nextURL&#34; type=&#34;hidden&#34; name=&#34;_next&#34; value=&#34;http://localhost:1313//contact&#34;&gt;&#xD;&#xA;    &lt;/form&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;    &#xD;&#xA;    &#xD;&#xA;    const nextURL = document.getElementById(&#34;nextURL&#34;);&#xD;&#xA;    &#xD;&#xA;    nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    &#xD;&#xA;    const urlParams = new URLSearchParams(window.location.search);&#xD;&#xA;    if (urlParams.get(&#39;msg&#39;)) {&#xD;&#xA;        const msgContainer = document.getElementById(&#39;msg-container&#39;);&#xD;&#xA;        msgContainer.classList.remove(&#34;hidden&#34;);&#xD;&#xA;        const msg = decodeURI(urlParams.get(&#34;msg&#34;));&#xD;&#xA;        msgContainer.textContent = msg;&#xD;&#xA;        window.alert(msg);&#xD;&#xA;    }&#xD;&#xA;&lt;/script&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note: It takes a few seconds to submit, so please be patient.&lt;/p&gt;&lt;/blockquote&gt;</description>
-    </item>
-    <item>
-      <title>Mini Macro Pad</title>
-      <link>http://localhost:1313/projects/go-mmp/</link>
-      <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
-      <guid>http://localhost:1313/projects/go-mmp/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read how &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;I made the macro pad&lt;/a&gt;, and how &lt;a href=&#34;http://localhost:1313/blog/mmpguieditor/&#34;&gt;I added a config editor&lt;/a&gt; to it.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/go-mmp&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;display: grid; grid-template-columns: 60% 40%; gap: 1rem;&#34;&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Mini Macro Pad (go-mmp)&lt;/strong&gt; is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p&gt;&#xA;&lt;p&gt;It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p&gt;&#xA;&lt;div style=&#34;min-height: 1rem;&#34;&gt;&#xD;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;what-kind-of-macros-can-you-make&#34;&gt;What kind of macros can you make?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shortcuts:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href=&#34;https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys&#34; target=&#34;_blank&#34;&gt;in the list&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Macros:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Repeat keypresses (or mouse button presses)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whatever you can think of, feel free to submit PRs!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;  Screenshot of the GUI:&#xD;&#xA;  &lt;img class=&#34;block&#34; src=&#34;./img/MMPGUIScreenshot.png&#34;   alt=&#34;Screenshot of the GUI&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>Dank Nooner</title>
-      <link>http://localhost:1313/projects/dank-nooner/</link>
-      <pubDate>Mon, 06 Oct 2025 18:24:03 -0700</pubDate>
-      <guid>http://localhost:1313/projects/dank-nooner/</guid>
-      <description>&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;./img/projects/dank-nooner/NewIcon.png&#34; width=&#34;300px&#34; alt=&#34;Game Icon&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/DankNooner&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/projects/dank-nooner/#v1---play-now&#34;&gt;Play v1 now!&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Dank Nooner V1&lt;/strong&gt; is a wheelie challenge game where you try to hold a wheelie for as long as you can &amp;amp; earn points to upgrade your bike. &lt;a href=&#34;http://localhost:1313/projects/dank-nooner/#v2---coming-soon&#34;&gt;V2 is coming soon&lt;/a&gt; with a full open-world experience!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Guac and Load</title>
-      <link>http://localhost:1313/projects/guac-and-load/</link>
-      <pubDate>Tue, 25 Feb 2025 17:05:19 -0800</pubDate>
-      <guid>http://localhost:1313/projects/guac-and-load/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Interested in the behind-the-scenes? Check out &lt;a href=&#34;http://localhost:1313/blog/guac-and-load-update-1/&#34;&gt;dev update 1&lt;/a&gt; and &lt;a href=&#34;http://localhost:1313/blog/guac-and-load-update-2/&#34;&gt;update 2&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>MVC Tip Calculator</title>
-      <link>http://localhost:1313/projects/mvctipcalc/</link>
-      <pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate>
-      <guid>http://localhost:1313/projects/mvctipcalc/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/MVCTipCalc&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Simple Model View Controller Fyne project that doubles as a tip calculator.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Images to PDF</title>
-      <link>http://localhost:1313/projects/img-2-pdf/</link>
-      <pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate>
-      <guid>http://localhost:1313/projects/img-2-pdf/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/images-to-pdf&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif&#34; alt=&#34;Usage Example&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Convert a selection of images files into a single PDF.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Simpleshare</title>
-      <link>http://localhost:1313/projects/simpleshare/</link>
-      <pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate>
-      <guid>http://localhost:1313/projects/simpleshare/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/simpleshare&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application. There&amp;rsquo;s a simple GUI to enable ease of use for non-technical users.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Perishable Punchers</title>
-      <link>http://localhost:1313/projects/perishable-punchers/</link>
-      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
-      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/PerishablePunchers&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/projects/PerishablePunchers.jpg&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Mortal Kombat like Game written in Java, back in highschool.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CSV Editor</title>
-      <link>http://localhost:1313/projects/csveditor/</link>
-      <pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate>
-      <guid>http://localhost:1313/projects/csveditor/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/csveditor&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A lightweight GUI csv editor written in python.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ninja 500</title>
-      <link>http://localhost:1313/projects/ninja-500/</link>
-      <pubDate>Sun, 12 Oct 2025 14:26:01 -0700</pubDate>
-      <guid>http://localhost:1313/projects/ninja-500/</guid>
-      <description>&lt;h2 id=&#34;story&#34;&gt;Story&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve always wanted a motorcycle, and I finally decided to get one. Now that I&amp;rsquo;m a bit older, I&amp;rsquo;ve got the self-control not to do anything crazy with it.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tipr</title>
-      <link>http://localhost:1313/projects/tipr/</link>
-      <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
-      <guid>http://localhost:1313/projects/tipr/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/tipr&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A tip calculator that shows the tip amount and the total amount.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Guac and Load Update #2: Lessons learned &amp; Retro</title>
-      <link>http://localhost:1313/blog/guac-and-load-update-2/</link>
-      <pubDate>Sat, 02 Aug 2025 07:26:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/guac-and-load-update-2/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This is the second Guac &amp;amp; Load update, check out the &lt;a href=&#34;http://localhost:1313/blog/guac-and-load-update-1&#34;&gt;first one&lt;/a&gt; to see how I got started.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</title>
-      <link>http://localhost:1313/blog/guac-and-load-update-1/</link>
-      <pubDate>Thu, 13 Mar 2025 20:54:26 -0700</pubDate>
-      <guid>http://localhost:1313/blog/guac-and-load-update-1/</guid>
-      <description>&lt;p&gt;Check out the &lt;a href=&#34;https://store.steampowered.com/app/3800880/Guac__Load/&#34; target=&#34;_blank&#34;&gt;Steam store page&lt;/a&gt; and the &lt;a href=&#34;http://localhost:1313/projects/guac-and-load/&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-guac-and-load&#34;&gt;What&amp;rsquo;s Guac and Load?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/guac-and-load-gal/guac-and-load.png&#34; width=&#34;512px&#34; alt=&#34;Game screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Guac and Load&lt;/strong&gt; is what I&amp;rsquo;m calling my first 3D video game. It&amp;rsquo;s a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title>
-      <link>http://localhost:1313/blog/mmpguieditor/</link>
-      <pubDate>Fri, 03 Jan 2025 09:00:00 -0800</pubDate>
-      <guid>http://localhost:1313/blog/mmpguieditor/</guid>
-      <description>&lt;h2 id=&#34;before-you-read&#34;&gt;Before you read&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;This is part 2 of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt; project. I recommend reading my &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;last blog post&lt;/a&gt; to read about how I 3D printed and programmed that.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>3D Printing my Business Card</title>
-      <link>http://localhost:1313/blog/bizcard/</link>
-      <pubDate>Thu, 26 Dec 2024 21:11:16 -0800</pubDate>
-      <guid>http://localhost:1313/blog/bizcard/</guid>
-      <description>&lt;h2 id=&#34;why-make-a-business-card&#34;&gt;Why make a business card?&lt;/h2&gt;&#xA;&lt;p&gt;Honestly, I don’t need one. Since most of my time is spent in front of a computer or in meetings, it’s not something I’ll use very often. I could say I&amp;rsquo;d use them to schmooze at a tech conference and be useful for my career.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Learning the MVC pattern by making a Tip Calculator</title>
-      <link>http://localhost:1313/blog/mvctipcalc/</link>
-      <pubDate>Wed, 11 Dec 2024 20:45:41 -0800</pubDate>
-      <guid>http://localhost:1313/blog/mvctipcalc/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Also see the &lt;a href=&#34;http://localhost:1313/projects/mvctipcalc/&#34;&gt;project page&lt;/a&gt; and the &lt;a href=&#34;https://github.com/ssebs/MVCTipCalc&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MVCTipCalc.png&#34; width=&#34;320px&#34; alt=&#34;MVC Screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;why-did-i-make-a-tip-calculator&#34;&gt;Why did I make a tip calculator?&lt;/h2&gt;&#xA;&lt;p&gt;While working on the &lt;code&gt;v2&lt;/code&gt; release of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt;, I was having trouble managing state between different parts of the GUI.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>3D printing and coding my Mini Macro Pad</title>
-      <link>http://localhost:1313/blog/minimacropad/</link>
-      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
-      <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read the technical details on the &lt;a href=&#34;http://localhost:1313/projects/go-mmp&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;whats-a-macro-pad&#34;&gt;What&amp;rsquo;s a Macro Pad?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MMPPrinted.jpg&#34; width=&#34;256px&#34; alt=&#34;physical macro pad&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>nccsv</title>
-      <link>http://localhost:1313/projects/nccsv/</link>
-      <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
-      <guid>http://localhost:1313/projects/nccsv/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/nccsv&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ncurses CSV Editor written in Python&lt;/p&gt;&#xA;&#xD;&#xA;&lt;script src=&#34;https://asciinema.org/a/6gHETuFhyD4R9nAwtUGet5P9i.js&#34; id=&#34;asciicast-6gHETuFhyD4R9nAwtUGet5P9i&#34; async=&#34;true&#34;&gt;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;todo&#34;&gt;TODO:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Architecture&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Wireframes&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Home / Menu&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; File selector&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Open&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Close&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Editor&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Layout Grid&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Entry&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multiple views&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Home / Menu&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; File selector&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Editor&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Custom widgets&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Layout Grid&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Entry (text editor with box)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Scroll down / right&lt;/li&gt;&#xA;&lt;li&gt;[.] Delete contents of cell when you hit &amp;ldquo;DEL&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Row / Col bars (A,B,C, 1,2,3)&lt;/li&gt;&#xA;&lt;li&gt;[.] Actually handle CSVs&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Color&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Documentation&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Publish to pip&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Tests&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Misc folder is for miscellaneous test files to add features (pad scrolling, etc)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>PeopleDB</title>
-      <link>http://localhost:1313/projects/peopledb/</link>
-      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
-      <guid>http://localhost:1313/projects/peopledb/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/Peopledb-py-react&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Person Database using python, flask, sqlite3, react.&lt;/p&gt;&#xA;&lt;h2 id=&#34;home--search-page&#34;&gt;Home / Search page&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/ssebs/Peopledb-py-react/master/img/ppldb-home-search.png&#34; alt=&#34;Home Page&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ServerClip</title>
-      <link>http://localhost:1313/projects/serverclip/</link>
-      <pubDate>Wed, 24 Jul 2024 21:44:53 -0700</pubDate>
-      <guid>http://localhost:1313/projects/serverclip/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/ServerClip&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Tool for copying contents of a file over nested ssh connections. Need to get a log file over to your laptop? This can help.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Platformer of Some Sort</title>
-      <link>http://localhost:1313/projects/a-platformer-of-some-sort/</link>
-      <pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate>
-      <guid>http://localhost:1313/projects/a-platformer-of-some-sort/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/Platformer&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/projects/Platformer.jpg&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Platformer of Some Sort was my first long-term project. This was a wild 3 month process to make A Platformer Of Some Sort, which was a working title, but we had decided to leave it as such because it worked. This game took so long because I was unable to figure out the hit boxes and jumping, both of which are mediocre at best™ *Not a real Trademark&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Breakout Pong</title>
-      <link>http://localhost:1313/projects/breakout-pong/</link>
-      <pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate>
-      <guid>http://localhost:1313/projects/breakout-pong/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/BreakoutPongGame&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/projects/BreakoutPong.png&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Welcome to the start of it all: Breakout-Pong. This was the very first game I made. ‘Twas the final project of the first semester of AP Computer Science. I thought that making a simple Pong remake would be easy. Little did I know that having to learn OpenGL along with Java would mean a lot of googling.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Clean Mac Address</title>
-      <link>http://localhost:1313/projects/clean-mac-address/</link>
-      <pubDate>Wed, 24 Jul 2024 22:03:09 -0700</pubDate>
-      <guid>http://localhost:1313/projects/clean-mac-address/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/clean-mac-address&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Program to &amp;ldquo;clean&amp;rdquo; MAC address for registrar input at PARC.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Audi S4</title>
-      <link>http://localhost:1313/projects/audi-s4/</link>
-      <pubDate>Wed, 24 Jul 2024 21:20:49 -0700</pubDate>
-      <guid>http://localhost:1313/projects/audi-s4/</guid>
-      <description>&lt;p&gt;I used to own a 2014 Audi S4 (B8.5), had a few mods done, but ultimately it was too expensive to keep 😭.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Miata</title>
-      <link>http://localhost:1313/projects/miata/</link>
-      <pubDate>Wed, 24 Jul 2024 20:39:10 -0700</pubDate>
-      <guid>http://localhost:1313/projects/miata/</guid>
-      <description>&lt;p&gt;I own and drive a 2021 Mazda MX-5 RF GT (Miata). This is my first daily driven stick shift car, and it&amp;rsquo;s so fun to drive!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My Website</title>
-      <link>http://localhost:1313/projects/ssebs-www/</link>
-      <pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate>
-      <guid>http://localhost:1313/projects/ssebs-www/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/ssebs-www&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Sir Flap a Lot</title>
-      <link>http://localhost:1313/projects/sir-flap-a-lot/</link>
-      <pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate>
-      <guid>http://localhost:1313/projects/sir-flap-a-lot/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;./img/projects/SFA.png&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store. I thought, hey, maybe I can make something just as good. And sure enough, I tried for about a day or two then got bored. BUT, within that time, I made a PC port of it, using my own art and “Physics”. There are some broken things, like not being able to make it through some gaps, but hey, pretty good for two days. Also you may be thinking, “Hey, a lot is two words…”, and you&amp;rsquo;re right. But that&amp;rsquo;s the beauty in making your own games, you can do whatever you want.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ssebs | Sebastian Safari</title><link>https://ssebs.com/</link><description>Recent content on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 01 Jan 2026 13:13:15 -0800</lastBuildDate><atom:link href="https://ssebs.com/index.xml" rel="self" type="application/rss+xml"/><item><title>About me</title><link>https://ssebs.com/about/</link><pubDate>Fri, 31 May 2024 15:43:45 -0700</pubDate><guid>https://ssebs.com/about/</guid><description>&lt;img class="rounded-md border-2 border-primary float-right mx-3" src="./img/me_vacay.jpg" width="360px" title="Photo of me on my honeymoon." alt="Photo of me on my honeymoon.">
+
+&lt;p>My name is &lt;strong>Sebastian Safari&lt;/strong>, I call myself a &amp;ldquo;professional fixer, hobbyist figure-outer&amp;rdquo;.&lt;/p>
+&lt;p>I work as a Site Reliability Engineer and like to make side projects. These projects range from making video games, 3D printing, and programming things for myself or my family. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.&lt;/p></description></item><item><title>Contact me</title><link>https://ssebs.com/contact/</link><pubDate>Fri, 31 May 2024 15:43:51 -0700</pubDate><guid>https://ssebs.com/contact/</guid><description>&lt;p>Reach out to me if you want to connect on &lt;a href="https://linkedin.com/in/ssebs/" target="_blank">LinkedIn&lt;/a>, or email me at &lt;a href="mailto:contact@ssebs.com">contact@ssebs.com&lt;/a>.&lt;/p>
+&lt;p>If you like to code, check out my &lt;a href="https://github.com/ssebs/" target="_blank">Github&lt;/a>.&lt;/p>
+&lt;h4 id="feel-free-to-fill-out-the-form-below-if-you-want-to-message-me">Feel free to fill out the form below if you want to message me.&lt;/h4>
+&lt;div class="grid animate-fade-in-up">
+ 
+ &lt;div id="msg-container" class="text-3xl my-12 italic text-quaternary hidden animate-fade-in">&lt;/div>
+
+ 
+ &lt;form action="https://formsubmit.co/contact@ssebs.com" method="POST" class="flex flex-col gap-2 ">
+ &lt;div class="grid md:grid-cols-2 grid-cols-1 gap-2">
+ &lt;label class="text-base" for="name">
+ &lt;div>Your name:&lt;/div>
+ &lt;input type="text" name="name"
+ class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none"
+ placeholder="John Doe..." required />
+ &lt;/label>
+ &lt;label class="text-base" for="email">
+ &lt;div>Email:&lt;/div>
+ &lt;input type="email" name="email"
+ class="w-full text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none"
+ placeholder="jdoe@example.com" required />
+ &lt;/label>
+ &lt;/div>
+
+ &lt;label class="text-base" for="_subject">Subject:&lt;/label>
+ &lt;input type="text" name="_subject"
+ class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none"
+ placeholder="Dear ssebs" required>
+
+ &lt;label class="text-base" for="message">Message:
+ &lt;/label>
+ &lt;textarea placeholder="Let's work on something together."
+ class="text-lg bg-neutral-800 border-neutral-700 border drop-shadow-lg rounded-md p-3 input-glow focus:outline-none" name="message"
+ rows="10" required>&lt;/textarea>
+
+ &lt;button type="submit"
+ class="text-lg flex justify-center items-center self-center gap-1 w-full bg-quaternary hover:bg-quinary text-neutral-900 drop-shadow-lg rounded-md p-3 font-semibold btn-glow">
+ Send
+ &lt;div>&lt;svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+ fill="#171717">
+ &lt;path
+ d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+ &lt;/svg>&lt;/div>
+ &lt;/button>
+ &lt;input type="hidden" name="_captcha" value="false">
+ &lt;input id="nextURL" type="hidden" name="_next" value="https://ssebs.com//contact">
+ &lt;/form>
+&lt;/div>
+
+&lt;script>
+ 
+ 
+ const nextURL = document.getElementById("nextURL");
+ 
+ nextURL.value = encodeURI(`${window.location.href}?msg=Message sent! Thank you!`);
+
+
+ 
+ const urlParams = new URLSearchParams(window.location.search);
+ if (urlParams.get('msg')) {
+ const msgContainer = document.getElementById('msg-container');
+ msgContainer.classList.remove("hidden");
+ const msg = decodeURI(urlParams.get("msg"));
+ msgContainer.textContent = msg;
+ window.alert(msg);
+ }
+&lt;/script>
+&lt;blockquote>
+&lt;p>Note: It takes a few seconds to submit, so please be patient.&lt;/p>&lt;/blockquote></description></item><item><title>Mini Macro Pad</title><link>https://ssebs.com/projects/go-mmp/</link><pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate><guid>https://ssebs.com/projects/go-mmp/</guid><description>&lt;blockquote>
+&lt;p>Read how &lt;a href="https://ssebs.com/blog/minimacropad/">I made the macro pad&lt;/a>, and how &lt;a href="https://ssebs.com/blog/mmpguieditor/">I added a config editor&lt;/a> to it.&lt;/p>&lt;/blockquote>
+&lt;p>&lt;a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
+&lt;div>
+&lt;p>&lt;strong>Mini Macro Pad (go-mmp)&lt;/strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p>
+&lt;p>It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p>
+&lt;div style="min-height: 1rem;">
+&lt;/div>
+&lt;h3 id="what-kind-of-macros-can-you-make">What kind of macros can you make?&lt;/h3>
+&lt;ul>
+&lt;li>Shortcuts:
+&lt;ul>
+&lt;li>CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
+&lt;ul>
+&lt;li>You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Macros:
+&lt;ul>
+&lt;li>Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Repeat keypresses (or mouse button presses)
+&lt;ul>
+&lt;li>Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Whatever you can think of, feel free to submit PRs!&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;div>
+ Screenshot of the GUI:
+ &lt;img class="block" src="./img/MMPGUIScreenshot.png" alt="Screenshot of the GUI">
+
+&lt;/div>
+&lt;/div></description></item><item><title>Dank Nooner (v1)</title><link>https://ssebs.com/projects/dank-nooner/</link><pubDate>Mon, 06 Oct 2025 18:24:03 -0700</pubDate><guid>https://ssebs.com/projects/dank-nooner/</guid><description>&lt;img class="custom-float-right ml-3" src="./img/projects/dank-nooner/NewIcon.png" width="300px" alt="Game Icon">
+
+&lt;p>&lt;a href="https://github.com/ssebs/DankNooner" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://ssebs.com/projects/dank-nooner/#v1---play-now">Play v1 now!&lt;/a>&lt;/p>
+&lt;h2 id="what-is-it">What is it?&lt;/h2>
+&lt;p>&lt;strong>Dank Nooner V1&lt;/strong> is a wheelie challenge game where you try to hold a wheelie for as long as you can &amp;amp; earn points to upgrade your bike. &lt;a href="https://ssebs.com/projects/dank-nooner/#v2---coming-soon">V2 is coming soon&lt;/a> with a full open-world experience!&lt;/p></description></item><item><title>Guac and Load</title><link>https://ssebs.com/projects/guac-and-load/</link><pubDate>Tue, 25 Feb 2025 17:05:19 -0800</pubDate><guid>https://ssebs.com/projects/guac-and-load/</guid><description>&lt;blockquote>
+&lt;p>Interested in the behind-the-scenes? Check out &lt;a href="https://ssebs.com/blog/guac-and-load-update-1/">dev update 1&lt;/a> and &lt;a href="https://ssebs.com/blog/guac-and-load-update-2/">update 2&lt;/a>.&lt;/p></description></item><item><title>MVC Tip Calculator</title><link>https://ssebs.com/projects/mvctipcalc/</link><pubDate>Thu, 14 Nov 2024 17:53:17 -0800</pubDate><guid>https://ssebs.com/projects/mvctipcalc/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>Simple Model View Controller Fyne project that doubles as a tip calculator.&lt;/p></description></item><item><title>Images to PDF</title><link>https://ssebs.com/projects/img-2-pdf/</link><pubDate>Wed, 24 Jul 2024 21:53:52 -0700</pubDate><guid>https://ssebs.com/projects/img-2-pdf/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/images-to-pdf" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/ssebs/images-to-pdf/main/image-to-pdf.gif" alt="Usage Example">&lt;/p>
+&lt;p>Convert a selection of images files into a single PDF.&lt;/p></description></item><item><title>Simpleshare</title><link>https://ssebs.com/projects/simpleshare/</link><pubDate>Tue, 23 Jul 2024 09:25:19 -0700</pubDate><guid>https://ssebs.com/projects/simpleshare/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/simpleshare" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>A local file sharing utility written in Python. Utilized multicast UDP to create an easy to use local network file sharing application. There&amp;rsquo;s a simple GUI to enable ease of use for non-technical users.&lt;/p></description></item><item><title>Perishable Punchers</title><link>https://ssebs.com/projects/perishable-punchers/</link><pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate><guid>https://ssebs.com/projects/perishable-punchers/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/PerishablePunchers" target="_blank">Github Repo&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="./img/projects/PerishablePunchers.jpg" alt="screenshot">&lt;/p>
+&lt;p>Mortal Kombat like Game written in Java, back in highschool.&lt;/p></description></item><item><title>CSV Editor</title><link>https://ssebs.com/projects/csveditor/</link><pubDate>Sun, 23 Jun 2024 17:42:08 -0700</pubDate><guid>https://ssebs.com/projects/csveditor/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/csveditor" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>A lightweight GUI csv editor written in python.&lt;/p></description></item><item><title>Ninja 500</title><link>https://ssebs.com/projects/ninja-500/</link><pubDate>Sun, 12 Oct 2025 14:26:01 -0700</pubDate><guid>https://ssebs.com/projects/ninja-500/</guid><description>&lt;h2 id="story">Story&lt;/h2>
+&lt;p>I&amp;rsquo;ve always wanted a motorcycle, and I finally decided to get one. Now that I&amp;rsquo;m a bit older, I&amp;rsquo;ve got the self-control not to do anything crazy with it.&lt;/p></description></item><item><title>Tipr</title><link>https://ssebs.com/projects/tipr/</link><pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate><guid>https://ssebs.com/projects/tipr/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/tipr" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>A tip calculator that shows the tip amount and the total amount.&lt;/p></description></item><item><title>Creating Procedural Animations to Save Time in Godot</title><link>https://ssebs.com/blog/godot-ik/</link><pubDate>Thu, 01 Jan 2026 13:13:15 -0800</pubDate><guid>https://ssebs.com/blog/godot-ik/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/moto-player-controller-godot/" target="_blank">Github repo for this blog&lt;/a> | &lt;a href="https://github.com/ssebs/danknooner" target="_blank">GitHub repo for DankNooner&lt;/a>&lt;/p>
+&lt;h2 id="what-is-dank-nooner">What is Dank Nooner?&lt;/h2>
+&lt;img class="custom-float-right ml-3" src="./img/projects/dank-nooner/screenshot03.png" width="400" alt="dank nooner screenshot">
+
+&lt;p>&lt;strong>Dank Nooner&lt;/strong> is a motorcycle stunt game built in Godot. The v1 proof of concept is a simple wheelie balance challenge game where you hold a wheelie as long as you can and earn points to upgrade your bike.&lt;/p></description></item><item><title>Guac and Load Update #2: Lessons learned &amp; Retro</title><link>https://ssebs.com/blog/guac-and-load-update-2/</link><pubDate>Sat, 02 Aug 2025 07:26:45 -0700</pubDate><guid>https://ssebs.com/blog/guac-and-load-update-2/</guid><description>&lt;blockquote>
+&lt;p>This is the second Guac &amp;amp; Load update, check out the &lt;a href="https://ssebs.com/blog/guac-and-load-update-1">first one&lt;/a> to see how I got started.&lt;/p></description></item><item><title>Guac and Load Dev Update #1: Cooking Up Gameplay and Spicy Bugs</title><link>https://ssebs.com/blog/guac-and-load-update-1/</link><pubDate>Thu, 13 Mar 2025 20:54:26 -0700</pubDate><guid>https://ssebs.com/blog/guac-and-load-update-1/</guid><description>&lt;p>Check out the &lt;a href="https://store.steampowered.com/app/3800880/Guac__Load/" target="_blank">Steam store page&lt;/a> and the &lt;a href="https://ssebs.com/projects/guac-and-load/">project page&lt;/a>&lt;/p>
+&lt;h2 id="whats-guac-and-load">What&amp;rsquo;s Guac and Load?&lt;/h2>
+&lt;img class="custom-float-right ml-3" src="https://ssebs.com/img/guac-and-load-gal/guac-and-load.png" width="512px" alt="Game screenshot">
+
+&lt;p>&lt;strong>Guac and Load&lt;/strong> is what I&amp;rsquo;m calling my first 3D video game. It&amp;rsquo;s a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.&lt;/p></description></item><item><title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title><link>https://ssebs.com/blog/mmpguieditor/</link><pubDate>Fri, 03 Jan 2025 09:00:00 -0800</pubDate><guid>https://ssebs.com/blog/mmpguieditor/</guid><description>&lt;h2 id="before-you-read">Before you read&amp;hellip;&lt;/h2>
+&lt;p>This is part 2 of my &lt;a href="https://ssebs.com/projects/go-mmp/">Mini Macro Pad&lt;/a> project. I recommend reading my &lt;a href="https://ssebs.com/blog/minimacropad/">last blog post&lt;/a> to read about how I 3D printed and programmed that.&lt;/p></description></item><item><title>3D Printing my Business Card</title><link>https://ssebs.com/blog/bizcard/</link><pubDate>Thu, 26 Dec 2024 21:11:16 -0800</pubDate><guid>https://ssebs.com/blog/bizcard/</guid><description>&lt;h2 id="why-make-a-business-card">Why make a business card?&lt;/h2>
+&lt;p>Honestly, I don’t need one. Since most of my time is spent in front of a computer or in meetings, it’s not something I’ll use very often. I could say I&amp;rsquo;d use them to schmooze at a tech conference and be useful for my career.&lt;/p></description></item><item><title>Learning the MVC pattern by making a Tip Calculator</title><link>https://ssebs.com/blog/mvctipcalc/</link><pubDate>Wed, 11 Dec 2024 20:45:41 -0800</pubDate><guid>https://ssebs.com/blog/mvctipcalc/</guid><description>&lt;blockquote>
+&lt;p>Also see the &lt;a href="https://ssebs.com/projects/mvctipcalc/">project page&lt;/a> and the &lt;a href="https://github.com/ssebs/MVCTipCalc" target="_blank">Github Repo&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;img class="custom-float-right ml-3" src="https://ssebs.com/img/MVCTipCalc.png" width="320px" alt="MVC Screenshot">
+
+&lt;h2 id="why-did-i-make-a-tip-calculator">Why did I make a tip calculator?&lt;/h2>
+&lt;p>While working on the &lt;code>v2&lt;/code> release of my &lt;a href="https://ssebs.com/projects/go-mmp/">Mini Macro Pad&lt;/a>, I was having trouble managing state between different parts of the GUI.&lt;/p></description></item><item><title>3D printing and coding my Mini Macro Pad</title><link>https://ssebs.com/blog/minimacropad/</link><pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate><guid>https://ssebs.com/blog/minimacropad/</guid><description>&lt;blockquote>
+&lt;p>Read the technical details on the &lt;a href="https://ssebs.com/projects/go-mmp">project page&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;h2 id="whats-a-macro-pad">What&amp;rsquo;s a Macro Pad?&lt;/h2>
+&lt;img class="custom-float-right ml-3" src="https://ssebs.com/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
+
+&lt;p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p></description></item><item><title>nccsv</title><link>https://ssebs.com/projects/nccsv/</link><pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate><guid>https://ssebs.com/projects/nccsv/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/nccsv" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>Ncurses CSV Editor written in Python&lt;/p>
+
+&lt;script src="https://asciinema.org/a/6gHETuFhyD4R9nAwtUGet5P9i.js" id="asciicast-6gHETuFhyD4R9nAwtUGet5P9i" async="true">&lt;/script>
+
+&lt;h2 id="todo">TODO:&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Architecture
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Wireframes
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Home / Menu&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> File selector
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Open&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Close&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Editor
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Layout Grid&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Entry&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Multiple views
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Home / Menu&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> File selector&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Editor&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Custom widgets
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Layout Grid&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Entry (text editor with box)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Scroll down / right&lt;/li>
+&lt;li>[.] Delete contents of cell when you hit &amp;ldquo;DEL&amp;rdquo;&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Row / Col bars (A,B,C, 1,2,3)&lt;/li>
+&lt;li>[.] Actually handle CSVs&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Color&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Documentation&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Publish to pip&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Tests&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Misc folder is for miscellaneous test files to add features (pad scrolling, etc)&lt;/p></description></item><item><title>PeopleDB</title><link>https://ssebs.com/projects/peopledb/</link><pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate><guid>https://ssebs.com/projects/peopledb/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/Peopledb-py-react" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>Person Database using python, flask, sqlite3, react.&lt;/p>
+&lt;h2 id="home--search-page">Home / Search page&lt;/h2>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/ssebs/Peopledb-py-react/master/img/ppldb-home-search.png" alt="Home Page">&lt;/p></description></item><item><title>ServerClip</title><link>https://ssebs.com/projects/serverclip/</link><pubDate>Wed, 24 Jul 2024 21:44:53 -0700</pubDate><guid>https://ssebs.com/projects/serverclip/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/ServerClip" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>Tool for copying contents of a file over nested ssh connections. Need to get a log file over to your laptop? This can help.&lt;/p></description></item><item><title>A Platformer of Some Sort</title><link>https://ssebs.com/projects/a-platformer-of-some-sort/</link><pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate><guid>https://ssebs.com/projects/a-platformer-of-some-sort/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/Platformer" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>&lt;img src="./img/projects/Platformer.jpg" alt="screenshot">&lt;/p>
+&lt;p>A Platformer of Some Sort was my first long-term project. This was a wild 3 month process to make A Platformer Of Some Sort, which was a working title, but we had decided to leave it as such because it worked. This game took so long because I was unable to figure out the hit boxes and jumping, both of which are mediocre at best™ *Not a real Trademark&lt;/p></description></item><item><title>Breakout Pong</title><link>https://ssebs.com/projects/breakout-pong/</link><pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate><guid>https://ssebs.com/projects/breakout-pong/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/BreakoutPongGame" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>&lt;img src="./img/projects/BreakoutPong.png" alt="screenshot">&lt;/p>
+&lt;p>Welcome to the start of it all: Breakout-Pong. This was the very first game I made. ‘Twas the final project of the first semester of AP Computer Science. I thought that making a simple Pong remake would be easy. Little did I know that having to learn OpenGL along with Java would mean a lot of googling.&lt;/p></description></item><item><title>Clean Mac Address</title><link>https://ssebs.com/projects/clean-mac-address/</link><pubDate>Wed, 24 Jul 2024 22:03:09 -0700</pubDate><guid>https://ssebs.com/projects/clean-mac-address/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/clean-mac-address" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>Program to &amp;ldquo;clean&amp;rdquo; MAC address for registrar input at PARC.&lt;/p></description></item><item><title>Audi S4</title><link>https://ssebs.com/projects/audi-s4/</link><pubDate>Wed, 24 Jul 2024 21:20:49 -0700</pubDate><guid>https://ssebs.com/projects/audi-s4/</guid><description>&lt;p>I used to own a 2014 Audi S4 (B8.5), had a few mods done, but ultimately it was too expensive to keep 😭.&lt;/p></description></item><item><title>Miata</title><link>https://ssebs.com/projects/miata/</link><pubDate>Wed, 24 Jul 2024 20:39:10 -0700</pubDate><guid>https://ssebs.com/projects/miata/</guid><description>&lt;p>I own and drive a 2021 Mazda MX-5 RF GT (Miata). This is my first daily driven stick shift car, and it&amp;rsquo;s so fun to drive!&lt;/p></description></item><item><title>My Website</title><link>https://ssebs.com/projects/ssebs-www/</link><pubDate>Fri, 05 Jul 2024 23:29:29 -0700</pubDate><guid>https://ssebs.com/projects/ssebs-www/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/ssebs-www" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>ssebs.com has changed as I&amp;rsquo;ve learned more webdev skills. Currently, you&amp;rsquo;re seeing it!&lt;/p></description></item><item><title>Sir Flap a Lot</title><link>https://ssebs.com/projects/sir-flap-a-lot/</link><pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate><guid>https://ssebs.com/projects/sir-flap-a-lot/</guid><description>&lt;p>&lt;img src="./img/projects/SFA.png" alt="screenshot">&lt;/p>
+&lt;p>Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store. I thought, hey, maybe I can make something just as good. And sure enough, I tried for about a day or two then got bored. BUT, within that time, I made a PC port of it, using my own art and “Physics”. There are some broken things, like not being able to make it through some gaps, but hey, pretty good for two days. Also you may be thinking, “Hey, a lot is two words…”, and you&amp;rsquo;re right. But that&amp;rsquo;s the beauty in making your own games, you can do whatever you want.&lt;/p></description></item></channel></rss>

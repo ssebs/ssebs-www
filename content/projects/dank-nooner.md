@@ -1,5 +1,5 @@
 ---
-title: 'Dank Nooner'
+title: 'Dank Nooner (v1)'
 slug: dank-nooner
 shortdesc: Hold a wheelie on a motorcycle as long as you can. Upgrade your bike & avoid traffic to stay alive!
 feature: ./img/projects/dank-nooner/NewIcon.png
