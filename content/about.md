@@ -48,7 +48,7 @@ Online, I go by <span class="text-quaternary">ssebs</span>.
 - Game Dev
   - Check out the [games I've made](/tags/gamedev)!
     - [Guac & Load](/projects/guac-and-load) is available on [Steam](https://store.steampowered.com/app/3800880/Guac__Load/)
-    - [Dank Nooner](/projects/dank-nooner) is a motorcycle wheelie game free on [Itch.io](https://theofficialssebs.itch.io/dank-nooner)
+    - [Dank Nooner (POC)](/projects/dank-nooner) is a POC motorcycle wheelie game. The full game is a [Work in Progress](https://github.com/ssebs/DankNooner)
 
 ## Music
 I've got a weird taste in music, lots of Metal, some Hip Hop, Pop, and EDM.
