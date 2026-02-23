@@ -3,7 +3,7 @@
 set -e
 
 # Hugo version to install
-HUGO_VERSION="0.148.2"
+HUGO_VERSION="0.156.0"
 HUGO_FILENAME="hugo_extended_withdeploy_${HUGO_VERSION}_linux-amd64.tar.gz"
 HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_FILENAME}"
 
