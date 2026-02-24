@@ -1,47 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3d-Printing on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/3d-printing/</link><description>Recent content in 3d-Printing on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 03 Jan 2025 09:00:00 -0800</lastBuildDate><atom:link href="https://ssebs.com/tags/3d-printing/index.xml" rel="self" type="application/rss+xml"/><item><title>Mini Macro Pad</title><link>https://ssebs.com/projects/go-mmp/</link><pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate><guid>https://ssebs.com/projects/go-mmp/</guid><description>&lt;blockquote>
-&lt;p>Read how &lt;a href="https://ssebs.com/blog/minimacropad/">I made the macro pad&lt;/a>, and how &lt;a href="https://ssebs.com/blog/mmpguieditor/">I added a config editor&lt;/a> to it.&lt;/p>&lt;/blockquote>
-&lt;p>&lt;a href="https://github.com/ssebs/go-mmp" target="_blank">Github Repo&lt;/a>&lt;/p>
-&lt;div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
-&lt;div>
-&lt;p>&lt;strong>Mini Macro Pad (go-mmp)&lt;/strong> is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p>
-&lt;p>It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p>
-&lt;div style="min-height: 1rem;">
-&lt;/div>
-&lt;h3 id="what-kind-of-macros-can-you-make">What kind of macros can you make?&lt;/h3>
-&lt;ul>
-&lt;li>Shortcuts:
-&lt;ul>
-&lt;li>CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
-&lt;ul>
-&lt;li>You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href="https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys" target="_blank">in the list&lt;/a>.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Macros:
-&lt;ul>
-&lt;li>Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Repeat keypresses (or mouse button presses)
-&lt;ul>
-&lt;li>Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Whatever you can think of, feel free to submit PRs!&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;div>
- Screenshot of the GUI:
- &lt;img class="block" src="./img/MMPGUIScreenshot.png" alt="Screenshot of the GUI">
-
-&lt;/div>
-&lt;/div></description></item><item><title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title><link>https://ssebs.com/blog/mmpguieditor/</link><pubDate>Fri, 03 Jan 2025 09:00:00 -0800</pubDate><guid>https://ssebs.com/blog/mmpguieditor/</guid><description>&lt;h2 id="before-you-read">Before you read&amp;hellip;&lt;/h2>
-&lt;p>This is part 2 of my &lt;a href="https://ssebs.com/projects/go-mmp/">Mini Macro Pad&lt;/a> project. I recommend reading my &lt;a href="https://ssebs.com/blog/minimacropad/">last blog post&lt;/a> to read about how I 3D printed and programmed that.&lt;/p></description></item><item><title>3D Printing my Business Card</title><link>https://ssebs.com/blog/bizcard/</link><pubDate>Thu, 26 Dec 2024 21:11:16 -0800</pubDate><guid>https://ssebs.com/blog/bizcard/</guid><description>&lt;h2 id="why-make-a-business-card">Why make a business card?&lt;/h2>
-&lt;p>Honestly, I don’t need one. Since most of my time is spent in front of a computer or in meetings, it’s not something I’ll use very often. I could say I&amp;rsquo;d use them to schmooze at a tech conference and be useful for my career.&lt;/p></description></item><item><title>3D printing and coding my Mini Macro Pad</title><link>https://ssebs.com/blog/minimacropad/</link><pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate><guid>https://ssebs.com/blog/minimacropad/</guid><description>&lt;blockquote>
-&lt;p>Read the technical details on the &lt;a href="https://ssebs.com/projects/go-mmp">project page&lt;/a>&lt;/p>&lt;/blockquote>
-&lt;h2 id="whats-a-macro-pad">What&amp;rsquo;s a Macro Pad?&lt;/h2>
-&lt;img class="custom-float-right ml-3" src="https://ssebs.com/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
-
-&lt;p>Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p></description></item><item><title>Miata</title><link>https://ssebs.com/projects/miata/</link><pubDate>Wed, 24 Jul 2024 20:39:10 -0700</pubDate><guid>https://ssebs.com/projects/miata/</guid><description>&lt;p>I own and drive a 2021 Mazda MX-5 RF GT (Miata). This is my first daily driven stick shift car, and it&amp;rsquo;s so fun to drive!&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3d-Printing on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/tags/3d-printing/</link>
+    <description>Recent content in 3d-Printing on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jan 2025 09:00:00 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/3d-printing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mini Macro Pad</title>
+      <link>http://localhost:1313/projects/go-mmp/</link>
+      <pubDate>Sat, 18 May 2024 14:08:45 -0700</pubDate>
+      <guid>http://localhost:1313/projects/go-mmp/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read how &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;I made the macro pad&lt;/a&gt;, and how &lt;a href=&#34;http://localhost:1313/blog/mmpguieditor/&#34;&gt;I added a config editor&lt;/a&gt; to it.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/go-mmp&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;display: grid; grid-template-columns: 60% 40%; gap: 1rem;&#34;&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Mini Macro Pad (go-mmp)&lt;/strong&gt; is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button.&lt;/p&gt;&#xA;&lt;p&gt;It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.&lt;/p&gt;&#xA;&lt;div style=&#34;min-height: 1rem;&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;what-kind-of-macros-can-you-make&#34;&gt;What kind of macros can you make?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Shortcuts:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;You can press whatever key you want, as long as it&amp;rsquo;s &lt;a href=&#34;https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys&#34; target=&#34;_blank&#34;&gt;in the list&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Macros:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Type &amp;ldquo;gg&amp;rdquo; in game, rage quit a game, or do something more useful in Excel!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Repeat keypresses (or mouse button presses)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Whatever you can think of, feel free to submit PRs!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;div&gt;&#xD;&#xA;  Screenshot of the GUI:&#xD;&#xA;  &lt;img class=&#34;block&#34; src=&#34;./img/MMPGUIScreenshot.png&#34;   alt=&#34;Screenshot of the GUI&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>How I Improved my Macro Pad with a Drag-and-Drop Config Editor</title>
+      <link>http://localhost:1313/blog/mmpguieditor/</link>
+      <pubDate>Fri, 03 Jan 2025 09:00:00 -0800</pubDate>
+      <guid>http://localhost:1313/blog/mmpguieditor/</guid>
+      <description>&lt;h2 id=&#34;before-you-read&#34;&gt;Before you read&amp;hellip;&lt;/h2&gt;&#xA;&lt;p&gt;This is part 2 of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt; project. I recommend reading my &lt;a href=&#34;http://localhost:1313/blog/minimacropad/&#34;&gt;last blog post&lt;/a&gt; to read about how I 3D printed and programmed that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3D Printing my Business Card</title>
+      <link>http://localhost:1313/blog/bizcard/</link>
+      <pubDate>Thu, 26 Dec 2024 21:11:16 -0800</pubDate>
+      <guid>http://localhost:1313/blog/bizcard/</guid>
+      <description>&lt;h2 id=&#34;why-make-a-business-card&#34;&gt;Why make a business card?&lt;/h2&gt;&#xA;&lt;p&gt;Honestly, I don’t need one. Since most of my time is spent in front of a computer or in meetings, it’s not something I’ll use very often. I could say I&amp;rsquo;d use them to schmooze at a tech conference and be useful for my career.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3D printing and coding my Mini Macro Pad</title>
+      <link>http://localhost:1313/blog/minimacropad/</link>
+      <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
+      <guid>http://localhost:1313/blog/minimacropad/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read the technical details on the &lt;a href=&#34;http://localhost:1313/projects/go-mmp&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;whats-a-macro-pad&#34;&gt;What&amp;rsquo;s a Macro Pad?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MMPPrinted.jpg&#34; width=&#34;256px&#34; alt=&#34;physical macro pad&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Miata</title>
+      <link>http://localhost:1313/projects/miata/</link>
+      <pubDate>Wed, 24 Jul 2024 20:39:10 -0700</pubDate>
+      <guid>http://localhost:1313/projects/miata/</guid>
+      <description>&lt;p&gt;I own and drive a 2021 Mazda MX-5 RF GT (Miata). This is my first daily driven stick shift car, and it&amp;rsquo;s so fun to drive!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

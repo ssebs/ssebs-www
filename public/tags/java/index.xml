@@ -1,8 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/java/</link><description>Recent content in Java on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 07 Jul 2024 15:32:42 -0700</lastBuildDate><atom:link href="https://ssebs.com/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Perishable Punchers</title><link>https://ssebs.com/projects/perishable-punchers/</link><pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate><guid>https://ssebs.com/projects/perishable-punchers/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/PerishablePunchers" target="_blank">Github Repo&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="./img/projects/PerishablePunchers.jpg" alt="screenshot">&lt;/p>
-&lt;p>Mortal Kombat like Game written in Java, back in highschool.&lt;/p></description></item><item><title>A Platformer of Some Sort</title><link>https://ssebs.com/projects/a-platformer-of-some-sort/</link><pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate><guid>https://ssebs.com/projects/a-platformer-of-some-sort/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/Platformer" target="_blank">Github Repo&lt;/a>&lt;/p>
-&lt;p>&lt;img src="./img/projects/Platformer.jpg" alt="screenshot">&lt;/p>
-&lt;p>A Platformer of Some Sort was my first long-term project. This was a wild 3 month process to make A Platformer Of Some Sort, which was a working title, but we had decided to leave it as such because it worked. This game took so long because I was unable to figure out the hit boxes and jumping, both of which are mediocre at best™ *Not a real Trademark&lt;/p></description></item><item><title>Breakout Pong</title><link>https://ssebs.com/projects/breakout-pong/</link><pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate><guid>https://ssebs.com/projects/breakout-pong/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/BreakoutPongGame" target="_blank">Github Repo&lt;/a>&lt;/p>
-&lt;p>&lt;img src="./img/projects/BreakoutPong.png" alt="screenshot">&lt;/p>
-&lt;p>Welcome to the start of it all: Breakout-Pong. This was the very first game I made. ‘Twas the final project of the first semester of AP Computer Science. I thought that making a simple Pong remake would be easy. Little did I know that having to learn OpenGL along with Java would mean a lot of googling.&lt;/p></description></item><item><title>Sir Flap a Lot</title><link>https://ssebs.com/projects/sir-flap-a-lot/</link><pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate><guid>https://ssebs.com/projects/sir-flap-a-lot/</guid><description>&lt;p>&lt;img src="./img/projects/SFA.png" alt="screenshot">&lt;/p>
-&lt;p>Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store. I thought, hey, maybe I can make something just as good. And sure enough, I tried for about a day or two then got bored. BUT, within that time, I made a PC port of it, using my own art and “Physics”. There are some broken things, like not being able to make it through some gaps, but hey, pretty good for two days. Also you may be thinking, “Hey, a lot is two words…”, and you&amp;rsquo;re right. But that&amp;rsquo;s the beauty in making your own games, you can do whatever you want.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/tags/java/</link>
+    <description>Recent content in Java on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jul 2024 15:32:42 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perishable Punchers</title>
+      <link>http://localhost:1313/projects/perishable-punchers/</link>
+      <pubDate>Sun, 23 Jun 2024 17:43:06 -0700</pubDate>
+      <guid>http://localhost:1313/projects/perishable-punchers/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/PerishablePunchers&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/projects/PerishablePunchers.jpg&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Mortal Kombat like Game written in Java, back in highschool.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Platformer of Some Sort</title>
+      <link>http://localhost:1313/projects/a-platformer-of-some-sort/</link>
+      <pubDate>Sun, 07 Jul 2024 15:31:48 -0700</pubDate>
+      <guid>http://localhost:1313/projects/a-platformer-of-some-sort/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/Platformer&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/projects/Platformer.jpg&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A Platformer of Some Sort was my first long-term project. This was a wild 3 month process to make A Platformer Of Some Sort, which was a working title, but we had decided to leave it as such because it worked. This game took so long because I was unable to figure out the hit boxes and jumping, both of which are mediocre at best™ *Not a real Trademark&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Breakout Pong</title>
+      <link>http://localhost:1313/projects/breakout-pong/</link>
+      <pubDate>Sun, 07 Jul 2024 15:28:56 -0700</pubDate>
+      <guid>http://localhost:1313/projects/breakout-pong/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/BreakoutPongGame&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./img/projects/BreakoutPong.png&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Welcome to the start of it all: Breakout-Pong. This was the very first game I made. ‘Twas the final project of the first semester of AP Computer Science. I thought that making a simple Pong remake would be easy. Little did I know that having to learn OpenGL along with Java would mean a lot of googling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sir Flap a Lot</title>
+      <link>http://localhost:1313/projects/sir-flap-a-lot/</link>
+      <pubDate>Sun, 07 Jul 2024 15:32:42 -0700</pubDate>
+      <guid>http://localhost:1313/projects/sir-flap-a-lot/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;./img/projects/SFA.png&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Sir Flap Alot was born when the original creator of Flappy Bird took his games off of the App/Google Play Store. I thought, hey, maybe I can make something just as good. And sure enough, I tried for about a day or two then got bored. BUT, within that time, I made a PC port of it, using my own art and “Physics”. There are some broken things, like not being able to make it through some gaps, but hey, pretty good for two days. Also you may be thinking, “Hey, a lot is two words…”, and you&amp;rsquo;re right. But that&amp;rsquo;s the beauty in making your own games, you can do whatever you want.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
