@@ -260,10 +260,36 @@ Then... it took a bit more tweaking, but eventually, it worked! (Go see the [src
 
 # How I can stay relevant, and sharp - **Summary / Lessons Learned**
 
-> in a time where the world wants us to rely on AI, find what works for you. 
+> In a time where the world wants us to rely on AI, find what works for you.
 
 ### Don't give up planning on your own, think the problem through
 
+My VSCode extension taught me this the hard way. When I let Claude drive, I ended up with a codebase I didn't understand and couldn't debug effectively. My approach with Dank Nooner worked because I already had a mental model of what I wanted before asking for help.
+
+Before you open the AI chat, ask yourself: "Do I actually understand what I'm trying to build?" If not, sketch it out first. An excalidraw diagram, a bullet list, whatever works. The AI can help refine your plan, but it shouldn't *be* the plan.
+
 ### Once you have an idea, write it down & verify it
 
+This is where the skin system example comes in. I didn't just tell Claude "make skins work." I wrote out my constraints, the types of materials I was dealing with, and what I thought the solution might look like.
+
+When Claude suggested alternatives, I could actually evaluate them against my requirements. I knew enough to say "no, that won't work because..." instead of just accepting whatever it spit out.
+
+Write your plan in a markdown file. Share it with the AI. Have it poke holes in it. But *you* should make the final call.
+
 ### Use AI to boost productivity, not to replace thinking
+
+The skeleton generation and AABB scaling examples are the sweet spot. I knew *what* I needed, I just didn't know the exact API calls. That's perfect AI territory. It's like having a really fast Stack Overflow that knows your codebase.
+
+But here's the line I've drawn for myself:
+- **AI should handle**: Boilerplate, syntax lookup, implementing well-defined patterns, refactoring with clear instructions
+- **I should handle**: Architecture decisions, debugging root causes, understanding *why* something works
+
+The moment you stop understanding your own code is the moment you become a liability. And no amount of "just ask Claude to fix it" will save you when you're on a deadline and the AI keeps hallucinating non-existent APIs.
+
+### The bottom line
+
+AI isn't going away, so you might as well get good at using it. Just don't let it do your thinking for you.
+
+Back to the code - I've got more stuff to add.
+
+**Thanks for reading!**
