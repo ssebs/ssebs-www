@@ -172,9 +172,9 @@ I had to tell it "stop generating code, we're still planning the system. Instead
 
 {{< img-float-right src="/img/dank-nooner-skeleton-gen.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
 
-Once really crutial time saver was to delegate some implementation to the AI. Since I know the higher level architecture, and what I'm trying to achieve, I can be specific enough & provide the data the AI needs to solve the problem.
+Once really crucial time saver was to delegate some implementation to the AI. Since I know the higher level architecture, and what I'm trying to achieve, I can be specific enough & provide the data the AI needs to solve the problem.
 
-#### Set height of a 3D Mesh dynamicall so I don't have to manually scale it
+#### Set height of a 3D Mesh dynamically so I don't have to manually scale it
 
 This is something I knew that I should use bounding boxes (AABB) for, but wasn't sure how I'd implement. 
 
