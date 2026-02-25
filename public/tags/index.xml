@@ -6,33 +6,47 @@
     <description>Recent content in Tags on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2026 13:13:15 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Feb 2026 15:28:41 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gamedev</title>
       <link>http://localhost:1313/tags/gamedev/</link>
-      <pubDate>Thu, 01 Jan 2026 13:13:15 -0800</pubDate>
+      <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
       <guid>http://localhost:1313/tags/gamedev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Genai</title>
+      <link>http://localhost:1313/tags/genai/</link>
+      <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/genai/</guid>
       <description></description>
     </item>
     <item>
       <title>Godot</title>
       <link>http://localhost:1313/tags/godot/</link>
-      <pubDate>Thu, 01 Jan 2026 13:13:15 -0800</pubDate>
+      <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
       <guid>http://localhost:1313/tags/godot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Js</title>
+      <link>http://localhost:1313/tags/js/</link>
+      <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
+      <guid>http://localhost:1313/tags/js/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
       <link>http://localhost:1313/tags/programming/</link>
-      <pubDate>Thu, 01 Jan 2026 13:13:15 -0800</pubDate>
+      <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
       <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
-      <pubDate>Thu, 01 Jan 2026 13:13:15 -0800</pubDate>
+      <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
       <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
     </item>
@@ -90,13 +104,6 @@
       <link>http://localhost:1313/tags/flask/</link>
       <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
       <guid>http://localhost:1313/tags/flask/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Js</title>
-      <link>http://localhost:1313/tags/js/</link>
-      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
-      <guid>http://localhost:1313/tags/js/</guid>
       <description></description>
     </item>
     <item>

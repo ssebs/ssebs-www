@@ -5,7 +5,7 @@ shortdesc: "Vibe coding promises speed but costs you understanding. Here's how t
 feature: /img/vibe-coding-1.png
 date: 2026-02-24T15:28:41-08:00
 weight: 25
-tags: []
+tags: [programming, gamedev, godot, python, js, genai]
 ---
 
 ## First off, what is AI?
@@ -23,18 +23,42 @@ tags: []
 
 
 ## Trying out "vibe coding" - **VSCode extension**
-  - > What DOESN'T work (rely on it to think for me)
+> What DOESN'T work (rely on it to think for me)
+
+Check out the [VSCode Extension](https://github.com/ssebs/todo-sidebar) for yourself!
+
+
 ### What I wanted
+During the development of [Dank Nooner's rewrite](/projects/dank-nooner), I needed some way to track my todo's & tasks. I didn't want to go full Kanban, but needed more than a simple Markdown file.
 
-### What I did (not look at the code)
+I was using a TODO.md file with H2 sections & a list of nested checkboxes, but I wanted something that I could drag-n-drop, and check things off. 
 
-### What's the problem (laggy, telling the computer to figure out problems can only get you so far)
+Unable to find a decent solution, I decided to give vibe coding a try.
+
+### What I did
+
+I created a brand new VSCode extension following their docs, and got to work.
+
+By got to work, I mean wrote a README.md explaining what I wanted the extension to do, and a sample TODO.md file with the format that I was already using.
+
+In about 2-3 days of using Claude Code's Pro plan (damn token limitations!), I got a functional app going. During this time, I simply told it what I wanted added, referenced a CLAUDE.md file, and let it rip. I didn't look at the code until it was working, and even then I just skimmed it.
+
+It was able to get things about ~80% of the way there, but actually using the extension gave me more TODOs to copy/paste. And more errors. 
+
+
+{{< img-full src="/img/todo-sidebar-md.png" alt="screenshot of the extension" >}}
+
+### What's the problem 
+
+(laggy, telling the computer to figure out problems can only get you so far)
 
 ### What's next
 
 ## Trying out AI assisted coding - **Dank Nooner**
 
 > What DOES work (use it to be more efficient)
+
+[Dank Nooner's project page](/projects/dank-nooner)
 
 ### Use AI as a tool, not as a replacement for thinking
 
