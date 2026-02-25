@@ -278,33 +278,42 @@
         genai
       </a>
     </div></div>
-  <div class="post-content overflow-x-hidden break-words"><h2 id="first-off-what-is-ai">First off, what is AI?</h2>
+  <div class="post-content overflow-x-hidden break-words"><h1 id="first-off-what-is-ai">First off, what is AI?</h1>
+<blockquote>
+<p>Note - This section was written by Claude Code! The rest of the blog was me, though</p>
+</blockquote>
 <img class="custom-float-right ml-3" src="/img/vibe-coding-1.png" width="400" alt="An illustration of an AI chat prompt input field. The text &#39;do it all for me&#39; is crossed out in red. Below it, &#39;help me think through this&#39; has a green checkmark">
 
 <h3 id="super-brief-summary">Super Brief Summary</h3>
+<p>AI, specifically Large Language Models (LLMs), are autocomplete on steroids. They predict the next most likely token based on massive amounts of training data. They don&rsquo;t &ldquo;understand&rdquo; your code, they just pattern match really well. That&rsquo;s powerful, but it&rsquo;s not magic.</p>
 <h3 id="how-people-are-using-it--hype-around-replacing-swes">How people are using it / hype around replacing SWEs</h3>
+<p>There&rsquo;s a lot of noise right now about AI replacing software engineers entirely. CEOs love the idea of smaller teams shipping faster. Tools like Cursor, Claude Code, and GitHub Copilot are getting better every month, and some people are shipping entire apps without writing a line of code themselves.</p>
+<p>But here&rsquo;s the thing: the people getting the most out of these tools are experienced developers who already know what good code looks like. The AI doesn&rsquo;t replace the skill, it amplifies it.</p>
 <h3 id="vibe-coding-vs-ai-assisted-coding">Vibe Coding vs AI Assisted Coding</h3>
+<p><strong>Vibe coding</strong> is when you let the AI drive. You describe what you want, hit enter, and hope for the best. You&rsquo;re not reading the code, not understanding the architecture, just <em>vibing</em>.</p>
+<p><strong>AI assisted coding</strong> is when <strong>you</strong> drive, and the AI rides shotgun. You plan the approach, understand the problem, and use AI to speed up the boring parts (e.g. boilerplate, syntax you&rsquo;d have to Google, etc.)</p>
+<p>One makes you faster today but dumber over time. The other makes you faster <em>and</em> keeps you sharp.</p>
 <div style="clear:both;"></div>
-<h2 id="trying-out-vibe-coding---vscode-extension">Trying out &ldquo;vibe coding&rdquo; - <strong>VSCode extension</strong></h2>
+<h1 id="trying-out-vibe-coding---vscode-extension">Trying out &ldquo;vibe coding&rdquo; - <strong>VSCode extension</strong></h1>
 <blockquote>
 <p>What DOESN&rsquo;T work (rely on it to think for me)</p>
 </blockquote>
 <p>Check out the <a href="https://github.com/ssebs/todo-sidebar" target="_blank">VSCode Extension</a> for yourself!</p>
 <h3 id="what-i-wanted">What I wanted</h3>
 <p>During the development of <a href="/projects/dank-nooner">Dank Nooner&rsquo;s rewrite</a>, I needed some way to track my todo&rsquo;s &amp; tasks. I didn&rsquo;t want to go full Kanban, but needed more than a simple Markdown file.</p>
-<p>I was using a TODO.md file with H2 sections &amp; a list of nested checkboxes, but I wanted something that I could drag-n-drop, and check things off.</p>
+<p>I was using a <code>TODO.md</code> file with H2 sections &amp; a list of nested checkboxes, but I wanted something that I could drag-n-drop, and check things off.</p>
 <p>Unable to find a decent solution, I decided to give vibe coding a try.</p>
 <h3 id="what-i-did">What I did</h3>
-<p>I created a brand new VSCode extension following their docs, and got to work.</p>
-<p>By got to work, I mean wrote a README.md explaining what I wanted the extension to do, and a sample TODO.md file with the format that I was already using.</p>
-<p>In about 2-3 days of using Claude Code&rsquo;s Pro plan (damn token limitations!), I got a functional app going. During this time, I simply told it what I wanted added, referenced a CLAUDE.md file, and let it rip. I didn&rsquo;t look at the code until it was working, and even then I just skimmed it.</p>
-<p>It was able to get things about ~80% of the way there, but actually using the extension gave me more TODOs to copy/paste. And more errors.</p>
+<p>I created a brand new <a href="https://github.com/ssebs/todo-sidebar" target="_blank">VSCode Extension</a> following their docs, and got to work.</p>
+<p>By got to work, I mean wrote a <code>README.md</code> explaining what I wanted the extension to do, and a sample <code>TODO.md</code> file with the format that I was already using.</p>
+<p>In about 2-3 days of using Claude Code&rsquo;s Pro plan (damn token limitations!), I got a functional app going. During this time, I simply told it what I wanted added, referenced a <code>CLAUDE.md</code> file, and let it rip. I didn&rsquo;t look at the code until it was working, and even then I just skimmed it.</p>
+<p>It was able to get things about ~80% of the way there, but actually using the extension gave me more TODOs to copy/paste (and more errors).</p>
 <img class="my-6" src="/img/todo-sidebar-md.png" width="100%" alt="screenshot of the extension">
 
 <h3 id="whats-the-problem">What&rsquo;s the problem</h3>
 <p>(laggy, telling the computer to figure out problems can only get you so far)</p>
 <h3 id="whats-next">What&rsquo;s next</h3>
-<h2 id="trying-out-ai-assisted-coding---dank-nooner">Trying out AI assisted coding - <strong>Dank Nooner</strong></h2>
+<h1 id="trying-out-ai-assisted-coding---dank-nooner">Trying out AI assisted coding - <strong>Dank Nooner</strong></h1>
 <blockquote>
 <p>What DOES work (use it to be more efficient)</p>
 </blockquote>
@@ -313,7 +322,7 @@
 <h3 id="eg-1---boilerplate-i-have-x-pattern-now-implement-it-for-y-z">E.g. 1 - Boilerplate (I have <code>x</code> pattern, now implement it for <code>y</code>, <code>z</code>)</h3>
 <h3 id="eg-2---planning-i-have-this-problem-and-i-think-i-can-do-this-to-solve-it-what-are-alternatives--how-do-they-compare-how-will-they-fit-in-my-codebase">E.g. 2 - Planning (I have this problem, and I think I can do this to solve it, what are alternatives &amp; how do they compare, how will they fit in my codebase)</h3>
 <h3 id="eg-3---implement-things-id-have-to-google-saving-time-aabb-bounding-box-skelbone-generation-from-dict">E.g. 3 - Implement things I&rsquo;d have to google, saving time. (AABB bounding box, Skel/Bone generation from Dict)</h3>
-<h2 id="how-i-can-stay-relevant-and-sharp---summary--lessons-learned">How I can stay relevant, and sharp - <strong>Summary / Lessons Learned</strong></h2>
+<h1 id="how-i-can-stay-relevant-and-sharp---summary--lessons-learned">How I can stay relevant, and sharp - <strong>Summary / Lessons Learned</strong></h1>
 <blockquote>
 <p>in a time where the world wants us to rely on AI, find what works for you.</p>
 </blockquote>
