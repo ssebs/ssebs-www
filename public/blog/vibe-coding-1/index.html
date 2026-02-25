@@ -284,43 +284,64 @@
 <img class="custom-float-right ml-3" src="/img/vibe-coding-1.png" width="400" alt="An illustration of an AI chat prompt input field. The text &#39;do it all for me&#39; is crossed out in red. Below it, &#39;help me think through this&#39; has a green checkmark">
 
 <h3 id="super-brief-summary">Super Brief Summary</h3>
-<p>AI, specifically Large Language Models (LLMs), are autocomplete on steroids. They predict the next most likely token based on massive amounts of training data. They don&rsquo;t &ldquo;understand&rdquo; your code, they just pattern match really well. That&rsquo;s powerful, but it&rsquo;s not magic.</p>
+<p>AI, specifically Large Language Models (LLMs), are basically autocomplete on steroids. They predict the next most likely <strong title="Basically a word">token</strong>  based on massive amounts of training data. They don&rsquo;t &ldquo;understand&rdquo; your code, they just pattern match really well. That&rsquo;s powerful, but it&rsquo;s not magic.</p>
 <h3 id="how-people-are-using-it--hype-around-replacing-swes">How people are using it / hype around replacing SWEs</h3>
-<p>There&rsquo;s a lot of noise right now about AI replacing software engineers entirely. CEOs love the idea of smaller teams shipping faster. Tools like Cursor, Claude Code, and GitHub Copilot are getting better every month, and some people are shipping entire apps without writing a line of code themselves.</p>
+<p>There&rsquo;s a lot of noise right now about <strong>AI</strong> replacing software engineers entirely. CEOs love the idea of smaller teams shipping faster (see: cheaper). Tools like Cursor, Claude Code, and GitHub Copilot are getting better every month, and some people are shipping entire apps without writing a line of code themselves.</p>
 <p>But here&rsquo;s the thing: the people getting the most out of these tools are experienced developers who already know what good code looks like. The AI doesn&rsquo;t replace the skill, it amplifies it.</p>
 <h3 id="vibe-coding-vs-ai-assisted-coding">Vibe Coding vs AI Assisted Coding</h3>
+<blockquote>
+<p>The main topic of this post</p></blockquote>
 <p><strong>Vibe coding</strong> is when you let the AI drive. You describe what you want, hit enter, and hope for the best. You&rsquo;re not reading the code, not understanding the architecture, just <em>vibing</em>.</p>
 <p><strong>AI assisted coding</strong> is when <strong>you</strong> drive, and the AI rides shotgun. You plan the approach, understand the problem, and use AI to speed up the boring parts (e.g. boilerplate, syntax you&rsquo;d have to Google, etc.)</p>
-<p>One makes you faster today but dumber over time. The other makes you faster <em>and</em> keeps you sharp.</p>
+<p>Most of the hype is around vibe coding, but I think the more useful thing is AI assisted coding.</p>
 <div style="clear:both;"></div>
-<h1 id="trying-out-vibe-coding---vscode-extension">Trying out &ldquo;vibe coding&rdquo; - <strong>VSCode extension</strong></h1>
+<h1 id="trying-out-vibe-coding---creating-a-vscode-extension">Trying out &ldquo;vibe coding&rdquo; - Creating a VSCode extension</h1>
 <blockquote>
-<p>What DOESN&rsquo;T work (relying on it to think for me)</p></blockquote>
-<blockquote>
-<p>Check out the <a href="https://github.com/ssebs/todo-sidebar" target="_blank">VSCode Extension</a> for yourself!</p></blockquote>
+<p>This is what does <strong>not</strong> seem to work in my experience</p></blockquote>
 <h3 id="what-i-wanted">What I wanted</h3>
-<p>During the development of <a href="/projects/dank-nooner">Dank Nooner&rsquo;s rewrite</a>, I needed some way to track my todo&rsquo;s &amp; tasks. I didn&rsquo;t want to go full Kanban, but needed more than a simple Markdown file.</p>
-<p>I was using a <code>TODO.md</code> file with H2 sections &amp; a list of nested checkboxes, but I wanted something that I could drag-n-drop, and check things off.</p>
-<p>Unable to find a decent solution, I decided to give vibe coding a try.</p>
+<p>During the development of my motorcycle stunt game, <a href="/projects/dank-nooner">Dank Nooner</a>, I needed some way to track my todo&rsquo;s &amp; milestones. I didn&rsquo;t want to go full Kanban in a separate app, but needed more than a simple Markdown file.</p>
+<p>I had been using a basic <code>TODO.md</code> file like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>## In Progress
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">- [ ]</span> Create player controller
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>  <span style="color:#c678dd">- [x]</span> Create scene
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>  <span style="color:#c678dd">- [x]</span> Add character
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>## Backlog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span><span style="color:#c678dd">- [ ]</span> Add sounds
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">7</span><span><span style="color:#c678dd">- [ ]</span> Save system
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">8</span><span>## Done
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">9</span><span><span style="color:#c678dd">- [x]</span> Create level
+</span></span></code></pre></div><p>But, I wanted something a bit more complex:</p>
+<ul>
+<li>Drag-n-drop support to move the &ldquo;tasks&rdquo; around</li>
+<li>When I check something off, it should move to the &ldquo;done&rdquo; section</li>
+<li>Slightly better UI than raw Markdown
+<ul>
+<li>(although I&rsquo;ve been loving the <a href="https://marketplace.visualstudio.com/items?itemName=CodeSmith.markdown-inline-editor-vscode" target="_blank">Markdown Inline Editor extension</a>!)</li>
+</ul>
+</li>
+</ul>
+<p>Unable to find a decent existing solution, I decided to give vibe coding a try.</p>
 <h3 id="what-i-did">What I did</h3>
-<p>I created a brand new <a href="https://github.com/ssebs/todo-sidebar" target="_blank">VSCode Extension</a> following their docs, and got to work.</p>
-<p>By got to work, I mean wrote a <code>README.md</code> explaining what I wanted the extension to do, and a sample <code>TODO.md</code> file with the format that I was already using.</p>
-<p>In about 2-3 days of using Claude Code&rsquo;s Pro plan (damn token limitations!), I got a functional app going. During this time, I simply told it what I wanted added, referenced a <code>CLAUDE.md</code> file, and let it rip. I didn&rsquo;t look at the code until it was working, and even then I just skimmed it.</p>
-<p>It was able to get things about ~80% of the way there, but actually using the extension gave me more TODOs to copy/paste (and more errors).</p>
+<p>I created a brand new VSCode Extension following Microsoft&rsquo;s docs, and got to work.</p>
+<p>By got to work, I mean that I wrote a <code>README.md</code> explaining what I wanted the extension to do. I also made a basic <code>TODO.md</code> file with the format that I was using in my other project.</p>
+<p>In about 2-3 days of using Claude Code&rsquo;s Pro plan (damn token limitations slowing me down!), I got a POC going. During this &ldquo;development&rdquo;, I simply told it what I wanted to add, referenced a <code>CLAUDE.md</code> file, and let it rip. I didn&rsquo;t even bother to look at the code, it was a vibe.</p>
+<p>It was able to get things about ~80% of the way there, but actually using the extension gave me more things to add to my <code>TODO.md</code>.</p>
+<p>Here&rsquo;s a screenshot of the working extension:</p>
 <img class="my-6" src="/img/todo-sidebar-md.png" width="100%" alt="screenshot of the extension">
 
-<h3 id="whats-the-problem">What&rsquo;s the problem</h3>
-<p>That last 20% was hard, it always is when writing software. Usually things like polish, fixing bugs, and performance issues take up a bunch of time.</p>
-<p>In my case, my extension would:</p>
+<h3 id="what-i-found-to-be-the-problem">What I found to be the problem</h3>
+<p>That last 20% was hard, as it always is when writing an app. Usually things like polish, fixing bugs, and performance issues take up more time than you think.</p>
+<p>In my case, I had these issues:</p>
 <ul>
-<li>Freeze after a long time</li>
-<li>Drag-n-drop stops working when a checkbox (task) has nested items</li>
+<li>Freezing after a long time</li>
+<li>Drag-n-drop stops working when a checkbox has nested items</li>
 <li>Corrupt <code>.vscode/settings.json</code> when there&rsquo;s already a setting saved</li>
 <li>&lt;more&gt;</li>
 </ul>
-<p>Since these bugs were pretty annoying, I-<em>err, claude</em>- got to debugging them. I copied my bug note into claude code &amp; told it to fix the bug.</p>
+<p>Since these bugs were annoying me, I -<em>err, claude</em>- got to debugging them. I copy/pasted these issues into a fresh claude code window and told it to fix the bug.</p>
 <p>Many tokens later, it looked like the bug was fixed! However, a new bug would pop up. This repeated, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic.</p>
-<p>I decided to venture into the generated codebase, and what I found was disgusting.</p>
+<p>I decided to venture into this mysterious codebase, and what I found was <em>disgusting</em>:</p>
+<h1 id="seb-continue-from-here----------">SEB: CONTINUE FROM HERE #  # # # # # # # #</h1>
 <ul>
 <li>Duplicate logic</li>
 <li>Unused variables</li>

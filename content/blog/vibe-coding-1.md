@@ -16,68 +16,88 @@ tags: [programming, gamedev, godot, python, js, genai]
 
 ### Super Brief Summary
 
-AI, specifically Large Language Models (LLMs), are autocomplete on steroids. They predict the next most likely token based on massive amounts of training data. They don't "understand" your code, they just pattern match really well. That's powerful, but it's not magic.
+AI, specifically Large Language Models (LLMs), are basically autocomplete on steroids. They predict the next most likely <strong title="Basically a word">token</strong>  based on massive amounts of training data. They don't "understand" your code, they just pattern match really well. That's powerful, but it's not magic.
 
 ### How people are using it / hype around replacing SWEs
 
-There's a lot of noise right now about AI replacing software engineers entirely. CEOs love the idea of smaller teams shipping faster. Tools like Cursor, Claude Code, and GitHub Copilot are getting better every month, and some people are shipping entire apps without writing a line of code themselves.
+There's a lot of noise right now about **AI** replacing software engineers entirely. CEOs love the idea of smaller teams shipping faster (see: cheaper). Tools like Cursor, Claude Code, and GitHub Copilot are getting better every month, and some people are shipping entire apps without writing a line of code themselves.
 
 But here's the thing: the people getting the most out of these tools are experienced developers who already know what good code looks like. The AI doesn't replace the skill, it amplifies it.
 
 ### Vibe Coding vs AI Assisted Coding
 
+> The main topic of this post
+
 **Vibe coding** is when you let the AI drive. You describe what you want, hit enter, and hope for the best. You're not reading the code, not understanding the architecture, just *vibing*.
 
 **AI assisted coding** is when **you** drive, and the AI rides shotgun. You plan the approach, understand the problem, and use AI to speed up the boring parts (e.g. boilerplate, syntax you'd have to Google, etc.)
 
-One makes you faster today but dumber over time. The other makes you faster *and* keeps you sharp.
-
+Most of the hype is around vibe coding, but I think the more useful thing is AI assisted coding.
 
 {{< clearfix >}}
 
 
-# Trying out "vibe coding" - **VSCode extension**
+# Trying out "vibe coding" - Creating a VSCode extension
 
-> What DOESN'T work (relying on it to think for me)
-
-> Check out the [VSCode Extension](https://github.com/ssebs/todo-sidebar) for yourself!
-
+> This is what does **not** seem to work in my experience
 
 ### What I wanted
-During the development of [Dank Nooner's rewrite](/projects/dank-nooner), I needed some way to track my todo's & tasks. I didn't want to go full Kanban, but needed more than a simple Markdown file.
 
-I was using a `TODO.md` file with H2 sections & a list of nested checkboxes, but I wanted something that I could drag-n-drop, and check things off. 
+During the development of my motorcycle stunt game, [Dank Nooner](/projects/dank-nooner), I needed some way to track my todo's & milestones. I didn't want to go full Kanban in a separate app, but needed more than a simple Markdown file.
 
-Unable to find a decent solution, I decided to give vibe coding a try.
+I had been using a basic `TODO.md` file like this:
+
+```md
+## In Progress
+- [ ] Create player controller
+  - [x] Create scene
+  - [x] Add character
+## Backlog
+- [ ] Add sounds
+- [ ] Save system
+## Done
+- [x] Create level
+```
+
+But, I wanted something a bit more complex:
+- Drag-n-drop support to move the "tasks" around
+- When I check something off, it should move to the "done" section
+- Slightly better UI than raw Markdown 
+  - (although I've been loving the [Markdown Inline Editor extension](https://marketplace.visualstudio.com/items?itemName=CodeSmith.markdown-inline-editor-vscode)!)
+
+Unable to find a decent existing solution, I decided to give vibe coding a try.
 
 ### What I did
 
-I created a brand new [VSCode Extension](https://github.com/ssebs/todo-sidebar) following their docs, and got to work.
+I created a brand new VSCode Extension following Microsoft's docs, and got to work.
 
-By got to work, I mean wrote a `README.md` explaining what I wanted the extension to do, and a sample `TODO.md` file with the format that I was already using.
+By got to work, I mean that I wrote a `README.md` explaining what I wanted the extension to do. I also made a basic `TODO.md` file with the format that I was using in my other project.
 
-In about 2-3 days of using Claude Code's Pro plan (damn token limitations!), I got a functional app going. During this time, I simply told it what I wanted added, referenced a `CLAUDE.md` file, and let it rip. I didn't look at the code until it was working, and even then I just skimmed it.
+In about 2-3 days of using Claude Code's Pro plan (damn token limitations slowing me down!), I got a POC going. During this "development", I simply told it what I wanted to add, referenced a `CLAUDE.md` file, and let it rip. I didn't even bother to look at the code, it was a vibe.
 
-It was able to get things about ~80% of the way there, but actually using the extension gave me more TODOs to copy/paste (and more errors). 
+It was able to get things about ~80% of the way there, but actually using the extension gave me more things to add to my `TODO.md`.
 
+Here's a screenshot of the working extension:
 
 {{< img-full src="/img/todo-sidebar-md.png" alt="screenshot of the extension" >}}
 
-### What's the problem 
+### What I found to be the problem
 
-That last 20% was hard, it always is when writing software. Usually things like polish, fixing bugs, and performance issues take up a bunch of time.
+That last 20% was hard, as it always is when writing an app. Usually things like polish, fixing bugs, and performance issues take up more time than you think.
 
-In my case, my extension would:
-- Freeze after a long time
-- Drag-n-drop stops working when a checkbox (task) has nested items
+In my case, I had these issues:
+- Freezing after a long time
+- Drag-n-drop stops working when a checkbox has nested items
 - Corrupt `.vscode/settings.json` when there's already a setting saved
 - \<more\>
 
-Since these bugs were pretty annoying, I-*err, claude*- got to debugging them. I copied my bug note into claude code & told it to fix the bug.
+Since these bugs were annoying me, I -*err, claude*- got to debugging them. I copy/pasted these issues into a fresh claude code window and told it to fix the bug.
 
 Many tokens later, it looked like the bug was fixed! However, a new bug would pop up. This repeated, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic.
 
-I decided to venture into the generated codebase, and what I found was disgusting.
+I decided to venture into this mysterious codebase, and what I found was *disgusting*:
+
+# SEB: CONTINUE FROM HERE #  # # # # # # # # # 
 
 - Duplicate logic
 - Unused variables
