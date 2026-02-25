@@ -10,7 +10,7 @@ tags: [programming, gamedev, godot, python, js, genai]
 
 # First off, what is AI?
 
-> Note - This section was written by Claude Code! The rest of the blog was me, though
+> Note - This section was written by Claude Code! The rest of the blog was me, though!
 
 {{< img-float-right src="/img/vibe-coding-1.png" width="400" alt="An illustration of an AI chat prompt input field. The text 'do it all for me' is crossed out in red. Below it, 'help me think through this' has a green checkmark" >}}
 
@@ -258,7 +258,7 @@ var ragdoll_bone_constraints_base = {
 Then... it took a bit more tweaking, but eventually, it worked! (Go see the [src code](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) to see what it generated) I followed the same process for setting up IK maps, and I was off to the races!
 
 
-# How I can stay relevant, and sharp - **Summary / Lessons Learned**
+# How I can stay relevant, and sharp - **Summary & Lessons Learned**
 
 > In a time where the world wants us to rely on AI, find what works for you.
 
