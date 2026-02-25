@@ -279,8 +279,7 @@
       </a>
     </div></div>
   <div class="post-content overflow-x-hidden break-words"><blockquote>
-<p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p>
-</blockquote>
+<p>Read the technical details on the <a href="/projects/go-mmp">project page</a></p></blockquote>
 <h2 id="whats-a-macro-pad">What&rsquo;s a Macro Pad?</h2>
 <img class="custom-float-right ml-3" src="/img/MMPPrinted.jpg" width="256px" alt="physical macro pad">
 
@@ -288,11 +287,9 @@
 <p>A Macro Pad can help solve these problems, you can think of it as a companion keyboard that adds buttons to run shortcuts.</p>
 <p>I made my own <a href="https://than.gs/m/710028" target="_blank">3D Printed Macro Pad</a>, and call it a <strong>Mini Macro Pad</strong>.</p>
 <blockquote>
-<p>I&rsquo;m planning on redesigning and printing a new one, with a tutorial!</p>
-</blockquote>
+<p>I&rsquo;m planning on redesigning and printing a new one, with a tutorial!</p></blockquote>
 <blockquote>
-<p>Stay tuned for that&hellip;</p>
-</blockquote>
+<p>Stay tuned for that&hellip;</p></blockquote>
 <div style="clear: both;"></div>
 <h2 id="why-i-wanted-a-macro-pad">Why I wanted a Macro Pad</h2>
 <p>One day I was playing VALORANT, and I was getting tired of typing &ldquo;gg&rdquo; after each game. I was also really into <a href="https://www.youtube.com/watch?v=qDvQNStNUiw" target="_blank">CSGO Surfing</a> for a while, and needed to &ldquo;reset&rdquo; whenever I messed up.</p>
@@ -310,8 +307,7 @@
 <p>To make a working button, I&rsquo;d connect a wire from one of the serial pins on the arduino to one side of the switch, and another from the other side of the switch to the ground pin. This ground pin is shared with the other button pins, so those could all be connected together.</p>
 <p>Once I had my plan ready, I printed out some 3D models I found on <a href="https://thangs.com" target="_blank">https://thangs.com</a>, and got to soldering.</p>
 <blockquote>
-<p>I eventually made my own design, but I want to try again.</p>
-</blockquote>
+<p>I eventually made my own design, but I want to try again.</p></blockquote>
 <p>I chose the Teensy LC as my Serial device, since it can be used as a Human-Interface-Device (HID). That means I can emulate pressing buttons on a keyboard.</p>
 <div style="min-height: 1rem;">
 </div>
@@ -343,8 +339,7 @@
 
 <p>I decided to use Python for the new server code, as I was writing it at work and was pretty familiar with it. I also decided make a small GUI so you can see what/where the Macros are on your device.</p>
 <blockquote>
-<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad" target="_blank">Github Repo</a>, however this version has been <em>deprecated</em>.</p>
-</blockquote>
+<p>Here&rsquo;s a link to the <a href="https://github.com/ssebs/MiniMacroPad" target="_blank">Github Repo</a>, however this version has been <em>deprecated</em>.</p></blockquote>
 <p>I used <a href="https://docs.python.org/3/library/tkinter.html" target="_blank">TKinter</a> to get a grid of buttons showing, and set up a basic server to listen for button presses. Once the server received a button press, it compared the number to the Macro in the config file, and ran the Actions in order for that Macro.</p>
 <p>This worked! &hellip;but the user interface was ugly &hellip;and it was kinda slow. This is because of PyInstaller&rsquo;s <code>.exe</code> files including a Python virtual machine, and meant that it would take a bit of time to start up.</p>
 <p>I continued working on this version for a while, but after a couple refactors (and learning some <code>OOP</code>-sies), I decided I wanted to rewrite my code <em>yet again</em>.</p>
@@ -357,7 +352,7 @@
 <h2 id="quick-sidebar-about-gos-error-handling">Quick sidebar about Go's error handling</h2>
 <p>One thing I particularly like about Go is the error handling. If you wanted to save text to a file in Python, you should use a <code>try/except</code> block to check for any errors.</p>
 <p>You could always leave that out, but Python won&rsquo;t really warn you that using the <code>open()</code> function may fail.</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">try</span>:
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">try</span>:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#c678dd">with</span> <span style="color:#e5c07b">open</span>(<span style="color:#98c379">&#34;example.txt&#34;</span>, <span style="color:#98c379">&#34;r&#34;</span>) <span style="color:#c678dd">as</span> <span style="color:#e06c75">f</span>:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>        <span style="color:#e06c75">f</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">write</span>(<span style="color:#98c379">&#34;this will fail since we&#39;re only supposed to read the file&#34;</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">except</span> <span style="color:#e06c75">Exception</span> <span style="color:#c678dd">as</span> <span style="color:#e06c75">e</span>:
@@ -366,7 +361,7 @@
 </div>
 <p>In Go, the function that opens, writes, or does anything to a file will return an error; you are supposed to check if there is an error right after.</p>
 <p>You could ignore the error, but it&rsquo;s more <em>in your face</em> in Go since it&rsquo;s returned by value in the <code>WriteFile()</code> function.</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">fileContents</span> <span style="color:#56b6c2">:=</span> []<span style="color:#e5c07b">byte</span>(<span style="color:#98c379">&#34;this won&#39;t fail but if it did it would be checked.&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">fileContents</span> <span style="color:#56b6c2">:=</span> []<span style="color:#e5c07b">byte</span>(<span style="color:#98c379">&#34;this won&#39;t fail but if it did it would be checked.&#34;</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#e06c75">err</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">os</span>.<span style="color:#61afef;font-weight:bold">WriteFile</span>(<span style="color:#98c379">&#34;example.txt&#34;</span>, <span style="color:#e06c75">fileContents</span>, <span style="color:#d19a66">0644</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">if</span> <span style="color:#e06c75">err</span> <span style="color:#56b6c2">!=</span> <span style="color:#e5c07b">nil</span> {
@@ -384,7 +379,7 @@
 <p>I used a <code>GridWithColumns</code> container along with some <code>Buttons</code>. I used the same config file as before, parsed it, went through the list of Macros and made a <code>Button</code> for each one.</p>
 <p>Here&rsquo;s a snippet of the code, but check out the <a href="https://github.com/ssebs/go-mmp/blob/main/views/macro_runner_view.go" target="_blank">full file</a> to read more.</p>
 <div style="clear: both;"></div>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">for</span> <span style="color:#e06c75">_</span>, <span style="color:#e06c75">macro</span> <span style="color:#56b6c2">:=</span> <span style="color:#c678dd">range</span> <span style="color:#e06c75">config</span>.<span style="color:#e06c75">Macros</span> {
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">for</span> <span style="color:#e06c75">_</span>, <span style="color:#e06c75">macro</span> <span style="color:#56b6c2">:=</span> <span style="color:#c678dd">range</span> <span style="color:#e06c75">config</span>.<span style="color:#e06c75">Macros</span> {
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span>    <span style="color:#e06c75">macroBtn</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">widget</span>.<span style="color:#61afef;font-weight:bold">NewButton</span>(<span style="color:#e06c75">macro</span>.<span style="color:#e06c75">Name</span>, <span style="color:#c678dd">func</span>() {
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>        <span style="color:#e06c75">macroRunner</span>.<span style="color:#61afef;font-weight:bold">Run</span>(<span style="color:#e06c75">macro</span>)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>    })

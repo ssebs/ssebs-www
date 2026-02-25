@@ -1,5 +1,5 @@
 ---
-title: "Stop Vibe Coding, Keep Using Your Brain: How to Use AI Effectively"
+title: "Stop Vibe Coding, Keep Using Your Brain: How I Use AI Effectively"
 slug: vibe-coding-1
 shortdesc: "Vibe coding promises speed but costs you understanding. Here's how to use AI and still stay sharp"
 feature: /img/vibe-coding-1.png
@@ -37,9 +37,10 @@ One makes you faster today but dumber over time. The other makes you faster *and
 
 
 # Trying out "vibe coding" - **VSCode extension**
-> What DOESN'T work (rely on it to think for me)
 
-Check out the [VSCode Extension](https://github.com/ssebs/todo-sidebar) for yourself!
+> What DOESN'T work (relying on it to think for me)
+
+> Check out the [VSCode Extension](https://github.com/ssebs/todo-sidebar) for yourself!
 
 
 ### What I wanted
@@ -68,6 +69,8 @@ It was able to get things about ~80% of the way there, but actually using the ex
 
 ### What's next
 
+....
+
 # Trying out AI assisted coding - **Dank Nooner**
 
 > What DOES work (use it to be more efficient)
@@ -78,9 +81,129 @@ It was able to get things about ~80% of the way there, but actually using the ex
 
 ### E.g. 1 - Boilerplate (I have `x` pattern, now implement it for `y`, `z`)
 
-### E.g. 2 - Planning (I have this problem, and I think I can do this to solve it, what are alternatives & how do they compare, how will they fit in my codebase)
+### E.g. 2 - Planning out features
 
-### E.g. 3 - Implement things I'd have to google, saving time. (AABB bounding box, Skel/Bone generation from Dict)
+{{< img-float-right src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
+
+Another good use case for AI assisted coding is planning. I don't mean "plan mode" to refactor your code, I mean planning out how you're going to solve something.
+
+For instance, I'm adding different motorcycles with "skins" (different colors) that will be unlocked. To achieve this, I need to have some type of skin / color system.
+
+I have a general idea on how I'd implement it, but I wanted to think it through a bit more. 
+
+{{< clearfix >}}
+
+So, I came up with a basic plan:
+
+```md
+- I have multiple types of 3d models, some that use a single png texture, and others that have many materials & meshes.
+- I want to be able to change certain colors dynamically, and save them as a file using godot resources
+- I've created a test scene @sport_bike.tscn with the model
+- I'm thinking of adding a skin script that I can attach to a Node3D, which has some options to change colors.
+- In the script itself, I need to check if it's a textured material (shader) or a standard material, and find a way to change the color for each.
+- <more details>
+```
+
+Then asked Claude to help me think it through:
+
+`@CLAUDE.md - I have this plan <paste> to implement skins in my game, this is one solution, provide alternatives I could implement & how do they compare. Share how each will they fit in my existing codebase`
+
+It came back with some options, and I had a back & forth chat with it. 
+
+Eventually, it suggested some code. 
+
+I had to tell it "stop generating code, we're still planning the system. Instead, save this plan to @skin_plan.md".
+
+### E.g. 3 - Implement things I'd have to google, saving time
+
+{{< img-float-right src="/img/dank-nooner-skeleton-gen.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
+
+Once really crutial time saver was to delegate some implementation to the AI. Since I know the higher level architecture, and what I'm trying to achieve, I can be specific enough & provide the data the AI needs to solve the problem.
+
+#### Set height of a 3D Mesh dynamicall so I don't have to manually scale it
+
+This is something I knew that I should use bounding boxes (AABB) for, but wasn't sure how I'd implement. 
+
+{{< clearfix >}}
+
+I told claude: 
+
+`@CLAUDE.md @filepath_of_script.gd - scale mesh_skin to HEIGHT in a new function. Use AABB bounding boxes to scale Meshinstance3Ds`
+
+```gdscript
+. . .
+func _ready():
+    _spawn_mesh()
+
+func _spawn_mesh():
+    . . . # code hidden for brevity
+	mesh_node.add_child(mesh_skin)
+
+	_scale_to_height(mesh_skin, HEIGHT) # new func
+
+## AI wrote this
+func _scale_to_height(node: Node3D, target_height: float) -> void:
+	var aabb := _get_combined_aabb(node)
+	if aabb.size.y <= 0:
+		return
+	var scale_factor := target_height / aabb.size.y
+	node.scale *= scale_factor
+
+## AI wrote this
+func _get_combined_aabb(node: Node3D) -> AABB:
+	var combined := AABB()
+	var first := true
+	for child in node.get_children():
+		if child is MeshInstance3D:
+			var mesh_aabb: AABB = child.get_aabb()
+			var transformed: AABB = child.transform * mesh_aabb
+			if first:
+				combined = transformed
+				first = false
+			else:
+				combined = combined.merge(transformed)
+		. . . # more code hidden for brevity
+	return combined
+```
+
+This would have taken me at least an hour or two to code myself, since I'm not familiar with the API. This also supports multiple MeshInstance3D's in 1 scene, which is good.
+
+#### Skeleton generation for ragdoll physics on multiple character skins
+
+Without going too much into the code (see [this file](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) if you're interested), I have multiple character skins in my game, and I want them to all be able to ragdoll when you crash on your bike.
+
+The godot docs say to create a skeleton simulation in the UI, then tweak a bunch of values & save it into the scene. This is fine for a single character, but since I'm going to have a bunch, I needed to generate this. 
+
+To get claude to help, I ran the manual steps once, but took note of all the constraint values that were needed. 
+> These are needed so when a character ragdolls, their leg doesn't bend forward & through their chest.
+
+I hard-coded these values once in the editor & wrote them into a dictionary. 
+
+
+Then, I told claude:
+`@CLAUDE.md @filepath_of_script.gd - Using ragdoll_bone_constraints_base as a map, create a function to generate bones for skel_root. Only include bones listed in the map, and add constraints following the values.`
+
+
+```gdscript
+## Needs to be generated in code, used in ragdoll simulation
+var skel_root: PhysicalBoneSimulator3D = PhysicalBoneSimulator3D.new()
+
+var ragdoll_bone_constraints_base = {
+	"Spine": {"type": "CONE", "min_bounds": [-0.5, -0.4, -0.6], "max_bounds": [1, 0.4, 0.6]},
+	"Head": {"type": "CONE", "min_bounds": [-0.6, -0.6, -0.3], "max_bounds": [0.35, 0.6, 0.3]},
+	"LeftUpperArm": {"type": "CONE", "min_bounds": [-0.3, 1, -0.8], "max_bounds": [1.0, 1, 0.8]},
+	"LeftLowerArm": {"type": "CONE", "min_bounds": [-0.1, -2, -2], "max_bounds": [2.5, -0.7, 2]},
+	"LeftHand": {"type": "CONE", "min_bounds": [-0.3, 0, -0.3], "max_bounds": [0.5, 3, 0.3]},
+	"LeftUpperLeg": {"type": "CONE", "min_bounds": [-0.7, -0.8, 1], "max_bounds": [0.7, 1.2, 1]},
+	"LeftLowerLeg": {"type": "HINGE", "min_bounds": [0, 1, 0], "max_bounds": [0, 1, -1.5]},
+	"LeftFoot": {"type": "CONE", "min_bounds": [-0.4, 1.5, -1.4], "max_bounds": [0.4, 0.3, 0]},
+}
+```
+
+
+Then... it took a bit more tweaking, but eventually, it worked! (Go see the [src code](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) to see what it generated) I followed the same process for setting up IK maps, and I was off to the races!
+
+
 
 # How I can stay relevant, and sharp - **Summary / Lessons Learned**
 
