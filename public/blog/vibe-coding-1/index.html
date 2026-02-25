@@ -310,16 +310,56 @@
 <img class="my-6" src="/img/todo-sidebar-md.png" width="100%" alt="screenshot of the extension">
 
 <h3 id="whats-the-problem">What&rsquo;s the problem</h3>
-<p>(laggy, telling the computer to figure out problems can only get you so far)</p>
-<h3 id="whats-next">What&rsquo;s next</h3>
+<p>That last 20% was hard, it always is when writing software. Usually things like polish, fixing bugs, and performance issues take up a bunch of time.</p>
+<p>In my case, my extension would:</p>
+<ul>
+<li>Freeze after a long time</li>
+<li>Drag-n-drop stops working when a checkbox (task) has nested items</li>
+<li>Corrupt <code>.vscode/settings.json</code> when there&rsquo;s already a setting saved</li>
+<li>&lt;more&gt;</li>
+</ul>
+<p>Since these bugs were pretty annoying, I-<em>err, claude</em>- got to debugging them. I copied my bug note into claude code &amp; told it to fix the bug.</p>
+<p>Many tokens later, it looked like the bug was fixed! However, a new bug would pop up. This repeated, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic.</p>
+<p>I decided to venture into the generated codebase, and what I found was disgusting.</p>
+<ul>
+<li>Duplicate logic</li>
+<li>Unused variables</li>
+<li>anti-patterns</li>
+<li>snake_case and camelCase mixed!</li>
+</ul>
+<p>The next day (when I got more tokens), I made a list of design issues &amp; told claude to refactor them. I used the superpowers plugin to plan a refactor &amp; implement it, but when it came down to it, claude tried its best but couldn&rsquo;t do the whole refactor at once.</p>
+<p>I had to split up the refactor into parts, and it was able to clean up the code.</p>
+<p>Eventually, I implemented most of the features &amp; fixes, but not having context on how the code works definitely made it harder to keep things tidy to say the least.</p>
+<h3 id="whats-next-for-the-extension">What&rsquo;s next for the extension</h3>
+<p>I&rsquo;m going to keep vibe coding it, but keeping a smaller scope. I don&rsquo;t really care enough about this extension (or extension development in general) to clean it up, so it is what it is.</p>
 <p>&hellip;.</p>
 <h1 id="trying-out-ai-assisted-coding---dank-nooner">Trying out AI assisted coding - <strong>Dank Nooner</strong></h1>
 <blockquote>
 <p>What DOES work (use it to be more efficient)</p></blockquote>
 <p><a href="/projects/dank-nooner">Dank Nooner&rsquo;s project page</a></p>
 <h3 id="use-ai-as-a-tool-not-as-a-replacement-for-thinking">Use AI as a tool, not as a replacement for thinking</h3>
-<h3 id="eg-1---boilerplate-i-have-x-pattern-now-implement-it-for-y-z">E.g. 1 - Boilerplate (I have <code>x</code> pattern, now implement it for <code>y</code>, <code>z</code>)</h3>
-<h3 id="eg-2---planning-out-features">E.g. 2 - Planning out features</h3>
+<h3 id="eg-1---boilerplate-code">E.g. 1 - Boilerplate code</h3>
+<img class="custom-float-right ml-3" src="/img/dank-nooner-settings-menu.png" width="600" alt="screenshot dank nooner showing settings menu">
+
+<p>The first good use-case I can think of is to use AI to generate boilerplate code. The basics like a React component already has a VSCode snippet, so that&rsquo;s not what I mean.</p>
+<p>Instead, I mean a design pattern that&rsquo;s specific to your project.</p>
+<p>Let&rsquo;s say I created a State Machine driven Menu system for my game 👀.</p>
+<p>I created the:</p>
+<ul>
+<li>Main menu</li>
+<li>Lobby menu</li>
+<li>Play menu</li>
+</ul>
+<p>And I have a good amount of example code for claude to reference.</p>
+<p>Each menu has a set of files (scene, script, @export vars that are attached in the editor, UI elements, button click handlers, etc.)</p>
+<div style="clear:both;"></div>
+<p>I was able to get claude to generate a settings menu, and a customization menu just by providing it an example of the pattern.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">@CLAUDE</span>.md <span style="color:#e06c75">@state_machine</span>.gd <span style="color:#e06c75">@menu_manager</span>.gd <span style="color:#e06c75">@play_menu</span>.gd <span style="color:#e06c75">@play_menu</span>.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">-</span> title
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#c678dd">-</span> back button
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">-</span> username menu (using a Label + LineEdit)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span><span style="color:#c678dd">-</span> save button
+</span></span></code></pre></div><h3 id="eg-2---planning-out-features">E.g. 2 - Planning out features</h3>
 <img class="custom-float-right ml-3" src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton">
 
 <p>Another good use case for AI assisted coding is planning. I don&rsquo;t mean &ldquo;plan mode&rdquo; to refactor your code, I mean planning out how you&rsquo;re going to solve something.</p>
@@ -338,7 +378,7 @@
 <p>It came back with some options, and I had a back &amp; forth chat with it.</p>
 <p>Eventually, it suggested some code.</p>
 <p>I had to tell it &ldquo;stop generating code, we&rsquo;re still planning the system. Instead, save this plan to @skin_plan.md&rdquo;.</p>
-<h3 id="eg-3---implement-things-id-have-to-google-saving-time">E.g. 3 - Implement things I&rsquo;d have to google, saving time</h3>
+<h3 id="eg-3---implement-things-id-have-to-google">E.g. 3 - Implement things I&rsquo;d have to google</h3>
 <img class="custom-float-right ml-3" src="/img/dank-nooner-skeleton-gen.png" width="600" alt="screenshot from godot editor showing the generated skeleton">
 
 <p>Once really crutial time saver was to delegate some implementation to the AI. Since I know the higher level architecture, and what I&rsquo;m trying to achieve, I can be specific enough &amp; provide the data the AI needs to solve the problem.</p>

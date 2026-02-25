@@ -6,6 +6,7 @@ https://ssebs.com website code.
 
 ## TODO:
 
+- [ ] Add Table of contents on pages that can minimize / pop out to navigate
 - [ ] CDN Assets (resume, images) for faster loading
 - [ ] Soon™️:
   - [ ] Sort tags on projects

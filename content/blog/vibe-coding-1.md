@@ -65,9 +65,34 @@ It was able to get things about ~80% of the way there, but actually using the ex
 
 ### What's the problem 
 
-(laggy, telling the computer to figure out problems can only get you so far)
+That last 20% was hard, it always is when writing software. Usually things like polish, fixing bugs, and performance issues take up a bunch of time.
 
-### What's next
+In my case, my extension would:
+- Freeze after a long time
+- Drag-n-drop stops working when a checkbox (task) has nested items
+- Corrupt `.vscode/settings.json` when there's already a setting saved
+- \<more\>
+
+Since these bugs were pretty annoying, I-*err, claude*- got to debugging them. I copied my bug note into claude code & told it to fix the bug.
+
+Many tokens later, it looked like the bug was fixed! However, a new bug would pop up. This repeated, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic.
+
+I decided to venture into the generated codebase, and what I found was disgusting.
+
+- Duplicate logic
+- Unused variables
+- anti-patterns
+- snake_case and camelCase mixed!
+
+The next day (when I got more tokens), I made a list of design issues & told claude to refactor them. I used the superpowers plugin to plan a refactor & implement it, but when it came down to it, claude tried its best but couldn't do the whole refactor at once.
+
+I had to split up the refactor into parts, and it was able to clean up the code.
+
+Eventually, I implemented most of the features & fixes, but not having context on how the code works definitely made it harder to keep things tidy to say the least.
+
+### What's next for the extension
+
+I'm going to keep vibe coding it, but keeping a smaller scope. I don't really care enough about this extension (or extension development in general) to clean it up, so it is what it is.
 
 ....
 
@@ -79,7 +104,36 @@ It was able to get things about ~80% of the way there, but actually using the ex
 
 ### Use AI as a tool, not as a replacement for thinking
 
-### E.g. 1 - Boilerplate (I have `x` pattern, now implement it for `y`, `z`)
+### E.g. 1 - Boilerplate code
+
+{{< img-float-right src="/img/dank-nooner-settings-menu.png" width="600" alt="screenshot dank nooner showing settings menu" >}}
+
+The first good use-case I can think of is to use AI to generate boilerplate code. The basics like a React component already has a VSCode snippet, so that's not what I mean.
+
+Instead, I mean a design pattern that's specific to your project.
+
+Let's say I created a State Machine driven Menu system for my game 👀. 
+
+I created the:
+- Main menu
+- Lobby menu
+- Play menu
+
+And I have a good amount of example code for claude to reference.
+
+Each menu has a set of files (scene, script, @export vars that are attached in the editor, UI elements, button click handlers, etc.)
+
+{{< clearfix >}}
+
+I was able to get claude to generate a settings menu, and a customization menu just by providing it an example of the pattern.
+
+```md
+@CLAUDE.md @state_machine.gd @menu_manager.gd @play_menu.gd @play_menu.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
+- title
+- back button
+- username menu (using a Label + LineEdit)
+- save button
+```
 
 ### E.g. 2 - Planning out features
 
@@ -114,7 +168,7 @@ Eventually, it suggested some code.
 
 I had to tell it "stop generating code, we're still planning the system. Instead, save this plan to @skin_plan.md".
 
-### E.g. 3 - Implement things I'd have to google, saving time
+### E.g. 3 - Implement things I'd have to google
 
 {{< img-float-right src="/img/dank-nooner-skeleton-gen.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
 
@@ -202,7 +256,6 @@ var ragdoll_bone_constraints_base = {
 
 
 Then... it took a bit more tweaking, but eventually, it worked! (Go see the [src code](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) to see what it generated) I followed the same process for setting up IK maps, and I was off to the races!
-
 
 
 # How I can stay relevant, and sharp - **Summary / Lessons Learned**
