@@ -93,11 +93,11 @@
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/tipr&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A tip calculator that shows the tip amount and the total amount.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>&#34;Vibe Coding&#34;, how I can stay sharp, good, the bad, and the waste of time.</title>
+      <title>Stop Vibe Coding, Keep Using Your Brain: How to Use AI Effectively</title>
       <link>http://localhost:1313/blog/vibe-coding-1/</link>
       <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/vibe-coding-1/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;What is &amp;ldquo;AI&amp;rdquo;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Super brief summary&lt;/li&gt;&#xA;&lt;li&gt;How people are using it / hype around replacing SWEs&lt;/li&gt;&#xA;&lt;li&gt;Vibe Coding vs AI Assisted Coding&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Trying out &amp;ldquo;vibe coding&amp;rdquo; - &lt;strong&gt;VSCode extension&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;What DOESN&amp;rsquo;T work (rely on it to think for me)&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;first-off-what-is-ai&#34;&gt;First off, what is AI?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/vibe-coding-1.png&#34; width=&#34;400&#34; alt=&#34;An illustration of an AI chat prompt input field. The text &amp;#39;do it all for me&amp;#39; is crossed out in red. Below it, &amp;#39;help me think through this&amp;#39; has a green checkmark&#34;&gt;&#xD;&#xA;&#xA;&lt;h3 id=&#34;super-brief-summary&#34;&gt;Super Brief Summary&lt;/h3&gt;&#xA;&lt;h3 id=&#34;how-people-are-using-it--hype-around-replacing-swes&#34;&gt;How people are using it / hype around replacing SWEs&lt;/h3&gt;&#xA;&lt;h3 id=&#34;vibe-coding-vs-ai-assisted-coding&#34;&gt;Vibe Coding vs AI Assisted Coding&lt;/h3&gt;&#xA;&lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;&#xA;&lt;h2 id=&#34;trying-out-vibe-coding---vscode-extension&#34;&gt;Trying out &amp;ldquo;vibe coding&amp;rdquo; - &lt;strong&gt;VSCode extension&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;What DOESN&amp;rsquo;T work (rely on it to think for me)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creating Procedural Animations to Save Time in Godot</title>
