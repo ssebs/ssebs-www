@@ -323,8 +323,7 @@
 <li>If not, the Macro returns to its original position.</li>
 </ul>
 <blockquote>
-<p>Interested in the implementation? Check out the Drag and Drop <a href="https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go" target="_blank">widget code</a>!</p>
-</blockquote>
+<p>Interested in the implementation? Check out the Drag and Drop <a href="https://github.com/ssebs/go-mmp/blob/main/views/drag_and_drop_view.go" target="_blank">widget code</a>!</p></blockquote>
 <h2 id="having-issues-with-data-not-syncing">Having issues with data not syncing</h2>
 <p>Aside from the annoyance of opening too many windows, I was able to get everything <em>visibly</em> working. The problem was when I hit save - nothing was updated. When I looked at the <code>.yaml</code> config file, it was updated, but none of the other UI components were.</p>
 <p>For example, when I&rsquo;d update the name of a <code>Macro</code> in a new editor window, it wouldn&rsquo;t sync to the regular window. One window would show the old value, while the other would show the new one.</p>
@@ -334,8 +333,7 @@
 <img class="w-96 mx-auto my-4" src="/img/whowrotethiscode.jpg"   alt="Obi Wan meme">
 
 <blockquote>
-<p>So much spaghetti, so little time.</p>
-</blockquote>
+<p>So much spaghetti, so little time.</p></blockquote>
 <p>It became clear that I needed to rethink how to structure my code before writing more. My goal wasn&rsquo;t just to get the data sync working; I also wanted to adopt best practices for how to write the code.</p>
 <p>From my research, I found that the Model-View-Controller (MVC) pattern is the easiest to implement. MVC creates a separation of concerns, meaning each file in my codebase would have a single responsibility and a clear structure to follow.</p>
 <p>This is a significant shift from having a single file managing everything—what the GUI looks like, the actions triggered by button presses, and saving changes (which is how I had been doing it).</p>
@@ -364,7 +362,7 @@
 <p>Once I learned about MVC, I split up my widgets into 3 files starting with the smallest piece of the UI, the Action editor, and got to work.</p>
 <p>I thought I&rsquo;d finish up in a few weeks or so, but I kept finding more work to do. (You know how it goes.)</p>
 <p>Here&rsquo;s a (relatively) tiny snippet of the <a href="https://github.com/ssebs/go-mmp" target="_blank">larger code base</a>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// Model</span>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">// Model</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#c678dd">type</span> <span style="color:#e06c75">Action</span> <span style="color:#c678dd">struct</span> {
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>	<span style="color:#e06c75">FuncName</span>  <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncName&#34;`</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>	<span style="color:#e06c75">FuncParam</span> <span style="color:#e5c07b">string</span> <span style="color:#98c379">`yaml:&#34;FuncParam&#34;`</span>

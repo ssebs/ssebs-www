@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/vibe-coding-1/</link>
       <pubDate>Tue, 24 Feb 2026 15:28:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/vibe-coding-1/</guid>
-      <description>&lt;h1 id=&#34;first-off-what-is-ai&#34;&gt;First off, what is AI?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note - This section was written by Claude Code! The rest of the blog was me, though!&lt;/p&gt;</description>
+      <description>&lt;p&gt;tl:dr - &lt;strong&gt;REPLACE_ME&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;first-off-what-is-ai&#34;&gt;First off, what is AI?&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Note - This section was written by Claude Code! The rest of the blog was me, though!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creating Procedural Animations to Save Time in Godot</title>
@@ -55,14 +55,14 @@
       <link>http://localhost:1313/blog/mvctipcalc/</link>
       <pubDate>Wed, 11 Dec 2024 20:45:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/mvctipcalc/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Also see the &lt;a href=&#34;http://localhost:1313/projects/mvctipcalc/&#34;&gt;project page&lt;/a&gt; and the &lt;a href=&#34;https://github.com/ssebs/MVCTipCalc&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MVCTipCalc.png&#34; width=&#34;320px&#34; alt=&#34;MVC Screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;why-did-i-make-a-tip-calculator&#34;&gt;Why did I make a tip calculator?&lt;/h2&gt;&#xA;&lt;p&gt;While working on the &lt;code&gt;v2&lt;/code&gt; release of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt;, I was having trouble managing state between different parts of the GUI.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Also see the &lt;a href=&#34;http://localhost:1313/projects/mvctipcalc/&#34;&gt;project page&lt;/a&gt; and the &lt;a href=&#34;https://github.com/ssebs/MVCTipCalc&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MVCTipCalc.png&#34; width=&#34;320px&#34; alt=&#34;MVC Screenshot&#34;&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;why-did-i-make-a-tip-calculator&#34;&gt;Why did I make a tip calculator?&lt;/h2&gt;&#xA;&lt;p&gt;While working on the &lt;code&gt;v2&lt;/code&gt; release of my &lt;a href=&#34;http://localhost:1313/projects/go-mmp/&#34;&gt;Mini Macro Pad&lt;/a&gt;, I was having trouble managing state between different parts of the GUI.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3D printing and coding my Mini Macro Pad</title>
       <link>http://localhost:1313/blog/minimacropad/</link>
       <pubDate>Tue, 10 Dec 2024 18:45:41 -0800</pubDate>
       <guid>http://localhost:1313/blog/minimacropad/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read the technical details on the &lt;a href=&#34;http://localhost:1313/projects/go-mmp&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;whats-a-macro-pad&#34;&gt;What&amp;rsquo;s a Macro Pad?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MMPPrinted.jpg&#34; width=&#34;256px&#34; alt=&#34;physical macro pad&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Read the technical details on the &lt;a href=&#34;http://localhost:1313/projects/go-mmp&#34;&gt;project page&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;whats-a-macro-pad&#34;&gt;What&amp;rsquo;s a Macro Pad?&lt;/h2&gt;&#xA;&lt;img class=&#34;custom-float-right ml-3&#34; src=&#34;http://localhost:1313/img/MMPPrinted.jpg&#34; width=&#34;256px&#34; alt=&#34;physical macro pad&#34;&gt;&#xD;&#xA;&#xA;&lt;p&gt;Have you ever wanted to run a shortcut on your computer at the press of a button? Maybe you have a repetitive Excel task that you keep doing, or you want to add a &amp;ldquo;skip song&amp;rdquo; button on your keyboard.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

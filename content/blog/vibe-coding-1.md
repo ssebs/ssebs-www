@@ -8,6 +8,8 @@ weight: 25
 tags: [programming, gamedev, godot, python, js, genai]
 ---
 
+tl:dr - **REPLACE_ME**
+
 # First off, what is AI?
 
 > Note - This section was written by Claude Code! The rest of the blog was me, though!
@@ -126,7 +128,7 @@ With [Dank Nooner](/projects/dank-nooner), I took a different approach...
 
 ### Using AI as a tool, not as a replacement for thinking
 
-### First Use-Case - Boilerplate code
+### The Easiest Use-Case - Boilerplate code
 
 {{< img-float-right src="/img/dank-nooner-settings-menu.png" width="600" alt="screenshot dank nooner showing settings menu" >}}
 
@@ -161,11 +163,11 @@ I was able to get claude to generate the entire settings menu, as well as a cust
 
 This is great! Once I figure out how I want something to be implemented, I can use claude to speed up my coding.
 
-### Second Use-Case - Planning out features & thinking it through
+### Another Use-Case - Planning out features & thinking it through
 
 {{< img-float-right src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
 
-Another good use case for AI is planning: both as someone to bounce ideas off of, and someone to help think about how this change will work with your existing code.
+Another good use case for AI is planning: both as someone (thing?) to bounce ideas off of, and someone to help think about how this change will work with your existing code.
 
 > Note that I don't mean "plan mode" in claude, I mean planning out how you're going to solve something.
 
@@ -190,33 +192,24 @@ Then asked Claude to help me think it through:
 
 `@CLAUDE.md - I have this plan <paste> to implement skins in my game, this is one solution, provide alternatives I could implement & how do they compare. Share how each will they fit in my existing codebase`
 
-It came back with some options, as well as pros & cons of how it will fit with my existing code.
+It came back with a few alternatives, as well as pros & cons of how it will fit with my existing code. After a bit of back & forth, I had a good sense of what I wanted. 
 
-It suggested some alternatives, and recommended some (bad) ideas. Eventually, it started suggested code. 
+Eventually though, it started suggesting code. I had to tell it "stop generating code, we're still planning the system. Instead, save this plan to @skin_plan.md".
 
-I had to tell it "stop generating code, we're still planning the system. Instead, save this plan to @skin_plan.md".
+It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy. 
 
-It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy.
+From there, I could've had claude implement the plan, but I instead chose to do it myself. An hour or so later, and I can now say that I've added skins to my game! So, I'd call it a success. (And I know how it works, so I can tweak it later if neeed.)
 
-From there, I could have had claude implement the plan, but instead I did so myself. I found an issue with the workflow for adding skins, and I told claude about it.
 
-Providing the file I was working on, the existing plan, and the new problem let me think & bounce ideas off.
+### One more (super useful) Use-Case - Implement things I'd usually have to google
 
-I can now say that I've added skins to my game! So, I'd call it a success. (And I know how it works, so I can maintain it later.)
+One really **crucial** time saver was to delegate **some** thinking to the AI. Since I knew the architecture, and what I was trying to achieve, I could be specific enough to provide the data the AI needs to solve the problem.
 
-# SEB CONTINUE FROM HERE ### # # # # # # # 
+I had 2 of these types of problems:
 
-### E.g. 3 - Implement things I'd have to google
-
-{{< img-float-right src="/img/dank-nooner-skeleton-gen.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
-
-Once really crucial time saver was to delegate some implementation to the AI. Since I know the higher level architecture, and what I'm trying to achieve, I can be specific enough & provide the data the AI needs to solve the problem.
-
-#### Set height of a 3D Mesh dynamically so I don't have to manually scale it
+#### 1. Set height of a 3D Mesh dynamically so I don't have to manually scale it
 
 This is something I knew that I should use bounding boxes (AABB) for, but wasn't sure how I'd implement. 
-
-{{< clearfix >}}
 
 I told claude: 
 
@@ -258,23 +251,33 @@ func _get_combined_aabb(node: Node3D) -> AABB:
 	return combined
 ```
 
+
 This would have taken me at least an hour or two to code myself, since I'm not familiar with the API. This also supports multiple MeshInstance3D's in 1 scene, which is good.
 
-#### Skeleton generation for ragdoll physics on multiple character skins
+#### 2. Skeleton generation for ragdoll physics on multiple character skins
 
-Without going too much into the code (see [this file](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) if you're interested), I have multiple character skins in my game, and I want them to all be able to ragdoll when you crash on your bike.
+Without going too much into the code (see [this file](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) if you're interested), I wanted to create a ragdoll effect when you crash on your bike for my character skins.
 
-The godot docs say to create a skeleton simulation in the UI, then tweak a bunch of values & save it into the scene. This is fine for a single character, but since I'm going to have a bunch, I needed to generate this. 
+I have multiple characters, each with a "Mesh" (what the character looks like) and a "Skeleton" (what animations & ragdoll use) that needs to be created.
 
-To get claude to help, I ran the manual steps once, but took note of all the constraint values that were needed. 
-> These are needed so when a character ragdolls, their leg doesn't bend forward & through their chest.
+The godot docs say to create a skeleton simulation in the UI, then tweak a bunch of values & save it into the scene. This is fine for a single character, but since I'm going to have a bunch, I needed to automate this. 
 
-I hard-coded these values once in the editor & wrote them into a dictionary. 
+To achieve this, I:
+- Ran the manual steps once (following the docs)
+  - Clicked generate in Godot's UI
+  - Performed some bone cleanup (totally normal, I swear)
+  - Added constrain values for each bone I cared about. (e.g. not each finger, just the arms/legs/head)
+  - > A constraint basically tells a joint to limit it's rotation, say to stop a leg from bending forward or through the body
+- Saved each of these contraint values to a Dictionary / map for claude to use later
+- Wrote up a prompt for claude
 
 
-Then, I told claude:
+The prompt:
+
 `@CLAUDE.md @filepath_of_script.gd - Using ragdoll_bone_constraints_base as a map, create a function to generate bones for skel_root. Only include bones listed in the map, and add constraints following the values.`
 
+
+The reference code:
 
 ```gdscript
 ## Needs to be generated in code, used in ragdoll simulation
@@ -292,11 +295,17 @@ var ragdoll_bone_constraints_base = {
 }
 ```
 
+After a bit of tweaking, back & forth, and some testing, I had a working solution!
+> And in a fraction of the time it would have taken me alone!
 
-Then... it took a bit more tweaking, but eventually, it worked! (Go see the [src code](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) to see what it generated) I followed the same process for setting up IK maps, and I was off to the races!
+> Go see the [src code](https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd) to see what it generated!
+
+The output:
+
+{{< img-full src="/img/dank-nooner-skeleton-gen.png" alt="screenshot from godot editor showing the generated skeleton" >}}
 
 
-# How I can stay relevant, and sharp - **Summary & Lessons Learned**
+# Lessons Learned & Summary
 
 > In a time where the world wants us to rely on AI, find what works for you.
 
@@ -306,9 +315,9 @@ The VSCode extension was a good example of what *not* to do. I let Claude drive,
 
 With Dank Nooner, I already knew what I wanted before asking for help. That made all the difference.
 
-Before you open the AI chat, ask yourself: "Do I actually understand what I'm trying to build?" If not, sketch it out first. An excalidraw diagram, a bullet list, whatever works.
+My advice? Before you open the AI chat, ask yourself: "Do I actually understand what I'm trying to build?" If not, sketch it out first. An excalidraw diagram, a bullet list, whatever works.
 
-### Once you have an idea, write it down & verify it
+### Plan out your code
 
 For the skin system, I didn't just tell Claude "make skins work." I wrote out my constraints, the types of materials I was dealing with, and what I thought the solution might look like.
 
@@ -326,10 +335,8 @@ But here's the line I've drawn for myself:
 
 Once you stop understanding your own code, you're gonna have a bad time. No amount of "just ask Claude to fix it" will save you when you're on a deadline and the AI keeps hallucinating non-existent APIs.
 
-### The bottom line
+### Final thoughts
 
-AI isn't going away, so you might as well get good at using it. Just don't let it do your thinking for you.
-
-Back to the code - I've got more stuff to add.
+AI isn't going away, so you may as well get good at it. Just don't let it do your thinking for you.
 
 **Thanks for reading!**
