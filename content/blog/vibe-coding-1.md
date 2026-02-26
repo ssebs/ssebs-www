@@ -89,63 +89,67 @@ In my case, I had these issues:
 - Freezing after a long time
 - Drag-n-drop stops working when a checkbox has nested items
 - Corrupt `.vscode/settings.json` when there's already a setting saved
-- \<more\>
+- General lag
 
 Since these bugs were annoying me, I -*err, claude*- got to debugging them. I copy/pasted these issues into a fresh claude code window and told it to fix the bug.
 
-Many tokens later, it looked like the bug was fixed! However, a new bug would pop up. This repeated, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic.
+Many tokens later, it looked like claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic to fix it.
 
-I decided to venture into this mysterious codebase, and what I found was *disgusting*:
-
-# SEB: CONTINUE FROM HERE #  # # # # # # # # # 
+I decided to venture into this mysterious codebase, and what I found was *disgusting* (at least to me):
 
 - Duplicate logic
 - Unused variables
-- anti-patterns
-- snake_case and camelCase mixed!
+- Anti-patterns
+- Worst of all... `snake_case` and `camelCase` in the same file!
 
-The next day (when I got more tokens), I made a list of design issues & told claude to refactor them. I used the superpowers plugin to plan a refactor & implement it, but when it came down to it, claude tried its best but couldn't do the whole refactor at once.
+The next day (when I got more tokens), I decided enough was enough. I finally started using my brain again.
 
-I had to split up the refactor into parts, and it was able to clean up the code.
+I made a list of architectural issues & told claude to refactor them. Using the [superpowers](https://github.com/obra/superpowers) plugin, I made a plan & had claude try to implement it all at once.
 
-Eventually, I implemented most of the features & fixes, but not having context on how the code works definitely made it harder to keep things tidy to say the least.
+Sadly when it came down to it, claude tried its best but couldn't do the whole refactor at once.
+
+I ended up splitting the plan into bite sized chunks (fix duplicate logic, move web view to a separate file, etc.), and started over.
+
+Eventually most of the bugs were fixed, but not having context on how the code works definitely made it harder to keep things tidy to say the least.
 
 ### What's next for the extension
 
-I'm going to keep vibe coding it, but keeping a smaller scope. I don't really care enough about this extension (or extension development in general) to clean it up, so it is what it is.
+I'm still using it on Dank Nooner, so as I get annoyed I'll keep vibe coding features & bug fixes. I'll be sure to have a smaller scope for each context window / session.
 
-....
+I don't really care enough about this extension to find the root cause of the lag, so it is what it is for now.
 
 # Trying out AI assisted coding - **Dank Nooner**
 
-> What DOES work (use it to be more efficient)
+> This is what **does** work in my experience!
 
-[Dank Nooner's project page](/projects/dank-nooner)
+With [Dank Nooner](/projects/dank-nooner), I took a different approach...
 
-### Use AI as a tool, not as a replacement for thinking
+### Using AI as a tool, not as a replacement for thinking
 
-### E.g. 1 - Boilerplate code
+### First Use-Case - Boilerplate code
 
 {{< img-float-right src="/img/dank-nooner-settings-menu.png" width="600" alt="screenshot dank nooner showing settings menu" >}}
 
-The first good use-case I can think of is to use AI to generate boilerplate code. The basics like a React component already has a VSCode snippet, so that's not what I mean.
+The first useful thing I found is to use AI to generate boilerplate code. 
+
+I don't mean boilerplate in the literal sense, since snippets already take care of that. 
 
 Instead, I mean a design pattern that's specific to your project.
 
-Let's say I created a State Machine driven Menu system for my game 👀. 
+Let's say... I created a Menu System for my game that uses State Machines 👀. 
 
-I created the:
+I created the system + a few menus manually:
 - Main menu
 - Lobby menu
 - Play menu
 
-And I have a good amount of example code for claude to reference.
+Each menu has a set of files (scene, script, godot engine variables, UI elements, button click handlers, etc.)
 
-Each menu has a set of files (scene, script, @export vars that are attached in the editor, UI elements, button click handlers, etc.)
+With that, I have a good amount of example code for claude to reference.
 
 {{< clearfix >}}
 
-I was able to get claude to generate a settings menu, and a customization menu just by providing it an example of the pattern.
+I was able to get claude to generate the entire settings menu, as well as a customization menu! I just needed to provide a examples of the pattern.
 
 ```md
 @CLAUDE.md @state_machine.gd @menu_manager.gd @play_menu.gd @play_menu.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
@@ -155,11 +159,15 @@ I was able to get claude to generate a settings menu, and a customization menu j
 - save button
 ```
 
-### E.g. 2 - Planning out features
+This is great! Once I figure out how I want something to be implemented, I can use claude to speed up my coding.
+
+### Second Use-Case - Planning out features & thinking it through
 
 {{< img-float-right src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton" >}}
 
-Another good use case for AI assisted coding is planning. I don't mean "plan mode" to refactor your code, I mean planning out how you're going to solve something.
+Another good use case for AI is planning: both as someone to bounce ideas off of, and someone to help think about how this change will work with your existing code.
+
+> Note that I don't mean "plan mode" in claude, I mean planning out how you're going to solve something.
 
 For instance, I'm adding different motorcycles with "skins" (different colors) that will be unlocked. To achieve this, I need to have some type of skin / color system.
 
@@ -175,18 +183,28 @@ So, I came up with a basic plan:
 - I've created a test scene @sport_bike.tscn with the model
 - I'm thinking of adding a skin script that I can attach to a Node3D, which has some options to change colors.
 - In the script itself, I need to check if it's a textured material (shader) or a standard material, and find a way to change the color for each.
-- <more details>
+- <more details that I'm leaving out for brevity>
 ```
 
 Then asked Claude to help me think it through:
 
 `@CLAUDE.md - I have this plan <paste> to implement skins in my game, this is one solution, provide alternatives I could implement & how do they compare. Share how each will they fit in my existing codebase`
 
-It came back with some options, and I had a back & forth chat with it. 
+It came back with some options, as well as pros & cons of how it will fit with my existing code.
 
-Eventually, it suggested some code. 
+It suggested some alternatives, and recommended some (bad) ideas. Eventually, it started suggested code. 
 
 I had to tell it "stop generating code, we're still planning the system. Instead, save this plan to @skin_plan.md".
+
+It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy.
+
+From there, I could have had claude implement the plan, but instead I did so myself. I found an issue with the workflow for adding skins, and I told claude about it.
+
+Providing the file I was working on, the existing plan, and the new problem let me think & bounce ideas off.
+
+I can now say that I've added skins to my game! So, I'd call it a success. (And I know how it works, so I can maintain it later.)
+
+# SEB CONTINUE FROM HERE ### # # # # # # # 
 
 ### E.g. 3 - Implement things I'd have to google
 

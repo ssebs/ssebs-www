@@ -280,7 +280,8 @@
     </div></div>
   <div class="post-content overflow-x-hidden break-words"><h1 id="first-off-what-is-ai">First off, what is AI?</h1>
 <blockquote>
-<p>Note - This section was written by Claude Code! The rest of the blog was me, though!</p></blockquote>
+<p>Note - This section was written by Claude Code! The rest of the blog was me, though!</p>
+</blockquote>
 <img class="custom-float-right ml-3" src="/img/vibe-coding-1.png" width="400" alt="An illustration of an AI chat prompt input field. The text &#39;do it all for me&#39; is crossed out in red. Below it, &#39;help me think through this&#39; has a green checkmark">
 
 <h3 id="super-brief-summary">Super Brief Summary</h3>
@@ -290,18 +291,20 @@
 <p>But here&rsquo;s the thing: the people getting the most out of these tools are experienced developers who already know what good code looks like. The AI doesn&rsquo;t replace the skill, it amplifies it.</p>
 <h3 id="vibe-coding-vs-ai-assisted-coding">Vibe Coding vs AI Assisted Coding</h3>
 <blockquote>
-<p>The main topic of this post</p></blockquote>
+<p>The main topic of this post</p>
+</blockquote>
 <p><strong>Vibe coding</strong> is when you let the AI drive. You describe what you want, hit enter, and hope for the best. You&rsquo;re not reading the code, not understanding the architecture, just <em>vibing</em>.</p>
 <p><strong>AI assisted coding</strong> is when <strong>you</strong> drive, and the AI rides shotgun. You plan the approach, understand the problem, and use AI to speed up the boring parts (e.g. boilerplate, syntax you&rsquo;d have to Google, etc.)</p>
 <p>Most of the hype is around vibe coding, but I think the more useful thing is AI assisted coding.</p>
 <div style="clear:both;"></div>
 <h1 id="trying-out-vibe-coding---creating-a-vscode-extension">Trying out &ldquo;vibe coding&rdquo; - Creating a VSCode extension</h1>
 <blockquote>
-<p>This is what does <strong>not</strong> seem to work in my experience</p></blockquote>
+<p>This is what does <strong>not</strong> seem to work in my experience</p>
+</blockquote>
 <h3 id="what-i-wanted">What I wanted</h3>
 <p>During the development of my motorcycle stunt game, <a href="/projects/dank-nooner">Dank Nooner</a>, I needed some way to track my todo&rsquo;s &amp; milestones. I didn&rsquo;t want to go full Kanban in a separate app, but needed more than a simple Markdown file.</p>
 <p>I had been using a basic <code>TODO.md</code> file like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>## In Progress
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>## In Progress
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">- [ ]</span> Create player controller
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>  <span style="color:#c678dd">- [x]</span> Create scene
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>  <span style="color:#c678dd">- [x]</span> Add character
@@ -336,69 +339,81 @@
 <li>Freezing after a long time</li>
 <li>Drag-n-drop stops working when a checkbox has nested items</li>
 <li>Corrupt <code>.vscode/settings.json</code> when there&rsquo;s already a setting saved</li>
-<li>&lt;more&gt;</li>
+<li>General lag</li>
 </ul>
 <p>Since these bugs were annoying me, I -<em>err, claude</em>- got to debugging them. I copy/pasted these issues into a fresh claude code window and told it to fix the bug.</p>
-<p>Many tokens later, it looked like the bug was fixed! However, a new bug would pop up. This repeated, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic.</p>
-<p>I decided to venture into this mysterious codebase, and what I found was <em>disgusting</em>:</p>
-<h1 id="seb-continue-from-here----------">SEB: CONTINUE FROM HERE #  # # # # # # # #</h1>
+<p>Many tokens later, it looked like claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic to fix it.</p>
+<p>I decided to venture into this mysterious codebase, and what I found was <em>disgusting</em> (at least to me):</p>
 <ul>
 <li>Duplicate logic</li>
 <li>Unused variables</li>
-<li>anti-patterns</li>
-<li>snake_case and camelCase mixed!</li>
+<li>Anti-patterns</li>
+<li>Worst of all&hellip; <code>snake_case</code> and <code>camelCase</code> in the same file!</li>
 </ul>
-<p>The next day (when I got more tokens), I made a list of design issues &amp; told claude to refactor them. I used the superpowers plugin to plan a refactor &amp; implement it, but when it came down to it, claude tried its best but couldn&rsquo;t do the whole refactor at once.</p>
-<p>I had to split up the refactor into parts, and it was able to clean up the code.</p>
-<p>Eventually, I implemented most of the features &amp; fixes, but not having context on how the code works definitely made it harder to keep things tidy to say the least.</p>
+<p>The next day (when I got more tokens), I decided enough was enough. I finally started using my brain again.</p>
+<p>I made a list of architectural issues &amp; told claude to refactor them. Using the <a href="https://github.com/obra/superpowers" target="_blank">superpowers</a> plugin, I made a plan &amp; had claude try to implement it all at once.</p>
+<p>Sadly when it came down to it, claude tried its best but couldn&rsquo;t do the whole refactor at once.</p>
+<p>I ended up splitting the plan into bite sized chunks (fix duplicate logic, move web view to a separate file, etc.), and started over.</p>
+<p>Eventually most of the bugs were fixed, but not having context on how the code works definitely made it harder to keep things tidy to say the least.</p>
 <h3 id="whats-next-for-the-extension">What&rsquo;s next for the extension</h3>
-<p>I&rsquo;m going to keep vibe coding it, but keeping a smaller scope. I don&rsquo;t really care enough about this extension (or extension development in general) to clean it up, so it is what it is.</p>
-<p>&hellip;.</p>
+<p>I&rsquo;m still using it on Dank Nooner, so as I get annoyed I&rsquo;ll keep vibe coding features &amp; bug fixes. I&rsquo;ll be sure to have a smaller scope for each context window / session.</p>
+<p>I don&rsquo;t really care enough about this extension to find the root cause of the lag, so it is what it is for now.</p>
 <h1 id="trying-out-ai-assisted-coding---dank-nooner">Trying out AI assisted coding - <strong>Dank Nooner</strong></h1>
 <blockquote>
-<p>What DOES work (use it to be more efficient)</p></blockquote>
-<p><a href="/projects/dank-nooner">Dank Nooner&rsquo;s project page</a></p>
-<h3 id="use-ai-as-a-tool-not-as-a-replacement-for-thinking">Use AI as a tool, not as a replacement for thinking</h3>
-<h3 id="eg-1---boilerplate-code">E.g. 1 - Boilerplate code</h3>
+<p>This is what <strong>does</strong> work in my experience!</p>
+</blockquote>
+<p>With <a href="/projects/dank-nooner">Dank Nooner</a>, I took a different approach&hellip;</p>
+<h3 id="using-ai-as-a-tool-not-as-a-replacement-for-thinking">Using AI as a tool, not as a replacement for thinking</h3>
+<h3 id="first-use-case---boilerplate-code">First Use-Case - Boilerplate code</h3>
 <img class="custom-float-right ml-3" src="/img/dank-nooner-settings-menu.png" width="600" alt="screenshot dank nooner showing settings menu">
 
-<p>The first good use-case I can think of is to use AI to generate boilerplate code. The basics like a React component already has a VSCode snippet, so that&rsquo;s not what I mean.</p>
+<p>The first useful thing I found is to use AI to generate boilerplate code.</p>
+<p>I don&rsquo;t mean boilerplate in the literal sense, since snippets already take care of that.</p>
 <p>Instead, I mean a design pattern that&rsquo;s specific to your project.</p>
-<p>Let&rsquo;s say I created a State Machine driven Menu system for my game 👀.</p>
-<p>I created the:</p>
+<p>Let&rsquo;s say&hellip; I created a Menu System for my game that uses State Machines 👀.</p>
+<p>I created the system + a few menus manually:</p>
 <ul>
 <li>Main menu</li>
 <li>Lobby menu</li>
 <li>Play menu</li>
 </ul>
-<p>And I have a good amount of example code for claude to reference.</p>
-<p>Each menu has a set of files (scene, script, @export vars that are attached in the editor, UI elements, button click handlers, etc.)</p>
+<p>Each menu has a set of files (scene, script, godot engine variables, UI elements, button click handlers, etc.)</p>
+<p>With that, I have a good amount of example code for claude to reference.</p>
 <div style="clear:both;"></div>
-<p>I was able to get claude to generate a settings menu, and a customization menu just by providing it an example of the pattern.</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">@CLAUDE</span>.md <span style="color:#e06c75">@state_machine</span>.gd <span style="color:#e06c75">@menu_manager</span>.gd <span style="color:#e06c75">@play_menu</span>.gd <span style="color:#e06c75">@play_menu</span>.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
+<p>I was able to get claude to generate the entire settings menu, as well as a customization menu! I just needed to provide a examples of the pattern.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">@CLAUDE</span>.md <span style="color:#e06c75">@state_machine</span>.gd <span style="color:#e06c75">@menu_manager</span>.gd <span style="color:#e06c75">@play_menu</span>.gd <span style="color:#e06c75">@play_menu</span>.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">-</span> title
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#c678dd">-</span> back button
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">-</span> username menu (using a Label + LineEdit)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span><span style="color:#c678dd">-</span> save button
-</span></span></code></pre></div><h3 id="eg-2---planning-out-features">E.g. 2 - Planning out features</h3>
+</span></span></code></pre></div><p>This is great! Once I figure out how I want something to be implemented, I can use claude to speed up my coding.</p>
+<h3 id="second-use-case---planning-out-features--thinking-it-through">Second Use-Case - Planning out features &amp; thinking it through</h3>
 <img class="custom-float-right ml-3" src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton">
 
-<p>Another good use case for AI assisted coding is planning. I don&rsquo;t mean &ldquo;plan mode&rdquo; to refactor your code, I mean planning out how you&rsquo;re going to solve something.</p>
+<p>Another good use case for AI is planning: both as someone to bounce ideas off of, and someone to help think about how this change will work with your existing code.</p>
+<blockquote>
+<p>Note that I don&rsquo;t mean &ldquo;plan mode&rdquo; in claude, I mean planning out how you&rsquo;re going to solve something.</p>
+</blockquote>
 <p>For instance, I&rsquo;m adding different motorcycles with &ldquo;skins&rdquo; (different colors) that will be unlocked. To achieve this, I need to have some type of skin / color system.</p>
 <p>I have a general idea on how I&rsquo;d implement it, but I wanted to think it through a bit more.</p>
 <div style="clear:both;"></div>
 <p>So, I came up with a basic plan:</p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">-</span> I have multiple types of 3d models, some that use a single png texture, and others that have many materials &amp; meshes.
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">-</span> I have multiple types of 3d models, some that use a single png texture, and others that have many materials &amp; meshes.
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">-</span> I want to be able to change certain colors dynamically, and save them as a file using godot resources
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#c678dd">-</span> I&#39;ve created a test scene <span style="color:#e06c75">@sport_bike</span>.tscn with the model
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">-</span> I&#39;m thinking of adding a skin script that I can attach to a Node3D, which has some options to change colors.
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span><span style="color:#c678dd">-</span> In the script itself, I need to check if it&#39;s a textured material (shader) or a standard material, and find a way to change the color for each.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span><span style="color:#c678dd">-</span> &lt;<span style="color:#e06c75">more</span> <span style="color:#e06c75">details</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span><span style="color:#c678dd">-</span> &lt;more details that I&#39;m leaving out for brevity&gt;
 </span></span></code></pre></div><p>Then asked Claude to help me think it through:</p>
 <p><code>@CLAUDE.md - I have this plan &lt;paste&gt; to implement skins in my game, this is one solution, provide alternatives I could implement &amp; how do they compare. Share how each will they fit in my existing codebase</code></p>
-<p>It came back with some options, and I had a back &amp; forth chat with it.</p>
-<p>Eventually, it suggested some code.</p>
+<p>It came back with some options, as well as pros &amp; cons of how it will fit with my existing code.</p>
+<p>It suggested some alternatives, and recommended some (bad) ideas. Eventually, it started suggested code.</p>
 <p>I had to tell it &ldquo;stop generating code, we&rsquo;re still planning the system. Instead, save this plan to @skin_plan.md&rdquo;.</p>
+<p>It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy.</p>
+<p>From there, I could have had claude implement the plan, but instead I did so myself. I found an issue with the workflow for adding skins, and I told claude about it.</p>
+<p>Providing the file I was working on, the existing plan, and the new problem let me think &amp; bounce ideas off.</p>
+<p>I can now say that I&rsquo;ve added skins to my game! So, I&rsquo;d call it a success. (And I know how it works, so I can maintain it later.)</p>
+<h1 id="seb-continue-from-here-------">SEB CONTINUE FROM HERE ### # # # # # #</h1>
 <h3 id="eg-3---implement-things-id-have-to-google">E.g. 3 - Implement things I&rsquo;d have to google</h3>
 <img class="custom-float-right ml-3" src="/img/dank-nooner-skeleton-gen.png" width="600" alt="screenshot from godot editor showing the generated skeleton">
 
@@ -408,7 +423,7 @@
 <div style="clear:both;"></div>
 <p>I told claude:</p>
 <p><code>@CLAUDE.md @filepath_of_script.gd - scale mesh_skin to HEIGHT in a new function. Use AABB bounding boxes to scale Meshinstance3Ds</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">_ready</span>():
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>    <span style="color:#61afef;font-weight:bold">_spawn_mesh</span>()
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>
@@ -447,11 +462,12 @@
 <p>The godot docs say to create a skeleton simulation in the UI, then tweak a bunch of values &amp; save it into the scene. This is fine for a single character, but since I&rsquo;m going to have a bunch, I needed to generate this.</p>
 <p>To get claude to help, I ran the manual steps once, but took note of all the constraint values that were needed.</p>
 <blockquote>
-<p>These are needed so when a character ragdolls, their leg doesn&rsquo;t bend forward &amp; through their chest.</p></blockquote>
+<p>These are needed so when a character ragdolls, their leg doesn&rsquo;t bend forward &amp; through their chest.</p>
+</blockquote>
 <p>I hard-coded these values once in the editor &amp; wrote them into a dictionary.</p>
 <p>Then, I told claude:
 <code>@CLAUDE.md @filepath_of_script.gd - Using ragdoll_bone_constraints_base as a map, create a function to generate bones for skel_root. Only include bones listed in the map, and add constraints following the values.</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">## Needs to be generated in code, used in ragdoll simulation</span>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">## Needs to be generated in code, used in ragdoll simulation</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#c678dd">var</span> <span style="color:#e06c75">skel_root</span>: <span style="color:#e06c75">PhysicalBoneSimulator3D</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">PhysicalBoneSimulator3D</span><span style="color:#56b6c2">.</span><span style="color:#61afef;font-weight:bold">new</span>()
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span><span style="color:#c678dd">var</span> <span style="color:#e06c75">ragdoll_bone_constraints_base</span> <span style="color:#56b6c2">=</span> {
@@ -467,7 +483,8 @@
 </span></span></code></pre></div><p>Then&hellip; it took a bit more tweaking, but eventually, it worked! (Go see the <a href="https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd" target="_blank">src code</a> to see what it generated) I followed the same process for setting up IK maps, and I was off to the races!</p>
 <h1 id="how-i-can-stay-relevant-and-sharp---summary--lessons-learned">How I can stay relevant, and sharp - <strong>Summary &amp; Lessons Learned</strong></h1>
 <blockquote>
-<p>In a time where the world wants us to rely on AI, find what works for you.</p></blockquote>
+<p>In a time where the world wants us to rely on AI, find what works for you.</p>
+</blockquote>
 <h3 id="dont-give-up-planning-on-your-own-think-the-problem-through">Don&rsquo;t give up planning on your own, think the problem through</h3>
 <p>The VSCode extension was a good example of what <em>not</em> to do. I let Claude drive, and ended up with a codebase I didn&rsquo;t understand. Debugging was rough since I didn&rsquo;t know how the code worked under the hood.</p>
 <p>With Dank Nooner, I already knew what I wanted before asking for help. That made all the difference.</p>
