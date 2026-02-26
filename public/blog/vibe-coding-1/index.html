@@ -280,7 +280,7 @@
     </div></div>
   <div class="post-content overflow-x-hidden break-words"><blockquote>
 <p>Author&rsquo;s note: Long read, but you&rsquo;ll walk away knowing exactly when to let AI help and when to do it yourself.</p></blockquote>
-<p><strong>tl:dr</strong> - Letting AI drive leads to code you can&rsquo;t debug. Here&rsquo;s how to use AI as a tool, not a replacement for thinking</p>
+<p><strong>tl;dr</strong> - Letting AI drive leads to code you can&rsquo;t debug. Here&rsquo;s how to use AI as a tool, not a replacement for thinking</p>
 <h1 id="first-off-what-is-ai">First off, what is AI?</h1>
 <blockquote>
 <p>Note - This section was written by Claude Code! The rest of the blog was me, though!</p></blockquote>
@@ -341,8 +341,8 @@
 <li>Corrupt <code>.vscode/settings.json</code> when there&rsquo;s already a setting saved</li>
 <li>General lag</li>
 </ul>
-<p>Since these bugs were annoying me, I -<em>err, claude</em>- got to debugging them. I copy/pasted these issues into a fresh claude code window and told it to fix the bug.</p>
-<p>Many tokens later, it looked like claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic to fix it.</p>
+<p>Since these bugs were annoying me, I -<em>err, Claude</em>- got to debugging them. I copy/pasted these issues into a fresh Claude code window and told it to fix the bug.</p>
+<p>Many tokens later, it looked like Claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Claude to fix it.</p>
 <p>I decided to venture into this mysterious codebase, and what I found was <em>disgusting</em> (at least to me):</p>
 <ul>
 <li>Duplicate logic</li>
@@ -351,12 +351,12 @@
 <li>Worst of all&hellip; <code>snake_case</code> and <code>camelCase</code> in the same file!</li>
 </ul>
 <p>The next day (when I got more tokens), I decided enough was enough. I finally started using my brain again.</p>
-<p>I made a list of architectural issues &amp; told claude to refactor them. Using the <a href="https://github.com/obra/superpowers" target="_blank">superpowers</a> plugin, I made a plan &amp; had claude try to implement it all at once.</p>
-<p>Sadly when it came down to it, claude tried its best but couldn&rsquo;t do the whole refactor at once.</p>
+<p>I made a list of architectural issues &amp; told Claude to refactor them. Using the <a href="https://github.com/obra/superpowers" target="_blank">superpowers</a> plugin, I made a plan &amp; had Claude try to implement it all at once.</p>
+<p>Sadly when it came down to it, Claude tried its best but couldn&rsquo;t do the whole refactor at once.</p>
 <p>I ended up splitting the plan into bite sized chunks (fix duplicate logic, move web view to a separate file, etc.), and started over.</p>
 <p>Eventually most of the bugs were fixed, but not having context on how the code works definitely made it harder to keep things tidy to say the least.</p>
 <h3 id="whats-next-for-the-extension">What&rsquo;s next for the extension</h3>
-<p>I&rsquo;m still using it on Dank Nooner, so as I get annoyed I&rsquo;ll keep vibe coding features &amp; bug fixes. I&rsquo;ll be sure to have a smaller scope for each context window / session.</p>
+<p>I&rsquo;m still using it on Dank Nooner, so as I get annoyed I&rsquo;ll keep vibe coding to add features &amp; fix bugs. I&rsquo;ll be sure to have a smaller scope for each context window / session.</p>
 <p>I don&rsquo;t really care enough about this extension to find the root cause of the lag, so it is what it is for now.</p>
 <h1 id="trying-out-ai-assisted-coding---dank-nooner">Trying out AI assisted coding - <strong>Dank Nooner</strong></h1>
 <blockquote>
@@ -377,21 +377,21 @@
 <li>Play menu</li>
 </ul>
 <p>Each menu has a set of files (scene, script, godot engine variables, UI elements, button click handlers, etc.)</p>
-<p>With that, I have a good amount of example code for claude to reference.</p>
+<p>With that, I have a good amount of example code for Claude to reference.</p>
 <div style="clear:both;"></div>
-<p>I was able to get claude to generate the entire settings menu, as well as a customization menu! I just needed to provide a examples of the pattern.</p>
+<p>I was able to get Claude to generate the entire settings menu, as well as a customization menu! I just needed to provide examples of the pattern.</p>
 <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">@CLAUDE</span>.md <span style="color:#e06c75">@state_machine</span>.gd <span style="color:#e06c75">@menu_manager</span>.gd <span style="color:#e06c75">@play_menu</span>.gd <span style="color:#e06c75">@play_menu</span>.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">-</span> title
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#c678dd">-</span> back button
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">-</span> username menu (using a Label + LineEdit)
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span><span style="color:#c678dd">-</span> save button
-</span></span></code></pre></div><p>This is great! Once I figure out how I want something to be implemented, I can use claude to speed up my coding.</p>
+</span></span></code></pre></div><p>This is great! Once I figure out how I want something to be implemented, I can use Claude to speed up my coding.</p>
 <h3 id="another-use-case---planning-out-features--thinking-it-through">Another Use-Case - Planning out features &amp; thinking it through</h3>
 <img class="custom-float-right ml-3" src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton">
 
 <p>Another good use case for AI is planning: both as someone (thing?) to bounce ideas off of, and someone to help think about how this change will work with your existing code.</p>
 <blockquote>
-<p>Note that I don&rsquo;t mean &ldquo;plan mode&rdquo; in claude, I mean planning out how you&rsquo;re going to solve something.</p></blockquote>
+<p>Note that I don&rsquo;t mean &ldquo;plan mode&rdquo; in Claude, I mean planning out how you&rsquo;re going to solve something.</p></blockquote>
 <p>For instance, I&rsquo;m adding different motorcycles with &ldquo;skins&rdquo; (different colors) that will be unlocked. To achieve this, I need to have some type of skin / color system.</p>
 <p>I have a general idea on how I&rsquo;d implement it, but I wanted to think it through a bit more.</p>
 <div style="clear:both;"></div>
@@ -407,13 +407,13 @@
 <p>It came back with a few alternatives, as well as pros &amp; cons of how it will fit with my existing code. After a bit of back &amp; forth, I had a good sense of what I wanted.</p>
 <p>Eventually though, it started suggesting code. I had to tell it &ldquo;stop generating code, we&rsquo;re still planning the system. Instead, save this plan to @skin_plan.md&rdquo;.</p>
 <p>It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy.</p>
-<p>From there, I could&rsquo;ve had claude implement the plan, but I instead chose to do it myself. An hour or so later, and I can now say that I&rsquo;ve added skins to my game! So, I&rsquo;d call it a success. (And I know how it works, so I can tweak it later if neeed.)</p>
+<p>From there, I could&rsquo;ve had Claude implement the plan, but I instead chose to do it myself. An hour or so later, and I can now say that I&rsquo;ve added skins to my game! So, I&rsquo;d call it a success. (And I know how it works, so I can tweak it later if needed.)</p>
 <h3 id="one-more-super-useful-use-case---implement-things-id-usually-have-to-google">One more (super useful) Use-Case - Implement things I&rsquo;d usually have to google</h3>
 <p>One really <strong>crucial</strong> time saver was to delegate <strong>some</strong> thinking to the AI. Since I knew the architecture, and what I was trying to achieve, I could be specific enough to provide the data the AI needs to solve the problem.</p>
 <p>I had 2 of these types of problems:</p>
 <h4 id="1-set-height-of-a-3d-mesh-dynamically-so-i-dont-have-to-manually-scale-it">1. Set height of a 3D Mesh dynamically so I don&rsquo;t have to manually scale it</h4>
 <p>This is something I knew that I should use bounding boxes (AABB) for, but wasn&rsquo;t sure how I&rsquo;d implement.</p>
-<p>I told claude:</p>
+<p>I told Claude:</p>
 <p><code>@CLAUDE.md @filepath_of_script.gd - scale mesh_skin to HEIGHT in a new function. Use AABB bounding boxes to scale Meshinstance3Ds</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">_ready</span>():
@@ -466,8 +466,8 @@
 </li>
 </ul>
 </li>
-<li>Saved each of these contraint values to a Dictionary / map for claude to use later</li>
-<li>Wrote up a prompt for claude</li>
+<li>Saved each of these contraint values to a Dictionary / map for Claude to use later</li>
+<li>Wrote up a prompt for Claude</li>
 </ul>
 <p>The prompt:</p>
 <p><code>@CLAUDE.md @filepath_of_script.gd - Using ragdoll_bone_constraints_base as a map, create a function to generate bones for skel_root. Only include bones listed in the map, and add constraints following the values.</code></p>

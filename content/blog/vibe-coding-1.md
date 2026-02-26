@@ -10,7 +10,7 @@ tags: [programming, gamedev, godot, python, js, genai]
 
 > Author's note: Long read, but you'll walk away knowing exactly when to let AI help and when to do it yourself.
 
-**tl:dr** - Letting AI drive leads to code you can't debug. Here's how to use AI as a tool, not a replacement for thinking
+**tl;dr** - Letting AI drive leads to code you can't debug. Here's how to use AI as a tool, not a replacement for thinking
 
 # First off, what is AI?
 
@@ -95,9 +95,9 @@ In my case, I had these issues:
 - Corrupt `.vscode/settings.json` when there's already a setting saved
 - General lag
 
-Since these bugs were annoying me, I -*err, claude*- got to debugging them. I copy/pasted these issues into a fresh claude code window and told it to fix the bug.
+Since these bugs were annoying me, I -*err, Claude*- got to debugging them. I copy/pasted these issues into a fresh Claude code window and told it to fix the bug.
 
-Many tokens later, it looked like claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Anthropic to fix it.
+Many tokens later, it looked like Claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Claude to fix it.
 
 I decided to venture into this mysterious codebase, and what I found was *disgusting* (at least to me):
 
@@ -108,9 +108,9 @@ I decided to venture into this mysterious codebase, and what I found was *disgus
 
 The next day (when I got more tokens), I decided enough was enough. I finally started using my brain again.
 
-I made a list of architectural issues & told claude to refactor them. Using the [superpowers](https://github.com/obra/superpowers) plugin, I made a plan & had claude try to implement it all at once.
+I made a list of architectural issues & told Claude to refactor them. Using the [superpowers](https://github.com/obra/superpowers) plugin, I made a plan & had Claude try to implement it all at once.
 
-Sadly when it came down to it, claude tried its best but couldn't do the whole refactor at once.
+Sadly when it came down to it, Claude tried its best but couldn't do the whole refactor at once.
 
 I ended up splitting the plan into bite sized chunks (fix duplicate logic, move web view to a separate file, etc.), and started over.
 
@@ -118,7 +118,7 @@ Eventually most of the bugs were fixed, but not having context on how the code w
 
 ### What's next for the extension
 
-I'm still using it on Dank Nooner, so as I get annoyed I'll keep vibe coding features & bug fixes. I'll be sure to have a smaller scope for each context window / session.
+I'm still using it on Dank Nooner, so as I get annoyed I'll keep vibe coding to add features & fix bugs. I'll be sure to have a smaller scope for each context window / session.
 
 I don't really care enough about this extension to find the root cause of the lag, so it is what it is for now.
 
@@ -149,11 +149,11 @@ I created the system + a few menus manually:
 
 Each menu has a set of files (scene, script, godot engine variables, UI elements, button click handlers, etc.)
 
-With that, I have a good amount of example code for claude to reference.
+With that, I have a good amount of example code for Claude to reference.
 
 {{< clearfix >}}
 
-I was able to get claude to generate the entire settings menu, as well as a customization menu! I just needed to provide a examples of the pattern.
+I was able to get Claude to generate the entire settings menu, as well as a customization menu! I just needed to provide examples of the pattern.
 
 ```md
 @CLAUDE.md @state_machine.gd @menu_manager.gd @play_menu.gd @play_menu.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
@@ -163,7 +163,7 @@ I was able to get claude to generate the entire settings menu, as well as a cust
 - save button
 ```
 
-This is great! Once I figure out how I want something to be implemented, I can use claude to speed up my coding.
+This is great! Once I figure out how I want something to be implemented, I can use Claude to speed up my coding.
 
 ### Another Use-Case - Planning out features & thinking it through
 
@@ -171,7 +171,7 @@ This is great! Once I figure out how I want something to be implemented, I can u
 
 Another good use case for AI is planning: both as someone (thing?) to bounce ideas off of, and someone to help think about how this change will work with your existing code.
 
-> Note that I don't mean "plan mode" in claude, I mean planning out how you're going to solve something.
+> Note that I don't mean "plan mode" in Claude, I mean planning out how you're going to solve something.
 
 For instance, I'm adding different motorcycles with "skins" (different colors) that will be unlocked. To achieve this, I need to have some type of skin / color system.
 
@@ -200,7 +200,7 @@ Eventually though, it started suggesting code. I had to tell it "stop generating
 
 It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy. 
 
-From there, I could've had claude implement the plan, but I instead chose to do it myself. An hour or so later, and I can now say that I've added skins to my game! So, I'd call it a success. (And I know how it works, so I can tweak it later if neeed.)
+From there, I could've had Claude implement the plan, but I instead chose to do it myself. An hour or so later, and I can now say that I've added skins to my game! So, I'd call it a success. (And I know how it works, so I can tweak it later if needed.)
 
 
 ### One more (super useful) Use-Case - Implement things I'd usually have to google
@@ -213,7 +213,7 @@ I had 2 of these types of problems:
 
 This is something I knew that I should use bounding boxes (AABB) for, but wasn't sure how I'd implement. 
 
-I told claude: 
+I told Claude: 
 
 `@CLAUDE.md @filepath_of_script.gd - scale mesh_skin to HEIGHT in a new function. Use AABB bounding boxes to scale Meshinstance3Ds`
 
@@ -270,8 +270,8 @@ To achieve this, I:
   - Performed some bone cleanup (totally normal, I swear)
   - Added constrain values for each bone I cared about. (e.g. not each finger, just the arms/legs/head)
   - > A constraint basically tells a joint to limit it's rotation, say to stop a leg from bending forward or through the body
-- Saved each of these contraint values to a Dictionary / map for claude to use later
-- Wrote up a prompt for claude
+- Saved each of these contraint values to a Dictionary / map for Claude to use later
+- Wrote up a prompt for Claude
 
 
 The prompt:
