@@ -1,52 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tui on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/tui/</link><description>Recent content in Tui on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Jul 2024 22:03:27 -0700</lastBuildDate><atom:link href="https://ssebs.com/tags/tui/index.xml" rel="self" type="application/rss+xml"/><item><title>nccsv</title><link>https://ssebs.com/projects/nccsv/</link><pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate><guid>https://ssebs.com/projects/nccsv/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/nccsv" target="_blank">Github Repo&lt;/a>&lt;/p>
-&lt;p>Ncurses CSV Editor written in Python&lt;/p>
-
-&lt;script src="https://asciinema.org/a/6gHETuFhyD4R9nAwtUGet5P9i.js" id="asciicast-6gHETuFhyD4R9nAwtUGet5P9i" async="true">&lt;/script>
-
-&lt;h2 id="todo">TODO:&lt;/h2>
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Architecture
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Wireframes
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Home / Menu&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> File selector
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Open&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Close&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Editor
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Layout Grid&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Entry&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Multiple views
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Home / Menu&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> File selector&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Editor&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Custom widgets
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> Layout Grid&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox"> Entry (text editor with box)&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Scroll down / right&lt;/li>
-&lt;li>[.] Delete contents of cell when you hit &amp;ldquo;DEL&amp;rdquo;&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Row / Col bars (A,B,C, 1,2,3)&lt;/li>
-&lt;li>[.] Actually handle CSVs&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Color&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Documentation&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Publish to pip&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> Tests&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>Misc folder is for miscellaneous test files to add features (pad scrolling, etc)&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tui on ssebs | Sebastian Safari</title>
+    <link>http://localhost:1313/tags/tui/</link>
+    <description>Recent content in Tui on ssebs | Sebastian Safari</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jul 2024 22:03:27 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nccsv</title>
+      <link>http://localhost:1313/projects/nccsv/</link>
+      <pubDate>Wed, 24 Jul 2024 22:03:27 -0700</pubDate>
+      <guid>http://localhost:1313/projects/nccsv/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/nccsv&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ncurses CSV Editor written in Python&lt;/p&gt;&#xA;&#xD;&#xA;&lt;script src=&#34;https://asciinema.org/a/6gHETuFhyD4R9nAwtUGet5P9i.js&#34; id=&#34;asciicast-6gHETuFhyD4R9nAwtUGet5P9i&#34; async=&#34;true&#34;&gt;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;h2 id=&#34;todo&#34;&gt;TODO:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Architecture&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Wireframes&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Home / Menu&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; File selector&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Open&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Close&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Editor&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Layout Grid&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Entry&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Multiple views&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Home / Menu&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; File selector&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Editor&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Custom widgets&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Layout Grid&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Entry (text editor with box)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Scroll down / right&lt;/li&gt;&#xA;&lt;li&gt;[.] Delete contents of cell when you hit &amp;ldquo;DEL&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Row / Col bars (A,B,C, 1,2,3)&lt;/li&gt;&#xA;&lt;li&gt;[.] Actually handle CSVs&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Color&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Documentation&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Publish to pip&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Tests&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Misc folder is for miscellaneous test files to add features (pad scrolling, etc)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

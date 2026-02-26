@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <base href="/" /><title> Stop Vibe Coding, Keep Using Your Brain: How I Use AI Effectively </title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UAT-Compatible" content="IE=edge">
+   
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+
+    <meta name="theme-color" content="#41afff">
+    
+  
+  <link rel="stylesheet" href="/css/style.min.css">
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TZW95SH05P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TZW95SH05P');
+</script>
+<body class="text-white">
+
+
+<div class="bg-neutral-900 flex justify-center border-b-2 border-b-primary">
+    
+    <header class='p-6 w-full lg:max-w-6xl flex justify-between sm:items-center items-start gap-6 tracking-wide'>
+        
+        <a href="./" class="flex align-center logo-hover">
+            <img class="w-14 pr-2 animate-float-cycle" src="./img/RocketOnly.png" alt="logo" />
+            <span class="logo-text text-gray-300 text-xl m-auto hover:text-quaternary transition-colors duration-300">&lt;ssebs&nbsp;/&gt;</span>
+        </a>
+
+        
+        <nav class="">
+            <button id="toggleOpen" class='sm:hidden flex ml-auto'>
+                <svg class="w-10 stroke-quinary cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+                    stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+                    <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                        <animate dur="0.2s" attributeName="d"
+                            values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                            begin="start.begin" />
+                        <animate dur="0.2s" attributeName="d"
+                            values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                            begin="reverse.begin" />
+                    </path>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                    </rect>
+                    <rect width="10" height="10" stroke="none">
+                        <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze"
+                            begin="click" />
+                        <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                    </rect>
+                </svg>
+            </button>
+            
+            <div id="collapseMenu" class="flex flex-col items-center hideit gap-6 text-lg">
+                <ul class="flex max-sm:flex-col gap-4 align-middle">
+                    
+
+                    
+                    
+                    <li>
+                        <a href="/projects/" title="My Projects"
+                            class="md:hover:text-quaternary text-gray-200 block transition-colors duration-300 nav-link-animated">
+                            <span>Projects
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/" title="About me"
+                            class="md:hover:text-quaternary text-gray-200 block transition-colors duration-300 nav-link-animated">
+                            <span>About
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/" title="My Blog"
+                            class="md:hover:text-quaternary text-gray-200 block transition-colors duration-300 nav-link-animated">
+                            <span>Blog
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/contact/" title="Contact me"
+                            class="md:hover:text-quaternary text-gray-200 block transition-colors duration-300 nav-link-animated">
+                            <span>Contact
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="flex justify-between gap-4 pt-4 sm:hidden">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#41afff"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#41afff"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#41afff" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#41afff"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#41afff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#41afff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#41afff"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<script>
+    var toggleOpen = document.getElementById('toggleOpen');
+    var collapseMenu = document.getElementById('collapseMenu');
+
+    function toggleElement(element) {
+        if (element.classList.contains("showit")) {
+            element.classList.remove("showit")
+            element.classList.add("hideit");
+        } else {
+            element.classList.remove("hideit")
+            element.classList.add("showit");
+        }
+    }
+
+    toggleOpen.addEventListener("click", () => {
+        toggleElement(collapseMenu);
+    })
+
+</script><div class="flex justify-center">
+    <div class="m-4">
+      <ul class="my-2 flex text-white-dim flex-wrap items-center"><li class="breadcrumb-item"><a href="/" class="breadcrumb-link">Home</a></li>
+        <div class="mx-1 breadcrumb-item breadcrumb-separator">&gt;</div>
+        <li class="breadcrumb-item"><a href="/blog/" class="breadcrumb-link">Blog
+        </a></li>
+        <div class="mx-1 breadcrumb-item breadcrumb-separator">&gt;</div>
+    <li class="breadcrumb-item"><a href="/blog/vibe-coding-1/" class="breadcrumb-link text-quaternary">Stop Vibe Coding, Keep Using Your Brain: How I Use AI Effectively</a></li>
+</ul>
+      
+      <div class="grid lg:grid-cols-4 gap-4 mb-6">
+        <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
+<div class="sidebar-animate flex gap-2 flex-col bg-neutral-900 p-3 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
+    <div class="mx-3">
+        <div class="sidebar-img-wrapper mx-auto lg:w-full max-w-[300px] my-4 border-2 border-primary">
+            <img class="w-full"
+                title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
+        </div>
+
+        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
+            <h4>Sebastian Safari</h4>
+            
+        </div>
+        <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
+
+        <div class="grid py-3"><a href="/about/"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary transition-colors duration-300">
+                Who am I?
+            </a><a href="/contact/"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary transition-colors duration-300">
+                Contact me!
+            </a><a href="/blog/"
+                class="rounded-md underline border-b-1 border-b-primary text-quaternary hover:text-quinary transition-colors duration-300">
+                Dive into my blog!
+            </a></div>
+
+        <div class="flex justify-center flex-wrap gap-3 py-3">
+            <a href="/tags/python/"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black transition-all duration-300 tag-hover">python</a>
+            <a href="/tags/golang/"
+                class="px-2 py-1 rounded-md border border-quinary text-quinary hover:bg-quinary hover:text-black transition-all duration-300 tag-hover">golang</a>
+            <a href="/tags/webdev/"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 tag-hover">Web
+                Dev</a>
+            <a href="/about/"
+                class="px-2 py-1 rounded-md border border-quaternary text-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 tag-hover">DevOps</a>
+            <a href="/projects/"
+                class="px-2 py-1 rounded-md border border-primary text-primary hover:bg-primary hover:text-black transition-all duration-300 tag-hover">
+                More projects
+            </a>
+        </div>
+        <ul class="flex justify-around gap-3 py-3">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="1.75rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+        </ul>
+    </div>
+</div></div>
+        
+        <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-[60rem] w-full overflow-x-hidden">
+<div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grud">
+    <h1 class="text-2xl">Stop Vibe Coding, Keep Using Your Brain: How I Use AI Effectively</h1>
+
+    <div class="flex flex-wrap gap-2 text-base h-fit">
+      
+      <a href="./tags/programming/"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        programming
+      </a>
+      <a href="./tags/gamedev/"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        gamedev
+      </a>
+      <a href="./tags/godot/"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        godot
+      </a>
+      <a href="./tags/python/"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        python
+      </a>
+      <a href="./tags/js/"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        js
+      </a>
+      <a href="./tags/genai/"
+        class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">
+        genai
+      </a>
+    </div></div>
+  <div class="post-content overflow-x-hidden break-words"><blockquote>
+<p>Author&rsquo;s note: Long read, but you&rsquo;ll walk away knowing exactly when to let AI help and when to do it yourself.</p></blockquote>
+<p><strong>tl;dr</strong> - Letting AI drive leads to code you can&rsquo;t debug. Here&rsquo;s how to use AI as a tool, not a replacement for thinking</p>
+<h1 id="first-off-what-is-ai">First off, what is AI?</h1>
+<blockquote>
+<p>Note - This section was written by Claude Code! The rest of the blog was me, though!</p></blockquote>
+<img class="custom-float-right ml-3" src="/img/vibe-coding-1.png" width="400" alt="An illustration of an AI chat prompt input field. The text &#39;do it all for me&#39; is crossed out in red. Below it, &#39;help me think through this&#39; has a green checkmark">
+
+<h3 id="super-brief-summary">Super Brief Summary</h3>
+<p>AI, specifically Large Language Models (LLMs), are basically autocomplete on steroids. They predict the next most likely <strong title="Basically a word">token</strong>  based on massive amounts of training data. They don&rsquo;t &ldquo;understand&rdquo; your code, they just pattern match really well. That&rsquo;s powerful, but it&rsquo;s not magic.</p>
+<h3 id="how-people-are-using-it--hype-around-replacing-swes">How people are using it / hype around replacing SWEs</h3>
+<p>There&rsquo;s a lot of noise right now about <strong>AI</strong> replacing software engineers entirely. CEOs love the idea of smaller teams shipping faster (see: cheaper). Tools like Cursor, Claude Code, and GitHub Copilot are getting better every month, and some people are shipping entire apps without writing a line of code themselves.</p>
+<p>But here&rsquo;s the thing: the people getting the most out of these tools are experienced developers who already know what good code looks like. The AI doesn&rsquo;t replace the skill, it amplifies it.</p>
+<h3 id="vibe-coding-vs-ai-assisted-coding">Vibe Coding vs AI Assisted Coding</h3>
+<blockquote>
+<p>The main topic of this post</p></blockquote>
+<p><strong>Vibe coding</strong> is when you let the AI drive. You describe what you want, hit enter, and hope for the best. You&rsquo;re not reading the code, not understanding the architecture, just <em>vibing</em>.</p>
+<p><strong>AI assisted coding</strong> is when <strong>you</strong> drive, and the AI rides shotgun. You plan the approach, understand the problem, and use AI to speed up the boring parts (e.g. boilerplate, syntax you&rsquo;d have to Google, etc.)</p>
+<p>Most of the hype is around vibe coding, but I think the more useful thing is AI assisted coding.</p>
+<div style="clear:both;"></div>
+<h1 id="trying-out-vibe-coding---creating-a-vscode-extension">Trying out &ldquo;vibe coding&rdquo; - Creating a VSCode extension</h1>
+<blockquote>
+<p>This is what does <strong>not</strong> seem to work in my experience</p></blockquote>
+<h3 id="what-i-wanted">What I wanted</h3>
+<p>During the development of my motorcycle stunt game, <a href="/projects/dank-nooner">Dank Nooner</a>, I needed some way to track my todo&rsquo;s &amp; milestones. I didn&rsquo;t want to go full Kanban in a separate app, but needed more than a simple Markdown file.</p>
+<p>I had been using a basic <code>TODO.md</code> file like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span>## In Progress
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">- [ ]</span> Create player controller
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span>  <span style="color:#c678dd">- [x]</span> Create scene
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span>  <span style="color:#c678dd">- [x]</span> Add character
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span>## Backlog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span><span style="color:#c678dd">- [ ]</span> Add sounds
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">7</span><span><span style="color:#c678dd">- [ ]</span> Save system
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">8</span><span>## Done
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">9</span><span><span style="color:#c678dd">- [x]</span> Create level
+</span></span></code></pre></div><p>But, I wanted something a bit more complex:</p>
+<ul>
+<li>Drag-n-drop support to move the &ldquo;tasks&rdquo; around</li>
+<li>When I check something off, it should move to the &ldquo;done&rdquo; section</li>
+<li>Slightly better UI than raw Markdown
+<ul>
+<li>(although I&rsquo;ve been loving the <a href="https://marketplace.visualstudio.com/items?itemName=CodeSmith.markdown-inline-editor-vscode" target="_blank">Markdown Inline Editor extension</a>!)</li>
+</ul>
+</li>
+</ul>
+<p>Unable to find a decent existing solution, I decided to give vibe coding a try.</p>
+<h3 id="what-i-did">What I did</h3>
+<p>I created a brand new VSCode Extension following Microsoft&rsquo;s docs, and got to work.</p>
+<p>By got to work, I mean that I wrote a <code>README.md</code> explaining what I wanted the extension to do. I also made a basic <code>TODO.md</code> file with the format that I was using in my other project.</p>
+<p>In about 2-3 days of using Claude Code&rsquo;s Pro plan (damn token limitations slowing me down!), I got a POC going. During this &ldquo;development&rdquo;, I simply told it what I wanted to add, referenced a <code>CLAUDE.md</code> file, and let it rip. I didn&rsquo;t even bother to look at the code, it was a vibe.</p>
+<p>It was able to get things about ~80% of the way there, but actually using the extension gave me more things to add to my <code>TODO.md</code>.</p>
+<p>Here&rsquo;s a screenshot of the working extension:</p>
+<img class="my-6" src="/img/todo-sidebar-md.png" width="100%" alt="screenshot of the extension">
+
+<h3 id="what-i-found-to-be-the-problem">What I found to be the problem</h3>
+<p>That last 20% was hard, as it always is when writing an app. Usually things like polish, fixing bugs, and performance issues take up more time than you think.</p>
+<p>In my case, I had these issues:</p>
+<ul>
+<li>Freezing after a long time</li>
+<li>Drag-n-drop stops working when a checkbox has nested items</li>
+<li>Corrupt <code>.vscode/settings.json</code> when there&rsquo;s already a setting saved</li>
+<li>General lag</li>
+</ul>
+<p>Since these bugs were annoying me, I -<em>err, Claude</em>- got to debugging them. I copy/pasted these issues into a fresh Claude code window and told it to fix the bug.</p>
+<p>Many tokens later, it looked like Claude fixed the bug! However, a new bug would pop up. This kept happening, and since I had no clue how the code worked under the hood, I was at the mercy of Claude to fix it.</p>
+<p>I decided to venture into this mysterious codebase, and what I found was <em>disgusting</em> (at least to me):</p>
+<ul>
+<li>Duplicate logic</li>
+<li>Unused variables</li>
+<li>Anti-patterns</li>
+<li>Worst of all&hellip; <code>snake_case</code> and <code>camelCase</code> in the same file!</li>
+</ul>
+<p>The next day (when I got more tokens), I decided enough was enough. I finally started using my brain again.</p>
+<p>I made a list of architectural issues &amp; told Claude to refactor them. Using the <a href="https://github.com/obra/superpowers" target="_blank">superpowers</a> plugin, I made a plan &amp; had Claude try to implement it all at once.</p>
+<p>Sadly when it came down to it, Claude tried its best but couldn&rsquo;t do the whole refactor at once.</p>
+<p>I ended up splitting the plan into bite sized chunks (fix duplicate logic, move web view to a separate file, etc.), and started over.</p>
+<p>Eventually most of the bugs were fixed, but not having context on how the code works definitely made it harder to keep things tidy to say the least.</p>
+<h3 id="whats-next-for-the-extension">What&rsquo;s next for the extension</h3>
+<p>I&rsquo;m still using it on Dank Nooner, so as I get annoyed I&rsquo;ll keep vibe coding to add features &amp; fix bugs. I&rsquo;ll be sure to have a smaller scope for each context window / session.</p>
+<p>I don&rsquo;t really care enough about this extension to find the root cause of the lag, so it is what it is for now.</p>
+<h1 id="trying-out-ai-assisted-coding---dank-nooner">Trying out AI assisted coding - <strong>Dank Nooner</strong></h1>
+<blockquote>
+<p>This is what <strong>does</strong> work in my experience!</p></blockquote>
+<p>With <a href="/projects/dank-nooner">Dank Nooner</a>, I took a different approach&hellip;</p>
+<h3 id="using-ai-as-a-tool-not-as-a-replacement-for-thinking">Using AI as a tool, not as a replacement for thinking</h3>
+<h3 id="the-easiest-use-case---boilerplate-code">The Easiest Use-Case - Boilerplate code</h3>
+<img class="custom-float-right ml-3" src="/img/dank-nooner-settings-menu.png" width="600" alt="screenshot dank nooner showing settings menu">
+
+<p>The first useful thing I found is to use AI to generate boilerplate code.</p>
+<p>I don&rsquo;t mean boilerplate in the literal sense, since snippets already take care of that.</p>
+<p>Instead, I mean a design pattern that&rsquo;s specific to your project.</p>
+<p>Let&rsquo;s say&hellip; I created a Menu System for my game that uses State Machines 👀.</p>
+<p>I created the system + a few menus manually:</p>
+<ul>
+<li>Main menu</li>
+<li>Lobby menu</li>
+<li>Play menu</li>
+</ul>
+<p>Each menu has a set of files (scene, script, godot engine variables, UI elements, button click handlers, etc.)</p>
+<p>With that, I have a good amount of example code for Claude to reference.</p>
+<div style="clear:both;"></div>
+<p>I was able to get Claude to generate the entire settings menu, as well as a customization menu! I just needed to provide examples of the pattern.</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#e06c75">@CLAUDE</span>.md <span style="color:#e06c75">@state_machine</span>.gd <span style="color:#e06c75">@menu_manager</span>.gd <span style="color:#e06c75">@play_menu</span>.gd <span style="color:#e06c75">@play_menu</span>.tscn - Create a settings menu using the same architecture as the files provided. create the following UI elements:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">-</span> title
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#c678dd">-</span> back button
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">-</span> username menu (using a Label + LineEdit)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span><span style="color:#c678dd">-</span> save button
+</span></span></code></pre></div><p>This is great! Once I figure out how I want something to be implemented, I can use Claude to speed up my coding.</p>
+<h3 id="another-use-case---planning-out-features--thinking-it-through">Another Use-Case - Planning out features &amp; thinking it through</h3>
+<img class="custom-float-right ml-3" src="/img/dank-nooner-bike-skin.png" width="600" alt="screenshot from godot editor showing the generated skeleton">
+
+<p>Another good use case for AI is planning: both as someone (thing?) to bounce ideas off of, and someone to help think about how this change will work with your existing code.</p>
+<blockquote>
+<p>Note that I don&rsquo;t mean &ldquo;plan mode&rdquo; in Claude, I mean planning out how you&rsquo;re going to solve something.</p></blockquote>
+<p>For instance, I&rsquo;m adding different motorcycles with &ldquo;skins&rdquo; (different colors) that will be unlocked. To achieve this, I need to have some type of skin / color system.</p>
+<p>I have a general idea on how I&rsquo;d implement it, but I wanted to think it through a bit more.</p>
+<div style="clear:both;"></div>
+<p>So, I came up with a basic plan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">1</span><span><span style="color:#c678dd">-</span> I have multiple types of 3d models, some that use a single png texture, and others that have many materials &amp; meshes.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">2</span><span><span style="color:#c678dd">-</span> I want to be able to change certain colors dynamically, and save them as a file using godot resources
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">3</span><span><span style="color:#c678dd">-</span> I&#39;ve created a test scene <span style="color:#e06c75">@sport_bike</span>.tscn with the model
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">4</span><span><span style="color:#c678dd">-</span> I&#39;m thinking of adding a skin script that I can attach to a Node3D, which has some options to change colors.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">5</span><span><span style="color:#c678dd">-</span> In the script itself, I need to check if it&#39;s a textured material (shader) or a standard material, and find a way to change the color for each.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">6</span><span><span style="color:#c678dd">-</span> &lt;<span style="color:#e06c75">more</span> <span style="color:#e06c75">details</span> <span style="color:#e06c75">that</span> <span style="color:#e06c75">I</span>&#39;<span style="color:#e06c75">m</span> <span style="color:#e06c75">leaving</span> <span style="color:#e06c75">out</span> <span style="color:#e06c75">for</span> <span style="color:#e06c75">brevity</span>&gt;
+</span></span></code></pre></div><p>Then asked Claude to help me think it through:</p>
+<p><code>@CLAUDE.md - I have this plan &lt;paste&gt; to implement skins in my game, this is one solution, provide alternatives I could implement &amp; how do they compare. Share how each will they fit in my existing codebase</code></p>
+<p>It came back with a few alternatives, as well as pros &amp; cons of how it will fit with my existing code. After a bit of back &amp; forth, I had a good sense of what I wanted.</p>
+<p>Eventually though, it started suggesting code. I had to tell it &ldquo;stop generating code, we&rsquo;re still planning the system. Instead, save this plan to @skin_plan.md&rdquo;.</p>
+<p>It saved the plan to a Markdown file, I re-read it, and tweaked it until I was happy.</p>
+<p>From there, I could&rsquo;ve had Claude implement the plan, but I instead chose to do it myself. An hour or so later, and I can now say that I&rsquo;ve added skins to my game! So, I&rsquo;d call it a success. (And I know how it works, so I can tweak it later if needed.)</p>
+<h3 id="one-more-super-useful-use-case---implement-things-id-usually-have-to-google">One more (super useful) Use-Case - Implement things I&rsquo;d usually have to google</h3>
+<p>One really <strong>crucial</strong> time saver was to delegate <strong>some</strong> thinking to the AI. Since I knew the architecture, and what I was trying to achieve, I could be specific enough to provide the data the AI needs to solve the problem.</p>
+<p>I had 2 of these types of problems:</p>
+<h4 id="1-set-height-of-a-3d-mesh-dynamically-so-i-dont-have-to-manually-scale-it">1. Set height of a 3D Mesh dynamically so I don&rsquo;t have to manually scale it</h4>
+<p>This is something I knew that I should use bounding boxes (AABB) for, but wasn&rsquo;t sure how I&rsquo;d implement.</p>
+<p>I told Claude:</p>
+<p><code>@CLAUDE.md @filepath_of_script.gd - scale mesh_skin to HEIGHT in a new function. Use AABB bounding boxes to scale Meshinstance3Ds</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">_ready</span>():
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>    <span style="color:#61afef;font-weight:bold">_spawn_mesh</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">_spawn_mesh</span>():
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>    <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#7f848e"># code hidden for brevity</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span>	<span style="color:#e06c75">mesh_node</span><span style="color:#56b6c2">.</span><span style="color:#61afef;font-weight:bold">add_child</span>(<span style="color:#e06c75">mesh_skin</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#61afef;font-weight:bold">_scale_to_height</span>(<span style="color:#e06c75">mesh_skin</span>, <span style="color:#e06c75">HEIGHT</span>) <span style="color:#7f848e"># new func</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span><span style="color:#7f848e">## AI wrote this</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">_scale_to_height</span>(<span style="color:#e06c75">node</span>: <span style="color:#e5c07b">Node3D</span>, <span style="color:#e06c75">target_height</span>: <span style="color:#e5c07b">float</span>) <span style="color:#56b6c2">-&gt;</span> <span style="color:#e5c07b">void</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span>	<span style="color:#c678dd">var</span> <span style="color:#e06c75">aabb</span> <span style="color:#56b6c2">:=</span> <span style="color:#61afef;font-weight:bold">_get_combined_aabb</span>(<span style="color:#e06c75">node</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">14</span><span>	<span style="color:#c678dd">if</span> <span style="color:#e06c75">aabb</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">size</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">y</span> <span style="color:#56b6c2">&lt;=</span> <span style="color:#d19a66">0</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">15</span><span>		<span style="color:#c678dd">return</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">16</span><span>	<span style="color:#c678dd">var</span> <span style="color:#e06c75">scale_factor</span> <span style="color:#56b6c2">:=</span> <span style="color:#e06c75">target_height</span> <span style="color:#56b6c2">/</span> <span style="color:#e06c75">aabb</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">size</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">y</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">17</span><span>	<span style="color:#e06c75">node</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">scale</span> <span style="color:#56b6c2">*=</span> <span style="color:#e06c75">scale_factor</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">18</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">19</span><span><span style="color:#7f848e">## AI wrote this</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">20</span><span><span style="color:#c678dd">func</span> <span style="color:#61afef;font-weight:bold">_get_combined_aabb</span>(<span style="color:#e06c75">node</span>: <span style="color:#e5c07b">Node3D</span>) <span style="color:#56b6c2">-&gt;</span> <span style="color:#e5c07b">AABB</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">21</span><span>	<span style="color:#c678dd">var</span> <span style="color:#e06c75">combined</span> <span style="color:#56b6c2">:=</span> <span style="color:#e5c07b">AABB</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">22</span><span>	<span style="color:#c678dd">var</span> <span style="color:#e06c75">first</span> <span style="color:#56b6c2">:=</span> <span style="color:#e5c07b">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">23</span><span>	<span style="color:#c678dd">for</span> <span style="color:#e06c75">child</span> <span style="color:#56b6c2">in</span> <span style="color:#e06c75">node</span><span style="color:#56b6c2">.</span><span style="color:#61afef;font-weight:bold">get_children</span>():
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">24</span><span>		<span style="color:#c678dd">if</span> <span style="color:#e06c75">child</span> <span style="color:#56b6c2">is</span> <span style="color:#e5c07b">MeshInstance3D</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">25</span><span>			<span style="color:#c678dd">var</span> <span style="color:#e06c75">mesh_aabb</span>: <span style="color:#e5c07b">AABB</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">child</span><span style="color:#56b6c2">.</span><span style="color:#61afef;font-weight:bold">get_aabb</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">26</span><span>			<span style="color:#c678dd">var</span> <span style="color:#e06c75">transformed</span>: <span style="color:#e5c07b">AABB</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">child</span><span style="color:#56b6c2">.</span><span style="color:#e06c75">transform</span> <span style="color:#56b6c2">*</span> <span style="color:#e06c75">mesh_aabb</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">27</span><span>			<span style="color:#c678dd">if</span> <span style="color:#e06c75">first</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">28</span><span>				<span style="color:#e06c75">combined</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">transformed</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">29</span><span>				<span style="color:#e06c75">first</span> <span style="color:#56b6c2">=</span> <span style="color:#e5c07b">false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">30</span><span>			<span style="color:#c678dd">else</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">31</span><span>				<span style="color:#e06c75">combined</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">combined</span><span style="color:#56b6c2">.</span><span style="color:#61afef;font-weight:bold">merge</span>(<span style="color:#e06c75">transformed</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">32</span><span>		<span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#56b6c2">.</span> <span style="color:#7f848e"># more code hidden for brevity</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">33</span><span>	<span style="color:#c678dd">return</span> <span style="color:#e06c75">combined</span>
+</span></span></code></pre></div><p>This would have taken me at least an hour or two to code myself, since I&rsquo;m not familiar with the API. This also supports multiple MeshInstance3D&rsquo;s in 1 scene, which is good.</p>
+<h4 id="2-skeleton-generation-for-ragdoll-physics-on-multiple-character-skins">2. Skeleton generation for ragdoll physics on multiple character skins</h4>
+<p>Without going too much into the code (see <a href="https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd" target="_blank">this file</a> if you&rsquo;re interested), I wanted to create a ragdoll effect when you crash on your bike for my character skins.</p>
+<p>I have multiple characters, each with a &ldquo;Mesh&rdquo; (what the character looks like) and a &ldquo;Skeleton&rdquo; (what animations &amp; ragdoll use) that needs to be created.</p>
+<p>The godot docs say to create a skeleton simulation in the UI, then tweak a bunch of values &amp; save it into the scene. This is fine for a single character, but since I&rsquo;m going to have a bunch, I needed to automate this.</p>
+<p>To achieve this, I:</p>
+<ul>
+<li>Ran the manual steps once (following the docs)
+<ul>
+<li>Clicked generate in Godot&rsquo;s UI</li>
+<li>Performed some bone cleanup (totally normal, I swear)</li>
+<li>Added constrain values for each bone I cared about. (e.g. not each finger, just the arms/legs/head)</li>
+<li>
+<blockquote>
+<p>A constraint basically tells a joint to limit it&rsquo;s rotation, say to stop a leg from bending forward or through the body</p></blockquote>
+</li>
+</ul>
+</li>
+<li>Saved each of these contraint values to a Dictionary / map for Claude to use later</li>
+<li>Wrote up a prompt for Claude</li>
+</ul>
+<p>The prompt:</p>
+<p><code>@CLAUDE.md @filepath_of_script.gd - Using ragdoll_bone_constraints_base as a map, create a function to generate bones for skel_root. Only include bones listed in the map, and add constraints following the values.</code></p>
+<p>The reference code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript" data-lang="gdscript"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 1</span><span><span style="color:#7f848e">## Needs to be generated in code, used in ragdoll simulation</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 2</span><span><span style="color:#c678dd">var</span> <span style="color:#e06c75">skel_root</span>: <span style="color:#e06c75">PhysicalBoneSimulator3D</span> <span style="color:#56b6c2">=</span> <span style="color:#e06c75">PhysicalBoneSimulator3D</span><span style="color:#56b6c2">.</span><span style="color:#61afef;font-weight:bold">new</span>()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 4</span><span><span style="color:#c678dd">var</span> <span style="color:#e06c75">ragdoll_bone_constraints_base</span> <span style="color:#56b6c2">=</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 5</span><span>	<span style="color:#98c379">&#34;Spine&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.5</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.4</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.6</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">1</span>, <span style="color:#d19a66">0.4</span>, <span style="color:#d19a66">0.6</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 6</span><span>	<span style="color:#98c379">&#34;Head&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.6</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.6</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.3</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">0.35</span>, <span style="color:#d19a66">0.6</span>, <span style="color:#d19a66">0.3</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 7</span><span>	<span style="color:#98c379">&#34;LeftUpperArm&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.3</span>, <span style="color:#d19a66">1</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.8</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">1.0</span>, <span style="color:#d19a66">1</span>, <span style="color:#d19a66">0.8</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 8</span><span>	<span style="color:#98c379">&#34;LeftLowerArm&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.1</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">2</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">2</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">2.5</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.7</span>, <span style="color:#d19a66">2</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f"> 9</span><span>	<span style="color:#98c379">&#34;LeftHand&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.3</span>, <span style="color:#d19a66">0</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.3</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">0.5</span>, <span style="color:#d19a66">3</span>, <span style="color:#d19a66">0.3</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">10</span><span>	<span style="color:#98c379">&#34;LeftUpperLeg&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.7</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">0.8</span>, <span style="color:#d19a66">1</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">0.7</span>, <span style="color:#d19a66">1.2</span>, <span style="color:#d19a66">1</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">11</span><span>	<span style="color:#98c379">&#34;LeftLowerLeg&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;HINGE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#d19a66">0</span>, <span style="color:#d19a66">1</span>, <span style="color:#d19a66">0</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">0</span>, <span style="color:#d19a66">1</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">1.5</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">12</span><span>	<span style="color:#98c379">&#34;LeftFoot&#34;</span>: {<span style="color:#98c379">&#34;type&#34;</span>: <span style="color:#98c379">&#34;CONE&#34;</span>, <span style="color:#98c379">&#34;min_bounds&#34;</span>: [<span style="color:#56b6c2">-</span><span style="color:#d19a66">0.4</span>, <span style="color:#d19a66">1.5</span>, <span style="color:#56b6c2">-</span><span style="color:#d19a66">1.4</span>], <span style="color:#98c379">&#34;max_bounds&#34;</span>: [<span style="color:#d19a66">0.4</span>, <span style="color:#d19a66">0.3</span>, <span style="color:#d19a66">0</span>]},
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#55595f">13</span><span>}
+</span></span></code></pre></div><p>After a bit of tweaking, back &amp; forth, and some testing, I had a working solution!</p>
+<blockquote>
+<p>And in a fraction of the time it would have taken me alone!</p></blockquote>
+<blockquote>
+<p>Go see the <a href="https://github.com/ssebs/DankNooner/blob/main/v2/entities/player/characters/scripts/ragdoll_controller.gd" target="_blank">src code</a> to see what it generated!</p></blockquote>
+<p>The output:</p>
+<img class="my-6" src="/img/dank-nooner-skeleton-gen.png" width="100%" alt="screenshot from godot editor showing the generated skeleton">
+
+<h1 id="lessons-learned--summary">Lessons Learned &amp; Summary</h1>
+<blockquote>
+<p>In a time where the world wants us to rely on AI, find what works for you.</p></blockquote>
+<h3 id="dont-give-up-planning-on-your-own-think-the-problem-through">Don&rsquo;t give up planning on your own, think the problem through</h3>
+<p>The VSCode extension was a good example of what <em>not</em> to do. I let Claude drive, and ended up with a codebase I didn&rsquo;t understand. Debugging was rough since I didn&rsquo;t know how the code worked under the hood.</p>
+<p>With Dank Nooner, I already knew what I wanted before asking for help. That made all the difference.</p>
+<p>My advice? Before you open the AI chat, ask yourself: &ldquo;Do I actually understand what I&rsquo;m trying to build?&rdquo; If not, sketch it out first. An excalidraw diagram, a bullet list, whatever works.</p>
+<h3 id="plan-out-your-code">Plan out your code</h3>
+<p>For the skin system, I didn&rsquo;t just tell Claude &ldquo;make skins work.&rdquo; I wrote out my constraints, the types of materials I was dealing with, and what I thought the solution might look like.</p>
+<p>When Claude suggested alternatives, I could actually evaluate them. I knew enough to say &ldquo;no, that won&rsquo;t work because&hellip;&rdquo; instead of just accepting whatever it gave me.</p>
+<p>Write your plan in a markdown file. Share it with the AI. Have it poke holes in it. But <em>you</em> should make the final call.</p>
+<h3 id="use-ai-to-boost-productivity-not-to-replace-thinking">Use AI to boost productivity, not to replace thinking</h3>
+<p>The skeleton generation and AABB scaling examples are the sweet spot. I knew <em>what</em> I needed, I just didn&rsquo;t know the exact API calls. That&rsquo;s perfect AI territory. It&rsquo;s like having a really fast Stack Overflow that knows your codebase.</p>
+<p>But here&rsquo;s the line I&rsquo;ve drawn for myself:</p>
+<ul>
+<li><strong>AI should handle</strong>: Boilerplate, syntax lookup, implementing well-defined patterns, refactoring with clear instructions</li>
+<li><strong>I should handle</strong>: Architecture decisions, debugging root causes, understanding <em>why</em> something works</li>
+</ul>
+<p>Once you stop understanding your own code, you&rsquo;re gonna have a bad time. No amount of &ldquo;just ask Claude to fix it&rdquo; will save you when you&rsquo;re on a deadline and the AI keeps hallucinating non-existent APIs.</p>
+<h3 id="final-thoughts">Final thoughts</h3>
+<p>AI isn&rsquo;t going away, so you may as well get good at it. Just don&rsquo;t let it do your thinking for you.</p>
+<p><strong>Thanks for reading!</strong></p>
+</div>
+  <script>
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      imgElem.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        imgElem.classList.add("bigImg");
+      });
+    });
+  
+    
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".post-content img").forEach((imgElem) => {
+        if (!imgElem.contains(event.target)) {
+          imgElem.classList.remove("bigImg");
+        }
+      });
+    });
+  </script>
+  <div id="comments_section" style="display: none;">
+    <p class="text-lg mb-2">Leave a comment!</p>
+    <div id="cusdis_thread" 
+    class="min-h-72 overflow-visible"
+    data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
+      data-page-id="1ee058ff94d177f61bcd4095eed7e6c2" data-page-url="http://localhost:1313/blog/vibe-coding-1/" data-page-title="Stop Vibe Coding, Keep Using Your Brain: How I Use AI Effectively"
+      data-theme="dark">
+    </div>
+    <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
+  </div>
+
+  <script>
+    fetch('https://cusdis.ssebs.com/js/cusdis.es.js', { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          
+          document.getElementById('comments_section').style.display = 'block';
+        }
+      })
+  </script>
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div><footer id="site-footer" class="bg-secondary min-h-64">
+    <div class="grid justify-center p-6">
+        <h5 class="footer-title text-3xl text-white font-thin text-center p-8">Thanks for stopping by!</h5>
+        <div class="footer-divider w-full max-w-2xl mx-auto mb-6"></div>
+        <div
+            class="flex lg:flex-row lg:items-start lg:max-w-6xl flex-col justify-between items-start w-full lg:mt-6 lg:p-6 mt-4 p-4 gap-12 text-lg">
+            <div class="footer-section flex justify-between items-end gap-6 min-w-80">
+                <img width="128px" src="./img/RocketOnly.png" alt="logo" class="logo-hover footer-logo" />
+                <div class="flex flex-col items-start gap-2 min-w-48">
+                    <a href="./" class="font-medium hover:text-quinary transition-colors duration-300">ssebs | Sebastian Safari</a>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="/projects/" title="My Projects"
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">Check out my projects.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about/" title="About me"
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">Who am I?
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog/" title="My Blog"
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">See what I've been up to in my blog.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/contact/" title="Contact me"
+                                class="footer-link text-quinary hover:text-quaternary transition-colors duration-300">Let's Connect.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-section grid gap-2 max-w-md text-base font-normal">
+                <h5 class="text-xl font-medium">Why <span class="text-quaternary">ssebs</span>?</h5>
+                <div class="footer-story space-y-2 text-gray-300">
+                    <p>
+                        Back when I needed my first username, I wanted something using my initials.
+                    </p>
+                    <p>
+                        "Seb" was taken. "SebS" was taken too. So I got creative and wrapped it with an extra "S" from my last name.
+                    </p>
+                    <p class="text-quaternary font-medium">
+                        ssebs = S + Seb + S
+                    </p>
+                    <p class="text-sm text-gray-400 italic">Riveting origin story, right?</p>
+                </div>
+            </div>
+
+            <div class="footer-section min-w-32 flex flex-col gap-3">
+                <div class="text-xl font-medium">Let's Connect</div>
+                <ul class="flex gap-3">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <a href="https://linkedin.com/in/ssebs/" title="Linkedin" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#33ffe7"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#33ffe7"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/ssebs" title="Github" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="#33ffe7" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#33ffe7"></path> <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/ssebs" title="Instagram" target="_blank" class="social-icon-hover inline-block">
+            <span><svg width="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#33ffe7"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#33ffe7"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#33ffe7"></path> </g></svg></span>
+        </a>
+    </li>
+                </ul>
+                <p class="text-sm text-gray-400 mt-2">Always happy to chat!</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright text-center bg-neutral-700 p-6">
+        <span id="copyright-year">&copy;2024 - %lt;this should be replaced by js%gt;</span>
+    </div>
+</footer>
+
+<script>
+    
+    const copyElement = document.getElementById("copyright-year");
+    const current = new Date().getFullYear();
+    const fromYear =  2015 ;
+
+    const authorHTML = `<a 
+                            href="https:\/\/linkedin.com\/in\/ssebs\/" 
+                            class="text-quaternary hover:text-quinary transition-colors duration-300" target="_blank" 
+                            >
+                                Sebastian Safari</a>`;
+
+    if (current === fromYear) {
+        copyElement.innerHTML = `&copy;${current} | ${authorHTML}`;
+    } else {
+        copyElement.innerHTML = `&copy;${fromYear} - ${current} | ${authorHTML}`;
+    }
+
+    
+    const footer = document.getElementById('site-footer');
+    const footerAnimatedElements = footer.querySelectorAll('.footer-title, .footer-divider, .footer-section, .footer-copyright, .footer-logo');
+
+    const footerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                footerAnimatedElements.forEach(el => el.classList.add('animate'));
+                footerObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    footerObserver.observe(footer);
+
+    
+    const cards = document.querySelectorAll('.card-reveal');
+
+    const cardRevealObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+        });
+    },
+    {
+        threshold: 0.15,
+        rootMargin: '0px 0px -10% 0px'
+    }
+    );
+
+    cards.forEach(card => cardRevealObserver.observe(card));
+
+</script></body>
+
+</html>
