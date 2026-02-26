@@ -8,7 +8,9 @@ weight: 25
 tags: [programming, gamedev, godot, python, js, genai]
 ---
 
-tl:dr - **REPLACE_ME**
+> Author's note: Long read, but you'll walk away knowing exactly when to let AI help and when to do it yourself.
+
+**tl:dr** - Letting AI drive leads to code you can't debug. Here's how to use AI as a tool, not a replacement for thinking
 
 # First off, what is AI?
 
