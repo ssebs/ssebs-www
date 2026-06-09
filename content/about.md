@@ -11,21 +11,21 @@ date: "2024-05-31T15:43:45-07:00"
 
 My name is **Sebastian Safari**, I call myself a "professional fixer, hobbyist figure-outer". 
 
-I work as a Site Reliability Engineer and like to make side projects. These projects range from making video games, 3D printing, and programming things for myself or my family. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
+I'm a full-stack software engineer with 7+ years spanning DevOps and production software, and I love building side projects. These range from making video games, 3D printing, and programming things for myself or my family. I also have a few other hobbies like playing guitar, working on my car, and spending time with my Wife and our dog.
 
 <!--more-->
 
-> Want to see what kind of work I've done? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
+> Want to see more? Download my [resume!](/media/Sebastian-Safari-Resume.pdf)
 
 ## My background
-I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I make a couple of video games in Java. Since then, my passion for understanding and working with computers has led me to evolve into a Site Reliability Engineer.
+I've been fascinated by computers from a young age, always eager to unravel their intricacies. My journey into programming began in high school, where I made a couple of video games in Java. Since then, my passion for understanding and working with computers has grown into a career as a full-stack software engineer.
 
-I've progressed through various roles, starting as a Registrar at PARC, and advancing to a SysAdmin, ultimately reaching the position of a Systems and Software Engineer. This career trajectory allowed me to amass a diverse skill set and deepen my expertise in IT systems and software development.
+I've progressed through various roles, starting as a SysAdmin at PARC, advancing to a Systems and Software Engineer, and now building production software at Meta. This trajectory allowed me to amass a diverse skill set spanning IT systems, infrastructure, and software development.
 
 ## Where I am now
-In my current role as a Site Reliability Engineer at Meta, I've led multiple 3rd party app onboardings, crafted disaster recovery solutions, and standardized processes for efficiency. 
+At Meta, I help build a single-pane-of-glass platform that centralizes software license management across many backend servers. I work on the whole stack, from the database and GraphQL schema down to the React UI.
 
-Recently, I've been working as a full-stack developer for an internal tool. Ranging from React, Hack (php), and Python, I've been having fun! I can't say too much about the specifics, but I've been adding impactful features & trying to improve the reliability of the app.
+A few things I'm proud of: I designed a version-history and one-click restore feature that cut config recovery from ~10 minutes to under 1, led the React redesign of the portal's main home view from proof of concept to MVP, and extended the platform's schema to unify licenses from several different managers. I still get to use my SRE roots too, diagnosing tricky production bugs and hardening our Python agent with end-to-end tests. It's been a lot of fun!
 
 ### Some of my values:
 - I always try to find efficient ways to solve problems.

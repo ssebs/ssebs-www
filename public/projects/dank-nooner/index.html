@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <base href="/" /><title> Dank Nooner (v1) </title>
+  <base href="/" /><title> Dank Nooner </title>
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   <meta name="description" content="My name is Sebastian Safari, I call myself a &#34;professional fixer, hobbyist figure-outer&#34;. Basically, I work as a Site Reliability Engineer and like to program various projects.">
 
@@ -167,7 +167,7 @@
         <li class="breadcrumb-item"><a href="/projects/" class="breadcrumb-link">Projects
         </a></li>
         <div class="mx-1 breadcrumb-item breadcrumb-separator">&gt;</div>
-    <li class="breadcrumb-item"><a href="/projects/dank-nooner/" class="breadcrumb-link text-quaternary">Dank Nooner (v1)</a></li>
+    <li class="breadcrumb-item"><a href="/projects/dank-nooner/" class="breadcrumb-link text-quaternary">Dank Nooner</a></li>
 </ul>
       
       <div class="grid lg:grid-cols-4 gap-4 mb-6">
@@ -179,9 +179,10 @@
                 title="A photo of my at my wedding." src="./img/me_wedding.jpg" />
         </div>
 
-        <div class="border-b border-neutral-600 flex justify-between mb-2 font-semibold">
-            <h4>Sebastian Safari</h4>
+        <div class="border-b border-neutral-600 flex flex-col gap-0 justify-center align-middle pb-2 mb-2">
+            <h4 class="text-lg font-semibold mb-0">Sebastian Safari</h4>
             
+            <p class="text-sm">Full-Stack Software Engineer</p>
         </div>
         <p class="text-white-dim">Professional fixer, hobbyist figure-outer.</p>
 
@@ -249,7 +250,7 @@
         <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-[60rem] w-full overflow-x-hidden">
 <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
   <div class="grud">
-    <h1 class="text-2xl">Dank Nooner (v1)</h1>
+    <h1 class="text-2xl">Dank Nooner</h1>
 
     <div class="flex flex-wrap gap-2 text-base h-fit">
       
@@ -270,47 +271,61 @@
         godot
       </a>
     </div></div>
-  <div class="post-content overflow-x-hidden break-words"><img class="custom-float-right ml-3" src="./img/projects/dank-nooner/NewIcon.png" width="300px" alt="Game Icon">
+  <div class="post-content overflow-x-hidden break-words"><img class="custom-float-right ml-3" src="./img/dank-nooner-v2/dank-nooner-v66.webp" width="400px" alt="Gameplay clip from Dank Nooner V2" loading="lazy">
 
-<p><a href="https://github.com/ssebs/DankNooner" target="_blank">Github Repo</a></p>
-<p><a href="/projects/dank-nooner/#v1---play-now">Play v1 now!</a></p>
+<p><a href="https://github.com/ssebs/DankNooner" target="_blank">Github Repo</a> | <a href="https://ssebs.github.io/DankNooner" target="_blank">Play in your browser</a></p>
 <h2 id="what-is-it">What is it?</h2>
-<p><strong>Dank Nooner V1</strong> is a wheelie challenge game where you try to hold a wheelie for as long as you can &amp; earn points to upgrade your bike. <a href="/projects/dank-nooner/#v2---coming-soon">V2 is coming soon</a> with a full open-world experience!</p>
+<p><strong>Dank Nooner</strong> is an open-world motorcycle game about doing every stupid thing you&rsquo;d never try in real life. Pull wheelies, stoppies, and backflips, weave through traffic, and race or free-roam online with friends. It mixes realistic bike controls with arcade trick mechanics and a high skill ceiling.</p>
+<p>This is the V2 rewrite, a full open-world game built in Godot. It grew out of <a href="/projects/dank-nooner/#v1---the-original">V1</a>, a simple wheelie challenge that started it all.</p>
+<h2 id="play-it-now">Play it now!</h2>
+<blockquote>
+<p>Best played with a controller! But Keyboard + Mouse works too.</p></blockquote>
+<ul>
+<li><strong>In-Browser</strong>: <a href="https://ssebs.github.io/DankNooner/" target="_blank">ssebs.github.io/DankNooner</a></li>
+<li><strong>Desktop builds (Win/Mac/Linux)</strong>: <a href="https://github.com/ssebs/DankNooner/releases/latest" target="_blank">latest release</a></li>
+<li><strong>v1 POC (wheelie balance)</strong>: <a href="/projects/dank-nooner/#v1---the-original">play it below</a></li>
+</ul>
+<h3 id="whats-working-now">What&rsquo;s working now:</h3>
+<ul>
+<li><strong>Multiplayer</strong>: Free-roam and online racing, with friends joining via invite codes</li>
+<li><strong>Trick system</strong>: Wheelies, stoppies, backflips, frontflips, 360s, and drifts, scored with duration and combo bonuses</li>
+<li><strong>Bike &amp; character customization</strong>: Skins, color slots, and mods</li>
+<li><strong>In-world challenges</strong>: Learn by doing. Roll into a challenge to get a goal like &ldquo;hold a wheelie for 5 seconds&rdquo; (inspired by the Skate games)</li>
+<li><strong>Physics-based controls</strong>: Manage clutch, throttle, and balance, with ragdoll crashes when you bail</li>
+</ul>
+<h3 id="game-modes-in-progress">Game modes (in progress):</h3>
+<ul>
+<li>Street racing with traffic, plus sanctioned races without</li>
+<li>Trick Battle: timed rounds where the highest trick score wins</li>
+<li>Delivery missions, from newspapers up to fragile ceramics</li>
+<li>A story mode tying racing, deliveries, and stunt battles together</li>
+</ul>
+<div style="clear:both"> </div>
+<img class="my-6" src="./img/dank-nooner-v2/dank-nooner-v80.jpg" width="100%" alt="Dank Nooner V2 gameplay" loading="lazy">
+
+<h2 id="how-its-built">How it&rsquo;s built</h2>
+<img class="custom-float-right ml-3" src="./img/dank-nooner-bike-skin.png" width="400px" alt="Bike customization in Dank Nooner">
+
+<p>Dank Nooner is the most technically involved project I&rsquo;ve built. It&rsquo;s a server-authoritative multiplayer game: clients capture input and predict movement locally, while the server runs the authoritative physics and reconciles any mismatches. Networking runs over WebRTC for web play, with NAT punch-through and a relay fallback so people can actually connect.</p>
+<p>The player is built with composition, a stack of focused controllers (movement, gearing, tricks, crashes, animation, camera) that each do one thing and run in sequence every tick. Menus and game modes run on state machines, audio goes through FMOD, and I wrote a procedural animation system with inverse kinematics so the rider leans and reacts without hand-made animations. I wrote a whole <a href="/blog/godot-ik/">blog post on the IK work</a>.</p>
+<p>It&rsquo;s all open source, check out the code at <a href="https://github.com/ssebs/DankNooner" target="_blank">https://github.com/ssebs/DankNooner</a></p>
+<div style="clear:both"> </div>
+<img class="my-6" src="./img/dank-nooner-v2/dank-nooner-v80-2.jpg" width="100%" alt="Dank Nooner V2 gameplay" loading="lazy">
+
+<h2 id="v1---the-original">V1 - The Original</h2>
+<p>V1 is the original proof-of-concept that started it all. It&rsquo;s a simple but fun wheelie balance challenge where you hold a wheelie as long as you can and earn points to upgrade your bike.</p>
 <h3 id="the-controls">The controls:</h3>
 <ul>
 <li>Click &amp; hold your Left Mouse Button to &ldquo;grip the throttle&rdquo;</li>
 <li>While holding LMB, move your mouse up/down to speed up, and left/right to steer.</li>
 <li>Pressing Shift while in a run will give you a speed boost.</li>
 </ul>
-<p>This game is open source, check out the code &amp; upcoming features at <a href="https://github.com/ssebs/DankNooner" target="_blank">https://github.com/ssebs/DankNooner</a></p>
-<h3 id="you-can-play-on">You can play on:</h3>
-<ul>
-<li>Your Web Browser</li>
-<li>Windows</li>
-<li>Linux</li>
-</ul>
-<div style="clear:both"> </div>
-<h2 id="but-why">But why?</h2>
-<p>After <a href="./projects/guac-and-load/">Guac &amp; Load</a>&rsquo;s development, I was pretty tired of gamedev. I started doing other things with my time, including learning how to ride a <a href="./projects/ninja-500/">motorcycle</a>.</p>
+<h3 id="but-why">But why?</h3>
+<p>After <a href="/projects/guac-and-load/">Guac &amp; Load</a>&rsquo;s development, I was pretty tired of gamedev. I started doing other things with my time, including learning how to ride a <a href="/projects/ninja-500/">motorcycle</a>.</p>
 <p>I heard the term &ldquo;dank nooner&rdquo;, which is basically a crazy wheelie where the bike is so high up, it&rsquo;s close to 12 o&rsquo;clock (aka noon). I loved this term, and got the idea to come up with a basic wheelie control game similar to those old flash games, so I got to work.</p>
-<h2 id="v2---coming-soon">V2 - Coming Soon!</h2>
-<p>I&rsquo;m working on a major rewrite of Dank Nooner! V2 will be a full open-world 3D experience built in Godot.</p>
-<h3 id="whats-planned-for-v2">What&rsquo;s planned for V2:</h3>
-<ul>
-<li><strong>Physics-Based Controls</strong>: Manage clutch, throttle, and balance with ragdoll crash physics</li>
-<li><strong>Multiplayer</strong>: Competitive races, co-op missions, and free-roam riding with friends</li>
-<li><strong>Open World</strong>: Explore a city, hillside, race track, and dirt track areas</li>
-<li><strong>Tricks System</strong>: Fill your nitrous meter by pulling off tricks like wheelies, stoppies, and more</li>
-<li><strong>Story Mode</strong>: Narrative progression with missions</li>
-<li><strong>Progression System</strong>: Start on a bicycle and work your way up to sport bikes, learning new tricks along the way</li>
-<li><strong>Bike Customization</strong>: Upgrade and customize your rides</li>
-</ul>
-<p>Check out the <a href="https://github.com/ssebs/DankNooner" target="_blank">Github repo</a> for updates on V2 development!</p>
-<h2 id="v1---play-now">V1 - Play Now</h2>
-<p>V1 is the original proof-of-concept that started it all. It&rsquo;s a simple but fun wheelie balance challenge where you earn points to upgrade your bike.</p>
 
-<div class="game-embed-container my-8" id="game-wrapper-1897b036978405ac">
-  <div id="game-placeholder-1897b036978405ac" class="relative bg-gray-800 rounded flex items-center justify-center cursor-pointer" style="width: 100%; height: 600px;">
+<div class="game-embed-container my-8" id="game-wrapper-18b7450842ae9638">
+  <div id="game-placeholder-18b7450842ae9638" class="relative bg-gray-800 rounded flex items-center justify-center cursor-pointer" style="width: 100%; height: 600px;">
     <div class="text-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="white" class="mx-auto mb-4">
         <path d="M8 5v14l11-7z"/>
@@ -324,7 +339,7 @@
   var gameSrc = '\/dank-nooner-v1\/';
   var width = '100%';
   var height = '600px';
-  var uid = '1897b036978405ac';
+  var uid = '18b7450842ae9638';
 
   var placeholder = document.getElementById('game-placeholder-' + uid);
   var wrapper = document.getElementById('game-wrapper-' + uid);
@@ -386,7 +401,7 @@
     <div id="cusdis_thread" 
     class="min-h-72 overflow-visible"
     data-host="https://cusdis.ssebs.com" data-app-id="0c226863-0ff4-4600-a25c-225a088d5aa9"
-      data-page-id="12484b000630f67a12bd1c9bd59de71e" data-page-url="http://localhost:1313/projects/dank-nooner/" data-page-title="Dank Nooner (v1)"
+      data-page-id="12484b000630f67a12bd1c9bd59de71e" data-page-url="http://localhost:1313/projects/dank-nooner/" data-page-title="Dank Nooner"
       data-theme="dark">
     </div>
     <script async defer src="https://cusdis.ssebs.com/js/cusdis.es.js"></script>
