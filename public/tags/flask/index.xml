@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Flask on ssebs | Sebastian Safari</title>
-    <link>http://localhost:1313/tags/flask/</link>
-    <description>Recent content in Flask on ssebs | Sebastian Safari</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jul 2024 22:03:20 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/flask/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>PeopleDB</title>
-      <link>http://localhost:1313/projects/peopledb/</link>
-      <pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate>
-      <guid>http://localhost:1313/projects/peopledb/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/Peopledb-py-react&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Person Database using python, flask, sqlite3, react.&lt;/p&gt;&#xA;&lt;h2 id=&#34;home--search-page&#34;&gt;Home / Search page&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/ssebs/Peopledb-py-react/master/img/ppldb-home-search.png&#34; alt=&#34;Home Page&#34;&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Flask on ssebs | Sebastian Safari</title><link>https://ssebs.com/tags/flask/</link><description>Recent content in Flask on ssebs | Sebastian Safari</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Jul 2024 22:03:20 -0700</lastBuildDate><atom:link href="https://ssebs.com/tags/flask/index.xml" rel="self" type="application/rss+xml"/><item><title>PeopleDB</title><link>https://ssebs.com/projects/peopledb/</link><pubDate>Wed, 24 Jul 2024 22:03:20 -0700</pubDate><guid>https://ssebs.com/projects/peopledb/</guid><description>&lt;p>&lt;a href="https://github.com/ssebs/Peopledb-py-react" target="_blank">Github Repo&lt;/a>&lt;/p>
+&lt;p>Person Database using python, flask, sqlite3, react.&lt;/p>
+&lt;h2 id="home--search-page">Home / Search page&lt;/h2>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/ssebs/Peopledb-py-react/master/img/ppldb-home-search.png" alt="Home Page">&lt;/p></description></item></channel></rss>

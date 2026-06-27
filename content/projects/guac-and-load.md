@@ -52,6 +52,16 @@ Each shift starts calm—just another day behind the counter. But after a while,
 
 {{< img-full src="/img/guac-and-load-gal/bowl.png" alt="Building bowl for customer" >}}
 
+## Play now! 
+
+Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/) for the best experience on Windows, Mac, and Linux!
+
+Or, play on the web now! (this takes a long time to load, fyi!)
+
+{{< game-embed src="https://guac-and-load.ssebs.com/" width="100%" height="600px" >}}
+
+<!-- NOTE - you must update the files in the container from what's exported in the build/guac-and-load-web/ folder -->
+
 ## Official Trailer
 
 <div class="videoWrapper">
