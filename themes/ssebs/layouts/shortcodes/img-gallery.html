@@ -1,6 +1,6 @@
 {{ $galleryDir := .Get "gallery_dir" }}
 {{ $imgWidth := .Get "width" }}
-{{ $images := readDir (printf "static%s" $galleryDir) }}
+{{ $images := readDir (path.Join "static" $galleryDir) }}
 
 <div class="gallery">
   {{ range $images }}
