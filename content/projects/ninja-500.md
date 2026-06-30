@@ -13,6 +13,10 @@ I've always wanted a motorcycle, and I finally decided to get one. Now that I'm 
 
 I took the [CMSP](https://motorcyclesafetyca.com/) course over a weekend, got my license, and got myself a bike! (With a bunch of gear too)
 
+## Track Day
+
+About 6 months after getting my bike, I ended up going to a cornering school at a go-kart track. I learned a lot about my lines, when to shift for a turn, and most importantly how to tow my bike behind my wife's SUV 😁.
+
 ## Mods
 - OEM frame sliders
 - Tail tidy / fender delete
@@ -22,8 +26,4 @@ I took the [CMSP](https://motorcyclesafetyca.com/) course over a weekend, got my
 
 ## Pics
 
-{{< img-full src="/img/projects/ninja-500/1.jpg" alt="Picture of my motorcycle" >}}
-
-{{< img-full src="/img/projects/ninja-500/2.jpg" alt="Picture of my motorcycle" >}}
-
-{{< img-full src="/img/projects/ninja-500/3.png" alt="Picture of my motorcycle" >}}
+{{< img-gallery gallery_dir="./img/projects/ninja-500" width="full" >}}
