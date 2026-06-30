@@ -4,7 +4,7 @@ shortdesc: My Audi S4
 feature: ./img/s4.jpg
 date: 2024-07-24T21:20:49-07:00
 weight: 27
-tags: [cars]
+tags: [cars,vehicles]
 ---
 I used to own a 2014 Audi S4 (B8.5), had a few mods done, but ultimately it was too expensive to keep 😭.
 

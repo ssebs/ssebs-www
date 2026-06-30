@@ -4,7 +4,7 @@ shortdesc: My project car, an ND RF Miata!
 feature: ./img/miata.jpg
 date: 2024-07-24T20:39:10-07:00
 weight: 27
-tags: [cars, 3d-printing]
+tags: [cars, 3d-printing,vehicles]
 ---
 
 I own and drive a 2021 Mazda MX-5 RF GT (Miata). This is my first daily driven stick shift car, and it's so fun to drive!
