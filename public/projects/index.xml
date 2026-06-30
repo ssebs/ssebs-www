@@ -6,7 +6,7 @@
     <description>Recent content in My Projects on ssebs | Sebastian Safari</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2026 18:08:23 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 17:58:06 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mini Macro Pad</title>
@@ -72,18 +72,18 @@
       <description>&lt;h2 id=&#34;story&#34;&gt;Story&lt;/h2&gt;&#xA;&lt;p&gt;Well, it&amp;rsquo;s been fun riding my first &lt;a href=&#34;http://localhost:1313/projects/ninja-500&#34;&gt;beginner bike&lt;/a&gt;, but it&amp;rsquo;s time to upgrade 😎.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Honda Grom</title>
+      <link>http://localhost:1313/projects/grom/</link>
+      <pubDate>Mon, 30 Mar 2026 18:08:23 -0700</pubDate>
+      <guid>http://localhost:1313/projects/grom/</guid>
+      <description>&lt;h2 id=&#34;story&#34;&gt;Story&lt;/h2&gt;&#xA;&lt;p&gt;Okay so 1 bike wasn&amp;rsquo;t enough&amp;hellip; So I got another one. &lt;strong&gt;But&lt;/strong&gt;, this one is smol. My &lt;a href=&#34;http://localhost:1313/projects/ninja-500&#34;&gt;Ninja 500&lt;/a&gt; was 451cc, but my new toy was only 125cc.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Tipr</title>
       <link>http://localhost:1313/projects/tipr/</link>
       <pubDate>Wed, 24 Jul 2024 21:53:44 -0700</pubDate>
       <guid>http://localhost:1313/projects/tipr/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/tipr&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A tip calculator that shows the tip amount and the total amount.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Grom</title>
-      <link>http://localhost:1313/projects/replace_me_or_delete/</link>
-      <pubDate>Mon, 29 Jun 2026 18:08:23 -0700</pubDate>
-      <guid>http://localhost:1313/projects/replace_me_or_delete/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ssebs/&#34; target=&#34;_blank&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ninja 500</title>

@@ -5,7 +5,7 @@ shortdesc: My first motorcycle, a '25 Ninja 500 :D
 feature: ./img/projects/ninja-500/1.jpg
 date: 2025-10-12T14:26:01-07:00
 weight: 25
-tags: ['bikes', 'cars']
+tags: ['bikes', 'vehicles']
 ---
 
 ## Story
