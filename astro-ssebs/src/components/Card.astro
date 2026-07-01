@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  href: string;
+  title: string;
+  shortdesc: string;
+  feature?: ImageMetadata;
+  date?: Date;
+  tags?: string[];
+  isBlog?: boolean;
+}
+
+const { href, title, shortdesc, feature, date, tags = [], isBlog = false } = Astro.props as Props;
+
+const formattedDate = date
+  ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+  : undefined;
+---
+<div
+  class="grid gap-6 p-6 justify- bg-neutral-900 drop-shadow-2xl rounded-md card-hover border-2 border-primary card-reveal">
+  {/* feature + shortdesc */}
+  <a href={href} class="grid gap-4 self-start">
+    <div class="text-lg font-medium">
+      {title}
+
+      {/* ONLY SHOW ON /blog/ */}
+      {isBlog && (
+        <div class="text-sm italic text-quaternary py-2">
+          {formattedDate}
+        </div>
+      )}
+    </div>
+
+    {feature ? (
+      <div class="img-zoom-container rounded-md" style="height: 248px;">
+        <Image src={feature} alt={title} widths={[248, 496]} sizes="248px" style="max-height: 248px; margin: auto;" />
+      </div>
+    ) : (
+      <div></div>
+    )}
+
+  </a>
+
+  <p class="text-lg text-white-dim">{shortdesc}</p>
+
+  {/* DON'T SHOW IF ON /blog/ */}
+  {!isBlog && (
+    <div class="self-end">
+
+      {/* tags list */}
+      <div class="flex flex-wrap gap-2 text-base h-fit">
+        {tags.map((t) => (
+          <a href={`/tags/${t}/`}
+            class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black transition-all duration-300 tag-hover">
+            {t}
+          </a>
+        ))}
+      </div>
+
+    </div>
+  )}
+
+</div>

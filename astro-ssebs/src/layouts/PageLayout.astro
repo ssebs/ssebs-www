@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Sidebar from '../components/Sidebar.astro';
+
+interface Crumb {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  crumbs: Crumb[];
+  current: string;
+}
+
+const { title, description, crumbs, current } = Astro.props as Props;
+---
+<BaseLayout title={title} description={description}>
+  <Breadcrumbs crumbs={crumbs} current={current} />
+  <div class="grid lg:grid-cols-4 gap-4 mb-6">
+    <div class="lg:col-start-4 lg:w-[16rem] w-full lg:row-start-1 row-start-2 justify-self-center self-baseline top-6 sticky">
+      <Sidebar current={current} />
+    </div>
+    <div class="lg:col-start-1 lg:col-span-3 lg:row-start-1 lg:max-w-[60rem] w-full overflow-x-hidden">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

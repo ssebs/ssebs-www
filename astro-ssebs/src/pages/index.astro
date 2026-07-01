@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ProjectShowcase from '../components/ProjectShowcase.astro';
+import { nav } from '../config';
+import { getCollection } from 'astro:content';
+import { intro } from '../lib/summary';
+import { mdToHtml } from '../lib/markdown';
+import introProjectsRaw from '../content/pages/projects-intro.md?raw';
+import introBlogRaw from '../content/pages/blog-intro.md?raw';
+import introAboutRaw from '../content/pages/about.mdx?raw';
+import introContactRaw from '../content/pages/contact.mdx?raw';
+import type { ImageMetadata } from 'astro';
+
+interface CardData {
+  href: string;
+  title: string;
+  shortdesc: string;
+  feature?: ImageMetadata;
+  date?: Date;
+  tags?: string[];
+  isBlog?: boolean;
+}
+
+function stripFrontmatterAndImports(raw: string): string {
+  const noFrontmatter = raw.replace(/^---[\s\S]*?---/, '');
+  return noFrontmatter
+    .split('\n')
+    .filter((line) => !line.trim().startsWith('import '))
+    .join('\n');
+}
+
+// MDX doesn't support `<!--more-->` HTML comments (must use `{/* more */}`), so the
+// about/contact intro marker differs from the plain-markdown `*-intro.md` files.
+function introMdx(body: string): string {
+  const marker = '{/* more */}';
+  const idx = body.indexOf(marker);
+  return (idx === -1 ? body : body.slice(0, idx)).trim();
+}
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.weight - b.data.weight);
+const blogPosts = (await getCollection('blog')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const projectCards: CardData[] = projects.slice(0, 3).map((e) => ({
+  href: `/projects/${e.data.slug ?? e.id}/`,
+  title: e.data.title,
+  shortdesc: e.data.shortdesc,
+  feature: e.data.feature,
+  tags: e.data.tags,
+}));
+
+const blogCards: CardData[] = blogPosts.slice(0, 3).map((e) => ({
+  href: `/blog/${e.data.slug ?? e.id}/`,
+  title: e.data.title,
+  shortdesc: e.data.shortdesc,
+  feature: e.data.feature,
+  isBlog: true,
+  date: e.data.date,
+}));
+
+const projectsIntroHtml = await mdToHtml(intro(stripFrontmatterAndImports(introProjectsRaw)));
+const blogIntroHtml = await mdToHtml(intro(stripFrontmatterAndImports(introBlogRaw)));
+const aboutIntroHtml = await mdToHtml(introMdx(stripFrontmatterAndImports(introAboutRaw)));
+const contactIntroHtml = await mdToHtml(introMdx(stripFrontmatterAndImports(introContactRaw)));
+
+const sectionsByLabel: Record<string, { summaryHtml: string; cards?: CardData[]; sectionbg?: string; c2aText?: string; noC2A?: boolean }> = {
+  Projects: { summaryHtml: projectsIntroHtml, cards: projectCards, sectionbg: 'bg-secondary', c2aText: 'More of my projects' },
+  About: { summaryHtml: aboutIntroHtml, c2aText: 'Read all about me!' },
+  Blog: { summaryHtml: blogIntroHtml, cards: blogCards },
+  Contact: { summaryHtml: contactIntroHtml, sectionbg: 'transparent-bg', noC2A: true },
+};
+
+const sections = nav
+  .filter((item) => sectionsByLabel[item.label])
+  .map((item) => ({ item, ...sectionsByLabel[item.label] }));
+
+// First project by weight, guarded against an empty collection (content arrives in Phase 6).
+const firstProject = projects[0];
+let showcase: { title: string; href: string; summaryHtml: string; noC2A?: boolean; c2aText?: string } | undefined;
+if (firstProject) {
+  const showcaseHtml = await mdToHtml(firstProject.data.shortdesc);
+  showcase = {
+    title: firstProject.data.title,
+    href: `/projects/${firstProject.data.slug ?? firstProject.id}/`,
+    summaryHtml: showcaseHtml,
+    noC2A: firstProject.data.noC2A,
+    c2aText: firstProject.data.c2aText,
+  };
+}
+---
+<BaseLayout isHome>
+  <div class="grid w-full">
+    <Hero />
+    {sections.map((s) => <Section {...s} />)}
+    {showcase && <ProjectShowcase {...showcase} />}
+  </div>
+</BaseLayout>

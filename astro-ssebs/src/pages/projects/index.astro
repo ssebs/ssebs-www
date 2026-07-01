@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import Card from '../../components/Card.astro';
+import { mdToHtml } from '../../lib/markdown';
+import introRaw from '../../content/pages/projects-intro.md?raw';
+
+const items = (await getCollection('projects')).sort((a, b) => a.data.weight - b.data.weight);
+const introHtml = await mdToHtml(introRaw.replace(/^---[\s\S]*?---/, '').replace('<!--more-->', ''));
+const crumbs = [{ href: '/', label: 'Home' }];
+---
+<PageLayout title="My Projects" crumbs={crumbs} current="/projects/">
+  <div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+    <h1 class="text-2xl">My Projects</h1>
+    <div class="post-content" set:html={introHtml} />
+    <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6 cards-reveal-container">
+      {items.map((e) => (
+        <Card href={`/projects/${e.data.slug ?? e.id}/`} title={e.data.title} shortdesc={e.data.shortdesc} feature={e.data.feature} tags={e.data.tags} />
+      ))}
+    </div>
+  </div>
+</PageLayout>

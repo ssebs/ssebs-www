@@ -1,0 +1,22 @@
+---
+interface Crumb {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  crumbs: Crumb[];
+  current: string;
+}
+
+const { crumbs, current } = Astro.props as Props;
+---
+<ul class="my-2 flex text-white-dim flex-wrap items-center">
+    {crumbs.map((crumb) => (
+      <>
+        <li class="breadcrumb-item"><a href={crumb.href} class="breadcrumb-link">{crumb.label}</a></li>
+        <div class="mx-1 breadcrumb-item breadcrumb-separator">&gt;</div>
+      </>
+    ))}
+    <li class="breadcrumb-item"><a href={Astro.url.pathname} class="breadcrumb-link text-quaternary">{current}</a></li>
+</ul>

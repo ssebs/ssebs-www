@@ -1,0 +1,57 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import Comments from '../../components/Comments.astro';
+
+export async function getStaticPaths() {
+  const items = await getCollection('projects');
+  return items.map((entry) => ({
+    params: { slug: entry.data.slug ?? entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const crumbs = [
+  { href: '/', label: 'Home' },
+  { href: '/projects/', label: 'Projects' },
+];
+const slug = entry.data.slug ?? entry.id;
+---
+<PageLayout title={entry.data.title} description={entry.data.shortdesc} crumbs={crumbs} current={`/projects/${slug}/`}>
+  <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+    <div>
+      <h1 class="text-2xl">{entry.data.title}</h1>
+      {entry.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 text-base h-fit">
+          {entry.data.tags.map((t) => (
+            <a href={`/tags/${t}/`} class="px-2 text-quaternary rounded-md border border-quaternary hover:bg-quaternary hover:text-black">{t}</a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="post-content overflow-x-hidden break-words"><Content /></div>
+
+    <Comments id={entry.id} url={new URL(Astro.url.pathname, Astro.site).href} title={entry.data.title} />
+  </div>
+</PageLayout>
+
+<script>
+  document.querySelectorAll(".post-content img").forEach((imgElem) => {
+    imgElem.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent click event from propagating to the document
+      imgElem.classList.add("bigImg");
+    });
+  });
+
+  // Reset the image when clicking outside of it
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".post-content img").forEach((imgElem) => {
+      if (!imgElem.contains(event.target as Node)) {
+        imgElem.classList.remove("bigImg");
+      }
+    });
+  });
+</script>
