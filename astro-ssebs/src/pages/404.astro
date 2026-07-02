@@ -1,7 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const crumbs = [{ href: '/', label: 'Home' }];
 ---
-<BaseLayout title="Page not found">
+<PageLayout title="404 Page not found" crumbs={crumbs} current="/404/">
   <div class="bg-neutral-800 p-6 drop-shadow-lg rounded-t-xl border-b-2 border-primary">
     <div class="post-content">
       <h1>Page not found</h1>
@@ -12,7 +14,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </a>
     </div>
   </div>
-</BaseLayout>
+</PageLayout>
 
 <script>
   const urlSpan = document.getElementById("url")!;

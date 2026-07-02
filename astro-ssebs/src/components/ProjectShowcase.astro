@@ -2,12 +2,11 @@
 interface Props {
   title: string;
   href: string;
-  summaryHtml: string;
   noC2A?: boolean;
   c2aText?: string;
 }
 
-const { title, href, summaryHtml, noC2A, c2aText } = Astro.props as Props;
+const { title, href, noC2A, c2aText } = Astro.props as Props;
 ---
 <section class="bg-neutral-900 grid justify-center w-full pb-6">
     <div class="grid lg:max-w-6xl md:max-w-4xl w-full p-6 justify-start text-xl ">
@@ -16,7 +15,7 @@ const { title, href, summaryHtml, noC2A, c2aText } = Astro.props as Props;
             <a href={href} class="text-quinary underline font-normal">{title}</a>
         </h3>
          <div class="text-white-dim grid text-base">
-            <div class="post-content" set:html={summaryHtml} />
+            <div class="post-content"><slot /></div>
          </div>
     </div>
     {/* C2A */}

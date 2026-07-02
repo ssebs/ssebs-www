@@ -6,10 +6,11 @@ interface Crumb {
 
 interface Props {
   crumbs: Crumb[];
-  current: string;
+  /** Display label for the current page (Hugo showed the page title, not the path). */
+  label: string;
 }
 
-const { crumbs, current } = Astro.props as Props;
+const { crumbs, label } = Astro.props as Props;
 ---
 <ul class="my-2 flex text-white-dim flex-wrap items-center">
     {crumbs.map((crumb) => (
@@ -18,5 +19,5 @@ const { crumbs, current } = Astro.props as Props;
         <div class="mx-1 breadcrumb-item breadcrumb-separator">&gt;</div>
       </>
     ))}
-    <li class="breadcrumb-item"><a href={Astro.url.pathname} class="breadcrumb-link text-quaternary">{current}</a></li>
+    <li class="breadcrumb-item"><a href={Astro.url.pathname} class="breadcrumb-link text-quaternary">{label}</a></li>
 </ul>

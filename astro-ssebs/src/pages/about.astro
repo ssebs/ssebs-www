@@ -5,8 +5,8 @@ import { Content } from '../content/pages/about.mdx';
 const crumbs = [{ href: '/', label: 'Home' }];
 ---
 <PageLayout title="About me" crumbs={crumbs} current="/about/">
-  <div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+  <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
     <h1 class="text-2xl">About me</h1>
-    <div class="post-content"><Content /></div>
+    <div class="post-content overflow-x-hidden break-words"><Content /></div>
   </div>
 </PageLayout>

@@ -11,9 +11,8 @@ npm run dev
 ```
 
 ## TODO
-- styling is off
-- pictures won't load
-- code has not been read at all for architecture
+- swap deployment (Dockerfile, GitHub Actions, nginx) from Hugo to Astro
+- remove the Hugo site (`content/`, `themes/`, `hugo.yaml`) once Astro is validated in prod
 
 ## License
 

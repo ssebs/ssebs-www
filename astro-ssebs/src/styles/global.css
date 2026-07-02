@@ -142,6 +142,28 @@
   }
 }
 
+/* Shiki line numbers (Hugo's Chroma had lineNos enabled) */
+.astro-code code {
+  counter-reset: line;
+}
+
+.astro-code code .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2ch;
+  margin-right: 1rem;
+  text-align: right;
+  color: #7f848e;
+  user-select: none;
+}
+
+/* Shiki emits a trailing empty line span; don't number it */
+.astro-code code .line:last-child:empty::before {
+  content: none;
+  counter-increment: none;
+}
+
 .img-container img {
   display: flex;
   align-items: center;

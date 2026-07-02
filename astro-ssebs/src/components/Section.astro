@@ -17,14 +17,13 @@ interface CardData {
 interface Props {
   item: NavItem;
   cards?: CardData[];
-  summaryHtml: string;
   feature?: ImageMetadata;
   sectionbg?: string;
   c2aText?: string;
   noC2A?: boolean;
 }
 
-const { item, cards, summaryHtml, feature, sectionbg, c2aText, noC2A } = Astro.props as Props;
+const { item, cards, feature, sectionbg, c2aText, noC2A } = Astro.props as Props;
 const bg = sectionbg || 'bg-neutral-900';
 const cols = feature ? 'md:grid-cols-2' : '';
 const topCards = (cards ?? []).slice(0, 3);
@@ -36,7 +35,7 @@ const topCards = (cards ?? []).slice(0, 3);
 
         {/* Text content + feature */}
         <div class={`text-white-dim grid gap-4 ${cols}`}>
-            <div class="post-content text-lg" set:html={summaryHtml} />
+            <div class="post-content text-lg"><slot /></div>
             <div>
                 {feature && <Image src={feature} alt="" />}
             </div>

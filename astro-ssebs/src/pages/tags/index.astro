@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import Card from '../../components/Card.astro';
+import { tagTitle } from '../../lib/tags';
+
+const projects = await getCollection('projects');
+const blog = await getCollection('blog');
+const tags = [...new Set([...projects, ...blog].flatMap((e) => e.data.tags))].sort();
+const crumbs = [{ href: '/', label: 'Home' }];
+---
+<PageLayout title="Tags" crumbs={crumbs} current="/tags/">
+  <div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
+    <h1 class="text-2xl">Tags</h1>
+    <div class="post-content">Here's a list of all the tags on this site.</div>
+  </div>
+
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
+    {tags.map((tag) => (
+      <Card href={`/tags/${tag}/`} title={tagTitle(tag)} shortdesc="" />
+    ))}
+  </div>
+</PageLayout>

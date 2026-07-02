@@ -1,12 +1,13 @@
 ---
 import { getCollection, render } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import { entrySlug } from '../../lib/url';
 import Comments from '../../components/Comments.astro';
 
 export async function getStaticPaths() {
   const items = await getCollection('projects');
   return items.map((entry) => ({
-    params: { slug: entry.data.slug ?? entry.id },
+    params: { slug: entrySlug(entry) },
     props: { entry },
   }));
 }
@@ -17,7 +18,7 @@ const crumbs = [
   { href: '/', label: 'Home' },
   { href: '/projects/', label: 'Projects' },
 ];
-const slug = entry.data.slug ?? entry.id;
+const slug = entrySlug(entry);
 ---
 <PageLayout title={entry.data.title} description={entry.data.shortdesc} crumbs={crumbs} current={`/projects/${slug}/`}>
   <div class="grid gap-6 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">

@@ -1,21 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import { entrySlug } from '../../lib/url';
 import Card from '../../components/Card.astro';
-import { mdToHtml } from '../../lib/markdown';
-import introRaw from '../../content/pages/blog-intro.md?raw';
+import { Content as Intro } from '../../content/pages/blog-intro.md';
+import { Content as More } from '../../content/pages/blog-more.md';
 
 const items = (await getCollection('blog')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-const introHtml = await mdToHtml(introRaw.replace(/^---[\s\S]*?---/, '').replace('<!--more-->', ''));
 const crumbs = [{ href: '/', label: 'Home' }];
 ---
 <PageLayout title="My Blog" crumbs={crumbs} current="/blog/">
   <div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
     <h1 class="text-2xl">My Blog</h1>
-    <div class="post-content" set:html={introHtml} />
+    <div class="post-content"><Intro /><More /></div>
     <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6 cards-reveal-container">
       {items.map((e) => (
-        <Card href={`/blog/${e.data.slug ?? e.id}/`} title={e.data.title} shortdesc={e.data.shortdesc} feature={e.data.feature} isBlog date={e.data.date} />
+        <Card href={`/blog/${entrySlug(e)}/`} title={e.data.title} shortdesc={e.data.shortdesc} feature={e.data.feature} isBlog date={e.data.date} />
       ))}
     </div>
   </div>

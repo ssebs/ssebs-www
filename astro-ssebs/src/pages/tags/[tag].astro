@@ -1,7 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
+import { entrySlug } from '../../lib/url';
 import Card from '../../components/Card.astro';
+import { byWeightThenDate } from '../../lib/sort';
+import { tagTitle } from '../../lib/tags';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -9,7 +12,7 @@ export async function getStaticPaths() {
   const all = [
     ...projects.map((e) => ({ e, base: '/projects', isBlog: false })),
     ...blog.map((e) => ({ e, base: '/blog', isBlog: true })),
-  ];
+  ].sort((a, b) => byWeightThenDate(a.e, b.e));
   const tags = new Set<string>();
   all.forEach(({ e }) => e.data.tags.forEach((t) => tags.add(t)));
   return [...tags].map((tag) => ({
@@ -19,15 +22,21 @@ export async function getStaticPaths() {
 }
 
 const { tag, entries } = Astro.props;
-const crumbs = [{ href: '/', label: 'Home' }];
+const title = tagTitle(tag);
+const crumbs = [
+  { href: '/', label: 'Home' },
+  { href: '/tags/', label: 'Tags' },
+];
 ---
-<PageLayout title={`#${tag}`} crumbs={crumbs} current={`/tags/${tag}/`}>
+<PageLayout title={title} crumbs={crumbs} current={`/tags/${tag}/`}>
   <div class="grid gap-4 p-6 bg-neutral-900 drop-shadow-2xl rounded-t-md border-b-2 border-b-primary">
-    <h1 class="text-2xl">Tag: {tag}</h1>
-    <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6 cards-reveal-container">
-      {entries.map(({ e, base, isBlog }) => (
-        <Card href={`${base}/${e.data.slug ?? e.id}/`} title={e.data.title} shortdesc={e.data.shortdesc} feature={e.data.feature} tags={e.data.tags} isBlog={isBlog} date={e.data.date} />
-      ))}
-    </div>
+    <h1 class="text-2xl">{title} tags</h1>
+    <div class="post-content">Here's a list of all the projects with the "{tag}" tag.</div>
+  </div>
+
+  <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-6 my-6">
+    {entries.map(({ e, base, isBlog }) => (
+      <Card href={`${base}/${entrySlug(e)}/`} title={e.data.title} shortdesc={e.data.shortdesc} feature={e.data.feature} tags={e.data.tags} isBlog={isBlog} date={e.data.date} />
+    ))}
   </div>
 </PageLayout>
