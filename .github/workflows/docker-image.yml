@@ -1,18 +1,30 @@
 name: Docker Image CI
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "astro-rewrite" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "astro-rewrite" ]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build site
+        run: npm run build
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Login to Docker Hub
+        if: github.event_name == 'push'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -20,5 +32,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          push: true
-          tags: ssebs/ssebs-www:latest
+          context: .
+          push: ${{ github.event_name == 'push' }}
+          tags: ssebs/ssebs-www:astro

@@ -1,18 +1,26 @@
 # ssebs-www
 
+Source for [ssebs.com](https://ssebs.com), built with [Astro](https://astro.build) and TailwindCSS.
 
-## Astro Migration
+Migrated from Hugo — Claude did the lifting against this [spec](docs/superpowers/specs/2026-06-30-astro-rewrite-design.md).
 
-I told claude to migrate hugo to astro, it completed this [spec](docs/superpowers/specs/2026-06-30-astro-rewrite-design.md)
+## Development
 
+```sh
+make install   # npm ci
+make dev       # dev server
+make build     # production build -> dist/
+make preview   # serve the production build
 ```
-cd astro-ssebs
-npm run dev
-```
 
-## TODO
-- swap deployment (Dockerfile, GitHub Actions, nginx) from Hugo to Astro
-- remove the Hugo site (`content/`, `themes/`, `hugo.yaml`) once Astro is validated in prod
+## Deployment
+
+CI builds the site and pushes a Docker image (nginx serving `dist/` on port 8080) to `ssebs/ssebs-www:astro`.
+
+```sh
+make docker
+docker run -p 8080:8080 ssebs/ssebs-www:astro
+```
 
 ## License
 
