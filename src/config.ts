@@ -29,7 +29,7 @@ export const socials: Social[] = [
 export const site = {
   title: 'ssebs | Sebastian Safari',
   description:
-    'My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figure-outer". Basically, I work as a Site Reliability Engineer and like to program various projects.',
+    'My name is Sebastian Safari, I call myself a "professional fixer, hobbyist figure-outer". I\'m a full-stack software engineer with 9+ years building production software and the infrastructure it runs on.',
   author: 'Sebastian Safari',
   copyrightStartYear: 2015,
 };

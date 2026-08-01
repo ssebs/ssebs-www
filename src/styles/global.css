@@ -236,6 +236,22 @@ blockquote {
   font-style: italic;
 }
 
+/* Collapsed Spotify embeds on /about — keeps 12 iframes out of the scroll path. */
+.post-content details.playlists > summary {
+  cursor: pointer;
+  color: var(--color-quaternary);
+  font-weight: bold;
+  padding: 0.25rem 0;
+}
+
+.post-content details.playlists > summary:hover {
+  text-decoration: underline;
+}
+
+.post-content details.playlists[open] > summary {
+  margin-bottom: 0.5rem;
+}
+
 img:not([src]) {
   visibility: hidden;
 }

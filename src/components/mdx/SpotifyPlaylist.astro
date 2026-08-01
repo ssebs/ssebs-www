@@ -1,0 +1,21 @@
+---
+interface Props {
+  /** Playlist ID — the part after /playlist/ in a Spotify share link. */
+  id: string;
+  /** Accessible name for the embed, e.g. "Metal playlist". */
+  title: string;
+  height?: string;
+}
+
+const { id, title, height = '500' } = Astro.props as Props;
+---
+<iframe
+  class="rounded-xl my-3 border-0"
+  src={`https://open.spotify.com/embed/playlist/${id}?utm_source=generator&theme=0`}
+  title={title}
+  width="100%"
+  height={height}
+  loading="lazy"
+  allowfullscreen
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+></iframe>

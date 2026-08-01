@@ -7,6 +7,7 @@ weight: 6
 date: "2024-05-31T15:43:45-07:00"
 ---
 import Intro from './about-intro.mdx';
+import SpotifyPlaylist from '../../components/mdx/SpotifyPlaylist.astro';
 
 <Intro />
 
@@ -17,12 +18,23 @@ I've been fascinated by computers from a young age, always eager to unravel thei
 
 I've progressed through various roles, starting as a SysAdmin at PARC, advancing to a Systems and Software Engineer, and now building production software at Meta. This trajectory allowed me to amass a diverse skill set spanning IT systems, infrastructure, and software development.
 
+The job I learned the most from was [PeopleDB](/projects/peopledb/) at PARC, an internal full-stack app that became the source of truth for employee and visitor records, and provisioned accounts across Active Directory, NIS, and Microsoft 365 automatically. That's the project where I stopped being the person who ran the systems and became the person who built the thing that ran them.
+
 ## Where I am now
 At Meta, I help build a single-pane-of-glass platform that centralizes software license management across many backend servers. I work on the whole stack, from the database and GraphQL schema down to the React UI.
 
 A few things I'm proud of: I designed a version-history and one-click restore feature that cut config recovery from ~10 minutes to under 1, led the React redesign of the portal's main home view from proof of concept to MVP, and extended the platform's schema to unify licenses from several different managers. I still get to use my SRE roots too, diagnosing tricky production bugs and hardening our Python agent with end-to-end tests. It's been a lot of fun!
 
-### Some of my values:
+## What I work with
+- **Languages:** Go, Python, JavaScript/TypeScript, Hack/PHP, Ruby, C, Bash
+- **Backend & web:** React, GraphQL, REST, graph entity schemas (node/edge modeling), Flask, SQLite, Nginx
+- **Infrastructure:** Docker, Kubernetes, Terraform, Chef, AWS, Azure, CI/CD
+- **Practices:** Git, Linux, testing (pytest, end-to-end), design patterns, AI-assisted development with Claude Code
+- **Certifications:** Certified Kubernetes Administrator (CNCF), 2025
+
+> I post related writeups on my [blog!](/blog/)
+
+## Some of my values
 - I always try to find efficient ways to solve problems.
 - I like doing things the right way, I'm not a fan of "half-assing" work. If you're going to do it, do it right.
 - I typically think of the MVP - the Minimum Viable Product as the goal. Once that's complete we can think about soft requirements and fun features.
@@ -48,29 +60,24 @@ Online, I go by <span class="text-quaternary">ssebs</span>.
 ## Music
 I've got a weird taste in music, lots of Metal, some Hip Hop, Pop, and EDM.
 
-Here are some of my Spotify playlists:
-## Metal
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7o3CfTv1hxvQay5o1jhBLE?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2OuMYaRnMKSyQ9fJFiMB5F?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<details class="playlists">
+<summary>Here are some of my Spotify playlists</summary>
 
-## Electronic Dance Music / House
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2oeojxgxq1hMceIMrKGjsH?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+### Metal , Rock, & Country
+<SpotifyPlaylist id="7o3CfTv1hxvQay5o1jhBLE" title="Seb's Metal" />
+<SpotifyPlaylist id="0l8MiylS6F54jbVbyFhsOA" title="Rickety-Rock" />
+<SpotifyPlaylist id="7v4dBj2z7JW3xozwBJDNYW" title="Country Monster-Jams" />
 
-## Rock / Country
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0l8MiylS6F54jbVbyFhsOA?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7v4dBj2z7JW3xozwBJDNYW?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+### EDM & Pop
+<SpotifyPlaylist id="2oeojxgxq1hMceIMrKGjsH" title="Elektro" />
+<SpotifyPlaylist id="2x7e7njD6WUpXzcUiXCRbx" title="DuaLipaJams" />
+<SpotifyPlaylist id="7MeLE8EF1yakDZrdJWOeqc" title="Pop Bangers" />
+<SpotifyPlaylist id="3NFcZibLN71Wayn6mbYIVh" title="Throwback" />
 
-## Hip Hop, R&B
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/27BV0ZEwuVWtXVP3moh7KF?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3NFcZibLN71Wayn6mbYIVh?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+### Songs from my wedding \<3
+<SpotifyPlaylist id="3UqYVBiQpvSerzApe9qNOP" title="Wedding playlist" />
 
-## Pop
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7MeLE8EF1yakDZrdJWOeqc?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3YIPHGzMeeSetAWrKJNjzv?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</details>
 
-## Etc.
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2AwwaGMuG5zKRZOZ3nRzLy?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3Z6gfsCVLCE57INVLVyYjb?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-## Songs from my wedding \<3
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3UqYVBiQpvSerzApe9qNOP?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+## Say hi
+[Get in touch](/contact/) if you want to talk about any of this.
