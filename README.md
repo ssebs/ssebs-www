@@ -4,8 +4,10 @@
 
 https://ssebs.com website code.
 
-## TODO:
+NOTE: See the astro-rewrite for the current version, TBD migrate!
 
+## TODO:
+- [ ] Migrate to astro fully
 - [ ] Add Table of contents on pages that can minimize / pop out to navigate
 - [ ] CDN Assets (resume, images) for faster loading
 - [ ] Soon™️:
