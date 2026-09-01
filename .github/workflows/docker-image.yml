@@ -34,4 +34,4 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name == 'push' }}
-          tags: ssebs/ssebs-www:astro
+          tags: ssebs/ssebs-www:latest
