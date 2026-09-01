@@ -1,36 +1,35 @@
-.PHONY: help install dev dev-full build docker
+.PHONY: help install dev build preview check docker
 
 # Default target
 help:
 	@echo "Available targets:"
-	@echo "  install    - Install theme dependencies (npm install)"
-	@echo "  dev        - Run Hugo dev server only"
-	@echo "  dev-full   - Run npm start + Hugo dev server (requires 2 terminals)"
-	@echo "  build      - Build for production (npm build + hugo build)"
+	@echo "  install    - Install dependencies (npm ci)"
+	@echo "  dev        - Run Astro dev server"
+	@echo "  build      - Build for production (outputs to dist/)"
+	@echo "  preview    - Preview the production build"
+	@echo "  check      - Type check the site (astro check)"
 	@echo "  docker     - Build Docker image"
 
-# Install theme dependencies
+# Install dependencies
 install:
-	cd themes/ssebs && npm i
+	npm ci
 
-# Run Hugo dev server only
+# Run Astro dev server
 dev:
-	hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0
-
-# Run npm start + Hugo dev server
-# Note: This requires running in 2 terminals
-# Terminal 1: make dev-full
-# Terminal 2: cd themes/ssebs && npm run start
-dev-full:
-	@echo "Starting Hugo dev server..."
-	@echo "Note: Run 'cd themes/ssebs && npm run start' in another terminal"
-	hugo serve --noHTTPCache --disableFastRender --bind 0.0.0.0
+	npm run dev -- --host 0.0.0.0
 
 # Build for production
 build:
-	cd themes/ssebs && npm run build
-	hugo --minify
+	npm run build
+
+# Preview the production build
+preview:
+	npm run preview -- --host 0.0.0.0
+
+# Type check
+check:
+	npx astro check
 
 # Build Docker image
 docker:
-	docker build -t ssebs/ssebs-www .
+	docker build -t ssebs/ssebs-www:astro .

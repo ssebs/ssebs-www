@@ -1,0 +1,81 @@
+---
+title: 'Guac and Load'
+slug: guac-and-load
+shortdesc: Guac & Load is a fast-paced restaurant sim where chaos in the kitchen leads to a fight for survival.
+feature: ./img/guac-and-load-0.png
+date: 2025-02-25T17:05:19-08:00
+weight: 22
+tags: [programming, gamedev, python, godot]
+---
+import ImgFloatRight from '../../../components/mdx/ImgFloatRight.astro';
+import ImgFull from '../../../components/mdx/ImgFull.astro';
+import GameEmbed from '../../../components/mdx/GameEmbed.astro';
+import ImgGallery from '../../../components/mdx/ImgGallery.astro';
+import libraryCapsule from './img/library_capsule.png';
+import shift from './img/shift.png';
+import zombie from './img/zombie.png';
+import bowl from './img/bowl.png';
+
+export const galleryImages = Object.values(import.meta.glob('./img/*.{png,jpg,jpeg,PNG,JPG}', { eager: true, import: 'default' }));
+
+> Interested in the behind-the-scenes? Check out [dev update 1](/blog/guac-and-load-update-1/) and [update 2](/blog/guac-and-load-update-2/).
+
+Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/)! 
+
+## What is it?
+**Guac and Load** is a fast-paced restaurant sim where chaos in the kitchen turns into a fight for survival.
+
+<ImgFloatRight src={libraryCapsule} width="300px" alt="Game screenshot" />
+
+> Okay... what does that mean?
+
+It's a restaurant simulator, like Fast Food Simulator or Supermarket Simulator, but with a twist:
+
+Some of the customers got **Z-Coli**, and have been turned into zombies! You'll need to fight to survive!
+
+## What's the status?
+I've been working on this since February 2025, and I plan to release the game in July 2025!
+
+## What's the Gameplay like?
+### 👨‍🍳 Start Your Shift
+- Cook rice, beans, and meats
+- Make some guac and stock your trays
+- Build burrito bowls for customers
+- Run the register and keep the line moving
+
+<ImgFull src={shift} alt="Adding rice to stove" />
+
+### 🧟 But Watch Out...
+- Some customers can get aggressive, must be the Z-Coli outbreak!
+- Grab kitchen tools or the guac gun to fight back
+- Survive furious ex-customers and keep the restaurant alive
+
+<ImgFull src={zombie} alt="Zombie attacking player" />
+
+### 🌀 Gameplay Loop
+Each shift starts calm—just another day behind the counter. But after a while, everything changes. The pressure builds. The music shifts. The customers? Not so friendly anymore.
+
+### ✅ Features:
+- Buying, cooking, chopping different types of food.
+- Preparing customer's orders. A customer has a specific order that you must fulfill, you get money based on how accurate your order is.
+- Zombies (infected by Z-Coli) will come and you'll need to fight to survive.
+
+<ImgFull src={bowl} alt="Building bowl for customer" />
+
+## Play now! 
+
+Check out the [Steam store page](https://store.steampowered.com/app/3800880/Guac__Load/) for the best experience on Windows, Mac, and Linux!
+
+Or, play on the web now! (this takes a long time to load, fyi!)
+
+<GameEmbed src="https://guac-and-load.ssebs.com/" width="100%" height="600px" />
+
+## Official Trailer
+
+<div class="videoWrapper">
+<iframe src="https://www.youtube.com/embed/Gh6QalFJw20?si=p1EXwurwdplF1yq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Screenshots
+
+<ImgGallery images={galleryImages} width="256px" />

@@ -1,0 +1,21 @@
+---
+import { socials } from '../config';
+
+interface Props {
+  color?: string;
+  iconsize?: string;
+}
+
+const { color = '#33ffe7', iconsize = '1.75rem' } = Astro.props as Props;
+const items = socials.map((s) => ({
+  ...s,
+  icon: s.icon.replaceAll('2rem', iconsize).replaceAll('#33ffe7', color),
+}));
+---
+{items.map((s) => (
+  <li>
+    <a href={s.link} title={s.name} target="_blank" class="social-icon-hover inline-block">
+      <span set:html={s.icon} />
+    </a>
+  </li>
+))}

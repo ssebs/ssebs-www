@@ -1,0 +1,33 @@
+import ImgBlock from '../../../components/mdx/ImgBlock.astro';
+import mmpGuiScreenshot from './img/MMPGUIScreenshot.png';
+
+> Read how [I made the macro pad](/blog/minimacropad/), and how [I added a config editor](/blog/mmpguieditor/) to it.
+
+[Github Repo](https://github.com/ssebs/go-mmp)
+
+<div style="display: grid; grid-template-columns: 60% 40%; gap: 1rem;">
+<div>
+
+**Mini Macro Pad (go-mmp)** is a tool for creating and running macros, shortcuts, and other automated actions at the press of a button. 
+
+It works with hardware like Arduino-based macro pads or directly through a desktop GUI, making it versatile for various workflows.
+
+<div style="min-height: 1rem;"></div>
+
+### What kind of macros can you make?
+- Shortcuts:
+  - CTRL+C, CTRL+V, CTRL+SHIFT+ESC, etc.
+- Adding Media keys to skip songs, change the volume, or even add back the HOME and DELETE keys to a TKL keyboard.
+  - You can press whatever key you want, as long as it's [in the list](https://github.com/go-vgo/robotgo/blob/master/docs/keys.md#keys).
+- Macros:
+  - Type "gg" in game, rage quit a game, or do something more useful in Excel!
+- Repeat keypresses (or mouse button presses)
+  - Playing cookie clicker? Press your macro to repeatedly press your mouse button down until you click the macro again
+- Whatever you can think of, feel free to submit PRs!
+
+</div>
+<div>
+  Screenshot of the GUI:
+  <ImgBlock src={mmpGuiScreenshot} alt="Screenshot of the GUI" />
+</div>
+</div>

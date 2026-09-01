@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import { entrySlug } from '../lib/url';
+import Section from '../components/Section.astro';
+import ProjectShowcase from '../components/ProjectShowcase.astro';
+import { nav } from '../config';
+import { getCollection } from 'astro:content';
+import { byWeightThenDate } from '../lib/sort';
+import type { ImageMetadata } from 'astro';
+import { Content as ProjectsIntro } from '../content/pages/projects-intro.md';
+import { Content as BlogIntro } from '../content/pages/blog-intro.md';
+import AboutIntro from '../content/pages/about-intro.mdx';
+import ContactIntro from '../content/pages/contact-intro.mdx';
+
+interface CardData {
+  href: string;
+  title: string;
+  shortdesc: string;
+  feature?: ImageMetadata;
+  date?: Date;
+  tags?: string[];
+  isBlog?: boolean;
+}
+
+const projects = (await getCollection('projects')).sort(byWeightThenDate);
+const blogPosts = (await getCollection('blog')).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const projectCards: CardData[] = projects.slice(0, 3).map((e) => ({
+  href: `/projects/${entrySlug(e)}/`,
+  title: e.data.title,
+  shortdesc: e.data.shortdesc,
+  feature: e.data.feature,
+  tags: e.data.tags,
+}));
+
+const blogCards: CardData[] = blogPosts.slice(0, 3).map((e) => ({
+  href: `/blog/${entrySlug(e)}/`,
+  title: e.data.title,
+  shortdesc: e.data.shortdesc,
+  feature: e.data.feature,
+  isBlog: true,
+  date: e.data.date,
+}));
+
+const sectionsByLabel: Record<string, { Intro: any; cards?: CardData[]; sectionbg?: string; c2aText?: string; noC2A?: boolean }> = {
+  Projects: { Intro: ProjectsIntro, cards: projectCards, sectionbg: 'bg-secondary', c2aText: 'More of my projects' },
+  About: { Intro: AboutIntro, c2aText: 'Read all about me!' },
+  Blog: { Intro: BlogIntro, cards: blogCards },
+  Contact: { Intro: ContactIntro, sectionbg: 'transparent-bg', noC2A: true },
+};
+
+const sections = nav
+  .filter((item) => sectionsByLabel[item.label])
+  .map((item) => ({ item, ...sectionsByLabel[item.label] }));
+
+// "A little bit more about the <first project>" — renders the project's intro
+// (the content Hugo showed as .Summary). Projects opt in via a co-located intro.mdx.
+const introModules = import.meta.glob<{ default: any }>('../content/projects/*/intro.mdx', { eager: true });
+const firstProject = projects[0];
+let showcase:
+  | { title: string; href: string; Intro?: any; shortdesc: string; noC2A?: boolean; c2aText?: string }
+  | undefined;
+if (firstProject) {
+  const intro = introModules[`../content/projects/${firstProject.id}/intro.mdx`];
+  showcase = {
+    title: firstProject.data.title,
+    href: `/projects/${entrySlug(firstProject)}/`,
+    Intro: intro?.default,
+    shortdesc: firstProject.data.shortdesc,
+    noC2A: firstProject.data.noC2A,
+    c2aText: firstProject.data.c2aText,
+  };
+}
+---
+<BaseLayout isHome>
+  <div class="grid w-full">
+    <Hero />
+    {sections.map(({ Intro, ...s }) => (
+      <Section {...s}>
+        <Intro />
+      </Section>
+    ))}
+    {showcase && (
+      <ProjectShowcase title={showcase.title} href={showcase.href} noC2A={showcase.noC2A} c2aText={showcase.c2aText}>
+        {showcase.Intro ? <showcase.Intro /> : <p>{showcase.shortdesc}</p>}
+      </ProjectShowcase>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,15 @@
+node_modules
+dist
+.astro
+.git
+.github
+.vscode
+.claude
+docs
+README.md
+CLAUDE.md
+AGENTS.md
+LICENSE
+Makefile
+Dockerfile
+.dockerignore
