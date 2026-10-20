@@ -1,0 +1,49 @@
+---
+title: 'Dank Nooner: The Beginnings'
+slug: dank-nooner-the-beginnings
+shortdesc: Before it was an open-world multiplayer game, Dank Nooner was a simple wheelie balance game. Here's where it all started, and you can still play it.
+feature: ./img/DankNoonerIcon.jpg
+date: 2025-10-06T18:24:03-07:00
+weight: 25
+tags: [programming, gamedev, python, godot]
+---
+import ImgFull from '../../../components/mdx/ImgFull.astro';
+import GameEmbed from '../../../components/mdx/GameEmbed.astro';
+import screenshot01 from './img/screenshot01.png';
+import screenshot02 from './img/screenshot02.png';
+import screenshot03 from './img/screenshot03.png';
+import screenshot04 from './img/screenshot04.png';
+
+> This is the original proof of concept. The game has grown a lot since then, check out the [Dank Nooner project page](/projects/dank-nooner/) for what it is now, [wishlist it on Steam](https://store.steampowered.com/app/5416370/Dank_Nooner/), or come hang out in the [Discord](https://discord.gg/nA7VY4MHW).
+
+## What is it?
+
+The first version of **Dank Nooner** was a simple but fun wheelie balance challenge. You hold a wheelie as long as you can and earn points to upgrade your bike.
+
+### The controls:
+- Click & hold your Left Mouse Button to "grip the throttle"
+- While holding LMB, move your mouse up/down to speed up, and left/right to steer.
+- Pressing Shift while in a run will give you a speed boost.
+
+## But why?
+After [Guac & Load](/projects/guac-and-load/)'s development, I was pretty tired of gamedev. I started doing other things with my time, including learning how to ride a [motorcycle](/projects/ninja-500/).
+
+I heard the term "dank nooner", which is basically a crazy wheelie where the bike is so high up, it's close to 12 o'clock (aka noon). I loved this term, and got the idea to come up with a basic wheelie control game similar to those old flash games, so I got to work.
+
+## Play it!
+
+<GameEmbed src="/dank-nooner-v1/" width="100%" height="600px" />
+
+## Screenshots
+
+<ImgFull src={screenshot01} alt="Screenshot of the game in the main menu" />
+
+<ImgFull src={screenshot03} alt="Screenshot of the gameplay, holding a wheelie" />
+
+<ImgFull src={screenshot02} alt="Screenshot of the game in the tutorial" />
+
+<ImgFull src={screenshot04} alt="Screenshot of the game in the upgrade menu" />
+
+## What came next
+
+I had enough fun with this one that I started over and turned it into a full open-world multiplayer game. I wrote about the early part of that rewrite in [Creating Procedural Animations to Save Time in Godot](/blog/godot-ik/), and you can follow along with the current state of the game on the [project page](/projects/dank-nooner/).

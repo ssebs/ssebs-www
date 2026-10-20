@@ -85,6 +85,12 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+
+  /* Never stretch: when CSS caps one dimension (e.g. card max-height), letterbox instead. */
+  img,
+  video {
+    object-fit: contain;
+  }
 }
 
 .post-content h1 {

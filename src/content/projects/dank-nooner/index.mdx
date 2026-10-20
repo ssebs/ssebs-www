@@ -1,97 +1,79 @@
 ---
 title: 'Dank Nooner'
 slug: dank-nooner
-shortdesc: An open-world motorcycle stunt game. Do all the stupid stuff on a bike from the safety of your home.
-feature: ./img/DankNoonerIcon.jpg
+shortdesc: An open-world multiplayer motorcycle stunt game. Do all the stupid stuff on a bike from the safety of your home. Coming soon to Steam.
+feature: ./img/library_capsule.png
 date: 2025-10-06T18:24:03-07:00
-weight: 21
+weight: 19
 tags: [programming, gamedev, python, godot]
 ---
 import ImgFloatRight from '../../../components/mdx/ImgFloatRight.astro';
 import ImgFull from '../../../components/mdx/ImgFull.astro';
-import GameEmbed from '../../../components/mdx/GameEmbed.astro';
+import libraryCapsule from './img/library_capsule.png';
 import dankNoonerV66 from './img/dank-nooner-v66.webp';
 import dankNoonerV80 from './img/dank-nooner-v80.jpg';
 import dankNoonerV80_2 from './img/dank-nooner-v80-2.jpg';
 import dankNoonerBikeSkin from './img/dank-nooner-bike-skin.png';
-import screenshot01 from './img/screenshot01.png';
-import screenshot02 from './img/screenshot02.png';
-import screenshot03 from './img/screenshot03.png';
-import screenshot04 from './img/screenshot04.png';
 
-<ImgFloatRight src={dankNoonerV66} width="400px" alt="Gameplay clip from Dank Nooner V2" loading="lazy" />
+<ImgFloatRight src={libraryCapsule} width="300px" alt="Dank Nooner capsule art" />
 
-[Github Repo](https://github.com/ssebs/DankNooner) | [Play in your browser](https://ssebs.github.io/DankNooner)
+**[Wishlist on Steam!](https://store.steampowered.com/app/5416370/Dank_Nooner/)** | [Join the Discord](https://discord.gg/nA7VY4MHW) | [GitHub Repo](https://github.com/ssebs/DankNooner)
 
 ## What is it?
 
-**Dank Nooner** is an open-world motorcycle game about doing every stupid thing you'd never try in real life. Pull wheelies, stoppies, and backflips, weave through traffic, and race or free-roam online with friends. It mixes realistic bike controls with arcade trick mechanics and a high skill ceiling.
-
-This is the V2 rewrite, a full open-world game built in Godot. It grew out of [V1](/projects/dank-nooner/#v1---the-original), a simple wheelie challenge that started it all.
-
-## Play it now!
+**Dank Nooner** is an open-world multiplayer motorcycle game about doing every stupid thing you'd never try in real life. Pull wheelies, stoppies, and backflips, weave through traffic, and race your friends around a neon city. It mixes realistic bike controls with arcade trick mechanics and a high skill ceiling.
 
 > Best played with a controller! But Keyboard + Mouse works too.
 
-- **In-Browser**: [ssebs.github.io/DankNooner](https://ssebs.github.io/DankNooner/)
-- **Desktop builds (Win/Mac/Linux)**: [latest release](https://github.com/ssebs/DankNooner/releases/latest)
-- **v1 POC (wheelie balance)**: [play it below](/projects/dank-nooner/#v1---the-original)
-
-
-### What's working now:
-- **Multiplayer**: Free-roam and online racing, with friends joining via invite codes
-- **Trick system**: Wheelies, stoppies, backflips, frontflips, 360s, and drifts, scored with duration and combo bonuses
-- **Bike & character customization**: Skins, color slots, and mods
-- **In-world challenges**: Learn by doing. Roll into a challenge to get a goal like "hold a wheelie for 5 seconds" (inspired by the Skate games)
-- **Physics-based controls**: Manage clutch, throttle, and balance, with ragdoll crashes when you bail
-
-### Game modes (in progress):
-- Street racing with traffic, plus sanctioned races without
-- Trick Battle: timed rounds where the highest trick score wins
-- Delivery missions, from newspapers up to fragile ceramics
-- A story mode tying racing, deliveries, and stunt battles together
+### What's in the game now:
+- **Multiplayer**: Host a lobby and invite your friends. Free roam together, or roll into an event circle on the map to start a race or a trick battle.
+- **Tricks & combos**: Wheelies, stoppies, drifts, burnouts, flips, barrel rolls, supermans, kickflips, and more. Chain tricks together to build a combo, and your combo fills up your boost meter.
+- **Game modes**:
+  - **Race** and **Street Race** (with traffic)
+  - **Stunt Race**: Mario Kart meets stunting. Tricks earn points, and item pickups like the bat, oil slick, shotgun, and deployable ramp let you knock out other riders.
+  - **Time Attack**: beat your best lap time
+  - **Trick Battle**: timed rounds, highest trick score wins
+  - **Megaramp trick comp**: one jump, best trick wins
+- **Fuel-up minigame**: Some races start at the gas pump. Fill up in first person, but don't spill or it'll cost you.
+- **Garage**: A GTA style customization shop. Buy bike skins, pick colors, characters, and horns, and save them as loadouts. A few characters made the trip over from [Guac & Load](/projects/guac-and-load/).
+- **Money & XP**: Every event pays out based on where you placed and how well you scored.
+- **Traffic**: Cars and bikes drive around the city, with intersections and traffic lights. Hit one and you're ragdolling.
+- **Physics-based controls**: Manage clutch, throttle, and balance. Get sloppy and you'll get speed wobbles. Bail and you'll ragdoll.
 
 <div style="clear:both"> </div>
 
-<ImgFull src={dankNoonerV80} alt="Dank Nooner V2 gameplay" loading="lazy" />
+<ImgFull src={dankNoonerV80} alt="Dank Nooner gameplay" loading="lazy" />
 
+## What's next
+
+<ImgFloatRight src={dankNoonerV66} width="400px" alt="Gameplay clip from Dank Nooner" loading="lazy" />
+
+- **Steam release**: The [store page](https://store.steampowered.com/app/5416370/Dank_Nooner/) is up, so wishlist it! The plan is a demo first, aiming for Steam Next Fest in February 2027.
+- **Story mode**: Simpsons Hit & Run style. Start out on a mini bike on the bad side of town, work your way up to the big city on a naked bike, and end up in a quiet beach town. Each chapter comes with its own bike.
+- **A bigger map**: "Highside Island", big enough to cruise around like Test Drive Unlimited, with a city, mountain roads, and an interstate loop that ties it all together.
+- **Progression**: Medals for each event, collectibles hidden in trick spots, and more bikes to unlock.
+- **More tricks**: Whips, grinds, and more ways to mix tricks together.
+
+<div style="clear:both"> </div>
 
 ## How it's built
 
 <ImgFloatRight src={dankNoonerBikeSkin} width="400px" alt="Bike customization in Dank Nooner" />
 
-Dank Nooner is the most technically involved project I've built. It's a server-authoritative multiplayer game: clients capture input and predict movement locally, while the server runs the authoritative physics and reconciles any mismatches. Networking runs over WebRTC for web play, with NAT punch-through and a relay fallback so people can actually connect.
+Dank Nooner is the most technically involved project I've built. It's a server-authoritative multiplayer game: clients capture input and predict movement locally, while the server runs the authoritative physics and reconciles any mismatches. Networking runs over WebRTC, with NAT punch-through and a relay fallback so people can actually connect. I'm adding Steam lobbies and friend invites on top of that.
 
-The player is built with composition, a stack of focused controllers (movement, gearing, tricks, crashes, animation, camera) that each do one thing and run in sequence every tick. Menus and game modes run on state machines, audio goes through FMOD, and I wrote a procedural animation system with inverse kinematics so the rider leans and reacts without hand-made animations. I wrote a whole [blog post on the IK work](/blog/godot-ik/).
+The player is built with composition, a stack of focused controllers (movement, gearing, tricks, crashes, animation, camera) that each do one thing and run in sequence every tick. Game modes are built the same way. A race is a shared race loop plus small components for scoring, items, challenges, and the leaderboard, so Stunt Race, Street Race, and Time Attack all run on the same code.
+
+Menus and game modes run on state machines, audio goes through FMOD, and I wrote a procedural animation system with inverse kinematics so the rider leans and reacts without hand-made animations. I wrote a whole [blog post on the IK work](/blog/godot-ik/).
 
 It's all open source, check out the code at https://github.com/ssebs/DankNooner
 
 <div style="clear:both"> </div>
 
-<ImgFull src={dankNoonerV80_2} alt="Dank Nooner V2 gameplay" loading="lazy" />
+<ImgFull src={dankNoonerV80_2} alt="Dank Nooner gameplay" loading="lazy" />
 
-## V1 - The Original
+## Where it started
 
-V1 is the original proof-of-concept that started it all. It's a simple but fun wheelie balance challenge where you hold a wheelie as long as you can and earn points to upgrade your bike.
+Dank Nooner started out as a simple wheelie balance game I made after [Guac & Load](/projects/guac-and-load/). You held a wheelie as long as you could and spent your points on bike upgrades. I had enough fun with it that I started over and turned it into the open-world game it is now.
 
-### The controls:
-- Click & hold your Left Mouse Button to "grip the throttle"
-- While holding LMB, move your mouse up/down to speed up, and left/right to steer.
-- Pressing Shift while in a run will give you a speed boost.
-
-### But why?
-After [Guac & Load](/projects/guac-and-load/)'s development, I was pretty tired of gamedev. I started doing other things with my time, including learning how to ride a [motorcycle](/projects/ninja-500/).
-
-I heard the term "dank nooner", which is basically a crazy wheelie where the bike is so high up, it's close to 12 o'clock (aka noon). I loved this term, and got the idea to come up with a basic wheelie control game similar to those old flash games, so I got to work.
-
-<GameEmbed src="/dank-nooner-v1/" width="100%" height="600px" />
-
-## V1 Screenshots
-
-<ImgFull src={screenshot01} alt="Screenshot of the game in the main menu" />
-
-<ImgFull src={screenshot03} alt="Screenshot of the gameplay, holding a wheelie" />
-
-<ImgFull src={screenshot02} alt="Screenshot of the game in the tutorial" />
-
-<ImgFull src={screenshot04} alt="Screenshot of the game in the upgrade menu" />
+Read more about the original in [Dank Nooner: The Beginnings](/blog/dank-nooner-the-beginnings/).
